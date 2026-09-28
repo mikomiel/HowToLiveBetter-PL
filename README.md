@@ -19,6 +19,8 @@
 
 其他语言：[English](https://dlgrv.github.io/HowToLiveBetter/en/) · [Русский](https://dlgrv.github.io/HowToLiveBetter/ru/) · [Español](https://dlgrv.github.io/HowToLiveBetter/es/) —— 由 [dlgrv](https://github.com/dlgrv) 维护的非官方翻译（[仓库](https://github.com/dlgrv/HowToLiveBetter)），译文按翻译当时的中文正文做，之后新增和改动的条目不一定跟上，一切以本仓库的中文原文为准。
 
+衍生工具：[howtolivebetter.net](https://howtolivebetter.net/) —— 由 [littleben](https://github.com/littleben) 做的非官方网站，能把条目加进自己的待办清单、标记做到了没有、收藏以后看。网站内容是某一时点导入的，不会自动跟上本书的更新。登录和账号由该网站自己管，和本仓库无关。一切以本仓库原文为准。
+
 </div>
 
 ---
