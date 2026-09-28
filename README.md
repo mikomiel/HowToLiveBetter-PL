@@ -19,16 +19,35 @@
 
 AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「替朋友担保签不签」，它先查书里的条目再回答，并注明出自第几节第几条。
 
-**下载**：[PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf) · [EPUB](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub) · [离线单文件（HTML）](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)<br>
-**查阅**：[目录](#目录) · [术语表](#读懂数字术语表) · [核实记录](docs/核实记录/)<br>
-**长文**：[结婚划不划算](docs/结婚划不划算.md) · [家庭应急装备清单](docs/家庭应急装备清单.md) · [遇到陌生人出事该不该停](docs/遇到陌生人出事该不该停.md) · [做平台要办哪些证](docs/做平台要办哪些证.md) · [生物钟和夜班](docs/生物钟和夜班.md)
+<table>
+<tr><td align="right"><b>下载</b></td><td align="left">
 
-| 其他语言 | 衍生工具 |
-| :---: | :---: |
-| [English](https://dlgrv.github.io/HowToLiveBetter/en/) · [Русский](https://dlgrv.github.io/HowToLiveBetter/ru/) · [Español](https://dlgrv.github.io/HowToLiveBetter/es/) | [howtolivebetter.net](https://howtolivebetter.net/) |
-| [dlgrv](https://github.com/dlgrv) 维护的翻译（[仓库](https://github.com/dlgrv/HowToLiveBetter)） | [littleben](https://github.com/littleben) 做的打勾清单：加待办、标记做到没有、收藏 |
+[PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf) · [EPUB](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub) · [离线单文件（HTML）](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)
 
-<sub>以上两项都不是本仓库维护的，内容按当时的版本导入，不一定跟上后来的改动。网站的登录和账号由对方自己管。一切以本仓库的中文原文为准。</sub>
+</td></tr>
+<tr><td align="right"><b>查阅</b></td><td align="left">
+
+[目录](#目录) · [术语表](#读懂数字术语表) · [核实记录](docs/核实记录/)
+
+</td></tr>
+<tr><td align="right"><b>长文</b></td><td align="left">
+
+[结婚划不划算](docs/结婚划不划算.md) · [家庭应急装备清单](docs/家庭应急装备清单.md) · [遇到陌生人出事该不该停](docs/遇到陌生人出事该不该停.md) · [做平台要办哪些证](docs/做平台要办哪些证.md) · [生物钟和夜班](docs/生物钟和夜班.md)
+
+</td></tr>
+<tr><td align="right"><b>其他语言</b></td><td align="left">
+
+[English](https://dlgrv.github.io/HowToLiveBetter/en/) · [Русский](https://dlgrv.github.io/HowToLiveBetter/ru/) · [Español](https://dlgrv.github.io/HowToLiveBetter/es/)，[dlgrv](https://github.com/dlgrv) 维护的翻译（[仓库](https://github.com/dlgrv/HowToLiveBetter)）
+
+</td></tr>
+<tr><td align="right"><b>衍生工具</b></td><td align="left">
+
+[howtolivebetter.net](https://howtolivebetter.net/)，[littleben](https://github.com/littleben) 做的打勾清单：加待办、标记做到没有、收藏
+
+</td></tr>
+</table>
+
+<sub>其他语言和衍生工具都不是本仓库维护的，内容按当时的版本导入，不一定跟上后来的改动。网站的登录和账号由对方自己管。一切以本仓库的中文原文为准。</sub>
 
 </div>
 
