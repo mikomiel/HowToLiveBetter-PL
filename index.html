@@ -142,6 +142,7 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .toc-sub a span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .toc-sub a.on{color:var(--brand-1);border-left-color:var(--brand-1)}
 .toc-sub a.on i{color:var(--brand-1)}
+.toc-none{margin:0;padding:3px 0 3px 12px;font-size:13px;line-height:20px;color:var(--t3)}
 /* 折叠箭头：点它只收起或展开目录，不切换章节筛选 */
 .sec-link i{margin-left:auto}
 .sec-link .fold{flex:none;display:grid;place-items:center;width:20px;height:20px;margin-right:-4px;border-radius:4px;color:var(--t3);transition:transform .2s,color .2s}
@@ -954,6 +955,9 @@ function build(sections){
       a.innerHTML = `<i>${e.n}</i><span>${esc(e.title)}</span>`;
       sub.appendChild(a); TOC.set(`e-${e.sec}-${e.n}`, a);
     }
+    // 其他筛选把这节条目全筛没了时，展开后显示这一行，不留空白
+    const none = document.createElement('p'); none.className = 'toc-none'; none.hidden = true; none.textContent = '没有符合当前筛选的条目';
+    sub.appendChild(none);
     fsec.appendChild(sub); TOC_SEC.set(s.n, sub);
 
     const block = document.createElement('section'); block.className='sec-block'; block.dataset.sec = s.n; block.id = 'sec-'+s.n;
@@ -1053,12 +1057,11 @@ function apply(){
   const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
   const key = terms.join(' ');
   CUR_TERMS = terms; CUR_KEY = key;
-  let shown = 0, rerender = 0; const perSec = {};
+  let shown = 0, rerender = 0; const perSec = {}, tocSec = {};
   for (const card of CARDS){
     const {e, el} = card;
     let ok = true;
-    if (state.sec.size && !state.sec.has(e.sec)) ok = false;
-    if (ok && state.ratio.size && !state.ratio.has(e.ratio)) ok = false;
+    if (state.ratio.size && !state.ratio.has(e.ratio)) ok = false;
     if (ok && state.lens.size && !state.lens.has(e.lens)) ok = false;
     if (ok && state.grade.size && !state.grade.has(e.grade)) ok = false;
     if (ok && state.money.size && !state.money.has(e.money)) ok = false;
@@ -1067,14 +1070,19 @@ function apply(){
     if (ok && state.dispute && !e.dispute) ok = false;
     if (ok && state.todo && !e.todo) ok = false;
     if (ok && terms.length && !terms.every(t => e.hay.includes(t))) ok = false;
-    if (el.hidden === ok) el.hidden = !ok;
+    // 目录行不跟章节筛选走：选着第 3 节时点第 5 节的折叠箭头，展开的是第 5 节
+    // 符合其他筛选的条目，而不是一块空白。点进去时 gotoItem 会先清掉筛选再跳。
     const a = TOC.get(el.id); if (a && a.hidden === ok) a.hidden = !ok;
+    if (ok) tocSec[e.sec] = (tocSec[e.sec]||0)+1;
+    if (ok && state.sec.size && !state.sec.has(e.sec)) ok = false;
+    if (el.hidden === ok) el.hidden = !ok;
     if (ok){
       shown++; perSec[e.sec] = (perSec[e.sec]||0)+1;
       if (card.vis && card.key !== key) { rerender++; renderCard(card, terms, key); }
     }
   }
   for (const b of BLOCKS){ const n = perSec[b.n]||0; if (b.el.hidden !== (n === 0)) b.el.hidden = n === 0; b.k.textContent = n; }
+  for (const [n, sub] of TOC_SEC){ const none = !tocSec[n]; if (sub.lastElementChild.hidden === none) sub.lastElementChild.hidden = !none; }
   document.getElementById('cnt').textContent = shown;
   document.getElementById('empty').hidden = shown !== 0;
   syncControls(); writeUrl(); tocSync(spyLast);
