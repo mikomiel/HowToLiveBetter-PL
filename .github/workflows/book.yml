@@ -55,6 +55,17 @@ jobs:
           node-version: 22
       - run: node tools/check-refs.mjs --check
 
+  # 说人话检查：长度、研究行话、抽象说法。理由同上，单独一个 job，不挡发布。
+  plain:
+    name: 说人话检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-plain.mjs
+
   build:
     runs-on: ubuntu-latest
     steps:

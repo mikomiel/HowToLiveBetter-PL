@@ -120,6 +120,10 @@ if ($node) {
   & $node.Source (Join-Path $PSScriptRoot 'check-refs.mjs')
   if ($LASTEXITCODE -ne 0) { throw 'check-refs.mjs 失败' }
   '提交前扫一眼 docs/引用对照.md 的 diff：条号没动而「指向的条目」变了，就是被顺延撞歪的引用。'
+  # 说人话检查只提示不中断：数字已经同步完了，卡在这里反而让人以为统计没更新。CI 里它会红
+  ''
+  & $node.Source (Join-Path $PSScriptRoot 'check-plain.mjs')
+  if ($LASTEXITCODE -ne 0) { '上面列出的说人话不合格，提交前改掉（规则见 tools/check-plain.mjs 文件头）。' }
 } else {
   ''
   '没找到 node，跳过引用对照表；改完条目请手动跑 node tools/check-refs.mjs'
