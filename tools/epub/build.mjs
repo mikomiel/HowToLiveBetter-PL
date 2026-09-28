@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, posix } from 'node:path';
 import { deflateRawSync } from 'node:zlib';
-import { Marked } from 'marked';
+import { Marked, Tokenizer } from 'marked';
 import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.epub');
@@ -55,6 +55,16 @@ let current = null; // 正在转换的页
 let headingSeq = 0;
 const marked = new Marked({ gfm: true });
 marked.use({
+  // GFM 的裸网址自动链接只在空白处断开，「www.12333.gov.cn网页、手机12333客户端」这种
+  // 中文紧贴网址的写法会把后面整串中文都吞进链接，epubcheck 判为非法 URL（RSC-020）。
+  // 裸网址里本来就不该有非 ASCII 字符，遇到就截在那里，截下的前半段照常按默认规则建链接。
+  tokenizer: {
+    url(src) {
+      const tok = Tokenizer.prototype.url.call(this, src);
+      if (!tok || /^[\x21-\x7e]*$/.test(tok.raw)) return tok;
+      return Tokenizer.prototype.url.call(this, tok.raw.match(/^[\x21-\x7e]*/)[0]);
+    },
+  },
   renderer: {
     heading({ tokens, depth }) {
       const html = this.parser.parseInline(tokens);
