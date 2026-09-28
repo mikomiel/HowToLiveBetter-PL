@@ -134,6 +134,20 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .sec-link[aria-pressed="true"]{color:var(--brand-1)}
 .sec-link i{font-style:normal;font-size:12px;color:var(--t3);font-variant-numeric:tabular-nums}
 .sec-link.all{padding-bottom:8px;margin-bottom:4px;border-bottom:1px solid var(--divider)}
+/* 章节下的条目目录：只展开选中的那节，没选节时展开正在读的那节（issue #38） */
+.toc-sub{display:flex;flex-direction:column;margin:2px 0 8px;border-left:1px solid var(--divider)}
+.toc-sub a{display:flex;gap:6px;padding:3px 0 3px 12px;margin-left:-1px;border-left:1px solid transparent;font-size:13px;line-height:20px;color:var(--t2);text-decoration:none;transition:color .2s}
+.toc-sub a:hover{color:var(--t1);text-decoration:none}
+.toc-sub a i{font-style:normal;flex:none;min-width:1.5em;color:var(--t3);font-variant-numeric:tabular-nums}
+.toc-sub a span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.toc-sub a.on{color:var(--brand-1);border-left-color:var(--brand-1)}
+.toc-sub a.on i{color:var(--brand-1)}
+/* 折叠箭头：点它只收起或展开目录，不切换章节筛选 */
+.sec-link i{margin-left:auto}
+.sec-link .fold{flex:none;display:grid;place-items:center;width:20px;height:20px;margin-right:-4px;border-radius:4px;color:var(--t3);transition:transform .2s,color .2s}
+.sec-link .fold:hover{color:var(--t1);background:var(--bg-mute)}
+.sec-link .fold svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;transform:rotate(-90deg);transition:transform .2s}
+.sec-link.open .fold svg{transform:none}
 .chips{display:flex;flex-wrap:wrap;gap:6px;padding-top:6px}
 .chip{border:1px solid var(--divider);background:var(--bg-elv);color:var(--t2);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:500;line-height:18px;transition:all .2s}
 .chip:hover{border-color:var(--brand-3);color:var(--t1)}
@@ -782,7 +796,7 @@ function spy(){
     const firstBlock = BLOCKS.find(b => b.el.offsetParent)?.el;
     if (firstBlock && firstBlock.getBoundingClientRect().top > line){
       if (spyLast === '') return;
-      spyLast = '';
+      spyLast = ''; tocSync('');
       history.replaceState(history.state, '', location.pathname + location.search);
       return;
     }
@@ -796,7 +810,7 @@ function spy(){
       if (d < near){ near = d; hit = c.el.id; }
     }
     if (hit === spyLast) return;
-    spyLast = hit;
+    spyLast = hit; tocSync(hit);
     history.replaceState(history.state, '', location.pathname + location.search + (hit ? '#' + hit : ''));
   }, 160);
 }
@@ -821,6 +835,7 @@ function scrollToEl(el, { align = 'center', flashEl = el, spyId = el.id, renderE
     if (++tries < 10 && y !== lastY){ lastY = y; setTimeout(settle, 50); return; }
     flashEl.classList.remove('flash'); void flashEl.offsetWidth; flashEl.classList.add('flash');
     spyLast = spyId; spyOff = false;       // 停稳了地址栏就归这一条，再放 spy 回来
+    tocSync(spyId);
   };
   settle();
 }
@@ -883,6 +898,31 @@ const LENS_LABEL = {'死亡率':'换寿命','金钱':'换钱','时间':'换时�
 /* ---------- 构建 DOM ---------- */
 const LABEL = { money:{'0':'不花钱','少':'花少量钱','多':'花不少钱'}, time:{'少':'顺手','中':'花几小时','多':'每天占时间'}, will:{'否':'不用毅力','些':'要一点毅力','是':'要很多毅力'} };
 let CARDS = [], BLOCKS = [];
+// 侧栏条目目录：卡片 id → 目录里那一行，节号 → 该节的目录块
+const TOC = new Map(), TOC_SEC = new Map();
+let TOC_ON = null, TOC_SELK = '';
+// 手动点过折叠箭头的节：节号 → 展开与否，优先于自动规则。换了章节筛选就作废。
+const TOC_MAN = new Map();
+// 选了节就展开那一节；看全部章节时跟着 spy 展开正在读的那节，读到页首就全收起。
+// 高亮行滚出侧栏可视区时把侧栏拉过去，只动侧栏自己的 scrollTop，不碰页面滚动。
+function tocSync(hit){
+  const selk = [...state.sec].join();
+  if (selk !== TOC_SELK){ TOC_MAN.clear(); TOC_SELK = selk; }
+  const open = state.sec.size ? [...state.sec][0] : (hit ? hit.split('-')[1] : '');
+  for (const [n, sub] of TOC_SEC){
+    const on = TOC_MAN.has(n) ? TOC_MAN.get(n) : n === open;
+    if (sub.hidden === on) sub.hidden = !on;
+    sub.previousElementSibling.classList.toggle('open', on);
+  }
+  TOC_ON?.classList.remove('on');
+  TOC_ON = TOC.get(hit) || null;
+  if (!TOC_ON) return;
+  TOC_ON.classList.add('on');
+  if (!TOC_ON.offsetParent) return;        // 被筛掉或所在节收起了，量不出位置
+  const sb = document.getElementById('sidebar');
+  const r = TOC_ON.getBoundingClientRect(), br = sb.getBoundingClientRect();
+  if (r.top < br.top + 48 || r.bottom > br.bottom - 48) sb.scrollTop += r.top - br.top - sb.clientHeight / 3;
+}
 // 卡片文字只在「上屏 + 搜索词变了」时重渲染，离屏的先记账，滚进来再补
 let CUR_TERMS = [], CUR_KEY = '';
 const CARD_OF = new WeakMap();
@@ -906,7 +946,14 @@ function build(sections){
   fsec.appendChild(allBtn);
   for (const s of sections){
     const b = document.createElement('button'); b.className='sec-link'; b.dataset.v = s.n; b.setAttribute('aria-pressed','false');
-    b.innerHTML = `<span>${s.n}. ${esc(s.title)}</span><i>${s.entries.length}</i>`; fsec.appendChild(b);
+    b.innerHTML = `<span>${s.n}. ${esc(s.title)}</span><i>${s.entries.length}</i><b class="fold" title="展开或收起本节目录"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></b>`; fsec.appendChild(b);
+    const sub = document.createElement('div'); sub.className = 'toc-sub'; sub.hidden = true;
+    for (const e of s.entries){
+      const a = document.createElement('a'); a.href = `#e-${e.sec}-${e.n}`; a.dataset.go = `${e.sec}-${e.n}`; a.title = e.title;
+      a.innerHTML = `<i>${e.n}</i><span>${esc(e.title)}</span>`;
+      sub.appendChild(a); TOC.set(`e-${e.sec}-${e.n}`, a);
+    }
+    fsec.appendChild(sub); TOC_SEC.set(s.n, sub);
 
     const block = document.createElement('section'); block.className='sec-block'; block.dataset.sec = s.n; block.id = 'sec-'+s.n;
     block.innerHTML = `<div class="sec-h"><h2>${s.n}. ${esc(s.title)}</h2><span class="shown"><span class="k"></span> / ${s.entries.length}</span></div>`;
@@ -1020,6 +1067,7 @@ function apply(){
     if (ok && state.todo && !e.todo) ok = false;
     if (ok && terms.length && !terms.every(t => e.hay.includes(t))) ok = false;
     if (el.hidden === ok) el.hidden = !ok;
+    const a = TOC.get(el.id); if (a && a.hidden === ok) a.hidden = !ok;
     if (ok){
       shown++; perSec[e.sec] = (perSec[e.sec]||0)+1;
       if (card.vis && card.key !== key) { rerender++; renderCard(card, terms, key); }
@@ -1028,7 +1076,7 @@ function apply(){
   for (const b of BLOCKS){ const n = perSec[b.n]||0; if (b.el.hidden !== (n === 0)) b.el.hidden = n === 0; b.k.textContent = n; }
   document.getElementById('cnt').textContent = shown;
   document.getElementById('empty').hidden = shown !== 0;
-  syncControls(); writeUrl();
+  syncControls(); writeUrl(); tocSync(spyLast);
   PERF.log('apply', t0, `命中 ${shown} 条，重渲染 ${rerender} 张`);
 }
 
@@ -1053,6 +1101,12 @@ function wire(){
   document.querySelectorAll('[data-dim]').forEach(g => g.addEventListener('click', ev => {
     const b = ev.target.closest('[data-v]'); if (!b) return;
     const dim = g.dataset.dim, v = b.dataset.v, set = state[dim];
+    // 点折叠箭头，或再点一次已选中的节：只收起或展开这节的目录，筛选不动
+    if (dim === 'sec' && v && (ev.target.closest('.fold') || set.has(v))){
+      const sub = TOC_SEC.get(v);
+      TOC_MAN.set(v, sub.hidden); tocSync(spyLast);
+      return;
+    }
     if (dim === 'sec'){
       // 章节单选：再点一次已选中的不取消，免得双击退回全部章节；要看全部点「全部章节」
       if (v === '') set.clear(); else { set.clear(); set.add(v); }
@@ -1061,6 +1115,11 @@ function wire(){
     }
     apply(); toTop();
   }));
+  // 条目目录：点了就地滚过去，手机上先收起抽屉
+  document.getElementById('f-sec').addEventListener('click', ev => {
+    const a = ev.target.closest('a[data-go]'); if (!a) return;
+    ev.preventDefault(); setMenu(false); gotoItem(a.dataset.go, spyLast);
+  });
   document.getElementById('f-dispute').addEventListener('change', e => { state.dispute = e.target.checked; apply(); toTop(); });
   document.getElementById('f-todo').addEventListener('change', e => { state.todo = e.target.checked; apply(); toTop(); });
   // 上报比筛选晚得多：按 120ms 那一拍发，「高血压」会被当成「高」「高血」「高血压」三次搜索
