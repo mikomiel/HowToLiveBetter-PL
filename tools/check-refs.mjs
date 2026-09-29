@@ -2,7 +2,7 @@
 // 写进 docs/引用对照.md。那份文件入库，所以插入或删除条目导致引用指向变化时，
 // git diff 会直接把变化摆出来——条号没动而标题变了，就是错位。
 //
-//   node tools/check-refs.mjs            # 重新生成对照表（sync-stats.ps1 末尾会自动调用）
+//   node tools/check-refs.mjs            # 重新生成对照表（sync-stats.mjs 会自动调用）
 //   node tools/check-refs.mjs --check    # 只校验不写文件，有失效引用则退出码 1（CI 用）
 //   node tools/check-refs.mjs --suspect  # 额外列出措辞和目标标题对不上的，误报多，排查历史遗留时用
 //
