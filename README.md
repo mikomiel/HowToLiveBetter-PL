@@ -293,7 +293,7 @@ node tools/pdf/build.mjs                   # PDF，另需 pandoc ≥ 3.1 和 typ
 
 觉得有用，可以用微信扫码请作者喝杯咖啡。给不给都行，不影响任何内容。
 
-<img src=".github/wechat-reward.png" alt="微信赞赏码" width="240">
+<img src="ads/wechat-reward.png" alt="微信赞赏码" width="240">
 
 ## 广告位
 
