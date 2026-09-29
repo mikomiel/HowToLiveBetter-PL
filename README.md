@@ -13,7 +13,7 @@
 [![条目](https://img.shields.io/badge/%E6%9D%A1%E7%9B%AE-630%20%E6%9D%A1-18794e?style=flat-square)](#目录)
 [![证据分级](https://img.shields.io/badge/%E8%AF%81%E6%8D%AE%E5%88%86%E7%BA%A7-A%20420%20%C2%B7%20B%20159%20%C2%B7%20C%2051-915930?style=flat-square)](#证据分级)
 [![原始文献](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8C%AE-1341%20%E6%9D%A1%E9%93%BE%E6%8E%A5-565a5f?style=flat-square)](docs/核实记录/)
-[![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-Unlicense-565a5f?style=flat-square)](LICENSE)
+[![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#许可)
 
 ### [打开在线检索页](https://eternity4719.github.io/HowToLiveBetter/) · [让 AI 照书回答（skill）](skills/life-decision-guide/README.md)
 
@@ -284,6 +284,16 @@ node tools/pdf/build.mjs                   # PDF，另需 pandoc ≥ 3.1 和 typ
 ## 正文
 
 正文按节拆成 34 个文件放在 [book/](book/)，点上面目录里的节名进入。拆开是因为单文件已经超过 GitHub 渲染 Markdown 的 512 KB 上限，后面的节显示不出来；[在线检索页](https://eternity4719.github.io/HowToLiveBetter/)会把这些文件合起来读，用法不变。
+
+## 许可
+
+正文用 [CC BY 4.0](LICENSE) 发布，范围是 book/、docs/ 和本 README 的文字。你可以转载、改编、商用，不用来问作者，但要做到三件事：
+
+- 写明出处：「高性价比人生指南」，附上仓库链接 https://github.com/eternity4719/HowToLiveBetter 。
+- 附上许可证链接 https://creativecommons.org/licenses/by/4.0/ 。
+- 改过内容的要写明改过。书里的法条、补贴标准和截止日期经常更新，建议同时写上你同步的是哪一天的版本。
+
+代码用 [MIT](LICENSE-CODE)，范围是 tools/、skills/、index.html 和 .github/。
 
 ## Star 走势
 
