@@ -145,9 +145,9 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .toc-none{margin:0;padding:3px 0 3px 12px;font-size:13px;line-height:20px;color:var(--t3)}
 /* 折叠箭头：点它只收起或展开目录，不切换章节筛选 */
 .sec-link i{margin-left:auto}
-.sec-link .fold{flex:none;display:grid;place-items:center;width:20px;height:20px;margin-right:-4px;border-radius:4px;color:var(--t3);transition:transform .2s,color .2s}
+.sec-link .fold{flex:none;align-self:stretch;display:grid;place-items:center;width:24px;margin:-4px -6px -4px 0;border-radius:4px;color:var(--t3);transition:transform .2s,color .2s}
 .sec-link .fold:hover{color:var(--t1);background:var(--bg-mute)}
-.sec-link .fold svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;transform:rotate(-90deg);transition:transform .2s}
+.sec-link .fold svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;transform:rotate(-90deg);transition:transform .2s}
 .sec-link.open .fold svg{transform:none}
 .chips{display:flex;flex-wrap:wrap;gap:6px;padding-top:6px}
 .chip{border:1px solid var(--divider);background:var(--bg-elv);color:var(--t2);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:500;line-height:18px;transition:all .2s}
