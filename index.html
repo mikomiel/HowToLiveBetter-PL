@@ -547,7 +547,7 @@ function parseReadme(md){
     e.cs = (COST_W.money[e.money] ?? 0) + (COST_W.time[e.time] ?? 0) + (COST_W.will[e.will] ?? 0);
     e.ratio = e.level === '大' ? (e.cs === 0 ? '极高' : (e.cs <= 2 ? '高' : '一般'))
             : e.level === '中' ? (e.cs === 0 ? '高' : '一般') : '一般';
-    e.hay = [e.title, e.human, e.cost, e.gain, e.note, e.src, e.grade].join('\n').replace(/\*\*/g, '').toLowerCase();
+    e.hay = [e.title, e.human, e.cost, e.gain, e.note, e.src, e.grade].join('\n').replace(/\*\*/g, '').replace(/\\([*_])/g, '$1').toLowerCase();
   }
   return sections;
 }
@@ -626,7 +626,8 @@ function trimUrl(u){
 // Markdown 链接 [文字](地址) 或裸 URL；仓库内的相对路径指向 GitHub 上的源文件
 const REPO_BLOB = 'https://github.com/eternity4719/HowToLiveBetter/blob/main/';
 const MD_LINK_RE = /\[([^\]\n]+)\]\(([^)\s]+)\)/;
-const BOLD_RE = /\*\*([^*\n]+)\*\*/;   // 正文里的加粗，不转就会露出星号
+const BOLD_RE = /\*\*((?:\\\*|[^*\n])+)\*\*/;   // 正文里的加粗，不转就会露出星号；粗体里允许 \* 这种转义星号（HLA-B\*5801）
+const unescMd = (s) => s.replace(/\\([*_])/g, '$1');
 const LINK_RE = new RegExp([MD_LINK_RE.source, URL_RE.source, BOLD_RE.source].join('|'), 'g');
 function hrefOf(p){
   if (/^(https?:|mailto:|#)/.test(p)) return p;
@@ -645,13 +646,13 @@ function renderText(el, text, terms, withTerms = true, urlsLast = false){
     if (!s) return;
     if (justHeld && /^[\s、,，]+$/.test(s)) return;
     justHeld = false;
-    xrefInto(el, s, terms);
+    xrefInto(el, unescMd(s), terms);
   };
   while ((m = LINK_RE.exec(text))){
     pushText(text.slice(last, m.index));
     last = m.index + m[0].length;
     if (m[4] !== undefined){
-      const b = document.createElement('strong'); highlightInto(b, m[4], terms); el.appendChild(b); justHeld = false;
+      const b = document.createElement('strong'); highlightInto(b, unescMd(m[4]), terms); el.appendChild(b); justHeld = false;
       continue;
     }
     if (m[3]){
@@ -1225,8 +1226,8 @@ function dmInline(s){
   h = h.replace(/`([^`]+)`/g, (m, c) => '<code>' + c + '</code>');
   h = h.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, u) => '<a href="' + esc(dmHref(u)) + '" target="_blank" rel="noopener">' + t + '</a>');
   h = h.replace(/&lt;(https?:\/\/[^\s&]+)&gt;/g, (m, u) => '<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>');
-  h = h.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  return h;
+  h = h.replace(/\*\*((?:\\\*|[^*])+)\*\*/g, '<strong>$1</strong>');
+  return h.replace(/\\([*_])/g, '$1');
 }
 // 长文只用到标题、段落、有序无序列表和表格这几样（五篇全扫过），不引 markdown 库
 function dmRender(md){
