@@ -67,6 +67,9 @@ html.dark{
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:calc(var(--nav-h) + 16px)}
+/* 弹窗打开时 body 设了 overflow:hidden，滚动条一没，页面变宽 15px、卡片重新折行，整页抽一下（2026-10-01 用户发现）。
+   预留滚动条那条槽位，有没有滚动条宽度都不变 */
+html{scrollbar-gutter:stable}
 body{margin:0;background:var(--bg);color:var(--t1);font:14px/1.7 var(--font);-webkit-font-smoothing:antialiased}
 a{color:var(--brand-1);text-decoration:none;transition:color .25s}
 a:hover{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px}
