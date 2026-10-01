@@ -76,7 +76,7 @@ mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
 /* 正文里的「第 X 条」交叉引用：点一下就地看那条说什么，不用自己翻过去 */
 .xref{color:var(--brand-1);cursor:pointer;border-bottom:1px dashed currentColor}
 .xref:hover{color:var(--brand-2);border-bottom-style:solid}
-#xref-pop{position:absolute;z-index:60;width:min(430px,calc(100vw - 28px));background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;box-shadow:var(--shadow);padding:11px 13px;font-size:13.5px;line-height:1.75}
+#xref-pop{position:absolute;z-index:80;width:min(430px,calc(100vw - 28px));background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;box-shadow:var(--shadow);padding:11px 13px;font-size:13.5px;line-height:1.75}
 #xref-pop .xp-h{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px}
 #xref-pop .xp-h b{flex:1;font-weight:600;line-height:1.5}
 #xref-pop .xp-h button{flex:none;border:1px solid var(--divider);background:var(--bg-soft);color:inherit;border-radius:6px;padding:2px 9px;font-size:12px;cursor:pointer;font-family:inherit;white-space:nowrap}
@@ -912,7 +912,11 @@ document.addEventListener('keydown', ev => {
   if (ev.key === 'Enter' && ev.target.classList?.contains('xref')) showXref(ev.target);
 });
 POP.querySelector('.xp-x').addEventListener('click', () => { POP.hidden = true; });
-POP.querySelector('.xp-go').addEventListener('click', () => { gotoItem(POP.dataset.go, POP.dataset.from); POP.hidden = true; });
+POP.querySelector('.xp-go').addEventListener('click', () => {
+  // 从长文弹窗里点的，先关掉弹窗才看得见跳到的条目
+  if (!DM.mask.hidden) dmClose();
+  gotoItem(POP.dataset.go, POP.dataset.from); POP.hidden = true;
+});
 addEventListener('resize', () => { POP.hidden = true; });
 
 const COST_W = { money:{'0':0,'少':1,'多':2}, time:{'少':0,'中':1,'多':2}, will:{'否':0,'些':1,'是':2} };
@@ -1297,6 +1301,22 @@ function dmRender(md){
   flush();
   return { html: out.join('\n'), heads, title };
 }
+// 长文里的「见第 16 节第 9 条」也要能点（2026-10-01 用户发现弹窗里点不了）。
+// dmRender 出的是 HTML 串，这里渲染完再逐个文本节点交给 xrefInto，链接和代码里的不动。
+// 长文没有「本节」，裸的「第 N 条」一律是法条，所以 CUR_SEC 置空：解析不到条目就留作普通文字。
+function dmXrefs(root){
+  const saved = CUR_SEC; CUR_SEC = '';
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT,
+    { acceptNode: n => n.parentElement.closest('a,code') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  const nodes = [];
+  while (w.nextNode()) if (/第\s*\d/.test(w.currentNode.nodeValue)) nodes.push(w.currentNode);
+  for (const n of nodes){
+    const f = document.createDocumentFragment();
+    xrefInto(f, n.nodeValue, []);
+    n.replaceWith(f);
+  }
+  CUR_SEC = saved;
+}
 // 标题相对滚动容器的偏移。不用 offsetTop：它算的是到最近定位祖先的距离，
 // 容器没设 position 时会算到别处去（2026-09-21 目录点了不跳就是这个原因）。
 function dmTopOf(el){
@@ -1309,14 +1329,16 @@ function dmSpy(){
 }
 let dmSpyTick = false;
 DM.doc.addEventListener('scroll', () => {
+  POP.hidden = true;                       // 浮层是按页面坐标摆的，长文一滚就和引用错开了
   if (dmSpyTick) return; dmSpyTick = true;
   requestAnimationFrame(() => { dmSpyTick = false; dmSpy(); });
 });
 function dmClose(){
   if (DM.mask.hidden) return;
   DM.mask.hidden = true;
+  POP.hidden = true;
   document.body.style.overflow = '';
-  DM.lastFocus?.focus?.();
+  DM.lastFocus?.focus?.({ preventScroll: true });   // 不然「跳过去」刚滚到目标，又被拽回原来那个链接
   DM.lastFocus = null;
 }
 async function dmOpen(path, from){
@@ -1340,6 +1362,7 @@ async function dmOpen(path, from){
   const r = dmRender(md);
   if (r.title) DM.title.textContent = r.title;
   DM.doc.innerHTML = r.html;
+  dmXrefs(DM.doc);
   DM.heads = r.heads;
   for (const h of r.heads){
     const a = document.createElement('a');
@@ -1370,7 +1393,13 @@ document.addEventListener('click', ev => {
 });
 document.getElementById('dm-x').addEventListener('click', dmClose);
 DM.mask.addEventListener('click', ev => { if (ev.target === DM.mask) dmClose(); });
-document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && !DM.mask.hidden){ ev.stopPropagation(); dmClose(); } }, true);
+// Esc 先关引用浮层，再按一次才关长文弹窗
+document.addEventListener('keydown', ev => {
+  if (ev.key !== 'Escape' || DM.mask.hidden) return;
+  ev.stopPropagation();
+  if (!POP.hidden){ POP.hidden = true; return; }
+  dmClose();
+}, true);
 
 /* ---------- 赞赏码弹窗 ---------- */
 const TIP = document.getElementById('tip-mask');
