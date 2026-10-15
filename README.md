@@ -157,8 +157,8 @@ python -m http.server 8000
 想自己生成这四样（平时用不着，Release 里的就是自动生成的）。下面的命令都在仓库根目录（`HowToLiveBetter/`）运行：
 
 ```bash
-npm --prefix tools/epub ci                # 安装 EPUB 依赖
-npm --prefix tools/epub run build         # EPUB
+npm --prefix tools/epub ci                 # 安装 EPUB 依赖
+npm --prefix tools/epub run build          # EPUB
 node tools/offline/build.mjs               # 离线单文件 HTML
 node tools/pdf/build.mjs                   # PDF，另需 pandoc ≥ 3.1 和 typst ≥ 0.13
 node tools/anki/build.mjs                  # Anki 牌组，要 Node ≥ 22.13（用自带的 node:sqlite）
@@ -309,7 +309,7 @@ A 级只说明「有具体数字、出处可核」，不说明这个数字一定
 
 本书在 Claude Code 协助下编写：查找原始文献、逐条核对数字与原文是否一致、维护交叉引用和构建脚本。选题、取舍和最终审定由作者负责，每条数字都能在来源栏的原文里找到。
 
-仓库根目录的 `index.html` 是在线检索页：按关键词、章节、证据等级和成本维度（花钱、花时间、要毅力）筛选条目，数据直接读本文件。在仓库设置里开启 GitHub Pages（Deploy from a branch，分支 main，目录 /）后即可访问。`tools/epub/` 是电子书生成脚本，`cd tools/epub && npm ci && npm run build` 在本地出一本 EPUB 到 `dist/`；GitHub Actions 在正文改动后自动跑同一个脚本并更新 Release。
+仓库根目录的 `index.html` 是在线检索页：按关键词、章节、证据等级和成本维度（花钱、花时间、要毅力）筛选条目，数据直接读本文件。在仓库设置里开启 GitHub Pages（Deploy from a branch，分支 main，目录 /）后即可访问。`tools/epub/` 是电子书生成脚本，在仓库根目录跑 `npm --prefix tools/epub ci && npm --prefix tools/epub run build` 在本地出一本 EPUB 到 `dist/`；GitHub Actions 在正文改动后自动跑同一个脚本并更新 Release。
 
 ## 正文
 
