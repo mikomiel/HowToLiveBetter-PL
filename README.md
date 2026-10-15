@@ -154,10 +154,11 @@ python -m http.server 8000
 
 然后浏览器开 `http://localhost:8000/`。检索页是纯静态的，`README.md` 和 `book/` 就是它的数据，没有后端、没有数据库、不用装依赖；把整个目录丢给任何静态服务器（Nginx、GitHub Pages、对象存储）效果一样。注意 `index.html` 必须经 http 打开，直接双击本地文件会空白——浏览器不许网页读本地文件，那种场景请用上面的离线单文件版。
 
-想自己生成这四样（平时用不着，Release 里的就是自动生成的）：
+想自己生成这四样（平时用不着，Release 里的就是自动生成的）。下面的命令都在仓库根目录（`HowToLiveBetter/`）运行：
 
 ```bash
-cd tools/epub && npm ci && npm run build   # EPUB
+npm --prefix tools/epub ci                # 安装 EPUB 依赖
+npm --prefix tools/epub run build         # EPUB
 node tools/offline/build.mjs               # 离线单文件 HTML
 node tools/pdf/build.mjs                   # PDF，另需 pandoc ≥ 3.1 和 typst ≥ 0.13
 node tools/anki/build.mjs                  # Anki 牌组，要 Node ≥ 22.13（用自带的 node:sqlite）
