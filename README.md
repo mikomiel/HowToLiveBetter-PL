@@ -11,8 +11,6 @@
 
 书里的内容可能过时，也可能有错。不少政策各地执行不一样。真去办事、看病、打官司时，以当地部门、医生和律师的说法为准。发现写错了，欢迎[提 issue](https://github.com/eternity4719/HowToLiveBetter/issues)。
 
-**本项目从未发行、也不会发行任何代币或数字资产。** 用本项目名字发的币都和本项目无关，作者不领取、不认领任何相关收益。看到这类币请当作骗局，别买，见[第 5 节第 45 条（别买虚拟货币）](book/05-不要浪费钱.md)。
-
 **电子书平台上的官方版本由果麦文化独家出品**，2026 年 10 月上架，其他版本都不是官方的。本页的网页版、EPUB、PDF 照旧免费，更新也最快。
 
 [![在线检索](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E6%A3%80%E7%B4%A2-%E7%82%B9%E8%BF%99%E9%87%8C%E6%89%93%E5%BC%80-3451b2?style=flat-square)](https://eternity4719.github.io/HowToLiveBetter/)
