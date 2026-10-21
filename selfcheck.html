@@ -82,6 +82,8 @@ html.dark .btn{color:#1b1b1f}
 .card .human{margin:8px 0 10px;color:var(--t1)}
 .card .cost{font-size:13.5px;color:var(--t2);margin-top:6px}
 .card .caution{font-size:13.5px;color:var(--t2);background:var(--yellow-soft);border-radius:8px;padding:10px 12px;margin:10px 0}
+.card .caution summary{cursor:pointer;font-weight:600;color:var(--t1)}
+.card .caution[open] summary{margin-bottom:6px}
 .card .also{margin-top:10px;padding-top:10px;border-top:1px dashed var(--divider);font-size:13.5px;color:var(--t2)}
 .badges{display:flex;flex-wrap:wrap;gap:6px}
 .badge{display:inline-block;border-radius:10px;padding:0 10px;line-height:20px;font-size:12px;font-weight:600;white-space:nowrap}
@@ -363,7 +365,7 @@ function card(e, also){
     `<a href="./#e-${a.sec}-${a.n}">${esc(plain(a.title))}</a>`).join('；') + `</div>` : '';
   return `<div class="card" id="c-${e.sec}-${e.n}">
     <div class="h"><b>${esc(plain(e.title))}</b><a href="./#e-${e.sec}-${e.n}">第 ${e.sec} 节第 ${e.n} 条 →</a></div>
-    ${e.note ? `<div class="caution"><b>适用条件与注意事项：</b>${esc(plain(e.note))}</div>` : ''}
+    ${e.note ? `<details class="caution"><summary>适用条件与注意事项</summary>${esc(plain(e.note))}</details>` : ''}
     ${e.human ? `<div class="human">${esc(plain(e.human))}</div>` : ''}
     <div class="badges"><span class="badge ${r}">性价比 ${e.ratio}</span><span class="badge ${e.grade}">证据 ${e.grade} 级</span><span class="badge plain">收益 ${e.level}</span>${lens}${e.dispute ? '<span class="badge warn">有争议</span>' : ''}</div>
     <div class="cost">要花的：${esc(plain(e.cost))}</div>${alsoH}
