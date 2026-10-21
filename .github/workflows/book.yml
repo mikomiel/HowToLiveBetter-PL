@@ -12,6 +12,7 @@ on:
     paths:
       - README.md
       - index.html
+      - selfcheck.html
       - og.png
       - ads/**
       - book/**
@@ -22,6 +23,7 @@ on:
     paths:
       - README.md
       - index.html
+      - selfcheck.html
       - og.png
       - ads/**
       - book/**
@@ -94,6 +96,16 @@ jobs:
           node-version: 22
       - run: node tools/sync-stats.mjs --check
       - run: node tools/updates.mjs --check
+
+  selfcheck:
+    name: 自查条件检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/check-selfcheck.mjs
 
   build:
     runs-on: ubuntu-latest
