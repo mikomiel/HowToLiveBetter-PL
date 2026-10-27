@@ -7,7 +7,7 @@ To niezależna polska adaptacja HowToLiveBetter: „Jak żyć lepiej. Praktyczny
 - Autorytatywne repozytorium: https://github.com/mikomiel/HowToLiveBetter-PL. PR kieruj do jego gałęzi main, nigdy do eternity4719/HowToLiveBetter.
 - Pracuj na gałęzi zadania. Jeden autor zapisuje gałąź. Zachowaj cudze zmiany. Nie używaj reset, clean, stash, rebase ani force-push do usuwania lub obchodzenia cudzej pracy.
 - Zatrzymaj się przed scaleniem przez człowieka. Bez osobnej zgody nie scalaj PR, nie publikuj wydań, nie włączaj GitHub Pages ani automatycznego wdrożenia.
-- To projekt niezależny od infrastruktury homelabu. Nie wymaga jej bramek, katalogów, narzędzi ani instrukcji.
+- Do prac repozytoryjnych używaj git i gh zgodnie z lokalnymi uprawnieniami.
 - Jedynym źródłem polskiej treści jest book/pl/04-nie-marnuj-czasu.md. Czytnik czyta ten Markdown. Nie kopiuj porad do HTML, JavaScript ani osobnej bazy.
 - Chińskie book/*.md, docs/, selfcheck.html, skills/ i historyczne narzędzia są materiałem upstream, nie ukończonym polskim wydaniem. Nie stosuj odziedziczonego chińskiego skilla do polskich porad.
 - Pilotaż obejmuje rozdział 04. Nie rozszerzaj tłumaczenia na całą książkę bez uzgodnienia zakresu.
@@ -41,7 +41,7 @@ Zachowaj format nagłówków rozdziału i porad, jawne kotwice porada-4-N oraz p
 
 ## Sprawdzenie i publikacja
 
-- Uruchom npm ci, npm test i npm run test:browser. Instalacja przeglądarki testowej: npx playwright install chromium. Nie dodawaj zależności do działania czytnika.
+- Uruchom npm ci --ignore-scripts, npm test i npm run test:browser. Instalacja przeglądarki testowej: npx playwright install chromium. Nie dodawaj zależności do działania czytnika.
 - Testy jednostkowe sprawdzają treść i bezpieczeństwo workflow. Testy przeglądarkowe muszą uruchamiać rzeczywisty czytnik z rzeczywistym Markdown, także na małym ekranie i z klawiaturą.
 - Po zmianie treści sprawdź źródła, liczby, odnośniki, kotwice i liczbę opublikowanych porad w README oraz czytniku. Starszy sync-stats.mjs dotyczy chińskiego wydania; nie uruchamiaj go do polskiego pilotażu.
 - Przejrzyj cały diff i nowe pliki. Zrób osobny przegląd języka oraz zgodności wniosków z dowodami. Użyj niezależnego przeglądu, jeśli jest dostępny. Nie deklaruj takiego przeglądu, jeśli się nie odbył.

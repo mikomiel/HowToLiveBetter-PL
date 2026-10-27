@@ -25,6 +25,7 @@ test('renders the actual Markdown, provenance, Polish text and no external reque
   await ready(page);
   await expect(page.getByRole('heading', { name: 'Jak żyć lepiej', exact: true })).toBeVisible();
   await expect(visibleCards(page)).toHaveCount(count);
+  await expect(page.getByRole('heading', { name: 'Zweryfikowane porady', level: 2 })).toBeVisible();
   await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
   expect(requests.some(url => url.endsWith(CONTENT_PATH))).toBe(true);
   expect(requests.some(url => /book\/\d|updates\.json|selfcheck/.test(url))).toBe(false);
@@ -131,6 +132,17 @@ test('raw HTML and unsafe links in Markdown are inert', async ({ page }) => {
   await expect(page.locator('a[href^="javascript:"]')).toHaveCount(0);
   await expect(page.locator('#porada-4-1 .practical')).toContainText('<img');
   expect(dialogs).toEqual([]);
+});
+
+test('module failure and file URLs retain an actionable static fallback', async ({ page }) => {
+  await page.route('**/reader.mjs', route => route.abort('failed'));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika. Użyj lokalnego serwera HTTP');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'O wydaniu i metodzie' })).toBeVisible();
+  await page.goto(new URL('../../index.html', import.meta.url).href);
+  await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika.');
+  await expect(page.locator('article')).toHaveCount(0);
 });
 
 test('layout has no horizontal overflow at small widths', async ({ page }) => {

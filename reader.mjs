@@ -43,6 +43,8 @@ export function parseChapter(markdown) {
       const [, label, value] = match;
       if (!FIELDS.includes(label) || label in entry.fields) throw new Error('Nieprawidłowe lub powtórzone pole ' + label);
       entry.fields[label] = value;
+    } else if (entry && line.trim() && !/^<a id="porada-\d+-\d+"><\/a>$/.test(line)) {
+      throw new Error('Nieobsługiwany wiersz porady ' + entry.id);
     }
   }
   flush();
@@ -141,12 +143,12 @@ async function startReader() {
         practical.className = 'practical';
         inline(practical, entry.fields['W praktyce']);
         article.append(badge, title, practical);
-        article.append(fieldsList(entry, ['Koszt', 'Korzyść i dowody', 'Ograniczenia', 'Ocena redakcyjna']));
+        article.append(fieldsList(entry, ['Koszt', 'Korzyść i dowody', 'Ocena dowodów', 'Ograniczenia', 'Ocena redakcyjna']));
         const details = document.createElement('details');
         const summary = document.createElement('summary');
         summary.textContent = 'Dowody, źródła i adaptacja';
         details.append(summary);
-        details.append(fieldsList(entry, ['Ocena dowodów', 'Źródła', 'Oryginał', 'Weryfikacja', 'Zmiany w adaptacji']));
+        details.append(fieldsList(entry, ['Źródła', 'Oryginał', 'Weryfikacja', 'Zmiany w adaptacji']));
         article.append(details);
         const nav = document.createElement('li');
         const link = document.createElement('a');
@@ -156,7 +158,9 @@ async function startReader() {
         const haystack = fold([entry.number, entry.title, ...Object.values(entry.fields)].join('\n'));
         cards.push({ entry, article, nav, haystack });
       }
-      main.append(...cards.map(card => card.article));
+      const heading = document.createElement('h2');
+      heading.textContent = 'Zweryfikowane porady';
+      main.append(heading, ...cards.map(card => card.article));
       toc.append(...cards.map(card => card.nav));
       apply();
       revealHash();
