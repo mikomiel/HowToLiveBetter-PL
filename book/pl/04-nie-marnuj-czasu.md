@@ -42,7 +42,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać. To ocena redakcji.
 - W praktyce: Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”. Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.
-- Korzyść i dowody: Eksperymenty Arkesa i Blumer pokazują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu. Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych. Siła efektu zależy od rodzaju decyzji.
+- Korzyść i dowody: Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu. Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych. Siła efektu zależy od rodzaju decyzji.
 - Ocena dowodów: B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji.
 - Ocena redakcyjna: To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań.
 - Ograniczenia: Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu. Nie ma tu potwierdzonej liczby odzyskanych godzin.
@@ -79,14 +79,14 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 - Źródła: Leach, Rogelberg, Warr i Burnfield (2009), Perceived meeting effectiveness: The role of design characteristics. [DOI i abstrakt wydawcy](https://doi.org/10.1007/s10869-009-9092-6).
 - Oryginał: [04.5](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L43-L50)
 - Weryfikacja: 2026-10-27; abstrakt wydawcy: obie próby, stosowanie planu i ocena skuteczności przez uczestników.
-- Zmiany w adaptacji: Usunięto nakaz odwoływania spotkań bez planu, część o staniu oraz wymóg rozsyłania planu z wyprzedzeniem. Pilotaż obejmuje tylko zweryfikowany tu związek dotyczący korzystania z planu, bez deklaracji o 34% krótszych spotkaniach. Sposób przygotowania planu jest sugestią redakcji.
+- Zmiany w adaptacji: Usunięto nakaz odwoływania spotkań bez planu, część o staniu oraz wymóg rozsyłania planu z wyprzedzeniem. Pilotaż obejmuje tylko zweryfikowany tu związek dotyczący korzystania z planu. Sposób przygotowania planu jest sugestią redakcji.
 
 <a id="porada-4-7"></a>
 
 ### 7. Rozpisz złożone zadanie na części, zanim oszacujesz czas
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Przygotowanie listy etapów też zabiera czas. To ocena redakcji.
-- W praktyce: Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę dla zadania, którego zakresu jeszcze nie sprawdziłeś.
+- W praktyce: Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.
 - Korzyść i dowody: Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań. Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.
 - Ocena dowodów: B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.
 - Ocena redakcyjna: Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.
@@ -102,7 +102,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy. To ocena redakcji.
 - W praktyce: Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne. Wybierz mały pierwszy krok. Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).
-- Korzyść i dowody: Steel połączył 691 korelacji dotyczących prokrastynacji. Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność. Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.
+- Korzyść i dowody: Steel przeanalizował 691 korelacji dotyczących prokrastynacji. Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność. Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.
 - Ocena dowodów: B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.
 - Ocena redakcyjna: Przyjrzenie się przeszkodzie może pomóc dobrać działanie. Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.
 - Ograniczenia: Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku. Nie jest to diagnoza ani metoda leczenia problemów psychicznych.
