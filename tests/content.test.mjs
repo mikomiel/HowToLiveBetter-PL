@@ -91,6 +91,7 @@ test('all Actions workflows are validation-only and least privilege', () => {
   assert.match(workflow, /  push:\n    branches: \[main\]/);
   assert.match(workflow, /permissions:\n  contents: read\n/);
   assert.match(workflow, /persist-credentials: false/);
+  assert.match(workflow, /runs-on: ubuntu-24\.04/);
   assert.match(workflow, /run: npm test/);
   assert.match(workflow, /run: npm run test:browser/);
   assert.doesNotMatch(workflow, /contents: write|pull_request_target|gh release|git push|git tag|deploy|pages|upload-artifact|tools\/(epub|pdf|anki|offline)/i);
