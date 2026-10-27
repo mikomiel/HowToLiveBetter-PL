@@ -88,7 +88,7 @@ Testy sprawdzają format i stany treści, pochodzenie, liczbę porad, kotwice or
 
 ## Publikacja i licencje
 
-GitHub Actions wykonuje wyłącznie kontrole pilotażu, z contents: read i bez zachowywania poświadczeń checkoutu. Nie tworzy e-booków, tagów, wydań ani wdrożeń Pages. Stare generatory opisuje [tools/README.md](tools/README.md); nie służą do publikacji polskiego pilotażu. Scalenie PR wymaga decyzji człowieka.
+GitHub Actions wykonuje wyłącznie kontrole pilotażu, z contents: read i bez zachowywania poświadczeń checkoutu. Runner Ubuntu 24.04 jest przypięty do wersji obsługiwanej przez testową przeglądarkę Playwright. Nie tworzy e-booków, tagów, wydań ani wdrożeń Pages. Stare generatory opisuje [tools/README.md](tools/README.md); nie służą do publikacji polskiego pilotażu. Scalenie PR wymaga decyzji człowieka.
 
 Tekst oryginału oraz polska adaptacja, w tym README i book/pl/, są udostępnione na [CC BY 4.0](LICENSE). Możesz kopiować, adaptować i używać ich komercyjnie zgodnie z [warunkami licencji](https://creativecommons.org/licenses/by/4.0/). Zachowaj oznaczenie eternity4719, tytuł i link do HowToLiveBetter, link do licencji, informację o adaptacji i dokonanych zmianach. Nie sugeruj zatwierdzenia adaptacji przez autora. Nie ma gwarancji poprawności; pełne warunki i wyłączenia zawiera LICENSE. Prawa do znaków i materiałów osób trzecich nie wynikają automatycznie z tej licencji.
 
