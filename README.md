@@ -8,7 +8,7 @@ Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](http
 
 - [Czytaj rozdział 4: Nie marnuj czasu](book/pl/04-nie-marnuj-czasu.md)
 - [Otwórz lokalny czytnik](index.html) po uruchomieniu serwera według instrukcji poniżej.
-- [Zgłoś błąd lub zaproponuj korektę](https://github.com/mikomiel/HowToLiveBetter-PL/issues/new)
+- [Zgłoś błąd lub zaproponuj korektę](https://github.com/mikomiel/HowToLiveBetter-PL/pulls)
 - [Zasady redakcyjne](AGENTS.md)
 
 Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Weryfikację pilotażu wykonano 2026-10-27. Wybrane tematy to planowanie, koszty utopione, prognozowanie czasu, spotkania, prokrastynacja, nawyki, skróty klawiaturowe i dojazdy.
@@ -34,7 +34,7 @@ Zachowujemy oznaczenia A/B/C, ale podajemy przy każdej poradzie projekt badania
 
 | Ocena | Znaczenie w tym pilotażu |
 | --- | --- |
-| A | Ilościowa synteza wielu badań. Trzeba osobno ocenić ich projekt i ograniczenia; synteza korelacji nadal nie dowodzi przyczyny. |
+| A | Ilościowa synteza wielu badań dotycząca proponowanego działania i jego wyniku. Trzeba osobno ocenić projekt i ograniczenia badań. Samo potwierdzenie korelacji nie wystarcza do takiej oceny skuteczności porady. |
 | B | Pojedyncze badanie, ograniczone próby albo wniosek, którego nie można wiarygodnie wyrazić jedną wielkością efektu. |
 | C | Osąd redakcyjny lub doświadczenie bez bezpośredniego badania skuteczności. Nie przedstawiamy go jako dowodu naukowego. |
 
@@ -65,20 +65,20 @@ cd HowToLiveBetter-PL
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Otwórz http://127.0.0.1:8000/. Po połączeniu tego PR z main klon zawiera pilotaż; przed połączeniem przełącz się na gałąź PR. Nie otwieraj index.html przez file://, ponieważ przeglądarka blokuje wtedy odczyt Markdown.
+Otwórz http://127.0.0.1:8000/. Jeśli sprawdzasz zmiany z niescalonego PR, najpierw przełącz się na jego gałąź. Nie otwieraj index.html przez file://, ponieważ przeglądarka blokuje wtedy odczyt Markdown.
 
 Czytnik ma wyszukiwanie (także bez polskich znaków), filtr ocen dowodów, nawigację do porad i rozwijane szczegóły źródeł. Liczba porad pochodzi z wczytanego Markdown. Obsługuje klawiaturę i małe ekrany. Nie ma reklam, śledzenia, zewnętrznych fontów ani wymaganego konta. Nie uruchomiono publicznej strony.
 
 ## Jak zgłosić poprawkę i współtworzyć wydanie
 
-W zgłoszeniu podaj identyfikator, na przykład 04.12, kwestionowane zdanie, źródło pierwotne i proponowaną korektę. Nie przesyłaj cudzych danych osobowych. Jeśli źródła brakuje, napisz to zamiast dopisywać pewny wniosek.
+Zgłoś problem w komentarzu do właściwego otwartego PR albo prześlij osobny PR z korektą. Nie wymaga to włączania modułu Issues. Podaj identyfikator, na przykład 04.12, kwestionowane zdanie, źródło pierwotne i proponowaną korektę. Nie przesyłaj cudzych danych osobowych. Jeśli źródła brakuje, napisz to zamiast dopisywać pewny wniosek.
 
 Przed PR przeczytaj [AGENTS.md](AGENTS.md). Edytuj Markdown, nie kopię porady w kodzie. Zachowaj oryginalny numer. Zmiana istotnego twierdzenia wymaga ponownej weryfikacji i daty; niezweryfikowane tłumaczenie pozostaje poza czytnikiem. PR kieruj wyłącznie do main w mikomiel/HowToLiveBetter-PL.
 
 Kontrole techniczne wymagają Node.js 22 lub nowszego. Playwright jest jedyną nową zależnością, wyłącznie testową: stare skrypty nie wykonują interakcji z polskim czytnikiem w przeglądarce. Czytnik nie ma zależności uruchomieniowych.
 
 ```bash
-npm ci
+npm ci --ignore-scripts
 npm test
 npx playwright install chromium
 npm run test:browser

@@ -43,6 +43,7 @@ test('only verified items publish; unknown and missing states fail closed', () =
     assert.equal(published(parseChapter(content.replace('- Status: verified', `- Status: ${state}`))).length, 9);
   }
   assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: ready')), /stan/);
+  assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: verified\nDalsza część pola w złym wierszu')), /Nieobsługiwany wiersz/);
   assert.throws(() => parseChapter(content.replace('- Status: verified\n', '')), /stan/);
   assert.throws(() => parseChapter(content.replace('- Weryfikacja: 2026-10-27;', '- Weryfikacja: wczoraj;')), /weryfikacji/);
   assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: verified\n- Status: verified')), /powtórzone/);
@@ -75,7 +76,7 @@ test('reader has no upstream corpus, advertising, analytics or runtime dependenc
   const html = read('index.html');
   assert.match(html, /<html lang="pl">/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|ads\/|og\.png|selfcheck\.html|eternity4719\.github\.io|\p{Script=Han}/u);
-  assert.match(html, /https:\/\/github\.com\/mikomiel\/HowToLiveBetter-PL\/issues\/new/);
+  assert.match(html, /https:\/\/github\.com\/mikomiel\/HowToLiveBetter-PL\/pulls/);
   assert.match(html, /CC BY 4\.0/);
   assert.match(html, /LICENSE-CODE/);
   assert.equal(JSON.parse(read('package.json')).dependencies, undefined);
@@ -92,6 +93,7 @@ test('all Actions workflows are validation-only and least privilege', () => {
   assert.match(workflow, /permissions:\n  contents: read\n/);
   assert.match(workflow, /persist-credentials: false/);
   assert.match(workflow, /runs-on: ubuntu-24\.04/);
+  assert.match(workflow, /run: npm ci --ignore-scripts/);
   assert.match(workflow, /run: npm test/);
   assert.match(workflow, /run: npm run test:browser/);
   assert.doesNotMatch(workflow, /contents: write|pull_request_target|gh release|git push|git tag|deploy|pages|upload-artifact|tools\/(epub|pdf|anki|offline)/i);
