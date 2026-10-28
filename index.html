@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Niezależny polski pilotaż HowToLiveBetter. Sprawdzone porady o planowaniu i czasie, z kosztami, źródłami i ograniczeniami.">
+  <meta name="description" content="Niezależne polskie wydanie HowToLiveBetter. Porady o energii, czasie i bezpieczeństwie kont, ze źródłami i ograniczeniami.">
   <title>Jak żyć lepiej — Praktyczny poradnik oparty na dowodach</title>
   <style>
     :root { color-scheme: light; font: 1rem/1.65 system-ui, sans-serif; color: #203431; background: #f4f6f2; }
@@ -21,6 +21,7 @@
     .subtitle { font-size: 1.2rem; margin-top: 0; }
     .intro { max-width: 65ch; }
     .controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; padding: 1.2rem; margin-top: 1.5rem; border: 1px solid #c5d3cc; border-radius: .7rem; background: #fff; }
+    .controls > div { max-width: 100%; min-width: 0; }
     label { display: block; font-weight: 650; }
     .search-control { flex: 1 1 20rem; min-width: 0; }
     input, select, button { font: inherit; padding: .6rem .7rem; border: 1px solid #71887f; border-radius: .35rem; min-height: 2.75rem; }
@@ -29,7 +30,8 @@
     button { cursor: pointer; background: #175a4a; color: #fff; border-color: #175a4a; }
     #status { margin: 1rem 0 0; }
     .layout { display: grid; grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr); gap: 2rem; padding-top: 1rem; }
-    nav { align-self: start; position: sticky; top: 1rem; }
+    .navigation { align-self: start; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; }
+    section { scroll-margin-top: 1rem; }
     nav h2 { font-size: 1rem; margin: 0 0 .5rem; }
     nav details { margin: 0; border: 0; padding: 0; }
     nav ul { padding-left: 1.3rem; margin: .5rem 0 0; }
@@ -47,22 +49,24 @@
     summary { cursor: pointer; font-weight: 650; min-height: 2.75rem; }
     footer { border-top: 1px solid #c5d3cc; font-size: .9rem; }
     [hidden] { display: none !important; }
-    @media (max-width: 48rem) { .layout { display: block; } nav { position: static; margin-bottom: 1.5rem; } nav ul { columns: 2; column-width: 13rem; } }
+    @media (max-width: 48rem) { .layout { display: block; } .navigation { position: static; max-height: none; overflow: visible; margin-bottom: 1.5rem; } nav ul { columns: 2; column-width: 13rem; } }
     @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   </style>
 </head>
 <body>
   <a class="skip" href="#porady">Przejdź do porad</a>
   <header>
-    <p class="edition">Wydanie polskie · pilotaż rozdziału 04</p>
+    <p class="edition">Wydanie polskie · wybrane zweryfikowane porady</p>
     <h1>Jak żyć lepiej</h1>
     <p class="subtitle">Praktyczny poradnik oparty na dowodach</p>
     <p class="intro">Nie musisz robić wszystkiego. Wybierz jedną zmianę, sprawdź jej koszt i zobacz, co naprawdę wynika z badań. Przy każdej poradzie znajdziesz źródła i ograniczenia.</p>
-    <p><a href="README.md">O wydaniu i metodzie</a> · <a href="book/pl/04-nie-marnuj-czasu.md">Rozdział w Markdown</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/pulls">Zgłoś poprawkę</a></p>
+    <p class="intro">Informacje zdrowotne i prawne są ogólne. Nie zastępują diagnozy, leczenia ani oceny indywidualnej sprawy. Sprawdź zakres i ograniczenia przy wybranej poradzie.</p>
+    <p><a href="README.md">O wydaniu i metodzie</a> · <a href="book/README.md">Polskie rozdziały w Markdown</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/pulls">Zgłoś poprawkę</a></p>
     <form class="controls" role="search" aria-label="Wyszukiwanie porad">
-      <div class="search-control"><label for="search">Szukaj w polskich poradach</label><input id="search" type="search" placeholder="Np. spotkanie, nawyk, termin" aria-describedby="search-help"></div>
-      <div><label for="grade">Ocena dowodów</label><select id="grade"><option value="">Wszystkie oceny</option><option value="A">A — synteza ilościowa</option><option value="B">B — ograniczone badania</option><option value="C">C — osąd bez badania</option></select></div>
-      <button id="reset" type="button">Wyczyść filtry</button>
+      <div class="search-control"><label for="search">Szukaj w polskich poradach</label><input id="search" type="search" placeholder="Np. sen, spotkanie, konto" aria-describedby="search-help" disabled></div>
+      <div><label for="chapter">Rozdział</label><select id="chapter" disabled><option value="">Wszystkie rozdziały</option></select></div>
+      <div><label for="grade">Ocena dowodów</label><select id="grade" disabled><option value="">Wszystkie oceny</option><option value="A">A — synteza ilościowa</option><option value="B">B — badania i wytyczne</option><option value="C">C — normy i zalecenia</option></select></div>
+      <button id="reset" type="button" disabled>Wyczyść filtry</button>
     </form>
     <p id="search-help">Możesz szukać bez polskich znaków. Ocena dowodów nie jest oceną opłacalności.</p>
     <p id="status" role="status" aria-live="polite">Nie uruchomiono czytnika. Użyj lokalnego serwera HTTP i włącz JavaScript. Jeśli ten komunikat pozostaje widoczny, sprawdź plik reader.mjs i instrukcję w README.</p>
@@ -70,11 +74,14 @@
     <noscript><p>Włącz JavaScript, aby użyć wyszukiwania, lub otwórz rozdział w Markdown. Nie wczytano żadnych porad.</p></noscript>
   </header>
   <div class="layout">
-    <nav aria-label="Spis polskich porad"><h2>4. Nie marnuj czasu</h2><details id="nav-list" open><summary>Spis porad</summary><ul id="toc"></ul></details></nav>
+    <aside class="navigation">
+      <nav aria-label="Rozdziały"><h2>Rozdziały</h2><ul id="chapters"></ul></nav>
+      <nav aria-label="Spis polskich porad"><details id="nav-list" open><summary>Spis porad</summary><ul id="toc"></ul></details></nav>
+    </aside>
     <main id="porady" tabindex="-1" aria-label="Zweryfikowane polskie porady"></main>
   </div>
   <footer>
-    <p>Niezależna polska adaptacja HowToLiveBetter autorstwa <a href="https://github.com/eternity4719/HowToLiveBetter">eternity4719</a>. To pilotaż, nie tłumaczenie całej książki. Tylko treść o stanie verified jest publikowana w tym czytniku.</p>
+    <p>Niezależna polska adaptacja HowToLiveBetter autorstwa <a href="https://github.com/eternity4719/HowToLiveBetter">eternity4719</a>. To wybór rozdziałów, nie tłumaczenie całej książki. Tylko treść o stanie verified jest publikowana w tym czytniku.</p>
     <p>Tekst: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (<a href="LICENSE">pełna licencja</a>). Kod: <a href="LICENSE-CODE">MIT</a>, Copyright (c) 2026 eternity4719. Zmiany i weryfikację opisano przy każdej poradzie. Brak gwarancji poprawności; sprawdzaj ograniczenia i źródła.</p>
   </footer>
   <script type="module" src="reader.mjs"></script>

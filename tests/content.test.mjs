@@ -3,90 +3,173 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CONTENT_PATH, FIELDS, parseChapter, published, fold } from '../reader.mjs';
+import { CHAPTERS, FIELDS, parseChapter, published, fold, safeHref } from '../reader.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = path => readFileSync(resolve(root, path), 'utf8');
-const content = read(CONTENT_PATH);
-const entries = parseChapter(content);
-const pilot = published(entries);
-const expectedNumbers = [1, 2, 3, 4, 5, 7, 9, 12, 17, 18];
+const chapters = CHAPTERS.map(c => ({ ...c, text: read(c.path), ...parseChapter(read(c.path), c.id) }));
+const entries = chapters.flatMap(c => c.entries);
+const advice = published(entries);
+const time = chapters.find(c => c.id === '04');
+const sourcePaths = { '03': 'book/03-不要浪费精力.md', '04': 'book/04-不要浪费时间.md', '14': 'book/14-账号与信息安全.md' };
 const baseline = 'e2605d3e2242bd6216c9255192b8a8957a08c55a';
+const states = ['verified', 'needs_verification', 'needs_localization', 'not_applicable'];
 
-test('published count and original item identities match the actual chapter', () => {
-  assert.deepEqual(pilot.map(entry => entry.number), expectedNumbers.map(n => `04.${n}`));
-  assert.equal(entries.length, 10);
-  assert.match(read('README.md'), new RegExp(`Stan pilotażu: ${pilot.length} zweryfikowanych polskich porad`));
-  const exclusions = [...content.matchAll(/^\| 04\.(\d+) \|/gm)].map(match => Number(match[1]));
+test('one file registry covers only the three authorized chapters', () => {
+  assert.deepEqual(CHAPTERS.map(c => c.id), ['03', '04', '14']);
+  assert.equal(new Set(CHAPTERS.map(c => c.path)).size, CHAPTERS.length);
+  for (const c of CHAPTERS) assert.deepEqual(Object.keys(c).sort(), ['id', 'path']);
+});
+
+test('all 39 new source items have exactly one decision; chapter 04 stays intact', () => {
+  const newChapters = chapters.filter(c => c.id !== '04');
+  assert.equal(newChapters.flatMap(c => c.entries).length, 39);
+  for (const c of newChapters) {
+    const sourceNumbers = [...read(sourcePaths[c.id]).matchAll(/^### (\d+)\. /gm)].map(m => `${c.id}.${m[1]}`);
+    assert.deepEqual(c.entries.map(e => e.number), sourceNumbers);
+    for (const e of c.entries) {
+      assert.ok(states.includes(e.fields.Status));
+      if (e.fields.Status !== 'verified') {
+        for (const f of ['Ograniczenia', 'Źródła', 'Oryginał', 'Weryfikacja']) assert.ok(e.fields[f], `${e.number}: ${f}`);
+        assert.ok(e.title.startsWith('Rekord redakcyjny:'));
+        assert.equal(e.fields['W praktyce'], undefined);
+      }
+    }
+  }
+  const expected = [1, 2, 3, 4, 5, 7, 9, 12, 17, 18];
+  assert.deepEqual(published(time.entries).map(e => e.number), expected.map(n => `04.${n}`));
+  const exclusions = [...time.text.matchAll(/^\| 04\.(\d+) \|/gm)].map(m => Number(m[1]));
   assert.equal(exclusions.length, 8);
-  assert.deepEqual([...exclusions, ...expectedNumbers].sort((a, b) => a - b), Array.from({ length: 18 }, (_, i) => i + 1));
+  assert.deepEqual([...exclusions, ...expected].sort((a, b) => a - b), Array.from({ length: 18 }, (_, i) => i + 1));
 });
 
-test('each published item has a state, evidence meaning, date, sources and bounded provenance', () => {
-  for (const entry of pilot) {
-    for (const field of FIELDS) assert.ok(entry.fields[field], `${entry.number}: ${field}`);
-    assert.equal(entry.fields.Status, 'verified');
-    assert.match(entry.fields['Ocena dowodów'], /^[ABC] — .+/);
-    assert.match(entry.fields.Weryfikacja, /^\d{4}-\d{2}-\d{2}; .+/);
-    const date = entry.fields.Weryfikacja.slice(0, 10);
-    assert.equal(new Date(date).toISOString().slice(0, 10), date);
-    assert.match(entry.fields['Źródła'], /https:\/\/(doi\.org|onlinelibrary\.wiley\.com)\//);
-    assert.ok(entry.fields['Oryginał'].includes(`[${entry.number}]`));
-    assert.ok(entry.fields['Oryginał'].includes(`https://github.com/eternity4719/HowToLiveBetter/blob/${baseline}/book/`));
-    assert.match(entry.fields['Oryginał'], /#L\d+-L\d+\)/);
-    assert.ok(content.includes(`<a id="${entry.id}"></a>`));
+test('README totals and per-chapter coverage match the canonical Markdown', () => {
+  const readme = read('README.md');
+  assert.match(readme, new RegExp(`Stan treści: ${advice.length} zweryfikowane polskie porady`));
+  for (const c of chapters) {
+    const total = [...read(sourcePaths[c.id]).matchAll(/^### \d+\. /gm)].length;
+    const row = readme.split('\n').find(line => line.startsWith(`| [${c.id}.`));
+    assert.ok(row?.includes(`| ${total} | ${published(c.entries).length} |`));
+  }
+  const pending = entries.filter(e => e.fields.Status !== 'verified').length;
+  assert.ok(readme.includes(`${pending} rekordów oczekujących`));
+});
+
+test('all source identifiers and pinned line ranges resolve to the unchanged original', () => {
+  for (const c of chapters) {
+    const original = read(sourcePaths[c.id]).split(/\r?\n/);
+    for (const e of c.entries) {
+      const href = /\]\(([^)]+)\)/.exec(e.fields['Oryginał'])?.[1];
+      assert.ok(href?.startsWith(`https://github.com/eternity4719/HowToLiveBetter/blob/${baseline}/`));
+      assert.ok(e.fields['Oryginał'].includes(`[${e.number}]`));
+      const url = new URL(href);
+      assert.equal(decodeURIComponent(url.pathname.split('/book/')[1]), sourcePaths[c.id].slice(5));
+      const [, start, end] = /^#L(\d+)-L(\d+)$/.exec(url.hash) ?? [];
+      assert.ok(start && end);
+      const span = original.slice(Number(start) - 1, Number(end)).join('\n');
+      assert.ok(span.startsWith(`### ${e.number.split('.')[1]}. `), e.number);
+      assert.equal([...span.matchAll(/^### /gm)].length, 1);
+      assert.match(span, /证据等级/);
+      assert.ok(c.text.includes(`<a id="${e.id}"></a>`));
+      if (e.fields.Status === 'verified') {
+        const oldGrade = /证据等级：([ABC])/.exec(span)?.[1];
+        if (oldGrade !== e.fields['Ocena dowodów'][0]) {
+          assert.match(e.fields['Zmiany w adaptacji'], new RegExp(`(?:Oryginalne ${oldGrade} zastąpiono ${e.fields['Ocena dowodów'][0]}|z ${oldGrade} do ${e.fields['Ocena dowodów'][0]})`));
+        }
+      }
+    }
   }
 });
 
-test('only verified items publish; unknown and missing states fail closed', () => {
-  for (const state of ['needs_verification', 'needs_localization', 'not_applicable']) {
-    assert.equal(published(parseChapter(content.replace('- Status: verified', `- Status: ${state}`))).length, 9);
+test('published items have all provenance, evidence, limits and calendar-valid dates', () => {
+  for (const e of advice) {
+    for (const field of FIELDS) assert.ok(e.fields[field], `${e.number}: ${field}`);
+    assert.equal(e.fields.Status, 'verified');
+    assert.match(e.fields['Ocena dowodów'], /^[ABC] — .+/);
+    assert.match(e.fields.Weryfikacja, /^\d{4}-\d{2}-\d{2}; .+/);
+    assert.equal(new Date(e.fields.Weryfikacja.slice(0, 10)).toISOString().slice(0, 10), e.fields.Weryfikacja.slice(0, 10));
+    assert.match(e.fields['Źródła'], /https:\/\//);
   }
-  assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: ready')), /stan/);
-  assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: verified\nDalsza część pola w złym wierszu')), /Nieobsługiwany wiersz/);
-  assert.throws(() => parseChapter(content.replace('- Status: verified\n', '')), /stan/);
-  assert.throws(() => parseChapter(content.replace('- Weryfikacja: 2026-10-27;', '- Weryfikacja: wczoraj;')), /weryfikacji/);
-  assert.throws(() => parseChapter(content.replace('- Status: verified', '- Status: verified\n- Status: verified')), /powtórzone/);
-  assert.throws(() => parseChapter(content + '\n# 4. Duplikat\n### 1. Duplikat\n- Status: needs_verification\n'), /Powtórzony/);
+  // Metadata checks do not establish scientific or legal truth.
 });
 
-test('UTF-8 text and accent-insensitive search preserve Polish content', () => {
-  assert.doesNotMatch(content, /[\u0000\ufffd\p{Script=Han}]/u);
+test('all unpublished states are excluded and malformed files fail closed', () => {
+  for (const state of states.slice(1)) {
+    assert.equal(published(parseChapter(time.text.replace('- Status: verified', `- Status: ${state}`)).entries).length, 9);
+  }
+  assert.throws(() => parseChapter(time.text.replace('- Status: verified', '- Status: ready')), /stan/);
+  assert.throws(() => parseChapter(time.text.replace('- Status: verified\n', '')), /stan/);
+  assert.throws(() => parseChapter(time.text.replace('- Status: verified', '- Status: verified\nDalsza część w złym wierszu')), /Nieobsługiwany/);
+  assert.throws(() => parseChapter(time.text.replace(/- Weryfikacja: \d{4}-\d{2}-\d{2};/, '- Weryfikacja: 2026-02-31;')), /weryfikacji/);
+  assert.throws(() => parseChapter(time.text.replace('- Status: verified', '- Status: verified\n- Status: verified')), /powtórzone/);
+  assert.throws(() => parseChapter(time.text + '\n# 4. Duplikat\n'), /jeden rozdział/);
+  assert.throws(() => parseChapter(chapters[0].text + '\n### 1. Duplikat\n- Status: needs_verification\n'), /Powtórzony/);
+  assert.throws(() => parseChapter(time.text, '03'), /Niezgodny numer/);
+  assert.throws(() => parseChapter(''), /Brak/);
+  assert.throws(() => parseChapter('# 3. Pusty\n'), /Brak/);
+});
+
+test('Polish text and accent-insensitive search keep meaningful characters', () => {
+  for (const c of chapters) assert.doesNotMatch(c.text, /[\u0000\ufffd\p{Script=Han}]/u);
   assert.equal(fold('ŻÓŁĆ, Łódź i źródła'), 'zolc, lodz i zrodla');
-  assert.ok(pilot.some(entry => fold(entry.title).includes('skrotow')));
-  assert.ok(pilot.some(entry => fold(Object.values(entry.fields).join(' ')).includes('39')));
+  assert.ok(advice.some(e => fold(e.title).includes('skrotow')));
 });
 
-test('Markdown local files and explicit anchors resolve', () => {
-  for (const path of ['README.md', 'AGENTS.md', 'CLAUDE.md', CONTENT_PATH, 'book/README.md', 'docs/README.md', 'tools/README.md']) {
+test('Markdown files, local links and published cross-references resolve', () => {
+  const paths = ['README.md', 'AGENTS.md', 'CLAUDE.md', ...CHAPTERS.map(c => c.path), 'book/README.md', 'docs/README.md', 'tools/README.md'];
+  const publishedIds = new Set(advice.map(e => e.id));
+  for (const path of paths) {
     const text = read(path);
     assert.doesNotMatch(text, /[\u0000\ufffd]/);
     for (const [, href] of text.matchAll(/\[[^\]]+\]\(([^()\s]+)\)/g)) {
       if (/^https:\/\//.test(href)) continue;
       const [file, anchor] = href.split('#');
-      const target = resolve(root, dirname(path), file || '.');
-      const targetFile = file ? target : resolve(root, path);
+      const targetFile = file ? resolve(root, dirname(path), file) : resolve(root, path);
       assert.ok(existsSync(targetFile), `${path} -> ${href}`);
       if (anchor) assert.ok(readFileSync(targetFile, 'utf8').includes(`id="${anchor}"`), `${path} -> ${href}`);
     }
   }
+  for (const e of advice) {
+    for (const value of Object.values(e.fields)) for (const [, href] of value.matchAll(/\[[^\]]+\]\(([^()\s]+)\)/g)) {
+      const safe = safeHref(href);
+      assert.ok(safe, `${e.number}: ${href}`);
+      if (safe.startsWith('#')) assert.ok(publishedIds.has(safe.slice(1)), `${e.number}: unpublished target ${safe}`);
+    }
+  }
 });
 
-test('reader has no upstream corpus, advertising, analytics or runtime dependencies', () => {
+test('URL guard permits only HTTPS and known chapter cross-references', () => {
+  assert.equal(safeHref('https://example.org/path'), 'https://example.org/path');
+  assert.equal(safeHref('#porada-4-1'), '#porada-4-1');
+  assert.equal(safeHref('04-nie-marnuj-czasu.md#porada-4-5'), '#porada-4-5');
+  for (const href of ['javascript:alert(1)', 'data:text/html,x', '//evil.test', 'http://example.org', 'https://', 'https://u:p@example.org', '../reader.mjs', 'unknown.md#porada-4-1', '04-nie-marnuj-czasu.md#porada-14-1']) assert.equal(safeHref(href), null, href);
+});
+
+test('active Polish metadata has no upstream site, ads or publication address', () => {
   const html = read('index.html');
   assert.match(html, /<html lang="pl">/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|ads\/|og\.png|selfcheck\.html|eternity4719\.github\.io|\p{Script=Han}/u);
   assert.match(html, /https:\/\/github\.com\/mikomiel\/HowToLiveBetter-PL\/pulls/);
-  assert.match(html, /CC BY 4\.0/);
-  assert.match(html, /LICENSE-CODE/);
+  assert.match(read('robots.txt'), /Disallow: \/\n/);
+  assert.doesNotMatch(read('robots.txt'), /Sitemap:|github\.io/i);
+  assert.equal(existsSync(resolve(root, 'sitemap.xml')), false);
+  for (const [, href] of html.matchAll(/(?:href|src)="([^"#]+)"/g)) if (!href.startsWith('https:')) assert.ok(existsSync(resolve(root, href)), href);
+});
+
+test('licenses and attribution remain present, with no runtime dependencies', () => {
   assert.equal(JSON.parse(read('package.json')).dependencies, undefined);
   assert.ok(read('LICENSE').startsWith('Attribution 4.0 International'));
   assert.match(read('LICENSE-CODE'), /Copyright \(c\) 2026 eternity4719/);
+  for (const path of ['README.md', 'index.html', ...CHAPTERS.map(c => c.path)]) {
+    assert.match(read(path), /eternity4719/);
+    assert.match(read(path), /CC BY 4\.0/);
+    assert.match(read(path), /[Aa]daptacj/);
+  }
+  assert.match(read('reader.mjs'), /Copyright \(c\) 2026 eternity4719/);
 });
 
-test('all Actions workflows are validation-only and least privilege', () => {
-  const workflows = readdirSync(resolve(root, '.github/workflows'));
-  assert.deepEqual(workflows, ['book.yml']);
+test('all GitHub workflows remain validation-only and least privilege', () => {
+  assert.deepEqual(readdirSync(resolve(root, '.github/workflows')), ['book.yml']);
   const workflow = read('.github/workflows/book.yml');
   assert.match(workflow, /on:\n  pull_request:\n    branches: \[main\]/);
   assert.match(workflow, /  push:\n    branches: \[main\]/);
@@ -97,5 +180,5 @@ test('all Actions workflows are validation-only and least privilege', () => {
   assert.match(workflow, /run: npm test/);
   assert.match(workflow, /run: npm run test:browser/);
   assert.doesNotMatch(workflow, /contents: write|pull_request_target|gh release|git push|git tag|deploy|pages|upload-artifact|tools\/(epub|pdf|anki|offline)/i);
-  assert.ok(!existsSync(resolve(root, '.github/FUNDING.yml')));
+  assert.equal(existsSync(resolve(root, '.github/FUNDING.yml')), false);
 });

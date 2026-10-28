@@ -1,5 +1,5 @@
-# Polski pilotaż: tylko walidacja. Bez e-booków, wydań, tagów i wdrożeń.
-name: Kontrole polskiego pilotażu
+# Polskie wydanie: tylko walidacja. Bez e-booków, wydań, tagów i wdrożeń.
+name: Kontrole polskiego wydania
 
 on:
   pull_request:
