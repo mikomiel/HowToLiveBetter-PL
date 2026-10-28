@@ -109,6 +109,14 @@ test('all unpublished states are excluded and malformed files fail closed', () =
   assert.throws(() => parseChapter('# 3. Pusty\n'), /Brak/);
 });
 
+test('authentication advice keeps the available-2FA fallback and its phishing limit', () => {
+  const entry = advice.find(e => e.number === '14.1');
+  assert.match(entry.fields['W praktyce'], /Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową \(2FA\)/);
+  assert.match(entry.fields['W praktyce'], /Kody SMS i z aplikacji nadal można wyłudzić/);
+  assert.match(entry.fields['Zmiany w adaptacji'], /2FA.*kluczy dostępu/);
+  assert.equal(entry.fields['Ocena dowodów'][0], 'C');
+});
+
 test('Polish text and accent-insensitive search keep meaningful characters', () => {
   for (const c of chapters) assert.doesNotMatch(c.text, /[\u0000\ufffd\p{Script=Han}]/u);
   assert.equal(fold('ŻÓŁĆ, Łódź i źródła'), 'zolc, lodz i zrodla');

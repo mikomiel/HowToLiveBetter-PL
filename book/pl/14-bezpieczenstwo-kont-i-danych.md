@@ -13,15 +13,15 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 1. Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu
 - Status: verified
 - Koszt: Konfiguracja każdej usługi i przechowanie zapasu. Klucz sprzętowy może wymagać zakupu; nie podajemy cen.
-- W praktyce: Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Nie zatwierdzaj logowania, którego nie rozpoczynasz.
+- W praktyce: Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku. Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie. Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Nie zatwierdzaj logowania, którego nie rozpoczynasz.
 - Korzyść i dowody: CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie. Kody SMS i kody z aplikacji można wyłudzić. Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.
 - Ocena dowodów: C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków.
 - Ocena redakcyjna: Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania.
 - Ograniczenia: Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę. Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta. Korzystaj z metod rzeczywiście oferowanych przez usługę.
 - Źródła: [CERT Polska: hasła, klucze dostępu i zapas](https://wiedza.cert.pl/dobre-praktyki/hasla/); [CERT Polska: MFA i weryfikacja użytkownika w WebAuthn](https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/).
 - Oryginał: [14.1](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L7-L14)
-- Weryfikacja: 2026-10-28; pełna treść dwóch poradników CERT Polska: phishing, WebAuthn, weryfikacja użytkownika i odzyskiwanie. Bez przenoszenia statystyki jednego dostawcy.
-- Zmiany w adaptacji: Oryginalne A zastąpiono C dla zalecenia operacyjnego. Usunięto ranking „push przed SMS” oraz procenty z badania Google z 2019 roku jako ogólną gwarancję. Dodano odporność na phishing i odzyskiwanie.
+- Weryfikacja: 2026-10-28; pełna treść dwóch poradników CERT Polska: phishing, WebAuthn, weryfikacja użytkownika, odzyskiwanie i zalecenie dostępnej 2FA przy braku passkeys. Bez przenoszenia statystyki jednego dostawcy.
+- Zmiany w adaptacji: Oryginalne A zastąpiono C dla zalecenia operacyjnego. Usunięto ranking „push przed SMS” oraz procenty z badania Google z 2019 roku jako ogólną gwarancję. Dodano odporność na phishing i odzyskiwanie. Zachowano ogólne zalecenie włączenia 2FA również wtedy, gdy usługa nie obsługuje kluczy dostępu.
 
 <a id="porada-14-2"></a>
 
@@ -40,7 +40,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 <a id="porada-14-3"></a>
 
-### 3. Oddziel zabezpieczenie ekranu od kodu PIN karty SIM
+### 3. Ustaw blokadę ekranu i rozważ PIN karty SIM
 - Status: verified
 - Koszt: Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu. To ocena redakcji.
 - W praktyce: Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM. Nie zgaduj kodu początkowego ani PUK. Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.
@@ -142,8 +142,8 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 10. Nie przekazuj sekretów niesprawdzonym pośrednikom AI
 - Status: verified
 - Koszt: Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia. Cena nie jest tu dowodem bezpieczeństwa.
-- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez odpowiedniej zgody i oceny. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.
-- Korzyść i dowody: Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli. W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz wykorzystanie badawczych kluczy kontrolnych. Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.
+- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.
+- Korzyść i dowody: Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli. W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych. Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.
 - Ocena dowodów: B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.
 - Ocena redakcyjna: Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy. Ocena musi poprzedzać przekazanie danych.
 - Ograniczenia: Nie wiadomo z tego badania, jaki odsetek wszystkich pośredników jest złośliwy. Oficjalny dostawca też wymaga oceny zasad przetwarzania; bezpośrednie połączenie nie jest gwarancją poufności. Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych. Ocena polecenia przez człowieka ogranicza część ryzyka, ale nie gwarantuje wykrycia każdego ataku.

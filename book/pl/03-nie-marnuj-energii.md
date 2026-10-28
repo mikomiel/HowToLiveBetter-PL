@@ -58,14 +58,14 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 4. Ogranicz kofeinę przed snem zamiast stosować jedną godzinę graniczną dla wszystkich
 - Status: verified
 - Koszt: Zmiana nawyku i ewentualny wybór napoju bez kofeiny. Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.
-- W praktyce: Zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby.
+- W praktyce: Zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby. Z kolei model z metaanalizy dla porcji kawy o objętości 250 mL i zawartości 107 mg kofeiny wskazał co najmniej 8,8 godziny przed snem, by uniknąć skrócenia czasu snu. To wynik modelu, nie osobista granica bezpieczeństwa.
 - Korzyść i dowody: Metaanaliza Gardiner i współautorów objęła 24 badania. Po kofeinie łączny czas snu był średnio krótszy o 45 minut. Wielkość wpływu zależała od dawki i pory przyjęcia.
 - Ocena dowodów: A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą.
 - Ocena redakcyjna: Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.
-- Ograniczenia: Nie ma uniwersalnej granicy o 14:00. Modelowe 8,8 godziny z przeglądu dotyczy określonej dawki, a nie dowolnej kawy. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.
+- Ograniczenia: Nie ma uniwersalnej granicy o 14:00. Zawartość kofeiny w napojach i wrażliwość na nią są różne. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.
 - Źródła: Gardiner i współautorzy (2023), The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. [Artykuł i abstrakt](https://doi.org/10.1016/j.smrv.2023.101764); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.4](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L48-L55)
-- Weryfikacja: 2026-10-28; abstrakt i wprowadzenie syntezy: 24 badania, średnio 45 minut, zależność od dawki i czasu; zalecenia NHS.
+- Weryfikacja: 2026-10-28; abstrakt i wprowadzenie syntezy: 24 badania, średnio 45 minut, model dla 107 mg kofeiny w 250 mL kawy: 8,8 godziny; zalecenia NHS.
 - Zmiany w adaptacji: Zachowano A. Usunięto sztywną godzinę 14:00 i przeliczenie każdej filiżanki na tę samą dawkę. Nie przeniesiono wyniku dużej dawki na każdy napój.
 
 <a id="porada-3-5"></a>
@@ -299,7 +299,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Status: verified
 - Koszt: Ocena problemu, udział w terapii i praca między spotkaniami. Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.
 - W praktyce: Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Nie zmieniaj samodzielnie przepisanych leków i nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody.
-- Korzyść i dowody: Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I i nie zaleca samej higieny snu jako jedynego leczenia tego zaburzenia.
+- Korzyść i dowody: Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.
 - Ocena dowodów: B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.
 - Ocena redakcyjna: Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.
 - Ograniczenia: Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu. Nie trzeba czekać miesiącami z pilnym objawem. Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania. Program cyfrowy nie oznacza dowolnej aplikacji.
@@ -314,7 +314,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Status: verified
 - Koszt: Konsultacja, ewentualne badanie snu i leczenie. Organizacja i wydatki zależą od sytuacji; nie podajemy cen aparatu ani zasad refundacji.
 - W praktyce: Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.
-- Korzyść i dowody: Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego. Sam kwestionariusz nie wystarcza do wykluczenia potrzeby dalszej oceny. Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.
+- Korzyść i dowody: Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego. Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.
 - Ocena dowodów: B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika.
 - Ocena redakcyjna: Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.
 - Ograniczenia: Chrapanie samo w sobie nie jest rozpoznaniem. Rodzaj badania i leczenia dobiera osoba prowadząca. Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem. Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania.
