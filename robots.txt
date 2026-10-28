@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://eternity4719.github.io/HowToLiveBetter/sitemap.xml
+# Brak publicznego wdrożenia tego wydania. Nie deklarujemy adresu sitemap.
