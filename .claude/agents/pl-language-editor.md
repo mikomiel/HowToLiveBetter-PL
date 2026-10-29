@@ -32,7 +32,7 @@ You do not propose edits that touch any of these. Report them in `protected_find
 - words naming a population, condition or jurisdiction (dorośli, u zdrowych, w Polsce, tylko, jeśli, o ile, chyba że);
 - any term of law, right or duty.
 
-An edit that touches none of these may carry `requires_reverification: false`. If you are unsure whether an edit touches protected wording, treat it as protected.
+A script compares each edit with the original for protected wording and forces the item back to the source verifier when it differs, whatever you set. Its limits: it cannot see a swapped technical term ("dwuskładnikowa" for "dwuetapowa") or a changed intensity. Report such a change as a `protected_findings` entry, not as an edit. An edit that touches none of the classes above may carry `requires_reverification: false`. If you are unsure, treat the wording as protected.
 
 If the text is already good, say so. Do not invent edits.
 

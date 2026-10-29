@@ -39,7 +39,7 @@ test('each Chinese term is recognised and look-alike Polish words are not', () =
 test('phone numbers near a phone word must be allowlisted, in every reader field', () => {
   for (const field of READER_FIELDS) assert.ok(has(withField(field, 'Zadzwoń pod 800 123 456.'), 'phone-number', 'error', field), field);
   assert.deepEqual([...PHONE_ALLOWLIST].sort(), ['112', '116 111', '116 123', '997', '998', '999']);
-  for (const text of ['Zadzwoń pod 112 lub 116 123.', 'Zadzwoń pod numer 116 123.', 'numer 116-123', 'Zadzwoń pod 116123.', 'Przy zagrożeniu zadzwoń na numer 112.']) {
+  for (const text of ['Zadzwoń pod 112 lub 116 123.', 'Zadzwoń pod numer 116\u00a0123.', 'numer 116-123', 'Zadzwoń pod 116123.', 'Przy zagrożeniu zadzwoń na numer 112.']) {
     assert.ok(!has(withField('W praktyce', text), 'phone-number'), text);
   }
 });
@@ -102,7 +102,9 @@ test('number inventory separates carried figures from new ones and ignores noise
   assert.equal(value(inv('Próba 10 189 osób.', 'Próba 10 189 osób.'), '10 189').inUpstream, true);
   assert.equal(value(inv('Liczba 7.', 'Wynik 30.7 i 17.'), '7').inUpstream, false);
   assert.equal(value(inv('Trwa 30 minut.', 'Wynik 30.7 minut.'), '30').inUpstream, false, '30 is not inside 30.7');
-  assert.equal(value(inv('Trwa 30 minut.', 'Wynik 30,7 minut.'), '30').inUpstream, false, 'nor inside 30,7');
+  // The Chinese original never writes decimals with a comma, so a comma between digits is a list or thousands and each part counts as carried.
+  // Over-reporting a figure as carried only sends it to a verifier; under-reporting would let an unchecked figure through.
+  assert.equal(value(inv('Trwa 30 minut.', 'Wynik 30,7 minut.'), '30').inUpstream, true);
   assert.equal(value(inv('Liczba 99.', 'Zobacz https://doi.org/10.99/abc i nagłówek.'), '99').inUpstream, false);
   assert.equal(value(inv('Liczba 5.', '34% skrócenie'), '5').inUpstream, false);
   assert.deepEqual(inv('Włącz 2FA i zobacz NG202.', 'x').map(r => r.value), []);
@@ -135,4 +137,49 @@ test('importing the tool never throws, and the command works through a symlink',
     assert.equal(run.status, 0);
     assert.match(run.stdout.toString(), /49 records, 0 errors/);
   } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('compact and prefixed numbers, abbreviations before the number and every dash are caught as phone numbers', () => {
+  for (const text of ['Zadzwoń pod 800123456.', 'Zadzwoń pod +48 800 123 456.', 'Zadzwoń pod 0048 22 123 45 67.', 'Zadzwoń pod (22) 123-45-67.', 'Nr tel. 800 123 456.', 'Np. zadzwoń pod 110.',
+    'Zadzwoń na linię 12345.', 'Skorzystaj z linii 12315.', 'Kontakt: 800 123 456.', 'Zgłoś pod 120.', 'Dzwoń: 800\u2013123\u2013456.', 'Dzwoń: 800\u2011123\u2011456.', 'Dzwoń: 800\u2009123\u2009456.', 'Telefon 22.123.45.67.']) {
+    assert.ok(phoneNumbers(text).length > 0, text);
+    assert.ok(has(withField('W praktyce', text), 'phone-number', 'error'), text);
+  }
+  for (const text of ['Zadzwoń pod 116\u2013123.', 'Zadzwoń pod 116\u2011123.', 'Zadzwoń pod 116\u2009123.', 'Zadzwoń pod +48 112.', 'Zadzwoń pod 116.123.']) assert.ok(!has(withField('W praktyce', text), 'phone-number'), text);
+});
+
+test('ordinary figures near a phone word stay clean: blood pressure, decimals, units, versions and years', () => {
+  for (const text of ['Przy ciśnieniu 180/120 zadzwoń do lekarza.', 'Przy 140/90 zadzwoń do lekarza.', 'Zadzwoń, gdy temperatura wynosi 100,4 lub 126,5 mg.', 'Zadzwoń po 5000 kroków lub 3000 uderzeń.',
+    'Zadzwoń do lekarza przy 40 ng/ml i 50 Hz.', 'Zadzwoń, jeśli 120 kcal to za dużo.', 'Zadzwoń: wersja 802.11ax i rok 2024.', 'Zadzwoń do banku w ciągu 120 minut.', 'Zadzwoń po 300 osobach.']) {
+    assert.deepEqual(phoneNumbers(text), [], text);
+  }
+});
+
+test('more Chinese spellings are recognised and look-alike words are not', () => {
+  for (const hit of ['Beijing', 'Shanghai', 'Shenzhen', 'TikTok', 'Huawei', 'ByteDance', 'hukou', 'Union Pay', 'renminbi', 'Hong Kong', 'Hongkong', 'ChRL', 'Państwo Środka', 'Xi Jinping']) {
+    assert.ok(has(withField('W praktyce', `Użyj ${hit} teraz.`), 'cn-leak'), hit);
+  }
+  for (const miss of ['hukowate', 'środka ciężkości', 'Państwo i obywatel']) assert.ok(!has(withField('W praktyce', `Zobacz ${miss}.`), 'cn-leak'), miss);
+});
+
+test('a negative statement is not a statement of what was read', () => {
+  for (const bad of ['brak dostępu do pełnego tekstu.', 'niedostępny abstrakt.', 'nie sprawdzono pełnego tekstu poradnika.', 'bez dostępu do dokumentu.']) assert.ok(has(withField('Weryfikacja', `2026-10-28; ${bad}`), 'read-scope', 'warning'), bad);
+  assert.ok(!has(withField('Weryfikacja', '2026-10-28; abstrakt autorów; brak pełnego tekstu.'), 'read-scope'), 'a positive statement alongside the negation counts');
+});
+
+test('upstream cleaning does not let a link swallow Chinese text or a list of numbers merge into one figure', () => {
+  const entry = fields => ({ number: '99.1', fields });
+  const found = (reader, span) => numberInventory(entry({ 'W praktyce': reader }), '### 1. T\n' + span)[0].inUpstream;
+  assert.equal(found('Wynik 30.', '<https://doi.org/10.1000/abc>的结果是 30 分钟'), true, 'text after a link followed by Chinese characters is kept');
+  assert.equal(found('Kody 120.', 'Numery 110,120,119 w Chinach'), true, 'a list of numbers is searched as written');
+  assert.equal(found('Próba 10 189.', 'Próba 10,189 osób'), true, 'a thousands comma matches the Polish spacing');
+  assert.equal(found('Liczba 119.', 'Numery 110,120,119'), true);
+  assert.equal(found('Liczba 130.', 'Numery 110,120,119'), false);
+});
+
+test('an Oryginał field must hold exactly one link', () => {
+  const good = 'https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L7-L14';
+  assert.match(upstreamSpanOf({ number: '99.1', fields: { Oryginał: `[99.1](${good})` } }, root), /^### /);
+  assert.throws(() => upstreamSpanOf({ number: '99.1', fields: { Oryginał: `[99.1](${good}) [99.2](${good})` } }, root), /exactly one link \(found 2\)/);
+  assert.throws(() => upstreamSpanOf({ number: '99.1', fields: { Oryginał: '[brak](x)' } }, root), /pinned github\.com/);
 });

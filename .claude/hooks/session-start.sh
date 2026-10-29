@@ -8,6 +8,11 @@ fi
 
 cd "${CLAUDE_PROJECT_DIR:-.}"
 
+# npm ci replaces node_modules. If it is a symlink, remove only the link, never what it points at.
+if [ -L node_modules ]; then
+  rm -f node_modules
+fi
+
 # Install only when this script or the dependency files changed since the last successful install.
 hashes=node_modules/.session-start.sha256
 if ! sha256sum --check --status "$hashes" 2>/dev/null; then
@@ -25,9 +30,9 @@ fi
 
 # One line on which source hosts this session can reach, so verification work starts from facts.
 probe() {
-  code=$(curl -s -o /dev/null -m 5 -w '%{http_code}' -A 'pl-edition-source-probe/1.0' "https://$1/" 2> /dev/null || true)
-  case "$code" in 2* | 3*) echo "$1:ok" ;; *) echo "$1:BLOCKED($code)" ;; esac
+  code=$(curl -s -o /dev/null -m 5 -w '%{http_code}' -A 'pl-edition-source-probe/1.0' "https://$1" 2> /dev/null || true)
+  case "$code" in 2* | 3*) echo "${1%%[/?]*}:ok" ;; *) echo "${1%%[/?]*}:BLOCKED($code)" ;; esac
 }
 export -f probe
-hosts="doi.org www.ebi.ac.uk api.crossref.org api.sejm.gov.pl www.gov.pl wiedza.cert.pl"
+hosts="doi.org/ www.ebi.ac.uk/ api.crossref.org/works?rows=0 api.sejm.gov.pl/ www.gov.pl/ wiedza.cert.pl/"
 echo "Source access:" $(printf '%s\n' $hosts | xargs -P 6 -I{} bash -c 'probe {}' | sort | tr '\n' ' ')

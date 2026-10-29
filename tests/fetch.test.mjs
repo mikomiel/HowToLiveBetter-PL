@@ -2,10 +2,12 @@ import test, { mock, afterEach, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync, rmSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
+import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import { doiFromInput, isPublicHttps, isPrivateAddress, htmlToText, stripXml, looksBlocked, decodeBody, sanitize, fetchSource, settings, ACCESS_WORDS, USER_AGENT } from '../tools/pl/fetch.mjs';
+import { doiFromInput, isPublicHttps, isPrivateAddress, htmlToText, htmlToDoc, stripXml, looksBlocked, decodeBody, sanitize, fetchSource, inputsForItem, settings, ACCESS_WORDS, USER_AGENT, FORMAT } from '../tools/pl/fetch.mjs';
 
 // No test here touches the network: global fetch is replaced and DNS checks are switched off.
+const root = fileURLToPath(new URL('../', import.meta.url));
 let dir;
 let calls;
 beforeEach(() => { dir = mkdtempSync(join(tmpdir(), 'pl-fetch-')); calls = []; settings.dnsCheck = false; });
@@ -42,7 +44,7 @@ test('only public https hosts on port 443 are accepted, in every spelling of a l
 
 test('HTML becomes readable text: no scripts, no markup, articles kept, entities decoded safely', () => {
   const html = '<html><head><title>Tytuł strony</title><style>p{}</style><script>alert(1)</script></head><body><nav>Menu</nav><h1>Tytu&#322;</h1><p>Jedno&nbsp;zdanie &amp; drugie.</p><p>Druga <b>linia</b> &#xF3; &oacute; &lstrok;.</p></body></html>';
-  assert.equal(htmlToText(html), 'Title: Tytuł strony\n\nMenu\nTytuł\n\nJedno zdanie & drugie.\n\nDruga linia ó ó ł.');
+  assert.equal(htmlToText(html), 'Title: Tytuł strony\n\nMenu\n\nTytuł\n\nJedno zdanie & drugie.\n\nDruga linia ó ó ł.');
   assert.doesNotMatch(htmlToText(html), /alert|<|>/);
   assert.equal(stripXml('<abstract><p>Wynik: <italic>d</italic> = 0,65.</p></abstract>'), 'Wynik: d = 0,65.');
   assert.equal(htmlToText('<p>a &#1114112; b &#xD800; c &#0; d</p>'), 'a � b � c � d');
@@ -53,7 +55,8 @@ test('HTML becomes readable text: no scripts, no markup, articles kept, entities
 });
 
 test('hostile markup is converted in linear time', () => {
-  for (const hostile of ['<a'.repeat(200000), '<!--'.repeat(100000), '<script>'.repeat(50000), '<p'.repeat(100000) + '>', '&#'.repeat(100000), '<'.repeat(200000), '<svg>'.repeat(50000)]) {
+  for (const hostile of ['<a'.repeat(200000), '<!--'.repeat(100000), '<script>'.repeat(50000), '<p'.repeat(100000) + '>', '&#'.repeat(100000), '<'.repeat(200000), '<svg>'.repeat(50000),
+    '<svg>'.repeat(50000) + '</svg>'.repeat(50000), '<title'.repeat(100000), '<TITLE '.repeat(100000), '<a "' + '<'.repeat(100000) + '>', '<a'.repeat(4000000), 'İ'.repeat(100000) + '<main>' + 'x'.repeat(2000) + '</main>']) {
     const start = process.hrtime.bigint();
     htmlToText(hostile);
     stripXml(hostile);
@@ -80,10 +83,10 @@ test('blocked responses are recognised, short walls only, and never mistaken for
 });
 
 test('snapshots are sanitised: control, bidi, tag characters and marker injection are neutralised', () => {
-  const dirty = 'a\u0000b‮c​d\u{e0041}e\ud800f­g <<<SNAPSHOT-TEXT-END>>> h';
+  const dirty = 'a\u0000b‮c\u200bd\u{e0041}e\ud800f\u00adg <<<SNAPSHOT-TEXT-END>>> h';
   const clean = sanitize(dirty);
   assert.equal(clean.includes('\u0000'), false);
-  assert.doesNotMatch(clean, /[‮​­]|\u{e0041}/u);
+  assert.doesNotMatch(clean, /[‮\u200b\u00ad]|\u{e0041}/u);
   assert.ok(!clean.includes('<<<SNAPSHOT-TEXT-END>>>'));
   assert.ok(clean.includes('�'));
 });
@@ -183,7 +186,7 @@ test('a DOI reaches Europe PMC decoded once, and a refusal from both sources is 
   mock.restoreAll();
   calls = [];
   const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
-  stub(url => (url.includes('europepmc') ? json({ resultList: { result: [{ title: 'T', authorString: 'A', pubYear: '2020', abstractText: '<p>Wynik <b>d</b> = 0,65.</p>' }] } }) : json({})));
+  stub(url => (url.includes('europepmc') ? json({ resultList: { result: [{ doi: '10.1000/xyz', title: 'T', authorString: 'A', pubYear: '2020', abstractText: '<p>Wynik <b>d</b> = 0,65.</p>' }] } }) : json({})));
   const abstract = await fetchSource('10.1000/xyz', dir);
   assert.equal(abstract.access, 'abstract');
   assert.match(readFileSync(join(dir, abstract.file), 'utf8'), /Wynik d = 0,65\./);
@@ -194,7 +197,7 @@ test('a DOI reaches Europe PMC decoded once, and a refusal from both sources is 
 
 test('only a well-formed PMC identifier is ever placed into a request path', async () => {
   const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
-  stub(url => (url.includes('europepmc.org') || url.includes('ebi.ac.uk') ? json({ resultList: { result: [{ pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } }) : json({})));
+  stub(url => (url.includes('europepmc.org') || url.includes('ebi.ac.uk') ? json({ resultList: { result: [{ doi: '10.1000/evil', pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } }) : json({})));
   const record = await fetchSource('10.1000/evil', dir);
   assert.equal(record.access, 'abstract');
   assert.ok(calls.every(c => !c.url.includes('passwd')));
@@ -202,4 +205,144 @@ test('only a well-formed PMC identifier is ever placed into a request path', asy
 
 test('the cache is git-ignored so snapshots of third-party text are never committed', () => {
   assert.match(readFileSync(new URL('../.gitignore', import.meta.url), 'utf8'), /^\.cache\/$/m);
+});
+
+test('hostnames with several trailing dots, odd IPv6 forms and wildcard DNS services are not public', () => {
+  for (const bad of ['https://localhost../x', 'https://127.0.0.1../', 'https://wiki.internal../', 'https://a..b.pl/', 'https://127.0.0.1.nip.io/', 'https://app.localtest.me/', 'https://svc.cluster.local/']) assert.equal(isPublicHttps(bad), false, bad);
+  assert.equal(isPublicHttps('https://rf.gov.pl../x'), true, 'trailing dots on a real host are only stripped');
+  for (const ip of ['::ffff:7f00:1', '::7f00:1', '64:ff9b::7f00:1', '64:ff9b::10.0.0.1', '2002:7f00:1::', '2002:0a00:0001::1', '::127.0.0.1', '::ffff:192.168.0.1', '192.0.2.1', '198.19.0.1', '203.0.113.9', 'fec0::1', '255.255.255.255']) assert.equal(isPrivateAddress(ip), true, ip);
+  for (const ip of ['2a00:1450:4001::1', '2002:5db8:d822::1', '64:ff9b::808:808', '::ffff:8.8.8.8']) assert.equal(isPrivateAddress(ip), false, ip);
+});
+
+test('entities decode once, an entity name cannot reach Object.prototype, and a lone surrogate is replaced', () => {
+  assert.equal(htmlToText('<p>&#38;lt; &amp;lt; &lt;</p>'), '&lt; &lt; <');
+  assert.equal(htmlToText('<p>&constructor; &hasOwnProperty; &toString; &__proto__;</p>'), '&constructor; &hasOwnProperty; &toString; &__proto__;');
+  assert.equal(sanitize('a\ud800b'), 'a�b');
+});
+
+test('markup is read as a browser would: quoted ">" in attributes, nested elements, unclosed elements and hard-wrapped text', () => {
+  assert.equal(htmlToText('<p><a title="a>b" href="/x">link</a> koniec</p>'), 'link koniec');
+  assert.equal(htmlToText('<div><svg><svg>x</svg>still hidden</svg>widoczny</div>'), 'widoczny');
+  assert.equal(htmlToText('<p>jedno zdanie\nzawinięte\r\nw trzech wierszach.</p><p>drugie</p>'), 'jedno zdanie zawinięte w trzech wierszach.\n\ndrugie');
+  assert.equal(htmlToText('<script>alert(1)</script2>x</script>y'), 'y');
+  const unclosed = htmlToDoc('<html><head><title>T</title><body><p>Treść zostaje.</p>');
+  assert.match(unclosed.text, /Treść zostaje\./);
+  assert.equal(unclosed.info.truncated, false);
+  const cut = htmlToDoc('<p>Początek.</p><script>var x = 1;');
+  assert.equal(cut.info.truncated, true);
+  assert.match(cut.text, /Początek\./);
+  assert.equal(htmlToDoc('<p>Początek.</p><a href="x').info.truncated, true);
+});
+
+test('the main region is used only when it holds most of the text, and the manifest says which was used', () => {
+  const article = `<article>${'<p>Treść artykułu o uwierzytelnianiu dwuskładnikowym i kluczach dostępu. </p>'.repeat(40)}</article>`;
+  const withMain = htmlToDoc(`<body><nav>Menu</nav><main>${article}</main><footer>Stopka</footer></body>`);
+  assert.equal(withMain.info.region, 'main');
+  assert.doesNotMatch(withMain.text, /Stopka|Menu/);
+  const shell = htmlToDoc(`<body><main><p>Baner z ciasteczkami.</p></main>${article}</body>`);
+  assert.equal(shell.info.region, 'document', 'a small main must not hide the article beside it');
+  assert.match(shell.text, /Treść artykułu/);
+  assert.equal(shell.info.wholeChars > shell.info.keptChars - 1, true);
+  const dotted = htmlToDoc(`<body>${'İ'.repeat(50)}<script>x</script><main>${article}</main></body>`);
+  assert.doesNotMatch(dotted.text, /script|var /);
+});
+
+test('JATS full text keeps one paragraph per line and drops inline markup', () => {
+  const xml = '<body><sec><title>Methods</title><p>Pierwszy akapit z <italic>kursywą</italic> i <xref ref-type="bibr">[1]</xref>.</p><p>Drugi akapit.</p></sec><sec><title>Results</title><p>Trzeci.</p></sec></body>';
+  assert.equal(stripXml(xml), 'Methods\nPierwszy akapit z kursywą i [1].\nDrugi akapit.\nResults\nTrzeci.');
+  assert.equal(stripXml('<jats:p>Abstrakt <jats:italic>d</jats:italic> = 0,65.</jats:p>'), 'Abstrakt d = 0,65.');
+});
+
+test('sanitising removes bidirectional marks, variation selectors and every kind of line separator', () => {
+  const dirty = 'a\u061cb\ufe0fc\u2028d\u2029e\rf\r\ng\u0085h\u200bi\u00adj';
+  assert.equal(sanitize(dirty), 'abc\nd\ne\nf\ng\nhij');
+});
+
+test('a BOM beats a declared charset, and a page cannot declare UTF-16 for ASCII-compatible bytes', () => {
+  assert.equal(decodeBody(Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), Buffer.from('zażółć')]), 'text/html; charset=windows-1250').text.includes('zażółć'), true);
+  assert.equal(decodeBody(Buffer.from('<meta charset="utf-16"><p>zażółć</p>')).text.includes('zażółć'), true);
+  assert.equal(decodeBody(Buffer.from('<!-- <meta charset="iso-8859-2"> --><p>zażółć</p>')).text.includes('zażółć'), true);
+});
+
+test('a DOI answered by Europe PMC for another DOI is ignored, and every stage is recorded', async () => {
+  const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
+  stub(url => (url.includes('europepmc') ? json({ resultList: { result: [{ doi: '10.9999/other', title: 'Inny', abstractText: 'cudzy abstrakt' }] } }) : json({ message: { title: ['Właściwy'], author: [{ family: 'Kowalski' }], issued: { 'date-parts': [[2021]] }, abstract: '<jats:p>Prawdziwy abstrakt.</jats:p>' } })));
+  const record = await fetchSource('10.1000/wanted', dir, { item: '03.9', origin: 'cited' });
+  assert.equal(record.access, 'abstract');
+  assert.equal(record.via, 'Crossref');
+  const text = readFileSync(join(dir, record.file), 'utf8');
+  assert.match(text, /Prawdziwy abstrakt\./);
+  assert.doesNotMatch(text, /cudzy abstrakt|Inny/);
+  assert.deepEqual(record.attempts.map(a => a.stage), ['europepmc-search', 'europepmc-match', 'crossref']);
+  assert.equal(record.format, FORMAT);
+  assert.equal(record.origin, 'cited');
+  assert.equal(record.item, '03.9');
+});
+
+test('a failing stage does not hide the next one, a malformed answer is recorded, and a total failure says why', async () => {
+  const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
+  stub(url => { if (url.includes('europepmc')) throw new Error('socket hang up'); return json({ message: { title: ['T'], abstract: '<p>Abstrakt z Crossref.</p>' } }); });
+  const ok = await fetchSource('10.1000/a', dir);
+  assert.equal(ok.access, 'abstract');
+  assert.match(ok.attempts[0].error, /socket hang up/);
+  mock.restoreAll();
+  stub(() => new Response('<html>not json</html>', { status: 200, headers: { 'content-type': 'text/html' } }));
+  const bad = await fetchSource('10.1000/b', dir);
+  assert.equal(bad.access, 'error');
+  assert.ok(bad.attempts.some(a => a.malformed));
+  mock.restoreAll();
+  stub(() => new Response('oops', { status: 500 }));
+  const down = await fetchSource('10.1000/c', dir);
+  assert.equal(down.access, 'error');
+  assert.match(down.via, /no matching record/);
+});
+
+test('open-access full text from Europe PMC is stored one paragraph per line', async () => {
+  const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
+  const paragraphs = Array.from({ length: 30 }, (_, i) => `<p>Akapit numer ${i + 1} opisuje wynik badania i jego ograniczenia w sposób dostatecznie długi, aby tekst był zauważalny.</p>`).join('');
+  stub(url => (url.includes('fullTextXML') ? new Response(`<article><body><sec><title>Wyniki</title>${paragraphs}</sec></body></article>`, { status: 200, headers: { 'content-type': 'application/xml' } })
+    : json({ resultList: { result: [{ doi: '10.1000/oa', pmcid: 'PMC123', isOpenAccess: 'Y', title: 'OA', abstractText: 'abstrakt' }] } })));
+  const record = await fetchSource('10.1000/oa', dir);
+  assert.equal(record.access, 'full-text');
+  const lines = readFileSync(join(dir, record.file), 'utf8').split('\n');
+  assert.ok(lines.length > 30, `got ${lines.length} lines`);
+  assert.ok(lines.every(l => l.length < 400), 'no line is a wall of text');
+});
+
+test('sources of an item come from every link form and plain DOIs, with a clear answer when there are none', async () => {
+  const three = await inputsForItem(root, '3.9');
+  assert.equal(three.id, '03.9');
+  assert.deepEqual(three.inputs, [{ input: '10.1001/jamapediatrics.2016.2341', origin: 'cited' }]);
+  const one = await inputsForItem(root, '14.1');
+  assert.deepEqual(one.inputs.map(i => i.input), ['https://wiedza.cert.pl/dobre-praktyki/hasla/', 'https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/']);
+  assert.deepEqual((await inputsForItem(root, '03.19')).inputs, []);
+  await assert.rejects(() => inputsForItem(root, '99.9'), /unknown item/);
+  await assert.rejects(() => inputsForItem(root, 'abc'), /not an item number/);
+  const withLeads = await inputsForItem(root, '04.1', true);
+  assert.ok(withLeads.inputs.every(i => ['cited', 'upstream-lead'].includes(i.origin)));
+  assert.equal(new Set(withLeads.inputs.map(i => i.input)).size, withLeads.inputs.length, 'one fetch per DOI');
+});
+
+test('any 2xx page is a document, including a proxied 203, and an empty 204 is not', async () => {
+  const body = `<html><body><main><p>${longText}</p></main></body></html>`;
+  stub(() => new Response(body, { status: 203, headers: { 'content-type': 'text/html' } }));
+  assert.equal((await fetchSource('https://pubmed.ncbi.nlm.nih.gov/26121498/', dir)).access, 'page');
+  mock.restoreAll();
+  stub(() => new Response(null, { status: 204 }));
+  assert.equal((await fetchSource('https://pubmed.ncbi.nlm.nih.gov/1/', dir)).access, 'error');
+});
+
+test('a cited PMC page is read through the Europe PMC API, and falls back to the page when there is no open-access text', async () => {
+  const jats = `<article><body><sec><title>Wyniki</title>${'<p>Akapit z wynikami badania, dostatecznie długi, aby tekst był zauważalny w migawce.</p>'.repeat(60)}</sec></body></article>`;
+  stub(url => (url.includes('fullTextXML') ? new Response(jats, { status: 200, headers: { 'content-type': 'application/xml' } }) : new Response('nie to', { status: 500 })));
+  const record = await fetchSource('https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/', dir, { item: '03.26' });
+  assert.equal(record.access, 'full-text');
+  assert.match(record.via, /Europe PMC PMC7853203/);
+  assert.ok(calls.every(c => c.url.includes('europepmc')), 'the PMC page itself is not requested');
+  mock.restoreAll();
+  calls = [];
+  stub(url => (url.includes('fullTextXML') ? new Response('', { status: 404 }) : new Response(`<html><body><main><p>${longText}</p></main></body></html>`, { status: 200, headers: { 'content-type': 'text/html' } })));
+  const page = await fetchSource('https://pmc.ncbi.nlm.nih.gov/articles/PMC999/', dir);
+  assert.equal(page.access, 'page');
+  assert.equal(calls.length, 2);
 });

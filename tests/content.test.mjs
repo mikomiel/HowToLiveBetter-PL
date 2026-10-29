@@ -93,7 +93,7 @@ test('published items have all provenance, evidence, limits and calendar-valid d
   for (const e of advice) {
     for (const field of FIELDS) assert.ok(e.fields[field], `${e.number}: ${field}`);
     assert.equal(e.fields.Status, 'verified');
-    assert.match(e.fields['Ocena dowodów'], /^[ABC] [—-] .+/);
+    assert.match(e.fields['Ocena dowodów'], /^[ABC] [\u2014-] .+/);
     assert.match(e.fields.Weryfikacja, /^\d{4}-\d{2}-\d{2}; .+/);
     assert.equal(new Date(e.fields.Weryfikacja.slice(0, 10)).toISOString().slice(0, 10), e.fields.Weryfikacja.slice(0, 10));
     assert.match(e.fields['Źródła'], /https:\/\//);
@@ -118,7 +118,7 @@ test('all unpublished states are excluded and malformed files fail closed', () =
 });
 
 test('a grade separator written as a hyphen is accepted and other separators are not', () => {
-  const swap = separator => parseChapter(time.text.replace(/(- Ocena dowodów: [ABC]) — /, `$1${separator}`));
+  const swap = separator => parseChapter(time.text.replace(/(- Ocena dowodów: [ABC]) \u2014 /, `$1${separator}`));
   assert.doesNotThrow(() => swap(' - '));
   assert.throws(() => swap(': '), /oceny dowodów/);
   assert.throws(() => swap(' '), /oceny dowodów/);
