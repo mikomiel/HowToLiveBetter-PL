@@ -13,13 +13,13 @@ hashes=node_modules/.session-start.sha256
 if ! sha256sum --check --status "$hashes" 2>/dev/null; then
   # Delete the old hashes first, so a failed install runs again next time.
   rm -f "$hashes"
-  npm ci --ignore-scripts --no-audit --no-fund
+  timeout 300 npm ci --ignore-scripts --no-audit --no-fund
   sha256sum .claude/hooks/session-start.sh package.json package-lock.json > "$hashes"
 fi
 
 # The browser lives outside the repository, so the check above cannot cover it. This is a no-op when the pinned build exists.
 # A failure is reported but does not stop the session: unit tests and content work do not need the browser.
-if ! npx --no-install playwright install chromium > /dev/null 2>&1; then
+if ! timeout 240 npx --no-install playwright install chromium > /dev/null 2>&1; then
   echo "WARNING: could not install the pinned Chromium (needs cdn.playwright.dev and storage.googleapis.com). npm test works; npm run test:browser will not." >&2
 fi
 
