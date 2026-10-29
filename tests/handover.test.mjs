@@ -61,6 +61,7 @@ test('every saved report is valid JSON naming its own item, and the source manif
 test('the decisions left to the owner are written down where a new session finds them', () => {
   for (const heading of ['## A. Poprawki w opublikowanych poradach', '## B.', '## C.', '## D.', '## E. Czego brakuje do dalszej pracy']) assert.ok(findings.includes(heading), heading);
   for (const item of ['03.4', '04.4', '14.2', '14.7']) assert.match(findings, new RegExp(`\\| ${item.replace('.', '\\.')} \\|`), item);
+  assert.match(read('AGENTS.md'), /Stan wstrzymanego przeglądu .* audit\/README\.md oraz audit\/FINDINGS\.md\. Wznawiaj przegląd tylko na polecenie właściciela/, 'AGENTS.md points to the paused audit, as the owner approved');
   assert.match(read('.claude/hooks/session-start.sh'), /audit\/README\.md/);
   assert.match(read('tools/README.md'), /audit\.mjs/);
   assert.match(read('tools/README.md'), /check-reports\.mjs/);
