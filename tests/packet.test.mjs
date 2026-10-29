@@ -182,8 +182,13 @@ test('every sentence must be answered, and every figure of a sentence must be in
   assert.deepEqual(gap.failures.map(f => [f.where, f.problem]), [['W praktyce#2', 'no claim answers for this sentence']]);
   const noFigure = { ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła punktu.', { quotes: report.claims[1].quotes })] };
   assert.match(problems(run(noFigure, packet)), /the figure 0,65 of this sentence is in no claim/);
-  const split = { ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła', { quotes: report.claims[1].quotes }), claim(2, '0,65 punktu', { quotes: report.claims[1].quotes })] };
-  assert.equal(run(split, packet).ok, true, 'a sentence may be answered in several rows');
+  const split = { ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła', { id: 'W praktyce#2.1', quotes: report.claims[1].quotes }), claim(2, '0,65 punktu', { id: 'W praktyce#2.2', quotes: report.claims[1].quotes })] };
+  assert.equal(run(split, packet).ok, true, 'a sentence may be answered in several numbered rows');
+  const unnumbered = { ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła', { quotes: report.claims[1].quotes }), claim(2, '0,65 punktu', { quotes: report.claims[1].quotes })] };
+  assert.match(problems(run(unnumbered, packet)), /answered in 2 rows: every row of it needs a numbered id such as "W praktyce#2\.1"/);
+  const twice = { ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła', { id: 'W praktyce#2.1', quotes: report.claims[1].quotes }), claim(2, '0,65 punktu', { id: 'W praktyce#2.1', quotes: report.claims[1].quotes })] };
+  assert.match(problems(run(twice, packet)), /two rows have this id/);
+  assert.match(problems(run({ ...report, claims: [report.claims[0], claim(2, 'Poprawa wyniosła 0,65 punktu.', { id: 'W praktyce#2.x', quotes: report.claims[1].quotes })] }, packet)), /not a sentence of the item/);
 });
 
 test('a claim must be words of the sentence it names, with a valid kind and verdict', () => {
@@ -200,13 +205,54 @@ test('a claim must be words of the sentence it names, with a valid kind and verd
   assert.equal(run(edit(0, { kind: 'editorial_estimate', verdict: 'not_applicable', quotes: [] }), packet).ok, true);
 });
 
-test('a derived recommendation must depend on source claims of the same report', () => {
+test('a derived recommendation must depend on source rows of the same report, or be marked unsupported', () => {
   const { packet, report } = one();
-  const derived = (depends_on) => ({ ...report, claims: [report.claims[0], { id: 'W praktyce#2', kind: 'recommendation_derived', claim: 'Poprawa wyniosła 0,65 punktu.', verdict: 'not_applicable', depends_on }] });
+  const derived = (depends_on, extra = {}) => ({ ...report, claims: [report.claims[0], { id: 'W praktyce#2', kind: 'recommendation_derived', claim: 'Poprawa wyniosła 0,65 punktu.', verdict: 'not_applicable', depends_on, ...extra }] });
   assert.match(problems(run(derived([]), packet)), /must list depends_on/);
-  assert.match(problems(run(derived(['W praktyce#7']), packet)), /must list depends_on/);
-  assert.match(problems(run(derived(['W praktyce#2']), packet)), /must list depends_on/, 'it cannot depend on itself');
+  assert.match(problems(run(derived(['W praktyce#7']), packet)), /"W praktyce#7" is not the id of a row of this report/);
+  assert.match(problems(run(derived(['W praktyce#2']), packet)), /cannot depend on itself/);
   assert.equal(run(derived(['W praktyce#1']), packet).ok, true);
+  // Only a row that carries a source can back advice.
+  const editorial = { id: 'Koszt#1', kind: 'editorial_estimate', claim: 'x', verdict: 'not_applicable' };
+  const withEditorial = derived(['Koszt#1']);
+  withEditorial.claims.push(editorial);
+  assert.match(problems(run(withEditorial, { ...packet, propositions: [...packet.propositions, { id: 'Koszt#1', field: 'Koszt', index: 1, text: 'x' }] })), /is a editorial_estimate: only source_claim and source_description rows can back a recommendation/);
+  // A sentence that was split cannot be named as a whole: the failure says which parts exist.
+  const splitFirst = { ...report, claims: [claim(1, 'Kody SMS', { id: 'W praktyce#1.1', quotes: report.claims[0].quotes }), claim(1, 'można wyłudzić.', { id: 'W praktyce#1.2', quotes: report.claims[0].quotes }), derived(['W praktyce#1']).claims[1]] };
+  assert.match(problems(run(splitFirst, packet)), /that sentence is split: use W praktyce#1\.1, W praktyce#1\.2/);
+  assert.equal(run({ ...splitFirst, claims: [...splitFirst.claims.slice(0, 2), derived(['W praktyce#1.2']).claims[1]] }, packet).ok, true);
+  // A recommendation nothing backs is said so, and it fails the item instead of hiding behind a stretched dependency.
+  const ungrounded = (extra, status = 'FAIL') => ({ ...derived([], { verdict: 'unsupported', ...extra }), status });
+  assert.match(problems(run(ungrounded({}), packet)), /needs a reason/);
+  const result = run(ungrounded({ reason: 'no snapshot row speaks of recovery' }), packet);
+  assert.deepEqual([result.ok, result.status], [true, 'FAIL']);
+  assert.match(problems(run(ungrounded({ reason: 'x' }, 'PASS'), packet)), /status PASS does not match the verdicts, which give FAIL/);
+  assert.match(problems(run(derived(['W praktyce#1'], { verdict: 'supported' }), packet)), /verdict not_applicable .* or unsupported/);
+});
+
+test('what the item says about its source is checked like a claim from it, and a figure with no source is shown to a person', () => {
+  const { packet, report } = one();
+  const described = (patch = {}) => ({ ...report, claims: [report.claims[0], { id: 'W praktyce#2', kind: 'source_description', claim: 'Poprawa wyniosła 0,65 punktu.', verdict: 'supported', quotes: report.claims[1].quotes, ...patch }] });
+  assert.equal(run(described(), packet).ok, true);
+  assert.match(problems(run(described({ quotes: [] }), packet)), /needs at least one quote/);
+  assert.match(problems(run(described({ verdict: 'not_applicable' }), packet)), /source_description cannot have verdict not_applicable/);
+  assert.match(problems(run(described({ quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Kody SMS i z aplikacji można wyłudzić' }] }), packet)), /the number 0,65 is neither in a quote/);
+  const refuted = run(described({ verdict: 'contradicted', reason: 'the source says it was a cohort study' }), packet);
+  assert.equal(refuted.status, 'FAIL', 'a wrong description of the source fails the item like a wrong claim');
+  // A figure in a row that is not checked against a source is allowed, but listed.
+  const estimate = { ...report, claims: [report.claims[0], { id: 'W praktyce#2', kind: 'editorial_estimate', claim: 'Poprawa wyniosła 0,65 punktu.', verdict: 'not_applicable' }] };
+  const shown = run(estimate, packet);
+  assert.equal(shown.ok, true);
+  assert.deepEqual(shown.warnings, ['figure 0,65 in W praktyce#2 (editorial_estimate) is checked against no source']);
+  const declared = { ...estimate, claims: [report.claims[0], { ...estimate.claims[1], numbers: [{ value: '0,65', editorial_calculation: true, basis: '60,65 minus 60' }] }] };
+  assert.deepEqual(run(declared, packet).warnings, []);
+});
+
+test('a scope gap names a row or a sentence that exists', () => {
+  const { packet, report } = one();
+  assert.equal(run({ ...report, scope_gaps: [{ id: 'W praktyce#2', note: 'x' }] }, packet).ok, true);
+  assert.match(problems(run({ ...report, scope_gaps: [{ id: 'W praktyce#9', note: 'x' }] }, packet)), /neither a row of this report nor a sentence of the item/);
+  assert.match(problems(run({ ...report, scope_gaps: [null] }, packet)), /neither a row of this report/);
 });
 
 test('a quote must be on the cited line of a real, cited, unchanged snapshot', () => {
@@ -290,6 +336,8 @@ test('every figure of a source claim must be in a quote of its own or be a decla
   assert.match(problems(run(...make('Poprawa wyniosła 0 punktu.', 'poprawa wyniosła 0,65 punktu', []))), /the number 0 is neither/);
   assert.deepEqual(run(...make('Poprawa wyniosła 30,7 punktu.', 'poprawa wyniosła 0,65 punktu', [{ value: '30,7', editorial_calculation: true, basis: '60,0 minus 29,3' }])).failures, []);
   assert.match(problems(run(...make('Poprawa wyniosła 30,7 punktu.', 'poprawa wyniosła 0,65 punktu', [{ value: '30,7', editorial_calculation: true }]))), /neither in a quote/, 'a calculation needs its basis');
+  assert.match(problems(run(...make('Poprawa wyniosła 30,7 punktu.', 'poprawa wyniosła 0,65 punktu', [{ value: '30,7', editorial_calculation: true, basis: 'no arithmetic, only a spelling' }]))), /basis shows the arithmetic \(at least two figures\)/, 'words are not a calculation');
+  assert.match(problems(run(...make('Poprawa wyniosła 30,7 punktu.', 'poprawa wyniosła 0,65 punktu', [{ value: '30,7', editorial_calculation: true, basis: '30,7' }]))), /at least two figures/, 'a figure restated is not a calculation');
   assert.match(problems(run(...make('Poprawa wyniosła 0,65 punktu.', 'poprawa wyniosła 0,65 punktu', [{ value: '99', in_quote: true }]))), /declared as quoted but is in no quote/);
   assert.deepEqual(run(...make('W tabeli 128 oraz 12.', 'w tabeli 92 128 oraz 12 i 345', [])).failures, [], 'two cells read as one number still contain 128');
   assert.match(problems(run(...make('W tabeli 12345.', 'w tabeli 92 128 oraz 12 i 345', []))), /the number 12345 is neither/, 'figures of two cells are not fused across a quote');
@@ -306,8 +354,12 @@ test('absence, unavailability and derived verdicts have to be earned', () => {
   assert.match(problems(status('source_unavailable', {}, 'UNAVAILABLE')), /needs a reason/);
   assert.equal(status('source_unavailable', { reason: 'serwis zablokował pobranie' }, 'UNAVAILABLE').ok, true);
   assert.match(problems(status('source_unavailable', { reason: 'x' }, 'PASS')), /status PASS does not match the verdicts, which give UNAVAILABLE/);
-  assert.match(problems(status('unsupported', {}, 'PASS')), /give FAIL/);
-  assert.equal(status('unsupported', {}, 'FAIL').ok, true, 'a refuted claim needs no quote');
+  assert.match(problems(status('unsupported', { reason: 'źródło nie mówi o stratach' }, 'PASS')), /give FAIL/);
+  assert.equal(status('unsupported', { reason: 'źródło nie mówi o stratach' }, 'FAIL').ok, true, 'a refuted claim needs no quote, only its reason');
+  for (const verdict of ['unsupported', 'partly', 'contradicted', 'not_checkable', 'source_unavailable']) {
+    assert.match(problems(status(verdict, { quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Pierwsza linia o czymś innym.' }] }, 'FAIL')), /needs a reason/, verdict);
+  }
+  assert.doesNotMatch(problems(status('supported', { quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Pierwsza linia o czymś innym.' }] })), /needs a reason/, 'a supported claim needs no reason');
 });
 
 test('the status follows from the verdicts alone', () => {
@@ -318,6 +370,10 @@ test('the status follows from the verdicts alone', () => {
   assert.equal(deriveStatus([c('source_claim', 'source_unavailable'), c('source_claim', 'unsupported')]), 'FAIL');
   assert.equal(deriveStatus([c('source_claim', 'contradicted')]), 'FAIL');
   assert.equal(deriveStatus([c('editorial_estimate', 'not_applicable'), c('meta_statement', 'not_applicable')]), 'PASS');
+  assert.equal(deriveStatus([c('source_description', 'supported'), c('source_description', 'partly')]), 'UNAVAILABLE');
+  assert.equal(deriveStatus([c('source_description', 'contradicted')]), 'FAIL');
+  assert.equal(deriveStatus([c('source_claim', 'supported'), c('recommendation_derived', 'unsupported')]), 'FAIL', 'advice nothing backs fails the item');
+  assert.equal(deriveStatus([c('recommendation_derived', 'not_applicable')]), 'PASS');
 });
 
 test('warnings of the packet travel with the result', () => {

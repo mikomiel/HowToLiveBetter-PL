@@ -12,22 +12,30 @@ import { buildPacket } from './packet.mjs';
 import { foldText, numberTokens, sameNumber } from './text.mjs';
 
 export const VERDICTS = ['supported', 'partly', 'unsupported', 'contradicted', 'not_checkable', 'source_unavailable', 'absent_in_source', 'not_applicable'];
-export const KINDS = ['source_claim', 'recommendation_derived', 'editorial_estimate', 'meta_statement'];
+export const KINDS = ['source_claim', 'source_description', 'recommendation_derived', 'editorial_estimate', 'meta_statement'];
 export const STATUSES = ['PASS', 'FAIL', 'UNAVAILABLE'];
+// What the item says about a source, or takes from it: both need the source's own words.
+const SOURCE_KINDS = ['source_claim', 'source_description'];
 const SOURCE_VERDICTS = ['supported', 'partly', 'unsupported', 'contradicted', 'not_checkable', 'source_unavailable', 'absent_in_source'];
 const NEEDS_QUOTE = new Set(['supported', 'partly', 'contradicted']);
+// A verdict short of "supported" has to say why, or the person reading the report cannot act on it.
+const NEEDS_REASON = new Set(['partly', 'unsupported', 'contradicted', 'not_checkable', 'source_unavailable']);
 const MAX_WORDS = 40;
 const MIN_CHARS = 12;
 const WORD = /[\p{L}\p{N}]/u;
 const withoutLinks = text => String(text).replace(/\[[^\]]*\]\([^)]*\)/g, ' ');
 
-// The status the verdicts allow: any refuted claim fails, any claim that could not be judged leaves the item unavailable.
+// The status the verdicts allow: any refuted claim or ungrounded recommendation fails, any claim that could not be judged leaves the item unavailable.
 export function deriveStatus(claims) {
-  const source = claims.filter(c => c.kind === 'source_claim');
-  if (source.some(c => ['unsupported', 'contradicted'].includes(c.verdict))) return 'FAIL';
-  if (source.some(c => ['partly', 'not_checkable', 'source_unavailable'].includes(c.verdict))) return 'UNAVAILABLE';
+  const judged = claims.filter(c => SOURCE_KINDS.includes(c.kind) || (c.kind === 'recommendation_derived' && c.verdict === 'unsupported'));
+  if (judged.some(c => ['unsupported', 'contradicted'].includes(c.verdict))) return 'FAIL';
+  if (judged.some(c => ['partly', 'not_checkable', 'source_unavailable'].includes(c.verdict))) return 'UNAVAILABLE';
   return 'PASS';
 }
+
+// "W praktyce#3" answers for the whole sentence; a sentence split into parts is answered as "W praktyce#3.1", "W praktyce#3.2".
+const ID_FORM = /^(.+#\d+)(?:\.(\d+))?$/;
+const sentenceOf = id => ID_FORM.exec(String(id))?.[1];
 
 function loadSnapshot(cacheDir, row) {
   const file = resolve(cacheDir, row.snapshot);
@@ -96,29 +104,46 @@ export function checkReport(report, packet, cacheDir) {
 
   const { rows, check } = quoteChecker(packet, cacheDir);
   const sentences = new Map((packet.propositions ?? []).map(p => [p.id, p]));
-  const referenced = new Set(report.claims.filter(c => c?.kind === 'source_claim').map(c => c.id));
+  const claims = report.claims.filter(c => c && typeof c === 'object');
+  const byId = new Map();
+  const partsOf = new Map();
+  for (const c of claims) {
+    if (byId.has(c.id) && c.id !== sentenceOf(c.id)) fail(`claim ${c.id}`, 'two rows have this id: give each part of a split sentence its own number');
+    byId.set(c.id, c);
+    const sentence = sentenceOf(c.id);
+    if (sentence) partsOf.set(sentence, [...(partsOf.get(sentence) ?? []), String(c.id)]);
+  }
+  for (const [sentence, ids] of partsOf) {
+    if (ids.length > 1 && ids.includes(sentence)) fail(`claim ${sentence}`, `this sentence is answered in ${ids.length} rows: every row of it needs a numbered id such as "${sentence}.1"`);
+  }
   let quotesChecked = 0;
 
   report.claims.forEach((claim, n) => {
     const where = `claim ${n + 1} (${claim?.id})`;
     if (!claim || typeof claim !== 'object') { fail(where, 'not an object'); return; }
-    const proposition = sentences.get(claim.id);
-    if (!proposition) { fail(where, `id is not a sentence of the item. Use an id from packet.propositions`); return; }
+    const proposition = sentences.get(sentenceOf(claim.id));
+    if (!proposition) { fail(where, `id is not a sentence of the item. Use an id from packet.propositions, with ".1", ".2" after it for the parts of a split sentence`); return; }
     if (!KINDS.includes(claim.kind)) fail(where, `kind must be one of ${KINDS.join(', ')}`);
     if (!VERDICTS.includes(claim.verdict)) { fail(where, `verdict must be one of ${VERDICTS.join(', ')}`); return; }
     if (typeof claim.claim !== 'string' || !claim.claim.trim()) { fail(where, 'claim text is empty'); return; }
     if (!foldText(proposition.text).includes(foldText(claim.claim))) fail(where, 'claim text is not part of that sentence of the item');
-    const isSource = claim.kind === 'source_claim';
-    if (isSource && !SOURCE_VERDICTS.includes(claim.verdict)) fail(where, `a source_claim cannot have verdict ${claim.verdict}`);
-    if (!isSource && claim.verdict !== 'not_applicable') fail(where, `${claim.kind} must have verdict not_applicable`);
+    const isSource = SOURCE_KINDS.includes(claim.kind);
+    if (isSource && !SOURCE_VERDICTS.includes(claim.verdict)) fail(where, `a ${claim.kind} cannot have verdict ${claim.verdict}`);
     if (claim.kind === 'recommendation_derived') {
+      if (!['not_applicable', 'unsupported'].includes(claim.verdict)) fail(where, 'a derived recommendation has verdict not_applicable (source rows back it) or unsupported (no source row does)');
       const deps = Array.isArray(claim.depends_on) ? claim.depends_on : [];
-      if (!deps.length || !deps.every(d => referenced.has(d))) fail(where, 'a derived recommendation must list depends_on: the ids of source_claims in this report');
-    }
+      if (claim.verdict === 'not_applicable' && !deps.length) fail(where, 'a derived recommendation must list depends_on: the ids of the source rows whose quotes back it. If no row does, its verdict is unsupported');
+      for (const d of deps) {
+        const target = byId.get(d);
+        if (!target) fail(where, `depends_on "${d}" is not the id of a row of this report${partsOf.get(d) ? ` (that sentence is split: use ${partsOf.get(d).join(', ')})` : ''}`);
+        else if (target === claim) fail(where, 'a recommendation cannot depend on itself');
+        else if (!SOURCE_KINDS.includes(target.kind)) fail(where, `depends_on "${d}" is a ${target.kind}: only source_claim and source_description rows can back a recommendation`);
+      }
+    } else if (!isSource && claim.verdict !== 'not_applicable') fail(where, `${claim.kind} must have verdict not_applicable`);
 
     const quotes = Array.isArray(claim.quotes) ? claim.quotes : [];
     if (NEEDS_QUOTE.has(claim.verdict) && !quotes.length) fail(where, `verdict ${claim.verdict} needs at least one quote`);
-    if (claim.verdict === 'source_unavailable' && !String(claim.reason ?? '').trim()) fail(where, 'source_unavailable needs a reason');
+    if (NEEDS_REASON.has(claim.verdict) && !String(claim.reason ?? '').trim()) fail(where, `verdict ${claim.verdict} needs a reason: what the snapshot says instead, what was searched, or what would be needed to decide`);
     if (claim.verdict === 'absent_in_source') {
       const searched = Array.isArray(claim.searched) ? claim.searched : [];
       if (!searched.length || !searched.every(s => rows.get(s)?.origin === 'cited')) fail(where, 'absent_in_source needs "searched": the cited snapshots that were searched');
@@ -131,22 +156,32 @@ export function checkReport(report, packet, cacheDir) {
       if (problem) fail(where, problem); else quoted.push(q.text);
     }
 
+    const declared = Array.isArray(claim.numbers) ? claim.numbers : [];
+    // A calculation shows its arithmetic: a basis with fewer than two figures explains nothing.
+    const calculated = token => declared.some(d => d.editorial_calculation === true && numberTokens(String(d.basis ?? '')).length >= 2 && sameNumber(String(d.value), token.raw));
     if (isSource && ['supported', 'partly', 'contradicted'].includes(claim.verdict)) {
-      const declared = Array.isArray(claim.numbers) ? claim.numbers : [];
       for (const token of numberTokens(withoutLinks(claim.claim))) {
         const inQuote = quoted.some(text => numberTokens(text).some(t => sameNumber(t.raw, token.raw)));
-        const calculated = declared.some(d => d.editorial_calculation === true && String(d.basis ?? '').trim() && sameNumber(String(d.value), token.raw));
-        if (!inQuote && !calculated) fail(where, `the number ${token.raw} is neither in a quote nor declared as an editorial calculation with its basis`);
+        if (!inQuote && !calculated(token)) fail(where, `the number ${token.raw} is neither in a quote nor declared as an editorial calculation whose basis shows the arithmetic (at least two figures)`);
       }
       for (const d of declared) {
         if (d.in_quote === true && !quoted.some(text => numberTokens(text).some(t => sameNumber(t.raw, String(d.value))))) fail(where, `the number ${d.value} is declared as quoted but is in no quote`);
       }
+    } else if (!isSource) {
+      // No source row stands behind these figures. They are allowed, but a person must see them.
+      for (const token of numberTokens(withoutLinks(claim.claim))) {
+        if (!calculated(token)) warnings.push(`figure ${token.raw} in ${claim.id} (${claim.kind}) is checked against no source`);
+      }
     }
   });
 
+  for (const g of Array.isArray(report.scope_gaps) ? report.scope_gaps : []) {
+    if (!g || (!byId.has(g.id) && !sentences.has(g.id))) fail(`scope_gaps ${g?.id}`, 'id is neither a row of this report nor a sentence of the item');
+  }
+
   // Every sentence of the item, and every figure in it, must be answered for.
   for (const p of sentences.values()) {
-    const mine = report.claims.filter(c => c?.id === p.id && typeof c.claim === 'string');
+    const mine = claims.filter(c => sentenceOf(c.id) === p.id && typeof c.claim === 'string');
     if (!mine.length) { fail(p.id, 'no claim answers for this sentence'); continue; }
     for (const token of numberTokens(withoutLinks(p.text))) {
       if (!mine.some(c => numberTokens(withoutLinks(c.claim)).some(t => sameNumber(t.raw, token.raw)))) fail(p.id, `the figure ${token.raw} of this sentence is in no claim`);
