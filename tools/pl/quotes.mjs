@@ -15,7 +15,7 @@ export const VERDICTS = ['supported', 'partly', 'unsupported', 'contradicted', '
 export const KINDS = ['source_claim', 'source_description', 'recommendation_derived', 'editorial_estimate', 'meta_statement'];
 export const STATUSES = ['PASS', 'FAIL', 'UNAVAILABLE'];
 // What the item says about a source, or takes from it: both need the source's own words.
-const SOURCE_KINDS = ['source_claim', 'source_description'];
+export const SOURCE_KINDS = ['source_claim', 'source_description'];
 const SOURCE_VERDICTS = ['supported', 'partly', 'unsupported', 'contradicted', 'not_checkable', 'source_unavailable', 'absent_in_source'];
 const NEEDS_QUOTE = new Set(['supported', 'partly', 'contradicted']);
 // A verdict short of "supported" has to say why, or the person reading the report cannot act on it.
@@ -36,7 +36,7 @@ export function deriveStatus(claims) {
 
 // "W praktyce#3" answers for the whole sentence; a sentence split into parts is answered as "W praktyce#3.1", "W praktyce#3.2".
 const ID_FORM = /^(.+#\d+)(?:\.(\d+))?$/;
-const sentenceOf = id => ID_FORM.exec(String(id))?.[1];
+export const sentenceOf = id => ID_FORM.exec(String(id))?.[1];
 
 function loadSnapshot(cacheDir, row) {
   const file = resolve(cacheDir, row.snapshot);
