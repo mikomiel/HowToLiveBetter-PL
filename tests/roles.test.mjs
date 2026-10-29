@@ -76,7 +76,7 @@ test('the verifier is told how to number split sentences, what each kind and ver
 
 test('the adversary uses the numbered upstream lines and gives structured evidence a script can check', () => {
   const text = read('.claude/agents/pl-claim-adversary.md');
-  for (const needle of ['upstream.lines', '"source": "upstream"', '"source": "snapshot"', 'a script checks each one', 'not_assessable']) assert.ok(text.includes(needle), needle);
+  for (const needle of ['upstream.lines', '"source": "upstream"', '"source": "snapshot"', 'a script checks each one', 'not_assessable', 'with the line number as the Read tool shows it', 'list each attack in exactly one of the two lists', 'an abstract-only source cannot decide a grade attack']) assert.ok(text.includes(needle), needle);
   assert.doesNotMatch(text, /evidence_source/);
 });
 

@@ -27,13 +27,15 @@ test('wording that carries nothing protected may change freely', () => {
 const packet = { item: '14.2', title: 'Używaj osobnego hasła', fields: { 'W praktyce': 'Wygeneruj długie hasła. Nie powtarzaj ich.' } };
 const report = (edits, item = '14.2') => ({ item, edits });
 
-test('an edit that changes protected wording must say so, whatever the editor believes', () => {
+test('an edit that changes protected wording is sent back to the verifier, whatever the editor believes', () => {
   const honest = checkEdits(report([{ field: 'W praktyce', original: 'Nie powtarzaj ich.', replacement: 'Powtarzaj je.', requires_reverification: true }]), packet);
   assert.equal(honest.ok, true);
   assert.deepEqual(honest.forced, [{ edit: 1, changed: ['stems'] }]);
+  assert.deepEqual(honest.warnings, []);
   const silent = checkEdits(report([{ field: 'W praktyce', original: 'Nie powtarzaj ich.', replacement: 'Powtarzaj je.', requires_reverification: false }]), packet);
-  assert.equal(silent.ok, false);
-  assert.match(silent.failures[0], /not marked requires_reverification/);
+  assert.equal(silent.ok, true, 'the script forces re-verification, so an unmarked edit is no reason to reject the report');
+  assert.deepEqual(silent.forced, [{ edit: 1, changed: ['stems'] }]);
+  assert.match(silent.warnings[0], /did not mark it requires_reverification, so it is sent back to the source verifier anyway/);
   assert.equal(checkEdits(report([{ field: 'W praktyce', original: 'Wygeneruj długie hasła.', replacement: 'Utwórz długie hasła.', requires_reverification: false }]), packet).ok, true);
 });
 

@@ -38,6 +38,7 @@ export function protectedChanges(original, replacement) {
 // report: the JSON of pl-language-editor; packet: buildPacket(root, item, 'editor').
 export function checkEdits(report, packet) {
   const failures = [];
+  const warnings = [];
   const forced = [];
   if (!report || report.item !== packet.item) failures.push(`the report is for item "${report?.item}", the packet is for ${packet.item}`);
   const text = new Map(Object.entries(packet.fields).concat([['title', packet.title]]));
@@ -49,10 +50,11 @@ export function checkEdits(report, packet) {
     const changed = protectedChanges(edit.original, edit.replacement ?? '');
     if (changed.length) {
       forced.push({ edit: n + 1, changed });
-      if (edit.requires_reverification !== true) failures.push(`${where}: changes protected wording (${changed.join(', ')}) but is not marked requires_reverification`);
+      // The script forces re-verification whatever the editor set, so an unmarked edit is not a reason to reject the report; it is recorded.
+      if (edit.requires_reverification !== true) warnings.push(`${where}: changes protected wording (${changed.join(', ')}); the editor did not mark it requires_reverification, so it is sent back to the source verifier anyway`);
     }
   }
-  return { ok: failures.length === 0, forced, failures };
+  return { ok: failures.length === 0, forced, failures, warnings };
 }
 
 if (isMain(import.meta.url)) {
