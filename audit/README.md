@@ -4,7 +4,7 @@ Stan na 2026-10-29. Przegląd jest **wstrzymany na prośbę właściciela**. Wzn
 
 Ten katalog zawiera wszystko, co potrzebne do kontynuacji w dowolnym narzędziu (Codex, Claude Code, inne): raporty z dotychczasowych przebiegów, wykaz źródeł i opis kroków. Nic tu nie zależy od konkretnego agenta. Skrypty są w Node, role to zwykłe pliki Markdown, a sprawdzanie raportów robią skrypty, nie model.
 
-Decyzje czekające na właściciela są w [FINDINGS.md](FINDINGS.md). Zasady redakcyjne i dowodowe są w [AGENTS.md](../AGENTS.md), który jest jedynym kanonicznym dokumentem instrukcji.
+Decyzje właściciela i te, które jeszcze czekają, są w [FINDINGS.md](FINDINGS.md). Zasady redakcyjne i dowodowe są w [AGENTS.md](../AGENTS.md), który jest jedynym kanonicznym dokumentem instrukcji.
 
 ## Prompt dla nowego agenta
 
@@ -31,7 +31,7 @@ Przegląd PR musi dotyczyć dokładnego opublikowanego HEAD. Nie scalaj PR, nie 
 
 - **Narzędzia** w `tools/pl/`: lint treści, pobieranie źródeł do lokalnej pamięci, pakiety dla ról, sprawdzanie raportów weryfikatora i przeciwnika (`quotes.mjs`), sprawdzanie propozycji redaktora (`edits.mjs`), porównanie dwóch przebiegów (`compare.mjs`), zbiorczy digest (`digest.mjs`), sprawdzanie wszystkich raportów katalogu (`check-reports.mjs`) oraz sterownik `audit.mjs`. Opis każdego jest w [tools/README.md](../tools/README.md).
 - **Skill odziedziczony po wersji chińskiej** został zastąpiony przez `.claude/skills/jak-zyc-lepiej`, który odpowiada wyłącznie na podstawie zweryfikowanych porad.
-- **Przegląd 4 pozycji z poprawkami** (03.4, 04.4, 14.2, 14.7). Poprawki są w czterech commitach „draft: …” (9800901, bc2b7b8, 518c3b3, 1173be1), czekają na decyzję właściciela, a status `verified` zostawiono bez zmian. Wynik ślepej weryfikacji: 14.2, 14.7 i 04.4 przechodzą, 03.4 ma jeden otwarty wiersz (krok redakcyjny bez źródła).
+- **Przegląd 4 pozycji z poprawkami** (03.4, 04.4, 14.2, 14.7). Poprawki są w czterech commitach „draft: …” (9800901, bc2b7b8, 518c3b3, 1173be1), zostały przyjęte przez właściciela 2026-10-29, a status `verified` zostawiono bez zmian. Wynik ślepej weryfikacji: 14.2, 14.7 i 04.4 przechodzą, 03.4 ma jeden otwarty wiersz (krok redakcyjny bez źródła).
 - **Zastrzeżenie** „nie jest poradą prawną i nie miał przeglądu prawnika” dodano w 14.7, 14.8 i 14.9.
 - **Wstępny przegląd pozostałych pozycji** przerwano. Pierwsze raporty są dla 11 z 28 pozycji (14.1, 14.3, 14.4, 14.6, 14.9, 03.1, 03.2, 03.3, 03.5, 03.6, 03.7); nie są sprawdzone przez człowieka ani przez drugi przebieg. 17 pozycji nie ruszono: 14.8, 14.10, 14.12, 03.8, 03.18, 03.23, 03.26, 03.27, 04.1, 04.2, 04.3, 04.5, 04.7, 04.9, 04.12, 04.17, 04.18.
 

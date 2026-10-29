@@ -1,6 +1,13 @@
 # Ustalenia i decyzje czekające na właściciela
 
-Stan na 2026-10-29. Nic w `book/pl` nie zostało zmienione bez wiedzy właściciela: poprawki z sekcji A są w osobnych commitach „draft: … (for owner review)”, a status `verified` pozostał. Dowody (raporty) są w [runs/](runs/). Jak wznowić przegląd: [README.md](README.md).
+Stan na 2026-10-29. Dowody (raporty) są w [runs/](runs/). Jak wznowić przegląd: [README.md](README.md).
+
+## Decyzje właściciela
+
+- **2026-10-29: przyjęto wszystkie poprawki z sekcji A** (03.4, 04.4, 14.2, 14.7) oraz zastrzeżenie o braku przeglądu prawnika w 14.7, 14.8 i 14.9. Commity nazwane „draft: … (for owner review)” zostają w historii pod tą nazwą, bo historii nie przepisujemy. Status `verified` pozostał bez zmian. Każdą poprawkę nadal da się cofnąć osobno.
+- **2026-10-29: dopisano wskaźnik do tego przeglądu w AGENTS.md** (jedno zdanie w „Zakres i źródła”), za zgodą właściciela.
+- Wcześniej tego dnia: ustalenia dotyczące opublikowanych pozycji mają trafiać do poprawek do przeglądu, nie do zmian bez wiedzy właściciela; dwa niezależne przebiegi weryfikatora dla pozycji ryzykownych; następny etap to dokończenie przeglądu wszystkich 32 pozycji (obecnie wstrzymane); zastrzeżenie przy pozycjach prawnych zostaje.
+- Nadal otwarte: sekcje B, C, D i E poniżej.
 
 ## A. Poprawki w opublikowanych poradach (do przyjęcia, zmiany lub odrzucenia)
 
@@ -14,7 +21,7 @@ Stan na 2026-10-29. Nic w `book/pl` nie zostało zmienione bez wiedzy właścici
 | 14.7 | Wniosek, że uprawnienie systemowe nie jest automatycznie zgodą RODO, nie wynika z żadnego cytowanego źródła; „Dokumentacja Androida” to strona pomocy; tytuł dzielił „wymagane” od „dodatkowych” | Wniosek jest opisany jako zestawienie redakcji, art. 4 pkt 11 dodany do źródeł, zdanie o art. 7 ust. 4 wierniejsze tekstowi, tytuł jako czynność (9800901, bc2b7b8, 518c3b3) | dwa przebiegi PASS |
 | 14.7, 14.8, 14.9 | Prawa z RODO podane bez przeglądu prawnika | Dodano zdanie „nie jest poradą prawną i nie miał przeglądu prawnika”; Weryfikacja i Status 14.8 i 14.9 bez zmian | nie dotyczy |
 
-Decyzja: przyjąć, zmienić czy odrzucić każdą poprawkę. Poprawki, które przeszły ślepą weryfikację, powinny przejść jeszcze przegląd językowy właściciela.
+Decyzja podjęta: przyjęto wszystkie. Otwarty wiersz 03.4 (krok „Propozycja redakcji”, którego żadne źródło nie zaleca) zostaje w tekście jako oznaczona sugestia redakcji, dopóki właściciel nie zdecyduje inaczej.
 
 ## B. Ustalenia przeciwnika o treści, która już była w książce (nie poprawiałem)
 
@@ -49,5 +56,5 @@ Wiele z tych zaleceń to zdrowy rozsądek i może zostać jako oznaczone „Prop
 1. **Czytelne źródła.** Zablokowane są BMJ, Nature, Wiley, Apple Support i Rzecznik Finansowy, a dla dziewięciu DOI (03.5, 04.1, 04.2, 04.3, 04.4, 04.5, 04.7, 04.17, 04.18) widzimy tylko metadane. Możliwości: (a) właściciel zapisuje tekst strony lub PDF i wskazuje, gdzie go umieścić; wymaga to dopisania importu ręcznego, który zapisze migawkę z adnotacją „ręcznie dostarczone”, (b) klucz OpenAlex dla prac psychologicznych z rozdziału 04, (c) pominięcie tych pozycji w przeglądzie z adnotacją „źródło niedostępne”.
 2. **Recenzenci dziedzinowi** (lekarz, prawnik, osoba znająca podatki i świadczenia) dla pozycji o dużym ryzyku. Bez nich takie pozycje pozostają „sprawdzone maszynowo”, nie „zatwierdzone przez eksperta”. Sformułowania w książce i panelu stanu powinny to odróżniać.
 3. **Zakres.** Rozdziały 03, 04 i 14 to uzgodniony zakres. Szersza próba (20–30 pozycji z innych rozdziałów) wymaga zgody właściciela.
-4. **Wskaźnik w AGENTS.md.** Nowa sesja (Codex, Claude Code) automatycznie czyta AGENTS.md, ale nie wie o przeglądzie, dopóki nie dostanie promptu z README. Jedno zdanie w AGENTS.md („Stan wstrzymanego przeglądu: audit/README.md”) rozwiązałoby to, ale AGENTS.md zmienia tylko właściciel.
+4. ~~Wskaźnik w AGENTS.md~~ Zrobione 2026-10-29 za zgodą właściciela: AGENTS.md odsyła do audit/README.md i audit/FINDINGS.md, więc nowa sesja w Codex lub Claude Code dowie się o wstrzymanym przeglądzie sama.
 5. **Komu wolno wznowić.** Przegląd jest wstrzymany na prośbę właściciela, więc wznowienie wymaga jego polecenia.
