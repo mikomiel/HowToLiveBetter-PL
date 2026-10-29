@@ -228,7 +228,8 @@ test('merge instructions keep human approval, exact HEAD and a separate non-admi
   const policy = read('AGENTS.md');
   for (const condition of ['zgodzie operatora na dany PR', 'uprawnionego recenzenta-człowieka dla aktualnego HEAD', 'odrębnej tożsamości agenta', 'bez uprawnień Administration', 'Nie używaj --admin ani bypassu', '--match-head-commit']) assert.ok(policy.includes(condition), condition);
   assert.match(policy, /Sam komentarz AI nie jest zatwierdzeniem/);
-  assert.match(policy, /nie deklaruj rozdzielenia uprawnień/);
+  assert.match(policy, /Dopóki osobna tożsamość nie jest skonfigurowana, agent nie wykonuje merge; robi to człowiek/);
+  assert.match(policy, /Nie deklaruj wtedy rozdzielenia uprawnień/);
 });
 
 test('browser projects cover Chromium desktop and mobile plus Firefox and WebKit', async () => {

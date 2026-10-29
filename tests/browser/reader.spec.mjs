@@ -205,8 +205,20 @@ test('module and file URL failures keep actionable HTTP guidance and disabled co
   await expect(page.locator('article')).toHaveCount(0);
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
   await expect(page.getByRole('link', { name: 'O wydaniu i metodzie' })).toBeVisible();
+  await page.addInitScript(() => {
+    globalThis.__readerModuleLoadFailed = false;
+    window.addEventListener('error', event => {
+      if (event.target instanceof HTMLScriptElement && event.target.type === 'module') {
+        globalThis.__readerModuleLoadFailed = true;
+      }
+    }, true);
+  });
   await page.goto(new URL('../../index.html', import.meta.url).href);
-  // Firefox may run file modules before fetch fails. Both paths must fail closed.
+  // Wait for a real module failure or the reader's terminal fetch error, not initial HTML.
+  await expect.poll(() => page.evaluate(() =>
+    globalThis.__readerModuleLoadFailed ||
+    document.querySelector('#status').textContent.startsWith('Nie wczytano kompletnego zbioru.')
+  ), { timeout: 12000 }).toBe(true);
   await expect(page.locator('#status')).toContainText('Użyj lokalnego serwera HTTP');
   await expect(page.locator('article')).toHaveCount(0);
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
