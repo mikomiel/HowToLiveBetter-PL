@@ -68,8 +68,8 @@ test('the verifier answers for every sentence, treats leads and unavailable sour
 
 test('the verifier is told how to number split sentences, what each kind and verdict means, and how figures are read', () => {
   const text = read('.claude/agents/pl-source-verifier.md');
-  for (const needle of ['`W praktyce#3.1`', 'Every row id is unique', '`source_description`', 'never file one under `meta_statement`', 'If no row backs the advice, give the verdict `unsupported`',
-    'Never use it to avoid `unsupported`', 'a decimal comma and a decimal point as the same figure', 'at least two figures', 'Rows with verdict `not_applicable` carry no quotes', 'relative to the repository root', 'The packet you were given']) assert.ok(text.includes(needle), needle);
+  for (const needle of ['`W praktyce#3.1`', 'Every row id is unique', '`source_description`', 'never file one under `meta_statement`', 'Verdict `unsupported`: nothing backs it; `depends_on` and `quotes` stay empty',
+    'Never use it to avoid `unsupported`', 'a decimal comma and a decimal point as the same figure', 'at least two figures', 'A `not_applicable` row needs no `reason` and no quotes', 'Your `scope_gaps` and your verdict must agree', 'It is never a statement about the world', 'the fact the advice rests on (not merely the same topic)', 'Verdict `partly`: only a part is backed', 'absence is then absence from that region', 'relative to the repository root', 'The packet you were given']) assert.ok(text.includes(needle), needle);
   assert.doesNotMatch(text, /the item labels as editorial/, 'editorial_estimate is defined by what the words do, not by a label the item never carries');
   assert.match(text, /Only a snapshot that holds the whole text can show absence/);
 });

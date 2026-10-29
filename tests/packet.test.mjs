@@ -227,7 +227,21 @@ test('a derived recommendation must depend on source rows of the same report, or
   const result = run(ungrounded({ reason: 'no snapshot row speaks of recovery' }), packet);
   assert.deepEqual([result.ok, result.status], [true, 'FAIL']);
   assert.match(problems(run(ungrounded({ reason: 'x' }, 'PASS'), packet)), /status PASS does not match the verdicts, which give FAIL/);
-  assert.match(problems(run(derived(['W praktyce#1'], { verdict: 'supported' }), packet)), /verdict not_applicable .* or unsupported/);
+  assert.match(problems(run(derived(['W praktyce#1'], { verdict: 'supported' }), packet)), /not_applicable \(fully backed\), partly \(backed in part\) or unsupported \(nothing backs it\)/);
+  // Backing in part leaves the item unavailable, not failed, and may rest on a source line that gives the same advice.
+  const partlyBacked = (extra, status = 'UNAVAILABLE') => ({ ...derived([], { verdict: 'partly', ...extra }), status });
+  assert.match(problems(run(partlyBacked({ reason: 'only half is backed' }), packet)), /must list depends_on .* or carry quotes/);
+  const viaRow = run(partlyBacked({ depends_on: ['W praktyce#1'], reason: 'the second half has no row' }), packet);
+  assert.deepEqual([viaRow.ok, viaRow.status], [true, 'UNAVAILABLE']);
+  const viaQuote = run(partlyBacked({ quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Kody SMS i z aplikacji można wyłudzić' }], reason: 'the source gives only the first half' }), packet);
+  assert.deepEqual([viaQuote.ok, viaQuote.status, viaQuote.quotesChecked], [true, 'UNAVAILABLE', 2]);
+  assert.match(problems(run(partlyBacked({ quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Kody SMS są całkowicie bezpieczne.' }], reason: 'x' }), packet)), /not on line 8/, 'a quote on a recommendation is held to the same standard');
+  assert.match(problems(run(partlyBacked({ depends_on: ['W praktyce#1'] }), packet)), /needs a reason/);
+  // A source line that gives the advice itself backs a fully backed recommendation too.
+  const direct = run(derived([], { quotes: [{ snapshot: 'aaaa.txt', line: 8, text: 'Kody SMS i z aplikacji można wyłudzić' }] }), packet);
+  assert.equal(direct.ok, true);
+  // Nothing behind it means nothing behind it.
+  assert.match(problems(run({ ...derived(['W praktyce#1'], { verdict: 'unsupported', reason: 'x' }), status: 'FAIL' }, packet)), /unsupported recommendation has nothing behind it/);
 });
 
 test('what the item says about its source is checked like a claim from it, and a figure with no source is shown to a person', () => {
@@ -374,6 +388,8 @@ test('the status follows from the verdicts alone', () => {
   assert.equal(deriveStatus([c('source_description', 'contradicted')]), 'FAIL');
   assert.equal(deriveStatus([c('source_claim', 'supported'), c('recommendation_derived', 'unsupported')]), 'FAIL', 'advice nothing backs fails the item');
   assert.equal(deriveStatus([c('recommendation_derived', 'not_applicable')]), 'PASS');
+  assert.equal(deriveStatus([c('source_claim', 'supported'), c('recommendation_derived', 'partly')]), 'UNAVAILABLE', 'advice backed only in part leaves the item unavailable');
+  assert.equal(deriveStatus([c('recommendation_derived', 'partly'), c('recommendation_derived', 'unsupported')]), 'FAIL');
 });
 
 test('warnings of the packet travel with the result', () => {

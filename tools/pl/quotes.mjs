@@ -25,9 +25,10 @@ const MIN_CHARS = 12;
 const WORD = /[\p{L}\p{N}]/u;
 const withoutLinks = text => String(text).replace(/\[[^\]]*\]\([^)]*\)/g, ' ');
 
-// The status the verdicts allow: any refuted claim or ungrounded recommendation fails, any claim that could not be judged leaves the item unavailable.
+// The status the verdicts allow: any refuted claim or ungrounded recommendation fails, any claim or recommendation only partly backed
+// or that could not be judged leaves the item unavailable.
 export function deriveStatus(claims) {
-  const judged = claims.filter(c => SOURCE_KINDS.includes(c.kind) || (c.kind === 'recommendation_derived' && c.verdict === 'unsupported'));
+  const judged = claims.filter(c => SOURCE_KINDS.includes(c.kind) || (c.kind === 'recommendation_derived' && ['unsupported', 'partly'].includes(c.verdict)));
   if (judged.some(c => ['unsupported', 'contradicted'].includes(c.verdict))) return 'FAIL';
   if (judged.some(c => ['partly', 'not_checkable', 'source_unavailable'].includes(c.verdict))) return 'UNAVAILABLE';
   return 'PASS';
@@ -130,9 +131,11 @@ export function checkReport(report, packet, cacheDir) {
     const isSource = SOURCE_KINDS.includes(claim.kind);
     if (isSource && !SOURCE_VERDICTS.includes(claim.verdict)) fail(where, `a ${claim.kind} cannot have verdict ${claim.verdict}`);
     if (claim.kind === 'recommendation_derived') {
-      if (!['not_applicable', 'unsupported'].includes(claim.verdict)) fail(where, 'a derived recommendation has verdict not_applicable (source rows back it) or unsupported (no source row does)');
       const deps = Array.isArray(claim.depends_on) ? claim.depends_on : [];
-      if (claim.verdict === 'not_applicable' && !deps.length) fail(where, 'a derived recommendation must list depends_on: the ids of the source rows whose quotes back it. If no row does, its verdict is unsupported');
+      const direct = Array.isArray(claim.quotes) && claim.quotes.length > 0;
+      if (!['not_applicable', 'partly', 'unsupported'].includes(claim.verdict)) fail(where, 'a derived recommendation has verdict not_applicable (fully backed), partly (backed in part) or unsupported (nothing backs it)');
+      else if (claim.verdict === 'unsupported' && (deps.length || direct)) fail(where, 'an unsupported recommendation has nothing behind it: drop depends_on and quotes, or use partly');
+      else if (claim.verdict !== 'unsupported' && !deps.length && !direct) fail(where, 'a derived recommendation must list depends_on (the source rows whose quotes back it) or carry quotes in which the source gives the same advice. If nothing backs it, its verdict is unsupported');
       for (const d of deps) {
         const target = byId.get(d);
         if (!target) fail(where, `depends_on "${d}" is not the id of a row of this report${partsOf.get(d) ? ` (that sentence is split: use ${partsOf.get(d).join(', ')})` : ''}`);
@@ -142,7 +145,7 @@ export function checkReport(report, packet, cacheDir) {
     } else if (!isSource && claim.verdict !== 'not_applicable') fail(where, `${claim.kind} must have verdict not_applicable`);
 
     const quotes = Array.isArray(claim.quotes) ? claim.quotes : [];
-    if (NEEDS_QUOTE.has(claim.verdict) && !quotes.length) fail(where, `verdict ${claim.verdict} needs at least one quote`);
+    if (isSource && NEEDS_QUOTE.has(claim.verdict) && !quotes.length) fail(where, `verdict ${claim.verdict} needs at least one quote`);
     if (NEEDS_REASON.has(claim.verdict) && !String(claim.reason ?? '').trim()) fail(where, `verdict ${claim.verdict} needs a reason: what the snapshot says instead, what was searched, or what would be needed to decide`);
     if (claim.verdict === 'absent_in_source') {
       const searched = Array.isArray(claim.searched) ? claim.searched : [];
