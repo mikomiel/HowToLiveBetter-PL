@@ -1,0 +1,67 @@
+{
+  "item": "03.2",
+  "edits": [
+    {
+      "field": "Ocena dowodów",
+      "original": "samej stałej pobudki",
+      "replacement": "samej stałej pory wstawania",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "po zmianie pobudki",
+      "replacement": "po zmianie pory wstawania",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "regularne pory snu",
+      "why": "Tytuł mówi o regularnych porach snu (czyli także o porze zasypiania), a W praktyce i dowody dotyczą tylko pór wstawania (NHS: stała pora wstawania). Zakres tytułu jest szerszy niż treść porady. Nie zmieniam, bo to zakres twierdzenia; do rozstrzygnięcia przez weryfikatora źródeł. Warunek z W praktyce (Jeśli pozwalają na to obowiązki) nie występuje w tytule."
+    },
+    {
+      "field": "title",
+      "text": "nie skracając odpoczynku",
+      "why": "W tytule jest odpoczynek, a w treści konsekwentnie sen (czas na sen, niedosypianie). Odpoczynek jest szerszy niż sen i czytelnik może go zrozumieć jako przerwy w ciągu dnia. Naturalniejsze byłoby nie skracając snu, ale to zawęża twierdzenie i leży w obrębie negacji, więc zostawiam do decyzji weryfikatora."
+    },
+    {
+      "field": "W praktyce",
+      "text": "wybierz zbliżone pory wstawania",
+      "why": "Szyk i dobór czasownika brzmią jak tłumaczenie (wybierz pory). Po polsku naturalniej: wstawaj o zbliżonych porach lub mniej więcej o tej samej porze. Nie edytuję, bo zbliżone jest słowem stopnia, a zmiana czasownika na staraj się wstawać osłabiłaby polecenie (modalność)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "wiązała się z lepszymi wynikami akademickimi",
+      "why": "Wyniki akademickie to kalka; po polsku zwykle wyniki w nauce lub oceny. W Ograniczenia ten sam wynik nazwano ocenami, więc słownictwo jest niespójne. Nie edytuję, bo zastąpienie jednego słowa drugim zmienia mierzony wynik (oceny, średnia, inne miary), a to musi sprawdzić weryfikator źródeł. Czasownik wiązała się jest czasownikiem asocjacji i jest chroniony."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "mniej regularna grupa miała późniejszy rytm dobowy",
+      "why": "Zdanie jest eliptyczne i niejasne dla laika: mniej regularna grupa (grupa osób o mniej regularnym śnie) oraz późniejszy rytm dobowy (zapewne przesunięcie rytmu na późniejsze godziny). Termin rytm dobowy nie jest wyjaśniony przy pierwszym użyciu w tej pozycji (nie sprawdzałem rozdziału, więc nie wiem, czy wyjaśniono go wcześniej). Zawiera słowa stopnia (mniej, późniejszy), więc nie edytuję; proponuję zasięgnąć u weryfikatora, co dokładnie mierzono."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "NHS zaleca stałą porę wstawania jako element dbania o sen",
+      "why": "Skrót NHS nie jest rozwinięty przy pierwszym użyciu w pozycji; czytelnik w Polsce nie musi wiedzieć, że chodzi o brytyjską publiczną służbę zdrowia. To nazwa instytucji, więc jej nie zmieniam. Czasownik zaleca jest chroniony. Wyrażenie element dbania o sen jest nieco rzeczownikowe, ale zrozumiałe."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "nie próba skuteczności samej stałej pobudki",
+      "why": "Próba skuteczności jest kalką od angielskiego trial (po polsku badanie skuteczności, badanie interwencyjne lub randomizowane badanie kontrolowane). Nie edytuję, bo to określenie typu badania; zamiana mogłaby zmienić, jaki projekt badania jest wykluczony, więc decyduje weryfikator. Moja edycja dotyczy tylko słowa pobudki (patrz edits); nie zmieniam słów nie, samej ani stałej."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "To rozsądny punkt do obserwacji własnego rytmu",
+      "why": "Punkt do obserwacji jest niejasny (punkt wyjścia? coś, co warto sprawdzić?), a słowo To nie ma wyraźnego poprzednika w polu. Prawdopodobny sens to rozsądny punkt wyjścia do obserwowania własnego rytmu, ale nie jestem pewien, co autor miał na myśli, a to ocena (rozsądny), więc zostawiam. Dalsza część zdania zawiera negację, termin obowiązku i kwantyfikator (a nie obowiązek identycznego planu dla każdego) i jest naturalna."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki.",
+      "why": "Łańcuch rzeczowników (poprawy ocen po zmianie) jest ciężki; naturalniej: nie dowodzi, że oceny poprawią się po zmianie pory wstawania. Przebudowa zdania dotyka czasownika siły dowodu (nie dowodzi) i związku przyczynowego, więc nie edytuję. Edycja słowa pobudki jest w edits. Oceny jako wynik wymagają ujednolicenia z wynikami akademickimi z pola Korzyść i dowody."
+    }
+  ],
+  "verdict": "needs_edits"
+}

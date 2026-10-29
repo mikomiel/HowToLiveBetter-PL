@@ -91,7 +91,7 @@ test('the hook never lets npm ci empty a symlink target, and the tools README do
   assert.match(script, /if \[ -L node_modules \]; then\n\s+rm -f node_modules\nfi/);
   assert.ok(script.indexOf('-L node_modules') < script.indexOf('timeout 300 npm ci'), 'the guard runs before the install command');
   const readme = read('tools/README.md');
-  for (const needle of ['fetch.mjs', 'packet.mjs', 'quotes.mjs', 'edits.mjs', 'search.mjs', 'lint.mjs', 'compare.mjs', 'digest.mjs']) assert.ok(readme.includes(needle), needle);
+  for (const needle of ['fetch.mjs', 'packet.mjs', 'quotes.mjs', 'edits.mjs', 'search.mjs', 'lint.mjs', 'compare.mjs', 'digest.mjs', 'check-reports.mjs', 'audit.mjs']) assert.ok(readme.includes(needle), needle);
   assert.match(readme, /Rola nie jest ślepa z natury/);
   assert.match(readme, /dwa razy, niezależnie, a compare\.mjs wskazuje zdania, które rozstrzyga człowiek/);
   assert.doesNotMatch(readme, /wynika, że weryfikator nie widzi/);

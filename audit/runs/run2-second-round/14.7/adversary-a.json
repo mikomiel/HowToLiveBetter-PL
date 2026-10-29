@@ -1,0 +1,250 @@
+{
+  "item": "14.7",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Nie klikaj \"zgadzam się na wszystko\" tylko po to, żeby korzystać z aplikacji",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Koszt: bez pieniędzy; trudność to powstrzymanie się od kliknięcia \"zgadzam się na wszystko\"",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Jeśli informacja nie jest konieczna do świadczenia usługi, możesz jej nie dać, a aplikacja nie może z tego powodu odmówić usługi",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Kryterium: czy dana informacja jest konieczna do usługi (mapa potrzebuje lokalizacji, latarka nie potrzebuje kontaktów)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Zbieranie ograniczone do minimum potrzebnego do celu przetwarzania",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 7,
+      "upstream_action": "Prawo wycofania zgody; administrator ma zapewnić wygodny sposób wycofania",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Po instalacji wejść w ustawienia uprawnień aplikacji i wyłączyć uprawnienia niekonieczne",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Gdy funkcja jest naprawdę potrzebna, wybrać zgodę tylko na ten jeden raz",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "why": "Pierwowzór kończy się krokiem pośrednim dla osoby, która funkcji naprawdę używa: zezwolić tylko na jeden raz. Pozycja daje wybór wszystko albo nic (odbierz lub zostaw). Czytelnik, któremu potrzebna jest np. lokalizacja, nie dostaje wąskiej opcji, choć zapisana strona pomocy Androida wymienia opcje węższe niż stałe zezwolenie (dla lokalizacji, aparatu i mikrofonu). Nie zmienia to bezpieczeństwa instrukcji, ale pomija element działania z pierwowzoru.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "等真用到的时候，再选只这一次允许"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 33,
+          "text": "Zezwalaj tylko podczas używania aplikacji: aplikacja może korzystać z uprawnień tylko wtedy, gdy jej używasz."
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 35,
+          "text": "Zawsze pytaj: przy każdym uruchomieniu aplikacja poprosi o możliwość korzystania z uprawnień."
+        }
+      ],
+      "fix_direction": "Albo przywrócić warunkową ścieżkę dla osoby, która funkcji używa, ograniczoną do typów uprawnień, dla których strona pomocy podaje węższe opcje, albo wprost napisać w pozycji, że tej ścieżki nie obejmuje. Nie wpisywać jej jako zweryfikowanej bez odniesienia do strony."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia.",
+      "why": "Główny przekaz pierwowzoru (odmowa zbędnych danych nie pozwala odmówić usługi) został świadomie usunięty, a Ograniczenia#4 słusznie mówią, że art. 7 ust. 4 tego nie rozstrzyga. Pozostaje jednak scenariusz, który pierwowzór miał obsłużyć: aplikacja nie działa bez zgody na dane. Czytelnik jest poinformowany, że wynik jest otwarty, ale nie dostaje żadnej ścieżki ani jasnego zdania, że pozycja jej nie podaje. Reklasyfikacja twierdzenia pierwowzoru jako zbyt kategorycznego jest uzasadniona tekstem RODO (czynnik oceny, nie zakaz).",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "如果不是提供这项服务必须用的，你不同意给，它不能因此不让你用"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "89be0046cf8ac2b2.txt",
+          "line": 2511,
+          "text": "Oceniając, czy zgodę wyrażono dobrowolnie, w jak największym stopniu uwzględnia się, czy między innymi od"
+        }
+      ],
+      "fix_direction": "Napisać wprost w polu W praktyce lub Koszt, że pozycja nie rozstrzyga, co robić, gdy aplikacja uzależnia działanie od zgody na dane zbędne do usługi, albo dodać opartą na źródle ścieżkę. Nie przywracać twierdzenia pierwowzoru bez źródła."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Koszt#1",
+      "text": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać.",
+      "why": "Zapisana strona pomocy Androida opisuje prośbę o pozwolenie na użycie funkcji urządzenia i listę typów uprawnień z krótkim opisem. Nie mówi, że system pokazuje cel dostępu. Czytelnik może szukać w oknie uprawnienia uzasadnienia, którego tam nie ma; cel w sensie RODO dotyczy zgody, a nie okna systemowego. Podobnie niejednoznaczne jest W praktyce#1 (\"do czego aplikacja chce dostępu\": do jakiego zasobu czy w jakim celu).",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 11,
+          "text": "Aplikacja wyświetli powiadomienie z prośbą o pozwolenie na korzystanie z funkcji urządzenia"
+        }
+      ],
+      "fix_direction": "Rozdzielić w sformułowaniu: do jakiej funkcji urządzenia aplikacja prosi o dostęp (źródło: strona pomocy) i jaki cel przetwarzania podano przy zgodzie (źródło: RODO)."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać.",
+      "why": "Pierwowzór podaje, że działanie nie kosztuje pieniędzy, a trudnością jest powstrzymanie się od kliknięcia. Pole Koszt nie mówi nic o pieniądzach i nie nazywa wysiłku, więc czytelnik nie dowiaduje się, że działanie jest bezpłatne (to w pozycji jest ocena redakcji, nie fakt ze źródła).",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "成本：不花钱。难的是要忍住不点「全部同意」。"
+        }
+      ],
+      "fix_direction": "Osobno nazwać koszt pieniężny, czasu i wysiłku zgodnie z zasadą rozdzielania kosztów, z oznaczeniem, że to ocena redakcji."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Rozdziel uprawnienia aplikacji od zgód na przetwarzanie danych",
+      "why": "Tytuł wskazuje czynność (rozdzielanie dwóch pojęć), której nie zawiera ani pierwowzór, ani żadne ze źródeł. Ograniczenia#2 przyznają, że źródła nie rozstrzygają, kiedy uprawnienie jest zgodą. W praktyce czytelnik nie dostaje kryterium rozpoznania, czy ma przed sobą okno uprawnienia systemowego, czy prośbę o zgodę, ani informacji, że odebranie uprawnienia nie jest wycofaniem zgody i odwrotnie. Zestawienie jest oznaczone jako redakcyjne, więc to kwestia precyzji, nie niezgodności ze źródłem.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 1,
+          "text": "别为了用 App 点「全部同意」"
+        }
+      ],
+      "fix_direction": "Doprecyzować w W praktyce, jak odróżnić oba rodzaje próśb i że każdy z nich ma osobne ustawienie, bez twierdzenia, że źródła rozstrzygają relację między nimi."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "why": "Jedyne źródło techniczne dotyczy telefonów z Androidem, a pole W praktyce nie wspomina systemu ani nie podaje ścieżki w ustawieniach (jest ona tylko na stronie pomocy). Użytkownik innego systemu (np. iPhone) nie dowiaduje się z pozycji, że instrukcja i dowód dotyczą Androida, bo zastrzeżenie jest dopiero w Ograniczenia#5. Dodatkowo strona wskazuje, że część czynności jest dostępna tylko na wybranym sprzęcie i wersji, a pozycja nie mówi, które.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 9,
+          "text": "Zmienianie uprawnień aplikacji na telefonie z Androidem"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 13,
+          "text": "niektóre z tych czynności można wykonać tylko na telefonie Pixel z Androidem 15 lub nowszym"
+        }
+      ],
+      "fix_direction": "Zaznaczyć zakres systemu już w W praktyce (np. że opis kroków dotyczy Androida) i nie sugerować, że ścieżka działa na każdym telefonie. Nie dopisywać kroków dla innych systemów bez źródła w snapshotach."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#5",
+      "text": "Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu.",
+      "why": "Zapisana strona zawiera uwagę, że polska treść może być przetłumaczona maszynowo i zawierać błędy. Pozycja przedstawia tę stronę jako źródło instrukcji bez tej informacji. Nie podważa to opisanych w pozycji zdań, ale jest ograniczeniem źródła, które czytelnik powinien znać.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "96ed8430ad13bbdc.txt",
+          "line": 115,
+          "text": "Ta strona może zawierać treści przetłumaczone przy użyciu technologii AI."
+        }
+      ],
+      "fix_direction": "Dodać do Ograniczeń informację, że polska wersja strony pomocy zawiera zastrzeżenie o tłumaczeniu maszynowym."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#3",
+      "text": "Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+      "why": "Pozycja mówi tylko o prawie wycofania. Art. 7 ust. 3 dodaje, że wycofanie nie wpływa na zgodność z prawem przetwarzania sprzed wycofania oraz że wycofanie ma być równie łatwe jak wyrażenie zgody. Bez pierwszego zastrzeżenia czytelnik może uznać, że wycofanie cofa to, co już zebrano; bez drugiego nie wie, czego może wymagać, gdy takiej możliwości nie widzi (pierwowzór wymaga wygodnego sposobu wycofania). Pozycja nie twierdzi, że wycofanie usuwa dane, więc to precyzja.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "89be0046cf8ac2b2.txt",
+          "line": 2507,
+          "text": "zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej wycofaniem."
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "89be0046cf8ac2b2.txt",
+          "line": 2508,
+          "text": "Wycofanie zgody musi być równie łatwe jak jej wyrażenie."
+        },
+        {
+          "source": "upstream",
+          "line": 7,
+          "text": "个人信息处理者应当提供便捷的撤回同意的方式"
+        }
+      ],
+      "fix_direction": "Dodać do Ograniczeń, że wycofanie działa na przyszłość i nie unieważnia wcześniejszego przetwarzania, a w W praktyce wskazać, że wycofanie ma być równie łatwe jak zgoda. Nie obiecywać usunięcia danych bez źródła."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu.",
+      "why": "Zdanie nie nazywa adresata ani zakresu terytorialnego. Art. 5 ust. 1 lit. c RODO zobowiązuje administratora, a art. 3 ust. 2 obejmuje administratora spoza Unii tylko wtedy, gdy oferuje usługi osobom w Unii lub monitoruje ich zachowanie w Unii. Dla Polaka korzystającego z aplikacji oferowanej w Unii to zwykle spełnione, ale pozycja tego nie mówi. Ograniczenia#7 mówią o przepisach ogólnie, co łagodzi sprawę.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "89be0046cf8ac2b2.txt",
+          "line": 2199,
+          "text": "Niniejsze rozporządzenie ma zastosowanie do przetwarzania danych osobowych osób, których dane dotyczą,"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "89be0046cf8ac2b2.txt",
+          "line": 2203,
+          "text": "oferowaniem towarów lub usług takim osobom, których dane dotyczą, w Unii"
+        }
+      ],
+      "fix_direction": "Nazwać, kogo wiąże obowiązek (administratora danych) i że dotyczy przetwarzania objętego zakresem RODO; bez rozstrzygania, czy konkretna aplikacja jest nim objęta."
+    }
+  ],
+  "notes": "No protocol violation of substance. Opened only: the role file, AGENTS.md, README.md (lines 38-77, which is the 'Jak czytać dowody' section plus about 20 lines of the next sections that the same Read returned), the packet, and the two listed snapshots (96ed8430ad13bbdc.txt in full; 89be0046cf8ac2b2.txt by Grep with explicit path and Read of lines 1-40, 2215-2284 and 2368-2528, and Grep hits for art. 3). No body of book/, tests/, tools/, manifest, other snapshots, git history or chapter files. No scripts run. Status PASS: no blocker and no attack listed as not_assessable. Grade attack: C matches the README definition (law plus technical instruction, no effectiveness measurement) and the item states the A to C change and why. Numbers attack: the only figures are article references (art. 4 pkt 11, art. 5 ust. 1, art. 6 ust. 1, art. 7 ust. 3 and 4); all agree with the snapshot text, and the Art. 7(4) paraphrase in Ograniczenia#4 matches the snapshot. Leak attack: no Chinese institution, number or deadline in reader-facing fields; the word 'Chińskie' appears only in Zmiany w adaptacji as a change log; the legal statements have the RODO text among the snapshots. Recency attack was run only in the sense defined by the role (snapshots showing a conflict or an older source); neither snapshot shows a conflict, the Android page has no date, and the RODO snapshot is the 4.5.2016 Official Journal text, so currency of either source is NOT established by this review."
+}

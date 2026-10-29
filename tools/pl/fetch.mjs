@@ -393,13 +393,24 @@ if (isMain()) {
   const outDir = resolve(flag('--out') ?? resolve(root, '.cache/sources'));
   const itemArg = flag('--item');
   const withUpstream = args.includes('--upstream') && args.splice(args.indexOf('--upstream'), 1);
+  const everyPublished = args.includes('--published') && args.splice(args.indexOf('--published'), 1);
   try {
-    const plan = itemArg ? await inputsForItem(root, itemArg, withUpstream) : { id: null, inputs: args.map(input => ({ input, origin: 'cited' })) };
-    if (!plan.inputs.length) { console.error(itemArg ? `No fetchable source found for item ${plan.id}: its Źródła field holds no https link or DOI.` : 'Usage: node tools/pl/fetch.mjs <https-url|doi>... | --item N.M [--upstream] [--out dir]'); process.exit(2); }
-    for (const { input, origin } of plan.inputs) {
-      console.log(JSON.stringify(await fetchSource(input, outDir, { item: plan.id, origin })));
-      await new Promise(r => setTimeout(r, 300));
+    let plans;
+    if (everyPublished) {
+      // The sources of every published item, so a cache lost with its container is rebuilt with one command.
+      const { loadAll } = await import('./lint.mjs');
+      const { published } = await import('../../reader.mjs');
+      plans = [];
+      for (const entry of loadAll(root).flatMap(c => published(c.entries))) plans.push(await inputsForItem(root, entry.number, withUpstream));
+    } else plans = [itemArg ? await inputsForItem(root, itemArg, withUpstream) : { id: null, inputs: args.map(input => ({ input, origin: 'cited' })) }];
+    if (!plans.some(plan => plan.inputs.length)) { console.error(itemArg ? `No fetchable source found for item ${plans[0].id}: its Źródła field holds no https link or DOI.` : 'Usage: node tools/pl/fetch.mjs <https-url|doi>... | --item N.M [--upstream] [--out dir] | --published [--upstream] [--out dir]'); process.exit(2); }
+    for (const plan of plans) {
+      for (const { input, origin } of plan.inputs) {
+        console.log(JSON.stringify(await fetchSource(input, outDir, { item: plan.id, origin })));
+        await new Promise(r => setTimeout(r, 300));
+      }
     }
+    if (everyPublished) console.error(`Fetched the sources of ${plans.length} published items into ${outDir}.`);
   } catch (error) {
     console.error(error.message);
     process.exit(2);

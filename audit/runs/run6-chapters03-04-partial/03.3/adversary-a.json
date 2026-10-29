@@ -1,0 +1,149 @@
+{
+  "item": "03.3",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Sleep 7 to 8 hours every night; do not treat 6 hours as enough", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Set aside 1 to 2 extra hours a day for sleep, go to bed earlier, accept the effort", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Claim: two weeks of 6 h per night brings performance down to the level of two nights without sleep", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Claim: self-rated sleepiness stops rising after the first days; 6 h and 4 h groups rate the same, so 'I am fine on 6 h' is unreliable", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Evidence: 48 healthy adults aged 21-38, 14 days, randomised trial (upstream attributes all 48 to the 6 h condition)", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Evidence: meta-analysis of 70 studies on acute deprivation up to 48 h (g = -0.776 attention lapses, g = -0.125 reasoning accuracy)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Key point: not feeling sleepy is not evidence of having slept enough", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Claim: long-term 6 h sleepers have only got used to it, performance has not followed", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Limitation: the pooled part concerns whole nights without sleep; 'chronic short sleep' is supported by only one randomised trial", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Cross-reference: sleep duration and mortality are a separate question (section 2, item 13, 7 h lowest risk)", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "W praktyce#3",
+      "text": "Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.",
+      "why": "This is a health action that is not in the upstream span and is not tested in the Van Dongen abstract. The NHS snapshot gives a 'see a GP' trigger for insomnia when habit changes did not help, which is a different situation from sleepiness despite enough sleep opportunity. It mentions caffeine only as something to avoid before bed, never as a coping response. The item does not call the sentence an editorial addition. It also does not say whom to consult or what 'znaczna senność' means. The direction is cautious, but an unflagged, unsourced medical action with no addressee leaves the reader unsure who to see and when.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 145, "text": "changing your sleeping habits has not helped your insomnia"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"}
+      ],
+      "fix_direction": "Either label the sentence as an editorial safety net and tie it to a source passage that states it, or remove it. If kept, name the addressee (a doctor), say it applies to persistent sleepiness, and drop or source the caffeine clause."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "uznawać brak senności za dowód wyspania",
+      "why": "The snapshot shows that self-rated sleepiness rose acutely, then plateaued and did not separate 6 h from 4 h, while task performance kept falling. It does not show participants who felt no sleepiness. 'Brak senności' (absence) widens 'sleepiness stopped increasing' into 'no sleepiness'. The upstream key point has the same overreach. The advised action is unaffected, so the effect is on precision only.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "Subjective sleepiness ratings showed an acute response to sleep restriction but only small further increases on subsequent days"},
+        {"source": "upstream", "line": 8, "text": "「自己觉得不困」不是睡够了的证据"}
+      ],
+      "fix_direction": "Word the title and rationale around self-rated sleepiness that stops tracking the decline in performance, not around the absence of sleepiness."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ocena redakcyjna#1",
+      "text": "na podstawie samego poczucia przyzwyczajenia",
+      "why": "The abstract does not measure habituation or a 'feeling of having got used to it'. It says subjects were largely unaware of the deficits. 'Przyzwyczajenie' is the upstream gloss, kept as a mechanism the cited source does not state.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "Sleepiness ratings suggest that subjects were largely unaware of these increasing cognitive deficits"},
+        {"source": "upstream", "line": 8, "text": "长期睡 6 小时的人只是感觉上习惯了"}
+      ],
+      "fix_direction": "Replace the mechanism with what the abstract reports: participants rated their sleepiness without noticing the deficit."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.",
+      "why": "The abstract states randomisation only for the chronic restriction experiment. The total sleep deprivation experiment is described as 3 nights without sleep, with no randomisation mentioned, so the plural 'badania ... z randomizacją' goes beyond the abstract. One letter also covers a single laboratory study and a general NHS information page. The README B definition lists a single study, limited trials, a review or a narrow clinical-guideline conclusion; a patient-information page is none of these. The B for the single study itself is defensible.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "The chronic sleep restriction experiment involved randomization to one of three sleep doses"},
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "The total sleep deprivation experiment involved 3 nights without sleep (0 h time in bed)."}
+      ],
+      "fix_direction": "State that the B rests on one laboratory study (abstract only), with randomisation reported for the chronic restriction experiment. Say separately that the NHS figure is general information and does not raise the grade."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Planując dzień, uwzględnij własną potrzebę snu.",
+      "why": "The upstream action sets a floor ('do not treat 6 hours as enough'). The Polish version replaces it with 'your own need' and never says how to learn that need. The title and the abstract say self-assessment of sleepiness is unreliable, so a reader who feels fine on 6 h can read the sentence as permission. Only the 7–9 h average in the next sentence anchors the reader. The individualisation is supported by the NHS page, but the reader is left with no method.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "每晚睡够 7 到 8 小时，别把 6 小时当作够用"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 37, "text": "Everyone needs different amounts of sleep."},
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "Sleepiness ratings suggest that subjects were largely unaware of these increasing cognitive deficits"}
+      ],
+      "fix_direction": "State that the cited study found deficits at 6 h time in bed at group level. Say that feeling fine is not a way to find one's own need, and give the 7–9 h average as the starting point."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Czas na odpoczynek może ograniczyć inne zajęcia.",
+      "why": "The upstream cost line carries a magnitude (1 to 2 extra hours a day), the how (earlier bedtime) and the effort. The Polish cost keeps only a generic time remark. It states neither the zero money cost nor the effort, and the earlier-bedtime path is gone. A reader who cannot find the time gets no stated path, and the item gives no fallback for the case where more sleep time is unavailable.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "每天要多留 1 到 2 小时给睡眠。早一点上床，需要一点毅力"}
+      ],
+      "fix_direction": "Restore the cost in editorial terms: no money, shifting bedtime earlier, some effort, with the size of the time shift left as an explicit editorial assumption or omitted."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#4",
+      "text": "Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).",
+      "why": "Without the link the item mentions 'bezdech' only as an unexplained term in a dangling pointer. W praktyce#3 says 'skonsultuj' with no addressee, while the NHS snapshot names a GP and a sleep clinic referral for apnoea symptoms. Alone, the item does not tell a sleepy reader who to see or why apnoea is relevant.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 143, "text": "Non-urgent advice: See a GP if:"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 159, "text": "You may be referred to a sleep clinic if you have symptoms of another sleep disorder such as sleep apnoea."}
+      ],
+      "fix_direction": "Make the item stand alone: name the addressee for the consultation and explain the term 'bezdech senny' in one clause, and keep the cross-reference as an extra pointer only."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#3",
+      "text": "Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu.",
+      "why": "The upstream note says 'chronic short sleep' is supported by only one randomised trial. The limitations omit this, and they do not say the figures rest on a single laboratory study of healthy 21–38 year olds read from an abstract only. The abstract also states that all other sleep was prohibited, and the standardised laboratory conditions are not mentioned. The B grade alone does not tell the reader any of this.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "「长期少睡」只有一项随机对照试验支持"},
+        {"source": "snapshot", "snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "All other sleep was prohibited."}
+      ],
+      "fix_direction": "Add a limitation that the chronic effect comes from one laboratory study in healthy young adults with standardised conditions and no naps. Say that only the abstract was checked."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "Liczy się też jakość snu.",
+      "why": "Neither cited snapshot states that sleep quality matters. The Van Dongen abstract manipulates time in bed only, and the NHS page lists causes of poor sleep without a statement of this kind. The sentence is cautionary and plausible, but it is not backed by the stored sources. Judged from the given texts only.",
+      "evidence": [],
+      "fix_direction": "Support the sentence with a stored source passage or mark it as an editorial caveat."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#1",
+      "text": "nie indywidualna recepta ani limit dla dzieci",
+      "why": "'Ani limit dla dzieci' is ambiguous. A parent can read it as 'the 7–9 h limit does not apply to children' without learning the NHS children's range. The same NHS snapshot gives a separate figure for children, so the scope word 'dorosłych' is correct, but the Polish phrase obscures it.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 43, "text": "children need 9 to 13 hours"}
+      ],
+      "fix_direction": "Say plainly that the 7–9 h range is for adults only and that the NHS gives different ranges for children, rather than using the word 'limit'."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#2",
+      "text": "NHS podaje dla dorosłych przeciętnie 7–9 godzin.",
+      "why": "'NHS' is not expanded or placed in a jurisdiction for a Polish reader. It is the sole source of the 7–9 h figure. AGENTS.md says that for health protection the current Polish or EU sources are checked, and the stored snapshots contain no Polish or EU source. The figure matches the NHS snapshot, so this is a provenance and wording issue and not a wrong number. I cannot judge from the given texts whether Polish or EU guidance differs.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 7, "text": "Title: Insomnia - NHS"}
+      ],
+      "fix_direction": "Spell out that NHS is the UK health service and, if the orchestrator requires it, add a Polish or EU source for the 7–9 h range or record that none was checked."
+    }
+  ],
+  "notes": "No blocker found, so status is PASS with one major and ten minor findings. Numbers check: 48, 21-38 years, 4/6/8 h time in bed, 14 days, NHS 7 to 9 hours (adults) and 9 to 13 hours (children) all appear in the stored snapshots; there are no d, HR or OR values in the Polish text; the upstream g = -0.776 and g = -0.125 appear only in the upstream span and in the lead snapshot (origin lead) and were correctly dropped from the Polish text. The Polish text also correctly fixes the upstream attribution of all 48 participants to the 6 h condition (the abstract says 48 across the experiments). Leak check: no Chinese institution, hotline, threshold or legal rule in the reader-facing fields. Recency and conflict: the snapshots show no conflicting authorities (NHS page reviewed 19 March 2024; Van Dongen 2003); whether Polish or EU guidance differs is not decidable from them and is not a listed attack, so I did not mark it not_assessable (see W praktyce#2). The packet does not contain the fields Status, Oryginał, Weryfikacja, so those were not attacked. Zmiany w adaptacji (no proposition id, so no finding): it explains the A to B change and the 7-8 to 7-9 change, but it does not say that the Lim and Dinges meta-analysis was removed from the sources, that the upstream '48 people on 6 h' wording was corrected, or that the 'equivalent to two nights without sleep' claim was dropped. Źródła (no proposition id): the link is labelled 'Abstrakt wydawcy' but the stored snapshot is labelled 'ABSTRACT (Europe PMC)', so the 'wydawcy' provenance is not shown by the snapshot. Convention used: fallback_stated is a boolean, set to false wherever no fallback exists or the entry is a claim and not an action. Protocol: I read README.md lines 35-84, which includes sections adjacent to 'Jak czytać dowody' (a small overread; those adjacent lines were not used in any finding). I opened nothing under book/, tests/, tools/, the manifest, other snapshots, git history or any chapter file."
+}

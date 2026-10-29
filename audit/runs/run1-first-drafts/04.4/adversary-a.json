@@ -1,0 +1,136 @@
+{
+  "item": "04.4",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "估工期时按过去同类任务的实际耗时估，不按计划推 (estimate from the actual durations of past similar tasks, not from the plan)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "估之前花几分钟，翻一下上次同类的事实际做了多久 (before estimating, spend a few minutes looking up how long the last similar task actually took)",
+      "fate": "kept",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "先回想上次同类的事花了多久再估 (recall how long the last similar task took, then estimate; upstream credits this with 29.3% to 60.0%). The item separates recall alone (no effect in the study) from recall plus linking, and does not credit the 60.0% to recall alone.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "把过去的经历和眼下这件事挂上钩，再去估 (link past experience to the present task, then estimate). The item keeps a general linking step but drops the two concrete steps of the experiment: a date computed from the typical past pace and a written scenario of delays based on past problems.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "照同类项目的历史数据来估，参考类预测 (estimate from the historical data of similar projects, reference class forecasting). Only a lead (Flyvbjerg abstract) supports it; no cited snapshot does.",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+      "why": "The title (and W praktyce#2) presents comparison with earlier similar tasks as the action. What Study 4 manipulated was a bundle: participants described past similar assignments, then wrote the date they would finish if they finished as far before the deadline as they typically had, then wrote a plausible scenario, based on past problems, in which they finish at their typical time, and only then predicted. The authors state they cannot say which component produced the realism and cannot rule out that a hypothetical scenario alone did it (no scenario-only arm). Only 12.5 percent of that group mentioned past experience when listing their thoughts. The authors add that estimates built heavily on remembered past projects would have been too pessimistic, and that they lack compelling evidence that recollections of past performance improve accuracy. W praktyce#1 and #3 do label the advice an editorial example, so the width of the action is disclosed, but Ograniczenia never tells the reader that the active ingredient is unknown or that the tested manipulation was a bundle. A reader can take 'porównaj z wcześniejszymi' as the tested cause. This is a missing condition, not an unsafe instruction, hence major.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 599, "text": "puter assignment if they completed it as far before its deadline as they"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 601, "text": "scenario—based on their past experiences—that would result in their"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 769, "text": "thetical scenario, without reference to the past, we cannot rule"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 776, "text": "problems they had encountered previously. We cannot say"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 777, "text": "which of these two components produced the greater degree of"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 681, "text": "relevant condition, only 12.5% of the subjects mentioned their"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 967, "text": "mates that were too pessimistic if they had relied heavily on"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 969, "text": "ies, we do not yet have compelling evidence that individuals can"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 970, "text": "use their recollections of their own past performances to im-"}
+      ],
+      "fix_direction": "State in Ograniczenia that the experimental condition bundled a date derived from the typical past pace with a written scenario of delays, that no arm tested either part alone, and that the authors themselves do not claim evidence that using past performance improves accuracy. Consider whether the title should name the tested steps or say explicitly that it is an editorial example. Do not present replacement advice as verified."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#3",
+      "text": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+      "why": "The source says the recall-relevant predictions were less biased but no more accurate, and that the mean bias disappeared because predictions were as likely to be too long as too short: enough participants became overly pessimistic to offset those who stayed overly optimistic. The Table 4 means (lines 638-640) show the group predicted later (7.0 days against 5.5 in the control) while actual time did not change. The phrase 'nie dokładności każdej prognozy' suggests accuracy improved for some forecasts, and the item does not say that part of the gain is later, possibly padded, dates. Ograniczenia#2 already states that the absolute error did not fall, so the reader is only partly misled.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 652, "text": "recall-relevant condition were less biased but no more accurate"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 705, "text": "pletion times, nor was the absolute prediction error any smaller."},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 707, "text": "tion because subjects' predictions were as likely to be too long"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 993, "text": "enough subjects to become overly pessimistic to counterbalance"}
+      ],
+      "fix_direction": "Replace the vague 'każdej prognozy' wording with what the source reports: less biased but not more accurate, with some predictions becoming too long. Say that the gain came from later predicted dates and not from faster work."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+      "why": "The letter B is consistent with the README definition (single study, limited samples) and with the upstream B. But 123 is the total over three arms; the reported contrast is between arms of 41 and 40 people, which is roughly 12 against 24 people (editorial arithmetic from 29.3 and 60.0 percent). The bare 123 reads as a larger comparison than it is. The upstream note itself warns that the sample is small, about 40 per group, and the item drops that.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 649, "text": "Note, n = 41, 42, and 40 in the control, recall, and recall-relevant"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 619, "text": "Subjects were 123 undergraduate psychol-"},
+        {"source": "upstream", "line": 8, "text": "人也少，37 人和每组约 40 人"}
+      ],
+      "fix_direction": "Add the size of the compared groups (about 40 per condition) next to the total, so the grade line does not read as a larger comparison."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#1",
+      "text": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego.",
+      "why": "The sentence is accurate but drops scope words that matter for transfer: participants were undergraduate psychology students working for course credit, the task was a self-paced tutorial of about one hour, and the experimenter set a deadline of 1 or 2 weeks. Participants only predicted a finishing date; nobody committed to a deadline. W praktyce#2 says 'wyznacz termin', which a reader can take as promising a date to other people, a case the experiment did not test.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 560, "text": "proximately 1 hr to complete. To prevent subjects from treating the"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 599, "text": "deadline of 1 week; the remaining participants received a dead-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 619, "text": "Subjects were 123 undergraduate psychol-"}
+      ],
+      "fix_direction": "Name the population (psychology students for course credit), the roughly one-hour task and the externally set 1 or 2 week deadline in Ograniczenia, and make clear that the experiment tested private predictions, not commitments to others."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie.",
+      "why": "The upstream headline action (estimate from the actual durations of past similar tasks, not from the plan) was replaced by a compare-and-relate step. That change is supported: the authors say estimates built heavily on past projects would have been too pessimistic. But Zmiany w adaptacji do not record that this upstream instruction, and the upstream reference-class method (historical data of similar projects), were dropped or why. AGENTS.md asks for such changes to be described. The step also assumes a comparable earlier task exists, and neither the item nor the upstream gives a path for a reader who has none.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "### 4. 估工期时按过去同类任务的实际耗时估，不按计划推"},
+        {"source": "upstream", "line": 3, "text": "- 成本：不花钱。估之前花几分钟，翻一下上次同类的事实际做了多久。"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 698, "text": "been far too pessimistic, on average. Therefore, subjects were"}
+      ],
+      "fix_direction": "Record in Zmiany w adaptacji that the upstream instruction to estimate from past actual durations and the reference-class method were not carried over, with the reason. State what the reader should do when there is no comparable earlier task, without presenting that fallback as verified."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Zapisz, jak wcześniejsze podobne zadania odnoszą się do tego, które planujesz, i dopiero wtedy wyznacz termin.",
+      "why": "Read alone, the step gives no rule for turning the written comparison into a date, and no path if no comparable earlier task exists. The experiment gave participants two concrete steps (a date at the typical past pace, a written scenario of delays). The authors also state a precondition that the item does not carry: the improvement should occur only if the recollections are valid and the present task is comparable with the recalled ones. Koszt#2 mentions comparing the scope of work, but Ograniczenia does not say that comparability is a condition. The text is safe to act on, so this stays minor.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 600, "text": "typically completed assignments. Second, they described a plausible"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 962, "text": "ever, if participants' recollections are valid and if their present"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 963, "text": "task is comparable with the projects that they recall. We do not"}
+      ],
+      "fix_direction": "Add to Ograniczenia the authors' precondition (valid recollections and a comparable task). Say what the written comparison should be used for, or say plainly that the step is only an editorial analogue of the tested one."
+    }
+  ],
+  "notes": "Rewrite after a script rejected the previous report at this path for a status that did not match the findings. This report has no blocker, all nine attacks were run, and attacks_not_assessable is empty, so status is PASS under the role file rule. The one major finding (title#1) is a missing condition and is left at major; nothing was downgraded to reach PASS. Recency and conflict (attack 8) were run only against the cited snapshots: the cited snapshots are Buehler et al. (full text, 1994) and the Crossref metadata stub of the same article, and neither shows newer guidance or a disagreement. The two lead snapshots (Flyvbjerg 2006, Halkjelsvik and Jorgensen 2012, abstracts only) are newer but are leads and cannot support or refute anything. For the orchestrator only: the Halkjelsvik abstract says underestimation was more frequent in engineering and management studies and that this was 'not the case' in psychology studies, which is in tension with the general statement in upstream line 8 but touches no sentence of this item, so no finding was made. The cited DOI snapshot is metadata-only (title, authors, year); it was not needed because the MIT full text covers every attack. Numbers: 60.0 and 29.3 percent (Table 4, lines 632-633), n = 123, the 30.7 point difference and the page range 375-376 all hold against the full text. Evidence line numbers are file line numbers as printed by Read and Grep, not offsets inside the text block. Protocol: I read README.md lines 38-77, which is the section 'Jak czytać dowody' plus the start of the next two sections; I opened nothing under book/, tests/, tools/, the manifest, git history or any chapter file, and ran no script."
+}

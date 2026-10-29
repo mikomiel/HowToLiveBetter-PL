@@ -1,0 +1,164 @@
+{
+  "item": "03.3",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#3"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Czas na odpoczynek może ograniczyć inne zajęcia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Planując dzień, uwzględnij własną potrzebę snu.",
+      "verdict": "not_applicable",
+      "depends_on": ["W praktyce#2", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "source_claim",
+      "claim": "NHS podaje dla dorosłych przeciętnie 7–9 godzin.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"},
+        {"snapshot": "b59686537010480d.txt", "line": 37, "text": "Everyone needs different amounts of sleep."}
+      ],
+      "reason": "The 'On average:' lead-in sits alone on line 39 (shorter than 12 characters, so not quotable); line 41 gives the adult figure under it."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 145, "text": "changing your sleeping habits has not helped your insomnia"},
+        {"snapshot": "b59686537010480d.txt", "line": 149, "text": "your insomnia is affecting your daily life in a way that makes it hard for you to cope"}
+      ],
+      "reason": "Only the general idea of seeing a clinician when sleep problems persist and affect daily life is backed (NHS says 'See a GP' for insomnia that habit changes did not fix). Not backed: (1) the trigger as worded, i.e. significant sleepiness despite an adequate opportunity to sleep (the NHS page addresses insomnia, and line 47 says constant daytime tiredness probably means not enough sleep); (2) the contrast 'zamiast jedynie zwiększać ilość kofeiny': neither snapshot says anything about using caffeine to counter sleepiness (NHS mentions caffeine only as a cause of insomnia and says to avoid tea or coffee at least 6 hours before bed). Searched both cited snapshots for caffeine, sleepiness, daytime tiredness and GP advice."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b6bab3851cebff29.txt", "line": 9, "text": "Van Dongen HP, Maislin G, Mullington JM, Dinges DF."},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "chronic sleep restriction experiment involved randomization to one of three sleep doses (4 h, 6 h, or 8 h time in bed per night), which were maintained for 14 consecutive days."},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "we conducted a dose-response chronic sleep restriction experiment in which waking neurobehavioral and sleep physiological functions were monitored and compared to those for total sleep deprivation."},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "experiments were conducted under standardized laboratory conditions with continuous behavioral, physiological and medical monitoring."}
+      ],
+      "reason": "Checked against the Europe PMC abstract only, not the full text."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_description",
+      "claim": "W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "total of n = 48 healthy adults (ages 21-38) participated in the experiments."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "restriction of sleep periods to 4 h or 6 h per night over 14 consecutive days resulted in significant cumulative, dose-dependent deficits in cognitive performance on all tasks."},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "Subjective sleepiness ratings showed an acute response to sleep restriction but only small further increases on subsequent days, and did not significantly differentiate the 6 h and 4 h conditions."},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "Sleepiness ratings suggest that subjects were largely unaware of these increasing cognitive deficits"}
+      ],
+      "reason": "Both parts (accumulating deficits at 4 h and 6 h; self-rated sleepiness not tracking them) are the same kind and both supported by the abstract. 'Deficyty wykonania zadań' is the abstract's 'deficits in cognitive performance on all tasks'."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "chronic sleep restriction experiment involved randomization to one of three sleep doses (4 h, 6 h, or 8 h time in bed per night)"},
+        {"snapshot": "b6bab3851cebff29.txt", "line": 14, "text": "experiments were conducted under standardized laboratory conditions with continuous behavioral, physiological and medical monitoring."},
+        {"snapshot": "b59686537010480d.txt", "line": 35, "text": "How much sleep you need"},
+        {"snapshot": "b59686537010480d.txt", "line": 37, "text": "Everyone needs different amounts of sleep."}
+      ],
+      "reason": "The grade letter B itself is editorial and was not checked. The words after it describe the sources: a laboratory experiment with randomisation to 4/6/8 h (abstract) and a general NHS information section on sleep need (section of the NHS insomnia page)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"},
+        {"snapshot": "b59686537010480d.txt", "line": 37, "text": "Everyone needs different amounts of sleep."},
+        {"snapshot": "b59686537010480d.txt", "line": 43, "text": "children need 9 to 13 hours"}
+      ],
+      "reason": "NHS gives 7-9 h as an adult average, says needs differ between people and gives a different range for children. 'Orientacja' is the editors' wording for the NHS 'On average' (line 39, too short to quote)."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Liczy się też jakość snu.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 19, "text": "wake up several times during the night"},
+        {"snapshot": "b59686537010480d.txt", "line": 25, "text": "still feel tired after waking up"},
+        {"snapshot": "b59686537010480d.txt", "line": 85, "text": "Things that keep you from getting a good night's sleep:"}
+      ],
+      "reason": "No snapshot states in general terms that sleep quality matters in addition to duration. The NHS page lists fragmented sleep and feeling tired after waking among insomnia symptoms and lists conditions that keep you from a good night's sleep, which only indirectly supports the point. The Van Dongen abstract manipulates time in bed, not sleep quality. Searched both cited snapshots for quality, disturbed or fragmented sleep and tiredness."
+    },
+    {
+      "id": "Ograniczenia#3.1",
+      "kind": "source_claim",
+      "claim": "Badanie nie określa dokładnej potrzeby każdej osoby",
+      "verdict": "not_checkable",
+      "reason": "This is a claim of absence about the study. The Van Dongen snapshot is an abstract only, which cannot show absence; the full text would be needed to confirm that no individual sleep need was estimated. The abstract is consistent with it (fixed 4/6/8 h doses, group-level dose-response, population-level model) but does not state it."
+    },
+    {
+      "id": "Ograniczenia#3.2",
+      "kind": "recommendation_derived",
+      "claim": "nie uzasadnia samodzielnego leczenia zaburzeń snu",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"],
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 141, "text": "Check with your doctor before taking anything for your sleep problems."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The study shows that self-rated sleepiness under-represented performance deficits in sleep-restricted healthy adults (21-38 y, laboratory, 14 days). It did not test people who report no sleepiness at all; a reader might assume that case was tested. Only the abstract was checked."},
+    {"id": "W praktyce#3", "note": "The NHS page addresses insomnia (trouble sleeping), not persistent sleepiness despite adequate opportunity to sleep. Nothing in either snapshot concerns caffeine as a response to sleepiness."},
+    {"id": "Korzyść i dowody#1", "note": "The 14 days apply to the restriction arms; the abstract gives total sleep deprivation as 3 nights without sleep. The sentence does not say otherwise but a reader might assume 14 days for both."},
+    {"id": "Korzyść i dowody#3", "note": "Deficits and the sleepiness comparison come from healthy adults aged 21-38 under laboratory restriction. The 'largely unaware' statement is the authors' interpretation ('suggest'), stated in the abstract's conclusions."},
+    {"id": "Ocena dowodów#1", "note": "The abstract states randomisation only for the chronic sleep restriction experiment (4/6/8 h); how the total sleep deprivation experiment was allocated is not described. The plural 'badania' is two experiments in one paper. The NHS source is an insomnia information page whose 'How much sleep you need' section carries the general sleep-need figures."},
+    {"id": "Ograniczenia#2", "note": "Sleep quality as an additional factor is not stated generally in either snapshot; the NHS page only implies it through symptoms of insomnia."},
+    {"id": "Ograniczenia#3.1", "note": "Absence about what the study estimated cannot be shown from an abstract-only snapshot."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet, and the two cited snapshots b6bab3851cebff29.txt (Van Dongen 2003 abstract via Europe PMC, abstract only) and b59686537010480d.txt (NHS insomnia page, main region: 4304 of 4844 chars kept; no absence claim depends on it). The lead-origin source (fbbe84ebbc1e3c54.txt) was not opened and not used as evidence. Nothing outside the allowed set was opened. Judgement calls: Ograniczenia#3 was split into 3.1 (absence claim about the study, not_checkable) and 3.2 (caveat that follows from the design rows, recommendation_derived). W praktyce#3 was kept as one recommendation row with verdict partly because its parts are all advice. Ograniczenia#2 was rated partly, not unsupported, because the NHS page indirectly touches sleep disturbance. The grade letter B in Ocena dowodów was not checked."
+}

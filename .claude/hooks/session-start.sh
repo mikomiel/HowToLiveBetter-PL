@@ -36,3 +36,8 @@ probe() {
 export -f probe
 hosts="doi.org/ www.ebi.ac.uk/ api.crossref.org/works?rows=0 api.sejm.gov.pl/ www.gov.pl/ wiedza.cert.pl/"
 echo "Source access:" $(printf '%s\n' $hosts | xargs -P 6 -I{} bash -c 'probe {}' | sort | tr '\n' ' ')
+
+# A paused audit leaves its state in the repository; say so, because a new session cannot know.
+if [ -f audit/README.md ]; then
+  echo "Wstrzymany przegląd porad: audit/README.md i audit/FINDINGS.md. Wznawiaj tylko na polecenie właściciela."
+fi

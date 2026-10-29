@@ -1,0 +1,165 @@
+{
+  "item": "14.2",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont: poczty, banku, mediów społecznościowych."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana haseł i przygotowanie menedżera.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Dostępne rozwiązania różnią się kosztem",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie wymagamy zakupu konkretnego produktu",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont: poczty, banku, mediów społecznościowych."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."}
+      ],
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zabezpiecz dostęp do samego menedżera: jeśli to możliwe, włącz drugi składnik logowania na koncie, którym się do niego logujesz, i zapisz kody zapasowe w bezpiecznym miejscu.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "oraz jeśli to możliwe na koncie, którym logujesz się do menedżera haseł."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 425, "text": "do zalogowania potrzebne są dwie różne rzeczy"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "serwis pokaże Ci kody zapasowe"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "Zapisz je w bezpiecznym miejscu"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 389, "text": "Tę metodę zastosuj dla jednego, najważniejszego hasła: hasła głównego do menedżera haseł"}
+      ]
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "recommendation_derived",
+      "claim": "Zacznij od poczty",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "najważniejszych kont: poczty, banku, mediów społecznościowych"}
+      ],
+      "depends_on": ["W praktyce#3.2"],
+      "reason": "Backed by the stated reason in W praktyce#3.2 (mail is the gateway to resetting other passwords) and by mail being listed first among the most important accounts. The source does not explicitly rank mail above bank or social media; the 'start with' order is the editors' inference from that reason."
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "source_claim",
+      "claim": "przez którą resetujesz inne konta",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "poczta (bo to brama do resetowania innych haseł)"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 7, "text": "Baza wiedzy CERT Polska"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "bazy danych z hasłami regularnie wyciekają z różnych serwisów"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "Jeśli używasz tego samego hasła w wielu miejscach, jeden wyciek daje przestępcom dostęp do wielu Twoich kont."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 395, "text": "Używanie tego samego hasła w wielu miejscach. Jeden wyciek daje dostęp do wszystkich kont."}
+      ],
+      "reason": "Attribution to CERT Polska checked against the page title (the page is in the CERT Polska knowledge base); the source states the effect without hedging, the item states it as 'może'."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 409, "text": "Pamiętanie unikalnego, silnego hasła dla każdego konta jest nierealne."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 413, "text": "bezpiecznie przechowuje je w zaszyfrowanym"}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "praktyczne zalecenia CERT Polska",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 347, "text": "W tym artykule zebraliśmy praktyczne porady"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 7, "text": "Baza wiedzy CERT Polska"}
+      ],
+      "reason": "The grade letter C and the dash are editorial and were not checked; only the description of the source (a practical-advice article in the CERT Polska knowledge base) was checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez zmierzonej kwoty unikniętych strat",
+      "verdict": "absent_in_source",
+      "searched": ["6a185dd9954fea49.txt"],
+      "reason": "Searched the stored main region of the page (12649 of 13207 characters, so absence is from that region only) for any monetary amount or loss figure (zł, PLN, EUR, euro, kwota, strata/straty, szkoda, mln, tys., %, koszt, wartość). No figure of losses or avoided losses appears; the only cost mention is line 461 (a hardware key is 'dodatkowym kosztem'), which is not about avoided losses."
+    },
+    {
+      "id": "Ocena redakcyjna#1.1",
+      "kind": "editorial_estimate",
+      "claim": "Unikalność haseł usuwa wspólny punkt słabości",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#1.2",
+      "kind": "source_claim",
+      "claim": "menedżer też wymaga ochrony",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "oraz jeśli to możliwe na koncie, którym logujesz się do menedżera haseł."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 389, "text": "Tę metodę zastosuj dla jednego, najważniejszego hasła: hasła głównego do menedżera haseł"}
+      ],
+      "reason": "The source asks for a strong master password and for 2FA on the account used to log in to the manager; it does not use the word 'ochrona' for the manager itself."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Silne hasło może zostać wyłudzone lub przechwycone.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 423, "text": "Nawet najsilniejsze hasło można wykraść albo przechwycić."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 439, "text": "można je wyłudzić za pomocą fałszywej strony logowania"}
+      ],
+      "reason": "Line 423 states steal or intercept for even the strongest password; line 439 states phishing ('wyłudzić') for passwords as a class."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [],
+  "notes": "Single cited snapshot 6a185dd9954fea49.txt: a full-text page (CERT Polska knowledge base, 'Jak tworzyć bezpieczne hasła i chronić swoje konta', last updated 2026-09-02 per the page), not a stub; stored main region is 12649 of 13207 chars, not truncated. packet.warnings was empty. Nothing outside AGENTS.md, the role file, the packet and the listed snapshot was opened. Judgement calls: Koszt#2 and Ocena redakcyjna#1 split because the parts differ in kind; Ograniczenia#2 filed as a cross-reference (meta_statement), the content of 14.1 was not checkable from the packet; Korzyść i dowody#1 kept as one source_claim with the CERT attribution checked against the page title."
+}

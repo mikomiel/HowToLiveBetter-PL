@@ -1,0 +1,70 @@
+{
+  "item": "03.6",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "zgubić kolejny krok",
+      "replacement": "stracić miejsce w sekwencji kroków",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku",
+      "why": "Tytuł jest zrozumiały i wskazuje działanie, ale „krok po kroku” jest szersze i bardziej potoczne niż warunek z W praktyce (zadanie, w którym łatwo stracić miejsce w sekwencji kroków). Nazwa warunku jest chroniona, więc nie edytuję. Weryfikator może rozważyć sformułowanie bliższe ciału porady, np. „w zadaniach, w których łatwo stracić miejsce w sekwencji kroków”."
+    },
+    {
+      "field": "W praktyce",
+      "text": "ogranicz możliwe do uniknięcia przerwania",
+      "why": "Ciężka konstrukcja rzeczownikowa, kalka z angielskiego avoidable interruptions. Ta sama rzecz nazywa się w Ocenie redakcyjnej „zbędnym przerwaniem”, więc w obrębie pozycji są dwa różne określenia. Naturalniej np. „przerwania, których można uniknąć” albo jedno słowo „zbędne” w obu miejscach. Zwrot zawiera słowo modalne i warunek zakresu, więc nie edytuję."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "zbędnym przerwaniem",
+      "why": "Niespójne z „możliwe do uniknięcia przerwania” w W praktyce (to samo pojęcie, dwa określenia). „Zbędny” i „możliwy do uniknięcia” nie muszą znaczyć dokładnie tego samo, więc wybór zostawiam weryfikatorowi."
+    },
+    {
+      "field": "title",
+      "text": "przerwania",
+      "why": "Liczba mnoga „przerwania” (tytuł, W praktyce, Korzyść i dowody) może brzmieć jak kalka z angielskiego interruptions i kojarzy się z informatyką (przerwanie sprzętowe). Możliwe alternatywy, np. „przerywanie pracy” albo „przeszkadzanie”, zmieniają nazwę badanej ekspozycji, więc nie edytuję. Nie jestem pewien, że „przerwania” są tu błędne, a rozdziału nie sprawdzałem, więc nie wiem, jak nazywa to zjawisko."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym",
+      "why": "Elipsa jest niejasna: „po 4,4 sekundy” można odczytać jako czas, który upłynął, a nie jako średni czas trwania przerwania. Porównanie „niż w warunku bazowym” stoi tylko przy drugim wyniku, a jedno zdanie niesie dwa wyniki liczbowe. Czytelniej byłoby powtórzyć „po przerwaniach trwających średnio” przy drugiej liczbie i postawić porównanie przy obu wynikach albo podzielić na dwa zdania. Zmiana dotyka liczb, jednostek, częstości i porównań, więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "warunku bazowym",
+      "why": "Kalka z baseline condition. W polskich opisach eksperymentów częściej spotyka się „warunek kontrolny” albo „warunek bez przerwań”. Zamiana zmienia termin techniczny, a nie widzę źródła, więc nie wiem, czy to ten sam warunek. Decyzja weryfikatora."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "utrzymania miejsca w sekwencji",
+      "why": "Termin specjalistyczny (kalka z place-keeping) bez wyjaśnienia. Podobnie „błędów sekwencji” (Korzyść i dowody, Ocena dowodów) i „błędy niesekwencyjne” (Ograniczenia): z samej pozycji czytelnik nie dowie się, czym jest błąd sekwencji ani czym różnią się błędy niesekwencyjne. Potrzebne jest krótkie objaśnienie przy pierwszym użyciu w rozdziale, ale jego treść musi pochodzić ze źródła, więc nie edytuję. Nie sprawdzałem rozdziału, więc nie wiem, czy termin jest objaśniony wcześniej."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "ma sens jako próba organizacyjna, nie gwarancja bezbłędności",
+      "why": "„Próba organizacyjna” brzmi nienaturalnie (kalka z organizational attempt); naturalniej np. „sposób organizacji pracy” albo „rozwiązanie organizacyjne”. Jednak „próba” niesie ostrożność (może nie zadziałać), a zdanie ma negację i ocenę siły wniosku. Zamiana na „rozwiązanie” mogłaby zabrzmieć mocniej, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy.",
+      "why": "Niezgrabne: „to” bez jasnego odniesienia, składnia „nie dotyczy to podwojenia” jest kalką. Naturalniej np. „Wynik nie oznacza podwojenia wszystkich błędów w każdej pracy.” Zdanie ma negację i kwantyfikatory (wszystkich, każdej), więc nie edytuję. Dodatkowo mówi tylko o podwojeniu, a Korzyść i dowody podają wzrost dwukrotny i trzykrotny, więc spójność wymaga decyzji weryfikatora."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "W badaniu błędy niesekwencyjne nie wykazały tego efektu.",
+      "why": "Personifikacja: to nie błędy „wykazują” efekt, tylko badanie coś wykazuje lub nie. „Tego efektu” nie ma jasnego odniesienia po poprzednim zdaniu, które jest negacją o podwojeniu. „Niesekwencyjne” jest nieobjaśnione. „Wykazały” jest czasownikiem siły dowodu, a zdanie ma negację, więc nie edytuję. Możliwe sformułowanie, np. „W badaniu nie zaobserwowano takiego wzrostu liczby błędów niesekwencyjnych”, zmienia podmiot i czasownik, więc decyzja należy do weryfikatora."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji.",
+      "why": "„Wyprowadzać” (derive) to kalka: po polsku wyprowadza się wzór lub wniosek, nie czas. Naturalniej np. „Z badania nie wynika uniwersalny czas potrzebny na powrót do koncentracji” albo „Nie podajemy uniwersalnego czasu...”. Każda z tych form zmienia podmiot lub przypisanie (my kontra badanie), a zdanie ma negację i słowo „uniwersalnego”, więc nie edytuję."
+    }
+  ],
+  "verdict": "needs_edits"
+}

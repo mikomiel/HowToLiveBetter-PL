@@ -1,0 +1,149 @@
+{
+  "item": "04.4",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Estimate the schedule from the actual duration of past similar tasks, not by extrapolating from the plan",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Before estimating, spend a few minutes looking up how long the last similar task actually took",
+      "fate": "kept",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Recall how long the last similar task took, then estimate (reported as 29.3% to 60.0% finishing on time)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Link past experience to the present task, then estimate; the optimistic bias disappears in that group",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Estimate from historical data of comparable projects (reference class forecasting), with a pointer to Flyvbjerg for how",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "Korzyść i dowody#1",
+      "text": "osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia",
+      "why": "The tested recall-relevant procedure had two parts: (a) the target date was derived from the participant's own summary of how far before deadlines they usually finished, and (b) the participant wrote a scenario, built on problems met before, that ends at that typical time. The authors state that the study had no scenario-only condition, that they cannot say which part produced the realism, and that they cannot rule out that asking for a more pessimistic hypothetical scenario did the work. Only 12.5% of that group mentioned past experience in the thought listing. The item credits the reduction to having linked past experience to the new task, and its title and W praktyce#1 present the shorter compare-with-the-past step as the active ingredient; Ograniczenia says nothing about the two parts being inseparable. A reader may believe that looking up and comparing past tasks is what lowered the optimism, which the study cannot show.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 761, "text": "people to construct a hypothetical future scenario that was"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 769, "text": "thetical scenario, without reference to the past, we cannot rule"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 776, "text": "problems they had encountered previously. We cannot say"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 777, "text": "which of these two components produced the greater degree of"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 600, "text": "typically completed assignments. Second, they described a plausible"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 681, "text": "relevant condition, only 12.5% of the subjects mentioned their"},
+        {"source": "upstream", "line": 5, "text": "研究者要求另一组人先把过去的经历和眼下这件事挂上钩，再去估"}
+      ],
+      "fix_direction": "State in Ograniczenia that the manipulation combined a past-based target date with a written scenario of obstacles and that the study cannot separate the two; describe the benefit as the result of that tested procedure, and keep the shorter look-up-and-compare step labelled as an untested editorial extrapolation."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "W praktyce#1",
+      "text": "sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin",
+      "why": "The authors say that, on the basis of their studies, they do not yet have compelling evidence that individuals can use recollections of their own past performance to improve the accuracy of their time estimates. They also report that estimates built heavily on typical past completion times would have been far too pessimistic, that participants did not incorporate their past experience directly into their predictions, and that an improvement is expected only if the recollections are valid and the present task is comparable. The item tells the reader to check the previous duration and only then set the date, yet Ograniczenia carries none of these four points; a reader may treat a past duration as the number to adopt, which in this study would have overshot, and the letter B may read as stronger support for that step than the authors themselves give. Upstream line 3 is the same look-up action, so the caveat applies to the inherited claim too.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 969, "text": "ies, we do not yet have compelling evidence that individuals can"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 970, "text": "use their recollections of their own past performances to im-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 967, "text": "mates that were too pessimistic if they had relied heavily on"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 698, "text": "been far too pessimistic, on average. Therefore, subjects were"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 657, "text": "Apparently, subjects did not incorporate their own past"},
+        {"source": "upstream", "line": 3, "text": "估之前花几分钟，翻一下上次同类的事实际做了多久"}
+      ],
+      "fix_direction": "Add the authors' own caution to Ograniczenia: no compelling evidence that recollecting past durations improves accuracy, past typical times would have given estimates that were too long in this study, and the improvement is expected only with valid records of a comparable task. Make the practical step say what to do with the past figure instead of implying it is the deadline."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "dopiero wtedy wyznacz termin",
+      "why": "Participants in Study 4 did not set deadlines: a 1-week or 2-week deadline was assigned, and they privately predicted the date and time at which they would finish. Actual completion time depended strongly on the assigned deadline (about 4.3 versus 9.1 days) and was not changed by the thought-focus manipulation. Setting a deadline in W praktyce#1, and declaring one in Ocena redakcyjna#1 (przed deklaracją terminu), widen the action from predicting one's own finishing time to choosing or announcing a deadline, which was not tested, and the item does not mention that assigned deadlines moved actual time. The editorial-example label covers the wording but not the missing limitation.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 573, "text": "Subjects predicted as accurately as possible when, in-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 683, "text": "ment. In contrast, deadlines did affect behavior. Subjects fin-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 685, "text": "rather than 1 week (Ms = 9.1 and 4.3 days, respectively)"}
+      ],
+      "fix_direction": "Word the step as estimating when the work will be finished, and add to Ograniczenia that in the study the deadline was assigned and strongly moved actual completion, so choosing or announcing a deadline is a different, untested action."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Ocena dowodów#1",
+      "text": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+      "why": "123 is the whole sample, split into three thought-focus conditions crossed with two deadlines. The two groups behind 60,0% and 29,3% had n = 40 and n = 41 (editorial arithmetic: 24 of 40 and 12 of 41). The third group (recall only, 38.1%) is not given, and the reported test is one omnibus chi-square over three groups. The item gives one-decimal percentages next to only the total sample, so a reader cannot see how small the compared groups are. The participants were psychology undergraduates taking part for course credit; the item says only studentów. The percentages and the 30,7 point difference themselves hold against Table 4.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 619, "text": "Subjects were 123 undergraduate psychol-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 649, "text": "Note, n = 41, 42, and 40 in the control, recall, and recall-relevant"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 633, "text": "and control conditions (38.1% and 29.3%, respectively)"}
+      ],
+      "fix_direction": "Give the sizes of the two compared groups, name the population (psychology students, course credit) and say that the study had a third group and that the test compared all three."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Koszt#2",
+      "text": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac.",
+      "why": "The item uses three different quantities: past deadlines (Koszt#2), how long the previous task lasted (W praktyce#1) and, in the study, how many days before the deadline similar assignments were usually finished, with the predicted quantity being a finishing date and time of day for an assignment of about one hour of work spread over one or two weeks. Wcześniejszych terminów can send a reader to planned dates instead of actual finishing times, and ile trwało can be read as hours of work instead of elapsed time. Ograniczenia names a short computer task but not the quantity that was predicted.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 581, "text": "short assignments with specific deadlines). They estimated the propor-"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 560, "text": "proximately 1 hr to complete. To prevent subjects from treating the"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 573, "text": "Subjects predicted as accurately as possible when, in-"}
+      ],
+      "fix_direction": "Use one wording for the past figure (actual finishing dates or elapsed time from records) in Koszt and W praktyce, and state in Ograniczenia that the predicted quantity was the date of finishing within a 1-2 week window."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "sprawdź, ile trwało poprzednie podobne zadanie",
+      "why": "The step presupposes a comparable earlier task with a usable record. The item gives no path for a reader who has no similar earlier task or no records, although the authors name valid recollections and a comparable task as conditions for any improvement. The upstream pointer to estimating from historical data of similar projects (line 8) was dropped without a replacement, so a reader without a comparable past task gets nothing to do from this item alone. Koszt#2 mentions comparing the scope of work, which helps with similarity but not with absence.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 962, "text": "ever, if participants' recollections are valid and if their present"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 963, "text": "task is comparable with the projects that they recall. We do not"},
+        {"source": "upstream", "line": 8, "text": "照同类项目的历史数据来估，这种做法叫参考类预测"}
+      ],
+      "fix_direction": "State when the step does not apply (no comparable earlier task, no records) and either give a sourced alternative or say plainly that the item offers none."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#3",
+      "text": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+      "why": "The sentence is supported, but it leaves out how the mean bias disappeared. The authors write that the manipulations did not make all subjects more pessimistic but made enough subjects overly pessimistic to counterbalance those who stayed overly optimistic, so the mean bias vanished partly through offsetting errors. Rzadziej zaniżały in Korzyść i dowody#1 and the 60,0% figure can be read as most forecasts becoming sound, while the remaining 40.0% of that group did not finish within their own prediction (arithmetic from the table).",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 992, "text": "become more pessimistic (see Footnote 2), but instead caused"},
+        {"source": "snapshot", "snapshot": "e70647d0627ff840.txt", "line": 993, "text": "enough subjects to become overly pessimistic to counterbalance"}
+      ],
+      "fix_direction": "Add that the lower average optimism came partly from some participants becoming too pessimistic, and that a substantial share of the group still finished later than predicted."
+    }
+  ],
+  "notes": "Opened only: the role file, AGENTS.md, README.md (lines 38-87, which is the section Jak czytać dowody plus about 30 following lines of other sections that I did not use; a Grep on README.md located the heading), the packet and the four snapshot files named in it (3fcf7218a7f1a5b5.txt, 2757a11eba265541.txt, 4cec846a0874c64c.txt and e70647d0627ff840.txt, read in parts and by Grep with the exact path). Nothing under book/, tests/, tools/, the manifest, other snapshots or git history was opened and no script was run. Numbers 60,0%, 29,3%, 30,7 points and 123 hold against Table 4 and the Method section; the Polish title/fields contain no Chinese institution, hotline, threshold or legal statement (leak attack: no finding). Recency: no snapshot shows a newer cited source or disagreeing authorities; the Flyvbjerg and Halkjelsvik abstracts are leads (origin lead, abstract only) and are not cited by the item, so they were not used as evidence; the Halkjelsvik abstract remark that its summaries challenge earlier results on factors such as experience is not decidable from an abstract and was not turned into a finding. Grade: letter B matches the README definition for a single study with limited samples and the upstream grade is also B; the concern that B may overstate support for the shortened look-up step is carried in the limitations finding on W praktyce#1 rather than a separate grade finding. The DOI snapshot is metadata-only and supports only the bibliographic line. The full-text snapshot is a two-column PDF extraction, so quotes are taken from one column of a line before or after the gap. Upstream line 4 attributes the 29.3% to 60.0% change to recalling the last duration, which the paper contradicts (the recall-only group stayed at 38.1% and did not differ from control); the item already corrected this."
+}

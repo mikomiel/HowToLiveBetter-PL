@@ -1,0 +1,127 @@
+{
+  "item": "14.2",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "recency",
+      "reason": "Only one snapshot exists (CERT Polska page, last updated 2026-09-02 per the page itself). The upstream source (US CISA) has no snapshot and appears only as a lead in upstream line 7, so there is no second snapshot to compare dates or guidance with, and no way to tell from the given texts whether CISA and CERT Polska disagree (for example on password length). The item states no length figure, so I found no bearing on its wording."
+    }
+  ],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Use a separate password for the mailbox and do not reuse it on any website", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Keep passwords in a password manager so they need not be remembered; the hard part is breaking the habit of reusing one password", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Reason: a taken-over mailbox loses every account that resets its password by mail, so the mailbox password must be unique", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Each account gets a different strong password of at least 16 characters, kept in a password manager", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "If you cannot remember them, use the browser's built-in password manager", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Do not keep passwords in notes (WeChat favourites or a memo app)", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "why": "The upstream span gives a fallback for a reader who does not want or cannot set up a separate manager: use the browser's built-in password manager. The cited CERT Polska page says the same. The Polish item drops it, and Koszt speaks of 'przygotowanie menedżera', so this reader has no stated zero-install path and may stay with one reused password.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "记不住就用浏览器自带的密码管理器"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Jeśli używasz przeglądarki, wbudowane w nią zapamiętywanie haseł jest prostym i dobrym rozwiązaniem."}
+      ],
+      "fix_direction": "State that a browser's built-in password saving is an acceptable starting point if the reader will not use a separate manager, within what the CERT page says. Do not add claims beyond the page."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "why": "Upstream also warns against keeping passwords in WeChat favourites or a memo app. The WeChat part was rightly removed, but the transferable rule (not in notes or a plain text file) is not carried over, and Zmiany w adaptacji mentions only that Chinese app examples were removed. A reader without a manager gets no 'do not' rule.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "别把密码存在微信收藏或者备忘录里"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 401, "text": "Notowanie haseł na karteczkach przyklejonych do monitora albo w zwykłym pliku tekstowym."}
+      ],
+      "fix_direction": "Carry over the general warning the CERT page supports and record in Zmiany w adaptacji that the WeChat example was replaced by it."
+    },
+    {
+      "severity": "major",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Zabezpiecz dostęp do samego menedżera: jeśli to możliwe, włącz drugi składnik logowania na koncie, którym się do niego logujesz, i zapisz kody zapasowe w bezpiecznym miejscu.",
+      "why": "The item protects the manager only through a second factor on its login account and backup codes. It never mentions the manager's master password, which the cited page calls the one password the reader must remember and says to build as a passphrase. Read alone, a reader may reuse an old password as the master password, which defeats the item's own title and leaves the vault open.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Ty musisz pamiętać tylko jedno hasło główne"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 467, "text": "Stwórz jedno silne hasło główne metodą hasła-zdania (4-5 losowych słów). Tylko to musisz pamiętać."}
+      ],
+      "fix_direction": "Add a sentence on the manager's master password (unique, not reused, memorised, built as the CERT page describes) or state explicitly where that guidance lives. Keep Ograniczenia#3 about not giving a universal length."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#2",
+      "text": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "why": "With the link removed only a bare number and 'odpowiednią metodę' remain. The item's own W praktyce#2 asks for a second factor only on the account used to log into the manager. The cited page puts the mailbox itself first for 2FA, and the mailbox is what this item is about, so the item alone never says to protect the mailbox with a second factor. The password action is still safe alone; the gap is incompleteness.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł)"}
+      ],
+      "fix_direction": "Name the action in plain words (second factor on the mailbox, where offered) so it does not depend on following the link."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Zabezpiecz dostęp do samego menedżera: jeśli to możliwe, włącz drugi składnik logowania na koncie, którym się do niego logujesz, i zapisz kody zapasowe w bezpiecznym miejscu.",
+      "why": "Terms are used without explanation: 'menedżer' is never written as 'menedżer haseł' in any field, and 'drugi składnik logowania' and 'kody zapasowe' are not explained, including why the codes matter. AGENTS.md asks to explain a technical term at first use. The cited page explains all three.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 409, "text": "Rozwiązaniem jest menedżer haseł, czyli program, który:"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "Jeśli zgubisz telefon, to jedyny sposób, by się zalogować."}
+      ],
+      "fix_direction": "Write 'menedżer haseł' at first use and add a short plain-language gloss for the second factor and for backup codes (what they are, why they matter)."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "why": "The upstream item is about the mailbox password only. The Polish title says 'do poczty', but the body widens the action to unique passwords for all services. The widening is supported by the CERT page, yet Zmiany w adaptacji does not disclose it, and the title no longer matches the whole body.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "邮箱密码单独一个，不和任何网站重复"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."}
+      ],
+      "fix_direction": "Either keep the body to the mailbox first and treat other accounts as a second step, or record the widening in Zmiany w adaptacji and let the title reflect it."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.",
+      "why": "Zmiany w adaptacji says 'Zachowano C' but does not say that the upstream source (US CISA) was replaced by CERT Polska. The letter C still fits an operational recommendation, but a maintainer comparing with upstream cannot see that the claim now rests on a different source. AGENTS.md asks to keep origin and explicit reasons for changes.",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "来源：US CISA. Use Strong Passwords."}
+      ],
+      "fix_direction": "State in Zmiany w adaptacji that the upstream source was replaced and why."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.",
+      "why": "The reason given for C names the absence of one specific measure (money lost and avoided). The README definition of C is the absence of a direct measurement of effectiveness. The wording can suggest that effectiveness is otherwise measured. The page presents itself as advice with no measurement of either.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 347, "text": "W tym artykule zebraliśmy praktyczne porady"}
+      ],
+      "fix_direction": "Reword the reason to the README criterion: practical recommendation without direct measurement of effectiveness."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#2",
+      "text": "Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.",
+      "why": "Upstream names the real cost as effort (breaking the habit of one password everywhere). Koszt lists tasks but does not name effort, and it says costs 'różnią się' without saying that the cited page treats the tools as free. AGENTS.md asks to separate money, time and effort.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "难的是要改掉一个密码到处用的老习惯。"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 479, "text": "korzystać z narzędzi, które są dziś darmowe i proste w obsłudze."}
+      ],
+      "fix_direction": "Split Koszt into money, time and effort, and name the habit change as the main effort, without inventing figures."
+    }
+  ],
+  "notes": "No blocker found. Status is UNAVAILABLE only because recency/conflict is recorded as not assessable and the role file says PASS requires every attack to be run; the one cited source was fully available (page, status 200, not truncated), so nothing else was too thin. Numbers: the item contains no figures; the 16-character minimum exists only in upstream line 5 (a lead), is not asserted by the item, and its removal is disclosed in Zmiany w adaptacji. Leaks: no Chinese institution, hotline, threshold or legal statement in the reader-facing fields. Limitations: Ograniczenia#1 is supported by snapshot lines 423 and 439; Ograniczenia#3 is an editorial choice, not a source claim. Same-action: title and body match the CERT page; the only widening is in the scope-words finding. Protocol: I opened only the role file, AGENTS.md, README.md, the packet and snapshot 6a185dd9954fea49.txt. For README.md I read lines 38-77, which goes slightly beyond the 'Jak czytać dowody' section (lines 58-77 cover other sections). I did not read book/, tests/, tools/, the manifest, other snapshots, git history or any chapter file, and ran no script. The packet contains no Status, Oryginał or Weryfikacja field, so I judged only the fields it shows."
+}

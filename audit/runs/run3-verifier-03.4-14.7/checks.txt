@@ -1,0 +1,4 @@
+03.4/verifier-a: rejected, PASS, 1 failure(s) (claim 17 (Ograniczenia#1) claim text is not part of that sentence of the item)
+03.4/verifier-b: rejected, UNAVAILABLE, 1 failure(s) (claim 18 (Ograniczenia#1) claim text is not part of that sentence of the item)
+14.7/verifier-a: accepted, PASS
+14.7/verifier-b: accepted, PASS

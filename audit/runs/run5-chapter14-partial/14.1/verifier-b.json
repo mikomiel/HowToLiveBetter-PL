@@ -1,0 +1,199 @@
+{
+  "item": "14.1",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 423, "text": "włączenie uwierzytelniania dwuskładnikowego (ang. two-factor authentication, w skrócie 2FA) to jedna z najważniejszych rzeczy, jakie możesz zrobić dla bezpieczeństwa konta"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "podczas konfiguracji 2FA serwis pokaże Ci kody zapasowe. Zapisz je w bezpiecznym miejscu"},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 447, "text": "zaplanować odzyskiwanie dostępu równie starannie jak samo logowanie i umożliwić dodanie zapasowego klucza."}
+      ]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Konfiguracja każdej usługi i przechowanie zapasu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "source_claim",
+      "claim": "Klucz sprzętowy może wymagać zakupu",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 461, "text": "Dla zwykłego użytkownika klucz sprzętowy jest dodatkowym kosztem i nieco zmniejsza wygodę."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 477, "text": "Dla najważniejszych kont rozważ zakup klucza sprzętowego."}
+      ]
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie podajemy cen.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zacznij od poczty i innych ważnych kont.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł), bank, media społecznościowe"}
+      ]
+    },
+    {
+      "id": "W praktyce#2.1",
+      "kind": "source_claim",
+      "claim": "Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn,",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 417, "text": "Passkeys, po polsku często nazywane kluczami dostępu"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 457, "text": "Klucze sprzętowe są odporne na phishing i są uważane za najbezpieczniejszą formę 2FA."}
+      ],
+      "reason": "Supported: passkeys are called klucze dostępu in Polish, and hardware keys exist as a phishing-resistant method. Weak part: the label FIDO/WebAuthn for the hardware key. The string FIDO occurs in neither cited snapshot; WebAuthn occurs only once, in the subsection heading Weryfikacja użytkownika w WebAuthn (mfa snapshot line 425), and no line says a hardware key is a FIDO or WebAuthn device. Searched both cited snapshots for FIDO, WebAuthn, U2F, CTAP."
+    },
+    {
+      "id": "W praktyce#2.2",
+      "kind": "recommendation_derived",
+      "claim": "rozważ tę metodę.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 453, "text": "Rekomendacja: jeśli serwis proponuje utworzenie passkey zamiast hasła, zrób to."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 457, "text": "Jeśli chcesz zabezpieczyć szczególnie ważne konto (poczta, hosting, VPN, dane firmowe), rozważ klucz sprzętowy"}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł), bank, media społecznościowe"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 471, "text": "Włącz 2FA na koncie poczty, banku i mediach społecznościowych."}
+      ]
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "source_claim",
+      "claim": "Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 393, "text": "Kod z SMS-a lub aplikacji można wyłudzić tak samo jak hasło – na przykład poprzez fałszywą stronę logowania."}
+      ]
+    },
+    {
+      "id": "W praktyce#5",
+      "kind": "recommendation_derived",
+      "claim": "Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "podczas konfiguracji 2FA serwis pokaże Ci kody zapasowe. Zapisz je w bezpiecznym miejscu"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 459, "text": "Warto mieć dwa klucze: jeden przy sobie na co dzień, drugi schowany w domu jako zapas na wypadek, gdybyś zgubił ten pierwszy."}
+      ]
+    },
+    {
+      "id": "W praktyce#6",
+      "kind": "recommendation_derived",
+      "claim": "Nie zatwierdzaj logowania, którego nie rozpoczynasz.",
+      "verdict": "unsupported",
+      "reason": "Looked for any line that gives this advice or describes the threat it answers (an approval request the user did not start, unsolicited or repeated prompts) in both cited snapshots, searching for zatwierdz, potwierdz, push, powiadomien. The only nearby text is mfa snapshot line 395, which says push notifications are less safe because a user who has just typed data on a fake page expects the prompt and approves it naturally. That is the opposite scenario (a login the user did start, on the fake site), so the advice would not stop the attack described, and the line is not used as backing. No snapshot line says never to approve a prompt you did not start."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 7, "text": "Baza wiedzy CERT Polska"},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 417, "text": "Passkeys, po polsku często nazywane kluczami dostępu, to obecnie jedyna powszechnie dostępna metoda logowania odporna na phishing."},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 417, "text": "Taki klucz jest powiązany z adresem strony, więc fałszywa witryna nie otrzyma niczego, co da się wykorzystać."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 449, "text": "Passkey jest przy tym przypisany do konkretnej witryny, więc fałszywa strona nie ma jak go wyłudzić."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Kody SMS i kody z aplikacji można wyłudzić.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 393, "text": "Kod z SMS-a lub aplikacji można wyłudzić tak samo jak hasło – na przykład poprzez fałszywą stronę logowania."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 395, "text": "Powiadomienia push są pod tym względem jeszcze mniej bezpieczne."},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 417, "text": "Passkeys, po polsku często nazywane kluczami dostępu, to obecnie jedyna powszechnie dostępna metoda logowania odporna na phishing."}
+      ],
+      "reason": "The quotes support the two components: push approval is even less safe than phishable one-time codes, and passkeys are phishing-resistant. No snapshot line makes the push-versus-WebAuthn comparison itself; it is the editors' inference from two separate statements. The snapshots never state that passkeys are WebAuthn (the word occurs only in the heading at line 425), and the qualifier poprawnie wdrożony is not tied to phishing resistance there (lines 423 and 429 concern checking user verification)."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "C — aktualne zalecenia techniczne CERT Polska,",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 7, "text": "Baza wiedzy CERT Polska"},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 439, "text": "Przy wdrażaniu MFA należy:"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 481, "text": "Ostatnia aktualizacja artykułu: 2026-09-02."}
+      ],
+      "reason": "The grade letter C itself is editorial and was not checked. Both snapshots are CERT Polska knowledge-base pages, and the MFA page ends with a Rekomendacje list. Weak part: aktualne. Only the passwords page carries a date (last updated 2026-09-02); the MFA page snapshot has no date or update line, so currency is not shown for it. Also, the MFA recommendations are addressed to implementers of MFA, not to ordinary users, and the passwords page is a general good-practice article rather than a technical standard."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie eksperyment o procencie zablokowanych ataków.",
+      "verdict": "absent_in_source",
+      "searched": ["6a185dd9954fea49.txt", "27b6fdf8ffbd5964.txt"],
+      "reason": "Searched both cited snapshots for %, procent, eksperyment, badani, odsetek and zablokowan: no hits in either. Neither page reports an experiment, a study or any percentage of blocked attacks. Absence is from the stored main region only (6a185dd9954fea49.txt keeps 12649 of 13207 chars, 27b6fdf8ffbd5964.txt keeps 12401 of 12948 chars)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 421, "text": "Passkey może zapewniać logowanie dwuskładnikowe, jeśli serwis zażąda weryfikacji użytkownika."},
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 423, "text": "Samo żądanie weryfikacji nie wystarcza. Serwis musi sprawdzić, czy rzeczywiście została przeprowadzona."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "27b6fdf8ffbd5964.txt", "line": 433, "text": "passkeys przechowywane w menedżerze haseł mogą zostać wykradzione przez złośliwe oprogramowanie"}
+      ],
+      "reason": "Supported part: malware (passkeys kept in a password manager can be stolen by malicious software). Weak parts: theft of an active session and fraud at account recovery. Searched both cited snapshots for sesj, session, ciasteczk, cookie, odzyskiw, przejęci: sesja occurs only as a navigation heading (Zarządzanie sesją), and the MFA page mentions recovery only as advice to plan it carefully (line 447) and to require MFA on all login paths (line 445), not as a fraud route that defeats phishing resistance. The quote also concerns passkeys stored in a password manager, narrower than every malicious program."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Korzystaj z metod rzeczywiście oferowanych przez usługę.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "W praktyce#2.1", "note": "The sentence ties the hardware key to the FIDO/WebAuthn standard; neither cited snapshot names FIDO, and WebAuthn appears only in one subsection heading about user verification."},
+    {"id": "W praktyce#3", "note": "The snapshots advise 2FA on mail, bank and social accounts and passkeys where offered; the ordering 'passkeys first, 2FA only when passkeys are not offered' is the editors' framing (mfa line 421 even notes a passkey can itself be two-factor if user verification is required and checked). Not contradicted, so the row stays fully backed."},
+    {"id": "W praktyce#6", "note": "The snapshot scenario (mfa line 395) is a prompt the user expects after typing data on a fake page; the advice addresses a prompt the user did not start, a different threat the snapshots do not discuss."},
+    {"id": "Korzyść i dowody#3", "note": "A direct comparison of push with WebAuthn is not in the snapshots; it is inferred from push being phishable and passkeys being phishing-resistant."},
+    {"id": "Ocena dowodów#1.1", "note": "Recommendations on the MFA page are addressed to service implementers, while the item gives advice to users; only the passwords page is dated (2026-09-02)."},
+    {"id": "Ograniczenia#2", "note": "Session theft and recovery fraud are not covered by the cited snapshots; the malware line concerns passkeys stored in a password manager only."}
+  ],
+  "notes": "Both cited snapshots (6a185dd9954fea49.txt, 27b6fdf8ffbd5964.txt) are real CERT Polska knowledge-base pages with enough text, no stub, wall or error page; each is the main region only (keptChars below wholeChars), so absence claims are limited to that region. The lead row (10.1145/3308558.3313481, metadata-only) is not evidence and I did not open its snapshot. packet.warnings was empty. Status is FAIL because W praktyce#6 is an unsupported recommendation; the other non-clean rows are partly (W praktyce#2.1, Korzyść i dowody#3, Ocena dowodów#1.1, Ograniczenia#2). I opened nothing outside the allowed set (role file, AGENTS.md, the packet, the two cited snapshots)."
+}

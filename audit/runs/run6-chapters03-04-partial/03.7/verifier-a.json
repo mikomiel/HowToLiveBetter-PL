@@ -1,0 +1,112 @@
+{
+  "item": "03.7",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy zadaniu wymagającym uwagi ogranicz przełączanie się między czynnościami",
+      "verdict": "partly",
+      "quotes": [],
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed part: the abstract reports slower and usually more error-prone responses immediately after a task switch (Korzyść i dowody#2). Not backed: the abstract covers experimenter-required switching among a small set of simple tasks, not tasks that demand attention in everyday work, and it does not report that limiting switching improves performance or outcomes. It gives no advice of its own. Searched the whole abstract (ad423624ccd89cce.txt) for advice or for demanding or real-world tasks and found none."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana sposobu pracy i odłożenie części pobocznych czynności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości, jeśli możesz to zrobić bezpiecznie.",
+      "verdict": "partly",
+      "quotes": [],
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed part: avoiding switches is supported only through the switch cost reported in Korzyść i dowody#2 (slower, usually more error-prone responses right after a switch). Not backed: deferring unrelated messages. The abstract does not mention messages, notifications or interruptions; its switches are imposed by the experimenter between simple tasks. It also does not test whether postponing anything improves results. The safety condition 'jeśli możesz to zrobić bezpiecznie' is an editorial caveat with no source. Searched the whole abstract (ad423624ccd89cce.txt)."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "meta_statement",
+      "claim": "Nie traktuj tego jako zakazu wszystkich czynności równoległych.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "ad423624ccd89cce.txt", "line": 9, "text": "Authors: Monsell S."},
+        {"snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "Research reviewed in this article probes the control processes that reconfigure mental resources for a change of task by requiring subjects to switch frequently among a small set of simple tasks."}
+      ],
+      "reason": "Author, a review of research, and subjects required to switch among simple tasks all appear in the abstract. The word 'experiments' is not used; the experimental paradigm is described by 'requiring subjects to switch'."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Bezpośrednio po przełączeniu odpowiedzi były wolniejsze i zwykle częściej błędne.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "Subjects' responses are substantially slower and, usually, more error-prone immediately after a task switch."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "This 'switch cost' is reduced, but not eliminated, by an opportunity for preparation."}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — przegląd eksperymentów nad przełączaniem prostych zadań",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "ad423624ccd89cce.txt", "line": 8, "text": "Title: Task switching."},
+        {"snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "Research reviewed in this article probes the control processes that reconfigure mental resources for a change of task by requiring subjects to switch frequently among a small set of simple tasks."}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source as a review of research on switching among simple tasks, which the abstract supports. The abstract does not say whether the review is narrative or systematic."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez jednej uniwersalnej wielkości efektu.",
+      "verdict": "not_checkable",
+      "quotes": [],
+      "searched": ["ad423624ccd89cce.txt"],
+      "reason": "The snapshot is an abstract only (Access: abstract, 999 characters). It states no effect-size figure and calls the cost 'substantial', 'usually' present and 'reduced, but not eliminated'. Whether the review gives no single overall effect size can only be decided from the full text of the review."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "meta_statement",
+      "claim": "Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The title speaks of tasks that demand attention and of limiting switching. The abstract measured switches imposed by the experimenter among a small set of simple tasks, and the immediate response cost of a switch. It did not measure everyday tasks or the effect of limiting switching."},
+    {"id": "W praktyce#1", "note": "The advice concerns deferring unrelated messages in daily life. The abstract says nothing about messages, notifications or self-chosen switching, and measures no outcome of postponing them."},
+    {"id": "Korzyść i dowody#1", "note": "The abstract does not say whether the review is narrative or systematic, how many studies it covers, or whether it pools an effect. The sentence does not claim any of this, but a reader might assume it."},
+    {"id": "Korzyść i dowody#2", "note": "The finding comes from laboratory switching among simple tasks. A reader might assume it applies to complex everyday tasks; the sentence does not say so. The abstract gives no size of the slowdown or of the extra errors."},
+    {"id": "Korzyść i dowody#3", "note": "The abstract names the opportunity for preparation in laboratory switching only. It gives no size of the reduction."},
+    {"id": "Ocena dowodów#1.2", "note": "Only the abstract was available, so the claim about the absence of one universal effect size could not be checked against the whole review."}
+  ],
+  "notes": "Abstract-only snapshot (Europe PMC, 999 chars) for the single cited source; title 'Task switching.', author Monsell S., year 2003 match the item's description 'Przegląd Monsella'. The Journal field is blank in the snapshot. No warnings in the packet. The packet's second source (10.1073/pnas.0903620106) has origin 'lead': it is not evidence and I did not open its snapshot. Nothing outside AGENTS.md, the role file, the packet and snapshot ad423624ccd89cce.txt was opened."
+}
