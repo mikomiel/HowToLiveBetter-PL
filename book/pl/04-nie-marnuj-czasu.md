@@ -56,15 +56,15 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 4. Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To szacunek redakcji.
-- W praktyce: Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie. Zapisz, co jest teraz inne, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie, że kiedyś było opóźnienie, może nie wystarczyć.
+- W praktyce: Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie. Zapisz, jak wcześniejsze podobne zadania odnoszą się do tego, które planujesz, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.
 - Korzyść i dowody: W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia. W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej. To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności.
 - Ocena dowodów: B — pojedynczy eksperyment z udziałem 123 studentów.
 - Ocena redakcyjna: Niski koszt sprawdzenia historii przemawia za taką próbą przed deklaracją terminu.
 - Ograniczenia: Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego. Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy. Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.
 - Źródła: Buehler, Griffin i Ross (1994), Exploring the planning fallacy: Why people underestimate their task completion times. [DOI](https://doi.org/10.1037/0022-3514.67.3.366); [pełny tekst w MIT, badanie 4, tabela 4, s. 375–376](https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf).
 - Oryginał: [04.4](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L34-L41)
-- Weryfikacja: 2026-10-27; pełny tekst, badanie 4: liczebności 41, 42 i 40, tabela 4 oraz akapity o braku zmiany rzeczywistego terminu i bezwzględnego błędu.
-- Zmiany w adaptacji: Nie połączono wyników o pisaniu pracy dyplomowej z eksperymentem komputerowym. Dodano brak poprawy szybkości pracy i bezwzględnej dokładności prognozy.
+- Weryfikacja: 2026-10-27; pełny tekst, badanie 4: liczebności 41, 42 i 40, tabela 4 oraz akapity o braku zmiany rzeczywistego terminu i bezwzględnego błędu. 2026-10-29: ponowne sprawdzenie zdań o przypominaniu sobie wcześniejszych zadań w zapisanym pełnym tekście (opis warunków i dyskusja badania 4): w warunku samego przypominania uczestnicy opisali wcześniejsze podobne zadania, które kończyli zwykle około dnia przed terminem; opóźnienia im nie przypominano.
+- Zmiany w adaptacji: Nie połączono wyników o pisaniu pracy dyplomowej z eksperymentem komputerowym. Dodano brak poprawy szybkości pracy i bezwzględnej dokładności prognozy. Poprawka 2026-10-29: zdanie o przypominaniu sobie opóźnienia zastąpiono opisem tego, co przypominano w badaniu (wcześniejsze podobne zadania), a krok „zapisz, co jest teraz inne” tym, o co proszono uczestników: powiązać wcześniejsze zadania z obecnym.
 
 <a id="porada-4-5"></a>
 
