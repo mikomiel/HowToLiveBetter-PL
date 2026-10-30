@@ -169,7 +169,7 @@ test('one delayed failed chapter never exposes a partial collection; retry reloa
 
 test('network, empty file, wrong chapter and missing state fail the entire load', async ({ page }) => {
   const failures = [
-    [route => route.abort('failed'), 'Nie można połączyć się z lokalnym serwerem.'],
+    [route => route.abort('failed'), 'Nie można pobrać rozdziału.'],
     [route => route.fulfill({ body: '' }), 'Brak rozdziału'],
     [route => route.fulfill({ body: chapters[0].markdown }), 'Niezgodny numer rozdziału'],
     [route => route.fulfill({ body: time.markdown.replace('- Status: verified\n', '') }), 'Nieprawidłowy stan'],
@@ -201,7 +201,8 @@ test('raw HTML and unsafe Markdown URLs are inert in the actual reader', async (
 test('module and file URL failures keep actionable HTTP guidance and disabled controls', async ({ page }) => {
   await page.route('**/reader.mjs', route => route.abort('failed'));
   await page.goto('/');
-  await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika. Użyj lokalnego serwera HTTP');
+  await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika.');
+  await expect(page.locator('#status')).toContainText('Użyj lokalnego serwera HTTP');
   await expect(page.locator('article')).toHaveCount(0);
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
   await expect(page.getByRole('link', { name: 'O wydaniu i metodzie' })).toBeVisible();

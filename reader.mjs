@@ -185,7 +185,7 @@ async function startReader() {
           return parseChapter(await response.text(), id);
         } catch (error) {
           const message = error instanceof TypeError || ['AbortError', 'TimeoutError'].includes(error.name)
-            ? 'Nie można połączyć się z lokalnym serwerem. Sprawdź jego działanie i spróbuj ponownie.' : error.message;
+            ? 'Nie można pobrać rozdziału. Sprawdź połączenie z internetem (przy lokalnym uruchomieniu także działanie serwera) i spróbuj ponownie.' : error.message;
           throw new Error(`Rozdział ${id}: ${message}`);
         }
       }));
