@@ -1,292 +1,205 @@
 {
   "item": "14.10",
   "status": "PASS",
-  "attacks_run": [
-    "same-action",
-    "preservation",
-    "grade",
-    "numbers",
-    "scope-words",
-    "leak",
-    "self-containment",
-    "recency",
-    "limitations"
-  ],
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
   "attacks_not_assessable": [],
   "preservation": [
-    {
-      "upstream_line": 1,
-      "upstream_action": "Do not hand code, keys and privacy materials to an unknown AI relay station; especially when AI auto-executes commands",
-      "fate": "narrowed",
-      "fallback_stated": true
-    },
-    {
-      "upstream_line": 3,
-      "upstream_action": "Cost of the safer path: official direct connection is usually dearer than a relay and top-up is less convenient",
-      "fate": "dropped",
-      "fallback_stated": false
-    },
-    {
-      "upstream_line": 5,
-      "upstream_action": "Use official direct connection or a properly authorised platform; do not use platforms of unknown origin, without operating qualification or security guarantee",
-      "fate": "narrowed",
-      "fallback_stated": true
-    },
-    {
-      "upstream_line": 5,
-      "upstream_action": "Before use, desensitise personal privacy data and project materials",
-      "fate": "dropped",
-      "fallback_stated": false
-    },
-    {
-      "upstream_line": 5,
-      "upstream_action": "Manage keys and rotate them regularly",
-      "fate": "dropped",
-      "fallback_stated": false
-    },
-    {
-      "upstream_line": 5,
-      "upstream_action": "On abnormal charges, unexplained account bans or data anomalies: stop use at once, change keys, scan for malware, preserve evidence",
-      "fate": "dropped",
-      "fallback_stated": false
-    },
-    {
-      "upstream_line": 8,
-      "upstream_action": "If an unknown relay was already used: revoke the used keys at the model vendor, regenerate, and replace cloud-service and code-repository keys together",
-      "fate": "narrowed",
-      "fallback_stated": true
-    },
-    {
-      "upstream_line": 8,
-      "upstream_action": "When going through a relay do not let AI auto-execute commands; look at each command before letting it run",
-      "fate": "narrowed",
-      "fallback_stated": false
-    },
-    {
-      "upstream_line": 8,
-      "upstream_action": "Remark that operating a relay carries criminal risk (Chinese law cross-reference); not a reader action, so dropping it is appropriate",
-      "fate": "dropped",
-      "fallback_stated": true
-    }
+    {"upstream_line": 1, "upstream_action": "Do not hand code, keys and privacy materials to a relay of unknown origin, especially when the AI executes commands automatically", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Use official direct connection or properly authorised platforms; do not use platforms of unknown origin, without an operating licence or without security guarantees", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Mask personal privacy data and project materials before use", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Manage keys and rotate them regularly", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "On abnormal charges, unexplained account ban or data anomalies: stop using at once, change keys, scan for malware, preserve evidence", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "After using a relay of unknown origin: revoke and regenerate the used keys at the model vendor, and change cloud-service and code-repository keys together", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "When going through a relay, do not let the AI execute commands fully automatically; look at each command before releasing it", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Pointer to the criminal risk of the relay operator under Chinese law (not a reader action; removal is correct under AGENTS.md, so no path is needed)", "fate": "dropped", "fallback_stated": false}
   ],
   "findings": [
-    {
-      "severity": "major",
-      "attack": "preservation",
-      "id": "W praktyce#4",
-      "text": "Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.",
-      "why": "The upstream trigger for rotating keys is a fact the reader knows: an unknown relay was already used. The item replaces it with „ujawnienie klucza”, which the reader usually cannot observe after the fact, so a person who sent keys through an unchecked intermediary has no instruction to rotate them. Also lost: regenerating the key and replacing cloud-service and repository keys together, so the one rotation step still stated covers only one key type.",
-      "evidence": [
-        {
-          "source": "upstream",
-          "line": 8,
-          "text": "已经用过来路不明的中转站，就到模型厂商那里把用过的密钥作废、重新生成，云服务和代码仓库的密钥一起换"
-        },
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "17 touching researcher-owned AWS canary credentials"
-        }
-      ],
-      "fix_direction": "Tie the revocation step to the condition that an unchecked intermediary was already used, not to a proven disclosure; say which key types it covers; state in Zmiany w adaptacji what was narrowed. Wording and any steps must come from a checked source."
-    },
-    {
-      "severity": "major",
-      "attack": "preservation",
-      "id": "W praktyce#1",
-      "text": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje.",
-      "why": "Four upstream actions have no counterpart in W praktyce and are not listed as removed in Zmiany w adaptacji (which names only the Chinese official notice, damage amounts and attack instructions): the default of using official direct connection or an authorised platform, desensitising personal and project data before use, managing and regularly rotating keys, and the anomaly response (abnormal charges, unexplained bans, data anomalies: stop use, change keys, scan for malware, preserve evidence). A reader who cannot complete the evaluation step gets no default safe path, and a reader who notices anomalies gets no instruction. AGENTS.md requires an omitted or corrected claim to be described in the adaptation note.",
-      "evidence": [
-        {
-          "source": "upstream",
-          "line": 5,
-          "text": "提示建议用官方直连、正规授权的平台，不用来源不明、没有运营资质、没有安全保障的平台"
-        },
-        {
-          "source": "upstream",
-          "line": 5,
-          "text": "用的时候先给个人隐私和项目资料脱敏，管好密钥、定期更换"
-        },
-        {
-          "source": "upstream",
-          "line": 5,
-          "text": "遇到异常扣费、无故封号、数据异常，立即停用、改密钥、查杀病毒、留存证据"
-        }
-      ],
-      "fix_direction": "Decide for each of the four actions whether it is kept, kept in narrowed form with a stated reason, or dropped because no checked source supports it, and record each drop in Zmiany w adaptacji. Provide a stated path for the reader who cannot evaluate the operator. Any step restored needs its own checked source; the abstract snapshot does not cover them."
-    },
     {
       "severity": "major",
       "attack": "scope-words",
       "id": "W praktyce#3",
       "text": "Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami.",
-      "why": "The upstream rule is unconditional on permission breadth: when going through a relay, do not let AI auto-execute commands, and look at each command first. The item adds „z szerokimi uprawnieniami”, which no snapshot or upstream line contains, and the upstream danger it cites is an altered command on a machine, not a privileged one. A reader running an agent with narrow permissions in auto-run mode can conclude the rule does not apply. The item also drops the tie to the intermediary and the positive instruction to look at the command before it runs (left only implicit in Ograniczenia#4); „niezweryfikowanym” is not defined.",
+      "why": "The upstream rule is flat for a session routed through an intermediary: do not let the AI run commands fully automatically, look at each command first. The item adds two qualifiers that are in neither the upstream nor the abstract: 'niezweryfikowanym' (the item gives no way to verify a response) and 'z szerokimi uprawnieniami' (no threshold is defined). It also detaches the rule from the intermediary, so the reader is not told that the intermediary is the party that can alter the command. The upstream says the tampered tool call is, for example, a package installation command, and that the conditional-delivery example strikes only fully automatic sessions; neither is tied to broad permissions. The abstract mentions sessions already in autonomous mode and no permission breadth. A reader whose agent runs under an ordinary account can conclude that the rule does not cover the very commands the study shows being altered.",
       "evidence": [
-        {
-          "source": "upstream",
-          "line": 8,
-          "text": "经过中转站时，别让 AI 全自动执行命令，命令先看一眼再放行"
-        },
-        {
-          "source": "upstream",
-          "line": 4,
-          "text": "让 AI 自动执行命令的，一条被改过的命令就可能让电脑被人装上恶意代码"
-        },
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "401 sessions already running in autonomous YOLO mode"
-        }
+        {"source": "upstream", "line": 8, "text": "经过中转站时，别让 AI 全自动执行命令，命令先看一眼再放行"},
+        {"source": "upstream", "line": 5, "text": "工具调用就是 AI 让你的电脑去执行的命令，比如安装软件包"},
+        {"source": "upstream", "line": 5, "text": "还有 2 个会挑时机下手，论文举的例子是只对全自动执行的会话下手"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "401 sessions already running in autonomous YOLO mode"}
       ],
-      "fix_direction": "Remove or justify the permission-breadth qualifier from a checked source; restore the link to responses passing through an intermediary; state what the reader should do before a command runs and what „zweryfikowane” means. Do not present new wording as verified."
+      "fix_direction": "Remove or define the permission qualifier, tie the rule to sessions routed through an intermediary, and keep the look-before-release step as an instruction rather than only as a limitation."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#4",
+      "text": "Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.",
+      "why": "The upstream trigger is having already used a relay of unknown origin, and its scope is the used keys plus cloud-service and code-repository keys. The item narrows the trigger to 'przy ujawnieniu' (a known disclosure) and the scope to 'klucza' (one key). The abstract says routers have full plaintext access to every in-flight payload, so a key that passed through one is exposed by construction and the reader cannot observe that exposure. The abstract also reports 17 routers touching researcher-owned AWS canary credentials, so cloud credentials are exactly what was used. A reader who used an intermediary and saw no symptom is told nothing, and the cloud and repository keys are not named.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "已经用过来路不明的中转站，就到模型厂商那里把用过的密钥作废、重新生成，云服务和代码仓库的密钥一起换"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "full plaintext access to every in-flight JSON payload"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "17 touching researcher-owned AWS canary credentials"}
+      ],
+      "fix_direction": "State that a key which passed through an unverified intermediary is to be treated as exposed even without a symptom, and restore the upstream scope of which keys are included."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#4",
+      "text": "Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.",
+      "why": "The upstream fallback after anomalies has four steps: stop using at once, change keys, scan for malware, preserve evidence. It also explains that one altered command can get malicious code installed on the computer. The item keeps only the key revocation. The abstract's headline result is that routers injected malicious code (1 paid and 8 free). A reader who already ran commands supplied through an intermediary gets no path about the computer, and 'Zmiany w adaptacji' does not record that these steps were dropped (it names only the Chinese notice as basis, damage amounts and attack instructions). That the notice is Chinese is a reason to find a Polish or EU source, not a reason to leave the reader with no path.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "遇到异常扣费、无故封号、数据异常，立即停用、改密钥、查杀病毒、留存证据"},
+        {"source": "upstream", "line": 4, "text": "让 AI 自动执行命令的，一条被改过的命令就可能让电脑被人装上恶意代码"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "1 paid and 8 free routers actively injecting malicious code"}
+      ],
+      "fix_direction": "Either restore a sourced path for a computer that may have run altered commands (stop using, check the machine, keep evidence) or record in 'Zmiany w adaptacji' that these steps were left out and why."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych.",
+      "why": "The upstream is a flat prohibition, for relays of unknown origin, on handing over code, keys and privacy materials. The item (a) limits the data to 'cudzych danych', so the reader's own personal data is not named at all, and (b) attaches 'bez właściwego upoważnienia i oceny...' to all three objects, so for keys the sentence reads as allowing the transfer once an assessment is done. 'Upoważnienie' has no meaning for the reader's own key. The abstract says the router sees every payload in plaintext and that ostensibly benign routers can be pulled into the same attack surface, so no assessment described in the item makes handing over keys safe. The sentence also does not say that the exposed secrets are those that appear inside the traffic (the abstract's secret exfiltration class), as opposed to the account key the router itself requires.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "别把代码、密钥和隐私资料交给来路不明的"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "full plaintext access to every in-flight JSON payload"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "ostensibly benign routers can be pulled into the same attack surface"}
+      ],
+      "fix_direction": "Keep the prohibition unconditional for unverified intermediaries, name the reader's own personal data, separate secrets that appear inside requests from the account key the service needs, and move authorisation language to cases where it is meaningful."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "W praktyce#1",
+      "text": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje.",
+      "why": "The abstract reports two poisoning studies showing that ostensibly benign routers can be pulled into the same attack surface, including a leaked key that generated 100M tokens. The item is built on a split between unverified and verified operators, and its Ograniczenia field never says that an operator who looks honest can still be compromised, or that the study contains this result. A reader who checks the operator's identity and terms can conclude that sending is then safe. The same omission makes 'pojedyncze badanie pomiarowe' in Ocena dowodów#1 understate the paper, which in the abstract also includes poisoning studies and a defence evaluation.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "ostensibly benign routers can be pulled into the same attack surface"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "a leaked OpenAI key generates 100M GPT-5.4 tokens"}
+      ],
+      "fix_direction": "Add the poisoning result as a limit of the operator check and describe the design of the paper completely enough that the check is not read as sufficient."
+    },
+    {
+      "severity": "major",
+      "attack": "leak",
+      "id": "W praktyce#2",
+      "text": "bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych",
+      "why": "The wording carries a data-protection condition (a basis for processing other people's data) into advice. The only cited source is a cs.CR measurement abstract, and the upstream has no such condition: its only legal content is a pointer to the criminal risk of operating a relay under Chinese law, which was correctly removed. AGENTS.md asks for current Polish or EU sources for law and forbids inventing legal conclusions, and no primary legal source is among the snapshots. Ograniczenia#3 ('danych osobowych') leans on the same unsourced frame. I did not judge whether the legal point is correct, only that nothing stored supports it. Rated major, not blocker, because the sentence names no statute, right, duty, threshold or deadline.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 23, "text": "Subjects: Cryptography and Security (cs.CR)"},
+        {"source": "upstream", "line": 8, "text": "开中转站的一方有刑事风险，见第 11 节第 19 条"}
+      ],
+      "fix_direction": "Either cite a primary Polish or EU source for the processing-basis condition and give it a verification scope, or reduce the sentence to an instruction that needs no legal claim."
     },
     {
       "severity": "major",
       "attack": "scope-words",
-      "id": "W praktyce#2",
-      "text": "Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych.",
-      "why": "Upstream names code, keys and privacy materials, and advises desensitising personal privacy data. The item limits the data category to „cudzych danych” (other people's data) and the code category to „prywatnego kodu”, so the reader's own private data and non-private code are not covered by any prohibition. The abstract says the router sees every payload in plaintext, so the exposure does not depend on whose data it is. The same sentence also makes every item conditional on „upoważnienia i oceny”, so the instruction reads as permission once an assessment is done (see the separate finding on the assessment gate).",
+      "id": "title#1",
+      "text": "Nie przekazuj sekretów niesprawdzonym pośrednikom AI",
+      "why": "The source population is third-party API routers that dispatch tool-calling requests of LLM agents across several upstream providers. The title widens this to 'pośrednicy AI', and the item never defines the term. 'pośrednika' (W praktyce#1) and 'pośredników API modeli' (Korzyść i dowody#1) appear without explanation, although AGENTS.md asks to explain a technical term at first use. The upstream had a plain-language definition (the relay sits between you and the model vendor and can see and change what goes out and what comes back), which was dropped. A reader using a reseller key, an aggregator or a third-party app cannot tell whether the advice covers it.",
       "evidence": [
-        {
-          "source": "upstream",
-          "line": 1,
-          "text": "别把代码、密钥和隐私资料交给来路不明的"
-        },
-        {
-          "source": "upstream",
-          "line": 5,
-          "text": "用的时候先给个人隐私和项目资料脱敏"
-        },
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "full plaintext access to every in-flight JSON payload"
-        }
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "rely on third-party API routers to dispatch tool-calling requests across multiple upstream providers"},
+        {"source": "upstream", "line": 4, "text": "中转站夹在你和模型厂商中间，你发出去的内容和收回来的回答，它都看得见、改得了"}
       ],
-      "fix_direction": "Cover the reader's own personal and sensitive data and code in the prohibition, or state why they are left out; separate the unconditional ban for keys from the conditional wording for other people's data. Adjust the title if the scope changes."
+      "fix_direction": "Define the intermediary in plain words at first use and align the title wording with the population the source actually studied."
     },
     {
-      "severity": "major",
+      "severity": "minor",
       "attack": "same-action",
       "id": "Ocena redakcyjna#2",
       "text": "Ocena musi poprzedzać przekazanie danych.",
-      "why": "The study measured what routers did. It does not test whether reading operator terms or checking the operator predicts safety. In its sample, a paid router from commercial storefronts injected code and two routers used adaptive evasion triggers, so an assessment based on terms or on probing could miss such behaviour. The item makes a finished „ocena” the gate after which keys and data may be sent, and does not say that the study supplies no validated assessment method or that the protective actions are operational editorial advice not measured by this source (README class C wording), while Ocena dowodów#1 gives B only for the measurement. A reader may take a checked-looking operator as safe.",
+      "why": "The abstract measures how many routers act maliciously and evaluates three client-side defenses (a fail-closed policy gate, response-side anomaly screening, append-only transparency logging). None of them is 'check the operator, retention and onward sharing', 'do not auto-execute' or 'review the command', so these actions are wider than the source and the item does not call them an editorial example; Ocena dowodów B is attached to the whole item. The retention and onward-sharing concern behind W praktyce#1 comes from the Chinese notice, which the adaptation says it removed as basis. The abstract also describes conditional delivery, so a one-time check of declared terms does not show what a router does. The sentence gives no criterion for what outcome of the 'ocena' allows sending.",
       "evidence": [
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "1 paid and 8 free routers actively injecting malicious code, 2 deploying adaptive evasion triggers"
-        }
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "three deployable client-side defenses: a fail-closed policy gate, response-side anomaly screening, and append-only transparency logging"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "dependency-targeted injection (AC-1.a) and conditional delivery (AC-1.b)"},
+        {"source": "upstream", "line": 5, "text": "部分中转站会把用户提交的数据留在服务器上，有的私自截留，倒卖给别的大模型厂商做训练"}
       ],
-      "fix_direction": "State that the advised actions are editorial inferences from an attack-measurement study, that the source offers no validated way to judge an intermediary, and that passing an assessment does not make sending keys safe. Keep B for the measurement and describe the status of the actions separately."
-    },
-    {
-      "severity": "major",
-      "attack": "self-containment",
-      "id": "title#1",
-      "text": "pośrednikom AI",
-      "why": "The term for the thing the advice is about is not explained anywhere in the fields given. Upstream explains it: the relay sits between the user and the model provider and can both see what is sent and change what comes back. The item mentions „pośredników API modeli” only in the evidence and says only that they had access to „przekazywanych żądań”, which omits the ability to alter returned responses. A reader who uses a reseller gateway or proxy but does not know the term may not see that the advice applies. AGENTS.md requires technical terms to be explained at first use.",
-      "evidence": [
-        {
-          "source": "upstream",
-          "line": 4,
-          "text": "中转站夹在你和模型厂商中间，你发出去的内容和收回来的回答，它都看得见、改得了"
-        },
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "third-party API routers to dispatch tool-calling requests across multiple upstream providers"
-        }
-      ],
-      "fix_direction": "Add a plain-language explanation at first use of what the intermediary is, where it sits, and that it can read the requests and alter the responses, taken from the abstract; name how a reader can tell they are using one."
+      "fix_direction": "Label the operator check, the no-auto-execution rule and the command review as editorial recommendations that the study did not test, and say what the assessment must establish."
     },
     {
       "severity": "minor",
       "attack": "preservation",
-      "id": "Koszt#1",
-      "text": "Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia.",
-      "why": "The upstream cost is the price of the safer path: official direct access usually costs more and top-up is less convenient, which is why the relay is tempting. The item restates the cost as the effort of checking and keeps only that price proves nothing about safety. The reader is not told that the safer route may cost more money or effort, so the cost-versus-benefit separation required by AGENTS.md is incomplete.",
+      "id": "W praktyce#1",
+      "text": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje.",
+      "why": "The upstream gives positive alternatives: use official direct connection or properly authorised platforms, mask personal and project data before use, manage keys and rotate them regularly. The item keeps none as an action. Official direct connection survives only as a caution in Ograniczenia#2, masking only as a caution in Ograniczenia#3, and key hygiene not at all. The upstream cost line (the safer path is dearer and less convenient) is replaced by a cost of checking, so the reader whose preferred option (not using an unknown intermediary) is unavailable gets only 'ustal', not a safer way to proceed.",
       "evidence": [
-        {
-          "source": "upstream",
-          "line": 3,
-          "text": "官方直连通常比中转站贵，充值也没那么方便"
-        }
+        {"source": "upstream", "line": 5, "text": "提示建议用官方直连、正规授权的平台，不用来源不明、没有运营资质、没有安全保障的平台"},
+        {"source": "upstream", "line": 5, "text": "用的时候先给个人隐私和项目资料脱敏，管好密钥、定期更换"},
+        {"source": "upstream", "line": 3, "text": "官方直连通常比中转站贵，充值也没那么方便"}
       ],
-      "fix_direction": "State the money and effort cost of the safer alternatives without claiming prices; keep any price statement tied to a checked source or mark it as the editorial assumption it is."
-    },
-    {
-      "severity": "minor",
-      "attack": "numbers",
-      "id": "Korzyść i dowody#2",
-      "text": "dostęp do badawczych kluczy kontrolnych",
-      "why": "The abstract reports that 17 routers touched researcher-owned AWS canary credentials, meaning the planted credentials were used. „Dostęp” describes something every router already has by design, so it blurs the finding, and „kluczy kontrolnych” is not a clear rendering of canary credentials planted as bait. The item also gives no count, so the reader cannot tell this was a minority of the sample.",
-      "evidence": [
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "17 touching researcher-owned AWS canary credentials"
-        }
-      ],
-      "fix_direction": "Say that routers were observed using planted bait credentials owned by the researchers, with the count if given, and explain the bait term in plain Polish."
+      "fix_direction": "Decide for each dropped alternative whether it is restored with a source or recorded as removed in 'Zmiany w adaptacji'."
     },
     {
       "severity": "minor",
       "attack": "limitations",
-      "id": "Ocena dowodów#1",
-      "text": "nie reprezentatywna ocena całego rynku",
-      "why": "The abstract states where the routers came from (purchased from three storefront types, collected from public communities) but not how the sample was drawn or whether it is representative. „Nie reprezentatywna” is a design claim the snapshot does not state; only the upstream note (a lead, not evidence) says the prevalence cannot be computed. The narrower statement that this study gives no prevalence estimate is what the snapshot supports.",
+      "id": "Ograniczenia#3",
+      "text": "Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych.",
+      "why": "Ograniczenia#2 and #3 are not limitations of the study and nothing in the stored abstract supports them: it contains nothing on masking, personal data, processing rules or a direct-connection comparison, only a measurement of routers. Ograniczenia#3 also turns the upstream recommendation to mask before use into a caution without recording that the recommendation was dropped, and Ograniczenia#2 sits against an upstream that recommended official direct connection. The field mixes one study limitation (#1) with unlabelled editorial remarks.",
       "evidence": [
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "Across 28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"
-        },
-        {
-          "source": "upstream",
-          "line": 8,
-          "text": "测的中转站多数是免费的，付费的只有 28 个"
-        }
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"},
+        {"source": "upstream", "line": 5, "text": "用的时候先给个人隐私和项目资料脱敏，管好密钥、定期更换"}
       ],
-      "fix_direction": "Reword to what the abstract supports: the sample sources are stated, the study does not give the share of malicious intermediaries in the whole market, and only the abstract was checked."
+      "fix_direction": "Separate limitations of the source from editorial cautions, and source or label the cautions."
     },
     {
       "severity": "minor",
       "attack": "limitations",
       "id": "Ograniczenia#4",
       "text": "Ocena polecenia przez człowieka ogranicza część ryzyka, ale nie gwarantuje wykrycia każdego ataku.",
-      "why": "The first half asserts that human review of a command reduces risk. The stored abstract does not test human review: the defences it reports evaluating are a fail-closed policy gate, response-side anomaly screening and append-only transparency logging, and no results for them are in the snapshot. The claim rests only on the upstream note (a lead). The defences the study did evaluate are not mentioned.",
+      "why": "The abstract evaluates three client-side defenses and human command review is not among them, so 'ogranicza część ryzyka' is an effectiveness claim without support in the stored source. The upstream's own illustration of the paper is a package name changed so that it cannot be seen at a glance. The demonstrated tampering is thus designed to defeat a quick visual check, while 'nie gwarantuje wykrycia każdego ataku' suggests that misses are the exception. A reader may rely on a glance.",
       "evidence": [
-        {
-          "source": "snapshot",
-          "snapshot": "aff92e5a2fd5f64c.txt",
-          "line": 21,
-          "text": "evaluate three deployable client-side defenses: a fail-closed policy gate, response-side anomaly screening, and append-only transparency logging"
-        },
-        {
-          "source": "upstream",
-          "line": 8,
-          "text": "命令先看一眼再放行"
-        }
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "three deployable client-side defenses: a fail-closed policy gate, response-side anomaly screening, and append-only transparency logging"},
+        {"source": "upstream", "line": 5, "text": "把安装命令里的 requests 换成拼法相近的 reqeusts，一眼看不出来"}
       ],
-      "fix_direction": "Mark the effect of human review as an editorial judgement not measured in the source, or remove it; state which defences the study evaluated without claiming their results, which the abstract snapshot does not give."
+      "fix_direction": "Remove the effectiveness claim or state that the paper's example alteration is hard to see at a glance and that review was not tested."
     },
     {
       "severity": "minor",
-      "attack": "leak",
-      "id": "W praktyce#2",
-      "text": "podstaw przetwarzania danych",
-      "why": "The phrase uses the vocabulary of personal-data law (legal basis for processing); Ograniczenia#3 likewise states that renaming or masking does not necessarily remove personal data, a data-protection claim. The only source is an arXiv abstract with no legal content, and no Polish or EU primary source is among the snapshots. I rate it minor only because the item states no specific right, rule or deadline, and because I can cite no snapshot line that settles the point (the evidence is an absence). If the orchestrator reads it as a legal statement given as advice, it needs a primary source before publication.",
-      "evidence": [],
-      "fix_direction": "Either remove the legal vocabulary or support it with a checked Polish or EU primary source listed in Źródła; keep the data-protection caution as plain editorial advice if no source is added."
+      "attack": "numbers",
+      "id": "Korzyść i dowody#2",
+      "text": "W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych.",
+      "why": "(a) 'dostęp do ... kluczy' renders 'touching' (upstream: used or dipped into). Every router has plaintext access, as the item's own next sentence says, so the measured result (17 routers actually used planted AWS canary credentials) is not conveyed, and 'kluczy kontrolnych' does not signal planted decoy credentials. (b) No counts are given. The reader cannot see that injection was found in 9 of the 428 routers (1 paid, 8 free), adaptive evasion in 2 and use of the planted credentials in 17, so the scale the source reports is hidden behind 'między innymi'.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "we find 1 paid and 8 free routers actively injecting malicious code, 2 deploying adaptive evasion triggers, 17 touching researcher-owned AWS canary credentials"},
+        {"source": "upstream", "line": 5, "text": "17 个动用过研究者故意放进去的亚马逊云服务密钥"}
+      ],
+      "fix_direction": "Say that routers used planted decoy credentials, and either give the counts from the abstract or state that they are left out on purpose."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli.",
+      "why": "The sample origin is dropped: the paid routers were purchased from Taobao, Xianyu and Shopify-hosted storefronts and the free ones were collected from public communities. For a reader in Poland, where the sample came from bears on how far the result transfers, and Ograniczenia#1 only says that the share of malicious routers overall is unknown. The reader is not told how the 428 were obtained.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"}
+      ],
+      "fix_direction": "State how the sample was assembled, as a scope condition in the evidence or limitations."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.",
+      "why": "The abstract states this as a general property of routers (a premise of the threat model), not as a measured result about the studied sample, and it says 'every in-flight JSON payload'. The item says 'żądań' (requests) only, which hides that the router also sees and can change the responses, where the injection happens. The upstream says the relay can read and change what you send and what comes back. A reader may think only prompts are exposed.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "full plaintext access to every in-flight JSON payload"},
+        {"source": "upstream", "line": 4, "text": "你发出去的内容和收回来的回答，它都看得见、改得了"}
+      ],
+      "fix_direction": "Say that both requests and responses pass in plaintext through the intermediary and mark this as a property described by the authors rather than a measured result."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.",
+      "why": "I do not dispute the letter: a single preprint study is B under the README definition. But the letter covers four recommended actions in the item, none of which has a measured effect, and the item's Korzyść field holds only hazard evidence with no statement of what the reader gains. The upstream explains that the benefit size was set by consequences because the study contains no loss amount. That reason is dropped, so the reader cannot separate the measured hazard from the unmeasured protective effect or see that the benefit size is unquantified.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "收益量级凭后果定为中：密钥和代码被偷的损失大小差得很远，研究里没有金额可套"},
+        {"source": "snapshot", "snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "three deployable client-side defenses: a fail-closed policy gate, response-side anomaly screening, and append-only transparency logging"}
+      ],
+      "fix_direction": "State in the evidence or limitations that the hazard was measured, the protective actions were not, and that the benefit size is not quantified."
     }
   ],
-  "notes": "Protocol: I opened only the role file, AGENTS.md, README.md, the packet and the one snapshot. For README.md I used Grep to find the heading and then one Read of lines 38-77, which is wider than the single section \"Jak czytać dowody\" (lines 42-56), so I read some text past the section; nothing else was opened. No book/, tests/, tools/, manifest, other snapshots, git history or chapter file; no shell, network or scripts. Packet fields Status, Oryginał and Weryfikacja were not in the packet, so whether the abstract-only scope is disclosed there could not be judged beyond Źródła, which names the abstract. Grade: the B letter matches the README definition of a single study; the concern that B covers the measurement and not the advised actions is carried in the same-action finding. Recency and conflict: one snapshot (arXiv v1, submitted 9 Apr 2026) with no second guidance text, so nothing to compare; the attack was run and found nothing. China and law leaks: no Chinese institution, hotline, threshold or deadline in the reader-facing fields; only the minor finding on legal vocabulary. Numbers: only 28 and 400 appear and both match the abstract. Status is PASS because no finding is a blocker under the role definition; the six major findings still need resolution before the item is relied on."
+  "notes": "No protocol violation in what I opened: .claude/agents/pl-claim-adversary.md, AGENTS.md, README.md (Grep for the heading, then a Read of lines 40-79, which is slightly more than the section 'Jak czytać dowody' because it also showed the start of the next two sections), the packet and the one snapshot aff92e5a2fd5f64c.txt. I did not open the existing report, book/, tests/, tools/, the manifest, other snapshots or git history. The session context contained the text of CLAUDE.md and AGENTS.md before I started; I did not open CLAUDE.md. The only cited source is an abstract-only arXiv page (v1, 9 Apr 2026); the full paper was not available, so claims about its method beyond the abstract could not be checked. Recency: there is one snapshot and nothing to compare against, so I ran the attack and found no conflict visible in the snapshots; I did not list it as not assessable because the role file limits it to what the snapshots show. Severity boundary: the legal-basis finding (W praktyce#2) is rated major, not blocker, because it names no statute, right, duty, threshold or deadline; if the project treats any legal-concept condition without a Polish or EU source as an unsupported legal statement, it should be escalated. Fields Oryginał and Weryfikacja were not in the packet, so I could not check them. No Chinese institution, hotline, threshold or deadline appears in the reader-facing fields."
 }
