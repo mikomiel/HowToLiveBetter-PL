@@ -101,7 +101,7 @@ function scratchRepo() {
 test('a change to the text of one item is told apart from a change to another item of the same chapter', () => {
   const { dir, edit } = scratchRepo();
   assert.equal(itemChangedSince(dir, 'HEAD', '14.2'), false);
-  edit('Zacznij od poczty, przez którą resetujesz inne konta.', 'Zacznij od poczty.');
+  edit('Zacznij od poczty, przez którą resetujesz hasła do innych kont.', 'Zacznij od poczty.');
   assert.equal(itemChangedSince(dir, 'HEAD', '14.2'), true);
   assert.equal(itemChangedSince(dir, 'HEAD', '14.7'), false, 'the neighbouring item is untouched');
   assert.equal(itemChangedSince(dir, 'no-such-commit-0000', '14.2'), null);
@@ -114,7 +114,7 @@ test('status warns when the text of an item changed after its reports were prepa
   const dir = fresh();
   prepare(dir, ['14.2', '14.7'], { root: repo, cache, roles: ['verifier'] });
   assert.deepEqual(status(dir, { root: repo, cache }).stale, []);
-  edit('Zacznij od poczty, przez którą resetujesz inne konta.', 'Zacznij od poczty.');
+  edit('Zacznij od poczty, przez którą resetujesz hasła do innych kont.', 'Zacznij od poczty.');
   const after = status(dir, { root: repo, cache });
   assert.deepEqual(after.stale, ['14.2']);
   assert.match(after.next[0], /the text of 14\.2 changed since its reports were prepared: prepare it again/);
@@ -130,7 +130,7 @@ test('adopting takes over only the accepted reports whose text is still the text
   writeFileSync(join(earlier, '14.2', 'verifier-a.json'), JSON.stringify({ item: '14.2', claims: [] }));
   const dir = fresh();
   prepare(dir, ['14.2', '14.7'], { root: repo, cache, roles: ['editor', 'verifier'] });
-  edit('Zacznij od poczty, przez którą resetujesz inne konta.', 'Zacznij od poczty.');
+  edit('Zacznij od poczty, przez którą resetujesz hasła do innych kont.', 'Zacznij od poczty.');
   const result = adopt(dir, earlier, { root: repo, cache, fromCommit: 'HEAD' });
   assert.deepEqual(result.adopted, ['14.7/editor-a']);
   assert.ok(existsSync(join(dir, '14.7', 'editor-a.json')));
