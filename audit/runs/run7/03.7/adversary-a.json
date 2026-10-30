@@ -1,0 +1,112 @@
+{
+  "item": "03.7",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Do only one thing at a time (unconditional slogan)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 1, "upstream_action": "Do not reply to messages while in a meeting; held back for the duration (line 3: restrain from replying, needs some willpower)", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Cost statement: no money, some willpower", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Claim that frequent multi-media users did worse on a task-switching test", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "After a task switch responses are clearly slower and more error-prone (from a review of multiple studies)", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Second lab study (university students): heavy media multitaskers more distracted by irrelevant stimuli and memories", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 6, "upstream_action": "Evidence grade B", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 7, "upstream_action": "Sources: Monsell (2003) and Ophir, Nass and Wagner (2009)", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Note: size of switch cost varies strongly with the task, no single figure given here", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Note: the Ophir comparison is cross-sectional and cannot separate cause from selection", "fate": "kept", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości",
+      "why": "The only cited source (Monsell abstract) describes experiments in which subjects were required to switch frequently among a small set of simple tasks and reports the cost right after a switch. It does not test, according to the stored abstract, deferring unrelated messages, interruptions in real work, or any outcome of work quality or time. The advised action (defer messages during an attention-demanding task) is therefore an editorial extrapolation from laboratory switch costs. The item never says so in Korzyść i dowody, Ograniczenia or Ocena dowodów: the Ograniczenia sentence addresses only 'every multitasking harms equally' and media use, not the gap between forced lab switching among simple tasks and the advised real-life action. A reader can take the letter B and the Korzyść field as evidence that deferring messages works, when only the existence of a switch cost is supported. The item also does not state the other side of the trade-off (delayed replies to other people).",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "by requiring subjects to switch frequently among a small set of simple tasks"},
+        {"source": "upstream", "line": 1, "text": "一次只做一件事，不要边开会边回消息"}
+      ],
+      "fix_direction": "State in Ograniczenia (or Korzyść i dowody) that the reviewed experiments concern required switching among simple tasks, that the source as checked in the abstract does not test deferring messages or work outcomes, and that the advised action is an editorial application of the switch-cost finding; mention the cost of delayed replies in Koszt."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "Przy zadaniu wymagającym uwagi",
+      "why": "The title condition 'zadanie wymagające uwagi' is open-ended and reads as covering demanding or complex work, while the source abstract concerns a small set of simple tasks in an experiment, and the upstream condition was a concrete situation (messages during a meeting). The item itself says 'prostych zadań' in two other fields, so the widening is partly disclosed, but the title is what a reader acts on.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "by requiring subjects to switch frequently among a small set of simple tasks"},
+        {"source": "upstream", "line": 1, "text": "一次只做一件事，不要边开会边回消息"}
+      ],
+      "fix_direction": "Make the title or the first practical sentence name the condition the source supports, or mark the wider 'task requiring attention' as an editorial extension."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "bez jednej uniwersalnej wielkości efektu",
+      "why": "This is stated as a property of the review and is the stated reason for B (README: B = przegląd bez jednej wspólnej wielkości efektu). The stored snapshot is an abstract only and says nothing about effect sizes or their variation. The statement exists only in upstream line 8, where it reads 'here we give no unified number' (a statement about the Chinese book entry, not about the review), and 'varies strongly by task' is likewise not in the abstract. So the stated basis for the letter cannot be verified from what was checked. The letter B itself is not contradicted by any snapshot (the abstract describes a narrative review of experiments, not a quantitative synthesis of the advised action), and it matches upstream line 6.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "来回切换要多费多少，随干的活差别很大，这里不给统一数字。"},
+        {"source": "snapshot", "snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "Research reviewed in this article probes the control processes that reconfigure mental resources for a change of task"}
+      ],
+      "fix_direction": "Attribute the point accurately, for example that the abstract reports no single effect size, and avoid asserting what the full text does or does not contain unless it was checked; keep B only on a basis visible in the abstract."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.",
+      "why": "The abstract says the switch cost is reduced by 'an opportunity for preparation', an experimental condition in which subjects were given time before the task change. The Polish drops 'opportunity' and the experimental setting, so it can be read as 'if you prepare yourself, the cost shrinks', which the abstract does not show for self-managed preparation in everyday work. The term 'koszt przełączenia' (the source's 'switch cost') is also used without being defined as the extra slowness and errors, and it collides with the Koszt field of the item. The sentence is supported by the snapshot but this wording is wider than the source.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "is reduced, but not eliminated, by an opportunity for preparation"}
+      ],
+      "fix_direction": "Say that the reduction occurred when the experiment gave subjects an opportunity to prepare, and gloss 'koszt przełączenia' at first use."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych",
+      "why": "The sentence rebuts a media-use claim that the item never makes and that the cited source does not contain: it exists only in upstream lines 4 and 5 and in the lead (Ophir), which the item dropped. 'Trwały' (lasting) appears in no checked text. A reader of the item alone meets an unexplained topic. Meanwhile the limitations that the cited abstract does support (laboratory setting, simple tasks, required switching, abstract-only access) are not listed in this field.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "经常同时用好几种媒体的人，并没有练出同时做几件事的本事"}
+      ],
+      "fix_direction": "Either state briefly that a separate media-multitasking comparison was omitted because it cannot show cause, or drop the media clause; add the design limits actually visible in the abstract."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "jeśli możesz to zrobić bezpiecznie",
+      "why": "'Bezpiecznie' is not defined and no path is given for a reader who cannot defer messages (for example because someone depends on a quick reply). The item grants an exemption ('Nie traktuj tego jako zakazu wszystkich czynności równoległych') but no alternative, even though the source reports a partial mitigation that the item mentions only as a finding. The advice is not unsafe, but it is not fully actionable alone.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "ad423624ccd89cce.txt", "line": 14, "text": "is reduced, but not eliminated, by an opportunity for preparation"}
+      ],
+      "fix_direction": "Say what kind of situation makes deferral unsafe or unwise and what the reader should do then, without presenting unverified tactics as sourced."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości",
+      "why": "The upstream concrete action is not replying to messages during a meeting (line 1 title, line 3 cost). The Polish replaces it with a general 'task requiring attention' and does not name the meeting situation. The Zmiany w adaptacji field records only the dropped media-user comparison and the slogan, not this replacement of the scenario, so the change of the upstream action is not disclosed as a change.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "开会时忍住不回消息，需要一点毅力"}
+      ],
+      "fix_direction": "Record in Zmiany w adaptacji that the meeting scenario was generalised, or restore the meeting case as an editorial example."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Zmiana sposobu pracy i odłożenie części pobocznych czynności.",
+      "why": "Upstream states the money cost (none) and the effort (some willpower) explicitly. The Polish Koszt field names neither, so a reader cannot see that the action costs no money and requires restraint, and AGENTS asks to keep money, time and effort cost visible.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "不花钱。开会时忍住不回消息，需要一点毅力。"}
+      ],
+      "fix_direction": "State money, time and effort costs separately, keeping the editorial label."
+    }
+  ],
+  "notes": "No protocol violation: I opened only the role file, AGENTS.md, README.md (the section Jak czytać dowody, lines 38-56), the packet and the two snapshot files listed in it (ad423624ccd89cce.txt cited, dfb0adbbf03c8592.txt lead). The Ophir snapshot was used only as a lead and is not quoted as evidence. The packet contains no Status, Oryginał or Weryfikacja fields, so those could not be checked. Attack 'numbers': the item contains no figures; effect-size wording is covered in the grade finding. Attack 'leak': no Chinese institution, hotline, threshold or legal statement in reader-facing fields. Attack 'recency' was run only in the sense the role file defines (snapshot-visible conflict or newer guidance): the two snapshots show none and Ophir (2009, lead) points the same way as Monsell (2003); whether newer literature supersedes the 2003 review is outside the stored sources and was not assessed. Both snapshots are abstract-only, single-line texts (text on line 14)."
+}

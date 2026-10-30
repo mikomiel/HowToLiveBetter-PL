@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "item": "03.1",
+  "role": "verifier",
+  "title": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+  "fields": {
+    "Koszt": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. To nakład redakcyjnie oceniany jako niewielki.",
+    "W praktyce": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.",
+    "Korzyść i dowody": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.",
+    "Ocena dowodów": "B — eksperyment dotyczący konkretnego zadania uwagowego.",
+    "Ocena redakcyjna": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź.",
+    "Ograniczenia": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich. Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To nakład redakcyjnie oceniany jako niewielki."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — eksperyment dotyczący konkretnego zadania uwagowego."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/xhp0000100",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1050,
+      "sha256": "b1ddc8882be0a52884c4cd4882ad66340b5f5d7fe7af8797997ee8add583e3e8",
+      "snapshot": "b9e3431329fe78b2.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6624,
+      "sha256": "40978327f5a046c7df61a5e6d3366cf2352dde76857f6f808b61ca9524fbda13",
+      "snapshot": "b394b3e33ccec52e.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 6547,
+        "wholeChars": 6547,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

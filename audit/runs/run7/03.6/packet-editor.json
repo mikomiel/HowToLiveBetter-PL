@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.6",
+  "role": "editor",
+  "title": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku",
+  "fields": {
+    "Koszt": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”. To ocena redakcji.",
+    "W praktyce": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.",
+    "Korzyść i dowody": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji. Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.",
+    "Ocena dowodów": "B — eksperyment laboratoryjny dotyczący błędów sekwencji.",
+    "Ocena redakcyjna": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.",
+    "Ograniczenia": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy. W badaniu błędy niesekwencyjne nie wykazały tego efektu. Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji."
+  }
+}

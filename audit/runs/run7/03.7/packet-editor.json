@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.7",
+  "role": "editor",
+  "title": "Przy zadaniu wymagającym uwagi ogranicz przełączanie się między czynnościami",
+  "fields": {
+    "Koszt": "Zmiana sposobu pracy i odłożenie części pobocznych czynności. To ocena redakcji.",
+    "W praktyce": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości, jeśli możesz to zrobić bezpiecznie. Nie traktuj tego jako zakazu wszystkich czynności równoległych.",
+    "Korzyść i dowody": "Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami. Bezpośrednio po przełączeniu odpowiedzi były wolniejsze i zwykle częściej błędne. Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.",
+    "Ocena dowodów": "B — przegląd eksperymentów nad przełączaniem prostych zadań, bez jednej uniwersalnej wielkości efektu.",
+    "Ocena redakcyjna": "Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy.",
+    "Ograniczenia": "Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "item": "03.5",
+  "edits": [
+    {
+      "field": "title",
+      "original": "w ustalonych porach",
+      "replacement": "o ustalonych porach",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "odczyty",
+      "replacement": "sprawdzenia poczty",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "wewnątrzosobnicze",
+      "replacement": "wewnątrzosobnicze (porównanie u tych samych osób)",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "dla komunikatorów",
+      "replacement": "w komunikatorach",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "124 dorosłych porównywało dwa tygodnie",
+      "why": "Translationese. The grammatical subject of 'porównywało' is the participants and its object is 'two weeks', so it reads as if the participants compared the weeks, which is unnatural and can mislead. In a within-person design the researchers compare two conditions in the same people. Contains a number, a duration and a verb of attribution, so not edited. A natural form would put the comparison on the researchers, for example 'porównano dwa tygodnie u 124 dorosłych'. This is a suggestion only; the design must be confirmed against the source."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "odczuwany codzienny stres",
+      "why": "Stacked modifiers. 'codzienny' can be read as 'everyday stress' or as 'stress measured each day', and 'odczuwany' implies self-report. The language does not make clear which is meant. The wording belongs to the claim about the outcome and contains a comparative nearby ('niższy niż'), so not edited. The verifier should check how the outcome was measured and phrase it accordingly."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Ustal, kiedy odpowiadasz na zwykłe e-maile",
+      "why": "Inconsistent action word. The title, 'Korzyść i dowody' and 'Ograniczenia' speak about checking mail ('sprawdzaj pocztę', 'sprawdzania poczty'), while here the action is replying. These are different actions and the Polish reader will notice the shift. Changing the verb could change the advice, so not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "bezwarunkowo narzucać",
+      "why": "Stiff, bureaucratic register, and 'narzucać' has no object (imposing on whom: oneself or others?). Contains 'bezwarunkowo', a condition word, plus the count 'trzy' in the same clause, so not edited. A more natural phrasing might be 'zamiast sztywno trzymać się trzech sprawdzeń dziennie', but that changes the intensity word and needs verifier approval."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Warto sprawdzić taki sposób obsługi zwykłej poczty",
+      "why": "'sprawdzić' is ambiguous (verify or try out) and collides with the 'sprawdzaj pocztę' action of the title. The intended sense is probably 'try', which Polish expresses with 'wypróbować'. The sentence contains the modal 'Warto' and carries the editorial judgement, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Pilne dyżury",
+      "why": "Odd collocation. A duty shift (dyżur) exists to handle urgent matters, so 'pilne' adds nothing and sounds like a calque. It is unclear whether 'dyżury pod telefonem', 'obowiązek szybkiej reakcji' or something else is meant. The phrase defines which situations exclude the limit (with the modal 'mogą wykluczać'), so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie zmierzono tu",
+      "why": "'tu' is vague: it could mean this study, this item or all evidence cited here. Contains a negation and a scope word, so not edited. If the study is meant, 'w tym badaniu' would be clearer; the verifier must confirm which scope is true."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "identycznej reguły",
+      "why": "Stiff register; 'takiej samej reguły' would sound more natural. 'identycznej' is an equivalence or intensity word, so not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

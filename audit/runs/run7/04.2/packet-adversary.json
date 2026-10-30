@@ -1,0 +1,159 @@
+{
+  "version": 2,
+  "item": "04.2",
+  "role": "adversary",
+  "title": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To szacunek redakcji.",
+    "W praktyce": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.",
+    "Korzyść i dowody": "Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań. Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.",
+    "Ocena dowodów": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego.",
+    "Ocena redakcyjna": "Kryterium może ułatwić decyzję. Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu.",
+    "Ograniczenia": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości. Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu. Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3).",
+    "Źródła": "Gollwitzer i Sheeran (2006), Implementation intentions and goal achievement: A meta-analysis of effects and processes. [DOI i abstrakt wydawcy](https://doi.org/10.1016/S0065-2601%2806%2938002-1).",
+    "Zmiany w adaptacji": "Zastąpiono bezwarunkowe „zatrzymaj projekt” przeglądem decyzji. Przykład i ocena opłacalności są jawnie redakcyjne."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To szacunek redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Uwzględnij też koszt bezpiecznego zakończenia."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Kryterium może ułatwić decyzję."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3)."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/s0065-2601(06)38002-1",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": null,
+      "error": null,
+      "via": "blocked by api.crossref.org",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 2. 开工前写下退出条件"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。开工的时候花 5 分钟，写清「到某月某日没达到某个指标就停」。难在到了那天要认账，当着人停手有点丢面子。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：开工前先写好一句话：到某月某日还没达到某个指标就停。多项研究合起来算，这种写法确实能帮人从注定做不成的事上撤下来。省下的是你本来还要接着往里砸的全部时间。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：把多项实施意图研究合起来算，事先定好的「如果……就……」，同样能帮人从注定做不成的事上撤出来。原文的说法是 disengagement from failing courses of action。省下的时间，就是你本来还会继续投进去的那些。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：退出条件要在刚开工、情绪还冷静的时候定。事后再定会被已经投进去的成本带偏。判断时只看未来投入和未来回报，见第 3 条。另外，「肯撤出」只是多项研究汇总里的一个分项结论，没有人单独算过它能省下多少时间。"
+      }
+    ]
+  }
+}

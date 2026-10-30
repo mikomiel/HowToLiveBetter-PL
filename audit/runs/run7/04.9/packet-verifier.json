@@ -1,0 +1,147 @@
+{
+  "version": 2,
+  "item": "04.9",
+  "role": "verifier",
+  "title": "Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy. To ocena redakcji.",
+    "W praktyce": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne. Wybierz mały pierwszy krok. Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).",
+    "Korzyść i dowody": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji. Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność. Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.",
+    "Ocena dowodów": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.",
+    "Ocena redakcyjna": "Przyjrzenie się przeszkodzie może pomóc dobrać działanie. Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.",
+    "Ograniczenia": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku. Nie jest to diagnoza ani metoda leczenia problemów psychicznych."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Wybierz mały pierwszy krok."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1)."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przyjrzenie się przeszkodzie może pomóc dobrać działanie."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie jest to diagnoza ani metoda leczenia problemów psychicznych."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/0033-2909.133.1.65",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1167,
+      "sha256": "dab6d959b5a9213e181bc0858eb0280b895e1c9f43eae215c968c16deee0ae94",
+      "snapshot": "d96cbd6fc03d12ce.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6795,
+      "sha256": "6d42dd0a106a25e5af6e988d075d442bdc2cbce0396931bc39575a3d02caf743",
+      "snapshot": "0b2c8511b26838e3.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 6666,
+        "wholeChars": 6666,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,145 @@
+{
+  "item": "14.3",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Ustaw blokadę ekranu i rozważ PIN karty SIM",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 13, "text": "Aby uzyskać od sieci pomoc w znalezieniu urządzenia z Androidem, ustaw kod PIN, wzór lub hasło."}
+      ],
+      "reason": "Only the screen-lock part is backed: the Google page gives the same advice for Android (set a PIN, pattern or password so the Find Hub network can help find the device). The 'rozważ PIN karty SIM' part is not backed by any readable snapshot: the Apple page (the one that would describe SIM locking) was blocked with HTTP 429 and has no snapshot, and the Google snapshot contains no SIM, eSIM or PUK text (searched)."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 13, "text": "Aby uzyskać od sieci pomoc w znalezieniu urządzenia z Androidem, ustaw kod PIN, wzór lub hasło."}
+      ],
+      "reason": "Only 'Włącz blokadę ekranu urządzenia' is backed (Google, Android, line 13). 'sprawdź możliwość używania PIN-u SIM lub eSIM' is not backed: the Apple snapshot is unavailable (HTTP 429, no snapshot) and the Google snapshot says nothing about SIM or eSIM PIN."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie zgaduj kodu początkowego ani PUK.",
+      "verdict": "unsupported",
+      "reason": "Looked for any text on a SIM initial code, PUK, wrong-attempt limits or SIM lockout in the only readable snapshot (7d4296b28eab6e78.txt, Google Find Hub page; searched SIM, PUK, karta, operator, and read the whole text): nothing backs this advice. The Apple page that would describe SIM locking has no snapshot (HTTP 429, blocked), so this reflects no available backing, not a finding that Apple says otherwise. The fact the advice rests on (Ograniczenia#1) has no quote, so no depends_on can be named."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "meta_statement",
+      "claim": "Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty.",
+      "verdict": "source_unavailable",
+      "reason": "The Apple page https://support.apple.com/pl-pl/118228 is the cited source for this description. Its fetch was blocked by the site (HTTP 429), 0 characters, snapshot null. The Google snapshot is a different document and has no SIM or eSIM text, so it cannot stand in. Needed: a readable fetch of the Apple page."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "To inne zabezpieczenie niż kod odblokowujący ekran.",
+      "verdict": "source_unavailable",
+      "reason": "The distinction between the SIM lock and the screen-unlock code comes from the Apple page, which has no snapshot (HTTP 429, blocked). The Google snapshot describes the screen-lock PIN, pattern or password but never mentions a SIM lock, so it cannot show that the two are different protections."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_description",
+      "claim": "Google opisuje osobno zdalne zablokowanie utraconego telefonu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 11, "text": "Jeśli utracisz urządzenie z Androidem lub zegarek z Wear OS, możesz zlokalizować to urządzenie i zdalnie je zabezpieczyć bądź wymazać na nim dane."},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 84, "text": "Oznacz jako utracone: powoduje zablokowanie urządzenia kodem PIN, wzorem lub hasłem."}
+      ],
+      "reason": "The Google Account help page describes remote locking of a lost Android device (Oznacz jako utracone) as its own procedure, with no connection to a SIM lock."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "oficjalna dokumentacja urządzeń i usług",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 7, "text": "wymazywanie z niego danych - Konto Google - Pomoc"}
+      ],
+      "reason": "The grade letter C is editorial and was not checked. The Google snapshot is an official help page (title ends 'Konto Google - Pomoc'), which fits 'usług'. The 'urządzeń' part rests on the Apple help page, which has no snapshot (HTTP 429, blocked), so the document type of that source could not be checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie badanie strat finansowych",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 7, "text": "wymazywanie z niego danych - Konto Google - Pomoc"}
+      ],
+      "searched": ["7d4296b28eab6e78.txt"],
+      "reason": "Google snapshot (region 'article', 9122 of 11280 chars kept, not truncated): it is a help page, and a search for straty, strat, finans, pieniądze, badanie, bank found nothing about measured financial loss, so absence is shown for that region only. The Apple snapshot is unavailable (HTTP 429), so absence there could not be checked and the verdict is not absent_in_source."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "source_claim",
+      "claim": "Te zabezpieczenia dotyczą różnych dróg dostępu.",
+      "verdict": "source_unavailable",
+      "reason": "States a fact about two protections (screen lock and SIM lock) covering different access routes. The SIM-lock side comes from the Apple page, which has no snapshot (HTTP 429, blocked). The Google snapshot covers only the screen lock and remote lock and never mentions a SIM lock, so it cannot show the difference."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany.",
+      "verdict": "source_unavailable",
+      "reason": "Claim about SIM lockout after wrong attempts and the need for operator help or replacement; it depends on the Apple page, which has no snapshot (HTTP 429, blocked). The Google snapshot has no text on SIM lockout, wrong attempts, replacement or operator help (searched SIM, PUK, karta, operator; the only hits are 'karty SD' and an IMEI sentence)."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora.",
+      "verdict": "source_unavailable",
+      "reason": "Claim about what a SIM PIN does not protect (accounts, operator procedures). The only cited source on SIM PIN is the Apple page, which has no snapshot (HTTP 429, blocked). The Google snapshot has no text on SIM PIN, account protection by SIM PIN or operator procedures; its only operator sentence (line 120) concerns using the IMEI to disable a device. Neither half is backed by any readable text. The operator-procedure half may need a source beyond the two cited pages."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Dostępność i nazwy ustawień zależą od urządzenia i karty.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 56, "text": "Dotyczy to Androida w wersji 9 lub nowszej."},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 84, "text": "jeśli na urządzeniu jest zainstalowany Android 17 lub nowszy i ma ono funkcję odblokowywania odciskiem palca lub przez rozpoznawanie twarzy"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 122, "text": "niektóre urządzenia, np. Google Pixel Tablet, nie mają numerów IMEI."}
+      ],
+      "reason": "The Google page shows that availability of some lost-device features depends on the Android version, device capabilities and device model. Missing: any statement that availability depends on the SIM card, that the names of settings vary, or anything about SIM PIN or eSIM settings (Apple page unavailable, HTTP 429)."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The only readable advice on locking is Google's, for Android devices and tied to getting help from the Find Hub network. It says nothing about iPhones or SIM PIN."},
+    {"id": "W praktyce#1", "note": "Same as title#1: the Google quote covers Android lock-screen credentials only, not SIM or eSIM PIN."},
+    {"id": "Korzyść i dowody#3", "note": "The Google page covers Android devices and Wear OS watches. The sentence says 'telefonu' without naming a platform, so a reader might assume it covers iPhones; the sentence does not say so."},
+    {"id": "Ocena dowodów#1.1", "note": "Only the Google part of the evidence base was readable. The Apple help page ('urządzeń') was not."},
+    {"id": "Ocena dowodów#1.2", "note": "Absence of financial-loss research was checked only in the stored Google article region, not in the Apple page."},
+    {"id": "Ograniczenia#3", "note": "The supporting quotes concern availability of Google Find Hub and lost-device features by Android version and device, not availability or naming of SIM PIN or eSIM settings, and not dependence on the card."}
+  ],
+  "notes": "Status FAIL comes only from W praktyce#2 (unsupported recommendation), and the cause is that the Apple page https://support.apple.com/pl-pl/118228 was blocked (HTTP 429, snapshot null), so every SIM-related sentence has no readable backing. Re-fetching the Apple page is needed before any SIM claim can be judged. The Google snapshot (7d4296b28eab6e78.txt) is the article region of a longer page (9122 of 11280 chars kept, not truncated) and ends with a notice that the page may contain AI-translated text with possible errors (line 186). Protocol: I read only AGENTS.md, the role file, the packet and snapshot 7d4296b28eab6e78.txt. I also ran one Glob on .cache/sources, which listed file names (including manifest.jsonl) but I opened none of them; nothing under book/, tests/, tools/ or git history was opened."
+}

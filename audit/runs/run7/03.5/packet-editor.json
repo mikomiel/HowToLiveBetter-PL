@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.5",
+  "role": "editor",
+  "title": "Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach",
+  "fields": {
+    "Koszt": "Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki. To ocena redakcji.",
+    "W praktyce": "Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie. Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie.",
+    "Korzyść i dowody": "W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie. W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.",
+    "Ocena dowodów": "B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu.",
+    "Ocena redakcyjna": "Warto sprawdzić taki sposób obsługi zwykłej poczty. Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5).",
+    "Ograniczenia": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów. Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie."
+  }
+}

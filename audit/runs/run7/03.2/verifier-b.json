@@ -1,0 +1,126 @@
+{
+  "item": "03.2",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Dbaj o regularne pory snu, nie skracając odpoczynku",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 129, "text": "stick to your regular sleeping hours instead"}
+      ],
+      "depends_on": ["Korzyść i dowody#3"],
+      "reason": "Backed: the 'regularne pory' part (NHS advises a fixed wake time and regular sleeping hours). Not backed: 'nie skracając odpoczynku'. The NHS page only states an average need of 7 to 9 hours for adults (line 41) and does not advise against shortening sleep for the sake of regularity; no row carries that fact."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Organizacja dnia i pogodzenie snu z obowiązkami.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji, bez wyceny czasu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 129, "text": "stick to your regular sleeping hours instead"}
+      ],
+      "depends_on": ["Korzyść i dowody#3"],
+      "reason": "Backed: 'wybierz zbliżone pory wstawania' (NHS: same wake-up time every day). Not backed: 'przeznacz wystarczająco dużo czasu na sen'. NHS gives no advice to allot enough time; it only states an average adult need of 7 to 9 hours (line 41) and that you probably do not get enough sleep if constantly tired (line 47), facts that no row carries. The conditional 'jeśli pozwalają na to obowiązki' and 'zbliżone' are editorial softening of an unconditional NHS 'every day'."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie traktuj regularności jako powodu do celowego niedosypiania.",
+      "verdict": "unsupported",
+      "reason": "Searched b59686537010480d.txt (NHS insomnia, main region) for advice against deliberately sleeping less for the sake of regular times. Found none. Nearest text is the average need of 7 to 9 hours for adults (line 41) and 'You probably do not get enough sleep if you're constantly tired during the day' (line 47); these state need, not this caution, and no row carries them. Line 129 advises against sleeping in after a bad night, which is a different point."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni.",
+      "verdict": "source_unavailable",
+      "reason": "Cited source https://www.nature.com/articles/s41598-017-03171-4 has access 'blocked' and snapshot null, so authors, design, 61 students and 30 days cannot be checked. The only readable text of this paper in the packet is a row with origin 'lead' (Europe PMC), which the role does not accept as evidence; it was not used. The NHS snapshot does not mention this study."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy.",
+      "verdict": "source_unavailable",
+      "reason": "Both parts (regularity with better academic results; less regular group with later circadian rhythm) come from the Nature article, access 'blocked', snapshot null. No cited readable snapshot speaks to them; the 'lead' row is not evidence under the role and was not used."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "NHS zaleca stałą porę wstawania jako element dbania o sen.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."}
+      ],
+      "reason": "Line 105 sits in the 'Do' list under 'How you can treat insomnia yourself' (line 97)."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 97, "text": "How you can treat insomnia yourself"},
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. 'zalecenie dla pacjentów': the NHS page gives self-help advice to people with insomnia, which fits loosely (it is a public health-information page, not described as a guideline). 'małe badanie obserwacyjne' (the Phillips study, design and size) is not checkable: the Nature article is blocked and has no snapshot; the 'lead' row is not evidence under the role."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie próba skuteczności samej stałej pobudki",
+      "verdict": "source_unavailable",
+      "reason": "The claim says neither source is an efficacy trial of a fixed wake time alone. Searched the NHS main region (4304 of 4844 chars, b59686537010480d.txt): it is a list of self-help advice and describes no trial or efficacy test. The Phillips article, which is the part that matters (its design), has no snapshot (blocked), so absence there cannot be shown."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki.",
+      "verdict": "source_unavailable",
+      "reason": "This states a limit of the Phillips study (correlational design, no test of changing wake time on grades). That depends on the Nature article, access 'blocked', snapshot null. The NHS snapshot does not speak to it. The 'lead' row is not evidence under the role and was not used."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "recommendation_derived",
+      "claim": "Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania.",
+      "verdict": "unsupported",
+      "reason": "Searched b59686537010480d.txt for advice on planning sleep differently for shift work, illness or caring for relatives. The NHS lists shift work (line 67) and several conditions (lines 69 to 81) among causes of insomnia, but gives no advice to plan differently, gives its wake-time advice without exceptions, and does not mention caring for relatives. No row carries the cause-of-insomnia facts, so nothing backs the sentence."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Utrzymujące się problemy ze snem omów z lekarzem.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "'nie skracając odpoczynku' goes beyond the NHS page. NHS also says 'do not sleep in after a bad night's sleep', which sits uneasily with an open-ended 'do not shorten rest'."},
+    {"id": "W praktyce#1", "note": "NHS gives the wake-time advice without a duties condition. 'Wystarczająco dużo czasu na sen' is not NHS advice; NHS gives only the average need of 7 to 9 hours and says 'Everyone needs different amounts of sleep' (line 37)."},
+    {"id": "Korzyść i dowody#3", "note": "The NHS page is about insomnia and its self-treatment (people who regularly have problems sleeping). The sentence says 'dbania o sen' generally and does not state this population. Page last reviewed 19 March 2024."},
+    {"id": "Ocena dowodów#1.1", "note": "The NHS page is a health-information page, not a clinical guideline or study; 'dla pacjentów' is a loose fit."},
+    {"id": "Ograniczenia#2", "note": "Caring for relatives is not mentioned in the NHS page; shift work and conditions appear only as causes of insomnia."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet, and the snapshot b59686537010480d.txt (NHS insomnia). I did NOT open the 'lead' snapshot dd3bb13bd2bb6e6d.txt (Europe PMC PMC5468315). Its DOI 10.1038/s41598-017-03171-4 equals the cited, blocked Nature URL, so it may hold the Phillips paper, but the role says a lead row is not evidence; hence all Phillips-dependent rows are source_unavailable and the item cannot reach PASS until the Nature source is re-fetched or the full text is cited. Status is FAIL because W praktyce#2 and Ograniczenia#2 are unsupported recommendations (editorial cautions with no source backing in the stored NHS text), not because of the unavailable Nature page. No protocol violation."
+}

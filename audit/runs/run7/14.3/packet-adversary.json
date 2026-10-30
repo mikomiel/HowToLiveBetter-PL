@@ -1,0 +1,186 @@
+{
+  "version": 2,
+  "item": "14.3",
+  "role": "adversary",
+  "title": "Ustaw blokadę ekranu i rozważ PIN karty SIM",
+  "fields": {
+    "Koszt": "Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu. To ocena redakcji.",
+    "W praktyce": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM. Nie zgaduj kodu początkowego ani PUK. Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.",
+    "Korzyść i dowody": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty. To inne zabezpieczenie niż kod odblokowujący ekran. Google opisuje osobno zdalne zablokowanie utraconego telefonu.",
+    "Ocena dowodów": "C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych.",
+    "Ocena redakcyjna": "Te zabezpieczenia dotyczą różnych dróg dostępu. Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania.",
+    "Ograniczenia": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany. PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora. Dostępność i nazwy ustawień zależą od urządzenia i karty.",
+    "Źródła": "[Apple: PIN SIM i eSIM, ostrzeżenie przed zgadywaniem](https://support.apple.com/pl-pl/118228); [Google: blokowanie urządzenia z Androidem](https://support.google.com/accounts/answer/6160491?hl=pl).",
+    "Zmiany w adaptacji": "Zachowano C. Usunięto domyślne kody do zgadywania i chiński przypadek jako dowód polskiej procedury. Nie podajemy numerów infolinii."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ustaw blokadę ekranu i rozważ PIN karty SIM"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie zgaduj kodu początkowego ani PUK."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "To inne zabezpieczenie niż kod odblokowujący ekran."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Google opisuje osobno zdalne zablokowanie utraconego telefonu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Te zabezpieczenia dotyczą różnych dróg dostępu."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Dostępność i nazwy ustawień zależą od urządzenia i karty."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://support.apple.com/pl-pl/118228",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 429,
+      "error": null,
+      "via": "https://support.apple.com/pl-pl/118228",
+      "finalUrl": "https://support.apple.com/pl-pl/118228",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "finalUrl": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 9244,
+      "sha256": "bac21f080043d19d8f00087539413e887c944fbb87dd351912bbf7f7046121cb",
+      "snapshot": "7d4296b28eab6e78.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 9122,
+        "wholeChars": 11280,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "C",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 3. 手机设锁屏密码，SIM 卡设 PIN 码"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。锁屏密码和 PIN 码各设一次就行。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：SIM 卡就是手机里那张小卡片，短信验证码靠它来收。手机丢了，捡到的人可能把这张卡拔下来，插进别的手机收验证码，再挨个重置你的账号。给卡设一个 PIN 码，卡换到别的手机上，一开机就要先输这个码，这条路就断了。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：手机丢了以后，捡到的人最快的一条路是把 SIM 卡插到别的手机上，收你的短信验证码。有了验证码，他就能一个个重置你的账号。SIM 卡设了 PIN 码，换到别的手机上开机就要先输密码，捡到的人就没法拿它收验证码。工信部 2020 年 10 月通报过一起真事。用户手机被偷后，没及时挂失电话卡，给了不法分子钻空子的时间。不法分子用「手机号加验证码」登录一个政务 App，拿到了用户的身份证号等信息。他们接着改了手机服务密码。用户后来挂失了这张卡，他们又用话术骗电信客服，把卡解挂。最后利用网贷平台「找回密码」的漏洞，重置支付密码，骗走了网贷资金。工信部借这件事提醒用户及时设置 SIM 卡密码，丢了手机第一时间挂失。至于锁屏密码，美国联邦通信委员会的建议是：给手机设一个强密码，限制别人使用。手机丢了或被偷时，它能防止别人乱用产生费用，也能防止你的个人数据被盗用"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：C"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：工业和信息化部 (2020). 工信部提醒！强化个人信息保护意识. 中国政府网转载工信微报，2020-10-22. <https://app.www.gov.cn/govdata/gov/202010/22/464049/article.html>；US FCC. Protect Your Smart Device. <https://www.fcc.gov/consumers/guides/protect-your-mobile-device>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：PIN 码在手机设置里的「SIM 卡锁」那一项里设。出厂时的初始码一般是 1234 或者 0000。连着输错三次，就要用运营商给的 PUK 码才能解开。所以设完先把这个码记在纸上。定 C 级，是因为两份来源都是官方提醒，加上一起个案，没有研究算过设了 PIN 码能少丢多少钱。丢了手机先做什么，见第 4 条（手机丢了按这个顺序做）"
+      }
+    ]
+  }
+}

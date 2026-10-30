@@ -1,0 +1,165 @@
+{
+  "version": 2,
+  "item": "04.5",
+  "role": "adversary",
+  "title": "Przygotuj plan spotkania i korzystaj z niego",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Organizator musi przygotować plan i udostępnić go uczestnikom. To ocena redakcji.",
+    "W praktyce": "Przygotuj plan i użyj go podczas spotkania. Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik. Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.",
+    "Korzyść i dowody": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby. Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.",
+    "Ocena dowodów": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.",
+    "Ocena redakcyjna": "Przygotowanie planu jest niewielkim nakładem. Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji.",
+    "Ograniczenia": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę. Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji. Rada nie uprawnia do pomijania obowiązkowych spotkań.",
+    "Źródła": "Leach, Rogelberg, Warr i Burnfield (2009), Perceived meeting effectiveness: The role of design characteristics. [DOI i abstrakt wydawcy](https://doi.org/10.1007/s10869-009-9092-6).",
+    "Zmiany w adaptacji": "Usunięto nakaz odwoływania spotkań bez planu, część o staniu oraz wymóg rozsyłania planu z wyprzedzeniem. Pilotaż obejmuje tylko zweryfikowany tu związek dotyczący korzystania z planu. Sposób przygotowania planu jest sugestią redakcji."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przygotuj plan spotkania i korzystaj z niego"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Organizator musi przygotować plan i udostępnić go uczestnikom."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przygotuj plan i użyj go podczas spotkania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przygotowanie planu jest niewielkim nakładem."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Rada nie uprawnia do pomijania obowiązkowych spotkań."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1007/s10869-009-9092-6",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 203,
+      "sha256": "ccb4fa4997e11e0be207e5d3d6a8ec5423e5b6af569a1722857918f273dcad2f",
+      "snapshot": "088a9773da2a17de.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 5. 会前发议程，没议程的会不开；能站着开就站着开"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。组织者会前花 5 到 10 分钟写一份议程。站着开会要参会者配合。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：会前发了议程的会，参会者更容易觉得这个会有用。实验里，坐着开的会比站着开的长 34%，而两种开法做出的决定，好坏没有差别。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：两项调查分别有 958 人和 292 人。结果是：会前发了议程的会，参会者更容易觉得这个会有效果，这个关系在统计上站得住。另一项实验里 55 组坐着开会，56 组站着开会，坐着开的时长多 34%。两种开法做出的决定，质量没有差别。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Leach, D. J., Rogelberg, S. G., Warr, P. B., & Burnfield, J. L. (2009). Perceived meeting effectiveness: The role of design characteristics. Journal of Business and Psychology, 24(1), 65–76. <https://doi.org/10.1007/s10869-009-9092-6>；Bluedorn, A. C., Turban, D. B., & Love, M. S. (1999). The effects of stand-up and sit-down meeting formats on meeting outcomes. Journal of Applied Psychology, 84(2). <https://doi.org/10.1037/0021-9010.84.2.277>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：站会那项实验做的是 5 人小组在实验室里的任务。长会和大型会议不能照搬这个结论。Leach 测的是参会者自己觉得效果如何，不是实际干出了多少活。"
+      }
+    ]
+  }
+}

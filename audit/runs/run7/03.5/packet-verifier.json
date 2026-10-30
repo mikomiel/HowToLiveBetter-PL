@@ -1,0 +1,108 @@
+{
+  "version": 2,
+  "item": "03.5",
+  "role": "verifier",
+  "title": "Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach",
+  "fields": {
+    "Koszt": "Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki. To ocena redakcji.",
+    "W praktyce": "Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie. Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie.",
+    "Korzyść i dowody": "W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie. W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.",
+    "Ocena dowodów": "B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu.",
+    "Ocena redakcyjna": "Warto sprawdzić taki sposób obsługi zwykłej poczty. Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5).",
+    "Ograniczenia": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów. Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto sprawdzić taki sposób obsługi zwykłej poczty."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5)."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.chb.2014.11.005",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 154,
+      "sha256": "b3f638c792472c11e191a9bc691a89eb3800f5a3b2319c32935fea6b90994874",
+      "snapshot": "fc3c2cf54e0262ec.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

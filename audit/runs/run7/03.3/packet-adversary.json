@@ -1,0 +1,186 @@
+{
+  "version": 2,
+  "item": "03.3",
+  "role": "adversary",
+  "title": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania",
+  "fields": {
+    "Koszt": "Czas na odpoczynek może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.",
+    "W praktyce": "Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.",
+    "Korzyść i dowody": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności.",
+    "Ocena dowodów": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.",
+    "Ocena redakcyjna": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.",
+    "Ograniczenia": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci. Liczy się też jakość snu. Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu. Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).",
+    "Źródła": "Van Dongen i współautorzy (2003), The cumulative cost of additional wakefulness. [Abstrakt wydawcy](https://doi.org/10.1093/sleep/26.2.117); [NHS: potrzeba snu i objawy bezsenności](https://www.nhs.uk/conditions/insomnia/).",
+    "Zmiany w adaptacji": "Oryginalne A zastąpiono B: publikowana wersja nie łączy wyników ostrej i przewlekłej deprywacji w jeden efekt. Zakres 7–8 godzin zastąpiono orientacją NHS 7–9, z różnicami indywidualnymi."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Czas na odpoczynek może ograniczyć inne zajęcia."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Planując dzień, uwzględnij własną potrzebę snu."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "NHS podaje dla dorosłych przeciętnie 7–9 godzin."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Liczy się też jakość snu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27)."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1093/sleep/26.2.117",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 3322,
+      "sha256": "22ed9e46f1bba9539a22a26a234d095e6ca4fb56b14329dfe6d9d660e23b2001",
+      "snapshot": "b6bab3851cebff29.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 3. 每晚睡够 7 到 8 小时，别把 6 小时当作够用"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=多 毅力=些 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。每天要多留 1 到 2 小时给睡眠。早一点上床，需要一点毅力。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：连着两周每晚只睡 6 小时，脑子的表现会掉到相当于两天两夜没合眼的水平。麻烦的是自己感觉不到。自己打分的困倦头几天涨完就不再涨，睡 6 小时的人和睡 4 小时的人打分一样困。所以「我睡 6 小时够用」这种感觉靠不住。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：48 名 21 到 38 岁的健康成人，连续 14 天每晚只睡 6 小时。他们的脑力表现累计下降，掉到相当于连续 2 晚完全不睡的水平。而自己打分的困倦程度只在头几天上升，之后几乎不再增加。6 小时组和 4 小时组的自评困倦没有差别。这是把人随机分成两组做的对照试验（RCT）。另外，短时间不睡（急性睡眠剥夺，不超过 48 小时）对简单注意力走神的效果大小 g = -0.776，对推理准确率 g = -0.125。这部分是把 70 项研究合起来算的。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Van Dongen, Maislin, Mullington & Dinges (2003). The cumulative cost of additional wakefulness. Sleep. <https://doi.org/10.1093/sleep/26.2.117>；Lim & Dinges (2010). A meta-analysis of the impact of short-term sleep deprivation on cognitive variables. Psychological Bulletin. <https://doi.org/10.1037/a0018883>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：最重要的一点是，「自己觉得不困」不是睡够了的证据。长期睡 6 小时的人只是感觉上习惯了，表现并没有跟上。汇总多项研究的那部分说的是整夜不睡。「长期少睡」只有一项随机对照试验支持。睡多久和死亡风险的关系另算，见第 2 节第 13 条（每晚睡 7 小时左右）：那边按死亡率算，7 小时那档风险最低。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "version": 2,
+  "item": "04.7",
+  "role": "adversary",
+  "title": "Rozpisz złożone zadanie na części, zanim oszacujesz czas",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Przygotowanie listy etapów też zabiera czas. To ocena redakcji.",
+    "W praktyce": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+    "Korzyść i dowody": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań. Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+    "Ocena dowodów": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.",
+    "Ocena redakcyjna": "Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+    "Ograniczenia": "Dłuższe oszacowanie nie zawsze jest trafniejsze. Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4. Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację.",
+    "Źródła": "Kruger i Evans (2004), If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. [DOI i abstrakt z opisami eksperymentów](https://doi.org/10.1016/j.jesp.2003.11.001).",
+    "Zmiany w adaptacji": "Usunięto obietnicę mniejszej prokrastynacji oraz niepodaną w źródle skalę oszczędności czasu."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Rozpisz złożone zadanie na części, zanim oszacujesz czas"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Przygotowanie listy etapów też zabiera czas."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Rozpisuj zadania złożone."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Drobna, dobrze znana czynność nie wymaga osobnego planu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Dłuższe oszacowanie nie zawsze jest trafniejsze."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.jesp.2003.11.001",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": null,
+      "error": null,
+      "via": "blocked by api.crossref.org",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 7. 把大任务拆成子任务再估时、再开工"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。拆分本身花 5 到 15 分钟。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：人估工期的时候，不会自动把任务拆开一件件算。先把子任务列出来再估，就能少估短一截。拆开之后，每一小步都能马上动手，也就不那么容易拖。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：人们估工期时，不会自己把一件有好几头的任务拆成几块。比如写文献综述、写讨论、整理参考文献，这本来就是几件事。先把子任务列出来再估，能少犯把工期估短的毛病，这个毛病叫规划谬误。拆开之后，每一小步都成了一个可以立刻开始的动作，拖延也跟着变少。研究里最能预示拖延的因素，包括对这件事的厌恶感，以及任务本身被往后推。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Kruger, J., & Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. Journal of Experimental Social Psychology, 40(5), 586–598. <https://doi.org/10.1016/j.jesp.2003.11.001>；Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1). <https://doi.org/10.1037/0033-2909.133.1.65>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：拆到什么程度合适：以「每个子任务能在一次坐下来的时间里做完」为准，拆得过细本身也耗时间。另外，Kruger 和 Evans 那项只从摘要核实到方向，具体百分比没核到原文。"
+      }
+    ]
+  }
+}

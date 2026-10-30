@@ -1,0 +1,156 @@
+{
+  "version": 2,
+  "item": "03.1",
+  "role": "adversary",
+  "title": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+  "fields": {
+    "Koszt": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. To nakład redakcyjnie oceniany jako niewielki.",
+    "W praktyce": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.",
+    "Korzyść i dowody": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.",
+    "Ocena dowodów": "B — eksperyment dotyczący konkretnego zadania uwagowego.",
+    "Ocena redakcyjna": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź.",
+    "Ograniczenia": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich. Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu.",
+    "Źródła": "Stothart, Mitchum i Yehnert (2015), The attentional cost of receiving a cell phone notification. [DOI](https://doi.org/10.1037/xhp0000100); [abstrakt autorów w PubMed](https://pubmed.ncbi.nlm.nih.gov/26121498/).",
+    "Zmiany w adaptacji": "Zachowano B. Pominięto osobne twierdzenie o zmniejszeniu zdolności poznawczych przez samą obecność telefonu; nie służy ono tu jako podstawa porady."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To nakład redakcyjnie oceniany jako niewielki."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — eksperyment dotyczący konkretnego zadania uwagowego."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/xhp0000100",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1050,
+      "sha256": "b1ddc8882be0a52884c4cd4882ad66340b5f5d7fe7af8797997ee8add583e3e8",
+      "snapshot": "b9e3431329fe78b2.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/26121498/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6624,
+      "sha256": "40978327f5a046c7df61a5e6d3366cf2352dde76857f6f808b61ca9524fbda13",
+      "snapshot": "b394b3e33ccec52e.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 6547,
+        "wholeChars": 6547,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 1. 关掉非必要通知，工作时把手机放到视线之外"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。花几分钟改一下设置，几乎不需要毅力。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：手机响一下，哪怕你没看、没碰，注意力任务的成绩也会掉。掉的幅度和你真去接电话、发短信差不多。还有一种情况：手机就搁在桌上，你忍住不看，脑子能用的余量一样会变少。越离不开手机的人，掉得越多。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：只是收到一条通知，不看也不碰，注意力任务的成绩就明显变差。变差的幅度和真的接打电话、发短信相当。这是实验室里做的，受试者是大学生。另有两项实验显示：即便成功克制住不去看手机，自己的手机搁在旁边，也会让脑子能用的余量变少。手机依赖强的人下降最多。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Stothart, Mitchum & Yehnert (2015). The attentional cost of receiving a cell phone notification. Journal of Experimental Psychology: Human Perception and Performance. <https://doi.org/10.1037/xhp0000100>；Ward, Duke, Gneezy & Bos (2017). Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity. Journal of the Association for Consumer Research. <https://doi.org/10.1086/691462>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：这些都是实验室里的单次任务。天天这样累积下来是什么结果，没人测过。真正需要随叫随到的岗位，可以只留少数几个联系人的通知。"
+      }
+    ]
+  }
+}
