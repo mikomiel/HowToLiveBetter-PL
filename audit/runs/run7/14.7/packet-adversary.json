@@ -1,0 +1,212 @@
+{
+  "version": 2,
+  "item": "14.7",
+  "role": "adversary",
+  "title": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych",
+  "fields": {
+    "Koszt": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać. To ocena redakcji.",
+    "W praktyce": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia. Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje. Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+    "Korzyść i dowody": "RODO wymaga ograniczenia danych do niezbędnych dla celu. Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania. Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy. Strona pomocy Androida opisuje zmianę uprawnień aplikacji.",
+    "Ocena dowodów": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.",
+    "Ocena redakcyjna": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.",
+    "Ograniczenia": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli. To zestawienie redakcji, nie wniosek z cytowanych źródeł. Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO). Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy. Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu. To nie jest rozstrzygnięcie legalności konkretnej aplikacji. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+    "Źródła": "[RODO, art. 4 pkt 11 oraz art. 5–7, tekst urzędowy udostępniony przez UODO](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [Google: zmiana uprawnień aplikacji](https://support.google.com/android/answer/9431959?hl=pl).",
+    "Zmiany w adaptacji": "Oryginalne A zastąpiono C dla normy prawnej. Chińskie przepisy zastąpiono odpowiednim zakresem RODO, bez obietnicy, że każda odmowa zgody musi pozostawić usługę dostępną. Poprawka 2026-10-29: źródło systemowe nazwano stroną pomocy, związek między uprawnieniem a zgodą opisano jako zestawienie redakcji, a zdanie o odmowie ograniczono do treści art. 7 ust. 4; dodano zastrzeżenie o braku przeglądu prawnika. Tytuł nie wprowadza już podziału „wymagane”/„dodatkowe” ani nie twierdzi, że uprawnienie nie jest zgodą, czego żadne z cytowanych źródeł nie opisuje; zdanie o funkcjach zastąpiono opisem tego, co mówi strona pomocy."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy."
+    },
+    {
+      "id": "Korzyść i dowody#4",
+      "field": "Korzyść i dowody",
+      "index": 4,
+      "text": "Strona pomocy Androida opisuje zmianę uprawnień aplikacji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "To zestawienie redakcji, nie wniosek z cytowanych źródeł."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO)."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu."
+    },
+    {
+      "id": "Ograniczenia#6",
+      "field": "Ograniczenia",
+      "index": 6,
+      "text": "To nie jest rozstrzygnięcie legalności konkretnej aplikacji."
+    },
+    {
+      "id": "Ograniczenia#7",
+      "field": "Ograniczenia",
+      "index": 7,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/android/answer/9431959?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/android/answer/9431959?hl=pl",
+      "finalUrl": "https://support.google.com/android/answer/9431959?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4358,
+      "sha256": "2f9aa0ed1f190b93c63476be758cdc6cb7b57c6b0152265fe3ce6b4e0dd0c4eb",
+      "snapshot": "96ed8430ad13bbdc.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 4276,
+        "wholeChars": 6655,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 7. 别为了用 App 点「全部同意」：不是必需的信息，你不同意也不能拒绝给你服务"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。难的是要忍住不点「全部同意」。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：App 要你的信息，如果不是提供这项服务必须用的，你不同意给，它不能因此不让你用。它能收的，也只限于用得着的那些。地图要你的位置是必须的，手电筒要你的通讯录就不是。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：法律明写了两条。一是不得以个人不同意、或者撤回同意为由，拒绝提供产品或者服务；处理这些信息属于提供服务所必需的除外。二是收集应当限于实现处理目的的最小范围，只能收用得着的那些"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第六条「收集个人信息，应当限于实现处理目的的最小范围，不得过度收集个人信息」；第十六条「个人信息处理者不得以个人不同意处理其个人信息或者撤回同意为由，拒绝提供产品或者服务；处理个人信息属于提供产品或者服务所必需的除外」；第十五条「基于个人同意处理个人信息的，个人有权撤回其同意。个人信息处理者应当提供便捷的撤回同意的方式」"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：判断标准是这项信息是不是提供这个服务所必需的。地图要位置是必需的，手电筒要通讯录不是。App 装完，先到手机设置里的应用权限页，把不必需的权限关掉。等真用到的时候，再选只这一次允许。"
+      }
+    ]
+  }
+}

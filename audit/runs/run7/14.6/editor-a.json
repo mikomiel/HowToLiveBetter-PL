@@ -1,0 +1,85 @@
+{
+  "item": "14.6",
+  "edits": [
+    {
+      "field": "title",
+      "original": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty",
+      "replacement": "Sprawdzaj sesje logowania, uprawnienia aplikacji i przekazywanie poczty e-mail",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji.",
+      "replacement": "Sprawdź listy sesji i połączonych aplikacji dostępne w usłudze. Sesja to trwające zalogowanie na urządzeniu lub w przeglądarce.",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Usuń zbędne dostępy.",
+      "replacement": "Wyloguj zbędne sesje i cofnij dostęp zbędnym aplikacjom.",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.",
+      "replacement": "Przy podejrzeniu przejęcia konta: skorzystaj z oficjalnej instrukcji odzyskiwania; sprawdź obce reguły przekazywania poczty; zmień przejęte lub powtórzone hasła; wyloguj pozostałe sesje zgodnie z procedurą dostawcy.",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "zakończenia dostępu urządzeń i aplikacji",
+      "replacement": "cofnięcia dostępu urządzeniom i aplikacjom",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "Nieznana lokalizacja sama nie rozstrzyga o ataku.",
+      "replacement": "Nieznana lokalizacja logowania sama nie rozstrzyga o ataku.",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "NCSC",
+      "why": "Skrót instytucji bez rozwinięcia i bez kraju. Czytelnik w Polsce nie wie, o które NCSC chodzi, a pierwsze użycie w rozdziale powinno wyjaśniać nazwę. Nazwa instytucji jest chroniona, więc jej nie zmieniam. Weryfikator powinien rozwinąć nazwę pełną nazwą i krajem, jeśli źródło to potwierdza."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "nieznane zmiany",
+      "why": "Brakuje dopełnienia: nie wiadomo, czego dotyczą zmiany (ustawień konta, danych odzyskiwania, czegoś innego) ani komu mają być nieznane. Czytelnik nie wie, co ma sprawdzić. Nie zgaduję treści, więc zostawiam do decyzji weryfikatora, który ma dostęp do źródła."
+    },
+    {
+      "field": "W praktyce",
+      "text": "obce reguły przekazywania poczty",
+      "why": "Przymiotnik 'obce' w odniesieniu do reguł brzmi nienaturalnie (kalka). Po polsku zwykle mówi się 'nieznane reguły' albo 'reguły, których nie ustawiono samodzielnie'. Nie edytuję, bo słowo wyznacza, które reguły użytkownik ma uznać za podejrzane, a nie widzę źródła; 'obce' i 'nieznane' mogą różnić się znaczeniem."
+    },
+    {
+      "field": "W praktyce",
+      "text": "przejęte lub powtórzone hasła",
+      "why": "'Powtórzone hasła' to kalka. Po polsku hasło nie jest 'powtórzone', tylko używane ponownie, na przykład w innych usługach ('ponownie używane hasła'). Nie edytuję, bo nazwa kategorii haseł do zmiany jest wiążąca w instrukcji bezpieczeństwa, a nie widzę źródła; zakres 'ponownie' (gdzie) trzeba potwierdzić. Spójnik 'lub' też jest chroniony."
+    },
+    {
+      "field": "Koszt",
+      "text": "Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.",
+      "why": "Zdanie odnosi się do częstotliwości, której nigdzie w pozycji nie podano, więc czytelnik nie wie, jaki wybór redakcyjny ma na myśli. Pole Ograniczenia mówi o 'harmonogramie', a Koszt o 'częstotliwości przeglądu': dwa różne słowa na tę samą rzecz. Słowa o częstotliwości są chronione, więc nie edytuję. Weryfikator powinien zdecydować, czy podać częstotliwość, czy usunąć zdanie, oraz ujednolicić nazwę."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie ma tu jednego harmonogramu dla wszystkich usług",
+      "why": "Słowo 'tu' nie ma jasnego odniesienia, a 'harmonogram' nie występuje nigdzie indziej w pozycji (Koszt używa 'częstotliwość przeglądu'). Zdanie zawiera też negację i kwantyfikatory ('jednego', 'wszystkich'), które są chronione, więc nie edytuję."
+    },
+    {
+      "field": "title",
+      "text": "uprawnienia aplikacji",
+      "why": "Tytuł mówi o 'uprawnieniach aplikacji', a treść o 'połączonych aplikacjach' i o 'dostępie'. Czytelnik może nie rozpoznać, że to ta sama rzecz. 'Uprawnienia' to termin z kategorii praw i obowiązków, więc go nie zmieniam. Weryfikator powinien potwierdzić, że te trzy sformułowania oznaczają to samo, i wybrać jedno."
+    }
+  ],
+  "verdict": "needs_edits"
+}

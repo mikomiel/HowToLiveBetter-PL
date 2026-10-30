@@ -1,0 +1,146 @@
+{
+  "version": 2,
+  "item": "14.12",
+  "role": "verifier",
+  "title": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta",
+  "fields": {
+    "Koszt": "Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania. Nie zakładamy stałego czasu wykonania.",
+    "W praktyce": "W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp. Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy. Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.",
+    "Korzyść i dowody": "Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia. To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie.",
+    "Ocena dowodów": "C — dokumentacja dostawcy i redakcyjna lista kontrolna, bez badania unikniętych strat.",
+    "Ocena redakcyjna": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej. Lista usług jest przykładem, nie kompletnym rejestrem twoich kont.",
+    "Ograniczenia": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej. Dokumentacja Google nie dowodzi sposobu działania wszystkich usług. Potwierdź wymagania bezpośrednio u własnego dostawcy."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie zakładamy stałego czasu wykonania."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — dokumentacja dostawcy i redakcyjna lista kontrolna, bez badania unikniętych strat."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Lista usług jest przykładem, nie kompletnym rejestrem twoich kont."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Dokumentacja Google nie dowodzi sposobu działania wszystkich usług."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Potwierdź wymagania bezpośrednio u własnego dostawcy."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "finalUrl": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 5307,
+      "sha256": "65b0333b2747c4312df116d6f4e2f8e8c36edd87ce9a37e4839d1837fba2b8e2",
+      "snapshot": "99611c948c4b589f.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 5181,
+        "wholeChars": 9057,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6873,
+      "sha256": "2680430c2ca39b314f2e7f353477c6d14b9f6b1223e64ed9d3da5782863b3f29",
+      "snapshot": "4f1351e404cb2044.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 6804,
+        "wholeChars": 9603,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

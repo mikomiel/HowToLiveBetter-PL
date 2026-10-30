@@ -1,0 +1,144 @@
+{
+  "version": 2,
+  "item": "04.4",
+  "role": "verifier",
+  "title": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To szacunek redakcji.",
+    "W praktyce": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.",
+    "Korzyść i dowody": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia. W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej. To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności.",
+    "Ocena dowodów": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+    "Ocena redakcyjna": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu.",
+    "Ograniczenia": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego. Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki). Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To szacunek redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — pojedynczy eksperyment z udziałem 123 studentów."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/0022-3514.67.3.366",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 223,
+      "sha256": "0a168315764b8243917db66ec6d640fee4474ba0e79eb857ca13acc7542c3fb8",
+      "snapshot": "3fcf7218a7f1a5b5.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "finalUrl": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 129388,
+      "sha256": "5b8705c0083426b88ec3d6679d2658d0b9645646ac7a0d8da82335d67d20e8d1",
+      "snapshot": "e70647d0627ff840.txt",
+      "info": {
+        "pages": 16
+      }
+    }
+  ],
+  "warnings": []
+}

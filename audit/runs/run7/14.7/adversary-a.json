@@ -1,0 +1,110 @@
+{
+  "item": "14.7",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Nie klikać „zgadzam się na wszystko” tylko po to, by korzystać z aplikacji", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Odmówić informacji niepotrzebnych do usługi, opierając się na gwarancji, że aplikacja nie może z tego powodu odmówić usługi", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Kryterium: aplikacja może zbierać tylko to, co potrzebne (mapa - lokalizacja tak, latarka - kontakty nie)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Powołać się na zakaz odmowy usługi z powodu braku zgody lub jej wycofania (pierwsza z dwóch norm)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Zbieranie ograniczone do minimalnego zakresu potrzebnego do celu (druga z dwóch norm)", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 7, "upstream_action": "Skorzystać z prawa wycofania zgody i wygodnego sposobu jej wycofania", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Po instalacji wejść w ustawienia telefonu, na stronę uprawnień aplikacji, i wyłączyć uprawnienia niepotrzebne", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Gdy funkcja naprawdę jest używana, wybrać zgodę tylko na ten jeden raz", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "why": "Upstream gives two steps: switch off unnecessary permissions, and when a feature is really used grant it only this one time. The item keeps only the revoke step and makes it conditional on not using the feature. A reader who does use the feature gets no middle path. The Android snapshot lists in-between options (only while using the app, always ask), but only for location, camera and microphone; for contacts, the item's own example, it lists only Zezwól or Nie zezwalaj. So the upstream step cannot be copied over unchanged, and the item neither offers a substitute nor says that none exists. No safety consequence; the reader is only left with revoke-or-keep.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "等真用到的时候，再选只这一次允许。"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 29, "text": "W przypadku uprawnień do wykorzystywania lokalizacji, aparatu i mikrofonu możesz wybrać następujące opcje:"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 33, "text": "aplikacja może korzystać z uprawnień tylko wtedy, gdy jej używasz."},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 27, "text": "Aby zmienić zbiór uprawnień, kliknij je i wybierz Zezwól lub Nie zezwalaj."}
+      ],
+      "fix_direction": "Say what a reader who still needs the feature can do, limited to the options and permission types the Android snapshot actually names, or state openly that the item offers no middle option. Do not carry over the upstream 'only this one time' wording unless a snapshot supports it for the permission concerned."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#4",
+      "text": "nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy",
+      "why": "The upstream core promise (declining unnecessary data must not cost you the service) is dropped on purpose and the drop is disclosed, which is the safer course because no EU rule in the snapshot makes that promise. But the item then gives no path to a reader whose app stops working after they decline. Also, the same RODO snapshot contains a related statement the item does not use: consent is not regarded as freely given where performance of a contract, including a service, is made conditional on consent that is not necessary for it. The flat 'nie rozstrzyga' is true of art. 7 ust. 4 taken alone but understates what the snapshot text offers, and leaves the reader thinking that declining has no recognised basis.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "你不同意给，它不能因此不让你用。"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 517, "text": "lub jeżeli od zgody uzależnione jest wykonanie"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 518, "text": "mimo że do jej wykonania zgoda nie jest niezbędna."},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2512, "text": "zgody na przetwarzanie danych nie jest uzależnione wykonanie umowy, w tym świadczenie usługi, jeśli przetwarzanie"}
+      ],
+      "fix_direction": "Tell the reader what remains open to them when an app is unusable without unnecessary consent, using only what the stored texts support. If recital 43 is meant to stay out of scope (the item cites art. 4 pkt 11 and art. 5-7), say that the recitals were not used rather than leaving the gap implicit."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "Koszt#1",
+      "text": "Przeczytanie celu dostępu i zmiana ustawień",
+      "why": "The Android page supports reviewing and changing permissions. It does not say that a permission request shows a purpose; it describes a request to use a device function that the user accepts or refuses. A purpose and the right to withdraw are things RODO says a person is told about before consenting, which is a different step from the system dialog. 'Przeczytaj cel dostępu' (also W praktyce#1 'do czego aplikacja chce dostępu') therefore has no stored source for the permission case, and the reader is not told where such a purpose can be read.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Aplikacja wyświetli powiadomienie z prośbą o pozwolenie na korzystanie z funkcji urządzenia, którą możesz zaakceptować lub odrzucić."},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2508, "text": "jest o tym informowana, zanim wyrazi zgodę."},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 507, "text": "stratora oraz zamierzone cele przetwarzania danych osobowych."}
+      ],
+      "fix_direction": "Separate the two steps: what the system shows for a permission (the name of the function) and where the purpose of data processing is stated for consent. Either name a place for the purpose that a stored source supports or drop 'celu dostępu' from the permission step."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia",
+      "why": "Without the linked page the reader is not told where to revoke a permission, and the action field does not name a platform, although Ograniczenia#5 says the source covers Android only. A reader on another system gets an instruction with no path. Ograniczenia#5 also speaks of 'część kroków' that apply only to selected phones, but the item contains no steps. The page itself restricts some of its actions to a Pixel phone with Android 15 or later, so the item's Android scope is narrower than the action field suggests.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 13, "text": "niektóre z tych czynności można wykonać tylko na telefonie Pixel z Androidem 15 lub nowszym."},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 27, "text": "Aby zmienić zbiór uprawnień, kliknij je i wybierz Zezwól lub Nie zezwalaj."}
+      ],
+      "fix_direction": "Make the action field state that the supported path is the Android settings screen, or give a platform-neutral pointer that does not depend on the link; and either include the steps that Ograniczenia#5 refers to or reword that sentence."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu.",
+      "why": "Art. 5 ust. 1 lit. c concerns personal data, and the duty to comply and to demonstrate it lies with the controller (administrator). The sentence drops both 'osobowych' and the addressee, so it reads as a general rule on what apps may collect, which the reader may carry over to device permissions. Ograniczenia#1-2 flag the pairing of permission and consent as editorial, but this sentence in Korzyść i dowody does not.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2376, "text": "Dane osobowe muszą być:"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2386, "text": "adekwatne, stosowne oraz ograniczone do tego, co niezbędne do celów, w których są przetwarzane"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2407, "text": "Administrator jest odpowiedzialny za przestrzeganie przepisów ust. 1"}
+      ],
+      "fix_direction": "Restore 'danych osobowych' and the controller as the party bound, or mark the link to app permissions as the editors' reading in the same field."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#5",
+      "text": "opisuje, jak ich włączenie wpływa na działanie aplikacji",
+      "why": "The sentence repeats the page's own introductory claim. The permission entries that follow are one-line definitions of what each permission allows, not descriptions of how enabling it changes how an app works, so the sentence suggests more content than the snapshot holds. The page also carries a notice that its Polish text may be AI-translated and contain errors; the item's limitations do not mention it, although the item relies on this page for the permission step.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 55, "text": "Poniżej znajdziesz listę uprawnień wraz z opisem tego, jak ich włączenie wpływa na działanie aplikacji."},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 63, "text": "Kontakty: dostęp do kontaktów."},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 115, "text": "Ta strona może zawierać treści przetłumaczone przy użyciu technologii AI."}
+      ],
+      "fix_direction": "Limit the sentence to what the page lists (permission types and what each allows) and add the page's own caveat about machine translation."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych",
+      "why": "'Osobno' still presents permissions and consents as two separate checks. Neither stored source relates the two: the Android page speaks of access to device functions and RODO defines consent. The Zmiany field says the title no longer asserts the distinction. The separation is an editorial framing, called such only in Ograniczenia#2; the title and W praktyce carry it without that label. Low priority because the action itself (check both) is harmless.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Możesz zezwolić niektórym aplikacjom na korzystanie z różnych funkcji urządzenia"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2274, "text": "dobrowolne, konkretne, świadome i jednoznaczne okazanie woli,"}
+      ],
+      "fix_direction": "Either keep the title and accept that Zmiany overstates its neutrality, or word the title and Zmiany so that the two-check structure is plainly the editors' framing."
+    }
+  ],
+  "notes": "No protocol violation: I read only the role file, AGENTS.md, README.md (lines 38-87, which include the section 'Jak czytać dowody' at lines 42-56 plus a few lines on each side), the packet and the two snapshots (Grep always with the exact snapshot path). Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened; no shell, network or scripts used. Not raised as a finding: upstream line 3 states no money cost (不花钱) while Koszt#1 names only time and effort, and AGENTS.md asks for money, time and effort to be separated. Recency: the RODO snapshot is the OJ text dated 4.5.2016 and the Android page carries no date; the snapshots show no conflict, so the attack was run without a finding. Whether the OJ text has since been corrected or consolidated is not decidable from the snapshots and was not asserted. No Chinese institution, threshold, hotline, deadline or liability rule appears in reader-facing fields (the Zmiany field only says the Chinese provisions were replaced). Grade C matches README for a legal norm plus an operating instruction. Figures are only article references (art. 4 pkt 11, art. 5-7, art. 6 ust. 1, art. 7 ust. 4) and all match the snapshot text. In preservation, fallback_stated true on a kept action means only that no fallback was needed."
+}

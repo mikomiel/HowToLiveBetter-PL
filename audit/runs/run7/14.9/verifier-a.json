@@ -1,0 +1,180 @@
+{
+  "item": "14.9",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "37cae0082d72986d.txt", "line": 101, "text": "Administrator musi ustalić podstawę prawną wykorzystywania danych"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2732, "text": "cele przetwarzania danych osobowych, oraz podstawę prawną przetwarzania;"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 92, "text": "czy istnieją inne mniej inwazyjne rozwiązania? Inne metody, dzięki którym"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 94, "text": "czy można dać osobie, której dane dotyczą, wybór rozwiązania?"}
+      ],
+      "reason": "Weakest part: 'alternatywę'. Purpose and legal basis are backed: GDPR Art. 13(1)(c) lists them as information the controller gives the person when collecting data, and the UODO lecture says the controller must establish the legal basis. For alternatives the UODO lecture lists them only as questions the controller must assess (is there a less invasive method, can the person be given a choice). No snapshot tells the person to ask about an alternative or says the person is entitled to one or to an answer."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2724, "text": "Jeżeli dane osobowe osoby, której dane dotyczą, zbierane są od tej osoby, administrator podczas pozyskiwania"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2727, "text": "swoją tożsamość i dane kontaktowe oraz, gdy ma to zastosowanie, tożsamość i dane kontaktowe swojego przedsta"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2732, "text": "cele przetwarzania danych osobowych, oraz podstawę prawną przetwarzania;"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2750, "text": "okres, przez który dane osobowe będą przechowywane, a gdy nie jest to możliwe, kryteria ustalania tego okresu;"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 101, "text": "Administrator musi ustalić podstawę prawną wykorzystywania danych"}
+      ],
+      "reason": "Backed by quotes only (no dependency row). GDPR Art. 13 lists identity of the controller (who), purposes and legal basis (why, on what basis) and the retention period (how long) as information the controller gives the person when collecting data from them. Asking for exactly this is the person-side counterpart of that duty."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zapytaj także o inną metodę.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "37cae0082d72986d.txt", "line": 92, "text": "czy istnieją inne mniej inwazyjne rozwiązania? Inne metody, dzięki którym"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 94, "text": "czy można dać osobie, której dane dotyczą, wybór rozwiązania?"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 279, "text": "jakim jest kontrola wejść do szkoły, zwłaszcza że istnieją alternatywne środki."}
+      ],
+      "reason": "Backed: whether another, less invasive method exists, and whether the person can be offered a choice, are questions the controller must answer when assessing biometrics (UODO lecture, and the Marseille court as relayed there). Not backed: that the person should ask the organization about it, or has any entitlement to an alternative or to an answer. The sources address the controller, not the data subject, and Art. 13 does not list alternatives among the information given to the person."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2286, "text": "„dane biometryczne” oznaczają dane osobowe, które wynikają ze specjalnego przetwarzania technicznego, dotyczą"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2287, "text": "cech fizycznych, fizjologicznych lub behawioralnych osoby fizycznej oraz umożliwiają lub potwierdzają"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2288, "text": "jednoznaczną identyfikację tej osoby, takie jak wizerunek twarzy lub dane daktyloskopijne;"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 650, "text": "definicją „danych biometrycznych” tylko w przypadkach, gdy są przetwarzane specjalnymi metodami"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 651, "text": "technicznymi, umożliwiającymi jednoznaczną identyfikację osoby fizycznej lub potwierdzenie jej tożsamości."}
+      ],
+      "reason": "Art. 4 pkt 14 gives the definition; recital 51 attaches the identification element to the technical methods, as the sentence does."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "37cae0082d72986d.txt", "line": 59, "text": "Zgodnie z art. 9 ust. 1 RODO zabrania się przetwarzania danych osobowych"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2553, "text": "danych genetycznych, danych biometrycznych w celu jednoznacznego zidentyfikowania osoby fizycznej lub danych"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2557, "text": "Ust. 1 nie ma zastosowania, jeżeli spełniony jest jeden z poniższych warunków:"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 66, "text": "Zgodnie z art. 9 ust. 2 RODO wyżej wymieniony ustęp nie ma zastosowania,"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 69, "text": "Katalog wymieniony w art. 9 ust. 2 RODO jest zamknięty. Każda z przesłanek"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 645, "text": "wymagają szczególnej ochrony, gdyż kontekst ich przetwarzania może powodować poważne ryzyko dla"}
+      ],
+      "reason": "Art. 9(1) prohibits processing of biometric data for the purpose of uniquely identifying a person; Art. 9(2) lists the conditions in which the prohibition does not apply (UODO: a closed catalogue)."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2559, "text": "osoba, której dane dotyczą, wyraziła wyraźną zgodę na przetwarzanie tych danych osobowych w jednym lub kilku"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2563, "text": "przetwarzanie jest niezbędne do wypełnienia obowiązków i wykonywania szczególnych praw przez administratora"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2569, "text": "przetwarzanie jest niezbędne do ochrony żywotnych interesów osoby, której dane dotyczą, lub innej osoby fizycznej,"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 71, "text": "autonomiczny i niezależny. Oznacza to, że spełnienie co najmniej jednej z nich"}
+      ],
+      "reason": "Art. 9(2)(a) is explicit consent; points (b) to (j) are further conditions, and the UODO lecture calls each condition autonomous and independent."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "C — norma prawna dotycząca kategorii danych",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 20, "text": "ROZPORZĄDZENIE PARLAMENTU EUROPEJSKIEGO I RADY (UE) 2016/679"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2548, "text": "Przetwarzanie szczególnych kategorii danych osobowych"}
+      ],
+      "reason": "The grade letter C is editorial and was not checked. The words after it describe the main source: GDPR is a Regulation (a legal norm) and Art. 9 is about special categories of personal data."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie porównanie skuteczności metod logowania.",
+      "verdict": "absent_in_source",
+      "searched": ["89be0046cf8ac2b2.txt", "37cae0082d72986d.txt"],
+      "reason": "Searched both full-text snapshots (88 and 20 pages, whole text) for skuteczn*, logowani*, uwierzytelni*, porówn*, hasło/haseł. Neither contains a comparison of the effectiveness of login methods. The GDPR text is a regulation. The UODO lecture only relays EDPS theses about accuracy and circumvention of biometric identification (lines 303-346), with no comparison against other methods."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 649, "text": "powinno zawsze stanowić przetwarzania szczególnych kategorii danych osobowych, gdyż fotografie są objęte"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 650, "text": "definicją „danych biometrycznych” tylko w przypadkach, gdy są przetwarzane specjalnymi metodami"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 651, "text": "technicznymi, umożliwiającymi jednoznaczną identyfikację osoby fizycznej lub potwierdzenie jej tożsamości."}
+      ],
+      "reason": "Recital 51 says processing of photographs should not always constitute processing of special categories, because photographs fall under the definition of biometric data only when processed by special technical means enabling unique identification."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 508, "text": "dobrowolne, jeżeli osoba, której dane dotyczą, nie ma rzeczywistego lub wolnego wyboru oraz nie może"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 509, "text": "odmówić ani wycofać zgody bez niekorzystnych konsekwencji."},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2559, "text": "osoba, której dane dotyczą, wyraziła wyraźną zgodę na przetwarzanie tych danych osobowych w jednym lub kilku"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2563, "text": "przetwarzanie jest niezbędne do wypełnienia obowiązków i wykonywania szczególnych praw przez administratora"},
+        {"snapshot": "37cae0082d72986d.txt", "line": 160, "text": "dobrowolną, skoro jej brak wywoływał negatywne skutki w postaci"}
+      ],
+      "reason": "Weakest part: 'żądania alternatywy'. Backed: refusal matters where processing rests on consent, and consent counts as voluntary only if the person can refuse without adverse consequences (recital 42; UODO school case); Art. 9(2) has other conditions that need no consent, so the possibility of refusing depends on which basis applies. Not backed: no snapshot says a person may demand an alternative method in any context; the UODO lecture only asks the controller whether a choice can be offered (line 94)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Ochronę logowania opisuje [14.1](#porada-14-1).",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#5",
+      "kind": "meta_statement",
+      "claim": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "Title tells the person to ask about an alternative; the sources frame alternatives as the controller's own assessment, not as something the person can ask for or obtain."},
+    {"id": "W praktyce#1", "note": "Art. 13 applies when data are collected from the person and lapses where the person already has the information (Art. 13(4)); the sentence says 'organizacja' in general, while the snapshots cover only GDPR duties of controllers, not other regimes."},
+    {"id": "W praktyce#2", "note": "Sources speak to controllers (assess alternatives, consider a choice); the sentence addresses the individual."},
+    {"id": "Korzyść i dowody#1", "note": "Art. 4(14) also requires that the data relate to physical, physiological or behavioural characteristics of a person; the sentence names only the technical-processing and identification elements and does not claim to be the whole definition."},
+    {"id": "Korzyść i dowody#2", "note": "Art. 9(4) lets Member States keep or add further conditions or limits for biometric data; not mentioned in the sentence and not claimed."},
+    {"id": "Korzyść i dowody#3", "note": "Reader might assume that an Art. 9(2) condition alone makes processing lawful. The UODO lecture (lines 71-72) says one condition suffices; recital 51 (lines 656-658) says the general rules, including the conditions of lawfulness, still apply. The sentence says neither."},
+    {"id": "Ocena dowodów#1.1", "note": "The second cited snapshot is a UODO online lecture (28 April 2021), a regulator's interpretation, not a legal norm; the sentence does not call it one, but a reader might assume the norm label covers it."},
+    {"id": "Ograniczenia#1", "note": "The support is recital 51, a preamble that explains the operative text, not an operative article. The recital says photographs should not always be special-category data; the sentence says 'zdjęcie' and 'automatycznie', consistent with that."},
+    {"id": "Ograniczenia#2", "note": "No snapshot addresses a right to demand an alternative method; the dependence of refusal on context and legal basis is shown only through consent (recital 42, UODO school case) versus the other Art. 9(2) conditions."}
+  ],
+  "notes": "No protocol violation: I opened only AGENTS.md, the role file, the packet and the two cited snapshots 89be0046cf8ac2b2.txt and 37cae0082d72986d.txt. Status UNAVAILABLE because three recommendation or source rows are 'partly' (title#1, W praktyce#2, Ograniczenia#2), all for the same reason: the sources never say that the person can ask for or demand an alternative method. Judgement calls: (1) Ocena dowodów#1 was split into a source_description and an absent_in_source row because 'nie porównanie skuteczności metod logowania' says something is not in the source. (2) W praktyce#1 is treated as fully backed by quotes of GDPR Art. 13 (information duties of the controller) with no depends_on, because no row of the item states the Art. 13 duties. (3) The GDPR snapshot is the Official Journal text of 4.5.2016; later corrigenda or consolidated versions were not checked."
+}

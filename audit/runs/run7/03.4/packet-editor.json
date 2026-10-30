@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.4",
+  "role": "editor",
+  "title": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+  "fields": {
+    "Koszt": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny. Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+    "W praktyce": "Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby. Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu. To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa.",
+    "Korzyść i dowody": "Metaanaliza Gardiner i współautorów objęła 24 badania. Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym. Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg).",
+    "Ocena dowodów": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą.",
+    "Ocena redakcyjna": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.",
+    "Ograniczenia": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie. Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą."
+  }
+}

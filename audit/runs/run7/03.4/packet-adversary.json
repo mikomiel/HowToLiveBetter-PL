@@ -1,0 +1,192 @@
+{
+  "version": 2,
+  "item": "03.4",
+  "role": "adversary",
+  "title": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+  "fields": {
+    "Koszt": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny. Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+    "W praktyce": "Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby. Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu. To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa.",
+    "Korzyść i dowody": "Metaanaliza Gardiner i współautorów objęła 24 badania. Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym. Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg).",
+    "Ocena dowodów": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą.",
+    "Ocena redakcyjna": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.",
+    "Ograniczenia": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie. Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.",
+    "Źródła": "Gardiner i współautorzy (2023), The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. [Artykuł i abstrakt](https://doi.org/10.1016/j.smrv.2023.101764); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).",
+    "Zmiany w adaptacji": "Zachowano A. Usunięto sztywną godzinę 14:00 i przeliczenie każdej filiżanki na tę samą dawkę. Nie przeniesiono wyniku dużej dawki na każdy napój. Poprawka 2026-10-29: usunięto określenie „model”, zależność wielkości efektu od dawki i pory oraz wrażliwość indywidualną, bo cytowany abstrakt ich nie potwierdza; odstęp od snu opisano jako zalecenie autorów dla dwóch napojów. Tytuł i zdanie o odstępach oparto na tym, że źródła podają odstęp od pory snu (6; 8,8 i 13,2 godziny, każdy dla innego napoju lub suplementu); krok obserwacji własnej oznaczono jako propozycję redakcji, bo żadne źródło go nie zaleca; „lub ogranicz” oraz zdania o braku godziny na zegarze i o braku opisu wrażliwości usunięto, bo samego abstraktu nie da się z nimi zestawić."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Przy trudnościach ze snem przesuń ją wcześniej."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg)."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.smrv.2023.101764",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1472,
+      "sha256": "8d78ca8d99ab9921d3275d8a420143eec40ac3a86faacb6542f4b48df6b38e81",
+      "snapshot": "df5a689db3e18396.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 4. 下午两点以后不碰咖啡因"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。习惯下午喝咖啡的人，要忍住不喝，需要一点毅力。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：睡前 6 小时吃下 400 mg 咖啡因，差不多是三四杯咖啡，当晚用仪器测出来少睡 1 小时以上。可自己写的睡眠日记根本看不出差别。一杯 250 mL 的咖啡（107 mg）要在睡前 8.8 小时以上喝完，才不影响睡眠。十一点睡的人，下午两点就是界线。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：睡前 6 小时吃下含 400 mg 咖啡因的药片，仪器测到的总睡眠时间比吃安慰剂片少 1.1 到 1.2 小时。按一杯 250 mL 的咖啡含 107 mg 算，400 mg 约是三四杯咖啡的量。安慰剂片外观一样，但不含咖啡因。可是受试者自己写的睡眠日记没有报出差别，自己察觉不到。把多项研究合起来算（荟萃分析）：咖啡因平均让总睡眠时间减少 45 分钟。躺在床上真正睡着的比例（睡眠效率）下降 7%。一杯 250 mL 的咖啡（107 mg）要在睡前 8.8 小时以上喝完，才不影响睡眠。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Drake, Roehrs, Shambroom & Roth (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. Journal of Clinical Sleep Medicine. <https://doi.org/10.5664/jcsm.3170>；Gardiner et al. (2023). The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. Sleep Medicine Reviews. <https://doi.org/10.1016/j.smrv.2023.101764>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：Drake 那项只有一个实验室做过，用的 400 mg 偏大，等于一次喝掉一天的上限，上限见第 2 节第 26 条（三到四杯咖啡）。咖啡因代谢慢的人，截止时间还要更早。少喝咖啡因换回来的是睡眠时长，和第 3 条（每晚睡够 7 到 8 小时）叠加。"
+      }
+    ]
+  }
+}

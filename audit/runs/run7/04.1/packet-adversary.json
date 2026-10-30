@@ -1,0 +1,159 @@
+{
+  "version": 2,
+  "item": "04.1",
+  "role": "adversary",
+  "title": "Zapisz, kiedy i w jakiej sytuacji zaczniesz działać",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Chwila na zapisanie planu i późniejszy wysiłek wykonania zadania. To szacunek redakcji.",
+    "W praktyce": "Zamiast „zajmę się tekstem” napisz: „Gdy we wtorek usiądę po śniadaniu przy biurku, otworzę plik i napiszę pierwszy akapit”. Wybierz cel, który rzeczywiście chcesz zrealizować.",
+    "Korzyść i dowody": "Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”. Średni efekt dla realizacji celów wyniósł d = 0,65. To standaryzowana miara różnicy, nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin.",
+    "Ocena dowodów": "A — ilościowa synteza wielu badań; wynik dotyczy realizacji celów, nie oszczędności czasu w Polsce.",
+    "Ocena redakcyjna": "Mały koszt przygotowania uzasadnia próbę. Sprawdź, czy plan pomaga w twoim konkretnym zadaniu.",
+    "Ograniczenia": "Wynik jest średnią z różnych zadań i grup. Plan nie zapewnia sukcesu i nie zastępuje umiejętności ani zasobów potrzebnych do działania.",
+    "Źródła": "Gollwitzer i Sheeran (2006), Implementation intentions and goal achievement: A meta-analysis of effects and processes. [DOI i abstrakt wydawcy](https://doi.org/10.1016/S0065-2601%2806%2938002-1).",
+    "Zmiany w adaptacji": "Dodano polski przykład i wyjaśnienie d. Nie obiecujemy oszczędności czasu ani łatwego wykonania samego zadania."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zapisz, kiedy i w jakiej sytuacji zaczniesz działać"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Chwila na zapisanie planu i późniejszy wysiłek wykonania zadania."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To szacunek redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zamiast „zajmę się tekstem” napisz: „Gdy we wtorek usiądę po śniadaniu przy biurku, otworzę plik i napiszę pierwszy akapit”."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Wybierz cel, który rzeczywiście chcesz zrealizować."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Średni efekt dla realizacji celów wyniósł d = 0,65."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "To standaryzowana miara różnicy, nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza wielu badań; wynik dotyczy realizacji celów, nie oszczędności czasu w Polsce."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Mały koszt przygotowania uzasadnia próbę."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Sprawdź, czy plan pomaga w twoim konkretnym zadaniu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Wynik jest średnią z różnych zadań i grup."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Plan nie zapewnia sukcesu i nie zastępuje umiejętności ani zasobów potrzebnych do działania."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/s0065-2601(06)38002-1",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": null,
+      "error": null,
+      "via": "blocked by api.crossref.org",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 1. 把「打算做」写成「几点、在哪、遇到什么就做什么」"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。每件事花 1 到 2 分钟，写一句「如果……就……」。比如「周二早 8 点坐到书桌前就先写引言」。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：把「我要做这件事」改写成「周二早 8 点坐到书桌前就先写引言」。94 项检验合起来算，这么写的人把目标做成的比例明显更高，属于中到大的效果。改的只是一句话的写法，不花钱，也不费力气。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：把 94 项独立检验合起来算，先把打算写成「如果……就……」的人，目标达成率更高。这种写法在心理学里叫实施意图。效果大小 d = 0.65，算中到大。管用的环节有三个：开始动手、被打扰的时候顶住、从注定做不成的事上撤出来。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：这招只对你自己真想做的事有效。目标本身你就不想要，写再多句也没用。另外，这些研究找的多是学生，看的多是健康方面的习惯，搬到工作场景不一定同样管用。"
+      }
+    ]
+  }
+}

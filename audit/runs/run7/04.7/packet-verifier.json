@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "item": "04.7",
+  "role": "verifier",
+  "title": "Rozpisz złożone zadanie na części, zanim oszacujesz czas",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Przygotowanie listy etapów też zabiera czas. To ocena redakcji.",
+    "W praktyce": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+    "Korzyść i dowody": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań. Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+    "Ocena dowodów": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.",
+    "Ocena redakcyjna": "Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+    "Ograniczenia": "Dłuższe oszacowanie nie zawsze jest trafniejsze. Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4. Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Rozpisz złożone zadanie na części, zanim oszacujesz czas"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Przygotowanie listy etapów też zabiera czas."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Rozpisuj zadania złożone."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Drobna, dobrze znana czynność nie wymaga osobnego planu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Dłuższe oszacowanie nie zawsze jest trafniejsze."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.jesp.2003.11.001",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": null,
+      "error": null,
+      "via": "blocked by api.crossref.org",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": []
+}

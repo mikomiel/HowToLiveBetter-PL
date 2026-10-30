@@ -1,0 +1,80 @@
+{
+  "item": "04.2",
+  "edits": [
+    {
+      "field": "title",
+      "original": "lub go zakończysz",
+      "replacement": "lub zakończysz projekt",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "To szacunek redakcji.",
+      "replacement": "To oszacowanie redakcji.",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "w uzgodnionym terminie",
+      "replacement": "w ustalonym terminie",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "kierunek wniosku potwierdza przegląd",
+      "replacement": "przegląd potwierdza kierunek wniosku",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "dla tej konkretnej rady",
+      "replacement": "dla tej konkretnej porady",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "przerywania pracy",
+      "replacement": "przerywania pracy nad projektem",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "koszt bezpiecznego zakończenia",
+      "why": "Looks like a calque of a 'safe exit' phrase. Polish does not say 'bezpieczne zakończenie' of a project, and the reader cannot tell what 'bezpieczne' means here (no losses? no harm? settling obligations?) or who bears the cost. I cannot judge the intended sense without sources, so I did not edit. The verifier should decide on a clearer wording (for example 'uporządkowane zakończenie' or 'wycofanie się') only if it matches what the source supports."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przegląd Gollwitzera i Sheerana",
+      "why": "Names a study and its type. AGENTS.md says a synthesis of studies must be called a synthesis, and 'przegląd' (also repeated as 'przegląd' in Ocena dowodów) does not say whether it is a meta-analysis/synthesis or a narrative review. In the same item 'warunek przeglądu' (W praktyce) means a review of the project, so one word carries two meanings and the reader may mix them. Verifier decides the correct name of the source type; the project-review sense may then need a different word."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "plany „jeśli–to”",
+      "why": "Specialist term (the psychology concept of implementation intentions) first used here without a gloss. The W praktyce example shows the pattern but does not name it. I believe Polish psychology literature uses 'intencje wdrożeniowe' (also 'intencje implementacyjne'), but I am not certain and could not check the chapter for an earlier explanation in 04.1. A swapped technical term is protected, so left unedited. The en dash inside the term is also a punctuation choice the verifier may want to compare with the chapter convention."
+    },
+    {
+      "field": "W praktyce",
+      "text": "zmienić zakres",
+      "why": "The title and the Koszt field say 'zmienisz plan' and 'dotychczasowy plan', while the quoted rule says 'zmienić zakres'. If plan and scope are meant to be the same thing the item should use one word; if they differ, the title overstates or understates the option. Editing could change meaning, so reported only."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu.",
+      "why": "The bare subject 'Badania' has no referent: it reads as all research in general, while the item cites one review. Combined with the negation 'nie uzasadniają' and the words 'automatycznego' and 'dowolnym' this may sound broader than the evidence. Language reads awkwardly, but every changed word here is protected, so the verifier should decide whether the subject should be the cited review or the sentence should say the review does not address the case."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "[przyszłe koszty i korzyści z porady 04.3](#porada-4-3)",
+      "why": "The link text reads as 'future costs and benefits coming from advice 04.3', which is not the intended sense (consider future costs and benefits, see 04.3). A clearer form would put only 'porada 04.3' inside the link. The link and anchor are protected, so not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

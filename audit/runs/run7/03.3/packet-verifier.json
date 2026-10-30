@@ -1,0 +1,147 @@
+{
+  "version": 2,
+  "item": "03.3",
+  "role": "verifier",
+  "title": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania",
+  "fields": {
+    "Koszt": "Czas na odpoczynek może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.",
+    "W praktyce": "Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.",
+    "Korzyść i dowody": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności.",
+    "Ocena dowodów": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.",
+    "Ocena redakcyjna": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.",
+    "Ograniczenia": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci. Liczy się też jakość snu. Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu. Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27)."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Czas na odpoczynek może ograniczyć inne zajęcia."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Planując dzień, uwzględnij własną potrzebę snu."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "NHS podaje dla dorosłych przeciętnie 7–9 godzin."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Liczy się też jakość snu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27)."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1093/sleep/26.2.117",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 3322,
+      "sha256": "22ed9e46f1bba9539a22a26a234d095e6ca4fb56b14329dfe6d9d660e23b2001",
+      "snapshot": "b6bab3851cebff29.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

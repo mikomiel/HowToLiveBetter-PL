@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "14.7",
+  "role": "editor",
+  "title": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych",
+  "fields": {
+    "Koszt": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać. To ocena redakcji.",
+    "W praktyce": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia. Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje. Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+    "Korzyść i dowody": "RODO wymaga ograniczenia danych do niezbędnych dla celu. Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania. Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy. Strona pomocy Androida opisuje zmianę uprawnień aplikacji.",
+    "Ocena dowodów": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.",
+    "Ocena redakcyjna": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.",
+    "Ograniczenia": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli. To zestawienie redakcji, nie wniosek z cytowanych źródeł. Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO). Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy. Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu. To nie jest rozstrzygnięcie legalności konkretnej aplikacji. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  }
+}

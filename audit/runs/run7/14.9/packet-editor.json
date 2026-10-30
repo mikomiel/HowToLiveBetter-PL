@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "14.9",
+  "role": "editor",
+  "title": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę",
+  "fields": {
+    "Koszt": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji. To ocena redakcji.",
+    "W praktyce": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę.",
+    "Korzyść i dowody": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację. Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki. Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+    "Ocena dowodów": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.",
+    "Ocena redakcyjna": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+    "Ograniczenia": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu. Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej. Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia. Ochronę logowania opisuje [14.1](#porada-14-1). Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  }
+}
