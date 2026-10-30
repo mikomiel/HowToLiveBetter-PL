@@ -86,7 +86,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 7. Rozpisz złożone zadanie na części, zanim oszacujesz czas
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Przygotowanie listy części zadania też zabiera czas. To ocena redakcji.
-- W praktyce: Przy szacowaniu czasu na raport wyodrębnij części: zebranie danych, analizę, napisanie tekstu i sprawdzenie. Oszacuj osobno czas tych części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.
+- W praktyce: Przy szacowaniu czasu na raport rozpisz zadanie na części: zebranie danych, analiza, napisanie tekstu i sprawdzenie. Oszacuj osobno czas tych części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.
 - Korzyść i dowody: Kruger i Evans prosili uczestników o oszacowanie czasu potrzebnego na różne zadania. Rozpisanie zadania na części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.
 - Ocena dowodów: B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.
 - Ocena redakcyjna: Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.
