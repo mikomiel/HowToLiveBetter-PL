@@ -1,0 +1,103 @@
+{
+  "item": "04.12",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności.",
+      "replacement": "Potrzebny jest wysiłek wielokrotnego powtarzania wybranej czynności.",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania.",
+      "replacement": "Powiąż prostą czynność ze stałym zdarzeniem. Na przykład po śniadaniu połóż potrzebne materiały na biurku.",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Obserwuj regularność",
+      "replacement": "Obserwuj, jak regularnie powtarzasz czynność",
+      "reason": "register",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "za porażkę.",
+      "replacement": "za porażkę. Automatyzm to wykonywanie czynności bez namysłu.",
+      "reason": "term",
+      "requires_reverification": true
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "mediana wyniosła",
+      "replacement": "mediana (wartość środkowa) wynosiła",
+      "reason": "term",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Tytuł",
+      "text": "nie oczekuj jednego terminu dla wszystkich",
+      "why": "W polszczyźnie \"termin\" znaczy zwykle dzień graniczny lub umówiony dzień, nie okres potrzebny do ukształtowania nawyku, więc człon tytułu można odczytać błędnie bez rozmowy z autorem. Naturalniejsze byłoby sformułowanie o czasie potrzebnym (np. że nie wszyscy potrzebują tyle samo czasu). Zmiana dotyka negacji (nie) i kwantyfikatora (wszystkich), więc jej nie proponuję jako edycji. Rola nie opisuje, jak adresować tytuł w polu field."
+    },
+    {
+      "field": "W praktyce",
+      "text": "po 21 dniach",
+      "why": "Liczba 21 pojawia się tylko tutaj. Sekcja dowodów jej nie omawia, więc czytelnik nie wie, skąd się bierze ani dlaczego akurat ona jest punktem odniesienia (wygląda na odwołanie do popularnego przekonania). Liczba i okres, więc nie edytuję. Weryfikator może zdecydować, czy dodać jedno zdanie kontekstu."
+    },
+    {
+      "field": "W praktyce",
+      "text": "automatyzmu",
+      "why": "Termin specjalistyczny (ang. automaticity) użyty bez objaśnienia przy pierwszym użyciu w pozycji, stąd dodana edycja z objaśnieniem. Nie jestem pewien, czy ustalonym terminem jest \"automatyzm\", czy raczej \"automatyczność\"; w psychologii \"automatyzm\" ma też inne, kliniczne znaczenie. Zamiana terminu technicznego jest zastrzeżona dla weryfikatora, dlatego tylko zgłaszam. To samo słowo występuje w polu Korzyść i dowody (\"poziomu automatyzmu\")."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39.",
+      "why": "Trzy liczby w jednym zdaniu i żargon statystyczny bez objaśnienia: czytelnik nie dowie się, jaki model i do czego dopasowywano, ani co znaczy \"dobre dopasowanie\". Liczby chronione, a objaśnienie wymagałoby dodania treści ze źródła, więc zgłaszam. Weryfikator może dodać jeden człon wyjaśniający (np. jaką krzywą dopasowywano)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "95% indywidualnego poziomu automatyzmu",
+      "why": "Niejasne, do czego odnosi się \"indywidualnego\": prawdopodobnie do poziomu, jaki ostatecznie osiąga dana osoba, ale tekst tego nie mówi. Liczba i słowo o populacji/zakresie, więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody / Ograniczenia",
+      "text": "przez 12 tygodni; Obserwacja trwała 84 dni; od 18 do 254 dni",
+      "why": "Ten sam okres podany w różnych jednostkach (12 tygodni i 84 dni), a przy dalszych liczbach są dni. Czytelnik porównujący 84 dni z 254 dniami musi sam przeliczać. Spójność jednostek jest sprawą wartości liczbowych i okresów, więc tylko zgłaszam."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Zakres 18–254 nie jest gwarancją dla każdego.",
+      "why": "Brak jednostki (dni) po liczbach. Zapis \"18–254\" różni się od \"od 18 do 254 dni\" w polu Korzyść i dowody. Sformułowanie \"nie jest gwarancją dla każdego\" brzmi nienaturalnie, bo zakres nie może być gwarancją. Prawdopodobny sens: nie wynika z niego, że czas każdej osoby mieści się w tym zakresie. Zawiera negację, kwantyfikator i liczby, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie mierzono pracy twórczej ani oszczędności czasu.",
+      "why": "Pozycja nigdzie nie twierdzi nic o pracy twórczej ani oszczędności czasu, więc zdanie jest niezrozumiałe bez znajomości oryginału: czytelnik nie wie, po co ten zastrzeżony zakres. Negacja i zakres, więc nie edytuję. Weryfikator może ocenić, czy zdanie powinno zostać, czy odnosi się do twierdzenia z oryginału."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Przykład z biurkiem jest adaptacją, nie badaną czynnością.",
+      "why": "\"Adaptacja\" jest dwuznaczna: może znaczyć adaptację polską w ogóle, przykład dodany przez redakcję albo przykład zaadaptowany z oryginału. Doprecyzowanie (np. \"redakcji\") rozstrzygałoby pochodzenie przykładu, czyli kwestię atrybucji, więc zostawiam weryfikatorowi. Zawiera też negację."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "którego koszt jesteś gotów ponosić dłużej",
+      "why": "\"Dłużej\" jest stopniem wyższym bez punktu odniesienia (dłużej niż co?). Słowo o czasie i porównaniu, więc nie edytuję. Weryfikator może zdecydować, czy podać skalę (np. w tygodniach lub miesiącach)."
+    },
+    {
+      "field": "Ocena redakcyjna / W praktyce / Tytuł",
+      "text": "Stały kontekst jest sposobem organizacji powtórzeń.",
+      "why": "Spójność: ten sam element (stały sygnał, do którego przypina się czynność) nazwany jest trzema słowami: \"w stałej sytuacji\" (tytuł), \"stałe zdarzenie\" (W praktyce), \"stały kontekst\" (Ocena redakcyjna). Nie wiem, które jest ustalone w rozdziale (nie otwierałem plików rozdziału), a \"kontekst\" może być terminem z badania, więc nie ujednolicam. Samo zdanie jest też abstrakcyjne (\"sposób organizacji powtórzeń\"), ale jego sens zależy od intencji redakcji."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem.",
+      "why": "Litera oceny, kwantyfikator (jedno) i opis rozmiaru (małe) są chronione. Język jest telegraficzny: \"z samoopisem i modelowaniem\" nie mówi, czego dotyczą samoopis i modelowanie, a słowo \"modelowanie\" nie jest objaśnione. Nie edytuję."
+    }
+  ],
+  "verdict": "needs_edits"
+}

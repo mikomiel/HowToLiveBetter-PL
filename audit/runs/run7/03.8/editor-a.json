@@ -1,0 +1,95 @@
+{
+  "item": "03.8",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "czytanie papierowej książki",
+      "replacement": "czytanie książki papierowej",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "z emitującego światło urządzenia oraz papierowej książki",
+      "replacement": "z urządzenia emitującego światło oraz książki papierowej",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "Warunek ekranu",
+      "replacement": "Wariant z urządzeniem emitującym światło",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "użycia ekranu",
+      "replacement": "korzystania z ekranu",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "wieczornej rutyny",
+      "replacement": "wieczornego nawyku",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "próbą do dopasowania",
+      "replacement": "próbą dopasowania",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie",
+      "why": "The condition 'jeśli utrudniają ci wyciszenie' (winding down) is not the outcome the item describes later (zasypianie, rytm dobowy, poranna czujność, in healthy young adults). 'jasne ekrany' (bright screens) also differs from 'urządzenie emitujące światło' in the evidence field, and it is unclear whether 'ogranicz' means time or brightness. The title is protected (conditional, population, scope); the verifier should decide whether the wording matches the evidence."
+    },
+    {
+      "field": "Koszt",
+      "text": "To ocena redakcji, bez obowiązku zakupu urządzenia.",
+      "why": "The sentence is awkward: 'To' has no clear referent, the comma attaches 'bez obowiązku' as a dangling fragment, and 'obowiązek' (a term of duty) sounds legal for a purchase. A natural version such as 'Nie trzeba kupować urządzenia' would change the negation and the duty wording, so no edit is proposed."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki.",
+      "why": "'wcześniej' is a comparative with no reference point (earlier than what, by how long?). It is a comparative/timing word, so left untouched. A reader cannot act on it without a point of comparison."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.",
+      "why": "'jednej godziny' refers to a one-hour rule that is introduced nowhere else in this item (the title and the other fields give no hour), so the reader cannot tell what the hour is. The number, the duration and the quantifier 'wszystkich' are protected. The verifier should decide whether to state the hour explicitly or drop the sentence."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów.",
+      "why": "Syntax is ambiguous: it reads as if one session lasted five evenings. It is unclear whether 'sesja' means one evening or the five-evening block. Numbers also mix digits and words (12, 4, pięć) in one passage. All numbers and durations are protected, so no edit. Suggested direction for the verifier: state the five evenings and the roughly 4 hours per evening in separate clauses."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W losowanym badaniu krzyżowym",
+      "why": "'badanie krzyżowe' is a specialist term that is not explained here, and the same term recurs in 'Ocena dowodów' (małe badanie krzyżowe). I could not check from the packet whether it is explained earlier in the chapter. 'losowanym' is a plain rendering of the established term 'randomizowanym'. This is a technical term, so I did not swap it. The verifier or chapter owner should decide on a short gloss at first use."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.",
+      "why": "Besides the calque 'Warunek ekranu' (edited above), 'opóźniał ... rytm dobowy' is a zeugma: a rhythm is shifted, not delayed in the same sense as falling asleep. 'rytm dobowy' is not explained in this item. The causal verbs 'opóźniał' and 'pogarszał' are protected, so they were kept in the masculine form in my edit and not reworded."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym.",
+      "why": "Negation plus quantifier is logically inconsistent. 'Nie ... każdego' means 'not every', while 'ani' suggests 'none of these'. The reader cannot tell whether no phones were tested or only some. 'ekran z tuszem elektronicznym' is a literal rendering; the established Polish terms are 'e-papier' or 'wyświetlacz E Ink', but this is a technical term and was not swapped. The verifier must decide the intended scope."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu.",
+      "why": "'Duża ekspozycja laboratoryjna' is abstract and calque-like (large laboratory exposure), and 'nie określa wielkości efektu' is stiff; 'nie pozwala ocenić' would be more natural. Both involve a negation and dose/duration words ('Duża', 'krótkiego'), so only 'użycia ekranu' was edited. The verifier may want a plainer rewording, for example in terms of hours of reading in the lab versus short use at home."
+    }
+  ],
+  "verdict": "needs_edits"
+}

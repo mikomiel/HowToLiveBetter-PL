@@ -1,0 +1,100 @@
+{
+  "item": "14.1",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "przechowanie zapasu",
+      "replacement": "przechowanie kodów odzyskiwania lub zapasowego klucza",
+      "reason": "term",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "Kody SMS i z aplikacji",
+      "replacement": "Kody SMS i kody z aplikacji",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Zapisz bezpiecznie oferowane kody odzyskiwania",
+      "replacement": "Zapisz bezpiecznie kody odzyskiwania, które oferuje usługa",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "eksperyment o procencie zablokowanych ataków",
+      "replacement": "eksperyment mierzący procent zablokowanych ataków",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "Passkey",
+      "replacement": "Klucz dostępu",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "od wymagania i sprawdzenia weryfikacji użytkownika przez usługę",
+      "replacement": "od tego, czy usługa wymaga weryfikacji użytkownika i ją sprawdza",
+      "reason": "calque",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu",
+      "why": "\"Silne uwierzytelnianie\" to żargon (w bankowości także termin prawny) i nie wraca w treści porady, gdzie mowa o \"kluczach dostępu\" i \"weryfikacji dwuskładnikowej\". Ten sam mechanizm ma w tytule i w tekście dwie różne nazwy, a tytuł bez rozmowy z autorem jest mało zrozumiały. Nie zmieniam nazwy, bo mogłoby to zmienić zakres twierdzenia; weryfikator powinien zdecydować, czy tytuł ma nazwać klucze dostępu lub weryfikację dwuskładnikową."
+    },
+    {
+      "field": "W praktyce",
+      "text": "klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn",
+      "why": "Przy pierwszym użyciu termin jest tylko przetłumaczony (\"czyli passkeys\"), nie wyjaśniony. \"Klucz sprzętowy\" i \"FIDO/WebAuthn\" nie mają żadnego objaśnienia. Czytelnik bez wiedzy technicznej nie wie, czym to jest. Wyjaśnienie wymaga treści merytorycznej, której redaktor językowy nie może sprawdzić (nazwy standardów są chronione)."
+    },
+    {
+      "field": "W praktyce",
+      "text": "weryfikację dwuskładnikową (2FA)",
+      "why": "Termin jest nazwany, ale nie wyjaśniony; \"dwa składniki\" pojawiają się dopiero w Ograniczeniach bez definicji. To termin techniczny, więc jego ewentualne objaśnienie lub zmianę zostawiam weryfikatorowi."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie zatwierdzaj logowania, którego nie rozpoczynasz.",
+      "why": "Zdanie (z przeczeniem, więc chronione) odnosi się niejawnie do próśb o zatwierdzenie w aplikacji lub na telefonie, ale W praktyce tego nie nazywa; \"zatwierdzanie logowania\" może być niejasne bez kontekstu. Możliwe doprecyzowanie, np. \"prośby o zatwierdzenie logowania\", wymaga decyzji weryfikatora."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Sama prośba push",
+      "why": "\"Prośba push\" to kalka z angielskiego i niewyjaśniony żargon. Słowo \"sama\" ma charakter ograniczający (jak \"tylko\"), więc jest chronione. Zamiana na \"powiadomienie push\" zmieniłaby termin techniczny, bo chodzi o prośbę o zatwierdzenie logowania, nie o samo powiadomienie. Do decyzji weryfikatora, np. \"prośba o zatwierdzenie logowania w aplikacji (powiadomienie push)\"."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "adresem witryny",
+      "why": "W tym samym polu to samo miejsce w sieci nazwano raz \"witryną\", raz \"fałszywą stroną\" (\"na fałszywej stronie\"). Zamiana na jedno słowo może zmienić precyzję techniczną (adres, domena), więc zgłaszam zamiast edytować; sąsiednie \"związane z\" jest czasownikiem skojarzenia i też jest chronione."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "weryfikacji użytkownika",
+      "why": "Termin techniczny (w WebAuthn: sprawdzenie, kto korzysta z urządzenia, np. PIN-em lub biometrią) nieobjaśniony przy pierwszym użyciu i łatwy do pomylenia z \"weryfikacją dwuskładnikową\" z W praktyce. Potrzebne objaśnienie lub inna nazwa, co wymaga sprawdzenia w źródle."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Odporność na phishing",
+      "why": "W Korzyści ta sama cecha jest opisana jako \"odporne na wyłudzanie danych na fałszywej stronie\"; tu pojawia się angielski \"phishing\" bez objaśnienia. Ujednolicenie byłoby zamianą terminu technicznego (wyłudzanie danych jest pojęciem szerszym), więc zgłaszam."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta",
+      "why": "Przeczenie z kwantyfikatorem (\"nie ... każdym\") bywa czytane jako \"przed żadnym\", mimo że zamierzone znaczenie to \"nie przed każdym\". Wszystko chronione. Weryfikator może rozważyć jednoznaczniejsze sformułowanie. \"Kradzież aktywnej sesji\" nie jest też objaśniona."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "najważniejszych kont",
+      "why": "W W praktyce mowa o \"innych ważnych kontach\", tu o \"najważniejszych\". Stopień najwyższy jest chroniony; zgłaszam niespójność, nie zmieniam."
+    }
+  ],
+  "verdict": "needs_edits"
+}

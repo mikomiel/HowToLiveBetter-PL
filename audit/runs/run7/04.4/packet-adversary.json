@@ -1,0 +1,183 @@
+{
+  "version": 2,
+  "item": "04.4",
+  "role": "adversary",
+  "title": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To szacunek redakcji.",
+    "W praktyce": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.",
+    "Korzyść i dowody": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia. W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej. To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności.",
+    "Ocena dowodów": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+    "Ocena redakcyjna": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu.",
+    "Ograniczenia": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego. Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki). Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+    "Źródła": "Buehler, Griffin i Ross (1994), Exploring the planning fallacy: Why people underestimate their task completion times. [DOI](https://doi.org/10.1037/0022-3514.67.3.366); [pełny tekst w MIT, badanie 4, tabela 4, s. 375–376](https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf).",
+    "Zmiany w adaptacji": "Nie połączono wyników o pisaniu pracy dyplomowej z eksperymentem komputerowym. Dodano brak poprawy szybkości pracy i bezwzględnej dokładności prognozy. Poprawka 2026-10-29: zdanie o przypominaniu sobie opóźnienia zastąpiono opisem tego, co przypominano w badaniu (wcześniejsze podobne zadania), a krok „zapisz, co jest teraz inne” tym, o co proszono uczestników: powiązać wcześniejsze zadania z obecnym."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To szacunek redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — pojedynczy eksperyment z udziałem 123 studentów."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/0022-3514.67.3.366",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 223,
+      "sha256": "0a168315764b8243917db66ec6d640fee4474ba0e79eb857ca13acc7542c3fb8",
+      "snapshot": "3fcf7218a7f1a5b5.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "finalUrl": "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 129388,
+      "sha256": "5b8705c0083426b88ec3d6679d2658d0b9645646ac7a0d8da82335d67d20e8d1",
+      "snapshot": "e70647d0627ff840.txt",
+      "info": {
+        "pages": 16
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 4. 估工期时按过去同类任务的实际耗时估，不按计划推"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。估之前花几分钟，翻一下上次同类的事实际做了多久。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：学生估自己 33.9 天写完论文，实际用了 55.5 天，只有 29.7% 的人按自己估的时间做完。另一组被要求先回想上次同类的事花了多久再估，按时完成的比例从 29.3% 升到 60.0%。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：学生预计 33.9 天完成论文，实际用了 55.5 天。只有 29.7% 的人按自己的估计按时完成。研究者要求另一组人先把过去的经历和眼下这件事挂上钩，再去估。这一组按时完成的比例，从对照组的 29.3% 升到 60.0%。把工期往少了估的那种乐观，在这一组身上不再出现。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the \"planning fallacy\": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>；Flyvbjerg, B. (2006). From Nobel Prize to project management: Getting risks right. Project Management Journal, 37(3), 5–15. <https://doi.org/10.1177/875697280603700302>；Halkjelsvik, T., & Jørgensen, M. (2012). From origami to software development: A review of studies on judgment-based predictions of performance time. Psychological Bulletin, 138(2), 238–271. <https://doi.org/10.1037/a0025996>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：Buehler 那项只找了加拿大大学生，是单独一项研究，人也少，37 人和每组约 40 人。照同类项目的历史数据来估，这种做法叫参考类预测，工程上具体怎么做见 Flyvbjerg。Halkjelsvik 汇总多项研究后指出，估少比估多更常见，但差多少随任务和研究方法变化很大。"
+      }
+    ]
+  }
+}

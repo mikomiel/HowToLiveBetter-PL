@@ -1,0 +1,200 @@
+{
+  "item": "14.12",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "Nie zakładamy stałego czasu wykonania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 13,
+          "text": "zanim będzie można używać nowego numeru telefonu do weryfikowania tożsamości przy wrażliwych działaniach, takich jak zmiana hasła, może upłynąć tydzień."
+        },
+        {
+          "snapshot": "4f1351e404cb2044.txt",
+          "line": 75,
+          "text": "usually works by sending you a PIN or code, often sent by SMS or email"
+        }
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "4f1351e404cb2044.txt",
+          "line": 75,
+          "text": "It's worth taking the time to set up 2SV on important accounts like email and banking, even if these are already protected using a strong password."
+        },
+        {
+          "snapshot": "4f1351e404cb2044.txt",
+          "line": 45,
+          "text": "These will explain in detail the account recovery process (it's likely to be different for each account)."
+        },
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 61,
+          "text": "Aby zobaczyć opcje związane z daną usługą, przejdź do jej ustawień."
+        }
+      ]
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 33,
+          "text": "zmiana numeru telefonu na koncie będzie widoczna tylko w niektórych usługach Google."
+        }
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 67,
+          "text": "Logowanie się na swoje konto w niektórych miejscach."
+        },
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 69,
+          "text": "Odzyskiwanie dostępu do konta w przypadku problemów z zalogowaniem się. Możesz na przykład otrzymać SMS-a z kodem, który pozwoli zresetować hasło."
+        },
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 33,
+          "text": "zmiana numeru telefonu na koncie będzie widoczna tylko w niektórych usługach Google."
+        },
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 47,
+          "text": "Inne usługi Google używające numerów telefonów mogą nie być wymienione na tej stronie. Swój numer możesz zmienić w ustawieniach niektórych usług, na przykład tych:"
+        }
+      ],
+      "reason": "All parts of the sentence are stated by the Google help page. Minor wording difference: the page says the change 'będzie widoczna tylko w niektórych usługach Google' (is visible in only some Google services), the sentence says it 'wpływa' (affects) only some services; the meaning is the same here. 'Inne mogą mieć własne ustawienia' rests on line 47 (number can be changed in the settings of some services, e.g. 2-step verification, Calendar, Chrome, Google Pay, Google Business Profile) and line 61."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "recommendation_derived",
+      "claim": "To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "C — dokumentacja dostawcy i redakcyjna lista kontrolna,",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 7,
+          "text": "Komputer - Konto Google - Pomoc"
+        }
+      ],
+      "reason": "The Google snapshot is a vendor help page (Konto Google - Pomoc), so 'dokumentacja dostawcy' fits. The grade letter C itself is editorial and was not checked. 'Redakcyjna lista kontrolna' describes the editors' own work, not a source property, and no snapshot can confirm it."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez badania unikniętych strat.",
+      "verdict": "absent_in_source",
+      "searched": ["99611c948c4b589f.txt", "4f1351e404cb2044.txt"],
+      "reason": "Searched both cited snapshots for any study, statistic, trial or measurement of losses avoided by checking linked accounts before giving up a phone number. Neither page contains one: the Google page is a how-to help page and the NCSC page is step-by-step guidance. Absence is from the stored text only (Google article region 5181 of 9057 characters, NCSC main region 6804 of 9603 characters)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "meta_statement",
+      "claim": "Lista usług jest przykładem, nie kompletnym rejestrem twoich kont.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Dokumentacja Google nie dowodzi sposobu działania wszystkich usług.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 47,
+          "text": "Inne usługi Google używające numerów telefonów mogą nie być wymienione na tej stronie."
+        }
+      ],
+      "reason": "Editors' caveat about the reach of the source. The Google page itself says other Google services may not be listed, and it is silent on non-Google services."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Potwierdź wymagania bezpośrednio u własnego dostawcy.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "title#1",
+      "note": "Both snapshots are about specific things: the Google Account (phone number used for sign-in and recovery) and generic account recovery and 2-step verification (UK NCSC). Neither says anything about giving up a phone number or about Polish providers; the title generalises to all linked accounts."
+    },
+    {
+      "id": "W praktyce#2",
+      "note": "The NCSC page is UK guidance on recovering a hacked account and on 2-step verification (codes often by SMS or email on email and banking accounts). It does not discuss changing or giving up a phone number, does not say that email or bank providers store the user's phone number, and does not cover Polish banks. The Google page covers Google services only."
+    },
+    {
+      "id": "W praktyce#1",
+      "note": "The one-week delay for using a new number for sensitive verification is stated only for the Google Account; no snapshot gives it for other providers."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "note": "The statement is about Google and Google services only; a reader might assume other providers behave the same, which the sentence does not claim."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "note": "The second cited source (NCSC, a UK government agency guidance page) is not vendor documentation and is not named in this description; the description therefore under-describes the cited evidence base. It does not claim more than the sources say."
+    }
+  ],
+  "notes": "Opened only: AGENTS.md, .claude/agents/pl-source-verifier.md, audit/runs/run7/14.12/packet-verifier.json, and the two snapshots .cache/sources/99611c948c4b589f.txt and .cache/sources/4f1351e404cb2044.txt. No protocol violation. The packet has no Źródła field, so I could not check which source each sentence was meant to rest on; I treated the two cited snapshots as the item's sources. The Google snapshot notes the page may contain AI-translated text (line 125); the NCSC snapshot is the main region only. Status PASS depends on judging the 'recommendation_derived' rows as fully backed by Korzyść i dowody#1 (and the NCSC lines quoted); a stricter reviewer could mark W praktyce#2 partly, because no snapshot says that email or bank accounts hold the user's phone number."
+}

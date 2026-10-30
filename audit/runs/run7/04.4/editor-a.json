@@ -1,0 +1,62 @@
+{
+  "item": "04.4",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "jak odnosi się do tego, które planujesz",
+      "replacement": "jak ma się ono do zadania, które planujesz",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "przemawia za taką próbą przed deklaracją terminu",
+      "replacement": "przemawia za wypróbowaniem tego sposobu przed zadeklarowaniem terminu",
+      "reason": "register",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+      "why": "The title ends on two bare adjectives (the noun 'zadaniami' is dropped), which reads as clipped. 'oceną terminu' is also ambiguous: it can mean judging an externally set deadline, while the advice is about estimating how long one's own task will take. 'termin' is a time word and 'wcześniejszymi' has a comparative form, so I did not edit. Verifier to decide whether a fuller title is acceptable, for example one that names estimating your own completion time and the earlier tasks you already did."
+    },
+    {
+      "field": "Koszt",
+      "text": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac.",
+      "why": "'wcześniejszych terminów' suggests looking up earlier deadlines or dates, while W praktyce asks to check how long earlier tasks took ('ile trwało'). The same word 'termin' also appears in the title and in Korzyść for the predicted completion time. Word choice may shift the meaning (date vs duration), and 'Chwila' is a duration word, so not edited. Verifier to confirm that 'termin' is meant consistently, or whether 'czas' is the right word here."
+    },
+    {
+      "field": "W praktyce",
+      "text": "sprawdź, ile trwało poprzednie podobne zadanie",
+      "why": "'poprzednie' (singular, reads as only the most recent one) differs from 'wcześniejsze/wcześniejszych' used for the same thing in the title, Koszt, the next sentence and Ograniczenia. Same-word consistency is wanted, but 'poprzednie'/'wcześniejsze' are temporal comparative forms and the singular/plural choice may change what the reader is told to do, so I did not edit."
+    },
+    {
+      "field": "W praktyce",
+      "text": "w badaniu sam ten warunek nie zmniejszył optymizmu prognoz",
+      "why": "'warunek' is a calque of the experimental 'condition' and a lay reader cannot tell which condition is meant; 'sam ten' also repeats 'Samo' from the clause before. A clearer subject (the recall-only variant, for example 'samo przypomnienie') would force a change in the verb form 'zmniejszył', which sits next to a negation and a causal verb. Not edited. Verifier to decide on wording."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "rzadziej zaniżały termin ukończenia",
+      "why": "'zaniżać termin' is an unnatural collocation in Polish: people underestimate time, duration or an estimate, not a date. The phrase carries the comparative frequency word 'rzadziej' and the time word 'termin', so not edited. Verifier to decide, for example on 'zaniżały przewidywany czas ukończenia' if the source supports it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W badaniu 4 Buehlera i współautorów",
+      "why": "The study number '4' placed directly before the genitive surname can be misread as a quantity ('4 Buehlera'). The study identifier and name are protected, so not edited. A form such as 'W badaniu 4 z pracy Buehlera i współautorów' would be clearer if the verifier accepts it."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+      "why": "The same thing (the participants' predicted completion times) is called 'prognoz' in W praktyce and 'prognozy' elsewhere in this field, and 'oszacowań' here. Same-word consistency would favour 'prognoz'. 'oszacowanie' and 'prognoza' could count as a swapped technical term, and the sentence contains a comparative, a negation and a quantifier, so I did not edit."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy",
+      "why": "'Zmiana instrukcji' has no antecedent in the item: Korzyść describes people who linked earlier experience to the new task but never says the groups received different instructions, so a reader meets the term cold. Fixing it needs knowledge of the design that I cannot judge, and the sentence holds negations and causal verbs. Not edited. Verifier to decide whether to name the manipulation here or earlier."
+    }
+  ],
+  "verdict": "needs_edits"
+}

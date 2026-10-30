@@ -1,0 +1,223 @@
+{
+  "item": "04.9",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 3,
+      "upstream_action": "First ask what about the task makes you uncomfortable, then look for a way (open question, then a remedy)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Rework the task so that it is less unpleasant",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Make the first step smaller",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Do not rely only on scolding yourself and then forcing yourself to start",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Concrete action in item 1 of the section: write the plan as when, where, and what to do on what trigger (if-then plan)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Concrete action in item 7 of the section: split a big task into subtasks",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Concrete action in item 8 of the section: set a date for things that have no external deadline",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne.",
+      "why": "The three-way diagnostic question is wider than the source. Nieprzyjemne maps to task aversiveness and niewykonalne to self-efficacy, but niejasne (unclear task) is not among the predictors named in the abstract, and the upstream asks an open question about what makes the task uncomfortable. Zmiany w adaptacji labels only the small first step as an editorial suggestion, so a reader can take the whole three-way diagnosis as drawn from the review. Ocena redakcyjna does say that looking at the obstacle is editorial, so the issue is precision of labelling, not safety.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "d96cbd6fc03d12ce.txt",
+          "line": 14,
+          "text": "Strong and consistent predictors of procrastination were task aversiveness, task delay, self-efficacy, and impulsiveness"
+        },
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "先问这件事哪里让你难受，再想办法"
+        }
+      ],
+      "fix_direction": "Say in the adaptation notes that the diagnostic categories, not only the first step, are an editorial example, or drop the category that no source line supports."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Wybierz mały pierwszy krok.",
+      "why": "The upstream gives two remedies after the diagnosis: rework the task so that it is less unpleasant, and make the first step smaller. The item keeps only the second, and gives the same single remedy for all three diagnoses. A reader whose obstacle is unpleasantness gets a path (small first step) but not the action tied to that obstacle.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "所以可以先把任务改得没那么难受、把第一步改小，别光靠骂自己一顿再硬上"
+        }
+      ],
+      "fix_direction": "Decide explicitly whether making the task itself less unpleasant is kept, narrowed or dropped, and state the choice in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).",
+      "why": "The upstream points to three concrete actions for this item (if-then plan, splitting a big task, setting a date for tasks with no external deadline). The item keeps only the pointer to the first. The Korzyść field names distance in time as a correlate, but no action for a task without a deadline remains. Items 7 and 8 may be separate items of the chapter; that cannot be checked from the packet, so only the lost pointers are reported.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "（给没有外部截止的事定一个日期）。这些是相关研究的汇总"
+        }
+      ],
+      "fix_direction": "Either point to the other two upstream actions or state that they are left to their own items."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "plan „jeśli–to” z porady 04.1",
+      "why": "With the cross-reference link removed, the item never says what an if-then plan is. The upstream spells it out as a plan of when, where and what to do on what trigger. The main action stays safe and actionable alone, but the optional pointer is unintelligible without the link, and AGENTS.md asks to explain a term at first use.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "写成「几点、在哪、遇到什么就做什么」"
+        }
+      ],
+      "fix_direction": "Add a short in-line explanation of the plan, or reword so that the sentence does not depend on the link."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "odległość nagrody lub zakończenia w czasie",
+      "why": "The abstract says only task delay and does not define it. The gloss comes from the upstream, which renders it as distance to a deadline in one place and as reward distance in the theory sentence. The Polish phrase blends reward and completion in a form that no snapshot line supports. Only the upstream, a lead and not evidence, backs this reading.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "d96cbd6fc03d12ce.txt",
+          "line": 14,
+          "text": "task aversiveness, task delay, self-efficacy, and impulsiveness"
+        },
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "任务让人厌恶的程度、离截止还有多远、自我效能感（觉得自己做得成）、冲动性"
+        }
+      ],
+      "fix_direction": "Keep the wording the abstract supports (delay of the task or its reward) or state that the gloss is the editors' reading."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.",
+      "why": "The grade B does not follow any README B definition (single study, limited samples, review without one common effect size, or a narrow clinical-guideline conclusion). The source is a quantitative meta-analysis, and the abstract does not show whether a common effect size exists. The rationale given (a synthesis of correlations is not a test of the action) is the caveat that the README places inside row A, and an untested editorial action is closer to the README description of C. The letter therefore blends strong source type with an untested action and fits neither cleanly. The text next to the letter discloses the reason, so the risk to a reader is small.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "d96cbd6fc03d12ce.txt",
+          "line": 14,
+          "text": "based on 691 correlations, reveals that neuroticism, rebelliousness, and sensation seeking show only a weak connection"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "这些是相关研究的汇总，看不出谁导致谁"
+        }
+      ],
+      "fix_direction": "Justify the letter against the README definitions in the item itself, or choose A with the caveat or C for the untested action, and describe the choice in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ocena redakcyjna#2",
+      "text": "Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.",
+      "why": "The statement, and the phrase synteza badań korelacyjnych in Ocena dowodów, describe the design of the whole review. The only text stored is an abstract, and it says the review draws on correlational, experimental and qualitative findings; the 691 correlations are only the meta-analytic part. The abstract cannot show whether any experimental work in the review measured an effect of the advised action, so no measured effect here goes beyond what the snapshot contains. The abstract-only access should also be reflected in the limitation sentences (the Weryfikacja field is not in the packet, so that part could not be checked).",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "d96cbd6fc03d12ce.txt",
+          "line": 14,
+          "text": "drawing upon correlational, experimental, and qualitative findings"
+        }
+      ],
+      "fix_direction": "Limit the claim to what the abstract shows (the meta-analysis of 691 correlations reports predictors) and state that the full text was not checked for intervention evidence."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "zamiast poprzestawać na samokrytyce",
+      "why": "The contrast between diagnosing the obstacle and self-criticism comes from the upstream line about scolding yourself. No snapshot line mentions self-criticism or compares it with anything, so the implication that self-criticism alone is insufficient is not supported by the sources. Rozpoczęcie also narrows the delay studied in the review to starting a task. The item itself says that the effect of the approach was not measured, so this is a wording issue.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "所以可以先把任务改得没那么难受、把第一步改小，别光靠骂自己一顿再硬上"
+        }
+      ],
+      "fix_direction": "Mark the contrast in the title as editorial framing, or make the title state the action without the contrast."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#1",
+      "text": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku.",
+      "why": "The Korzyść field lists only four predictors and leaves out the strong person-level ones from the abstract (conscientiousness with self-control, distractibility, organization and achievement motivation). Together with the sentence about effort, a reader may conclude that self-regulation traits do not matter, although the abstract names them among the strong and consistent predictors. Między innymi softens this, but the omission tilts the picture.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "d96cbd6fc03d12ce.txt",
+          "line": 14,
+          "text": "as well as conscientiousness and its facets of self-control, distractibility, organization, and achievement motivation"
+        },
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "容不容易被眼前的东西带走、自控强不强，和拖延关系最强"
+        }
+      ],
+      "fix_direction": "Add the self-control and conscientiousness findings to the evidence field, or rephrase the limitation so that it does not read as dismissing them."
+    }
+  ],
+  "notes": "No blocker found. No Chinese institution, hotline, threshold or legal rule appears in reader-facing fields, and there is no legal or medical statement to check. The only figure, 691 correlations, matches the abstract in both snapshots. The recency attack was run, not listed as not assessable: both snapshots are the same 2007 paper and neither shows a newer guidance or a disagreement, so there was nothing to find; whether the paper is outdated cannot be judged from the packet. The packet has no Weryfikacja or Oryginał field, so the disclosure of abstract-only access could be checked only through Źródła (which says abstrakt w PubMed) and the limitation sentences. Protocol: I opened only the role file, AGENTS.md, README.md (lines 40-79, which is the section Jak czytać dowody plus the beginning of the next section), the packet and the two named snapshots. CLAUDE.md was attached to my context by the harness; I did not open it."
+}

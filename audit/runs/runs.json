@@ -28,5 +28,10 @@
   "bookCommit": "1173be1",
   "about": "chapters 03 and 04, stopped",
   "state": "stopped"
+ },
+ "run7": {
+  "bookCommit": "754b21c",
+  "about": "re-audit of all 32 published items on the text of main; book/ is identical to 1a7f91e, which the run was prepared from",
+  "state": "complete-with-3-rejected-reports"
  }
 }

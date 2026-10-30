@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "item": "14.9",
+  "role": "adversary",
+  "title": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę",
+  "fields": {
+    "Koszt": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji. To ocena redakcji.",
+    "W praktyce": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę.",
+    "Korzyść i dowody": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację. Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki. Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+    "Ocena dowodów": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.",
+    "Ocena redakcyjna": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+    "Ograniczenia": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu. Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej. Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia. Ochronę logowania opisuje [14.1](#porada-14-1). Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+    "Źródła": "[RODO, art. 4 pkt 14, art. 9 i informacje z art. 13](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [UODO: omówienie danych biometrycznych](https://uodo.gov.pl/pl/file/3534).",
+    "Zmiany w adaptacji": "Oryginalne A zastąpiono C. Usunięto chińskie nakazy, progi liczby osób, terminy rejestracji i granice wieku. Nie utworzono fikcyjnego polskiego prawa do alternatywy w każdej sytuacji. Dodano 2026-10-29 zastrzeżenie, że tekst nie jest poradą prawną i nie miał przeglądu prawnika."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zapytaj także o inną metodę."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Ochronę logowania opisuje [14.1](#porada-14-1)."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/pl/file/3534",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/pl/file/3534",
+      "finalUrl": "https://uodo.gov.pl/pl/file/3534",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 35054,
+      "sha256": "991690c86dfc8949e2cf0c734bb3a34929fc7a91a4cdb8e8426fe3cc1a73efed",
+      "snapshot": "37cae0082d72986d.txt",
+      "info": {
+        "pages": 20
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 9. 刷脸不是必须答应的：有别的办法就不能只让你刷脸，你不同意得给你其他方式"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。被要求刷脸时，问一句「有没有别的验证方式」。对方说没有，就要求它提供一个。难的是要当面开口问。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：只要还有别的办法能办成同一件事，对方就不能只让你刷脸。你不同意刷脸，它得给你刷卡、密码或者身份证这类别的办法，也不许拿「那就办不了业务」来逼你。宾馆客房、公共浴室、更衣室、卫生间这些地方，谁都不许装人脸识别设备。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：人脸识别技术应用安全管理办法写明：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式。个人不同意通过人脸信息进行身份验证的，应当提供其他合理、便捷的方式。」办法还写明：「任何组织和个人不得以办理业务、提升服务质量等为由，误导、欺诈、胁迫个人接受人脸识别技术验证个人身份。」要是按你同意来处理人脸信息，得取得「在充分知情的前提下自愿、明确作出的单独同意」：单独就这一件事问你，你单独点头才算。你有权撤回同意，处理者要提供便捷的撤回方式。处理不满十四周岁未成年人的人脸信息，应当取得父母或者其他监护人的同意。公共场所安装人脸识别设备，「应当为维护公共安全所必需」，并设置显著提示标识。宾馆客房、公共浴室、公共更衣室、公共卫生间等公共场所中的私密空间内部，任何组织和个人不得安装。人脸信息应当存储于人脸识别设备内，不得通过互联网对外传输。两种情况例外：法律、行政法规另有规定，或者取得了单独同意（全国，2025 年 6 月 1 日起施行）"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：国家互联网信息办公室、公安部 (2025). 人脸识别技术应用安全管理办法（第 19 号令，第十条、十二条、十三条、十五条，2025 年 6 月 1 日起施行）. <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：最常遇到的是小区门禁、租房平台、健身房、酒店要你录人脸。对方说「系统只支持刷脸」的时候，把办法的原话念给他听。原话是：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式」。然后要求它提供刷卡、密码或者身份证这类别的方式。还是不给的，向当地网信部门反映。国家对刷脸验证身份另有规定的，比如一部分金融和政务场景，按那些规定办。人脸和密码最大的区别是泄露之后改不掉，所以它值得比密码更谨慎。存了 10 万人以上人脸信息的单位，要在 30 个工作日内向省级以上网信部门备案，这也是判断对方正不正规的一个问法。查阅、更正、删除自己个人信息的权利见第 8 条。别人借你的脸去办他自己的贷款，是另一回事，见第 8 节第 45 条（帮忙刷个脸）。"
+      }
+    ]
+  }
+}

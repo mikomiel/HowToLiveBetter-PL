@@ -1,0 +1,67 @@
+{
+  "item": "03.27",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "podczas prowadzenia",
+      "replacement": "za kierownicą",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "wybierz bezpieczne zatrzymanie i inny sposób podróży",
+      "replacement": "zatrzymaj się w bezpiecznym miejscu i wybierz inny sposób podróży",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi",
+      "why": "Three issues, all touching protected wording, so no edit. (a) Scope: the title reads as snoring that comes with breathing pauses or with sleepiness, while W praktyce asks the reader to report any of three separate signs (pauses, snoring, excessive sleepiness); a reader with only sleepiness or only pauses may not recognise themselves in the title. (b) „z przerwami w oddychaniu lub sennością” attaches sleepiness to the snoring, which is unnatural Polish; the sleepiness belongs to the person, not to the snoring. (c) The degree word „nadmierną” used in W praktyce is missing, so ordinary tiredness seems to qualify; the condition that matters is lost in the title. If the source supports the three-signs reading, a candidate for the verifier is: „Głośne chrapanie, przerwy w oddychaniu lub nadmierną senność zgłoś lekarzowi”. If the source really means snoring plus one of the other signs, only (b) and (c) remain."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nasilone chrapanie",
+      "why": "The same sign is „Głośne chrapanie” in the title and „nasilone chrapanie” here. Both are degree words (protected) and they are not synonyms (loudness versus worsening or intensity), so the choice must follow the source. Reported for consistency, not edited."
+    },
+    {
+      "field": "Koszt",
+      "text": "Organizacja i wydatki zależą od sytuacji",
+      "why": "„Organizacja” is unclear as a cost category: it is not evident whether it means time, visits, formalities or effort, and it reads like a literal rendering of an abstract noun. Any replacement (czas, formalności, wysiłek) would change what is claimed about cost, and „zależą od” is dependence wording (protected). Verifier to say what is meant and to choose a concrete word."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Wytyczne NICE NG202",
+      "why": "Institution and document code (protected). A reader in Poland is not told what NICE is or that it is a foreign body, so it is unclear why these guidelines apply to them. A short descriptor naming the country would help, but it names a jurisdiction, so it is for the verifier to add if the source confirms the right wording."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "obturacyjnego bezdechu sennego",
+      "why": "Specialist term with no explanation at its first use in this item (I could not check the chapter for an earlier explanation). „przerwy w oddychaniu” in W praktyce is the lay equivalent, but the link is not stated and „obturacyjny” stays unexplained. A gloss is a medical definition, so I did not write one; verifier or author to supply it."
+    },
+    {
+      "field": "W praktyce",
+      "text": "aparatu CPAP",
+      "why": "CPAP appears here before its explanation in the next field („czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych”), and Koszt already says „cen aparatu” without naming the device. Explaining at first use would be better, but moving or rewriting a medical definition is outside my remit. Minor: „aparat” here and „urządzenie” in the gloss name the same thing; acceptable, but one noun would be more consistent."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "bez jednej prognozy korzyści dla czytelnika",
+      "why": "Reads as a literal rendering and is ambiguous: „bez jednej” can mean „not even one” or „without a single, uniform”. It contains a negation and a quantifier (both protected), so no edit. Verifier to confirm the intended meaning; a clearer phrasing should say plainly that the guidelines do not predict how much an individual reader would gain, if that is what the source supports."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Rodzaj badania i leczenia dobiera osoba prowadząca.",
+      "why": "„osoba prowadząca” with no object reads as the person leading a course or a vehicle; it looks like a gender-neutral calque. Idiomatic Polish is „lekarz prowadzący” or simply „lekarz”, as in the title. Not edited because it names who decides (a role word) and I cannot tell from the packet whether non-physicians are meant."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "orzekania o uprawnieniach do kierowania",
+      "why": "Legal wording (protected). Possible calque: as far as I know, in Poland the medical side is an assessment of health contraindications to driving (badania lekarskie kierowców, orzeczenie lekarskie), while the right itself is granted administratively, and the standard term is „uprawnienia do kierowania pojazdami”. Verifier to check against Polish terminology. The sentence is a deliberate limitation and must stay."
+    }
+  ],
+  "verdict": "needs_edits"
+}

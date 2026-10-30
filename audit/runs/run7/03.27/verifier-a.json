@@ -1,0 +1,160 @@
+{
+  "item": "03.27",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Rests on NG202 1.1.1 (assess for OSAHS when two or more features are present, among them snoring, witnessed apnoeas and unexplained excessive sleepiness). The title pairs snoring with pauses in breathing or with sleepiness, so it meets that trigger. The source text is addressed to clinicians and does not itself tell the lay reader to report symptoms; the advice is derived."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Konsultacja, ewentualne badanie snu i leczenie.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Organizacja i wydatki zależą od sytuacji",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie podajemy cen aparatu ani zasad refundacji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Backed part: NG202 1.1.1 names snoring, witnessed apnoeas and unexplained excessive sleepiness as features that should lead to a sleep history and assessment for OSAHS. Not backed: advice to report any one of the three signs on its own. The guideline sets the assessment trigger at two or more features, and no snapshot line speaks to the lay reader about OSA symptoms (the NHS page addresses insomnia)."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 127, "text": "do not drive when you feel sleepy"}
+      ],
+      "reason": "Backed part: do not drive when sleepy (NHS insomnia page, a self-care 'Don't' item). Not backed: the instruction to choose a safe stop and another way of travelling; no snapshot says this. NICE NG202 only lists the impact of sleepiness on safe driving as a topic of information (chapter 4) and points to DVLA guidance without stating its content."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 503, "text": "Offer people with OSAHS having CPAP access to a sleep service for advice, support and equipment between follow-up appointments."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 593, "text": "Interventions to support adherence to treatment for OSAHS should be given by trained specialist staff when treatment is started and as needed at follow-up."}
+      ],
+      "reason": "Backed part: CPAP is recommended after a sleep study has diagnosed moderate or severe OSAHS, and the guideline describes service-led provision, follow-up and adherence support. Not backed: the explicit instruction not to choose the device or its settings oneself. No snapshot line states who selects the device or sets the pressure, or tells the reader not to do it; the two quotes show clinician-led provision only."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 23, "text": "NICE guideline"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 25, "text": "Reference number: NG202"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 105, "text": "Take a sleep history and assess people for OSAHS if they have 2 or more of the following features:"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 109, "text": "witnessed apnoeas"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 115, "text": "unexplained excessive sleepiness, tiredness or fatigue"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 221, "text": "Offer home respiratory polygraphy to people with suspected OSAHS."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 241, "text": "Use the results of the sleep study to diagnose OSAHS and determine the severity of OSAHS (mild, moderate or severe)."}
+      ],
+      "reason": "Document identity (NICE guideline, reference NG202), symptom assessment (1.1.1) and sleep studies for suspected OSAHS (1.3.1, 1.3.6) are all stated. 'Snoring' is also listed at line 107 but that line is only 7 characters, too short to quote."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 359, "text": "Offer fixed-level CPAP, in addition to lifestyle advice, to people with moderate or severe OSAHS."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 241, "text": "Use the results of the sleep study to diagnose OSAHS and determine the severity of OSAHS (mild, moderate or severe)."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 355, "text": "technology appraisal guidance on continuous positive airway pressure for the treatment of obstructive sleep apnoea/hypopnoea syndrome"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 315, "text": "setting up the device at home by video consultation or with precautions in hospital"}
+      ],
+      "reason": "The recommendation and the diagnosed-severity condition are stated directly. The gloss 'urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych' is supported only through the acronym expansion (continuous positive airway pressure) and the references to 'the device'; the snapshot does not describe how the device works."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — wytyczne kliniczne dotyczące diagnostyki i leczenia",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 23, "text": "NICE guideline"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 215, "text": "1.3 Diagnostic tests for OSAHS"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 349, "text": "1.6 Treatments for moderate and severe OSAHS"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. NG202 is a NICE guideline with chapters on diagnostic tests and treatments."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez jednej prognozy korzyści dla czytelnika.",
+      "verdict": "absent_in_source",
+      "searched": ["d2dea5869951c1d9.txt", "024454efeeae7d39.txt", "b59686537010480d.txt"],
+      "reason": "Searched all three snapshots for any quantified or per-reader forecast of benefit (percentages, risk reduction, expected gain, accident or mortality figures, promises of improvement); none found. The two NICE NG202 snapshots hold the whole stored text of chapters 1 and 4 (keptChars equals wholeChars), so this is absence from those two chapters only; other NG202 parts (rationale and impact, evidence reviews) are not stored. The NHS page snapshot is the main region only (4304 of 4844 characters)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.",
+      "verdict": "not_applicable",
+      "reason": "Editorial judgement of priority; no snapshot compares finding the cause with masking sleepiness by caffeine, and none was checked for it."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "recommendation_derived",
+      "claim": "Chrapanie samo w sobie nie jest rozpoznaniem.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "No snapshot states this sentence in words. It follows from NG202: snoring is one of the features that prompts assessment (line 105 and the feature list), and the diagnosis and its severity come from the results of a sleep study (line 241), both quoted in the depended-on row."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Rodzaj badania i leczenia dobiera osoba prowadząca.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 225, "text": "If access to home respiratory polygraphy is limited, consider home oximetry for people with suspected OSAHS."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 397, "text": "If a person with moderate or severe OSAHS is unable to tolerate or declines to try CPAP"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 85, "text": "People have the right to be involved in discussions and make informed decisions about their care"}
+      ],
+      "reason": "Backed part: the guideline directs the choice of test and treatment by criteria (access, tolerance, severity). Not backed or narrower: no snapshot says that the treating clinician alone chooses; NG202 frames the choice as a decision in which the person is involved and may decline CPAP, which the sentence leaves out."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#1", "note": "NG202 covers people over 16 and is an English NHS guideline; the sentence names NICE but states neither the age limit nor the setting. The assessment trigger is two or more features; the sentence does not mention the threshold."},
+    {"id": "Korzyść i dowody#2", "note": "NICE recommends fixed-level CPAP offered in addition to lifestyle advice, in people over 16; the sentence says none of this. The sentence does not claim that CPAP is the only option, and NICE lists alternatives (auto-CPAP, mandibular advancement splint)."},
+    {"id": "Ocena dowodów#1.1", "note": "A reader might assume that all cited sources are clinical guidelines on diagnosis and treatment. Only the two NICE NG202 chapters are; the third cited source is an NHS public-information page on insomnia."},
+    {"id": "W praktyce#1", "note": "NG202 sets the assessment trigger at two or more features; the sentence lists the three signs as alternatives."},
+    {"id": "W praktyce#2", "note": "The only matching source line is an insomnia self-care 'Don't' item, not advice about sleep apnoea; safe stopping and alternative travel are not in any snapshot."},
+    {"id": "W praktyce#3", "note": "The sentence prohibits self-selection of the device and settings; the source only describes clinician-led provision and follow-up."},
+    {"id": "Ograniczenia#2", "note": "The sentence attributes the choice to the treating clinician alone; NG202 describes shared decision-making and allows the person to decline CPAP."}
+  ],
+  "notes": "No protocol violation. Opened only: the role file, AGENTS.md, the packet, and the three snapshots d2dea5869951c1d9.txt, 024454efeeae7d39.txt and b59686537010480d.txt (no Grep, no network, no shell). The third cited source (b59686537010480d.txt) is the NHS insomnia page, not an OSA page; its stored text is the main region only (4304 of 4844 characters). The two NICE NG202 snapshots are the whole stored text of chapters 1 and 4; other NG202 parts are not stored. Judgement calls: Ograniczenia#1 and Ograniczenia#2 are world statements filed as recommendation_derived and source_claim rather than meta_statement; the gloss of CPAP in Korzyść i dowody#2 was kept in one row and judged supported through the acronym expansion."
+}

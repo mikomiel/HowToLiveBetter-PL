@@ -1,0 +1,171 @@
+{
+  "item": "14.10",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Nie przekazuj sekretów niesprawdzonym pośrednikom AI",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "source_claim",
+      "claim": "Cena nie jest tu dowodem bezpieczeństwa.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "1 paid and 8 free routers actively injecting malicious code"}
+      ],
+      "reason": "The snapshot shows that a router bought for money was among those injecting malicious code, so a paid service is not shown to be safe by being paid. The abstract does not compare paid and free routers statistically."
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#3"],
+      "reason": "Backed: the abstract says the routers have full plaintext access to every in-flight JSON payload, so who receives the content matters. Not backed: what data the intermediary stores (retention) and to whom it passes data beyond dispatching requests to upstream providers; the abstract says nothing on storage or onward sharing."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"],
+      "reason": "Backed: credentials can be taken (secret exfiltration class, 17 routers touching canary credentials) and routers see all payload plaintext, so any data or code sent is exposed. Not backed: the need for authorisation, the confidentiality assessment and the legal basis for processing personal data; the abstract has no legal or data-protection content."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2"]
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "recommendation_derived",
+      "claim": "Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.",
+      "verdict": "unsupported",
+      "reason": "Searched the whole abstract for any remedy for an exposed key (revocation, rotation, issuer procedure, mitigation advice). The abstract reports that a leaked key was abused and that credentials were touched, but gives no remediation step; the advice needs a different source (the key issuer's documentation)."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 17, "text": "Authors:Hanzhi Liu, Chaofan Shou, Hongbo Wen, Yanju Chen, Ryan Jingyang Fang, Yu Feng"},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 13, "text": "[Submitted on 9 Apr 2026]"},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "Across 28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"}
+      ],
+      "reason": "First author Liu with five co-authors; arXiv v1 submission with no journal or venue line on the page. The page does not use the word preprint or state peer-review status; the label follows from the arXiv e-print listing."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "1 paid and 8 free routers actively injecting malicious code"},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "17 touching researcher-owned AWS canary credentials"},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "two core attack classes, payload injection (AC-1) and secret exfiltration (AC-2)"}
+      ],
+      "reason": "Injection of malicious code by routers and the touching of researcher-owned canary credentials are stated. Not stated in the abstract: that the code was injected specifically into responses (it says payload injection and in-flight JSON payload; only the defence list mentions response-side screening). Full text needed for that detail."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "These routers operate as application-layer proxies with full plaintext access to every in-flight JSON payload"}
+      ],
+      "reason": "Stated as a property of third-party API routers as a class (the architecture), not as a per-router measurement; payload is broader than requests."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "We present the first systematic study of this attack surface."},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "Across 28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"},
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "Two poisoning studies further show that ostensibly benign routers can be pulled into the same attack surface"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. Supported: a systematic measurement of routers from named purchase channels and public communities (a convenience sample, no claim of market coverage). Narrower than the source: the paper is not only one measurement study; it also has two poisoning studies and builds a research proxy to evaluate three defences. That the sample is not representative is not stated in the abstract; it is an inference from the sampling description."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "recommendation_derived",
+      "claim": "Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "recommendation_derived",
+      "claim": "Ocena musi poprzedzać przekazanie danych.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#3"]
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie wiadomo z tego badania, jaki odsetek wszystkich pośredników jest złośliwy.",
+      "verdict": "not_checkable",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "Across 28 paid routers purchased from Taobao, Xianyu, and Shopify-hosted storefronts and 400 free routers collected from public communities"}
+      ],
+      "reason": "The snapshot is an arXiv abstract page only, so absence of a market-wide prevalence estimate cannot be shown. The abstract reports counts within the sample (1 paid and 8 free injecting) and describes a purchased and a community-collected sample, which fits the sentence. Full text is needed to see whether the paper estimates or disclaims prevalence."
+    },
+    {
+      "id": "Ograniczenia#2.1",
+      "kind": "recommendation_derived",
+      "claim": "Oficjalny dostawca też wymaga oceny zasad przetwarzania",
+      "verdict": "unsupported",
+      "reason": "Searched the abstract for anything on official or upstream providers' data-processing terms, privacy or retention. It concerns third-party routers and only says no provider enforces cryptographic integrity between client and upstream model; nothing backs an assessment of processing rules."
+    },
+    {
+      "id": "Ograniczenia#2.2",
+      "kind": "source_claim",
+      "claim": "bezpośrednie połączenie nie jest gwarancją poufności.",
+      "verdict": "not_checkable",
+      "reason": "The abstract studies third-party routers. Its only statement about the client-to-provider link (line 21: no provider enforces cryptographic integrity between client and upstream model) concerns integrity, not confidentiality. Full text would be needed to see whether the paper says anything on confidentiality of a direct connection."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych.",
+      "verdict": "unsupported",
+      "reason": "Searched the abstract for personal data, pseudonymisation, masking, anonymisation or data-protection law. None appears. The claim is a data-protection (GDPR) statement outside the subject of the cited paper and needs its own source."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "source_claim",
+      "claim": "Ocena polecenia przez człowieka ogranicza część ryzyka, ale nie gwarantuje wykrycia każdego ataku.",
+      "verdict": "not_checkable",
+      "quotes": [
+        {"snapshot": "aff92e5a2fd5f64c.txt", "line": 21, "text": "evaluate three deployable client-side defenses: a fail-closed policy gate, response-side anomaly screening, and append-only transparency logging"}
+      ],
+      "reason": "The abstract names three automated client-side defences and adaptive evasion variants, but reports no results and does not mention human review of commands. Full text would be needed to see whether human review is evaluated or its limits discussed."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Koszt#2", "note": "The abstract gives no comparison of risk between paid and free routers; it only shows that a paid router was among the malicious ones."},
+    {"id": "Korzyść i dowody#1", "note": "The sample came from named channels (Taobao, Xianyu, Shopify-hosted storefronts for paid; public communities for free), not a census of the market."},
+    {"id": "Korzyść i dowody#2", "note": "Abstract does not state where the malicious code was injected (responses vs request payloads); 'touching' canary credentials is the abstract's wording for access."},
+    {"id": "Ocena dowodów#1", "note": "The paper includes two poisoning studies and a defence evaluation with a research proxy, beyond a single measurement study."},
+    {"id": "W praktyce#3", "note": "Abstract reports no results for any defence and does not test restricting automatic execution; the advice rests on the injection finding and is a practical inference."},
+    {"id": "Ograniczenia#2.2", "note": "Source covers third-party routers; official or direct provider connections are outside what was measured."},
+    {"id": "Ograniczenia#3", "note": "Personal-data law is outside the paper's subject."},
+    {"id": "Ograniczenia#4", "note": "Human review of commands is not among the defences named in the abstract."}
+  ],
+  "notes": "Only one source (arXiv abstract page 2604.08407, snapshot aff92e5a2fd5f64c.txt) is cited and the snapshot holds the abstract page only (main region 4689 of 5099 chars), no full text; no packet warnings. All claims about details beyond the abstract are therefore not_checkable or unsupported rather than supported. Several sentences (W praktyce#4, Ograniczenia#2.1, Ograniczenia#3) rest on no cited source and need their own sources (key issuer documentation, data-protection law). No protocol violation: I opened only the role file, AGENTS.md, the packet and the one snapshot."
+}

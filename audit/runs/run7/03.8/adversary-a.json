@@ -1,0 +1,140 @@
+{
+  "item": "03.8",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "睡前一小时不看发光屏幕 (no light-emitting screen in the last hour before bed)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "要看就看纸书 (if you must look at something, read a paper book)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "或不开屏幕灯的墨水屏 (or an e-ink reader with the screen light off)",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "要长期对抗惯性，需要毅力 (keep it up against habit; costs willpower, not money)",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "不开屏幕灯的墨水屏归到纸书这边 (unlit e-ink counted with paper, an inference from the study); 开着屏幕灯的墨水屏也在发光，没有数据 (backlit e-ink also emits light, no data)",
+      "fate": "dropped",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#1",
+      "text": "u 12 zdrowych młodych dorosłych",
+      "why": "The sample size 12 and the population words zdrowych młodych dorosłych appear neither in the stored abstract nor in the upstream span. The abstract names no number of participants and no age or health status. The only upstream statement on size is that the group was small (人数少), with no count. The figure is therefore neither a snapshot passage, nor a lead, nor a stated editorial calculation. A reader is told a specific N and population that the stored evidence does not show. The same gap leaves the word małe in Ocena dowodów#1 resting only on the upstream remark.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Here we compare the biological effects of reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book in the hours before bedtime."},
+        {"source": "upstream", "line": 8, "text": "人数少，是实验室里控好条件做的"}
+      ],
+      "fix_direction": "Either support N and the population from a stored full-text or methods passage, or remove the number and the population words and say only that the study was small (as the upstream note states) and that the access was abstract-only."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Korzyść i dowody#2",
+      "text": "W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów.",
+      "why": "The only stored source for this study is an abstract (Europe PMC). The abstract gives no design details: no randomisation, no 4-hour exposure, no five evenings. The upstream span gives crossover, about 4 hours and 5 nights, which is a lead, not evidence. The word losowanym (randomised) is in neither text. The item states these design details as established, so the evidence statement is stronger than the checked source. The same missing exposure details (about 4 hours, maximum brightness on an iPad per the upstream span) are what the limitation Ograniczenia#2 (Duża ekspozycja laboratoryjna) silently relies on.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Participants reading an LE-eBook took longer to fall asleep and had reduced evening sleepiness"},
+        {"source": "upstream", "line": 5, "text": "实验室里让同一批人两种条件轮着做（交叉试验）"},
+        {"source": "upstream", "line": 5, "text": "一种是睡前在 iPad 上读电子书，亮度调到最高，读约 4 小时，连读 5 晚"}
+      ],
+      "fix_direction": "Drop losowanym and the 4-hour and five-evening details unless a stored passage supports them, or state explicitly that they come from the upstream summary and were not confirmed in the abstract that was checked."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej",
+      "why": "The study compared reading the same material on a light-emitting device versus a printed book. That is a substitution of medium, not an earlier cut-off of screen use. Ending screen use earlier (a timing change, covering any screen activity) was not manipulated. The only stored support for the timing advice is NHS guidance (devices right before bed; relax at least 1 hour before bed), which the item does not tie to any sentence. The item does not call the extension an editorial example or say that the timing was not tested, although Ocena redakcyjna partly hedges it.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Here we compare the biological effects of reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 123, "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"},
+        {"source": "upstream", "line": 1, "text": "睡前一小时不看发光屏幕，要看就看纸书或不开屏幕灯的墨水屏"}
+      ],
+      "fix_direction": "Say that the study tested the medium (light-emitting device versus paper) and not the cut-off time, and mark the earlier-cut-off advice as editorial or guidance-based, naming NHS as the basis for it."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie",
+      "why": "Two scope shifts. (1) The sources speak of light-emitting devices, not bright ones. The exposure was an iPad at maximum brightness, and brightness as a dose was not tested, so jasne can suggest that dimming is enough. (2) The trigger jeśli utrudniają ci wyciszenie is added by the adaptation. The measured outcomes are physiological (melatonin, circadian timing, morning alertness) and may not be noticed by the reader, so a reader who does not feel disturbed gets no advice although the same outcomes were found in all participants as a group.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Participants reading an LE-eBook took longer to fall asleep and had reduced evening sleepiness"},
+        {"source": "upstream", "line": 5, "text": "亮度调到最高，读约 4 小时"},
+        {"source": "upstream", "line": 8, "text": "按日常的手机亮度和使用时长，影响可能没这么大"}
+      ],
+      "fix_direction": "Use a wording faithful to light-emitting screens (not only bright ones), note that brightness settings were not tested, and justify or remove the subjective trigger, since the outcomes are not limited to felt difficulty winding down."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym.",
+      "why": "The statement that night mode and e-ink were not tested comes only from the upstream note (a lead). The stored abstract is silent on devices other than the LE-eBook, so it can neither confirm nor refute the claim. The word każdego implies that some phones were tested, but the upstream span describes an iPad e-book and no phone at all. A reader may think phones were studied in part.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "手机的夜间模式管多大用，这项研究没测。墨水屏它也没测。"},
+        {"source": "upstream", "line": 5, "text": "一种是睡前在 iPad 上读电子书，亮度调到最高，读约 4 小时，连读 5 晚"},
+        {"source": "snapshot", "snapshot": "fa247e48351151fd.txt", "line": 14, "text": "reading an electronic book on a light-emitting device (LE-eBook)"}
+      ],
+      "fix_direction": "Say that the stored source describes a single light-emitting e-book device and that phones, night mode and e-ink were not covered, rather than implying partial phone testing."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "na przykład czytanie papierowej książki",
+      "why": "The upstream fallback was paper or an e-ink reader with the screen light off. The item keeps only paper as a concrete example and mentions e-ink only as not tested. A reader who reads on an unlit e-ink device gets no statement that this is the case the original treated as equivalent to paper (an inference, correctly removed as untested), and no statement that a backlit e-ink device does emit light. Because the item allows any spokojne zajęcie, a path still exists, so this does not change what a reader would do materially.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "睡前一小时不看发光屏幕，要看就看纸书或不开屏幕灯的墨水屏"},
+        {"source": "upstream", "line": 8, "text": "不开屏幕灯的墨水屏和纸书一样靠反射屋里的光来看，所以归到纸书这边"},
+        {"source": "upstream", "line": 8, "text": "开着屏幕灯的墨水屏也在发光，没有数据"}
+      ],
+      "fix_direction": "State in the item or in Zmiany w adaptacji that the e-ink option was dropped because it rests on an untested inference, and that e-ink with a light on is simply not covered by the evidence."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.",
+      "why": "The item never introduces a one-hour rule, so a reader alone with this text cannot tell what is being denied. The one-hour figure comes from the upstream title, and the cited NHS page says to relax at least 1 hour before bed. A reader who opens NHS may see an apparent contradiction. Whether a one-hour cut-off is or is not scientifically established cannot be decided from the stored texts (one abstract and one NHS page), so the negative claim is only partly supported.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "睡前一小时不看发光屏幕，要看就看纸书或不开屏幕灯的墨水屏"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 107, "text": "relax at least 1 hour before bed"}
+      ],
+      "fix_direction": "Say in the same sentence that popular advice and NHS guidance mention about an hour, and that this study did not test any cut-off time; avoid the unqualified naukowo ustalonej."
+    }
+  ],
+  "notes": "No protocol violation. Opened only: the role file, AGENTS.md, README.md (lines 40-79, which also showed two paragraphs after the section Jak czytać dowody), the packet, and the two snapshots fa247e48351151fd.txt and b59686537010480d.txt. No shell, network, book/, tests/, tools/, manifest, other snapshots or git history. Status is PASS because every attack was run and no blocker was found, but it carries two major findings: the stored PNAS source is abstract-only, so the sample size 12, the population, randomisation, the 4-hour exposure and the five evenings are not confirmed by any stored text. Packet limits: the fields Status, Weryfikacja and Oryginał are not in the packet, so I could not check whether the abstract-only access is declared there; the label Artykuł, abstrakt i wyniki in Źródła suggests more than the abstract was checked (that field has no entry in packet.propositions, so I did not raise it as a finding). The NHS page (reviewed 19 March 2024) is a UK source and is not tied to any sentence of the item; it is consistent with the item and shows no recency conflict with the 2015 study. NHS attributes the effect to blue light, while the abstract only says the effect may be due to short-wavelength light; the item makes no mechanism claim, so no finding. No Chinese institution, hotline, threshold or legal claim appears in reader-facing fields. Grade B is consistent with the README definition (single study); I found no grade drift."
+}

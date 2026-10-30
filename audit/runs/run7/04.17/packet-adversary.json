@@ -1,0 +1,165 @@
+{
+  "version": 2,
+  "item": "04.17",
+  "role": "adversary",
+  "title": "Naucz się skrótów do czynności, które często wykonujesz w programie",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków, jeśli korzystasz z posiadanego programu. Nauka i ćwiczenie zabierają czas, a początkowo mogą spowalniać. To ocena redakcji.",
+    "W praktyce": "Wybierz często używane polecenie, sprawdź skrót w pomocy swojego programu i przećwicz go. Zostań przy sposobie obsługi, który jest dla ciebie dostępny i wygodny.",
+    "Korzyść i dowody": "Lane i współautorzy zbadali ankietą 251 doświadczonych użytkowników Worda. Większość rzadko używała skrótów. W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę; skróty były najszybszą z tych metod.",
+    "Ocena dowodów": "B — ankieta i bardzo mały eksperyment dotyczący konkretnego interfejsu.",
+    "Ocena redakcyjna": "Najpierw wypróbuj skrót do powtarzalnej czynności. Nie ucz się całej listy tylko dlatego, że istnieje.",
+    "Ograniczenia": "Abstrakt nie podaje liczby zaoszczędzonych sekund. Wynik nie dowodzi, że każdy skrót i każdy program są szybsze dla każdego użytkownika. Nie badano tu automatyzacji skryptami.",
+    "Źródła": "Lane, Napier, Peres i Sándor (2005), Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. [DOI i abstrakt wydawcy](https://doi.org/10.1207/s15327590ijhc1802_1).",
+    "Zmiany w adaptacji": "Usunięto automatyzację, arbitralny próg dziesięciu użyć dziennie oraz obietnicę stałego zwrotu z nauki."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Naucz się skrótów do czynności, które często wykonujesz w programie"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków, jeśli korzystasz z posiadanego programu."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nauka i ćwiczenie zabierają czas, a początkowo mogą spowalniać."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Wybierz często używane polecenie, sprawdź skrót w pomocy swojego programu i przećwicz go."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zostań przy sposobie obsługi, który jest dla ciebie dostępny i wygodny."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Lane i współautorzy zbadali ankietą 251 doświadczonych użytkowników Worda."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Większość rzadko używała skrótów."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę; skróty były najszybszą z tych metod."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — ankieta i bardzo mały eksperyment dotyczący konkretnego interfejsu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Najpierw wypróbuj skrót do powtarzalnej czynności."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Nie ucz się całej listy tylko dlatego, że istnieje."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Abstrakt nie podaje liczby zaoszczędzonych sekund."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Wynik nie dowodzi, że każdy skrót i każdy program są szybsze dla każdego użytkownika."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie badano tu automatyzacji skryptami."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1207/s15327590ijhc1802_1",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 273,
+      "sha256": "da39918d82abfeafb1b02ffdfb0e9a98fd0f9781160fc2abebad03c7f10cd61c",
+      "snapshot": "13d78a52f21a4281.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 17. 花一次时间学常用软件的键盘快捷键和自动化"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=中 毅力=些 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。要一次性投入几小时到几十小时去学。难在刚上手那阵子比用鼠标还慢。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：多数用惯了 Word 的人，还是在点工具栏图标。分组对比的实验里，快捷键比菜单和图标都快。学这一次是一次性花费，之后每天每次操作都在回本。做同一类工作越久，赚回来越多。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：研究看了 251 名有经验的 Word 用户，多数人很少用更快的快捷键，还是以点图标工具栏为主。分组对比的实验确认，菜单、图标、快捷键这三种方式里，快捷键最快。省回的时间随每天操作次数一点点累积。长期做同一类工作的人，收益最大。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Lane, D. M., Napier, H. A., Peres, S. C., & Sándor, A. (2005). Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. International Journal of Human-Computer Interaction. <https://doi.org/10.1207/s15327590ijhc1802_1>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：只学你每天要用到十次以上的操作，学得太全是另一种浪费。另外，那项效率实验只有 6 名参与者，摘要也没有给出每次操作节省的秒数。"
+      }
+    ]
+  }
+}

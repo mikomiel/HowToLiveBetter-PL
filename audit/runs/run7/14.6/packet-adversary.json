@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "item": "14.6",
+  "role": "adversary",
+  "title": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty",
+  "fields": {
+    "Koszt": "Przegląd ustawień i ustalenie, co nadal jest potrzebne. Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.",
+    "W praktyce": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji. Usuń zbędne dostępy. Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.",
+    "Korzyść i dowody": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł.",
+    "Ocena dowodów": "C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu.",
+    "Ocena redakcyjna": "Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji.",
+    "Ograniczenia": "Nieznana lokalizacja sama nie rozstrzyga o ataku. Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność. Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta.",
+    "Źródła": "[NCSC: Recovering a hacked account](https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account).",
+    "Zmiany w adaptacji": "Zachowano C. Okresowy przegląd pozostaje sugestią redakcyjną. Nie przeniesiono brytyjskich numerów zgłoszeniowych ani nazw chińskich aplikacji."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przegląd ustawień i ustalenie, co nadal jest potrzebne."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Usuń zbędne dostępy."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nieznana lokalizacja sama nie rozstrzyga o ataku."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6873,
+      "sha256": "2680430c2ca39b314f2e7f353477c6d14b9f6b1223e64ed9d3da5782863b3f29",
+      "snapshot": "4f1351e404cb2044.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 6804,
+        "wholeChars": 9603,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "C",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 6. 每隔一段时间看一次账号的登录设备和已授权应用，不用的清掉"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。每次看几分钟。难的是没人提醒，要自己记得去看。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：「登录设备」是指现在还能用你账号的那些手机和电脑。列表里冒出你不认识的设备，或者早就不用的软件还连着你的账号，就先改密码，再退出全部登录。邮箱还要看一眼，有没有你没设过的自动转发。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：账号里的登录设备列表，记着现在还能用这个账号的手机和电脑。已授权应用列表，记着你准许它用这个账号登录的别家软件。列表里的陌生设备，和早就不用的第三方软件，是最容易发现的痕迹。英国国家网络安全中心把「来自陌生地点或在不寻常时间的登录、登录尝试」列为账号被盗要查的迹象。它还说，犯罪分子常在邮箱里设一条转发规则，寄给你的每封邮件都自动抄一份给他，他就能拿去重置你的密码。它给的处理顺序是：先查掉不明的转发规则，再改密码，然后把所有设备和应用从账号里退出登录。退出之后，别人再想用你的账号，就得输入新密码。美国联邦贸易委员会也建议，拿回账号后退出所有设备，删掉不是你设的转发规则"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：C"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：UK NCSC. Recovering a hacked account. <https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account>；US FTC. How To Recover Your Hacked Email or Social Media Account. <https://consumer.ftc.gov/articles/how-recover-your-hacked-email-or-social-media-account>；两份都是账号出事以后的处理指南，「隔一段时间主动去看」是作者经验"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：微信、支付宝、邮箱、苹果账号和安卓账号里都有这个入口。发现不认识的设备，先改密码，再点退出全部登录，英国国家网络安全中心给的就是这个顺序。定 C 级，是因为两份来源都是官方操作指南，没有研究算过定期检查能少丢多少"
+      }
+    ]
+  }
+}

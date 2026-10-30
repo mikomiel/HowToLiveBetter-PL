@@ -1,0 +1,186 @@
+{
+  "version": 2,
+  "item": "03.18",
+  "role": "verifier",
+  "title": "Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy",
+  "fields": {
+    "Koszt": "Kontakt z pomocą i dobranie aktywności do zdrowia oraz możliwości. Koszt i dostępność leczenia zależą od sytuacji; nie podajemy cen.",
+    "W praktyce": "Jeśli nastrój utrudnia codzienne życie, skontaktuj się z profesjonalną pomocą. Nie musisz najpierw udowodnić, że potrafisz ćwiczyć. Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni. W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123. Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112, zamiast czekać na rozmowę wspierającą.",
+    "Korzyść i dowody": "Sieciowa metaanaliza Noetela i współautorów objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji. Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych. Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji.",
+    "Ocena dowodów": "A — ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników.",
+    "Ocena redakcyjna": "Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania. Aktywność nie jest testem charakteru ani warunkiem leczenia.",
+    "Ograniczenia": "Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń. Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej. Telefon wsparcia nie zastępuje numeru alarmowego. Podany telefon 116 123 dotyczy dorosłych."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Kontakt z pomocą i dobranie aktywności do zdrowia oraz możliwości."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Koszt i dostępność leczenia zależą od sytuacji; nie podajemy cen."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Jeśli nastrój utrudnia codzienne życie, skontaktuj się z profesjonalną pomocą."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie musisz najpierw udowodnić, że potrafisz ćwiczyć."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112, zamiast czekać na rozmowę wspierającą."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Sieciowa metaanaliza Noetela i współautorów objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Aktywność nie jest testem charakteru ani warunkiem leczenia."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Telefon wsparcia nie zastępuje numeru alarmowego."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Podany telefon 116 123 dotyczy dorosłych."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 403,
+      "error": null,
+      "via": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "finalUrl": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "finalUrl": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4733,
+      "sha256": "70535dcd400f2ea859d70af44f72bc0a40e27bd4f38aadc952b5d62ca827cac4",
+      "snapshot": "f231cd969d441cef.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4636,
+        "wholeChars": 8637,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "finalUrl": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 8926,
+      "sha256": "9dff2ea7231178d7d743d5a474660053e1cee8dbd65f282b0ed60c778b28d8b4",
+      "snapshot": "601d0f7b15c908cb.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 8795,
+        "wholeChars": 8795,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

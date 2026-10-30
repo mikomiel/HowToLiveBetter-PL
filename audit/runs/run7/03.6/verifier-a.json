@@ -1,0 +1,157 @@
+{
+  "item": "03.6",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "meta_statement",
+      "claim": "Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 9,
+          "text": "Authors: Altmann EM, Trafton JG, Hambrick DZ."
+        },
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "a task that required participants to maintain their place in a sequence of steps each with their own performance requirements"
+        }
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Interruptions averaging 4.4 s long tripled the rate of sequence errors on post-interruption trials relative to baseline trials."
+        },
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Interruptions averaging 2.8 s long--about the time to perform a step in the interrupted task--doubled the rate of sequence errors."
+        }
+      ],
+      "reason": "Both multipliers (doubled at 2.8 s average, tripled at 4.4 s average, relative to baseline trials) match the abstract. The weak part is the measure: the source states a rate of sequence errors on post-interruption trials, the sentence says 'liczba błędów' (a number or count). The abstract gives no counts, so the count reading is not shown; only the full text could say how the rate was computed."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — eksperyment laboratoryjny dotyczący błędów sekwencji.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Interruptions averaging 4.4 s long tripled the rate of sequence errors on post-interruption trials relative to baseline trials."
+        },
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "a task that required participants to maintain their place in a sequence of steps each with their own performance requirements"
+        }
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source: the abstract supports a participant task with sequence errors compared between baseline and post-interruption trials, but it uses neither the word experiment nor laboratory and does not describe the setting or the allocation of conditions. The design label and the laboratory setting need the full text (methods)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Interruptions averaging 2.8 s long--about the time to perform a step in the interrupted task--doubled the rate of sequence errors."
+        },
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Nonsequence errors showed no interruption effects"
+        }
+      ],
+      "reason": "The sentence limits the finding rather than extending it: the doubling was reported for sequence errors in one task, and nonsequence errors showed no interruption effects, so not all errors doubled. The abstract says nothing about other kinds of work."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "W badaniu błędy niesekwencyjne nie wykazały tego efektu.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "96995263a3e68870.txt",
+          "line": 14,
+          "text": "Nonsequence errors showed no interruption effects"
+        }
+      ]
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "title#1",
+      "note": "The advice generalises one laboratory finding to step-by-step tasks in general; the abstract gives no advice and reports no test of whether limiting interruptions reduces errors outside the study task."
+    },
+    {
+      "id": "W praktyce#1",
+      "note": "Same generalisation: the source studied one task requiring place-keeping in a sequence with interruptions averaging 2.8 s and 4.4 s, not everyday tasks or avoidable interruptions of other lengths; the abstract does not test interruption-limiting measures."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "note": "Source measure is the rate of sequence errors on post-interruption trials relative to baseline trials; the sentence says 'liczba błędów' (number). The abstract names no population beyond 'participants' and gives no counts."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "note": "'Eksperyment laboratoryjny' is a design and setting label that the abstract does not state; only the full text could confirm it."
+    }
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and the one cited snapshot 96995263a3e68870.txt (abstract only, Europe PMC, DOI 10.1037/a0030986, Altmann, Trafton, Hambrick, 2014; title, authors and text consistent with the item). The two lead rows (10.1145/1054972.1055017 and 10.1145/1357054.1357072) are origin lead with metadata-only snapshots and are not evidence; I did not open them. No protocol violation. Judgement calls: W praktyce#2 (a safety proviso in the imperative) is filed as meta_statement because it only bounds the advice and states no fact about the world; Ograniczenia#1 is filed as source_claim and judged supported because it only denies a generalisation; Ocena redakcyjna#1 is kept as one editorial_estimate row because its 'nie gwarancja' clause is part of the same editorial judgement. Because the snapshot is an abstract, design and measure details (rate versus count, experiment, laboratory) cannot be settled without the full text."
+}

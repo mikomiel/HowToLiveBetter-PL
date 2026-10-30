@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "item": "14.2",
+  "role": "adversary",
+  "title": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+  "fields": {
+    "Koszt": "Zmiana haseł i przygotowanie menedżera haseł. Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.",
+    "W praktyce": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je. Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu. Zacznij od poczty, przez którą resetujesz inne konta.",
+    "Korzyść i dowody": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont. Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.",
+    "Ocena dowodów": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.",
+    "Ocena redakcyjna": "Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony.",
+    "Ograniczenia": "Silne hasło może zostać wyłudzone lub przechwycone. Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1). Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+    "Źródła": "[CERT Polska: bezpieczne hasła i menedżery](https://wiedza.cert.pl/dobre-praktyki/hasla/).",
+    "Zmiany w adaptacji": "Zachowano C. Usunięto uniwersalne wymaganie 16 znaków i przykłady chińskich aplikacji. Nie obiecujemy, że menedżer sam chroni przed phishingiem. Poprawka 2026-10-29: zamiast ogólnego „przygotuj odzyskiwanie konta” opisano to, co mówi źródło (hasło główne, drugi składnik dla konta menedżera, kody zapasowe), a opis źródła w Ocenie dowodów ograniczono do tego, co strona mówi o sobie."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana haseł i przygotowanie menedżera haseł."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Zacznij od poczty, przez którą resetujesz inne konta."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Silne hasło może zostać wyłudzone lub przechwycone."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie podajemy jednej długości pasującej do wymagań każdej usługi."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "finalUrl": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12734,
+      "sha256": "9c74c6cac3b61b35fcdc3fefbd7e41bc7d0d727cc5d1cceae6bd46a5977c75c0",
+      "snapshot": "6a185dd9954fea49.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12649,
+        "wholeChars": 13207,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "C",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 2. 邮箱密码单独一个，不和任何网站重复"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。用密码管理器存着就不用自己记。难的是要改掉一个密码到处用的老习惯。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：别的网站被偷走的密码，会被人拿来直接登你的邮箱。邮箱一旦被人登进去，凡是能用邮箱找回密码的账号，都跟着一起丢。所以邮箱的密码要单独一个，别的地方一律不用。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：把别处泄露的账号和密码挨个拿来试着登，这叫撞库，你的邮箱也会被这样试。邮箱一旦被人登进去，所有用它找回密码的账号一起丢。美国网络安全和基础设施安全局的建议是：每个账号用一个不同的强密码，至少 16 位，交给密码管理器存"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：C"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：US CISA. Use Strong Passwords. <https://www.cisa.gov/secure-our-world/use-strong-passwords>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：记不住就用浏览器自带的密码管理器。它替你记住每个网站的密码，比到处用同一个密码强得多。别把密码存在微信收藏或者备忘录里"
+      }
+    ]
+  }
+}

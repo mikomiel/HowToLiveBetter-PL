@@ -1,0 +1,147 @@
+{
+  "version": 2,
+  "item": "03.6",
+  "role": "adversary",
+  "title": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku",
+  "fields": {
+    "Koszt": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”. To ocena redakcji.",
+    "W praktyce": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.",
+    "Korzyść i dowody": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji. Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.",
+    "Ocena dowodów": "B — eksperyment laboratoryjny dotyczący błędów sekwencji.",
+    "Ocena redakcyjna": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.",
+    "Ograniczenia": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy. W badaniu błędy niesekwencyjne nie wykazały tego efektu. Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji.",
+    "Źródła": "Altmann, Trafton i Hambrick (2014), Momentary interruptions can derail the train of thought. [Abstrakt wydawcy](https://doi.org/10.1037/a0030986).",
+    "Zmiany w adaptacji": "Zachowano B. Usunięto uogólnienie, że każda przerwa kosztuje około 25 minut, oraz połączenie odmiennych badań w jeden wynik."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — eksperyment laboratoryjny dotyczący błędów sekwencji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "W badaniu błędy niesekwencyjne nie wykazały tego efektu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/a0030986",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1213,
+      "sha256": "223fd2e5bfc0175968bd3bbfd2dd94edcb6b6c03cdb9cc42c33c351521349293",
+      "snapshot": "96995263a3e68870.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 6. 做需要连续思考的工作时，把哪怕几秒钟的打断也挡在外面"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。关上门，戴上耳机，或者挂一个「勿扰」牌。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：一次平均 2.8 秒的打断，就让接下来的操作出错概率翻倍。4.4 秒的打断翻三倍。现场跟踪还发现，被打断的那件事平均要 25 分钟才回得来，中间还插进两件别的事。被打断的人干得更快，但压力、挫败感和费劲程度全都更高。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：平均 2.8 秒的打断，会让按顺序一步步做的任务（序列任务）步骤出错率翻倍。4.4 秒的打断让它翻三倍。这是实验室里做的。另一项是对 24 名办公室白领（信息工作者）的现场观察。他们平均每 11 分钟切换一次工作主题。57% 的工作主题被打断。当天回到被打断的那件事上，平均要 25 分 26 秒。中间还插了 2.26 件别的事。还有一项 48 人的实验：被打断的人做得更快，但报告的压力、挫败感、时间压力和费劲程度都更高。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Altmann, Trafton & Hambrick (2014). Momentary interruptions can derail the train of thought. Journal of Experimental Psychology: General. <https://doi.org/10.1037/a0030986>；Mark, Gonzalez & Harris (2005). No task left behind? Examining the nature of fragmented work. CHI 2005. <https://doi.org/10.1145/1054972.1055017>；Mark, Gudith & Klocke (2008). The cost of interrupted work: More speed and stress. CHI 2008. <https://doi.org/10.1145/1357054.1357072>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：那项现场研究把打断分成两类：一类是别人来找你的，一类是自己点开的。关门只挡得住前一类。后一类要配合第 1 条（关掉非必要通知）和第 5 条（批量处理消息）一起用。"
+      }
+    ]
+  }
+}
