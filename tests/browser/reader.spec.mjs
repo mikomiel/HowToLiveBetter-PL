@@ -42,7 +42,7 @@ test('renders actual chapters, all verified provenance and no external requests'
     await expect(card.getByRole('heading')).toHaveText(e.title);
     if (e.number === '14.1') {
       await expect(card.locator('.practical')).toContainText('włącz dostępną weryfikację dwuskładnikową (2FA)');
-      await expect(card.locator('.practical')).toContainText('Kody SMS i z aplikacji nadal można wyłudzić');
+      await expect(card.locator('.practical')).toContainText('Kody SMS i kody z aplikacji nadal można wyłudzić');
     }
     await card.locator('summary').click();
     await expect(card).toContainText(e.fields.Weryfikacja);
