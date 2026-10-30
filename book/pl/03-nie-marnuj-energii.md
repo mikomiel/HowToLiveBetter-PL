@@ -12,7 +12,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 ### 1. Na czas skupionej pracy wyłącz niepotrzebne powiadomienia
 - Status: verified
-- Koszt: Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. To nakład redakcyjnie oceniany jako niewielki.
+- Koszt: Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. Redakcja ocenia ten nakład jako niewielki.
 - W praktyce: Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.
 - Korzyść i dowody: Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.
 - Ocena dowodów: B — eksperyment dotyczący konkretnego zadania uwagowego.
