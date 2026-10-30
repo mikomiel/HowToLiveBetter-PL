@@ -408,6 +408,34 @@ const finding = (extra = {}) => ({ severity: 'major', attack: 'numbers', id: 'W 
 const snap = { source: 'snapshot', snapshot: 'aaaa.txt', line: 8, text: 'Kody SMS i z aplikacji można wyłudzić' };
 const up = { source: 'upstream', line: 4, text: 'Wynik 30,7 punktu przy ustawieniu' };
 
+test('a quote of Chinese upstream text may begin and end between any two characters, and a quote inside a word is told where', () => {
+  const check = (...args) => checkAdversaryReport(...args, dir);
+  const han = text => finding({ evidence: [{ source: 'upstream', line: 2, text }] });
+  assert.equal(check(...adversary([han('花钱。每个账号设置一次，两三分钟')])).ok, true, 'begins in the middle of a run of Han characters');
+  assert.equal(check(...adversary([han('不花钱。每个账号设置一次，两三')])).ok, true, 'ends in the middle of one');
+  assert.match(problems(check(...adversary([han('花钱。每个账号设置一次，两三分钟就设完。不存在'  )]))), /not on upstream line 2/, 'text that is not on the line is still rejected');
+  const inside = problems(check(...adversary([finding({ evidence: [{ source: 'upstream', line: 4, text: 'ynik 30,7 punktu przy ustawieniu' }] })])));
+  assert.match(inside, /not on upstream line 4; the text is on that line but starts or ends inside a word or a number, near "wynik 30,7/, 'Latin text keeps the word rule, and the message says where');
+
+  const glued = 'ParticipantsA total of n = 48 healthy adults (ages 21-38) participated in the experiments.';
+  const [report, packet] = adversary([]);
+  const sha = snapshot('aaaa.txt', LINES.concat([glued]));
+  const gluedPacket = { ...packet, sources: [row('aaaa.txt', sha)] };
+  const quote = text => ({ ...report, findings: [finding({ evidence: [{ source: 'snapshot', snapshot: 'aaaa.txt', line: 11, text }] })] });
+  const rejected = problems(check(quote('A total of n = 48 healthy adults (ages 21-38)'), gluedPacket));
+  assert.match(rejected, /quote is not on line 11 of aaaa\.txt/);
+  assert.match(rejected, /starts or ends inside a word or a number, near "participantsa total/, 'the line is shown as the script compares it, in lower case');
+  assert.match(rejected, /a heading glued to the next word, as in "ParticipantsA", is one word, so start after it/);
+  assert.equal(check(quote('total of n = 48 healthy adults (ages 21-38)'), gluedPacket).ok, true, 'starting after the glued word is fine');
+});
+
+test('an adversary report that says UNAVAILABLE for a thin source alone is told what the status needs', () => {
+  const check = (...args) => checkAdversaryReport(...args, dir);
+  assert.match(problems(check(...adversary([], { status: 'UNAVAILABLE' }))), /which give PASS \(UNAVAILABLE needs at least one attack in attacks_not_assessable; a blocked or thin source alone does not make it/);
+  const [report, packet] = adversary([], { status: 'UNAVAILABLE', attacks_run: ['same-action', 'preservation', 'grade', 'numbers', 'scope-words', 'leak', 'self-containment', 'recency'], attacks_not_assessable: [{ attack: 'limitations', reason: 'abstract only' }] });
+  assert.equal(check(report, packet).ok, true, 'one attack the sources cannot decide makes it UNAVAILABLE');
+});
+
 test('the adversary report is checked the same way: evidence must be on the cited line, a blocker needs evidence', () => {
   const check = (...args) => checkAdversaryReport(...args, dir);
   assert.equal(check(...adversary([])).ok, true, 'PASS with every attack run and nothing found');
