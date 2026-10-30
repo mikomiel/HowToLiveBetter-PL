@@ -42,12 +42,12 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 ### 3. Ustaw blokadę ekranu i rozważ PIN karty SIM
 - Status: verified
-- Koszt: Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu. To ocena redakcji.
-- W praktyce: Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM. Nie zgaduj kodu początkowego ani PUK. Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.
-- Korzyść i dowody: Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty. To inne zabezpieczenie niż kod odblokowujący ekran. Google opisuje osobno zdalne zablokowanie utraconego telefonu.
+- Koszt: Konfiguracja i bezpieczne przechowanie danych potrzebnych do odzyskania dostępu. To ocena redakcji.
+- W praktyce: Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM. Nie zgaduj kodu początkowego ani PUK-u. Gdy go nie znasz, sprawdź dokumenty lub skorzystaj z oficjalnego wsparcia swojego operatora.
+- Korzyść i dowody: Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty. To inne zabezpieczenie niż kod blokady ekranu. Google opisuje osobno zdalne zablokowanie utraconego telefonu.
 - Ocena dowodów: C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych.
-- Ocena redakcyjna: Te zabezpieczenia dotyczą różnych dróg dostępu. Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania.
-- Ograniczenia: Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany. PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora. Dostępność i nazwy ustawień zależą od urządzenia i karty.
+- Ocena redakcyjna: Te zabezpieczenia dotyczą różnych dróg dostępu. Warto wiedzieć, którego kodu żąda urządzenie, zanim spróbujesz je odblokować.
+- Ograniczenia: Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany karty. PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora. Dostępność i nazwy ustawień zależą od urządzenia i karty.
 - Źródła: [Apple: PIN SIM i eSIM, ostrzeżenie przed zgadywaniem](https://support.apple.com/pl-pl/118228); [Google: blokowanie urządzenia z Androidem](https://support.google.com/accounts/answer/6160491?hl=pl).
 - Oryginał: [14.3](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L25-L32)
 - Weryfikacja: 2026-10-28; pełne polskie instrukcje: różne rodzaje blokady, działanie PIN-u SIM i postępowanie przy nieznanym kodzie.
