@@ -165,8 +165,8 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 ### 12. Przed rezygnacją z numeru telefonu sprawdź powiązane konta
 - Status: verified
-- Koszt: Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania. Nie zakładamy stałego czasu wykonania.
-- W praktyce: W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp. Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy. Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.
+- Koszt: Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania konta. Nie zakładamy stałego czasu wykonania.
+- W praktyce: W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania konta, zanim stracisz dostęp do starego numeru. Uwzględnij pocztę e-mail, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy. Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.
 - Korzyść i dowody: Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia. To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie.
 - Ocena dowodów: C — dokumentacja dostawcy i redakcyjna lista kontrolna, bez badania unikniętych strat.
 - Ocena redakcyjna: Warto sprawdzić działanie nowej metody przed wyłączeniem starej. Lista usług jest przykładem, nie kompletnym rejestrem twoich kont.
