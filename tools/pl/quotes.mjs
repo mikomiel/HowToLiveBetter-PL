@@ -22,7 +22,9 @@ const NEEDS_QUOTE = new Set(['supported', 'partly', 'contradicted']);
 const NEEDS_REASON = new Set(['partly', 'unsupported', 'contradicted', 'not_checkable', 'source_unavailable']);
 const MAX_WORDS = 40;
 const MIN_CHARS = 12;
-const WORD = /[\p{L}\p{N}]/u;
+// A quote has to start and end on a word boundary. Chinese is written without spaces, so a Han character is never part of a longer word:
+// a quote of the upstream text may begin and end between any two Han characters.
+const WORD = /(?![\p{Script=Han}])[\p{L}\p{N}]/u;
 const withoutLinks = text => String(text).replace(/\[[^\]]*\]\([^)]*\)/g, ' ');
 
 // The status the verdicts allow: any refuted claim or ungrounded recommendation fails, any claim or recommendation only partly backed
@@ -67,6 +69,13 @@ function findQuote(line, quote) {
   return -1;
 }
 
+// When the text is on the line but not on word boundaries, say where, so the role can move the quote instead of guessing.
+function boundaryHint(line, text) {
+  const at = line.indexOf(text);
+  if (at === -1) return '';
+  return `; the text is on that line but starts or ends inside a word or a number, near "${line.slice(Math.max(0, at - 14), at + Math.min(text.length, 24))}": begin and end on whole words (a heading glued to the next word, as in "ParticipantsA", is one word, so start after it)`;
+}
+
 // One verifier of line-addressed evidence for both reviewer reports. Returns a problem string or null.
 function quoteChecker(packet, cacheDir) {
   const rows = new Map((packet.sources ?? []).filter(r => r.snapshot).map(r => [r.snapshot, r]));
@@ -85,7 +94,7 @@ function quoteChecker(packet, cacheDir) {
     if (text.split(' ').length > MAX_WORDS) return `quote is longer than ${MAX_WORDS} words`;
     if (text.length < MIN_CHARS && q.cell !== true) return `quote is shorter than ${MIN_CHARS} characters (mark a single table cell with "cell": true)`;
     const line = foldText(snap.lines[index]);
-    if (findQuote(line, text) === -1) return `quote is not on line ${q.line} of ${q.snapshot} (that line starts: "${line.slice(0, 70)}")`;
+    if (findQuote(line, text) === -1) return `quote is not on line ${q.line} of ${q.snapshot} (that line starts: "${line.slice(0, 70)}")${boundaryHint(line, text)}`;
     return null;
   };
   return { rows, check };
@@ -229,7 +238,7 @@ export function checkAdversaryReport(report, packet, cacheDir) {
         const line = upstream.get(Number(e.line));
         if (line === undefined) fail(where, `upstream line ${e.line} does not exist`);
         else if (foldText(e.text ?? '').length < MIN_CHARS && e.cell !== true) fail(where, `upstream quote is shorter than ${MIN_CHARS} characters`);
-        else if (findQuote(line, foldText(e.text ?? '')) === -1) fail(where, `quote is not on upstream line ${e.line}`);
+        else if (findQuote(line, foldText(e.text ?? '')) === -1) fail(where, `quote is not on upstream line ${e.line}${boundaryHint(line, foldText(e.text ?? ''))}`);
         else verified++;
       } else fail(where, 'evidence.source must be "snapshot" or "upstream"');
     }
@@ -239,7 +248,8 @@ export function checkAdversaryReport(report, packet, cacheDir) {
   const everyAttack = ATTACKS.every(a => covered.has(a));
   const derived = blockers ? 'FAIL' : !everyAttack || notAssessable.length ? 'UNAVAILABLE' : 'PASS';
   if (report.status === 'PASS' && !everyAttack) fail('report', `PASS needs every attack run or listed as not assessable; missing: ${ATTACKS.filter(a => !covered.has(a)).join(', ')}`);
-  if (STATUSES.includes(report.status) && report.status !== derived) fail('report', `status ${report.status} does not match the findings, which give ${derived}`);
+  const thinSource = derived === 'PASS' && report.status === 'UNAVAILABLE' ? ' (UNAVAILABLE needs at least one attack in attacks_not_assessable; a blocked or thin source alone does not make it, say so in notes)' : '';
+  if (STATUSES.includes(report.status) && report.status !== derived) fail('report', `status ${report.status} does not match the findings, which give ${derived}${thinSource}`);
   return { ok: failures.length === 0, status: derived, failures, warnings: packet.warnings ?? [] };
 }
 
