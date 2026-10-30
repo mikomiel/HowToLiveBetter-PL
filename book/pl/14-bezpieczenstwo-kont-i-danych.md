@@ -58,7 +58,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 4. Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta
 - Status: verified
 - Koszt: Dostęp do innego zaufanego urządzenia i kontakt z dostawcami usług. Czas i ewentualne opłaty zależą od sytuacji.
-- W praktyce: Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna. Powiadom operatora o utracie karty i ustal, jak ją zabezpieczyć. Jeśli zagrożony jest dostęp do konta bankowego lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem. Podejrzenie kradzieży zgłoś policji. Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne.
+- W praktyce: Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna. Propozycja redakcji: powiadom operatora o utracie karty i ustal, jak ją zabezpieczyć. Jeśli zagrożony jest dostęp do konta bankowego lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem. Podejrzenie kradzieży zgłoś policji. Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne.
 - Korzyść i dowody: Google i Apple opisują zdalną blokadę i inne działania po utracie urządzenia. Apple wskazuje także kontakt z operatorem. Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach.
 - Ocena dowodów: C — oficjalne instrukcje reagowania; nie badanie jednego optymalnego porządku działań.
 - Ocena redakcyjna: Przygotowana wcześniej lista oficjalnych kontaktów może ułatwić reakcję. Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów.
@@ -66,7 +66,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 - Źródła: [Google: utracone urządzenie](https://support.google.com/accounts/answer/6160491?hl=pl); [Apple: zgubiony iPhone lub iPad](https://support.apple.com/pl-pl/101593); [Rzecznik Finansowy: nieautoryzowane operacje](https://rf.gov.pl/edukacja/baza-wiedzy/najczestsze-pytania-i-odpowiedzi-faq/transakcje-nieautoryzowane/).
 - Oryginał: [14.4](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L34-L41)
 - Weryfikacja: 2026-10-28; polskie instrukcje producentów: blokada, ograniczenia lokalizacji i kasowania, kontakt z operatorem; zalecenia RF o zabezpieczeniu dostępu do pieniędzy. Bez oceny konkretnego roszczenia.
-- Zmiany w adaptacji: Zachowano C. Usunięto sztywną chińską kolejność, numery operatorów i automatyczne zalecenie kasowania. Zgłoszenie na policji nie jest warunkiem wcześniejszego kontaktu z bankiem.
+- Zmiany w adaptacji: Zachowano C. Usunięto sztywną chińską kolejność, numery operatorów i automatyczne zalecenie kasowania. Zgłoszenie na policji nie jest warunkiem wcześniejszego kontaktu z bankiem. 2026-10-30 (przegląd run7, decyzja właściciela): zdanie o powiadomieniu operatora oznaczono jako propozycję redakcji; czytelne źródło mówi tylko, że operator może użyć numeru IMEI do wyłączenia telefonu.
 
 <a id="porada-14-5"></a>
 
