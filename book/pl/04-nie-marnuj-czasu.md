@@ -23,14 +23,14 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 <a id="porada-4-2"></a>
 
-### 2. Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz
+### 2. Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub zakończysz projekt
 - Status: verified
-- Koszt: Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To szacunek redakcji.
-- W praktyce: Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.
+- Koszt: Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To oszacowanie redakcji.
+- W praktyce: Zapisz warunek przeglądu: „Jeśli w ustalonym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.
 - Korzyść i dowody: Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań. Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.
-- Ocena dowodów: B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego.
+- Ocena dowodów: B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej porady brak osobnego wyniku ilościowego.
 - Ocena redakcyjna: Kryterium może ułatwić decyzję. Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu.
-- Ograniczenia: Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości. Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu. Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3).
+- Ograniczenia: Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości. Badania nie uzasadniają automatycznego przerywania pracy nad projektem po dowolnym opóźnieniu. Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3).
 - Źródła: Gollwitzer i Sheeran (2006), Implementation intentions and goal achievement: A meta-analysis of effects and processes. [DOI i abstrakt wydawcy](https://doi.org/10.1016/S0065-2601%2806%2938002-1).
 - Oryginał: [04.2](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L16-L23)
 - Weryfikacja: 2026-10-27; abstrakt wydawcy, fragment o disengagement from failing courses of action. Zweryfikowano kierunek, nie czas zaoszczędzony przez interwencję.
