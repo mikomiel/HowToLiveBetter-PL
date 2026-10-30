@@ -190,13 +190,17 @@ export const htmlToText = html => htmlToDoc(html).text;
 
 // Block-level JATS elements become line breaks and inline ones vanish, so full text keeps one paragraph per line.
 const JATS_BLOCK = /<\/?(?:[a-z0-9]+:)?(?:p|sec|title|caption|label|td|th|tr|table|list-item|list|ref|abstract|body|front|back|fig|boxed-text|disp-quote|def-item|article-title)\b[^<>]*>/gi;
+// Removing a tag can join the text around it into a new tag ('<scr<b>ipt>'), so the removal repeats until nothing changes. Each pass
+// strips one nesting level, so the number of passes is capped: without a cap the time grows with depth times length, and fetch accepts up to 8 MiB.
+const MAX_STRIP_PASSES = 8;
 export const stripXml = xml => {
   let out = String(xml);
   let prev;
+  let passes = 0;
   do {
     prev = out;
     out = out.replace(JATS_BLOCK, '\n').replace(/<[^<>]*>/g, '');
-  } while (out !== prev);
+  } while (out !== prev && ++passes < MAX_STRIP_PASSES);
   return decode(out)
     .replace(/[ \t\u00a0]+/g, ' ').replace(/ ?\n ?/g, '\n').replace(/\n{2,}/g, '\n').trim();
 };
