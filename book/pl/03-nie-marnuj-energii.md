@@ -30,9 +30,9 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Koszt: Organizacja dnia i pogodzenie snu z obowiązkami. To ocena redakcji, bez wyceny czasu.
 - W praktyce: Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen. Nie traktuj regularności jako powodu do celowego niedosypiania.
 - Korzyść i dowody: Phillips i współautorzy obserwowali 61 studentów przez 30 dni. Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy. NHS zaleca stałą porę wstawania jako element dbania o sen.
-- Ocena dowodów: B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pobudki.
+- Ocena dowodów: B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pory wstawania.
 - Ocena redakcyjna: To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.
-- Ograniczenia: Korelacja nie dowodzi poprawy ocen po zmianie pobudki. Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania. Utrzymujące się problemy ze snem omów z lekarzem.
+- Ograniczenia: Korelacja nie dowodzi poprawy ocen po zmianie pory wstawania. Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania. Utrzymujące się problemy ze snem omów z lekarzem.
 - Źródła: Phillips i współautorzy (2017), Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. [Artykuł](https://www.nature.com/articles/s41598-017-03171-4); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.2](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L30-L37)
 - Weryfikacja: 2026-10-28; abstrakt i wyniki artykułu: liczebność, czas obserwacji i kierunek związku; zalecenia NHS dla pacjentów.
