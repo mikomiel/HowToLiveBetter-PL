@@ -190,8 +190,20 @@ export const htmlToText = html => htmlToDoc(html).text;
 
 // Block-level JATS elements become line breaks and inline ones vanish, so full text keeps one paragraph per line.
 const JATS_BLOCK = /<\/?(?:[a-z0-9]+:)?(?:p|sec|title|caption|label|td|th|tr|table|list-item|list|ref|abstract|body|front|back|fig|boxed-text|disp-quote|def-item|article-title)\b[^<>]*>/gi;
-export const stripXml = xml => decode(String(xml).replace(JATS_BLOCK, '\n').replace(/<[^<>]*>/g, ''))
-  .replace(/[ \t\u00a0]+/g, ' ').replace(/ ?\n ?/g, '\n').replace(/\n{2,}/g, '\n').trim();
+// Removing a tag can join the text around it into a new tag ('<scr<b>ipt>'), so the removal repeats until nothing changes. Each pass
+// strips one nesting level, so the number of passes is capped: without a cap the time grows with depth times length, and fetch accepts up to 8 MiB.
+const MAX_STRIP_PASSES = 8;
+export const stripXml = xml => {
+  let out = String(xml);
+  let prev;
+  let passes = 0;
+  do {
+    prev = out;
+    out = out.replace(JATS_BLOCK, '\n').replace(/<[^<>]*>/g, '');
+  } while (out !== prev && ++passes < MAX_STRIP_PASSES);
+  return decode(out)
+    .replace(/[ \t\u00a0]+/g, ' ').replace(/ ?\n ?/g, '\n').replace(/\n{2,}/g, '\n').trim();
+};
 
 const WALL = /_incapsula_resource|incapsula|cf-chl|captcha-delivery|just a moment|attention required|access denied|client challenge|verifying you are human|checking your browser|are you a robot|a required part of this site|enable javascript and cookies|sign in to continue|access through your institution|request unsuccessful|purchase this article|buy this article|subscribe to read/i;
 export function looksBlocked(status, headers, text = '', raw = '') {
@@ -206,7 +218,12 @@ export function decodeBody(buffer, contentType = '') {
   else if (buffer[0] === 0xff && buffer[1] === 0xfe) label = 'utf-16le';
   else if (buffer[0] === 0xfe && buffer[1] === 0xff) label = 'utf-16be';
   if (!label) {
-    const head = buffer.subarray(0, 4096).toString('latin1').replace(/<!--[\s\S]*?-->/g, '');
+    let head = buffer.subarray(0, 4096).toString('latin1');
+    let prev;
+    do {
+      prev = head;
+      head = head.replace(/<!--[\s\S]*?-->/g, '');
+    } while (head !== prev);
     label = /charset=["']?([\w-]+)/i.exec(contentType)?.[1] ?? /<meta[^>]+charset=["']?([\w-]+)/i.exec(head)?.[1] ?? 'utf-8';
     if (/^utf-?16/i.test(label) && !/charset=["']?utf-?16/i.test(contentType)) label = 'utf-8';
   }

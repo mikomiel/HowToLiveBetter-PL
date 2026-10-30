@@ -1,0 +1,210 @@
+{
+  "item": "14.6",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Periodically look at the account's login devices and authorised apps and clear what is not used",
+      "fate": "kept",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Cost statement: free, a few minutes per check, the hard part is remembering to do it yourself",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Plain-language explanation that 'login devices' means the phones and computers that can still use the account",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "If the list shows an unrecognised device or long-unused software, change the password first, then log out of everything",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Also look in the mailbox for automatic forwarding you did not set (part of the routine check)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "NCSC order: remove unknown forwarding rules, then change the password, then log all devices and apps out",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "FTC also advises: after regaining the account log out all devices and delete forwarding rules you did not set",
+      "fate": "kept",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "The entry point exists in WeChat, Alipay, email, Apple and Android accounts",
+      "fate": "narrowed",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Usuń zbędne dostępy.",
+      "why": "Upstream routes an unrecognised device or long-unused software to 'change the password first, then log out of everything'. The Polish item routes the same finding to plain removal ('Usuń zbędne dostępy') and gives the password-and-logout sequence only in W praktyce#3 under 'Przy podejrzeniu przejęcia konta'. Nothing says that an unrecognised session or app is the case that triggers W praktyce#3. A reader who finds a stranger's session and only removes it leaves the intruder able to sign in again with a known password. The NCSC snapshot puts logging out after the password change, but it does not itself say an unknown device proves a takeover; that link is only in the upstream span (a lead). So this is a missing conditional and a dropped fallback, not an unsupported claim.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "列表里冒出你不认识的设备，或者早就不用的软件还连着你的账号，就先改密码，再退出全部登录"},
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 69, "text": "Once you have changed your passwords, you need to make sure that any devices and apps (that may still be logged in) are logged out of the relevant account."}
+      ],
+      "fix_direction": "State what a reader does on finding an unrecognised session or app (treat as a suspected takeover and follow the recovery steps, or say explicitly that the source does not decide this). Say that removing a session alone does not remove an intruder who knows the password."
+    },
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty",
+      "why": "The only cited and stored source is a post-incident recovery guide (its steps are headed 'Steps to take if your account has been hacked'). It contains no instruction to review sessions, connected apps or app permissions, or to remove unused access, whether routinely or otherwise. Its only app-related action is 'Log all devices and apps out of your account' after a password change, which is ending logged-in sessions, not auditing or revoking app authorisations. The headline action 'uprawnienia aplikacji' and W praktyce#1-2 ('połączonych aplikacji', 'Usuń zbędne dostępy') are therefore wider than the source, and Ograniczenia#2 ('cofnięcie dostępu aplikacji') is likewise not what the snapshot describes. The item discloses only that the frequency and the periodic review are editorial (Koszt#2, Zmiany w adaptacji, and 'bez oceny skuteczności okresowego przeglądu' in Ocena dowodów). It does not say that the preventive review of connected apps and the removal of unused access are an editorial example with no NCSC counterpart. The phrase 'bez oceny skuteczności' also suggests the source recommends the review but did not measure it, while upstream names it as the author's own experience.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 65, "text": "4. Log all devices and apps out of your account"},
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 37, "text": "Steps to take if your account has been hacked"},
+        {"source": "upstream", "line": 7, "text": "两份都是账号出事以后的处理指南，「隔一段时间主动去看」是作者经验"}
+      ],
+      "fix_direction": "Label the routine review of sessions, connected apps and unused access as an editorial example built on a recovery guide, and say plainly that the source describes only the post-incident step of logging devices and apps out. Align the title and Ograniczenia#2 with what the source actually covers."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "sprawdź obce reguły przekazywania poczty",
+      "why": "The title says 'Sprawdzaj ... przekazywanie poczty', and upstream puts the mailbox forwarding check in the routine step. In W praktyce the forwarding check appears only inside the 'Przy podejrzeniu przejęcia konta' branch, and the snapshot places it as step 2 of the hacked-account steps. The title and the practice field disagree about whether it is a routine check, and the routine version is not marked as editorial.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "邮箱还要看一眼，有没有你没设过的自动转发"},
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 37, "text": "Steps to take if your account has been hacked"}
+      ],
+      "fix_direction": "Decide whether the forwarding check is routine or only part of recovery, make the title and W praktyce agree, and mark the routine version as editorial if kept."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy",
+      "why": "The NCSC sequence matters: forwarding rules first, because a forwarded copy of mail lets the intruder reset passwords, then passwords, then logging out. The Polish sentence lists the three actions in the right order but never says they are a sequence or why. Upstream lines 4 and 8 themselves lead with 'change the password first' and mention forwarding as an extra, so a reader who follows the memorable upstream wording could change the password before removing the rule. The Zmiany field does not record that the adaptation follows the NCSC order.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 57, "text": "Once you have confirmed there are no unwanted email forwarding rules in place, you need to:"},
+        {"source": "upstream", "line": 5, "text": "它给的处理顺序是：先查掉不明的转发规则，再改密码，然后把所有设备和应用从账号里退出登录"}
+      ],
+      "fix_direction": "Make the order explicit with the reason from the source, and record in Zmiany w adaptacji that the NCSC order is used."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#3",
+      "text": "sprawdź obce reguły przekazywania poczty",
+      "why": "The source says to check 'email filters and forwarding rules'. The Polish item narrows this to forwarding rules and drops filters.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 51, "text": "Check your email filters and forwarding rules."}
+      ],
+      "fix_direction": "Restore 'filtry' next to forwarding rules, or state that only forwarding is covered."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia.",
+      "why": "The source lists 'logins or attempted logins' from strange locations or at unusual times, and 'changes to your security settings'. The Polish drops 'attempted' (próby logowania), turns the settings change into the vague 'nieznane zmiany', and omits the other signals the source lists (unable to log in, unrecognised messages, unauthorised money transfers or purchases). A reader looking for only successful logins would miss the attempted ones.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 33, "text": "logins or attempted logins from strange locations or at unusual times"},
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 29, "text": "changes to your security settings"}
+      ],
+      "fix_direction": "Keep 'próby logowania' and name the settings change precisely; either list the other signals or say the list is partial."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia.",
+      "why": "'NCSC' is never expanded or placed in a country in any reader-facing field. Upstream names it as the British National Cyber Security Centre. A reader in Poland cannot tell that the guidance is from a UK body, and AGENTS.md asks for terms to be explained at first use. Only the Zmiany field alludes to it ('brytyjskich numerów').",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "英国国家网络安全中心把「来自陌生地点或在不寻常时间的登录、登录尝试」列为账号被盗要查的迹象"}
+      ],
+      "fix_direction": "Expand NCSC at first use and say it is the UK national cyber security body."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Nieznana lokalizacja sama nie rozstrzyga o ataku.",
+      "why": "The snapshot says nothing of this kind. It lists logins from strange locations among the things 'to look out for' without qualification, so the sentence is editorial reasoning presented as a limitation. It also gives the reader no way to resolve an unfamiliar location (for example compare with their own travel or devices) and could encourage dismissing the signal. It is not contradicted by the source, so this is only precision.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 33, "text": "logins or attempted logins from strange locations or at unusual times"}
+      ],
+      "fix_direction": "Mark it as an editorial caution and add what to do when the location cannot be explained, or remove it."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji.",
+      "why": "'Sesja' and 'połączona aplikacja' are not explained anywhere in the item. Upstream gave a plain-language definition (the phones and computers that can still use the account; third-party software you allowed to sign in), which the Polish dropped. Without it a lay reader may not know which list is meant. The item also gives no path for a service that has no such list.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "「登录设备」是指现在还能用你账号的那些手机和电脑"},
+        {"source": "upstream", "line": 5, "text": "已授权应用列表，记着你准许它用这个账号登录的别家软件"}
+      ],
+      "fix_direction": "Add a one-sentence plain explanation of both terms and say what to do when a service offers no such list."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "skorzystaj z oficjalnej instrukcji odzyskiwania",
+      "why": "Without the Źródła link the reader does not know whose instruction is meant. The snapshot's step 1 says to search the account provider's own help pages. The item concedes that recovery is not guaranteed (Ograniczenia#3) but gives no path when recovery fails, which the snapshot does cover. The snapshot also tells the reader to check bank accounts for unusual transactions, which the item omits. UK reporting channels in that snapshot must not be copied. Any Polish or EU reporting path would need its own source.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 45, "text": "These will explain in detail the account recovery process"},
+        {"source": "snapshot", "snapshot": "4f1351e404cb2044.txt", "line": 103, "text": "In some cases, it may not be possible to recover your account with the online service."}
+      ],
+      "fix_direction": "Say the instruction is the account provider's own recovery page. Add a short path for failed recovery or money loss from sources that apply in Poland, without transferring the UK reporting channel."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Przegląd ustawień i ustalenie, co nadal jest potrzebne.",
+      "why": "Upstream states money (none), time (a few minutes per check) and the real effort (nobody reminds you, you must remember). The Koszt field states none of them, although AGENTS.md asks to separate money, time and effort cost from benefit. The time figure is an editorial estimate and would need to be labelled as such.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "不花钱。每次看几分钟。难的是没人提醒，要自己记得去看。"}
+      ],
+      "fix_direction": "State money, time and effort separately and label the time estimate as an editorial assumption, or record why it was dropped."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ocena dowodów#1",
+      "text": "C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu.",
+      "why": "Upstream cites two sources, NCSC and the US FTC, and attributes to the FTC the same advice to log out all devices and delete unrecognised forwarding rules after regaining the account. The item cites only NCSC and the Zmiany field does not say that the FTC source and claim were dropped, or why. No FTC snapshot is stored, so its content cannot be judged here. The singular 'oficjalny poradnik' also hides that upstream rested on two guides. The Zmiany and Źródła fields have no proposition ids, so this finding is attached to the nearest field.",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "US FTC. How To Recover Your Hacked Email or Social Media Account."},
+        {"source": "upstream", "line": 5, "text": "美国联邦贸易委员会也建议，拿回账号后退出所有设备，删掉不是你设的转发规则"}
+      ],
+      "fix_direction": "Record in Zmiany w adaptacji that the FTC source was dropped and why, or restore it with a stored snapshot."
+    }
+  ],
+  "notes": "Grade attack: no finding. C fits the README definition (operational recommendation without a direct measurement of effectiveness), and the editorial part is disclosed. Numbers attack: the item contains no figures; the only upstream figure ('a few minutes') is covered by the Koszt finding. Leak attack: no Chinese institution, hotline, threshold or legal claim appears in reader-facing fields. Recency: the snapshot shows 'Published 17 December 2018', 'Reviewed 24 August 2022', 'Version 2.0', and an 'Also see' title of a 24 Jun 2025 NCSC blog about passkeys, but no text of other guidance, so no stored text shows a conflict or newer guidance. Listed under attacks_run because attack 8 is limited to what the snapshots show; if the orchestrator reads the 'not_assessable' rule as covering 'is this source outdated', this attack would instead belong in attacks_not_assessable and make the status UNAVAILABLE. Protocol: I read README.md lines 38-77, which goes beyond the 'Jak czytać dowody' section (lines 40-56) into the next section and the start of the one after it. I did not use that text. I opened nothing else outside the allowed set. The only Grep was on the stored snapshot path. fallback_stated is true only where the item states a path (provider procedure); for kept actions with no conditional it is false and means not applicable."
+}

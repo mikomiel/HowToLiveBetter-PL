@@ -1,0 +1,203 @@
+{
+  "version": 2,
+  "item": "14.1",
+  "role": "adversary",
+  "title": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu",
+  "fields": {
+    "Koszt": "Konfiguracja każdej usługi i przechowanie zapasu. Klucz sprzętowy może wymagać zakupu; nie podajemy cen.",
+    "W praktyce": "Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku. Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie. Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Nie zatwierdzaj logowania, którego nie rozpoczynasz.",
+    "Korzyść i dowody": "CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie. Kody SMS i kody z aplikacji można wyłudzić. Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.",
+    "Ocena dowodów": "C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków.",
+    "Ocena redakcyjna": "Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania.",
+    "Ograniczenia": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę. Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta. Korzystaj z metod rzeczywiście oferowanych przez usługę.",
+    "Źródła": "[CERT Polska: hasła, klucze dostępu i zapas](https://wiedza.cert.pl/dobre-praktyki/hasla/); [CERT Polska: MFA i weryfikacja użytkownika w WebAuthn](https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/).",
+    "Zmiany w adaptacji": "Oryginalne A zastąpiono C dla zalecenia operacyjnego. Usunięto ranking „push przed SMS” oraz procenty z badania Google z 2019 roku jako ogólną gwarancję. Dodano odporność na phishing i odzyskiwanie. Zachowano ogólne zalecenie włączenia 2FA również wtedy, gdy usługa nie obsługuje kluczy dostępu."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Konfiguracja każdej usługi i przechowanie zapasu."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Klucz sprzętowy może wymagać zakupu; nie podajemy cen."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zacznij od poczty i innych ważnych kont."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi."
+    },
+    {
+      "id": "W praktyce#6",
+      "field": "W praktyce",
+      "index": 6,
+      "text": "Nie zatwierdzaj logowania, którego nie rozpoczynasz."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Kody SMS i kody z aplikacji można wyłudzić."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Korzystaj z metod rzeczywiście oferowanych przez usługę."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "finalUrl": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12734,
+      "sha256": "9c74c6cac3b61b35fcdc3fefbd7e41bc7d0d727cc5d1cceae6bd46a5977c75c0",
+      "snapshot": "6a185dd9954fea49.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12649,
+        "wholeChars": 13207,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "finalUrl": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12475,
+      "sha256": "e3e47ed20f0684fe4e53049ba9d32a97bc361adc1d59b2d2cf00f96782b42f65",
+      "snapshot": "27b6fdf8ffbd5964.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12401,
+        "wholeChars": 12948,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 1. 邮箱、支付、社交账号都开二次验证，优先用手机弹窗确认，其次才是短信验证码"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。每个账号设置一次，两三分钟就设完。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：二次验证是指登录时除了密码，还要再确认一次是不是本人。用手机上弹个窗、你点一下确认的办法，九成以上的钓鱼盗号都被拦住了，短信验证码比弹窗容易被骗走。靠回答「上次在哪登的」「备用邮箱是什么」这种老办法，钓鱼盗号最少的只拦下一成。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：谷歌统计了 35 万次真实的盗号尝试（也叫账号劫持）。一类是靠设备来验证，比如手机上弹窗让你点确认，或者插一把安全密钥。这一类拦下了「超过 94% 源于钓鱼的劫持尝试和 100% 的自动化劫持尝试」。钓鱼是指骗你在假网站上输密码，自动化是指机器拿泄露的密码批量去试。另一类是靠回答问题来验证，比如问你上次在哪登录、备用邮箱是什么。这一类「只拦下了低至 10% 的钓鱼劫持和 73% 的自动化劫持」。同属设备验证，短信验证码比手机弹窗弱。钓鱼的人答对了 4% 的短信验证码，弹窗只骗到 1%。专门盯着某个人的定向攻击里，短信只拦下 76%，弹窗拦下 90%"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Doerfler P, Thomas K, Marincenko M, et al. (2019). Evaluating Login Challenges as a Defense Against Account Takeover. The World Wide Web Conference (WWW '19). <https://doi.org/10.1145/3308558.3313481>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：同一项研究也发现，这类验证有时会把本人挡在外面。52% 的真用户第一次没登进去，不过最后有 97% 还是进去了。先给邮箱开这个功能，因为别的账号大多能用邮箱找回密码。验证码只自己用，替别人报码、刷脸会背上什么，见第 8 节第 45 条（念验证码）"
+      }
+    ]
+  }
+}

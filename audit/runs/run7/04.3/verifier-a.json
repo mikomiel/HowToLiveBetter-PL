@@ -1,0 +1,134 @@
+{
+  "item": "04.3",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2.2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2.2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2.2"],
+      "reason": "The first half (set aside the irreversible outlay) rests on the sunk-cost effect confirmed in the Roth et al. abstract. The second half (identify what can still be recovered or used) rests on a premise that no snapshot states: neither snapshot says anything about recoverable or reusable value."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "a28d057130b8ad3c.txt", "line": 8, "text": "The psychology of sunk cost"},
+        {"snapshot": "a28d057130b8ad3c.txt", "line": 9, "text": "Arkes, Blumer"}
+      ],
+      "reason": "The snapshot is metadata only (Access: metadata-only, no abstract). It supports that Arkes and Blumer wrote a paper titled 'The psychology of sunk cost'. It says nothing about the content: not the tendency to continue after an earlier outlay, and not that the outlay can be money, effort or time. The full text would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#2.1",
+      "kind": "source_description",
+      "claim": "Przegląd Rotha i współautorów obejmuje 98 wielkości efektu",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "This article presents the results of a meta-analytic review of 98 effect sizes of the sunk-cost effect"},
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 9, "text": "Roth, Robbert, Straus"}
+      ],
+      "reason": "The abstract names the document as a meta-analytic review of 98 effect sizes; authors Roth, Robbert, Straus (Business Research, 2014). The item calls it a review without the word meta-analytic, which does not change the document type."
+    },
+    {
+      "id": "Korzyść i dowody#2.2",
+      "kind": "source_claim",
+      "claim": "potwierdza występowanie tego zjawiska dla kosztów pieniężnych",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "Although the effect of monetary sunk costs on decision-making is widely discussed"},
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "The results show clear evidence that the sunk-cost effect emerges"}
+      ],
+      "reason": "The abstract frames the review around monetary sunk costs and states clear evidence that the sunk-cost effect emerges. The sentence claims only the occurrence for monetary costs, which the abstract supports. It does not claim that every one of the 98 effect sizes was monetary."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Siła efektu zależy od rodzaju decyzji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "though its effect size and the influence of the moderators are contingent on the respective decision type"}
+      ],
+      "reason": "Supported by the Roth et al. abstract. The sentence does not name its source; the Arkes and Blumer snapshot (metadata only) says nothing on this."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "This article presents the results of a meta-analytic review of 98 effect sizes of the sunk-cost effect"},
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "The results show clear evidence that the sunk-cost effect emerges"},
+        {"snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "older adults are less likely to fall prey to the sunk-cost effect than younger adults"},
+        {"snapshot": "a28d057130b8ad3c.txt", "line": 8, "text": "The psychology of sunk cost"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The review part is supported: a meta-analytic review that finds clear evidence the sunk-cost effect emerges, and the abstract speaks of people falling prey to it. The 'badanie pierwotne' part is not supported by the snapshot: the Arkes and Blumer snapshot is metadata only (title, authors, journal, year) and does not state its design (primary study) or any finding. The full text would be needed."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "ale nie mierzą korzyści z tej konkretnej instrukcji",
+      "verdict": "not_checkable",
+      "searched": ["a28d057130b8ad3c.txt", "14fb6f3495da5c34.txt"],
+      "reason": "Searched both snapshots for any outcome of an instruction to compare future costs and benefits, or any measured benefit of such a prompt: nothing is mentioned. Absence cannot be shown, because one snapshot is metadata only and the other is an abstract only. The full texts would be needed."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "meta_statement",
+      "claim": "To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "meta_statement",
+      "claim": "Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Nie ma tu potwierdzonej liczby odzyskanych godzin.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#1", "note": "The sentence states the content of the Arkes and Blumer paper (continuing after an earlier outlay of money, effort or time). The stored snapshot holds only title, authors, journal and year, so none of that content is visible."},
+    {"id": "Korzyść i dowody#3", "note": "In the abstract the dependence on decision type is a moderator finding of the Roth et al. meta-analysis (the abstract mentions utilization and progress decisions). The sentence is generic and could be read as applying to all sunk-cost research."},
+    {"id": "Ocena dowodów#1.1", "note": "The evidence description 'badanie pierwotne' (primary study) is not confirmable from metadata. The Roth et al. abstract reports a meta-analysis of economic decision-making, not a test of the item's instruction."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and the two listed snapshots (a28d057130b8ad3c.txt, 14fb6f3495da5c34.txt). No protocol violation. Packet warnings are empty and both sources are origin cited with snapshots; Arkes and Blumer is metadata-only (no abstract), Roth et al. is abstract-only, so neither can show absence. Classification choices for the orchestrator: Ograniczenia#1 (a scoping caveat on how to apply the advice) and Ograniczenia#2 ('tu' read as 'in this item') are filed as meta_statement; if 'tu' is meant as 'in the sources', Ograniczenia#2 would be a source_claim and not_checkable with these snapshots. W praktyce#2 is partly because nothing in the snapshots speaks to what remains recoverable or usable. Title and W praktyce#1 are not_applicable because the effect they rest on is quoted in Korzyść i dowody#2.2; the sources do not test whether the instruction itself works, which Ocena dowodów#1.2 says."
+}

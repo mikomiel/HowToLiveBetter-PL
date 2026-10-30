@@ -1,0 +1,225 @@
+{
+  "version": 2,
+  "item": "03.18",
+  "role": "adversary",
+  "title": "Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy",
+  "fields": {
+    "Koszt": "Kontakt z pomocą i dobranie aktywności do zdrowia oraz możliwości. Koszt i dostępność leczenia zależą od sytuacji; nie podajemy cen.",
+    "W praktyce": "Jeśli nastrój utrudnia codzienne życie, skontaktuj się z profesjonalną pomocą. Nie musisz najpierw udowodnić, że potrafisz ćwiczyć. Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni. W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123. Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112, zamiast czekać na rozmowę wspierającą.",
+    "Korzyść i dowody": "Sieciowa metaanaliza Noetela i współautorów objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji. Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych. Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji.",
+    "Ocena dowodów": "A — ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników.",
+    "Ocena redakcyjna": "Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania. Aktywność nie jest testem charakteru ani warunkiem leczenia.",
+    "Ograniczenia": "Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń. Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej. Telefon wsparcia nie zastępuje numeru alarmowego. Podany telefon 116 123 dotyczy dorosłych.",
+    "Źródła": "Noetel i współautorzy (2024), Effect of exercise for depression. [BMJ: abstrakt i metody](https://www.bmj.com/content/384/bmj-2023-075847); [Ministerstwo Zdrowia: gdzie uzyskać pomoc](https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna); [Ministerstwo Cyfryzacji i NASK: 116 123 dla dorosłych](https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2).",
+    "Zmiany w adaptacji": "Zachowano A z jawnym ograniczeniem pewności. Usunięto chiński numer i zastąpiono go sprawdzonym polskim kontaktem. Nie utożsamiono wyjścia na słońce z kliniczną fototerapią. Nie przeniesiono instrukcji doboru intensywności ćwiczeń ani samodzielnego leczenia."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Kontakt z pomocą i dobranie aktywności do zdrowia oraz możliwości."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Koszt i dostępność leczenia zależą od sytuacji; nie podajemy cen."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Jeśli nastrój utrudnia codzienne życie, skontaktuj się z profesjonalną pomocą."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie musisz najpierw udowodnić, że potrafisz ćwiczyć."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112, zamiast czekać na rozmowę wspierającą."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Sieciowa metaanaliza Noetela i współautorów objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Aktywność nie jest testem charakteru ani warunkiem leczenia."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Telefon wsparcia nie zastępuje numeru alarmowego."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Podany telefon 116 123 dotyczy dorosłych."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 403,
+      "error": null,
+      "via": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "finalUrl": "https://www.bmj.com/content/384/bmj-2023-075847",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "finalUrl": "https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4733,
+      "sha256": "70535dcd400f2ea859d70af44f72bc0a40e27bd4f38aadc952b5d62ca827cac4",
+      "snapshot": "f231cd969d441cef.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4636,
+        "wholeChars": 8637,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "finalUrl": "https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 8926,
+      "sha256": "9dff2ea7231178d7d743d5a474660053e1cee8dbd65f282b0ed60c778b28d8b4",
+      "snapshot": "601d0f7b15c908cb.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 8795,
+        "wholeChars": 8795,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 18. 情绪低落时先做性价比最高的几件事：动起来、多见光、按时睡、找人说、打 12356"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=中 毅力=些 收益=大 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱，或者花很少。每周几次快走、慢跑或者力量训练。白天出门晒太阳。作息固定下来。想不开时打一个电话。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：快走、慢跑、瑜伽和力量训练都能减轻抑郁，强度越大越有效，细节见第 22 节第 6 条（心情差就去走或者跑）。光照治疗对季节性抑郁效果很强，对不分季节的抑郁也有效。网上的自助认知行为课程管用，症状偏重时有人带着做更好。想不开先打 12356。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：把 218 项随机分组的对照试验、14170 人合起来算（网络荟萃分析）。对照组是同样在做别的活动的人。和他们相比，步行或慢跑对抑郁的效果大小 g = -0.62（95% 可信区间 -0.80 到 -0.45）。瑜伽 -0.55，力量训练 -0.49。强度越大效果越好。把多项光照治疗研究合起来算：季节性抑郁效果大小 0.84（0.60 到 1.08），非季节性抑郁 0.53（0.18 到 0.89）。还有一项分析，把各项研究逐个病人的数据合起来算。它看的是互联网认知行为疗法（网上自助课程）。有人指导和无人指导，都比对照组好。中重度（PHQ-9 大于 9 分）的时候，有人指导的更好。12356 是全国心理援助热线，每日开通不少于 18 小时。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Noetel M 等 (2024). Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials. BMJ. <https://doi.org/10.1136/bmj-2023-075847>；Golden RN 等 (2005). The efficacy of light therapy in the treatment of mood disorders: a review and meta-analysis of the evidence. American Journal of Psychiatry. <https://doi.org/10.1176/appi.ajp.162.4.656>；Karyotaki E 等 (2021). Internet-Based Cognitive Behavioral Therapy for Depression: A Systematic Review and Individual Patient Data Network Meta-analysis. JAMA Psychiatry. <https://doi.org/10.1001/jamapsychiatry.2020.4364>；国家卫生健康委 (2024). 关于应用\"12356\"全国统一心理援助热线电话号码的通知（国卫医政函〔2024〕259 号）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：这些都是轻中度抑郁的辅助手段。中重度、有自杀念头的要去就医，先打 12356（见第 1 节第 25 条）。运动试验大多人数少，又没法像试药那样瞒住谁在运动。光照研究只到 2003 年，人数也少。那些研究用的是专门的光照灯，不是晒太阳。把它换成白天出门晒太阳，是从光照治疗推出来的。「按时睡」「找人说」是作者经验，没有单列文献。别把「动起来」当成对抑郁者的要求，能走十分钟就算数。"
+      }
+    ]
+  }
+}

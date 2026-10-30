@@ -1,0 +1,146 @@
+{
+  "version": 2,
+  "item": "14.9",
+  "role": "verifier",
+  "title": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę",
+  "fields": {
+    "Koszt": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji. To ocena redakcji.",
+    "W praktyce": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę.",
+    "Korzyść i dowody": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację. Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki. Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+    "Ocena dowodów": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.",
+    "Ocena redakcyjna": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+    "Ograniczenia": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu. Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej. Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia. Ochronę logowania opisuje [14.1](#porada-14-1). Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zapytaj także o inną metodę."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Ochronę logowania opisuje [14.1](#porada-14-1)."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/pl/file/3534",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/pl/file/3534",
+      "finalUrl": "https://uodo.gov.pl/pl/file/3534",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 35054,
+      "sha256": "991690c86dfc8949e2cf0c734bb3a34929fc7a91a4cdb8e8426fe3cc1a73efed",
+      "snapshot": "37cae0082d72986d.txt",
+      "info": {
+        "pages": 20
+      }
+    }
+  ],
+  "warnings": []
+}

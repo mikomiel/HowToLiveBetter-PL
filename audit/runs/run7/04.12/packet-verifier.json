@@ -1,0 +1,148 @@
+{
+  "version": 2,
+  "item": "04.12",
+  "role": "verifier",
+  "title": "Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności. To ocena redakcji.",
+    "W praktyce": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania. Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.",
+    "Korzyść i dowody": "Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem. Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39. W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana wyniosła 66 dni.",
+    "Ocena dowodów": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem.",
+    "Ocena redakcyjna": "Stały kontekst jest sposobem organizacji powtórzeń. Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej.",
+    "Ograniczenia": "Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym. Zakres 18–254 nie jest gwarancją dla każdego. Nie mierzono pracy twórczej ani oszczędności czasu. Przykład z biurkiem jest adaptacją, nie badaną czynnością."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana wyniosła 66 dni."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Stały kontekst jest sposobem organizacji powtórzeń."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zakres 18–254 nie jest gwarancją dla każdego."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie mierzono pracy twórczej ani oszczędności czasu."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Przykład z biurkiem jest adaptacją, nie badaną czynnością."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 403,
+      "error": null,
+      "via": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "10.1002/ejsp.674",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1547,
+      "sha256": "9e7bdd77b8543102309ce4234597f79876344e6f1209cae485bcc3f5d433dc90",
+      "snapshot": "248f8ea4bd81051a.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

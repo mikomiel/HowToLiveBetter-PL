@@ -1,0 +1,184 @@
+{
+  "item": "04.4",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 575, "text": "to link these experiences to the present computer assignment."},
+        {"snapshot": "e70647d0627ff840.txt", "line": 718, "text": "tion estimates when they use their past experiences to inform"}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To szacunek redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 573, "text": "their past experiences with similar assignments and then an-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 575, "text": "to link these experiences to the present computer assignment."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "meta_statement",
+      "claim": "To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "recommendation_derived",
+      "claim": "Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć:",
+      "verdict": "not_applicable",
+      "depends_on": ["W praktyce#3.2"]
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "source_claim",
+      "claim": "w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 720, "text": "periences did not, in itself, reduce the optimistic bias."},
+        {"snapshot": "e70647d0627ff840.txt", "line": 731, "text": "powerful manipulation, subjects continued to make overly opti-"}
+      ],
+      "reason": "Discussion of Study 4: leading people to remember past experiences (recall condition) did not in itself reduce the optimistic bias; only the recall-relevant condition did."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 15, "text": "Roger Buehler, Dale Griffin, and Michael Ross"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 23, "text": "In Study 4, the optimistic bias was eliminated for Ss instructed to connect"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 596, "text": "these subjects answered two more questions that required them to forge"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 597, "text": "a connection between the past experiences and the computer assign-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 631, "text": "centage of subjects finished the assignments in the predicted"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 652, "text": "recall-relevant condition were less biased but no more accurate"}
+      ],
+      "reason": "A higher share of the recall-relevant group finished within the predicted time (so fewer finished later than predicted, i.e. fewer underestimated); this group was the one prompted to link past similar assignments to the present one."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 631, "text": "centage of subjects finished the assignments in the predicted"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 633, "text": "and control conditions (38.1% and 29.3%, respectively),"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3.1",
+      "kind": "source_claim",
+      "claim": "To różnica 30,7 punktu procentowego w tym eksperymencie,",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 633, "text": "and control conditions (38.1% and 29.3%, respectively),"}
+      ],
+      "numbers": [
+        {"value": "30,7", "editorial_calculation": true, "basis": "60,0 minus 29,3"}
+      ],
+      "reason": "30,7 is the editors' difference of the two percentages in the source (60.0% recall-relevant vs 29.3% control); it is a difference in percentage points, correctly labelled."
+    },
+    {
+      "id": "Korzyść i dowody#3.2",
+      "kind": "meta_statement",
+      "claim": "nie uniwersalny wzrost produktywności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 609, "text": "deadlines to create six experimental conditions. Individuals were as-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 610, "text": "signed randomly to experimental treatments, and the experimenter was"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 619, "text": "Subjects were 123 undergraduate psychol-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 620, "text": "ogy students (46 men and 77 women) who received course credit for"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe Study 4 of the paper: one randomised experiment with 123 undergraduate psychology students."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_description",
+      "claim": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 564, "text": "predictions. Subjects were each given a standard computer as-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 565, "text": "signment to complete and were asked to predict when they"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 560, "text": "proximately 1 hr to complete."}
+      ],
+      "reason": "Study 4: a standard computer assignment (psychology tutorial) that needed about 1 hour; subjects predicted when they would finish it. 'Krótkiego' is the editors' wording for the roughly one-hour assignment."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki).",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 682, "text": "predictions, it did not influence when they finished the assign-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 637, "text": "ANOVA on absolute difference scores yielded no significant"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 638, "text": "effects of thought focus. Predictions were no more accurate in"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 705, "text": "pletion times, nor was the absolute prediction error any smaller."},
+        {"snapshot": "e70647d0627ff840.txt", "line": 642, "text": "The absolute difference between"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 643, "text": "predicted and actual completion times was greater for subjects"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 987, "text": "manipulations that reduced the directional (op-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 989, "text": "creasing absolute accuracy. This implies that our manipulations"}
+      ],
+      "reason": "Actual completion times did not differ between thought-focus conditions; absolute difference scores showed no effect of thought focus. The parenthetical gloss 'bez względu na kierunek pomyłki' is the standard meaning of 'absolute difference'; the source never words it that way, but contrasts directional (signed) bias with absolute accuracy (lines 261, 987-989)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 652, "text": "recall-relevant condition were less biased but no more accurate"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 705, "text": "pletion times, nor was the absolute prediction error any smaller."}
+      ],
+      "reason": "Source: predictions in the recall-relevant condition were less biased but no more accurate. 'Każdej' is the editors' wording; the source result is at group level."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "Source tested a prompted procedure (written recall of earlier similar assignments plus two linking questions) in one ~1-hour computer assignment for psychology undergraduates with 1- or 2-week deadlines; the title states the advice for any new task and does not name those conditions."},
+    {"id": "W praktyce#1", "note": "Study 4 participants described how far before deadlines they typically finished similar assignments and answered two prompted questions (date if they finished as early as typical; a scenario for finishing at the typical time). The item's steps (check how long the earlier task took, write down how it relates, then set the deadline) are an editorial simplification, which the item itself says (W praktyce#2). Not tested outside this lab task."},
+    {"id": "Korzyść i dowody#1", "note": "Linking was induced by instructions to the assigned recall-relevant group, not chosen by participants; effect is a group-level result. Participants in that group seldom reported using past experiences in their listed thoughts (12.5%, Table 4), so the mechanism is not shown."},
+    {"id": "Korzyść i dowody#2", "note": "The item compares only the recall-relevant and control groups; the source also has a recall-only group (38.1%) that did not differ from control."},
+    {"id": "Ocena dowodów#1", "note": "The paper reports five studies; the item rests on Study 4 only. The sentence says 'studentów'; the source specifies undergraduate psychology students (46 men, 77 women)."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet, and the two cited snapshots (3fcf7218a7f1a5b5.txt, e70647d0627ff840.txt). Did not open the two lead snapshots (2757a11eba265541.txt, 4cec846a0874c64c.txt; origin lead, not evidence), nor anything under book/, tests/, tools/, docs/, the manifest, git history or other cache entries. No protocol violation. 3fcf7218a7f1a5b5.txt is a Crossref metadata-only stub (title, authors, journal, year; no abstract) and supports no claim. e70647d0627ff840.txt is the full text of Buehler, Griffin & Ross (1994), JPSP 67(3), 366-381 (title, authors, journal and volume checked on lines 7-15), 16 pages; Study 4 is at about lines 558-740, Table 4 at lines 629-653. The PDF text is two-column, so every quote is a fragment taken from one column of a line. Each quote was confirmed with an exact-string Grep on the snapshot path."
+}

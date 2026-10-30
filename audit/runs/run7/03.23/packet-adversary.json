@@ -1,0 +1,159 @@
+{
+  "version": 2,
+  "item": "03.23",
+  "role": "adversary",
+  "title": "Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania",
+  "fields": {
+    "Koszt": "Przerwa od sporu i próba spokojnego działania. To ocena redakcji, nie ustalony czas leczenia.",
+    "W praktyce": "Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie. To propozycja łagodnej próby, bez forsowania oddechu. Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji.",
+    "Korzyść i dowody": "Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób. Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63. Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero.",
+    "Ocena dowodów": "A — ilościowa synteza badań nad złością i agresją, nie nad liczbą odzyskanych godzin.",
+    "Ocena redakcyjna": "Nie trzeba organizować intensywnego „wyładowania”, żeby zrobić przerwę od sporu.",
+    "Ograniczenia": "Średni wynik nie gwarantuje efektu każdej techniki u każdej osoby. Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji. Samopomoc nie zastępuje pomocy przy przemocy lub nawracających niebezpiecznych zachowaniach.",
+    "Źródła": "Kjærvik i Bushman (2024), A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? [Abstrakt i wprowadzenie](https://doi.org/10.1016/j.cpr.2024.102414).",
+    "Zmiany w adaptacji": "Zachowano A. Rozdzielono regulację złości od korzyści zdrowotnych ruchu. Nie podajemy protokołu oddechowego ani obietnicy uniknięcia konfliktu."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przerwa od sporu i próba spokojnego działania."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji, nie ustalony czas leczenia."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "To propozycja łagodnej próby, bez forsowania oddechu."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza badań nad złością i agresją, nie nad liczbą odzyskanych godzin."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Nie trzeba organizować intensywnego „wyładowania”, żeby zrobić przerwę od sporu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Średni wynik nie gwarantuje efektu każdej techniki u każdej osoby."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Samopomoc nie zastępuje pomocy przy przemocy lub nawracających niebezpiecznych zachowaniach."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.cpr.2024.102414",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1700,
+      "sha256": "d945ff6489002e0fc4b91f205bb44b3804bf5be603f068f6c4f6cc882eb81319",
+      "snapshot": "1d00098ec43b4f15.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 23. 生气时别靠打沙袋、跑一圈来发泄，先让身体慢下来"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。气头上改做几分钟让心跳慢下来的事：慢慢呼吸，坐下来，静一静。难在当时最想做的恰恰是发泄。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：打沙袋、骑车、去跑一圈，这类让身体更兴奋的发泄办法，整体上消不了气。慢呼吸、正念、冥想这类让身体静下来的办法，能明显压下怒气和想动手的劲。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：把 154 项研究合起来算（荟萃分析），共 184 组样本、10,189 人。让身体平静下来的办法，比如深呼吸、正念、冥想，能降低怒气和攻击性。效果大小 g = -0.63，95% CI -0.82 到 -0.43（可信范围）。这个结果在不同性别、种族、年龄和文化的人里都稳定。让身体更兴奋的办法，比如打沙袋、慢跑、骑车，整体无效。它的效果大小 g = -0.02，95% CI -0.13 到 0.09。作者的结论是：发泄怒气、去跑一圈，都不是管用的消气办法。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Kjærvik SL, Bushman BJ (2024). A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? Clinical Psychology Review. <https://doi.org/10.1016/j.cpr.2024.102414>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：量的是怒气和攻击性，不是精力。口径记成时间，是作者的归类：少吵一架，就少收拾一次残局。当场能用的办法见第 22 节第 8 条（循环叹息），还有本节第 17 条（生气时先离场）。跑步不是没用。长期看，它对情绪低落有效，见第 22 节第 6 条（心情差就去走或者跑）。它只是不适合拿来当场消气。气头上别开车，别发消息，别做决定。如果是有人在打你，先离开、报警。那时要处理的不是你的情绪，见第 8 节第 43 条（被家暴了）。"
+      }
+    ]
+  }
+}

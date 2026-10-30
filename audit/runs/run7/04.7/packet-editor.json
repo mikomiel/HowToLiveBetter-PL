@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "04.7",
+  "role": "editor",
+  "title": "Rozpisz złożone zadanie na części, zanim oszacujesz czas",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Przygotowanie listy etapów też zabiera czas. To ocena redakcji.",
+    "W praktyce": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+    "Korzyść i dowody": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań. Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+    "Ocena dowodów": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.",
+    "Ocena redakcyjna": "Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+    "Ograniczenia": "Dłuższe oszacowanie nie zawsze jest trafniejsze. Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4. Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację."
+  }
+}

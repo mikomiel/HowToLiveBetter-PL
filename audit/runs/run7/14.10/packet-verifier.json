@@ -1,0 +1,143 @@
+{
+  "version": 2,
+  "item": "14.10",
+  "role": "verifier",
+  "title": "Nie przekazuj sekretów niesprawdzonym pośrednikom AI",
+  "fields": {
+    "Koszt": "Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia. Cena nie jest tu dowodem bezpieczeństwa.",
+    "W praktyce": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.",
+    "Korzyść i dowody": "Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli. W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych. Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.",
+    "Ocena dowodów": "B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.",
+    "Ocena redakcyjna": "Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy. Ocena musi poprzedzać przekazanie danych.",
+    "Ograniczenia": "Nie wiadomo z tego badania, jaki odsetek wszystkich pośredników jest złośliwy. Oficjalny dostawca też wymaga oceny zasad przetwarzania; bezpośrednie połączenie nie jest gwarancją poufności. Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych. Ocena polecenia przez człowieka ogranicza część ryzyka, ale nie gwarantuje wykrycia każdego ataku."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Nie przekazuj sekretów niesprawdzonym pośrednikom AI"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Cena nie jest tu dowodem bezpieczeństwa."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Ocena musi poprzedzać przekazanie danych."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie wiadomo z tego badania, jaki odsetek wszystkich pośredników jest złośliwy."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Oficjalny dostawca też wymaga oceny zasad przetwarzania; bezpośrednie połączenie nie jest gwarancją poufności."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Ocena polecenia przez człowieka ogranicza część ryzyka, ale nie gwarantuje wykrycia każdego ataku."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://arxiv.org/abs/2604.08407",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://arxiv.org/abs/2604.08407",
+      "finalUrl": "https://arxiv.org/abs/2604.08407",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4795,
+      "sha256": "488e782613e45b58db22e80d08bfee35abd8c7c77dd2e7c15a6681f85d775906",
+      "snapshot": "aff92e5a2fd5f64c.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4689,
+        "wholeChars": 5099,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

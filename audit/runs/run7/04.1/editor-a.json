@@ -1,0 +1,61 @@
+{
+  "item": "04.1",
+  "edits": [
+    {
+      "field": "title",
+      "original": "zaczniesz działać",
+      "replacement": "zabierzesz się do zadania",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "To szacunek redakcji.",
+      "replacement": "To oszacowanie redakcji.",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "usiądę po śniadaniu przy biurku",
+      "replacement": "po śniadaniu usiądę przy biurku",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "planów „jeśli–to”.",
+      "replacement": "planów „jeśli–to”, takich jak plan z przykładu powyżej.",
+      "reason": "term",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "94 niezależnych testów planów „jeśli–to”",
+      "why": "Łańcuch dopełniaczy „testów planów” brzmi jak kalka z angielskiego, a „testów” można odczytać jako testy statystyczne, nie badania. Naturalniej brzmiałoby „badań nad planami”, ale to zmienia jednostkę przy liczbie 94, więc rozstrzyga weryfikator: czy źródło liczy testy hipotez, czy badania."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Średni efekt dla realizacji celów wyniósł d = 0,65.",
+      "why": "Przyimek „dla” w „efekt dla realizacji celów” wygląda na kalkę („effect for goal attainment”); po polsku zwykle „w realizacji celów” lub „na realizację celów”. Zmiana dotyka słowa „efekt” (związek przyczynowy), słowa „średni” i liczby, więc jej nie proponuję. Weryfikator niech wybierze sformułowanie zgodne ze źródłem."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "To standaryzowana miara różnicy",
+      "why": "Nie wiadomo, różnicy między czym a czym; czytelnik bez statystyki nie wie, co oznacza d. Ustalony termin to „standaryzowana różnica średnich” (d Cohena). Zamiana terminu technicznego mogłaby zmienić sens, więc zostawiam ją weryfikatorowi."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "wynik dotyczy realizacji celów, nie oszczędności czasu w Polsce",
+      "why": "Zwrot „w Polsce” stoi przy „oszczędności czasu” i brzmi, jakby problemem było miejsce badania, a nie rodzaj mierzonego wyniku. Nie jest jasne, czy chodzi o to, że badania nie powstały w Polsce, czy że nie mierzono oszczędności czasu. Słowo nazywa jurysdykcję (chronione), więc rozstrzyga weryfikator."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Wynik jest średnią z różnych zadań i grup.",
+      "why": "Porada miesza „cel” i „zadanie”:Korzyść i dowody pisze o „realizacji celów”, W praktyce o „celu”, a Koszt, Ocena redakcyjna i to pole o „zadaniu” / „zadaniach”. Jeśli źródło mierzy realizację celów, „zadań” może zawężać zakres. Słowa określają zakres i populację (chronione), więc nie ujednolicam ich samodzielnie."
+    }
+  ],
+  "verdict": "needs_edits"
+}

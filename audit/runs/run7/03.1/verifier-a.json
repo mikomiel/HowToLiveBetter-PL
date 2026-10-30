@@ -1,0 +1,98 @@
+{
+  "item": "03.1",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "To nakład redakcyjnie oceniany jako niewielki.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "meta_statement",
+      "claim": "Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.",
+      "verdict": "not_applicable",
+      "reason": "Editors' safeguard that limits the main advice. No snapshot speaks to contact channels or care duties; it is not backed by a source and does not claim to be."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Stothart i współautorzy wykazali w eksperymencie,",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b9e3431329fe78b2.txt", "line": 9, "text": "Stothart C, Mitchum A, Yehnert C."},
+        {"snapshot": "b394b3e33ccec52e.txt", "line": 223, "text": "Cary Stothart 1 , Ainsley Mitchum 1 , Courtney Yehnert 1"}
+      ],
+      "reason": "Authors (Stothart, Mitchum, Yehnert) are confirmed. The design label 'eksperyment' is not stated anywhere in the abstract or the PubMed page: the abstract says 'We found' and mentions 'participants' but never names the design. The full text (methods) would be needed to confirm an experiment."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b9e3431329fe78b2.txt", "line": 14, "text": "We found that cellular phone notifications alone significantly disrupted performance on an attention-demanding task, even when participants did not directly interact with a mobile device during the task."},
+        {"snapshot": "b394b3e33ccec52e.txt", "line": 286, "text": "We found that cellular phone notifications alone significantly disrupted performance on an attention-demanding task, even when participants did not directly interact with a mobile device during the task."}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — eksperyment dotyczący konkretnego zadania uwagowego.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b9e3431329fe78b2.txt", "line": 14, "text": "cellular phone notifications alone significantly disrupted performance on an attention-demanding task"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source: the abstract confirms a task that demands attention, but it does not name the task ('konkretnego') and does not state the design 'eksperyment'. The full text would be needed for both."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich.",
+      "verdict": "not_checkable",
+      "reason": "Both snapshots hold only the abstract (the PubMed page adds metadata around the same abstract text, not the paper). The abstract reports performance on an attention-demanding task and names no daily time savings or long-term follow-up, but an abstract cannot show absence. The full text would be needed to confirm that neither was measured."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu.",
+      "verdict": "not_applicable",
+      "reason": "Editors' caveat on how far the result may be used. No snapshot mentions safety alarms or mandatory contact; the abstract reports only performance on an attention-demanding task."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The source tested the effect of receiving notifications during one laboratory attention task. It did not test muting in everyday focused work, and it does not distinguish needed from unneeded notifications ('niepotrzebne' is the editors' qualifier)."},
+    {"id": "W praktyce#1", "note": "Same as title#1: the abstract shows that notifications alone disrupted an attention-demanding task, not that muting them in real tasks helps; 'niepotrzebne' is not a source category."},
+    {"id": "Korzyść i dowody#1.1", "note": "Design 'eksperyment' is not stated in the abstract; the sample, number of participants and task are also not given there."},
+    {"id": "Korzyść i dowody#1.2", "note": "The abstract gives no population, sample size, task description, notification type or effect size. The sentence claims none of these, but a reader may assume generality beyond one laboratory task."},
+    {"id": "Ocena dowodów#1", "note": "'konkretnego zadania' is not identified in the abstract, which says only 'an attention-demanding task'."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and the two cited snapshots b9e3431329fe78b2.txt (Europe PMC abstract) and b394b3e33ccec52e.txt (PubMed page, abstract plus site chrome). Did not open the lead snapshot 2ced224983905c12.txt (origin lead, metadata-only, not evidence) or anything outside the allowed set. Both cited snapshots are abstract-level only, so design and absence claims cannot be settled without the full text. Classification judgements: W praktyce#2 and Ograniczenia#2 filed as meta_statement (editor's safeguards/caveats on the item's own advice and result), not as recommendation_derived or source_claim; title#1 and W praktyce#1 filed as fully backed recommendation_derived via Korzyść i dowody#1.2 with the lab-task extrapolation recorded in scope_gaps; Korzyść i dowody#1 split into .1 (source_description: authors and design) and .2 (source_claim: effect), with the 'nawet bez korzystania z telefonu' clause kept in .2 because it has the same kind."
+}

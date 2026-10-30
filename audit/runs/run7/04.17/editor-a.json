@@ -1,0 +1,72 @@
+{
+  "item": "04.17",
+  "edits": [
+    {
+      "field": "title",
+      "original": "Naucz się skrótów do czynności",
+      "replacement": "Naucz się skrótów klawiszowych do czynności",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "z posiadanego programu",
+      "replacement": "z programu, który już masz",
+      "reason": "register",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "Zostań przy sposobie obsługi, który jest dla ciebie dostępny i wygodny.",
+      "why": "Zdanie nie mówi, od czego ma się odróżniać, i brzmi jak niezwiązana rada po poleceniu nauki skrótów. Warunek (dostępność i wygoda) jest ukryty w osobnym zdaniu, a tytuł zaczyna się od bezwarunkowego Naucz się. Jeśli ten warunek jest ważny dla porady, powinien przetrwać także w tytule. Słowa dostępny, wygodny i zostań przy dotyczą warunku i populacji, więc to rozstrzyga weryfikator. Naturalniejsze byłoby zdanie warunkowe, np. że gdy skróty klawiszowe są dla kogoś niedostępne lub niewygodne, może zostać przy menu lub innym sposobie obsługi."
+    },
+    {
+      "field": "Koszt",
+      "text": "a początkowo mogą spowalniać",
+      "why": "Czasownik spowalniać nie ma dopełnienia, więc nie wiadomo, co się spowalnia (np. pracę). Zawiera też modalny mogą, słowo czasowe początkowo i czasownik skutku, czyli wszystko to słownictwo chronione. Do rozstrzygnięcia przez weryfikatora, czy dopisać pracę lub wykonywanie czynności."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Lane i współautorzy zbadali ankietą 251 doświadczonych użytkowników Worda.",
+      "why": "Zbadali ankietą to kalka z angielskiego (surveyed), po polsku naturalniej: przeprowadzili ankietę wśród 251 doświadczonych użytkowników programu Word. Zdanie zawiera liczbę, nazwisko autora i nazwę programu oraz określenie populacji, więc nie edytuję. Brak też roku lub tytułu badania, ale to kwestia źródeł, nie języka."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Większość rzadko używała skrótów.",
+      "why": "Podmiot Większość jest niedopowiedziany; po polsku zwykle Większość z nich lub Większość badanych. Zawiera kwantyfikator i słowo częstotliwości (rzadko), więc chronione."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę; skróty były najszybszą z tych metod.",
+      "why": "Trzy problemy. 1) To samo zjawisko nazwane dwojako: metodą jest klawiatura, a wynikiem skróty; czytelnik nie wie, czy skróty to to samo co klawiatura (niespójność terminów). Możliwa zamiana technicznego terminu, więc zostawiam weryfikatorowi. 2) Przez menu, ikony i klawiaturę to lekka kalka; po polsku zwykle za pomocą menu, ikon i klawiatury. 3) Jedno zdanie niesie opis układu i wynik, a podmiot w liczbie mnogiej (skróty) łączy się z orzecznikiem w liczbie pojedynczej (najszybszą z tych metod); zdanie można rozdzielić i przestawić, np. Najszybsze okazały się skróty klawiszowe. Zawiera liczbę, najwyższy stopień i określenie osobnego porównania, więc chronione."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "bardzo mały eksperyment dotyczący konkretnego interfejsu",
+      "why": "Bardzo mały eksperyment brzmi potocznie i niejasno (mały pod jakim względem). Naturalniej byłoby opisać wielkość próby lub badany program. Dotyczący konkretnego interfejsu jest ciężkie urzędowo i niewyjaśnione dla laika. Ponadto Korzyść i dowody nazywa to samo badanie porównaniem, a tu jest eksperyment (niespójność nazw, nie sprawdzam, który jest właściwy). Zawiera stopień nasilenia i słowa określające zakres, więc chronione."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Najpierw wypróbuj skrót do powtarzalnej czynności.",
+      "why": "Niespójność w obrębie porady: tytuł mówi o czynnościach wykonywanych często, W praktyce o często używanym poleceniu, a tu o powtarzalnej czynności. Czynność i polecenie oraz często i powtarzalnej to słowa częstotliwości, więc chronione; warto ujednolicić, jeśli znaczą to samo."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Abstrakt nie podaje liczby zaoszczędzonych sekund.",
+      "why": "Abstrakt czego nie wynika z tekstu (poprzednie pola wymieniają tylko Lane i współautorzy), a sam termin abstrakt nie jest wyjaśniony, mimo że laik zna raczej streszczenie. Zdanie zawiera przeczenie i słowo o liczbie, więc chronione. Nie mam jak sprawdzić, czy to jedna praca, czy dwie."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Wynik nie dowodzi, że każdy skrót i każdy program są szybsze dla każdego użytkownika.",
+      "why": "Szybsze niż co: brak odniesienia porównania. Wynik jest w liczbie pojedynczej, choć wyżej opisano dwa ustalenia (ankietę i porównanie). Zawiera przeczenie, trzykrotny kwantyfikator każdy, czasownik siły dowodu (nie dowodzi) i stopień wyższy, więc chronione."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie badano tu automatyzacji skryptami.",
+      "why": "Automatyzacja skryptami jest terminem specjalistycznym bez wyjaśnienia dla czytelnika bez wiedzy informatycznej. Nie mogę sprawdzić, czy został wyjaśniony wcześniej w rozdziale. Zdanie jest przeczące i określa zakres badania, więc nie dopisuję objaśnienia."
+    }
+  ],
+  "verdict": "needs_edits"
+}
