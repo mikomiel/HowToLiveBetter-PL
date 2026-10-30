@@ -197,7 +197,13 @@ test('a DOI reaches Europe PMC decoded once, and a refusal from both sources is 
 
 test('only a well-formed PMC identifier is ever placed into a request path', async () => {
   const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
-  stub(url => (url.includes('europepmc.org') || url.includes('ebi.ac.uk') ? json({ resultList: { result: [{ doi: '10.1000/evil', pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } }) : json({})));
+  stub(url => {
+    const host = new URL(url).hostname.toLowerCase();
+    const allowedHosts = new Set(['europepmc.org', 'www.europepmc.org', 'ebi.ac.uk', 'www.ebi.ac.uk']);
+    return allowedHosts.has(host)
+      ? json({ resultList: { result: [{ doi: '10.1000/evil', pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } })
+      : json({});
+  });
   const record = await fetchSource('10.1000/evil', dir);
   assert.equal(record.access, 'abstract');
   assert.ok(calls.every(c => !c.url.includes('passwd')));
