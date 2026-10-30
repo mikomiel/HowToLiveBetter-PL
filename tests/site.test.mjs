@@ -300,8 +300,10 @@ test('the command line builds, prints the files, and fails with a non-zero exit 
   for (const path of [...siteFiles(), 'tools/pl/build-site.mjs']) assert.ok(existsSync(join(checkout, path)), `${path} is untouched`);
 }));
 
-test('index.html reaches only files that are published, so no page link breaks on the site', () => {
+test('index.html reaches only files that are published, so no page link breaks on the site, and asks search engines not to index it', () => {
   const html = read('index.html');
+  assert.match(html, /<meta name="robots" content="noindex">/, 'the owner decided on 2026-10-30 that the site is not indexed');
+  assert.ok(html.includes('<p class="intro" id="review-notice">Porady są sprawdzane ze źródłami maszynowo, a przegląd trwa. Nie zatwierdził ich lekarz ani prawnik.</p>'), 'the visible notice approved by the owner on 2026-10-30');
   assert.deepEqual([...html.matchAll(/(?:href|src)="([^"#:]+)"/g)].map(m => m[1]).sort(), ['LICENSE', 'LICENSE-CODE', 'reader.mjs']);
   for (const href of ['https://github.com/mikomiel/HowToLiveBetter-PL/blob/main/README.md', 'https://github.com/mikomiel/HowToLiveBetter-PL/tree/main/book/pl']) assert.ok(html.includes(`href="${href}"`), href);
 });
