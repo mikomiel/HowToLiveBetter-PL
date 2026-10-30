@@ -1,20 +1,45 @@
 {
   "item": "04.12",
   "status": "UNAVAILABLE",
-  "attacks_run": ["same-action", "preservation", "grade", "scope-words", "leak", "self-containment", "recency", "limitations"],
-  "attacks_not_assessable": [
-    {
-      "attack": "numbers",
-      "reason": "Checked against the stored Crossref abstract and holding: 96 volunteers, 12 weeks, 82 with sufficient data, model fitted for 62, good fit for 39, 84 days, 95% of the asymptote, range 18 to 254 days. Not decidable from the stored sources: the median of 66 days appears in no snapshot and in no upstream line, and the abstract does not say whether the 18-254 range refers to the 39 good-fit participants (as the item states with 'W tej ostatniej grupie'), to the 62 or to all participants. The publisher full text with the Results section and Table 2 (the place the item cites) is blocked with status 403 and has no snapshot, so the only stored source is too thin for this attack."
-    }
-  ],
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
   "preservation": [
-    {"upstream_line": 3, "upstream_action": "在同一个场景下每天重复同一个动作，持续几个月", "fate": "narrowed", "fallback_stated": false},
-    {"upstream_line": 4, "upstream_action": "两三周还没变轻松是正常的", "fate": "kept", "fallback_stated": true},
-    {"upstream_line": 4, "upstream_action": "中间漏掉一天，也不会把进度清零", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 5, "upstream_action": "在固定场景下（比如「早饭后」）每天做", "fate": "narrowed", "fallback_stated": false},
-    {"upstream_line": 8, "upstream_action": "把动作绑在一个固定场景上", "fate": "kept", "fallback_stated": true},
-    {"upstream_line": 8, "upstream_action": "复杂的事要多久，比如每周跑三次、每天写作，没人测过", "fate": "narrowed", "fallback_stated": true}
+    {
+      "upstream_line": 3,
+      "upstream_action": "Repeat the same action every day in the same context for several months",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Do not rely on the 21-day rule; not being easier after two or three weeks is normal",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "A missed day in the middle does not reset progress (same finding on line 5: one missed opportunity has no material effect)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Tie the action to a fixed context, written as when, where and what triggers it (see item 1 of the section)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Still being effortful after two weeks is not evidence of failure",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Caution: only simple actions were studied; how long complex goals take (running three times a week, daily writing) was never measured",
+      "fate": "narrowed",
+      "fallback_stated": false
+    }
   ],
   "findings": [
     {
@@ -22,48 +47,97 @@
       "attack": "scope-words",
       "id": "Koszt#2",
       "text": "Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności.",
-      "why": "The study asked every volunteer to carry out the chosen behaviour daily in the same context, and the upstream cost line names daily repetition for several months. The Polish item says only 'wielokrotny wysiłek powtarzania' and never states the daily frequency, in Koszt, W praktyce or Korzyść i dowody. A reader who repeats the habit weekly or irregularly can take the 18-254 day range as applying to them. The frequency condition behind the time range is missing.",
+      "why": "The item never says how often to repeat. In the study the volunteers carried the behaviour out daily in the same context for 12 weeks, and the upstream cost line states daily repetition for several months. The word 'wielokrotny' fits weekly or occasional repetition, to which the 18 to 254 day figures do not apply. A reader can underestimate the effort (every day, for weeks to many months) and apply the range to a different frequency. Neither the title, Koszt, W praktyce nor Korzyść i dowody mentions daily performance.",
       "evidence": [
-        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "to carry out daily in the same context"},
-        {"source": "upstream", "line": 3, "text": "在同一个场景下每天重复同一个动作，持续几个月"}
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "chose an eating, drinking or activity behaviour to carry out daily in the same context"},
+        {"source": "upstream", "line": 3, "text": "要的是在同一个场景下每天重复同一个动作，持续几个月"}
       ],
-      "fix_direction": "State in the item that participants repeated the chosen behaviour daily in one context, and that the timing range was not measured for rarer repetition. List the change in Zmiany w adaptacji."
+      "fix_direction": "State the studied frequency (daily performance) and duration in the cost and practice fields, and say the timings do not carry over to less frequent repetition."
     },
     {
-      "severity": "minor",
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#3",
+      "text": "mediana wyniosła 66 dni",
+      "why": "The median of 66 days is not in the stored abstract and not in the upstream span; both give only a range. The item's Źródła field points to the Results section and table 2 of the publisher full text, but the stored full text is blocked (403) and only the Crossref abstract is stored, so nothing checkable here supports the figure. Nothing in the fields given says that only the abstract was checked. An unverifiable median is the most quotable number in the item.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"},
+        {"source": "upstream", "line": 5, "text": "达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天"}
+      ],
+      "fix_direction": "Obtain stored full-text evidence for the median, or remove the figure, or state that it was not checked beyond the abstract."
+    },
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "W tej ostatniej grupie",
+      "why": "The item assigns the 18 to 254 day range to the 39 participants with a good fit. The abstract does not say which group the range describes (82, 62 or 39 participants), and the upstream span places the range directly after the sentence about the 62 fitted participants. The narrowing to 39 is a population claim the stored sources cannot confirm, and the adaptation note presents it as a correction (Zmiany w adaptacji: uściślono liczebność grupy).",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The model fitted for 62 individuals, of whom 39 showed a good fit."},
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"},
+        {"source": "upstream", "line": 5, "text": "模型在 62 人身上拟合成功"}
+      ],
+      "fix_direction": "Confirm the group behind the range in a stored full-text passage, or describe the range without naming the subgroup."
+    },
+    {
+      "severity": "major",
       "attack": "preservation",
       "id": "W praktyce#2",
       "text": "Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.",
-      "why": "The abstract reports that missing one opportunity did not materially affect habit formation, and the upstream span tells the reader that a skipped day does not reset progress. The Polish item dropped this and does not list the drop in Zmiany w adaptacji. A reader who misses one day is told to 'observe regularity' but gets no statement that a single miss is harmless, and may read it as failure.",
+      "why": "The upstream reassurance that a missed day does not reset progress is dropped, although the stored abstract supports it and it is the fallback for a reader who breaks the routine. 'Obserwuj regularność' without it invites streak-counting and restarting after one miss. The omission is not disclosed in Zmiany w adaptacji.",
       "evidence": [
         {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Missing one opportunity to perform the behaviour did not materially affect the habit formation process."},
         {"source": "upstream", "line": 4, "text": "中间漏掉一天，也不会把进度清零"}
       ],
-      "fix_direction": "Carry over the single-miss finding with its scope (one missed opportunity, not repeated misses) or record the omission in Zmiany w adaptacji."
+      "fix_direction": "Restore the missed-opportunity finding with its limits (the abstract says one missed opportunity, not repeated misses) and record the change."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Powiąż prostą czynność ze stałym zdarzeniem",
+      "why": "The studied behaviours were an eating, drinking or activity behaviour chosen by each volunteer. The title and this sentence generalise to any small action, but only the desk example is flagged as an adaptation (Ograniczenia#4). The generalisation itself is not flagged as editorial, and the upstream example is eating fruit after a meal, not organising materials.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "chose an eating, drinking or activity behaviour to carry out daily in the same context"},
+        {"source": "upstream", "line": 8, "text": "做的都是简单动作（比如饭后吃一份水果）"}
+      ],
+      "fix_direction": "Say in the limitations that the studied behaviours were eating, drinking or activity and that extending the advice to other small actions is an editorial judgement."
     },
     {
       "severity": "minor",
       "attack": "scope-words",
       "id": "Korzyść i dowody#1",
-      "text": "wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem",
-      "why": "The abstract says each volunteer chose an eating, drinking or activity behaviour, so 'głównie' wrongly implies that some chose other kinds of behaviour. The word 'prosty' is not in the stored abstract; it appears only in the upstream note, which is a lead and not evidence.",
+      "text": "prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem",
+      "why": "The abstract says each volunteer chose an eating, drinking or activity behaviour, not 'głównie'. 'Simple' does not appear in the stored abstract; it appears only in the upstream span, which is a lead. 'Volunteers' (a self-selected group) became 'osób', so the self-selection is not visible to the reader.",
       "evidence": [
-        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "96 volunteers chose an eating, drinking or activity behaviour to carry out daily in the same context"},
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "96 volunteers chose an eating, drinking or activity behaviour"},
         {"source": "upstream", "line": 8, "text": "做的都是简单动作（比如饭后吃一份水果）"}
       ],
-      "fix_direction": "Match the scope word to the source (each participant chose one eating, drinking or activity behaviour) and keep 'prosty' only if the full text confirms it."
+      "fix_direction": "Match the sentence to the stored abstract (volunteers, one chosen eating, drinking or activity behaviour) and mark 'simple' as unconfirmed or support it from the full text."
     },
     {
       "severity": "minor",
-      "attack": "same-action",
-      "id": "Ocena redakcyjna#1",
-      "text": "Stały kontekst jest sposobem organizacji powtórzeń.",
-      "why": "Every participant carried out the behaviour in one context, so the study cannot show that a stable context helps compared with a changing one. The title and W praktyce present the stable situation as the instruction. The sentence is marked editorial, but Ograniczenia does not say that fixed versus variable context was not compared.",
+      "attack": "limitations",
+      "id": "Ograniczenia#3",
+      "text": "Nie mierzono pracy twórczej ani oszczędności czasu.",
+      "why": "The upstream caution is different: only simple actions were studied, and how long complex goals take (for example running three times a week or writing daily) was never measured. The item replaces it with a narrower and differently framed sentence, so a reader with a complex goal is not told that the range may not transfer. The abstract-only snapshot shows which behaviours were chosen but cannot establish what was not measured.",
       "evidence": [
-        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "96 volunteers chose an eating, drinking or activity behaviour to carry out daily in the same context"}
+        {"source": "upstream", "line": 8, "text": "复杂的事要多久，比如每周跑三次、每天写作，没人测过"},
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "chose an eating, drinking or activity behaviour to carry out daily in the same context"}
       ],
-      "fix_direction": "Add a limitation that the study did not compare a fixed context with a variable one, so the context advice is editorial."
+      "fix_direction": "State that the stored evidence covers only simple chosen behaviours and nothing about complex goals, and rephrase the 'not measured' sentence to what the abstract actually shows."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "Zakres 18–254 nie jest gwarancją dla każdego.",
+      "why": "The abstract links more consistent performance with a better model fit, and the range comes only from a subset with a good fit. The item does not say that this subset tended to consist of the more consistent performers, so the range may look more typical than it is for people who skip often.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Performing the behaviour more consistently was associated with better model fit."}
+      ],
+      "fix_direction": "Add that fit was associated with more consistent performance, so the range describes the better-fitting participants."
     }
   ],
-  "notes": "Opened only the role file, AGENTS.md, the README section 'Jak czytać dowody', the packet and the snapshot 248f8ea4bd81051a.txt; nothing else was opened. No blocker: nothing unsafe, no Chinese rule or unsupported legal or medical statement in the reader-facing fields. Status is UNAVAILABLE only because the numbers attack cannot be decided: the publisher full text is blocked (403) and the stored Crossref abstract does not contain the median of 66 days or the assignment of the 18-254 range to the 39 good-fit participants. Recency was run with nothing found because only one snapshot exists to compare. The packet carries no Status, Oryginał or Weryfikacja fields, so whether the item states that only an abstract was checked (AGENTS.md) could not be judged; its Źródła entry points to full-text sections that are not in the stored snapshot. The snapshot gives Year 2009 (Crossref) while the item cites 2010, which matches the upstream line 7 print citation; not treated as an error."
+  "notes": "Status is UNAVAILABLE because the publisher full text (sources[0]) is blocked with 403 and the only stored text is the Crossref abstract, which cannot decide the median of 66 days or which group the 18 to 254 day range describes; no blocker was proven. Attack 8 (recency) was run and found nothing because the packet holds one usable snapshot and no conflicting guidance. Not raised as findings because the packet has no proposition id for them: the packet does not include the Status, Oryginał or Weryfikacja fields, so I could not judge whether abstract-only checking is disclosed there; the Źródła year (2010) is not confirmed by the stored Crossref metadata (Year 2009, copyright 2009) and appears as 2010 only in the upstream line 7 lead. Protocol: I opened only the role file, AGENTS.md, README.md (a search for the heading, then lines 42 to 81, which run slightly past the 'Jak czytać dowody' section into the next two sections), the packet, snapshot 248f8ea4bd81051a.txt and the brief. Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened, and the previous report at this path was not read."
 }
