@@ -116,8 +116,8 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 12. Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności. To ocena redakcji.
-- W praktyce: Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania. Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.
-- Korzyść i dowody: Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem. Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39. W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana wyniosła 66 dni.
+- W praktyce: Powiąż prostą czynność ze stałym zdarzeniem. Na przykład po śniadaniu połóż potrzebne materiały na biurku. Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.
+- Korzyść i dowody: Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem. Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39. W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana (wartość środkowa) wynosiła 66 dni.
 - Ocena dowodów: B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem.
 - Ocena redakcyjna: Stały kontekst jest sposobem organizacji powtórzeń. Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej.
 - Ograniczenia: Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym. Zakres 18–254 nie jest gwarancją dla każdego. Nie mierzono pracy twórczej ani oszczędności czasu. Przykład z biurkiem jest adaptacją, nie badaną czynnością.
