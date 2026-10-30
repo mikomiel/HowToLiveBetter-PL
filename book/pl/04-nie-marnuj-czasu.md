@@ -41,7 +41,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 3. Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać. To ocena redakcji.
-- W praktyce: Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”. Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.
+- W praktyce: Zapytaj siebie: „Czy dziś warto poświęcić na to kolejny wieczór?”. Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.
 - Korzyść i dowody: Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu. Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych. Siła efektu zależy od rodzaju decyzji.
 - Ocena dowodów: B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji.
 - Ocena redakcyjna: To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań.
