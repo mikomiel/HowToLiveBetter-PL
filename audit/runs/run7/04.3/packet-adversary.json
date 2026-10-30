@@ -1,0 +1,169 @@
+{
+  "version": 2,
+  "item": "04.3",
+  "role": "adversary",
+  "title": "Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać. To ocena redakcji.",
+    "W praktyce": "Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”. Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.",
+    "Korzyść i dowody": "Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu. Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych. Siła efektu zależy od rodzaju decyzji.",
+    "Ocena dowodów": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji.",
+    "Ocena redakcyjna": "To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań.",
+    "Ograniczenia": "Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu. Nie ma tu potwierdzonej liczby odzyskanych godzin.",
+    "Źródła": "Arkes i Blumer (1985), The psychology of sunk cost. [DOI i abstrakt](https://doi.org/10.1016/0749-5978%2885%2990049-4); Roth, Robbert i Straus (2015), On the sunk-cost effect in economic decision-making: A meta-analytic review. [Artykuł](https://doi.org/10.1007/s40685-014-0014-8).",
+    "Zmiany w adaptacji": "Pominięto niezweryfikowane tu liczby wizyt w teatrze. Dodano rozróżnienie kosztów nieodwracalnych i przyszłych."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Siła efektu zależy od rodzaju decyzji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie ma tu potwierdzonej liczby odzyskanych godzin."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/0749-5978(85)90049-4",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 164,
+      "sha256": "bfd8c082f41202982f02369a7217d57b151d0e46be75d1f761f464705d799dc8",
+      "snapshot": "a28d057130b8ad3c.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "10.1007/s40685-014-0014-8",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1122,
+      "sha256": "798092555758ba2a4254a02e310e1966bf2067cb9b5e553713ccf791cff7ee57",
+      "snapshot": "14fb6f3495da5c34.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 3. 决定是否继续时，只看未来投入和未来回报，不看已投入多少"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。难在要接受一件事：之前投进去的时间已经没了，拿不回来。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：已经投进去的钱和时间，会让人更想接着干下去。98 组数据合起来算，这个倾向稳定存在。所以判断要不要继续，只算往后还要投多少、还能拿回多少。已经花掉的那些，不要算进去。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：已经投入的钱、精力和时间，会让人更想继续做下去。这在心理学里叫沉没成本效应。把 98 组数据合起来算，分析确认这种倾向稳定存在。避开这种倾向，就不会为了「不想浪费」继续往里投时间。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35, 124–140. <https://doi.org/10.1016/0749-5978(85)90049-4>；Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making: A meta-analytic review. Business Research, 8(1), 99–138. <https://doi.org/10.1007/s40685-014-0014-8>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：Arkes 和 Blumer 那项剧院实验是这样做的。俄亥俄大学剧院卖季票，随机给买票的人原价 15 美元、便宜 2 美元、便宜 7 美元三种价。前半季，原价那组平均看了 4.11 场，另两组是 3.32 和 3.29 场。后半季三组就没有明显差别了。Roth 等人发现，这种影响会随时间变淡，年纪大的人受影响更小。"
+      }
+    ]
+  }
+}

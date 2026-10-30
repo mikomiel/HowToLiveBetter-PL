@@ -1,0 +1,129 @@
+{
+  "item": "04.18",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "recency",
+      "reason": "The item claims two sources disagree on overall well-being (Stutzer i Frey 2008 vs Chatterjee et al.), but the Chatterjee snapshot is metadata-only (title, authors, journal, year, no abstract). The stored sources therefore cannot show whether the newer review conflicts with, qualifies or supersedes the 2008 finding; that conflict exists only in the upstream remark (a lead, not evidence)."
+    }
+  ],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "When choosing housing put commute time first and shorten the one-way commute", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Cost warning: higher rent or a smaller home, plus the time moving takes", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Worked example: 30 minutes less each way saves 5 hours a week", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Chinese average daily travel time (50 min; 1 h 02 min for people who travelled; 2024)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "German longitudinal data: longer commute goes with lower subjective well-being and the loss is not made up in income or housing", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Review confirms longer commute means less satisfaction with the commute, regardless of travel mode", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Chatterjee et al.: no stable link between commute length and overall life satisfaction", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "People can largely trade a long commute for better work or housing", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Transport-activity statistic counts all trips, not only commuting", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "If you can shift your hours (off-peak commuting), the same route takes less time", "fate": "narrowed", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Korzyść i dowody#2",
+      "text": "Przegląd Chatterjee i współautorów potwierdza związek dłuższego dojazdu z mniejszym zadowoleniem z samej podróży, ale nie ustala spójnego związku z ogólną satysfakcją z życia.",
+      "why": "Both halves of this sentence are stated as results of the review, but the only stored snapshot for it holds title, authors, journal and year (access: metadata-only, no abstract). Neither the finding about satisfaction with the trip nor the absence of a consistent link with overall life satisfaction appears in any snapshot; both exist only in the upstream remark written by someone else. AGENTS.md: metadata and another person's summary do not confirm a result. This review is also the sole support for the contradiction the item says it preserves, so a reader is shown as verified a conflict that no stored source shows.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "cd0a0ef7a610e4bb.txt", "line": 8, "text": "Title: Commuting and wellbeing: a critical overview of the literature"},
+        {"source": "upstream", "line": 8, "text": "通勤长短和整体生活满意度之间还看不出稳定的关系"},
+        {"source": "upstream", "line": 5, "text": "通勤时间越长，人对通勤越不满意，这一点和用什么交通方式无关"}
+      ],
+      "fix_direction": "Obtain and re-snapshot an abstract or full text of the review and re-check both clauses against it; until then do not word them as findings the review confirms (state them as unverified, or remove them and the grade rationale that leans on them)."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Korzyść i dowody#2",
+      "text": "Przegląd Chatterjee i współautorów potwierdza",
+      "why": "The Źródła field labels the review link „[Przegląd, abstrakt]”, which tells the reader that an abstract of the review was checked. The stored snapshot says the opposite (access words: „tylko metadane, bez abstraktu”): there is no abstract, so nothing about the review's content was checked. AGENTS.md asks to state what was actually checked when the full text is missing. (Źródła has no proposition id, so this is anchored on the sentence that depends on that source.)",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "cd0a0ef7a610e4bb.txt", "line": 8, "text": "Title: Commuting and wellbeing: a critical overview of the literature"}
+      ],
+      "fix_direction": "Relabel the access level of the review honestly (metadata only) or replace it with a source whose abstract or text was actually stored; state the scope of the check in the item."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#2",
+      "text": "Przegląd Chatterjee i współautorów",
+      "why": "Źródła cites the review as „(2020)”. The year 2020 comes only from the upstream citation; the stored Crossref metadata for the review lists Year: 2019 (line 11 of the snapshot, a 10-character line that is too short to quote under the evidence rule). I cannot tell from the stored texts whether this is online-first versus issue year, so the year is unverified and at least inconsistent with the snapshot. (Anchored here because Źródła has no proposition id.)",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "Chatterjee, K., et al. (2020)"}
+      ],
+      "fix_direction": "Reconcile the year with the stored bibliographic metadata and say which date (online or issue) is used."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "niemieckich danych panelowych",
+      "why": "The abstract snapshot says „panel data” and never names a country; „niemieckich” is supported only by the upstream remark (a lead). The word narrows the claim, so it does not make it riskier, but it is a population/jurisdiction word that no stored source backs.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d62873daa6a46711.txt", "line": 14, "text": "with panel data, we find that people with longer commuting time report systematically lower subjective"},
+        {"source": "upstream", "line": 4, "text": "德国的跟踪数据里，通勤越长的人，自己觉得过得越不好"}
+      ],
+      "fix_direction": "Confirm the German sample from a stored source (full text), or drop the word or mark it as taken from the original."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#1",
+      "text": "Stutzer i Frey stwierdzili związek dłuższego dojazdu z niższym deklarowanym dobrostanem",
+      "why": "The abstract frames the study as a test of whether the burden of commuting is compensated on the labour or housing market, and the upstream says the loss was not made up in wages or housing. The item keeps only the bare association and drops the compensation question, which per the upstream remark is exactly where Chatterjee et al. disagree. The reader is not told that W praktyce („zestaw go z kosztem mieszkania, warunkami pracy”) is the very trade-off the study examined. It does not change what the reader would do, hence minor.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d62873daa6a46711.txt", "line": 14, "text": "the burden of commuting is chosen when compensated either on the labor or on the housing market"},
+        {"source": "upstream", "line": 4, "text": "这笔损失并没有在工资或者住房上被补回来"}
+      ],
+      "fix_direction": "Restore the compensation point (as stated in the abstract) in one conditional sentence so the disagreement between the two sources is visible and the trade-off in W praktyce is tied to it."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz.",
+      "why": "The upstream gives a fallback for someone who cannot move or change job: shift commuting hours and the same route gets shorter. The item keeps only the measurement at real hours and drops the option of changing the hours. A reader locked into the current home and job gets no path from this item. The dropped action is itself not supported by any snapshot, so dropping it is defensible; the gap is that nothing replaces it.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "另外能错峰上下班的话，同样一段路也能跑得更短"}
+      ],
+      "fix_direction": "Decide explicitly whether to keep the hours-shifting option (as an editorial suggestion, labelled as such) or to state that the item addresses only people choosing a new home or job."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz.",
+      "why": "The only readable source tested an association between commuting time and subjective well-being in panel data and whether the burden is compensated. It did not test measuring door-to-door time at actual travel hours or comparing options. Ocena redakcyjna labels only the 5-hours-a-week calculation and the sentence that commuting time is one cost; the practical procedure in W praktyce is not itself called an editorial application of the finding.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d62873daa6a46711.txt", "line": 14, "text": "However, in a direct test of this strong notion of equilibrium with panel data"}
+      ],
+      "fix_direction": "Say in the editorial field that the comparison procedure is an editorial application and not something the sources tested."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "Praca zdalna, opieka nad bliskimi, dostępność transportu i korzyści z pracy zmieniają bilans.",
+      "why": "Written as a settled fact in the Ograniczenia field. No snapshot mentions remote work, caregiving or transport availability, and the upstream remark mentions only better work or housing offsetting a long commute. Only the work-benefit element has any source trace (a lead); the other three are editorial judgement presented as a limitation of the evidence.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "人们大体上能用更好的工作或住房，把长通勤的损失换回来"}
+      ],
+      "fix_direction": "Separate source-based limitations from editorial considerations and use conditional wording („mogą zmieniać”) for the latter."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "przegląd o niejednoznacznych wnioskach dla ogólnego zadowolenia z życia",
+      "why": "The letter B follows from the Stutzer and Frey abstract alone (a single panel study, which README lists under B), so the letter is not contradicted. The rationale clause describing the review's conclusions, however, cannot be checked: the stored review snapshot is metadata-only, so the review's design (and whether it is a quantitative synthesis or not) is not readable. The grade line therefore presents an unverified description of the second source as part of the reason for B.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "cd0a0ef7a610e4bb.txt", "line": 8, "text": "Title: Commuting and wellbeing: a critical overview of the literature"}
+      ],
+      "fix_direction": "Base the stated rationale on what the stored sources show (single observational panel study read through its abstract) and mention the review only to the extent its content has been checked."
+    }
+  ],
+  "notes": "Opened only: .claude/agents/pl-claim-adversary.md, AGENTS.md, README.md (heading search plus the section \"Jak czytać dowody\" and the lines around it), the packet, and the two named snapshots d62873daa6a46711.txt and cd0a0ef7a610e4bb.txt. Grep was used only on README.md and on exact snapshot paths. CLAUDE.md text reached me as harness-injected context; I did not open it. No other file, network, shell or script was used. Status is UNAVAILABLE because the Chatterjee snapshot is metadata-only, so the review leg of the item (Korzyść i dowody#2, the contradiction, part of the grade rationale) could not be checked against any stored text; I found no blocker. The fields Źródła and Zmiany w adaptacji have no proposition ids, so findings about them are anchored to the nearest proposition. Calculation check: 30 min x 2 directions x 5 days = 300 min = 5 h, which holds under the stated assumptions. No Chinese institution, threshold, hotline or legal statement appears in reader-facing fields (the dropped Chinese averages are mentioned only as a removal in Zmiany w adaptacji). For kept items with no conditional action, fallback_stated is set to true as not-applicable."
+}

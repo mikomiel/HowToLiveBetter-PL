@@ -1,0 +1,206 @@
+{
+  "item": "03.26",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2", "Korzyść i dowody#2.2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Ocena problemu, udział w terapii i praca między spotkaniami.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "source_claim",
+      "claim": "Dostępność, forma i koszt zależą od świadczeniodawcy",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 362, "text": "patients may face barriers to accessing CBT-I, including higher out-of-pocket costs as compared to medications, or locating a skilled provider in their geographic region"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 362, "text": "In light of variability in access and costs, clinicians should discuss different CBT-I delivery modalities with their patients"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 304, "text": "While cost of treatment varies by delivery method"},
+        {"snapshot": "b59686537010480d.txt", "line": 155, "text": "This may be face-to-face with a therapist, or through an online self-help programme."}
+      ],
+      "reason": "The AASM guideline supports a general version: access, delivery format and cost of CBT-I vary (cost varies by delivery method, finding a skilled provider can be hard in a region). The NHS page shows that the format can be face-to-face or online. No snapshot says that availability, form and cost depend on the provider (świadczeniodawca), and none describes the Polish system."
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie obiecujemy polskiej refundacji",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 143, "text": "Non-urgent advice: See a GP if:"},
+        {"snapshot": "b59686537010480d.txt", "line": 147, "text": "you've had trouble sleeping for months"},
+        {"snapshot": "b59686537010480d.txt", "line": 149, "text": "your insomnia is affecting your daily life in a way that makes it hard for you to cope"}
+      ]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2"],
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 155, "text": "This may be face-to-face with a therapist, or through an online self-help programme."}
+      ]
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie zmieniaj samodzielnie przepisanych leków i nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 304, "text": "this treatment may be contraindicated in certain populations such as those working in high risk occupations (eg, heavy machinery operators or drivers)"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 334, "text": "if the treatment rationale is adequately explained and the patient is monitored by a clinician during treatment"}
+      ],
+      "reason": "Backed: the second part (do not start time-in-bed restriction without establishing that it is safe): AASM says sleep restriction may be contraindicated in some populations and ties it to explanation and clinician monitoring. Not backed: the first part (do not change prescribed medicines on your own). I looked in all three snapshots for any statement about stopping, reducing or changing prescribed sleep medicines without a doctor; the NHS line 'Check with your doctor before taking anything for your sleep problems' concerns taking new products, and AASM only says CBT-I may reduce the need for drug therapy."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Europejskie wytyczne z 2023 roku",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4ee456e244f025ef.txt", "line": 7, "text": "The European Insomnia Guideline: An update on the diagnosis and treatment of insomnia 2023"},
+        {"snapshot": "4ee456e244f025ef.txt", "line": 310, "text": "Practice Guideline"},
+        {"snapshot": "4ee456e244f025ef.txt", "line": 268, "text": "on behalf of European Sleep Research Society"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "Cognitive-behavioural therapy for insomnia is recommended as the first-line treatment for chronic insomnia in adults of any age (including patients with comorbidities), either applied in-person or digitally (A)."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2.1",
+      "kind": "source_description",
+      "claim": "AASM w 2021 roku",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 164, "text": "2021 American Academy of Sleep Medicine"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 178, "text": "The American Academy of Sleep Medicine (AASM) commissioned a task force of experts in sleep medicine and sleep psychology"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 20, "text": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2.2",
+      "kind": "source_claim",
+      "claim": "wydała silne zalecenie wieloskładnikowej CBT-I",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 184, "text": "We recommend that clinicians use multicomponent cognitive behavioral therapy for insomnia for the treatment of chronic insomnia disorder in adults. (STRONG)"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 194, "text": "We suggest that clinicians not use sleep hygiene as a single-component therapy for the treatment of chronic insomnia disorder in adults. (CONDITIONAL)"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 350, "text": "Although sleep hygiene is not recommended as a single-component approach (ie, the only treatment) for patients with chronic insomnia disorder"}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "zalecenia kliniczne oparte na przeglądach",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 178, "text": "based on a systematic review of the literature and an assessment of the evidence using Grading of Recommendations Assessment, Development and Evaluation (GRADE) methodology"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 360, "text": "The recommendations provided are based on a systematic review of the clinical trial literature that included meta-analyses of extracted data when possible."},
+        {"snapshot": "4ee456e244f025ef.txt", "line": 310, "text": "Practice Guideline"}
+      ],
+      "reason": "The grade letter B itself is editorial and was not checked. For the words after it: the AASM guideline is a clinical practice guideline based on a systematic review with meta-analyses (supported). The European guideline snapshot is an abstract-only PubMed record: it carries the publication types Review and Practice Guideline but does not say how the evidence behind the recommendations was gathered (the full text would be needed). The NHS page is patient information, not a clinical guideline, and states no evidence base."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "publikowana wersja nie obiecuje jednej wielkości efektu",
+      "verdict": "not_checkable",
+      "reason": "Absence cannot be shown for every cited source. In the AASM snapshot (main region of the full guideline text) and the NHS snapshot (main region of the page) I found no single effect size, only counts of studies and qualitative 'clinically significant improvements'. The European guideline snapshot holds only the PubMed abstract, which states no effect size but cannot show absence from the full text; the full text of J Sleep Res 2023;32(6):e14035 would be needed. Which published version the sentence means is also not stated."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "clinical interview (encompassing sleep and medical history)"},
+        {"snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "Polysomnography should be used to evaluate other sleep disorders if suspected (i.e. periodic limb movement disorder, sleep-related breathing disorders, etc.)"},
+        {"snapshot": "a88b1c1ed450e8e9.txt", "line": 206, "text": "and a comprehensive clinical history"},
+        {"snapshot": "b59686537010480d.txt", "line": 153, "text": "A GP will try to find out what's causing your insomnia so you get the right treatment."},
+        {"snapshot": "b59686537010480d.txt", "line": 159, "text": "You may be referred to a sleep clinic if you have symptoms of another sleep disorder such as sleep apnoea."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie trzeba czekać miesiącami z pilnym objawem.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 143, "text": "Non-urgent advice: See a GP if:"},
+        {"snapshot": "b59686537010480d.txt", "line": 149, "text": "your insomnia is affecting your daily life in a way that makes it hard for you to cope"}
+      ],
+      "reason": "Backed: the NHS page lists impact on daily life as a stand-alone reason to see a GP, with no required duration, so months of waiting is not a precondition. Not backed: the 'pilny objaw' (urgent symptom) part. I looked in all three snapshots for any guidance on urgent or red-flag symptoms of insomnia and found none; the NHS page labels its own advice 'Non-urgent'."
+    },
+    {
+      "id": "Ograniczenia#3.1",
+      "kind": "source_claim",
+      "claim": "Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "When cognitive-behavioural therapy for insomnia is not sufficiently effective, a pharmacological intervention can be offered (A)."},
+        {"snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "Longer-term treatment with these substances may be initiated in some cases, considering advantages and disadvantages (B)."},
+        {"snapshot": "b59686537010480d.txt", "line": 161, "text": "Sleeping pills can have serious side effects and you can become dependent on them."},
+        {"snapshot": "b59686537010480d.txt", "line": 163, "text": "Sleeping pills are only prescribed for a few days, or weeks at the most, if:"}
+      ]
+    },
+    {
+      "id": "Ograniczenia#3.2",
+      "kind": "meta_statement",
+      "claim": "ta porada nie zakazuje jej ani nie jest instrukcją odstawiania",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Program cyfrowy nie oznacza dowolnej aplikacji.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Koszt#2.1", "note": "Jurisdiction: the snapshots are US (AASM), European (guideline) and UK (NHS) texts. They speak of variation by delivery method and region, not by provider, and say nothing about Polish providers or funding."},
+    {"id": "W praktyce#2", "note": "No snapshot says what makes a digital programme 'odpowiedni'. The European guideline says CBT-I may be applied digitally (A); AASM says there was insufficient evidence to make recommendations for specific delivery methods (individual, group, internet, self-help, video) and that its recommendation rests mainly on studies with a trained professional delivering CBT-I."},
+    {"id": "W praktyce#3", "note": "The first part (prescribed medicines) has no support in the snapshots; the contraindications AASM names for sleep restriction (high-risk occupations such as drivers, mania/hypomania, poorly controlled seizures) are not listed in the sentence."},
+    {"id": "Korzyść i dowody#2.1", "note": "Date: the PMC page shows the guideline accepted 2020 Nov 5 and in the 2021 Feb 1 issue; 2021 is the issue and citation year."},
+    {"id": "Korzyść i dowody#3", "note": "The AASM recommendation applies to adults with chronic insomnia disorder; the sentence says only 'tego zaburzenia' and does not name the adult population."},
+    {"id": "Ocena dowodów#1.1", "note": "The description is stated for the cited sources together, but only the AASM snapshot states a review basis; the European guideline's evidence method is not in its abstract and the NHS page is not a clinical guideline."},
+    {"id": "Ocena dowodów#1.2", "note": "'Publikowana wersja' does not say which published text is meant, so the sentence may cover a source for which only an abstract is stored."},
+    {"id": "Ograniczenia#1", "note": "The snapshots describe guideline diagnostic procedure (clinical interview or history, polysomnography for other sleep disorders if suspected); they are not Polish rules or a legal requirement."},
+    {"id": "Ograniczenia#2", "note": "The sources define no 'urgent symptom' for insomnia. The NHS page treats the situation as non-urgent advice and notes that insomnia lasting 3 months or longer is called long-term insomnia."},
+    {"id": "Ograniczenia#3.1", "note": "A reader might assume pharmacotherapy is open to anyone after a risk-benefit check. The sources attach conditions the sentence does not state: the European guideline offers it when CBT-I is not sufficiently effective, with time limits (short-term up to 4 weeks for most agents), and the NHS says sleeping pills are prescribed only for a few days or weeks if insomnia is very bad and other treatments have not worked."}
+  ],
+  "notes": "Snapshot identity checks: 4ee456e244f025ef.txt is the PubMed record of Riemann et al., The European Insomnia Guideline 2023, J Sleep Res 32(6):e14035, DOI 10.1111/jsr.14035, abstract only (no full text, reference list cut at 'Show all 271 references'); a88b1c1ed450e8e9.txt is the PMC full text of the AASM behavioral and psychological treatments guideline, J Clin Sleep Med 2021;17(2):255-262 (main region, 47637 of 49374 chars); b59686537010480d.txt is the NHS Insomnia page reviewed 19 March 2024 (main region). All three are the expected documents, none is a stub or error page, and no snapshot text contained instructions aimed at the reader. Protocol: I opened only AGENTS.md, the role file, the packet and the three snapshots named in it. The harness had already attached CLAUDE.md to my context; I did not open it myself. Judgement calls the orchestrator may want to review: Koszt#2.1 treated as a source_claim (not an editorial estimate) because AASM does state variation in access and cost; Ograniczenia#2 treated as recommendation_derived (partly) rather than a source_claim; Ograniczenia#4 treated as meta_statement (clarifies what the item's own term does not cover); Ocena dowodów#1.2 given not_checkable because one cited snapshot is abstract-only; W praktyce#3 given partly (not unsupported) because only its medicines part lacks backing."
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "04.2",
+  "role": "editor",
+  "title": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To szacunek redakcji.",
+    "W praktyce": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.",
+    "Korzyść i dowody": "Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań. Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.",
+    "Ocena dowodów": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego.",
+    "Ocena redakcyjna": "Kryterium może ułatwić decyzję. Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu.",
+    "Ograniczenia": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości. Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu. Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3)."
+  }
+}

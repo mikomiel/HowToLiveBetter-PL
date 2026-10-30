@@ -1,0 +1,454 @@
+{
+  "items": [
+    {
+      "item": "03.1",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "43878c3c88810d8f",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.2",
+      "high": true,
+      "domains": [
+        "health"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "0dfdf1bd073512ba",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.3",
+      "high": true,
+      "domains": [
+        "health"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "51b1e6ba493505b3",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.4",
+      "high": true,
+      "domains": [
+        "health"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "77b38a3f4c162cd9",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.5",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "95355eb373b111c1",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.6",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "3919891a980b4d09",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.7",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "8a14efe501484299",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.8",
+      "high": true,
+      "domains": [
+        "health"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "343f06e9c79713d7",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.18",
+      "high": true,
+      "domains": [
+        "health",
+        "safety"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "06e99f5a92bf0f0e",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.23",
+      "high": true,
+      "domains": [
+        "health",
+        "safety"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "788731a68f7b74a3",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.26",
+      "high": true,
+      "domains": [
+        "health",
+        "law",
+        "money"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "945b3efc6e0eab0c",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "03.27",
+      "high": true,
+      "domains": [
+        "health",
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "2468fe06cedb21fe",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.1",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "9a7568c46c9490bf",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.2",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "e712cd7297012430",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.3",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "e9fbd14f902020ef",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.4",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "e9e4b0a8d9676be1",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.5",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "b5216d1a2caa8504",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.7",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "4f3e4ca8f0749d5a",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.9",
+      "high": true,
+      "domains": [
+        "health"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "dc21cef0f3a4cdeb",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.12",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "b9df03ef5e88e5ac",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.17",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "0e581aa0d8d36c86",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "04.18",
+      "high": false,
+      "domains": [],
+      "reports": [
+        "verifier-a",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "e37ae48f972fb008",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.1",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "9876be00607ff0cd",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.2",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "0c6c9e356a22e50b",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.3",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "759201e021ad4b48",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.4",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "791c68981180f6d8",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.6",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "047643377bcd2492",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.7",
+      "high": true,
+      "domains": [
+        "health",
+        "law",
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "a9c8adb82b133a4c",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.8",
+      "high": true,
+      "domains": [
+        "law",
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "4239cab1b0830dcc",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.9",
+      "high": true,
+      "domains": [
+        "law",
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "c20ffa7cebd9a813",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.10",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "79b42eaadaa0ddff",
+      "commit": "1a7f91e"
+    },
+    {
+      "item": "14.12",
+      "high": true,
+      "domains": [
+        "accounts"
+      ],
+      "reports": [
+        "verifier-a",
+        "verifier-b",
+        "adversary-a",
+        "editor-a"
+      ],
+      "textHash": "1bae282cb1c64cde",
+      "commit": "1a7f91e"
+    }
+  ]
+}

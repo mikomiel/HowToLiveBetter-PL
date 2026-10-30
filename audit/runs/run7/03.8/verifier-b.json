@@ -1,0 +1,140 @@
+{
+  "item": "03.8",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 123, "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"}
+      ],
+      "depends_on": ["Korzyść i dowody#3"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana wieczornego nawyku i wybór innego zajęcia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "To ocena redakcji, bez obowiązku zakupu urządzenia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 107, "text": "relax at least 1 hour before bed – for example, take a bath or read a book"},
+        {"snapshot": "b59686537010480d.txt", "line": 123, "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"}
+      ],
+      "depends_on": ["Korzyść i dowody#1.3", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "source_claim",
+      "claim": "Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.",
+      "verdict": "unsupported",
+      "reason": "The sentence says that no one-hour (or other) threshold is scientifically established for all devices, i.e. a statement about the state of the evidence across devices. Neither cited snapshot says this. The NHS page (main region, read in full) gives an hour only as general relaxing advice (line 107, 'relax at least 1 hour before bed') and for devices says only 'right before going to bed' (line 123) with no statement about whether any threshold is evidence-based. The Chang abstract mentions '1 h' only as a survey of device use before bedtime and does not test or discuss a timing threshold. The claim goes beyond what these two sources address; it is not contradicted either. The NHS page speaks on timing, so this is unsupported rather than not_checkable."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Chang i współautorzy porównali",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "fa247e48351151fd.txt", "line": 9, "text": "Chang AM, Aeschbach D, Duffy JF, Czeisler CA."},
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Here we compare the biological effects of reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book in the hours before bedtime."}
+      ],
+      "reason": "Authorship (Chang first author, with co-authors) and that the authors made the comparison are in the snapshot. Part of a sentence split in three because the number 12 cannot be quoted from the snapshot."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_description",
+      "claim": "u 12 zdrowych młodych dorosłych",
+      "verdict": "not_checkable",
+      "reason": "The snapshot is the Europe PMC abstract only. It gives no sample size and no description of the participants (health status, age). The abstract mentions only a survey of 1,508 American adults, which is background and not the study sample. The full text (Methods, Participants) would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#1.3",
+      "kind": "source_description",
+      "claim": "czytanie z emitującego światło urządzenia oraz papierowej książki",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Here we compare the biological effects of reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book in the hours before bedtime."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2.1",
+      "kind": "source_description",
+      "claim": "W losowanym badaniu krzyżowym",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "reduced next-morning alertness than when reading a printed book"}
+      ],
+      "reason": "The wording 'Participants reading an LE-eBook ... than when reading a printed book' implies that the same participants were compared under both conditions (consistent with a crossover design). The abstract does not use the words crossover or randomised and does not say how conditions were allocated or ordered. Randomisation and the crossover label need the full text (Methods)."
+    },
+    {
+      "id": "Korzyść i dowody#2.2",
+      "kind": "source_description",
+      "claim": "każda sesja trwała około 4 godzin przed snem przez pięć wieczorów",
+      "verdict": "not_checkable",
+      "reason": "The abstract says only that the reading was 'in the hours before bedtime'. It gives no session length (about 4 hours) and no number of evenings. These are methods details the abstract does not carry; the full text (Methods, protocol) would be needed. Part of a sentence split because the figure 4 cannot be quoted from the snapshot."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "Participants reading an LE-eBook took longer to fall asleep and had reduced evening sleepiness, reduced melatonin secretion, later timing of their circadian clock, and reduced next-morning alertness than when reading a printed book."},
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "evening exposure to an LE-eBook phase-delays the circadian clock"}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "fa247e48351151fd.txt", "line": 14, "text": "reduced next-morning alertness than when reading a printed book"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. For the description after it: the abstract implies a within-participant comparison of reading an LE-eBook and a printed book (consistent with a crossover). It does not state the design label, the sample size ('małe'), or the controlled laboratory setting; these need the full text (Methods)."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana wieczornej rutyny jest próbą do dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym.",
+      "verdict": "not_checkable",
+      "reason": "The Chang snapshot is an abstract only. It names the tested condition as reading on a light-emitting eReader (LE-eBook) and does not mention phones, night mode or e-ink screens, but absence from an abstract does not show they were not studied; the Methods (device used, settings) would be needed. The NHS page does not describe the study."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu.",
+      "verdict": "not_checkable",
+      "reason": "The abstract does not describe the exposure level or the setting and says nothing about effect size for short use at home. Whether the exposure was large and laboratory-based, and what the authors say about generalising, would need the full text (Methods, Discussion)."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#3", "note": "The source compared reading on a light-emitting e-reader (LE-eBook) with a printed book. The sentence says 'Warunek ekranu'; a reader might assume the result applies to any screen, phone or content. The sentence does not say so, and Ograniczenia#1 flags it."},
+    {"id": "Korzyść i dowody#1.2", "note": "Sample size (12) and population (healthy young adults) are not in the abstract."},
+    {"id": "Korzyść i dowody#2.1", "note": "Randomisation and the crossover label are not stated in the abstract; only a within-participant comparison is implied."},
+    {"id": "Korzyść i dowody#2.2", "note": "Session length and number of evenings are not in the abstract."},
+    {"id": "W praktyce#2", "note": "The sentence makes a statement about the evidence for any one-hour boundary across all devices; the NHS page gives an hour only as general relaxing advice and neither source addresses thresholds for devices."},
+    {"id": "Ocena dowodów#1", "note": "Design label, sample size and laboratory setting are described beyond what the abstract states."},
+    {"id": "Ograniczenia#2", "note": "Exposure level, setting and the authors' own view on generalisation are not in the abstract."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and the two cited snapshots (fa247e48351151fd.txt, b59686537010480d.txt). No protocol violation. Chang et al. (10.1073/pnas.1418490112) is an Europe PMC abstract only (access: abstract; the Journal field is empty), so all methods details (n=12, young healthy adults, randomised crossover, 4 h sessions, five evenings, laboratory setting) are not_checkable or partly; the full text is needed. The NHS insomnia page is the main region only (4304 of 4844 chars) and carries the practical advice but no statement on thresholds. W praktyce#2 is unsupported, which makes the status FAIL; it would pass as a plain meta_statement/recommendation only if reworded to say the item gives no time limit, or if a source that discusses timing thresholds were cited. Sentences Korzyść i dowody#1 and #2 were split into parts of the same kind only because a figure (12, 4) cannot be quoted from the abstract."
+}

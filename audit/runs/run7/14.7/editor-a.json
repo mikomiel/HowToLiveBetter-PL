@@ -1,0 +1,77 @@
+{
+  "item": "14.7",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "chce dostępu",
+      "replacement": "chce mieć dostęp",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "miał przeglądu prawnika",
+      "replacement": "został sprawdzony przez prawnika",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu.",
+      "why": "(1) RODO appears here with no expansion. I could not open the chapter, so I cannot tell whether it is explained at an earlier first use in chapter 14; if not, the first use needs the full name of the regulation, which is a law name and therefore not mine to edit. (2) The sentence is nominal and 'niezbędnych dla celu' looks like a preposition calque ('for the purpose'); Polish would say 'niezbędnych do celu' or 'niezbędnych do osiągnięcia celu'. 'wymaga' is a duty verb and 'ograniczenia danych' is the legal data-minimisation concept, so I did not edit."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania.",
+      "why": "No explicit subject: after the conditional clause 'określa' can be read as attached to 'zgoda' instead of RODO. 'określa jej dobrowolność' is not idiomatic (one does not 'define' voluntariness; the regulation sets a condition that consent be voluntary), and 'prawo wycofania' is more usually 'prawo do wycofania zgody'. 'określa' is an attribution/legal verb and 'prawo wycofania' names a right, so left unedited. Verifier to decide on an explicit subject (RODO) and a clearer verb."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy.",
+      "why": "Subjectless again: 'uwzględnia' has no agent here, while the Ograniczenia field uses the impersonal 'uwzględnia się'. Also the summary drops 'w jak największym stopniu' and 'między innymi', which the Ograniczenia field gives as part of art. 7 ust. 4, so intensity and completeness differ between the two fields; and 'uzależnianie usługi' differs from 'uzależnienie wykonania umowy, w tym usługi'. Protected (legal verb, intensity words); verifier to align the two descriptions."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie akceptuj zbiorczo wszystkiego bez zastanowienia",
+      "why": "Stacked negation ('nie' ... 'bez') plus the quantifier 'wszystkiego', with 'zbiorczo' in a bureaucratic register ('hurtem' or 'jednym kliknięciem' would be more natural). It is also ambiguous whether bulk acceptance is itself discouraged or only acceptance without thought. Negation and quantifier are protected, so not edited. One claim per sentence is also violated: the sentence joins 'Sprawdź ...' and 'nie akceptuj ...' with 'i'."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Odbierz zbędne uprawnienia",
+      "why": "Terminology across the item: the same action is 'zmianę uprawnień' (Korzyść i dowody), 'Odbierz' (W praktyce) and 'ich włączenie' (Ograniczenia). 'Odbierz' is understandable but 'cofnij' or 'wyłącz' is closer to what the phone interface offers. 'uprawnienia' also has a legal sense (entitlements) next to RODO rights, so I did not edit the word or its verb; verifier may choose one consistent verb."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+      "why": "Zeugma: one reads the purpose, but one does not 'read a possibility'; the reader has to check whether and how consent can be withdrawn. A natural version would be 'przeczytaj cel i sprawdź, czy zgodę można wycofać', but that introduces a modal ('można') and touches 'możliwość wycofania', which relates to a right, so I report it instead of editing."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.",
+      "why": "Comparative ('użyteczniejsza') is protected. Language problems: 'Kontrola' can be read as an audit or as having control over something, where 'sprawdzanie' is meant (title uses 'Sprawdzaj'); 'automatyczne wybieranie' can be read as done by software, where 'odruchowe zgadzanie się' is meant; 'użyteczniejsza' is stiff ('przydatniejsza' or 'bardziej przydatna'). Replacing the noun with 'Sprawdzanie' forces 'użyteczniejsze', which changes a protected word, so I did not edit. Possible version for the verifier: 'Sprawdzanie konkretnego celu jest przydatniejsze niż odruchowe zgadzanie się na wszystko'."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.",
+      "why": "Grade letter and negation are protected. Language: 'interwencji' is a specialist (clinical research) term with no explanation, a likely English calque for a lay reader; if this phrase is a fixed formula used across the book it should stay, but I could not check the chapter or README. Also 'instrukcja systemu' is a different name for what the other fields call 'Strona pomocy Androida' (consistency), and 'instrukcja' states a source type, so I did not edit."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy.",
+      "why": "Very long and carries two claims (what the article says, what it does not decide) plus a nested enumeration. Splitting at the semicolon (and adding a subject such as 'Przepis ten' before 'nie rozstrzyga') would touch a negation and a modal ('musi'). 'w tym usługi' looks truncated (legal wording speaks of providing the service, 'świadczenie usługi'). Law wording, superlative ('w jak największym stopniu') and a negation, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu",
+      "why": "'dotyczy Androida' repeats 'Androida' from the subject (filler, but it is a platform-scope statement). 'obowiązuje' applied to steps is a legal-register verb and a likely calque of 'apply' ('dotyczy tylko ...' or 'ma zastosowanie tylko ...'); 'wybranych' is a calque of 'selected' ('niektórych'). Contains protected 'część', 'tylko' and a scope limiter, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "i opisuje, jak ich włączenie wpływa na działanie aplikacji",
+      "why": "'włączenie uprawnień' is an unnatural collocation ('przyznanie uprawnień' or 'zezwolenie na dostęp'). Possible meaning tension for the verifier, not a language edit: the Koszt field says that removing permissions may stop some functions, while this says the page describes how enabling them affects the app. 'wpływa' is a causal verb, so not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

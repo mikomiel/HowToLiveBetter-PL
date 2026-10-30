@@ -1,0 +1,172 @@
+{
+  "item": "04.12",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "With repetition of a behaviour in a consistent context, automaticity increases following an asymptotic curve which can be modelled at the individual level."},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "indicating considerable variation in how long it takes people to reach their limit of automaticity and highlighting that it can take a very long time."}
+      ],
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#3.1"],
+      "reason": "Backed: no single timeline (time to 95% of the asymptote ranged from 18 to 254 days, 'considerable variation') and the studied practice of repeating a behaviour daily in the same context. Not backed: 'mały' - the abstract only says participants chose an eating, drinking or activity behaviour and never calls the habits small or simple. The abstract also does not compare a stable context with a varying one, so it shows habits forming under a consistent context, not that the stable situation is what drives the result."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "With repetition of a behaviour in a consistent context, automaticity increases following an asymptotic curve which can be modelled at the individual level."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Backed: tying a daily behaviour to a fixed context ('after breakfast' is the abstract's own example of a context) is the studied practice, and automaticity increased with repetition in a consistent context. Not backed: 'prostą' - the abstract does not say the behaviours were simple; and the abstract has no comparison with a non-fixed context, so it does not show that linking to a fixed event is better than not doing so. The desk example is not a studied behaviour (the item says so in Ograniczenia#4)."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "indicating considerable variation in how long it takes people to reach their limit of automaticity and highlighting that it can take a very long time."},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Performing the behaviour more consistently was associated with better model fit."}
+      ],
+      "depends_on": ["Korzyść i dowody#3.1"],
+      "reason": "Backed: day 21 is not a threshold, because time to reach the modelled plateau ranged from 18 to 254 days and 'it can take a very long time'. Not backed: that tracking regularity is the right replacement - the abstract only associates more consistent performance with better model fit (not with faster or more certain automaticity), and no source line recommends monitoring regularity. The figure 21 is not in the abstract; it is the figure the advice argues against and is not checked against a source."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 9, "text": "Lally, van Jaarsveld, Potts, Wardle"},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "96 volunteers chose an eating, drinking or activity behaviour to carry out daily in the same context (for example ‘after breakfast’) for 12 weeks."}
+      ],
+      "reason": "Supported: authors, 96 volunteers, 12 weeks, self-chosen eating, drinking or activity behaviour. Not in the abstract: that the habit was 'prosty' (simple) and that the behaviours were 'głównie' (mainly) of these kinds; the abstract lists only these three categories without saying how many fell in each. Full text would be needed to settle those two words."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The majority (82) of participants provided sufficient data for analysis"},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The model fitted for 62 individuals, of whom 39 showed a good fit."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3.1",
+      "kind": "source_claim",
+      "claim": "W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"}
+      ],
+      "reason": "The range 18 to 254 days to reach 95% of the asymptote is stated. The abstract gives it for 'participants' and does not say it applies to the 39 people with a good fit ('W tej ostatniej grupie'); that attribution would need the full text."
+    },
+    {
+      "id": "Korzyść i dowody#3.2",
+      "kind": "source_claim",
+      "claim": "mediana wyniosła 66 dni.",
+      "verdict": "not_checkable",
+      "reason": "The abstract reports only the range 18 to 254 days and no median; I searched the whole abstract for a median or any central value and found none. The full text (the Wiley page was blocked, 403) would be needed to check 66 days and the group it refers to."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "They completed the self‐report habit index (SRHI) each day and recorded whether they carried out the behaviour."},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Nonlinear regressions fitted an asymptotic curve to each individual's automaticity scores over the 84 days."},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The majority (82) of participants provided sufficient data for analysis"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. Supported: one study, self-report (SRHI) and modelling (nonlinear regressions, asymptotic curve), 96 volunteers of whom 82 gave enough data. Not stated in the abstract: the design label 'obserwacyjne' (the abstract describes volunteers choosing a behaviour and logging it daily, with no intervention or comparison group, but never names the design) and the size judgement 'małe'."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Stały kontekst jest sposobem organizacji powtórzeń.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "recommendation_derived",
+      "claim": "Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "indicating considerable variation in how long it takes people to reach their limit of automaticity and highlighting that it can take a very long time."}
+      ],
+      "depends_on": ["Korzyść i dowody#3.1"],
+      "reason": "Backed: forming a habit can take a very long time (up to 254 days to 95% of the asymptote), which supports choosing something whose cost you can keep paying. Not backed: 'mały' - nothing in the abstract says that small habits are easier to sustain or that the studied habits were small."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Nonlinear regressions fitted an asymptotic curve to each individual's automaticity scores over the 84 days."},
+        {"snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"}
+      ],
+      "reason": "The abstract does not use the word extrapolation. It follows from the two quotes: the curves were fitted to scores over 84 days and the times to 95% of the fitted asymptote reach 254 days, which exceeds the 84 observed days."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Zakres 18–254 nie jest gwarancją dla każdego.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Nie mierzono pracy twórczej ani oszczędności czasu.",
+      "verdict": "not_checkable",
+      "reason": "The snapshot is an abstract only (Crossref, 1547 characters), so it cannot show that something was not measured. I searched the abstract for creative work, work output, time saved or any time-use measure and found none: it reports the self-report habit index (automaticity) and whether the behaviour was performed. The full text would be needed to confirm the absence."
+    },
+    {
+      "id": "Ograniczenia#4.1",
+      "kind": "meta_statement",
+      "claim": "Przykład z biurkiem jest adaptacją,",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#4.2",
+      "kind": "source_claim",
+      "claim": "nie badaną czynnością.",
+      "verdict": "not_checkable",
+      "reason": "Says the desk activity was not a studied behaviour. The abstract lists only 'an eating, drinking or activity behaviour' chosen by each volunteer and names no desk or materials behaviour, but an abstract-only snapshot cannot show absence. The full text, with the list of behaviours chosen, would be needed."
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#1", "note": "The item calls the habit 'prosty' and says the behaviours were mainly eating, drinking or movement; the abstract says only that each volunteer chose an eating, drinking or activity behaviour."},
+    {"id": "Korzyść i dowody#3.1", "note": "The item narrows the 18-254 day range to the 39 people with a good fit; the abstract gives it for 'participants' without that restriction. The item's '95% indywidualnego poziomu automatyzmu' also leaves out that the reference is each person's modelled asymptote (fitted plateau)."},
+    {"id": "Ocena dowodów#1", "note": "The design label 'obserwacyjne' and the size label 'małe' go beyond what the abstract states about the study."},
+    {"id": "title#1", "note": "The abstract describes habits formed in a consistent context by volunteers who chose their own behaviour; it does not compare consistent with varying contexts and does not describe the habits as small."},
+    {"id": "W praktyce#1", "note": "The study did not test whether linking a behaviour to a fixed event beats other approaches, and the desk example is not a studied behaviour."},
+    {"id": "W praktyce#2", "note": "The abstract does not test regularity monitoring as a strategy or the day-21 rule; it associates more consistent performance with better model fit and reports a wide range of times to plateau."}
+  ],
+  "notes": "No protocol violations: I opened only AGENTS.md, .claude/agents/pl-source-verifier.md, the packet audit/runs/run7/04.12/packet-verifier.json and snapshot .cache/sources/248f8ea4bd81051a.txt. Source row 1 (Wiley full text, access blocked, 403) has no snapshot; the only snapshot is row 2, the Crossref abstract of the same DOI 10.1002/ejsp.674 (title, authors, journal and year match Lally et al. 2009, EJSP; abstract only, no full text). Details that need the full text got not_checkable rather than source_unavailable because a readable abstract snapshot exists. Sentence Korzyść i dowody#3 was split into .1 and .2 (same kind) because the median 66 cannot be quoted from the abstract while the range can; sentence Ograniczenia#4 was split by kind (item provenance vs a claim about what the study covered). Status is UNAVAILABLE because of the abstract-only snapshot (partly and not_checkable rows), not because of any contradicted or unsupported source claim."
+}

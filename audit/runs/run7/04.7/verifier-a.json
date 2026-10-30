@@ -1,0 +1,116 @@
+{
+  "item": "04.7",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Rozpisz złożone zadanie na części, zanim oszacujesz czas",
+      "verdict": "unsupported",
+      "reason": "The advice rests on the Kruger and Evans findings, but the only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot. No snapshot line exists that gives this advice or states the fact it rests on, so nothing backs it. Looked for: any readable snapshot among the packet sources; there is none."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Przygotowanie listy etapów też zabiera czas.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie.",
+      "verdict": "unsupported",
+      "reason": "This is advice resting on the finding that unpacking a task changes time estimates. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so no snapshot line gives this advice or states the fact it rests on. Looked for: any readable snapshot among the packet sources; there is none."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+      "verdict": "unsupported",
+      "reason": "This is advice resting on the finding that estimating parts changes the estimate. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so no snapshot line gives this advice or states the fact it rests on. Looked for: any readable snapshot among the packet sources; there is none."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source (10.1016/j.jesp.2003.11.001) has access blocked by api.crossref.org and no snapshot (snapshot is null, 0 characters). Authors and design cannot be checked; nothing was answered from memory."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot. Neither the longer estimates nor the smaller underestimation in experiments 3 and 4 can be checked; nothing was answered from memory."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot. The experiment 5 result on task complexity cannot be checked; nothing was answered from memory."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku",
+      "verdict": "source_unavailable",
+      "reason": "The grade letter B is editorial and was not checked. The description of the source as a series of experiments in one publication, and the statement that the direction of the result was verified, cannot be checked because the only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez wielkości efektu",
+      "verdict": "source_unavailable",
+      "reason": "The clause says that no effect size was reported or taken. Absence can only be shown from a snapshot holding the text, and the only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so the verdict cannot be absent_in_source."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "recommendation_derived",
+      "claim": "Rozpisuj zadania złożone.",
+      "verdict": "unsupported",
+      "reason": "This is advice resting on the finding that unpacking a task changes time estimates, and on the finding about task complexity in experiment 5. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so no snapshot line gives this advice or states the fact it rests on. Looked for: any readable snapshot among the packet sources; there is none."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Dłuższe oszacowanie nie zawsze jest trafniejsze.",
+      "verdict": "source_unavailable",
+      "reason": "A statement about the world taken as a limitation of the source. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so it cannot be checked."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4.",
+      "verdict": "source_unavailable",
+      "reason": "The claim is about what the abstract states. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so the abstract was not read and the claim cannot be checked."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację.",
+      "verdict": "source_unavailable",
+      "reason": "The claim is about what the publication does and does not confirm. The only cited source (10.1016/j.jesp.2003.11.001) has access blocked and no snapshot, so it cannot be checked."
+    }
+  ],
+  "scope_gaps": [],
+  "notes": "The packet has one source row, origin cited, DOI 10.1016/j.jesp.2003.11.001, access blocked (blocked by api.crossref.org), snapshot null, 0 characters; packet.warnings is empty. No claim was answered from memory, so every source_claim and source_description row is source_unavailable and carries no quotes or numbers. The four recommendation_derived rows (title#1, W praktyce#1, W praktyce#2, Ocena redakcyjna#1) have verdict unsupported with empty depends_on and quotes, because no source row has a quote they could depend on and no snapshot line gives the same advice; under the status rule an unsupported recommendation gives FAIL, although the underlying cause is an unavailable source and not a contradicted or unsupported source claim. Opened only: the brief file, .claude/agents/pl-source-verifier.md, AGENTS.md and audit/runs/run7/04.7/packet-verifier.json. Nothing outside the allowed set was opened."
+}

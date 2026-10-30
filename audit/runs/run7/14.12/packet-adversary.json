@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "item": "14.12",
+  "role": "adversary",
+  "title": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta",
+  "fields": {
+    "Koszt": "Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania. Nie zakładamy stałego czasu wykonania.",
+    "W praktyce": "W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp. Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy. Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.",
+    "Korzyść i dowody": "Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia. To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie.",
+    "Ocena dowodów": "C — dokumentacja dostawcy i redakcyjna lista kontrolna, bez badania unikniętych strat.",
+    "Ocena redakcyjna": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej. Lista usług jest przykładem, nie kompletnym rejestrem twoich kont.",
+    "Ograniczenia": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej. Dokumentacja Google nie dowodzi sposobu działania wszystkich usług. Potwierdź wymagania bezpośrednio u własnego dostawcy.",
+    "Źródła": "[Google: zmiana numeru i różne sposoby jego użycia](https://support.google.com/accounts/answer/3463280?hl=pl); [NCSC: odzyskiwanie zależy od dostawcy](https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account).",
+    "Zmiany w adaptacji": "Zachowano C. Usunięto chiński termin 90 dni, usługi państwowe i domyślny okres pozostawienia starej karty. Ogólną listę kontrolną oznaczono jako redakcyjną."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przegląd używanych usług i potwierdzenie nowych sposobów kontaktu oraz odzyskiwania."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie zakładamy stałego czasu wykonania."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "W usługach, które korzystają ze starego numeru, ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Google wyjaśnia, że numer może służyć do logowania lub odzyskiwania, a jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "To uzasadnia sprawdzenie powiązań zamiast polegania na jednej zmianie."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — dokumentacja dostawcy i redakcyjna lista kontrolna, bez badania unikniętych strat."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Lista usług jest przykładem, nie kompletnym rejestrem twoich kont."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Dokumentacja Google nie dowodzi sposobu działania wszystkich usług."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Potwierdź wymagania bezpośrednio u własnego dostawcy."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "finalUrl": "https://support.google.com/accounts/answer/3463280?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 5307,
+      "sha256": "65b0333b2747c4312df116d6f4e2f8e8c36edd87ce9a37e4839d1837fba2b8e2",
+      "snapshot": "99611c948c4b589f.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 5181,
+        "wholeChars": 9057,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6873,
+      "sha256": "2680430c2ca39b314f2e7f353477c6d14b9f6b1223e64ed9d3da5782863b3f29",
+      "snapshot": "4f1351e404cb2044.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 6804,
+        "wholeChars": 9603,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "C",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 12. 换手机号、不用旧号之前，先把银行、支付和社交账号改绑到新号上，别让旧号欠费停机了事"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=中 毅力=否 收益=中 口径=金钱 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。要一个个账号去改绑手机号，银行预留的手机号要找银行改。常用账号多的，前后可能要一两个小时。难的是容易漏，冷门账号想不起来。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：手机号注销以后，运营商最短过 90 天就可以把它再发给别人。你没改绑的账号还连着这个号，验证码会发到新号主手机上，他可能凭验证码登进你的账号。所以换号之前，先把账号和银行预留手机号都改到新号上。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：电信服务规范写明，「移动电话号码冻结时限最短为 90 日」，指号码注销后到重新启用的时间。注销 90 天后，这个号就可能发给新用户。工信部 2025 年第一季度电信服务质量通告提醒用户，可以用三家运营商 App 里的「二次号码焕新」服务。拿到别人用过的号，用它能解绑这个号在自己开户前注册绑定的互联网账号。2026 年第二季度通告说，这项服务已覆盖 258 款常用互联网应用，申请解绑应用超 8.5 亿次。新号主要专门去解绑，说明前一个号主的账号到了他手里还连着这个号。2024 年三大运营商的客服接受人民邮电报采访。他们说号码注销后，新用户仍然可以用短信验证码登录老用户注册的账号。他们提醒，变更或注销号码前先解绑支付宝、微信等应用，及时修改银行卡预留的手机号码（全国）"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：C"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：信息产业部 (2005). 电信服务规范（信息产业部令第 36 号，附录 2 第 2.1.7 项）. <https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2020/art_0cff75e226764dc7b811cd4e954415c5.html>；工业和信息化部 (2025). 关于 2025 年第一季度电信服务质量的通告（工信部信管函〔2025〕85 号）. <https://www.miit.gov.cn/jgsj/xgj/fwjd/art/2025/art_1bcadc32bf8141a8b616db8eaadba2e9.html>；工业和信息化部 (2026). 关于 2026 年第二季度电信服务质量的通告（工信部信管函〔2026〕258 号）. 内蒙古自治区通信管理局转载. <https://nmca.miit.gov.cn/xwdt/xydt/art/2026/art_2f6af9120a064a6784557cdefbf1c5be.html>；李玥 (2024). 三大运营商提醒用户：变更或注销手机号码前务必先解绑. 人民邮电报，西藏自治区党委网信办转载，2024-04-08. <https://wxb.xzdw.gov.cn/wlaq/aqdt/202404/t20240408_456634.html>（网页存档 <https://web.archive.org/web/20250414055537/https://wxb.xzdw.gov.cn/wlaq/aqdt/202404/t20240408_456634.html>）"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：先用一证通查 2.0 看旧号关联了多少个账号，见第 11 条（名下有几张电话卡）。先改银行和支付账号，再改社交账号，用不上的账号直接注销。改完别马上停号，留一两个月接漏掉的验证码短信。这是作者经验。新号主能凭验证码登录这一点，来源是媒体报道里运营商客服的说法，没有官方通报或判决。账号被人登进去之后怎么处理，见第 6 条（登录设备）。换手机、卖旧手机要另外退出账号、恢复出厂设置，写在第 8 条（删除自己的个人信息）的备注里。定 C 级，是因为没有研究算过改绑能少丢多少。收益量级凭判断定为中。受益人是你自己。"
+      }
+    ]
+  }
+}

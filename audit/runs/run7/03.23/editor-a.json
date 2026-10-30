@@ -1,0 +1,86 @@
+{
+  "item": "03.23",
+  "edits": [
+    {
+      "field": "title",
+      "original": "Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania",
+      "replacement": "Przy złości spróbuj się uspokoić, zamiast agresywnie się wyładowywać",
+      "reason": "title",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "To propozycja łagodnej próby",
+      "replacement": "Potraktuj to jako łagodną próbę",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "ćwiczenie emocji",
+      "replacement": "ćwiczenie uspokajające",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "organizować",
+      "replacement": "szukać",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "uspokojenie pobudzenia",
+      "why": "Nominalna konstrukcja brzmi jak kalka (uspokojenie pobudzenia to niemal tautologia), a tytuł nazywa to samo trzema różnymi słowami (tytuł: uspokojenie pobudzenia; W praktyce: uspokoić ciało; Korzyść i dowody: działania zmniejszające pobudzenie). Moja zmiana tytułu zastępuje termin pobudzenie czasownikiem się uspokoić, więc weryfikator powinien zdecydować, czy to nie rozszerza pojęcia. Jeśli pobudzenie ma zostać w tytule, zgodna wersja to: Przy złości spróbuj zmniejszyć pobudzenie, zamiast agresywnie się wyładowywać."
+    },
+    {
+      "field": "title",
+      "text": "Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania",
+      "why": "Tytuł nie niesie warunku bezpieczeństwa z pola W praktyce (Jeśli sytuacja jest bezpieczna; przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo). Reguła wymaga, by istotny warunek przetrwał w tytule. Nie dopisuję go sam, bo to słowa warunku; weryfikator decyduje, czy go dodać."
+    },
+    {
+      "field": "Koszt",
+      "text": "nie ustalony czas leczenia",
+      "why": "Słowa o czasie i negacja są chronione. Niejasne, jakiego leczenia dotyczy zdanie: złość i krótka przerwa od sporu nie mają tu leczenia, wygląda to na pozostałość szablonu. Zdanie jest też trudne do zrozumienia bez rozmowy z autorem (co dokładnie nie jest ustalone). Pisownia nie ustalony osobno jest dopuszczalna, bo występuje przeciwstawienie."
+    },
+    {
+      "field": "W praktyce",
+      "text": "odłóż agresywną reakcję",
+      "why": "Odłożyć reakcję znaczy odroczyć ją, a nie z niej zrezygnować. Zdanie czyta się nienaturalnie, a naturalniejsze byłoby powstrzymaj się od agresywnej reakcji. To zmienia sens (odroczenie kontra rezygnacja), więc nie edytuję. Weryfikator sprawdza, które znaczenie wynika ze źródła."
+    },
+    {
+      "field": "W praktyce",
+      "text": "bez forsowania oddechu",
+      "why": "Zawiera negację bez, więc nie edytuję. Forsowanie oddechu to nienaturalne połączenie i czytelnik nie wie, co ono znaczy (oddychanie zbyt głębokie, zbyt szybkie, wymuszone?). Naturalniejsze byłoby bez wymuszania oddechu lub jawne nazwanie, czego nie robić, ale to wymaga sprawdzenia zamierzonego sensu."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób.",
+      "why": "Liczby i nazwiska autorów są chronione. Pierwsze użycie terminu metaanaliza nie ma wyjaśnienia (np. łączy wyniki wielu badań). Niezależne próby może być rozumiane przez laika jako próby w sensie prób zrobienia czegoś, a nie próby statystyczne. Nie sprawdzałem, czy rozdział wyjaśnia te terminy wcześniej, bo nie wolno mi było otwierać plików rozdziału."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63.",
+      "why": "Czasownik przyczynowy obniżały, wartość g oraz słowa zmniejszające pobudzenie są chronione. Termin pobudzenie nie jest wyjaśniony przy pierwszym użyciu (poza tytułem), a oznaczenie g nie jest rozwinięte (miara wielkości efektu). Zasada rozdziału każe wyjaśniać terminy przy pierwszym użyciu, ale dopisanie definicji mogłoby zmienić sens, więc zostawiam to weryfikatorowi."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero.",
+      "why": "Negacja nie, kwantyfikator przeciętnie, czasownik przyczynowy i liczby są chronione. Szyk z przeciętnie wstawionym między czasownik a dopełnienie jest nienaturalny (naturalniej: średnio nie przyniosły takiego efektu). Przedział obejmujący zero to skrót myślowy bez słowa ufności, co laik może źle zrozumieć. Nie edytuję."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "nie nad liczbą odzyskanych godzin",
+      "why": "Zawiera negację nie i dotyczy oceny A. Odzyskane godziny nie mają związku ze złością i agresją, więc wygląda to na pozostałość szablonu z porady o czasie. Czytelnik nie zrozumie, o jakie godziny chodzi. Weryfikator powinien usunąć lub poprawić ten fragment."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji",
+      "why": "Zawiera negację w słowie nieskuteczności, populację lub stan (depresja) i prawdopodobny termin techniczny, więc nie edytuję. Zakaz ruchu brzmi jak przepis drogowy; najpewniej chodzi o aktywność fizyczną lub ćwiczenia (kalka z chińskiego, gdzie jedno słowo znaczy ruch i ćwiczenia), ale nie widzę źródła, więc nie mogę tego potwierdzić. Depresja pojawia się tu nagle, bez wcześniejszego kontekstu, a wcześniejsze pola o niej nie mówią. Czytelnik nie wie, dlaczego to zastrzeżenie tu jest."
+    }
+  ],
+  "verdict": "needs_edits"
+}

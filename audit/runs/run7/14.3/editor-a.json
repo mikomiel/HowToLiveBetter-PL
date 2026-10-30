@@ -1,0 +1,85 @@
+{
+  "item": "14.3",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "bezpieczne zachowanie danych",
+      "replacement": "bezpieczne przechowanie danych",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "ani PUK",
+      "replacement": "ani PUK-u",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "lub oficjalne wsparcie swojego operatora",
+      "replacement": "lub skorzystaj z oficjalnego wsparcia swojego operatora",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "kod odblokowujący ekran",
+      "replacement": "kod blokady ekranu",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "zanim podejmie się próbę odblokowania",
+      "replacement": "zanim spróbujesz je odblokować",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "lub wymiany",
+      "replacement": "lub wymiany karty",
+      "reason": "term",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "sprawdź możliwość używania PIN-u SIM lub eSIM",
+      "why": "Stiff nominal construction (\"sprawdź możliwość używania\"), a calque of an English or Chinese shape. A natural Polish form would be along the lines of \"sprawdź, czy da się włączyć PIN dla karty SIM lub eSIM\". Not edited because \"możliwość\" is modal wording and because \"używania\" versus \"włączenia\" could change which action is instructed. The verifier should confirm what the source describes (using an existing SIM PIN or turning it on)."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie zgaduj kodu początkowego ani PUK.",
+      "why": "\"Kod początkowy\" is not an established Polish term and the packet does not say which code it is. A reader cannot tell it is meant as the initial or default SIM PIN, if that is the intent. A clearer term, such as \"domyślny PIN\" or \"PIN nadany przez operatora\", would swap a technical term, so I did not edit it. Negation \"Nie zgaduj\" is also protected."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Gdy go nie znasz, sprawdź dokumenty",
+      "why": "Referent of \"go\" is ambiguous. The preceding sentence names two things (\"kodu początkowego ani PUK\"), so the singular pronoun may mean only the first, or either. Readings differ in meaning (\"ich nie znasz\" versus \"nie znasz któregoś z nich\" versus \"nie znasz tego kodu\"). Sentence contains a negation, so left to the verifier and the author's intent."
+    },
+    {
+      "field": "W praktyce",
+      "text": "PUK; eSIM (also SIM and PIN)",
+      "why": "Specialist terms with no explanation in this item. I could not check the chapter, so I do not know whether they are explained at first use earlier. If they are not, a short gloss is needed, for example for PUK as the code that unblocks a card after wrong PIN attempts and for eSIM as a SIM without a physical card. A gloss adds a factual claim, so I did not write one. The verifier should decide the wording against sources."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty.",
+      "why": "\"Blokowanie SIM\" is ambiguous in Polish. It can read as blocking the card (for instance after loss) rather than a PIN lock that demands a code. Also, \"wyjęciu karty\" cannot apply to an eSIM, yet the sentence attaches both conditions to \"SIM lub eSIM\". The scope of the conditions is protected wording and may need a source check. Attribution to Apple's instruction is also protected."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "ani zabezpieczeniem każdej procedury operatora",
+      "why": "Unclear to a lay reader: \"zabezpieczenie procedury\" does not say what risk is meant, for example an operator procedure that can bypass the PIN. It contains a negation (\"nie jest ... ani\") and a quantifier (\"każdej\"), so it is protected. Rewording needs the source's meaning."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "nie badanie strat finansowych",
+      "why": "Telegraphic. \"a nie badanie strat finansowych\" would read more naturally. Contains a negation and a grade-letter line, so not edited. Low severity."
+    }
+  ],
+  "verdict": "needs_edits"
+}

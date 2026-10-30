@@ -1,0 +1,100 @@
+{
+  "item": "03.3",
+  "edits": [
+    {
+      "field": "title",
+      "original": "dowód wyspania",
+      "replacement": "dowód wyspania się",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "Czas na odpoczynek",
+      "replacement": "Czas na sen",
+      "reason": "consistency",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "ją zamiast",
+      "replacement": "ją, zamiast",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "deficyty wykonania zadań",
+      "replacement": "deficyty w wykonywaniu zadań",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "samoopis senności",
+      "replacement": "wynik własnej oceny senności",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "poczucia przyzwyczajenia",
+      "replacement": "poczucia przyzwyczajenia się do niedosypiania",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "NHS podaje dla dorosłych przeciętnie 7–9 godzin.",
+      "why": "The abbreviation NHS is not explained at its first use in this item, and a reader in Poland cannot be assumed to know it (institution name, so I do not edit). A gloss such as 'brytyjska publiczna służba zdrowia NHS' would need the verifier, because it adds a jurisdiction word. If the chapter already glosses NHS in an earlier item, this is fine."
+    },
+    {
+      "field": "W praktyce",
+      "text": "NHS podaje dla dorosłych przeciętnie 7–9 godzin.",
+      "why": "Elliptical and stilted: '7–9 godzin' has no noun and no period ('godzin' of what, per what). Natural Polish would be something like 'Według NHS dorośli potrzebują przeciętnie 7–9 godzin snu na dobę'. This touches a unit, a duration word, an attribution verb ('podaje' vs 'według') and a quantifier ('przeciętnie'), and 'snu' vs 'w łóżku' is a factual choice, so the verifier must decide."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność",
+      "why": "Translationese: 'odpowiedniej możliwości spania' reads like a literal 'adequate opportunity to sleep', and 'nadal występuje znaczna senność' is bureaucratic. Also the sleepiness is not located in time (daytime?). A more natural wording would be along the lines of 'Jeśli masz wystarczająco dużo czasu na sen, a mimo to jesteś nadal wyraźnie senny w ciągu dnia', but this touches the condition (Jeśli, odpowiedniej), an intensity word (znaczna) and the shape of the condition, so it is left to the verifier."
+    },
+    {
+      "field": "W praktyce",
+      "text": "skonsultuj ją zamiast jedynie zwiększać ilość kofeiny",
+      "why": "'skonsultuj ją' has no addressee (konsultować z kim?) and 'konsultować senność' is awkward; 'omów to z lekarzem' would be natural but it specifies who to consult, which is a medical instruction decision. 'zamiast jedynie zwiększać' is also clumsy and ambiguous; 'a nie tylko zwiększać' or 'zamiast tylko zwiększać' reads better. Both touch a recommendation verb and a restrictor (jedynie/tylko), so I only report."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu.",
+      "why": "Heavy nominal chain ('porównali ograniczanie ... z deprywacją') that carries several claims in one sentence (design, three doses, duration, a second condition). Better as two sentences, e.g. 'Uczestników przez 14 dni ograniczano w laboratorium do 4, 6 lub 8 godzin w łóżku; porównano to z całkowitym pozbawieniem snu.' Any rewrite touches numbers, duration, the unit, the comparison and a degree word (całkowitą), and it is not clear from the packet whether the totally deprived condition was a separate experiment and whether the hours are per night, so only the verifier can decide."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "z całkowitą deprywacją snu",
+      "why": "'deprywacja snu' is the established term but is not explained at its first use. The plain 'całkowitym pozbawieniem snu' would fix it, but it changes the form of 'całkowitą' (a degree word), so the script would flag it anyway. Leaving it to the verifier, and to a check whether the chapter already uses 'deprywacja snu' (I could not check)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przy 4 i 6 godzinach narastały deficyty wykonania zadań",
+      "why": "'Przy 4 i 6 godzinach' is elliptical: it only works because the previous sentence mentions 'czasu w łóżku', and it can be read as hours of sleep or of task time. 'Przy ograniczeniu do 4 i 6 godzin w łóżku' would be clearer, but it touches numbers, units and the dose condition. 'narastały' also carries a time-course claim (growing over days) that I cannot judge."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci.",
+      "why": "'ani limit dla dzieci' is unclear: 'limit' is an odd word here, and the reader cannot tell whether it means that the figure does not apply to children (probably) or that it is not an upper bound. Something like 'to orientacja dla dorosłych, a nie indywidualne zalecenie; nie dotyczy dzieci' would be clearer. This touches a number, a negation and a population word (dorośli, dzieci), so I only report."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).",
+      "why": "The link text is a noun stack ('ocenę podejrzenia bezdechu') and 'bezdech' alone is an unexplained, ambiguous term; the established term is 'bezdech senny'. A natural wording would be 'Zobacz, jak ocenić podejrzenie bezdechu sennego (03.27)' with the same link target. The link, the item number and a medical term are protected, so I only report."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.",
+      "why": "Consistency of the claim with the title: the title speaks of 'brak senności' as a false proof of being rested, while this sentence speaks of a 'poczucie przyzwyczajenia' (feeling of having got used to it). These are two different subjective cues, and the reader may not see that they are meant as the same idea. I edited only the clumsy 'poczucia przyzwyczajenia'. The sentence itself contains a negation, a modal (Nie warto), a duration word (długotrwałego) and a restrictor (samego), so whether the cue should match the title is for the verifier."
+    }
+  ],
+  "verdict": "needs_edits"
+}

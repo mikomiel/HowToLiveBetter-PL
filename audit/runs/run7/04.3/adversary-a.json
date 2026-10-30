@@ -1,0 +1,129 @@
+{
+  "item": "04.3",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "When deciding whether to continue, look only at future input and future return, not at how much was already invested.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Accept that the time already invested is gone and cannot be recovered (cost: no money).",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Count only how much more must still be invested and how much can still be gotten back.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Do not count what has already been spent.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Benefit claim: avoiding the tendency means you will not keep investing time just because you do not want to waste what you put in.",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Remark: the Arkes and Blumer theatre ticket experiment (per-group visit counts) and the Roth finding that the effect fades with time and is weaker in older adults.",
+      "fate": "dropped",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Ocena dowodów#1",
+      "text": "badanie pierwotne i przegląd potwierdzają błąd decyzyjny",
+      "why": "The stored snapshot of Arkes and Blumer (a28d057130b8ad3c.txt) holds only DOI, title, authors, journal and year; the packet marks it access metadata-only, 'tylko metadane, bez abstraktu'. Metadata cannot confirm any result of the primary study (AGENTS.md: 'Metadane i streszczenie innej osoby nie potwierdzają wyniku'). Yet the grade justification says the primary study confirms the bias, and the Źródła link for the same DOI is labelled 'DOI i abstrakt', although no abstract was stored. The item also nowhere states that this source was checked only at metadata level, while its own Zmiany w adaptacji calls the theatre numbers 'niezweryfikowane tu'. A reader or reviewer is told that two sources were checked when the checked evidence is the Roth abstract alone.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "a28d057130b8ad3c.txt", "line": 8, "text": "Title: The psychology of sunk cost"},
+        {"source": "snapshot", "snapshot": "a28d057130b8ad3c.txt", "line": 10, "text": "Journal: Organizational Behavior and Human Decision Processes"}
+      ],
+      "fix_direction": "Say in Ograniczenia (or Weryfikacja, which this packet does not show) that Arkes and Blumer was verified only as metadata; correct the link label that claims an abstract; ground the grade and the confirmation wording on the Roth abstract that was actually read, or obtain the abstract or full text of the primary study first."
+    },
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu",
+      "why": "The scope 'pieniędzy, wysiłku lub czasu' is attributed to Arkes and Blumer, but their stored snapshot contains no text about what they studied. The wording appears only in the upstream benefit line, which is a lead, not evidence. The only upstream description of their experiment concerns ticket prices (money). The one snapshot that contains scope text, the Roth abstract, frames the evidence as monetary sunk costs. So effort and time are asserted as evidenced scope without any stored source for them.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "Although the effect of monetary sunk costs on decision-making is widely discussed"},
+        {"source": "upstream", "line": 5, "text": "已经投入的钱、精力和时间，会让人更想继续做下去"},
+        {"source": "upstream", "line": 8, "text": "随机给买票的人原价 15 美元、便宜 2 美元、便宜 7 美元三种价"}
+      ],
+      "fix_direction": "Limit the sentence to what the stored sources show (monetary sunk costs per the Roth abstract), or mark effort and time as the editorial extension of the concept until a source that was actually read covers them."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Czy dziś warto poświęcić na to kolejny wieczór?",
+      "why": "The worked question is about time (one more evening). The stored review abstract frames its evidence as monetary sunk costs, and Korzyść i dowody#2 correctly says so. The advised action is therefore wider than the evidenced one, but the item never says that the evening example is an editorial transfer from monetary evidence. Ocena dowodów#1 and Ograniczenia#2 only say that benefits of this instruction were not measured, which is a different point. Low risk, since the question is a harmless checkpoint.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "Although the effect of monetary sunk costs on decision-making is widely discussed"}
+      ],
+      "fix_direction": "State that the time-based example is an editorial application of evidence that the stored abstract describes for monetary costs."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.",
+      "why": "The upstream rule has two steps: count only the future outlay and the future return, and leave out what is already spent. The item's two sentences never say to leave the irreversible part out of the comparison: 'Oddziel' only separates it. The worked question names only the cost side (one evening) and does not prompt the reader to estimate the expected future return. Both halves of the rule survive only through the title. A reader acting on W praktyce alone may separate the sunk amount and still weigh it.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "所以判断要不要继续，只算往后还要投多少、还能拿回多少"},
+        {"source": "upstream", "line": 4, "text": "已经花掉的那些，不要算进去"}
+      ],
+      "fix_direction": "Make the exclusion of the already spent amount explicit and add a prompt to estimate what is still expected to be gained."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji.",
+      "why": "The letter B is consistent with the README B row (review without one common effect size): the Roth abstract says the effect size is contingent on decision type and reports no pooled estimate. The justification does not use that reason. It rests partly on a primary study that was not read (see the limitations finding). Elsewhere the item calls the Roth work 'Przegląd', although the abstract describes a quantitative meta-analysis of 98 effect sizes, which AGENTS.md says to call a synthesis. The letter does not hide low certainty, so this is wording only.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "though its effect size and the influence of the moderators are contingent on the respective decision type"}
+      ],
+      "fix_direction": "Name the Roth work as a meta-analytic synthesis and give the README-based reason for B (no single effect size; bias evidence, not outcome of the advice)."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "Siła efektu zależy od rodzaju decyzji.",
+      "why": "The sentence is accurate but compresses moderators that the stored abstract names: attenuation by time in utilization decisions and weaker effect in older adults. A population word (older adults) and a condition (utilization decisions) are dropped, and the Zmiany w adaptacji field, as shown, discloses only the dropped theatre numbers, not these. It does not change what a reader would do.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "14fb6f3495da5c34.txt", "line": 14, "text": "older adults are less likely to fall prey to the sunk-cost effect than younger adults"},
+        {"source": "upstream", "line": 8, "text": "Roth 等人发现，这种影响会随时间变淡，年纪大的人受影响更小"}
+      ],
+      "fix_direction": "Either name the two moderators the abstract states or record in Zmiany w adaptacji that they were left out."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#2",
+      "text": "Roth, Robbert i Straus (2015)",
+      "why": "The only figure in the item, 98 effect sizes, is in the Roth abstract snapshot (line 14, '98 effect sizes') and holds. The publication year 2015 in the Źródła field comes from the upstream citation, while the stored Crossref snapshot for this DOI says Year: 2014 (line 11; that line is under 12 characters, so it cannot be quoted as evidence). I cannot tell from the given texts whether 2014 is an online-first year. The item cites a year that its own snapshot does not show.",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making"}
+      ],
+      "fix_direction": "Reconcile the year with the stored bibliographic record (or the printed issue) before it is left as it is."
+    }
+  ],
+  "notes": "PASS here means only that no blocker was found; two major findings remain open (metadata-only primary source described as confirming and as an abstract; money, effort and time scope attributed to Arkes and Blumer without a stored source). No Chinese institution, number, hotline or legal statement appears in the reader-facing fields (leak attack run, no finding). Recency and conflict: the two snapshots (1985 study, 2014 review) do not show any superseding guidance or disagreement, so the attack was run with no finding. The packet does not contain the Status, Weryfikacja, Oryginał or Zmiany w adaptacji-as-field-id propositions, so any scope statement made in Weryfikacja could not be seen. Protocol: I ran one Bash ls of the repository root listing before reading the packet (the task said no shell); it opened no file. I read README.md lines 38-77, which is slightly more than the section Jak czytać dowody (it ends at line 56). AGENTS.md reached me as injected context, not through a Read call, and CLAUDE.md was injected by the harness. I opened nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapters."
+}

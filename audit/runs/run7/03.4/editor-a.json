@@ -1,0 +1,81 @@
+{
+  "item": "03.4",
+  "edits": [
+    {
+      "field": "title",
+      "original": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+      "replacement": "Zachowaj odstęp między ostatnią porcją kofeiny a porą snu",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "osobista granica bezpieczeństwa",
+      "replacement": "indywidualna granica bezpieczeństwa",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "osobistą prognozą",
+      "replacement": "indywidualną prognozą",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "Przesunięcie napoju",
+      "replacement": "Przesunięcie pory ostatniej porcji kofeiny",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+      "why": "The title is an unconditional instruction, while W praktyce limits the advice to people with sleep difficulties (\"Przy trudnościach ze snem przesuń ją wcześniej\"). A condition that matters is not carried in the title. Adding it would touch a condition/population word, so the verifier should decide whether the title needs it."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zalecenia NHS dotyczące bezsenności",
+      "why": "NHS is an institution name that is not expanded or placed in a country. A reader in Poland may not know it is the British health service, and may take it for guidance that applies to the Polish system. Adding the expansion touches an institution name and a jurisdiction, so it is reported, not edited. I could not check whether NHS is already explained earlier in the chapter."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie jest to gwarancja braku wpływu u każdej osoby",
+      "why": "Heavy nominal phrase (gwarancja braku wpływu) that is hard to parse. It does not say what the effect is (kofeiny na sen). The negation plus the quantifier \"każdej\" leaves the scope ambiguous (not guaranteed for everyone vs guaranteed for no one). A clearer verbal phrasing would change a negation, a quantifier and a causal noun, so I am not editing it."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu.",
+      "why": "One sentence carries the attribution, the portion volume, the caffeine content, the interval and the purpose. Splitting it would move numbers, a unit and an attribution verb, so it is not edited. Also the unit is written \"mL\" here and in Ograniczenia, while Polish texts usually use \"ml\"; I could not check the chapter convention."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym.",
+      "why": "The comparison is not stated: shorter than after what (placebo, no caffeine)? A reader cannot tell from the text. I cannot supply the comparator without the source, so the verifier should add it if the source gives it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "łączny czas snu ... w wyniku zbiorczym",
+      "why": "Terminology. \"Łączny czas snu\" looks like a calque of the usual Polish outcome term \"całkowity czas snu\". \"W wyniku zbiorczym\" is stiff, and \"w wyniku\" usually reads as \"as a result of\". The same pooled figure is called \"średni wynik\" in Ocena dowodów and \"zbiorczych wynikach badań\" in W praktyce. These are technical terms and an intensity-sensitive word (średni), so I report a possible swap and do not edit it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania.",
+      "why": "This names a study by its author. Polish would normally decline a male surname here (Gardinera), but a female or non-declinable surname stays unchanged. I cannot tell from the packet, so I leave the name as it is. The term \"metaanaliza\" is also not glossed at its first use in W praktyce (\"autorzy metaanalizy\"). The next sentence in that field (\"zbiorczych wynikach badań\") only partly explains it."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.",
+      "why": "The phrase \"dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami\" is a literal construction. \"Dla ciąży\" and \"dla interakcji\" do not parse naturally (natural: w ciąży, w chorobach, przy przyjmowaniu leków). The word \"lub\" joins items of different kinds. The wording names populations and conditions and carries a negation, so I am not editing it."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie. Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego.",
+      "why": "These two sentences repeat, for the third time, figures already given in W praktyce and Korzyść i dowody. They are not limitations, and they read as filler in a field about limits. Shortening them would remove or move numbers, so I report it. Also \"suplement przedtreningowy\" is not glossed at its first use in the item; I could not check the chapter."
+    }
+  ],
+  "verdict": "needs_edits"
+}

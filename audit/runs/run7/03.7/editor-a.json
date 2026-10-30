@@ -1,0 +1,67 @@
+{
+  "item": "03.7",
+  "edits": [
+    {
+      "field": "Korzyść i dowody",
+      "original": "odpowiedzi były",
+      "replacement": "reakcje były",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "używanie mediów",
+      "replacement": "korzystanie z mediów",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami.",
+      "why": "\"Przegląd\" alone is elliptical in Polish (it can read as an inspection or a general review) and does not say that it is a review article of research. The kind of source and the study name are protected, so no edit; the verifier should decide whether the source type needs a fuller name (for example \"praca przeglądowa\" or \"synteza badań\", per AGENTS.md on naming syntheses). \"prostymi zadaniami\" is a scope condition and is protected."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.",
+      "why": "Two language problems that cannot be fixed without touching meaning. (1) \"Przygotowanie\" is unclear without context: preparation of what, by whom, before what? A lay reader cannot tell it means advance preparation for the next task. (2) \"koszt przełączenia\" is a specialist term used here without explanation, and it collides with the field name \"Koszt\", which means the cost of following the advice. The sentence carries a causal verb (zmniejszało) and a negation (nie usuwało), so it is protected; the verifier should check the source and, if accurate, add a short gloss (for example that switch cost means the slowdown and extra errors described in the previous sentence)."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "bez jednej uniwersalnej wielkości efektu",
+      "why": "\"wielkość efektu\" is a statistical term, not explained here. I could not check whether it is explained earlier in the chapter (the chapter file was outside my allowed input). The phrase is abstract for a lay reader. Quantifier wording (jednej, uniwersalnej) is protected, so no edit."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "przegląd eksperymentów nad przełączaniem prostych zadań",
+      "why": "Consistency: the same object is phrased \"eksperymenty z przełączaniem między prostymi zadaniami\" in Korzyść i dowody. \"przełączanie prostych zadań\" is elliptical because one switches between tasks, not the tasks themselves, and \"eksperymenty nad\" is less usual than \"badania nad\" or \"eksperymenty z\". \"prostych zadań\" is a scope condition and is protected, as is the study type, so no edit; the verifier may align the wording with the other field."
+    },
+    {
+      "field": "title",
+      "text": "Przy zadaniu wymagającym uwagi ogranicz przełączanie się między czynnościami",
+      "why": "The title reads naturally, states an action and keeps its condition. Terminology is inconsistent across the item: the title says \"czynnościami\", Korzyść i dowody says \"zadaniami\" (lab tasks), W praktyce says \"czynności równoległych\", and Ograniczenia says \"wielozadaniowość\". Aligning them would change the scope (simple laboratory tasks versus everyday activities), so no edit; the verifier should decide whether the title's \"czynnościami\" is supported by evidence about \"zadania\"."
+    },
+    {
+      "field": "W praktyce",
+      "text": "odłóż niezwiązane z nim wiadomości",
+      "why": "The action named here (\"wiadomości\") is narrower than the title and the Koszt field (\"czynności\", \"część pobocznych czynności\"). \"odłóż wiadomości\" is also a little elliptical (put aside the messages, or postpone checking them?). Changing it would alter the scope of the recommended action, so I report it instead of editing. The surrounding \"jeśli możesz to zrobić bezpiecznie\" and \"Nie traktuj tego jako zakazu\" are condition and negation wording and are protected."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy.",
+      "why": "\"przeszkadza w wykonaniu pracy\" is nominal and a little bureaucratic, the implied subject of \"przeszkadza\" is unclear, and \"pracy\" does not match \"zadanie\" in the title. A plainer option for the verifier to consider: \"tam, gdzie utrudnia ono wykonanie zadania\". Not edited because the sentence contains a modal (Warto), a qualifier (zbędne), a condition (tam, gdzie) and a causal verb (przeszkadza)."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "częste używanie mediów",
+      "why": "\"media\" without a qualifier most naturally reads as press or news in Polish. If the source concerns digital media, or several media streams at once, the population and exposure condition is lost. The scope and the frequency word \"częste\" are protected, so no edit beyond the verb fix; the verifier should check the source and decide whether to add \"cyfrowych\" or similar."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "każda wielozadaniowość szkodzi tak samo",
+      "why": "\"każda wielozadaniowość\" is slightly unnatural (a more usual form would be \"każdy rodzaj wielozadaniowości\"), and \"wielozadaniowość\" is not explained or linked to \"przełączanie\" earlier in the item. The sentence holds a quantifier (każda), a causal verb (szkodzi) and a comparison (tak samo), so it is protected."
+    }
+  ],
+  "verdict": "needs_edits"
+}

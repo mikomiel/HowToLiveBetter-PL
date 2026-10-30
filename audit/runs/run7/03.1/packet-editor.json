@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.1",
+  "role": "editor",
+  "title": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+  "fields": {
+    "Koszt": "Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. To nakład redakcyjnie oceniany jako niewielki.",
+    "W praktyce": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.",
+    "Korzyść i dowody": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.",
+    "Ocena dowodów": "B — eksperyment dotyczący konkretnego zadania uwagowego.",
+    "Ocena redakcyjna": "Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź.",
+    "Ograniczenia": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich. Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu."
+  }
+}

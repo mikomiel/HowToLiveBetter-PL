@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "04.18",
+  "role": "editor",
+  "title": "Przy wyborze mieszkania lub pracy policz czas dojazdów",
+  "fields": {
+    "Koszt": "Sprawdzenie trasy kosztuje czas. Zmiana mieszkania lub pracy może oznaczać znaczne wydatki i trudności. Nie podajemy niezweryfikowanych cen dla Polski.",
+    "W praktyce": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz. Zestaw go z kosztem mieszkania, warunkami pracy i potrzebami domowników. Nie zakładaj, że przeprowadzka zawsze się opłaci.",
+    "Korzyść i dowody": "W analizie niemieckich danych panelowych Stutzer i Frey stwierdzili związek dłuższego dojazdu z niższym deklarowanym dobrostanem. Przegląd Chatterjee i współautorów potwierdza związek dłuższego dojazdu z mniejszym zadowoleniem z samej podróży, ale nie ustala spójnego związku z ogólną satysfakcją z życia.",
+    "Ocena dowodów": "B — badanie obserwacyjne i przegląd o niejednoznacznych wnioskach dla ogólnego zadowolenia z życia.",
+    "Ocena redakcyjna": "Czas dojazdu jest jednym z kosztów decyzji. Przykład rachunkowy: 30 minut mniej w każdą stronę przez pięć dni daje 5 godzin tygodniowo. To rachunek przy podanych założeniach, nie wynik eksperymentu.",
+    "Ograniczenia": "Związek statystyczny nie dowodzi, że skrócenie dojazdu poprawi samopoczucie konkretnej osoby. Praca zdalna, opieka nad bliskimi, dostępność transportu i korzyści z pracy zmieniają bilans."
+  }
+}

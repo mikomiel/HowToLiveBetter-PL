@@ -1,0 +1,137 @@
+{
+  "item": "03.2",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Dbaj o regularne pory snu, nie skracając odpoczynku",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 129, "text": "stick to your regular sleeping hours instead"}
+      ],
+      "depends_on": ["Korzyść i dowody#3"],
+      "reason": "NHS backs only a fixed wake-up time and keeping regular sleeping hours after a bad night. It does not advise fixed sleep times in general (it says to go to bed only when sleepy) and gives no advice about not cutting rest short as such, only an average need of 7 to 9 hours for adults. The only evidence on regularity of sleep timing as a whole (Phillips, Nature) has no readable snapshot."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Organizacja dnia i pogodzenie snu z obowiązkami.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji, bez wyceny czasu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"}
+      ],
+      "depends_on": ["Korzyść i dowody#3"],
+      "reason": "The part about choosing similar wake-up times is backed by NHS (same time every day). The part about allowing enough time for sleep is not given as advice in the NHS snapshot, which only states an average need (adults 7 to 9 hours, line 41) that no sentence of the item carries. The condition 'if duties allow' is the editors' own softening, not in the source."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie traktuj regularności jako powodu do celowego niedosypiania.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"},
+        {"snapshot": "b59686537010480d.txt", "line": 47, "text": "You probably do not get enough sleep if you're constantly tired during the day."}
+      ],
+      "reason": "Only the premise is in NHS: the average sleep need of adults and that constant daytime tiredness suggests too little sleep. No snapshot gives this advice or discusses weighing regularity against shortened sleep, and no source_claim row of the item carries these facts, so depends_on is empty. Searched the NHS snapshot b59686537010480d.txt for any advice on regular times versus sleep curtailment."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni.",
+      "verdict": "source_unavailable",
+      "reason": "The cited source (Nature Scientific Reports, s41598-017-03171-4) was blocked by the site and has no snapshot. The lead row with the same DOI has origin lead and is not evidence. Author, design, 61 students and 30 days cannot be checked."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy.",
+      "verdict": "source_unavailable",
+      "reason": "The cited source (Nature Scientific Reports, s41598-017-03171-4) was blocked and has no snapshot. Both findings (regularity linked to academic performance, less regular group with later circadian phase) cannot be checked. The weakest verdict of the two parts applies; both parts are source findings of the same kind."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "NHS zaleca stałą porę wstawania jako element dbania o sen.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"},
+        {"snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."}
+      ],
+      "reason": "The recommendation is a 'Do' item under 'How you can treat insomnia yourself' (line 97)."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 97, "text": "How you can treat insomnia yourself"},
+        {"snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The NHS page is public self-help advice for people with insomnia, which fits 'zalecenie dla pacjentów' only loosely. 'Małe badanie obserwacyjne' (size and observational design of Phillips) cannot be checked because the Nature snapshot is unavailable."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie próba skuteczności samej stałej pobudki.",
+      "verdict": "source_unavailable",
+      "reason": "The claim covers both sources. In the NHS snapshot (main region only, keptChars 4304 of wholeChars 4844) I found no trial and no measured effect of a fixed wake-up time alone: the page lists habits without citing studies. Whether Phillips was a trial cannot be checked because the Nature source has no snapshot."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki.",
+      "verdict": "source_unavailable",
+      "reason": "The sentence presupposes that the Phillips finding is correlational (no change of wake-up time tested). That depends on the Nature source, which has no snapshot, so the design cannot be confirmed. The general point that correlation does not show causation is not a source fact."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 71, "text": "Conditions and medicines that can cause insomnia:"}
+      ],
+      "reason": "NHS lists shift work (line 67, 'shift work', too short to quote) among the most common causes of insomnia and lists conditions that can cause insomnia (lines 71-83). It does not say that these need different planning, and caregiving for relatives is not mentioned anywhere in the snapshot."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Utrzymujące się problemy ze snem omów z lekarzem.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "NHS gives a fixed wake-up time (and regular hours after a bad night) in the context of self-treatment of insomnia, not fixed bedtimes for everyone."},
+    {"id": "W praktyce#1", "note": "NHS says the same time every day with no exception for obligations; the item says similar times if duties allow."},
+    {"id": "Korzyść i dowody#3", "note": "The NHS recommendation sits in the self-help section for insomnia (people who regularly have sleep problems). The sentence says 'element dbania o sen' in general, which a reader may take as advice for all sleepers; the sentence does not state that."},
+    {"id": "Korzyść i dowody#1", "note": "No scope check possible: Nature source blocked, no snapshot."},
+    {"id": "Korzyść i dowody#2", "note": "No scope check possible: Nature source blocked, no snapshot."},
+    {"id": "Ocena dowodów#1.1", "note": "The NHS page is a public information page on a condition and cites no studies for its habit advice; it is not a graded clinical guideline. The label 'zalecenie dla pacjentów' is wider than what the page shows."},
+    {"id": "Ocena dowodów#1.2", "note": "Absence of a trial could be seen only in the NHS main region; the Phillips design is unchecked."},
+    {"id": "Ograniczenia#1", "note": "Presupposes a correlational design for Phillips, which is unchecked."},
+    {"id": "Ograniczenia#2", "note": "NHS says nothing on adapting schedules for shift work, illness or caregiving; only the premise that shift work and some conditions affect sleep is there."}
+  ],
+  "notes": "Nature source (cited) was blocked: access blocked, snapshot null, so every claim about Phillips is source_unavailable. The row with origin lead (Europe PMC PMC5468315, same DOI 10.1038/s41598-017-03171-4, snapshot dd3bb13bd2bb6e6d.txt) was treated as non-evidence per the role file and I did not open that snapshot and quoted nothing from it. Because the Phillips claims have no quotes, I listed no numbers (61, 30) for Korzyść i dowody#1. NHS snapshot b59686537010480d.txt is the right page (title Insomnia - NHS, reviewed 19 March 2024) and is the main region only (4304 of 4844 chars). Opened only: the role file, AGENTS.md, the packet and the NHS snapshot. Nothing outside the allowed set."
+}

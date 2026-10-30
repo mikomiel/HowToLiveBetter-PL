@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "04.4",
+  "role": "editor",
+  "title": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To szacunek redakcji.",
+    "W praktyce": "Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak odnosi się do tego, które planujesz, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.",
+    "Korzyść i dowody": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia. W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej. To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności.",
+    "Ocena dowodów": "B — pojedynczy eksperyment z udziałem 123 studentów.",
+    "Ocena redakcyjna": "Niski koszt sprawdzenia wcześniejszych podobnych zadań przemawia za taką próbą przed deklaracją terminu.",
+    "Ograniczenia": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego. Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki). Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy."
+  }
+}

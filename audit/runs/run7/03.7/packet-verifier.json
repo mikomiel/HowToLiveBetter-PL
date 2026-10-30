@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "item": "03.7",
+  "role": "verifier",
+  "title": "Przy zadaniu wymagającym uwagi ogranicz przełączanie się między czynnościami",
+  "fields": {
+    "Koszt": "Zmiana sposobu pracy i odłożenie części pobocznych czynności. To ocena redakcji.",
+    "W praktyce": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości, jeśli możesz to zrobić bezpiecznie. Nie traktuj tego jako zakazu wszystkich czynności równoległych.",
+    "Korzyść i dowody": "Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami. Bezpośrednio po przełączeniu odpowiedzi były wolniejsze i zwykle częściej błędne. Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.",
+    "Ocena dowodów": "B — przegląd eksperymentów nad przełączaniem prostych zadań, bez jednej uniwersalnej wielkości efektu.",
+    "Ocena redakcyjna": "Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy.",
+    "Ograniczenia": "Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy zadaniu wymagającym uwagi ogranicz przełączanie się między czynnościami"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana sposobu pracy i odłożenie części pobocznych czynności."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości, jeśli możesz to zrobić bezpiecznie."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie traktuj tego jako zakazu wszystkich czynności równoległych."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Bezpośrednio po przełączeniu odpowiedzi były wolniejsze i zwykle częściej błędne."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — przegląd eksperymentów nad przełączaniem prostych zadań, bez jednej uniwersalnej wielkości efektu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/s1364-6613(03)00028-7",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 999,
+      "sha256": "11edfbac0e5ade36d6fb852607aa982a09308d94cf18a79cef9fb458e02ec5f7",
+      "snapshot": "ad423624ccd89cce.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

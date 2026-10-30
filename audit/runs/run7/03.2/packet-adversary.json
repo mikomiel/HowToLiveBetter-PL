@@ -1,0 +1,174 @@
+{
+  "version": 2,
+  "item": "03.2",
+  "role": "adversary",
+  "title": "Dbaj o regularne pory snu, nie skracając odpoczynku",
+  "fields": {
+    "Koszt": "Organizacja dnia i pogodzenie snu z obowiązkami. To ocena redakcji, bez wyceny czasu.",
+    "W praktyce": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen. Nie traktuj regularności jako powodu do celowego niedosypiania.",
+    "Korzyść i dowody": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni. Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy. NHS zaleca stałą porę wstawania jako element dbania o sen.",
+    "Ocena dowodów": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pobudki.",
+    "Ocena redakcyjna": "To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.",
+    "Ograniczenia": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki. Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania. Utrzymujące się problemy ze snem omów z lekarzem.",
+    "Źródła": "Phillips i współautorzy (2017), Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. [Artykuł](https://www.nature.com/articles/s41598-017-03171-4); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).",
+    "Zmiany w adaptacji": "Zachowano B. Usunięto bezwarunkowy nakaz identycznej pobudki w każdy weekend i nie przeniesiono wniosku z modelu światła na skuteczność terapii."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Dbaj o regularne pory snu, nie skracając odpoczynku"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Organizacja dnia i pogodzenie snu z obowiązkami."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji, bez wyceny czasu."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie traktuj regularności jako powodu do celowego niedosypiania."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "NHS zaleca stałą porę wstawania jako element dbania o sen."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pobudki."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Utrzymujące się problemy ze snem omów z lekarzem."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.nature.com/articles/s41598-017-03171-4",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 429,
+      "error": null,
+      "via": "https://idp.nature.com/authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-017-03171-4",
+      "finalUrl": "https://idp.nature.com/authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-017-03171-4",
+      "redirectedHost": true,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 2. 固定起床时间，周末也一样"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。周末要少睡懒觉，需要一点毅力。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：作息最乱的那五分之一人，生物钟比最规律的那五分之一晚了约 2.5 小时。等于长期活在时差里。作息越规律的学生，成绩也越好。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：61 名大学生记录了 30 天。作息最不规律的五分之一，生物钟（昼夜节律）比最规律的五分之一晚约 2.5 小时。具体是褪黑素开始分泌的时刻 00:08 对 21:32。最困、最想睡的时段也晚约 1.8 小时。作息越规律，学业成绩越好（相关系数 r = 0.37）。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Phillips et al. (2017). Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. Scientific Reports. <https://doi.org/10.1038/s41598-017-03171-4>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：只有这一项研究，人数少，也没有分组对照。研究者用模型推算，生物钟的差别主要来自每天见到的光不一样。他们建议可以试试用光来调，但没有做试验验证。所以固定起床时间之外，白天多出门见光，这是从他们的推算推出来的。偶尔熬夜之后怎么补，见第 2 节第 38 条（熬夜之后第二天晚上就补觉）：办法是当晚早点上床，不是第二天睡到中午。"
+      }
+    ]
+  }
+}

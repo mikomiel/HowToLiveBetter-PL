@@ -1,0 +1,88 @@
+{
+  "item": "03.18",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "scope-words", "leak", "self-containment", "recency"],
+  "attacks_not_assessable": [
+    {
+      "attack": "numbers",
+      "reason": "The only evidence source for the figures (BMJ, Noetel 2024) has snapshot null and access blocked (HTTP 403). The figures 218 trials and 14 170 people appear only in upstream line 5 (a lead, not evidence). The certainty ratings (low for walking or running, very low for the rest) appear in neither the upstream span nor any stored snapshot. The numbers 116 123 and 112 were checked and hold against the two gov.pl snapshots."
+    },
+    {
+      "attack": "limitations",
+      "reason": "The limitation-type claims that rest on the BMJ paper (Korzyść i dowody#3 on the authors' certainty ratings, and the source label 'BMJ: abstrakt i metody' stating what was checked) cannot be checked because the BMJ snapshot is null. The Ograniczenia sentences themselves were checked: #4 is supported by the 601d0f7b15c908cb.txt snapshot (adults only), #1 to #3 are editorial."
+    }
+  ],
+  "preservation": [
+    {"upstream_line": 3, "upstream_action": "快走、慢跑或者力量训练 several times a week (named forms and frequency)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "瑜伽 (yoga) as a form of exercise", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "强度越大越有效 (higher intensity works better); deliberately not carried over and Ograniczenia#1 warns against self-increasing intensity", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "白天出门晒太阳 (daytime sun exposure) and 光照治疗 (light therapy, line 4)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "网上的自助认知行为课程, guided when symptoms are heavier (online self-help CBT)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "作息固定下来 (fixed sleep schedule) and 找人说 (talk to someone, line 1)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "想不开先打 12356 (call the national hotline first), unconditional in the upstream", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "中重度、有自杀念头的要去就医 (severe symptoms or suicidal thoughts: see a doctor, call hotline first); the item keeps only the statement that clinical assessment is needed, the action is carried by W praktyce#4 and #5", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "别把「动起来」当成对抑郁者的要求，能走十分钟就算数 (movement is not a requirement; a ten minute walk counts)", "fate": "narrowed", "fallback_stated": true}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "Ograniczenia#4",
+      "text": "Podany telefon 116 123 dotyczy dorosłych.",
+      "why": "The upstream action was unconditional (call the hotline when despairing). The adaptation correctly narrows 116 123 to adults, but gives a reader under 18 no alternative path at all besides 112. The stored snapshots contain a ready fallback (the children and youth line) that the item drops. This is the same pattern as dropping the fallback when the preferred option is not offered, in a crisis context where the reader may be a minor.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "601d0f7b15c908cb.txt", "line": 271, "text": "Osoby poniżej 18. roku życia powinny skontaktować się z organizacjami specjalizującymi się w pomocy dzieciom i młodzieży"},
+        {"source": "snapshot", "snapshot": "f231cd969d441cef.txt", "line": 43, "text": "Dzieci i młodzież mają możliwość skorzystania z anonimowego, bezpłatnego Telefonu Zaufania dla dzieci i młodzieży pod numerem 116111."},
+        {"source": "upstream", "line": 8, "text": "中重度、有自杀念头的要去就医，先打 12356"}
+      ],
+      "fix_direction": "State a path for a reader under 18 (or say explicitly that the item is written for adults and point to the children and youth service), using only contacts confirmed in the stored official pages."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "skontaktuj się z profesjonalną pomocą",
+      "why": "With the cross-reference links removed, the headline action names no one to contact and no route to get there. The only concrete contacts left are the crisis line and 112. A reader with persistent low mood who is not in crisis, or whose symptoms are severe (Ograniczenia#2 only says they need clinical assessment, with no action), gets no actionable route. The stored Ministry page describes a walk-in route that needs no referral and a 24 hour information line. The sentence is not unsafe, so this stays minor.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "f231cd969d441cef.txt", "line": 51, "text": "Pacjent nie potrzebuje skierowania, nie musi się też zapisywać, zapowiadać swojego przyjścia ani wcześniej się rejestrować."},
+        {"source": "snapshot", "snapshot": "f231cd969d441cef.txt", "line": 53, "text": "Informacje o miejscach udzielania świadczeń można uzyskać przez całodobową Telefoniczną Informację Pacjenta, pod numerem telefonu: 800 190 590"},
+        {"source": "upstream", "line": 8, "text": "中重度、有自杀念头的要去就医，先打 12356"}
+      ],
+      "fix_direction": "Say in the item itself who the professional help is (for example a doctor or the mental health services described in the cited Ministry page) and make the severe or suicidal case end in an action, not only in the statement that clinical assessment is needed. Any legal wording must stay a description of the Ministry page, not a stated right."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#3",
+      "text": "Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni.",
+      "why": "The upstream limits movement to an adjunct for mild to moderate depression. The item applies movement to 'utrzymujące się obniżenie nastroju' in the title and drops the mild to moderate condition. Ograniczenia#2 partly covers severe cases, but never says that movement is for milder cases only.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "这些都是轻中度抑郁的辅助手段"}
+      ],
+      "fix_direction": "Carry the severity condition (adjunct, milder symptoms) into the movement sentence or into Ograniczenia, or mark the wider scope as an editorial choice."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#3",
+      "text": "Ruch może uzupełniać leczenie",
+      "why": "The source side names specific exercise forms (brisk walking, jogging, yoga, strength training). The item advises generic 'ruch' and says only that 'część form' helped, so a reader cannot tell which forms were tested. The sentence is conditional and low risk, but the action is wider than the one the source measured and the item does not call this an editorial example.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "快走、慢跑、瑜伽和力量训练都能减轻抑郁"}
+      ],
+      "fix_direction": "Name the exercise forms the source covers, or label the wider reading as an editorial example."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników",
+      "why": "The letter A is attached to the whole item, but it describes only the exercise meta-analysis. The headline action (seek support) and the hotline content rest on official information pages, which the README places under operational guidance (C), not on a measured effect. The field does not say which clause the A covers, so the strong A and the conditional movement clause are merged under one letter. The low-certainty caveat is stated, which limits the harm.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "f231cd969d441cef.txt", "line": 68, "text": "W sytuacji kryzysowej można także skorzystać również z pomocy całodobowego telefonu wsparcia emocjonalnego nr 116 123"}
+      ],
+      "fix_direction": "State in the grade field that A refers only to the movement evidence and that the support and hotline advice is operational guidance from official pages."
+    }
+  ],
+  "notes": "BMJ snapshot is null (HTTP 403), so Korzyść i dowody#1 to #3 and the label 'BMJ: abstrakt i metody' have no stored evidence; the figures 218 and 14 170 are only in upstream line 5, and the authors' certainty ratings are in no stored text. These must be settled by the source verifier or a re-fetch before the item can pass. The grade attack was run on the letter versus the source type described in the item and the upstream span (network meta-analysis, upstream line 5); that type itself is unverified. Checked and holding against the two gov.pl snapshots: 116 123 is free (601d0f7b15c908cb.txt line 233), around the clock (f231cd969d441cef.txt line 68, 601d0f7b15c908cb.txt line 247), for adults (601d0f7b15c908cb.txt line 271); 112 as the emergency number (f231cd969d441cef.txt line 71). No Chinese institution, number or rule in reader-facing fields; no legal right stated. Recency: the two snapshots (dated 05.12.2024 and 29.07.2025) agree; 601d0f7b15c908cb.txt line 233 says funding runs for the next 12 months from July 2025 and the packet carries no check date, so the orchestrator should confirm the hotline is still in operation at publication. Protocol: besides AGENTS.md and the README section, I read README.md lines 58 to 77 (the next sections, because I read a 40 line window) and used one Grep on README.md to find the heading; CLAUDE.md contents were injected by the harness, I did not open it. Nothing else outside the allowed set was opened."
+}

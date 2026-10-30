@@ -1,0 +1,116 @@
+03.1/verifier-a: accepted, UNAVAILABLE
+03.1/adversary-a: accepted, PASS
+03.1/editor-a: accepted
+03.2/verifier-a: accepted, UNAVAILABLE
+03.2/verifier-b: accepted, FAIL
+03.2/adversary-a: accepted, UNAVAILABLE
+03.2/editor-a: accepted
+03.3/verifier-a: rejected, UNAVAILABLE, 5 failure(s) (claim 8 (Korzyść i dowody#2) quote is not on line 14 of b6bab3851cebff29.txt (that line starts: "objectivesto inform the debate over whether human sleep can be )
+03.3/verifier-b: accepted, UNAVAILABLE
+03.3/adversary-a: accepted, PASS
+03.3/editor-a: accepted
+03.4/verifier-a: accepted, UNAVAILABLE
+03.4/verifier-b: accepted, UNAVAILABLE
+03.4/adversary-a: accepted, PASS
+03.4/editor-a: accepted
+03.5/verifier-a: accepted, FAIL
+03.5/adversary-a: accepted, UNAVAILABLE
+03.5/editor-a: accepted
+03.6/verifier-a: accepted, UNAVAILABLE
+03.6/adversary-a: accepted, PASS
+03.6/editor-a: accepted
+03.7/verifier-a: accepted, UNAVAILABLE
+03.7/adversary-a: accepted, PASS
+03.7/editor-a: accepted
+03.8/verifier-a: accepted, UNAVAILABLE
+03.8/verifier-b: accepted, FAIL
+03.8/adversary-a: accepted, PASS
+03.8/editor-a: accepted
+03.18/verifier-a: accepted, UNAVAILABLE
+03.18/verifier-b: accepted, FAIL
+03.18/adversary-a: accepted, UNAVAILABLE
+03.18/editor-a: accepted
+03.23/verifier-a: accepted, UNAVAILABLE
+03.23/verifier-b: accepted, UNAVAILABLE
+03.23/adversary-a: accepted, PASS
+03.23/editor-a: accepted
+03.26/verifier-a: accepted, UNAVAILABLE
+03.26/verifier-b: accepted, UNAVAILABLE
+03.26/adversary-a: accepted, PASS
+03.26/editor-a: accepted
+03.27/verifier-a: accepted, UNAVAILABLE
+03.27/verifier-b: accepted, UNAVAILABLE
+03.27/adversary-a: accepted, PASS
+03.27/editor-a: accepted
+04.1/verifier-a: accepted, FAIL
+04.1/adversary-a: accepted, UNAVAILABLE
+04.1/editor-a: accepted
+04.2/verifier-a: accepted, FAIL
+04.2/adversary-a: accepted, UNAVAILABLE
+04.2/editor-a: accepted
+04.3/verifier-a: accepted, UNAVAILABLE
+04.3/adversary-a: accepted, PASS
+04.3/editor-a: accepted
+04.4/verifier-a: accepted, PASS
+04.4/adversary-a: accepted, PASS
+04.4/editor-a: accepted
+04.5/verifier-a: accepted, FAIL
+04.5/adversary-a: accepted, UNAVAILABLE
+04.5/editor-a: accepted
+04.7/verifier-a: accepted, FAIL
+04.7/adversary-a: rejected, UNAVAILABLE, 1 failure(s) (finding 3 (grade) quote is not on upstream line 8)
+04.7/editor-a: accepted
+04.9/verifier-a: accepted, FAIL
+04.9/verifier-b: accepted, FAIL
+04.9/adversary-a: accepted, PASS
+04.9/editor-a: accepted
+04.12/verifier-a: accepted, UNAVAILABLE
+04.12/adversary-a: rejected, PASS, 1 failure(s) (report status UNAVAILABLE does not match the findings, which give PASS)
+04.12/editor-a: accepted
+04.17/verifier-a: accepted, FAIL
+04.17/adversary-a: accepted, UNAVAILABLE
+04.17/editor-a: accepted
+04.18/verifier-a: accepted, UNAVAILABLE
+04.18/adversary-a: accepted, UNAVAILABLE
+04.18/editor-a: accepted
+14.1/verifier-a: accepted, UNAVAILABLE
+14.1/verifier-b: accepted, FAIL
+14.1/adversary-a: accepted, PASS
+14.1/editor-a: accepted
+14.2/verifier-a: accepted, PASS
+14.2/verifier-b: accepted, PASS
+14.2/adversary-a: accepted, PASS
+14.2/editor-a: accepted
+14.3/verifier-a: accepted, FAIL
+14.3/verifier-b: accepted, FAIL
+14.3/adversary-a: accepted, UNAVAILABLE
+14.3/editor-a: accepted
+14.4/verifier-a: accepted, FAIL
+14.4/verifier-b: accepted, FAIL
+14.4/adversary-a: accepted, UNAVAILABLE
+14.4/editor-a: accepted
+14.6/verifier-a: accepted, UNAVAILABLE
+14.6/verifier-b: accepted, UNAVAILABLE
+14.6/adversary-a: accepted, PASS
+14.6/editor-a: accepted
+14.7/verifier-a: accepted, PASS
+14.7/verifier-b: accepted, PASS
+14.7/adversary-a: accepted, PASS
+14.7/editor-a: accepted
+14.8/verifier-a: accepted, UNAVAILABLE
+14.8/verifier-b: accepted, UNAVAILABLE
+14.8/adversary-a: accepted, PASS
+14.8/editor-a: accepted
+14.9/verifier-a: accepted, UNAVAILABLE
+14.9/verifier-b: accepted, UNAVAILABLE
+14.9/adversary-a: accepted, PASS
+14.9/editor-a: accepted
+14.10/verifier-a: accepted, FAIL
+14.10/verifier-b: accepted, FAIL
+14.10/adversary-a: accepted, PASS
+14.10/editor-a: accepted
+14.12/verifier-a: accepted, UNAVAILABLE
+14.12/verifier-b: accepted, PASS
+14.12/adversary-a: accepted, PASS
+14.12/editor-a: accepted
+112 of 115 reports accepted.

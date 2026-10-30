@@ -1,0 +1,128 @@
+{
+  "item": "03.23",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "These findings do not support the ideas that venting anger or going for a run are effective anger management activities."},
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "or calming down by engaging in activities that decrease arousal."}
+      ],
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Przerwa od sporu i próba spokojnego działania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji, nie ustalony czas leczenia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "Some anger management activities focus on decreasing arousal (e.g., deep breathing, mindfulness, meditation)"},
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "or calming down by engaging in activities that decrease arousal."}
+      ],
+      "depends_on": ["Korzyść i dowody#2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "meta_statement",
+      "claim": "To propozycja łagodnej próby, bez forsowania oddechu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "meta_statement",
+      "claim": "Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 9, "text": "Authors: Kjærvik SL, Bushman BJ."},
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "This meta-analytic review, based on 154 studies including 184 independent samples involving 10,189 participants"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "arousal-decreasing activities decreased anger and aggression (g = -0.63, [-0.82, -0.43])"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "arousal-increasing activities were ineffective overall (g = -0.02, [-0.13, 0.09])"}
+      ],
+      "reason": "The interval [-0.13, 0.09] has a negative lower and a positive upper bound, so it includes zero; the abstract does not say this in words."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "A — ilościowa synteza badań nad złością i agresją,",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 8, "text": "A meta-analytic review of anger management activities that increase or decrease arousal"},
+        {"snapshot": "1d00098ec43b4f15.txt", "line": 14, "text": "arousal-decreasing activities decreased anger and aggression (g = -0.63, [-0.82, -0.43])"}
+      ],
+      "reason": "The source description (quantitative synthesis = meta-analytic review; outcomes anger and aggression) was checked against the abstract. The grade letter A is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie nad liczbą odzyskanych godzin.",
+      "verdict": "not_checkable",
+      "reason": "This clause says an outcome (recovered hours) was not covered by the synthesis. The snapshot is an abstract only (Access: abstract, about 1700 characters), which cannot show absence. The abstract names anger and aggression as outcomes and says nothing about hours, but the full text would be needed to confirm that no outcome in terms of hours was analysed."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Nie trzeba organizować intensywnego „wyładowania”, żeby zrobić przerwę od sporu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "meta_statement",
+      "claim": "Średni wynik nie gwarantuje efektu każdej techniki u każdej osoby.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Samopomoc nie zastępuje pomocy przy przemocy lub nawracających niebezpiecznych zachowaniach.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Ocena dowodów#1.1", "note": "The sentence names the topic as anger and aggression; the source is specifically a review of anger management activities that raise or lower arousal (intervention studies), which a reader might not assume."},
+    {"id": "W praktyce#1", "note": "The abstract pools arousal-decreasing activities (deep breathing, mindfulness, meditation) and gives no separate estimate for breathing alone; the abstract also says nothing about timing within a live dispute. The editors disclose the first limit in Ograniczenia#1. Not treated as a gap in backing."}
+  ],
+  "notes": "Packet warnings: none. One cited source (10.1016/j.cpr.2024.102414), snapshot 1d00098ec43b4f15.txt, access abstract (Europe PMC), 1700 chars; title, authors (Kjærvik SL, Bushman BJ), DOI and year 2024 match the item; not a stub, wall or error page; Journal field is empty. Abstract-only, so absence claims and detail beyond the abstract cannot be checked. Status UNAVAILABLE comes from one not_checkable row (Ocena dowodów#1.2). Kind choices that were judgement calls: W praktyce#2 and W praktyce#3 and Ograniczenia#3 filed as meta_statement (editor caveat or safety/help referral); Ograniczenia#1 and #2 as meta_statement (editor caveat, what the item does not claim); Korzyść i dowody#1 kept as one source_description row (design, authors and sample sizes are the same kind). No protocol violation: I opened only AGENTS.md, the role file, the packet and the one named snapshot."
+}

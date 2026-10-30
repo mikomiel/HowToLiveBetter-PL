@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "14.8",
+  "role": "editor",
+  "title": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki",
+  "fields": {
+    "Koszt": "Opisanie żądania i zachowanie korespondencji. Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych.",
+    "W praktyce": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych. Zachowaj potwierdzenie. Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych. W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej.",
+    "Korzyść i dowody": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17. Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania. Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu.",
+    "Ocena dowodów": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów.",
+    "Ocena redakcyjna": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź. Nie obiecujemy wyniku sporu.",
+    "Ograniczenia": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń. Kopia danych nie może naruszać praw i wolności innych. Administrator może w uzasadnionym zakresie potwierdzać tożsamość. Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  }
+}
