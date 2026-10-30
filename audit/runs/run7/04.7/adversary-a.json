@@ -1,82 +1,69 @@
 {
   "item": "04.7",
   "status": "UNAVAILABLE",
-  "attacks_run": ["preservation", "grade", "leak", "self-containment"],
+  "attacks_run": ["same-action", "preservation", "grade", "leak", "self-containment"],
   "attacks_not_assessable": [
-    {"attack": "same-action", "reason": "The only cited source (10.1016/j.jesp.2003.11.001) is blocked, snapshot is null, 0 chars stored. What the study actually manipulated cannot be compared with the advised action; the upstream span is the book author's summary, not the source."},
-    {"attack": "numbers", "reason": "The only figures in the item are the experiment numbers 3, 4 and 5 (Korzyść i dowody#2, #3, Ograniczenia#2). They are neither in the upstream span nor in any stored snapshot, because the single source is blocked. Whether they hold cannot be decided."},
-    {"attack": "scope-words", "reason": "Population, task types and conditions of the experiments cannot be checked: no snapshot text exists, and the upstream span states none of them."},
-    {"attack": "recency", "reason": "No snapshot at all, so there is no second source to compare against and no source text to date."},
-    {"attack": "limitations", "reason": "Ograniczenia#1 to #3, Ocena dowodów#1 ('seria eksperymentów w jednej publikacji') and 'abstrakt podaje' make claims about what the abstract and the study contain. With the snapshot null none of them can be matched to source text."}
+    {"attack": "numbers", "reason": "The only figures in the item are the experiment numbers 3, 4 and 5. They appear nowhere in the upstream span and the only cited source (10.1016/j.jesp.2003.11.001) is blocked with snapshot null, so no stored text can confirm or refute them."},
+    {"attack": "scope-words", "reason": "The population, the kinds of tasks estimated and the experimental conditions are not stated in the upstream span, and the cited source has no snapshot, so a dropped or widened scope word cannot be checked."},
+    {"attack": "recency", "reason": "No snapshot exists at all, so there is nothing to compare for age or for disagreement between authorities."},
+    {"attack": "limitations", "reason": "Ograniczenia#1, #2 and #3 make claims about what the Kruger and Evans abstract and publication contain or do not contain. The source is blocked and has no snapshot, so none of these sentences can be checked against stored source text."}
   ],
   "preservation": [
-    {"upstream_line": 1, "upstream_action": "Split a big task into subtasks before estimating time", "fate": "kept", "fallback_stated": true},
-    {"upstream_line": 1, "upstream_action": "Then start work (再开工)", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 3, "upstream_action": "Budget the splitting itself: 5 to 15 minutes", "fate": "narrowed", "fallback_stated": true},
-    {"upstream_line": 4, "upstream_action": "List the subtasks first, then estimate", "fate": "narrowed", "fallback_stated": true},
-    {"upstream_line": 4, "upstream_action": "Treat each small step as an action that can start at once, to procrastinate less", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 5, "upstream_action": "Illustrate with multi-part tasks: literature review, discussion, reference list", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 8, "upstream_action": "Stop splitting when each subtask can be finished in one sitting", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 8, "upstream_action": "Do not split too finely, because over-splitting itself costs time", "fate": "narrowed", "fallback_stated": true}
+    {"upstream_line": 1, "upstream_action": "Split a big task into subtasks before estimating the time", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 1, "upstream_action": "After estimating, start the work (再开工)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Cost: free; the split itself takes 5 to 15 minutes", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Split so that every small step can be started at once and procrastination falls", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "List the subtasks first, then estimate; examples: literature review, discussion, references", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Name the error as the planning fallacy (规划谬误) and cite procrastination predictors", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Split only until each subtask fits one sitting; over-splitting itself costs time", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Caveat: Kruger and Evans verified only to direction, from the abstract; percentages not checked in the original", "fate": "kept", "fallback_stated": true}
   ],
   "findings": [
     {
       "severity": "minor",
-      "attack": "preservation",
-      "id": "Ocena redakcyjna#2",
-      "text": "Drobna, dobrze znana czynność nie wymaga osobnego planu.",
-      "why": "The upstream gives a concrete stopping rule for how fine to split (each subtask doable in one sitting) and warns that over-splitting wastes time. The item drops both as an action rule, and the change log does not record the drop. In their place it states a different criterion ('drobna, dobrze znana'), which has no support in the upstream span or in any stored source. A reader is told to split complex tasks but not where to stop, and is given a 'well-known task' exemption that nothing available backs.",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+      "why": "The upstream states the action as listing the subtasks first and then estimating. The item prescribes a specific procedure, estimating each part and not giving one number. No snapshot is available, so the packet cannot show that per-part estimates were what the study manipulated. The sentence is not marked as an editorial application and stands under grade B. A reader may believe that per-part estimating is the tested action.",
       "evidence": [
-        {"source": "upstream", "line": 8, "text": "以「每个子任务能在一次坐下来的时间里做完」为准，拆得过细本身也耗时间"}
+        {"source": "upstream", "line": 5, "text": "先把子任务列出来再估，能少犯把工期估短的毛病"},
+        {"source": "upstream", "line": 4, "text": "人估工期的时候，不会自动把任务拆开一件件算"}
       ],
-      "fix_direction": "Either restore the one-sitting stopping rule and the over-splitting cost as an explicitly editorial remark, or record in 'Zmiany w adaptacji' that it was dropped and why. Mark the 'well-known task' exemption as an editorial judgment."
+      "fix_direction": "Word the action as the source describes it (list the parts first, then estimate), or label per-part estimating as an editorial application beyond the cited experiments."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie.",
+      "why": "The upstream examples are a literature review, a discussion and a reference list. The item replaces them with its own four-stage report breakdown without saying that it is an editorial illustration, and the adaptation-changes field does not record the swap. A reader may take this split as the decomposition that was studied.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "比如写文献综述、写讨论、整理参考文献，这本来就是几件事"}
+      ],
+      "fix_direction": "Mark the report example as an editorial illustration and record the replacement of the upstream examples in the adaptation changes."
     },
     {
       "severity": "minor",
       "attack": "preservation",
       "id": "W praktyce#2",
       "text": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
-      "why": "The upstream action is to list the subtasks first and then estimate. The item instead asks the reader to estimate each part and not give one number, and it adds a 'check the scope of the task' step that does not appear in the upstream span. This is a different or wider action than the pinned original, and the item does not call it an editorial reading. The phrase 'bez wcześniejszego sprawdzenia zakresu zadania' is also unclear about what the reader should actually do. Whether the study itself had participants estimate parts separately cannot be checked (source blocked).",
+      "why": "The upstream gives a stopping rule for how far to split: each subtask should fit one sitting, and over-splitting itself costs time. The item drops it and does not list the drop in the adaptation changes. The only boundary it keeps, that a small familiar task needs no separate plan, concerns tasks that are already small, not how deep to split a complex task. A reader who splits a complex task has no signal where to stop.",
       "evidence": [
-        {"source": "upstream", "line": 4, "text": "先把子任务列出来再估，就能少估短一截"},
-        {"source": "upstream", "line": 1, "text": "把大任务拆成子任务再估时、再开工"}
+        {"source": "upstream", "line": 8, "text": "拆到什么程度合适：以「每个子任务能在一次坐下来的时间里做完」为准，拆得过细本身也耗时间"}
       ],
-      "fix_direction": "Align the instruction with the action the pinned original and the source support (list the parts, then estimate), or state openly that estimating each part separately is an editorial extension. Make the 'scope' step concrete or remove it."
-    },
-    {
-      "severity": "minor",
-      "attack": "preservation",
-      "id": "W praktyce#1",
-      "text": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie.",
-      "why": "The upstream illustrates the idea with other tasks (literature review, discussion, reference list). The item replaces them with a report example whose four stages come from neither the upstream span nor any stored source, and it is not labelled as an editorial example. A reader may take it as the task type or decomposition the study used.",
-      "evidence": [
-        {"source": "upstream", "line": 5, "text": "比如写文献综述、写讨论、整理参考文献，这本来就是几件事"}
-      ],
-      "fix_direction": "Label the report decomposition as an editorial example (for instance with 'np.' and a note that it is not from the study), or use an example the source supports."
-    },
-    {
-      "severity": "minor",
-      "attack": "preservation",
-      "id": "Koszt#2",
-      "text": "Przygotowanie listy etapów też zabiera czas.",
-      "why": "The upstream gives a time cost for splitting (5 to 15 minutes) and a cost label of no willpower needed; the item keeps only 'zabiera czas' and states no effort cost. 'Zmiany w adaptacji' records the removal of 'skalę oszczędności czasu', but the upstream span shows no such scale. It does not record the dropped 5 to 15 minute cost figure. The change log therefore does not match what was actually changed.",
-      "evidence": [
-        {"source": "upstream", "line": 3, "text": "拆分本身花 5 到 15 分钟"},
-        {"source": "upstream", "line": 2, "text": "钱=0 时间=少 毅力=否 收益=中"}
-      ],
-      "fix_direction": "Make the change log name what was really removed (the 5 to 15 minute figure, the effort label) and why, and check which 'skala oszczędności czasu' it refers to."
+      "fix_direction": "Say how far to split, or state in the adaptation changes that the upstream stopping rule was left out because it has no source."
     },
     {
       "severity": "minor",
       "attack": "grade",
       "id": "Ocena dowodów#1",
       "text": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.",
-      "why": "The letter B fits the README definition (single study, limited samples) for a journal article cited in upstream line 7, so there is no grade drift. But the grade field says 'zweryfikowano kierunek wyniku' without saying that the check rests on the abstract only. Upstream line 8 states exactly that. A reader of this field alone can take it as a full-text check. The abstract basis appears only in 'Ograniczenia' and 'Źródła'. The design wording 'seria eksperymentów w jednej publikacji' cannot be checked here (snapshot null).",
+      "why": "The letter B fits the README definition of a single study, and it matches the upstream grade. But the grade field says only that the direction was verified. It does not say that the check rested on the abstract alone, which the upstream note states. That fact appears only in the source link label and in Ograniczenia#2, where it is framed as a gap about experiments 3 and 4, not as the basis of the whole grade. A reader of the grade line alone may think the paper was read.",
       "evidence": [
         {"source": "upstream", "line": 8, "text": "只从摘要核实到方向，具体百分比没核到原文"}
       ],
-      "fix_direction": "State in the grade field itself that the direction was checked in the abstract only, and keep the design wording only if a stored source supports it."
+      "fix_direction": "State in the grade field itself that the direction was checked only in the abstract and not in the full text."
     }
   ],
-  "notes": "UNAVAILABLE is not a pass. The single cited source (DOI 10.1016/j.jesp.2003.11.001) is blocked, snapshot null, so Korzyść i dowody#1 to #3, Ocena dowodów#1 and Ograniczenia#1 to #3 have no stored source text behind them (experiment numbers 3, 4 and 5, 'dłuższe oszacowania', moderation by task complexity, abstract contents). The upstream span is a lead only, and it does not contain these claims. It says only that the direction was checked in the abstract. Leak attack run on all reader-facing fields: no Chinese institution, hotline, threshold, deadline, liability rule or legal claim found. Self-containment run: the item has no cross-reference links, only the external DOI link in Źródła, and stays actionable alone. Protocol deviations by this reviewer: (1) used the Bash tool once for 'ls -la' on the repository root, although the task said no shell (no script run, no file opened that way); (2) used Glob on .cache/sources, which listed file names only, none opened; (3) read README.md lines 38 to 77, which goes beyond the section 'Jak czytać dowody' (lines 42 to 56) into the following section; (4) CLAUDE.md content was injected into context by the harness, not opened by me. Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened."
+  "notes": "The only cited source (10.1016/j.jesp.2003.11.001) is blocked (blocked by api.crossref.org), snapshot null, 0 characters. No finding rests on a snapshot. Every claim about the contents of the Kruger and Evans abstract (experiments 3, 4 and 5, shorter underestimation, task complexity, no procrastination result) is unverified in this packet. The upstream span says only that direction was verified from the abstract and that percentages were not checked, and it names no experiment numbers. Protocol: I read only the role file, AGENTS.md, README.md (the section Jak czytać dowody, lines 38 to 77) and the packet. I ran one Glob on the directory audit/runs/run7/04.7, which listed the names of sibling files; I did not open any of them. Rule used for fallback_stated: false only where the change leaves a reader without a needed instruction; true where the action is kept or the reader still has a usable path."
 }

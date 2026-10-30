@@ -1,0 +1,109 @@
+{
+  "item": "14.8",
+  "edits": [
+    {
+      "field": "Ocena dowodów",
+      "original": "badanie rezultatów sporów",
+      "replacement": "badanie wyników sporów",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "praw i wolności innych",
+      "replacement": "praw i wolności innych osób",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "nie miał przeglądu prawnika",
+      "replacement": "nie został sprawdzony przez prawnika",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Tytuł",
+      "text": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki",
+      "why": "„praw do danych” is not the usual Polish name for these rights and can be read as ownership of data. A clearer title would name personal data and the person's own rights (for example „praw dotyczących swoich danych osobowych”). Not edited because it names rights (a term of law) and could change what the title promises."
+    },
+    {
+      "field": "Koszt",
+      "text": "RODO",
+      "why": "First use in the item, and the packet shows no expansion or explanation. I was not allowed to open the chapter, so I cannot tell whether the chapter explains it earlier. If it does not, it needs a first-use explanation. Not edited because it is the name of a law."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Napisz administratorowi",
+      "why": "„administrator” is a specialist term (the party that decides why and how the data is processed) and is not explained anywhere in this item. A first-use explanation, ideally with an everyday example, may be missing. Chapter not checked, so I do not know whether it is explained earlier. Not edited because it is a term of law."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów.",
+      "why": "„UODO” is an unexpanded institution abbreviation, and „wyjaśnienie UODO” does not say which document is meant. Both are institution and source wording, so I did not edit them. The grade letter is protected. The only change I made here is the one word „rezultatów” → „wyników” (consistency with „wyniku sporu” in Ocena redakcyjna)."
+    },
+    {
+      "field": "Koszt",
+      "text": "Działania na żądanie są co do zasady bezpłatne",
+      "why": "„Działania na żądanie” reads like „actions on demand” (a calque). It would be clearer as something like „Realizacja żądania jest co do zasady bezpłatna”. Not edited because „bezpłatne” (price, „bez-”) and „co do zasady” (quantifier) are protected, and „działania” may deliberately cover more than the one act of fulfilling a request."
+    },
+    {
+      "field": "Koszt",
+      "text": "RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych",
+      "why": "The sentence does not say what the exception allows (a fee, a refusal, or both), so the reader gets „wyjątki” without a consequence. „ewidentnie” is an intensity word, protected. The meaning gap is for the verifier to decide, not for me to fill."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych.",
+      "why": "The indirect question with „czy … czy” reads as a choose-one yes/no, and „dostępu i kopii danych” is elliptical (access to data and a copy of it). A more natural form would be „Napisz administratorowi, czego żądasz: dostępu do danych i ich kopii, sprostowania nieścisłości czy usunięcia danych.” Not edited because it contains the names of three rights, which are terms of law."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zachowaj potwierdzenie.",
+      "why": "It is unclear what is confirmed (sending of the request, its receipt, or something else). The reader cannot act on it. Choosing „wysłania” or „odbioru” would be a content decision, and I cannot see the sources, so I report it instead of editing."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych.",
+      "why": "„warunki” has no referent in the sentence (conditions of what?). The semicolon joins two separate claims. „zamknięcie konta … usuwać” gives an event an agent verb, and „nie musi oznaczać usunięcia wszystkich danych” would be more natural. Not edited because it contains a negation, a modal („nie musi”), a quantifier („wszystkich”) and a causal verb, all protected."
+    },
+    {
+      "field": "W praktyce",
+      "text": "przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej",
+      "why": "Telegraphic noun chain. „informacje o skardze lub ochronie sądowej” does not say to whom the complaint goes, and „ochronie sądowej” sounds like a literal rendering of „judicial remedy”. A more natural form would be about the possibility of lodging a complaint or going to court. Not edited because it names rights and remedies (terms of law)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "ze względu na skomplikowanie lub liczbę żądań",
+      "why": "„skomplikowanie … żądań” is a nominal calque („because of the complexity of the request”). Something like „ze względu na skomplikowany charakter żądania lub liczbę żądań” would read more naturally. Not edited because it states the legal grounds for the extension („lub”, a condition) and any rewording could change them."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "z informacją i przyczyną przekazaną w pierwszym miesiącu",
+      "why": "Agreement problem: one singular participle („przekazaną”) after two nouns joined by „i”, and it is unclear who passes what to whom. A clearer form would say that the administrator informs about the extension and its reason within the first month. Not edited because it carries a number, a time limit and a duty."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "zasadniczo w ciągu miesiąca od otrzymania żądania",
+      "why": "„zasadniczo” can be read as „fundamentally”; the item uses „co do zasady” for the same idea in Koszt. This is a consistency issue, but „zasadniczo” is a quantifier and the duration is protected, so I report it without editing."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "określone cele interesu publicznego",
+      "why": "„określone” is ambiguous here (specified by law, or just „certain”). It may be a calque of „specific”. Not edited because it is a quantifier and a term of law."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Administrator może w uzasadnionym zakresie potwierdzać tożsamość.",
+      "why": "It does not say whose identity. „potwierdzać” suggests the administrator asserts it, whereas the person making the request proves it; „weryfikować tożsamość osoby składającej żądanie” may be the natural sense. Not edited because of the modal „może”, the scope limit „w uzasadnionym zakresie” and the legal role of the administrator."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału.",
+      "why": "Noun chain „sprawdzenia potrzeby i kanału”. „kanału” is unclear (which channel: a way of sending it?), and it reads like a calque. It would be better as a sentence such as „Zanim wyślesz dokument tożsamości, sprawdź, czy jest to potrzebne i jakim kanałem możesz go przekazać.” Not edited because it carries two negations („Nie”, „bez”), a protective instruction and a condition."
+    }
+  ],
+  "verdict": "needs_edits"
+}

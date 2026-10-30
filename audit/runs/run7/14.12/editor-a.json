@@ -1,0 +1,81 @@
+{
+  "item": "14.12",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "nowych sposobów kontaktu oraz odzyskiwania.",
+      "replacement": "nowych sposobów kontaktu oraz odzyskiwania konta.",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Uwzględnij pocztę, bank i inne ważne konta",
+      "replacement": "Uwzględnij pocztę e-mail, bank i inne ważne konta",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "inną metodę odzyskiwania, zanim stracisz do niego dostęp",
+      "replacement": "inną metodę odzyskiwania konta, zanim stracisz dostęp do starego numeru",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "do logowania lub odzyskiwania, a jego zmiana",
+      "replacement": "do logowania lub odzyskiwania konta, a jego zmiana",
+      "reason": "term",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Koszt",
+      "text": "Nie zakładamy stałego czasu wykonania.",
+      "why": "Calque of a fixed or constant time. In Polish stały czas wykonania can read as constant time or as a time that never changes, not as a time that is not promised in advance. Contains a negation and a duration word, so not edited. A more natural form to consider for the verifier: Nie podajemy z góry czasu wykonania."
+    },
+    {
+      "field": "W praktyce",
+      "text": "ale postępuj według procedury każdego dostawcy",
+      "why": "The connective ale does not mark a real contrast with the preceding instruction (include mail, bank and other accounts); it reads as a carried-over but. The sentence also packs the quantifier każdego and the word według, so not edited. Consider i w każdej usłudze postępuj według jej procedury, or splitting into two sentences."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie zakładaj, że jedna zmiana aktualizuje wszystkie usługi.",
+      "why": "Unnatural subject and verb pairing: a change does not update services, it is the number or setting that gets updated in them. The present tense after nie zakładaj, że also sounds like a calque. Contains a negation and the quantifiers jedna and wszystkie, so not edited. More natural form to consider: Nie zakładaj, że zmiana numeru w jednej usłudze zaktualizuje go we wszystkich pozostałych."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia",
+      "why": "Na koncie does not say which account (the item never names Konto Google outside the Google wyjaśnia clause), and wpływa na usługi is a literal rendering of affects. Contains tylko, niektóre, mogą and a causal-type verb, so not edited. A more natural form to consider: zmiana numeru w Koncie Google obejmuje tylko niektóre usługi, a inne mogą mieć własne ustawienia. The verifier should confirm the account name against the source."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "bez badania unikniętych strat",
+      "why": "Uniknięte straty is a calque of avoided losses and sounds odd in Polish. It is also unclear whether it means no study measuring losses avoided or no study of losses at all. Contains the negation bez and sits in a grade justification, so not edited. A more natural form to consider: bez badania, które mierzyłoby, ile strat udało się uniknąć."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Lista usług jest przykładem, nie kompletnym rejestrem twoich kont.",
+      "why": "Rejestr is bureaucratic for a personal list; wykaz or lista would be plainer. The sentence also mixes usług and kont for the same list (the W praktyce field enumerates konta, the sentence calls it a list of services). Contains a negation and kompletnym, so not edited. Consider: Lista usług jest przykładem, a nie pełnym wykazem twoich kont."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej.",
+      "why": "The term ponowny przydział numeru is never explained in this item, although it is the likely reason for the whole advice (that after the number is given up it may be assigned to another person). First-use explanation is missing in the packet; adding it would add a factual claim, so it is reported, not edited. The noun stack polskiego okresu ponownego przydziału numeru is heavy. Contains a jurisdiction word (polskiego), negation and ani. Consider: Nie podajemy, po jakim czasie w Polsce numer może zostać przydzielony ponownie, ani jednolitej procedury banków."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Dokumentacja Google nie dowodzi sposobu działania wszystkich usług.",
+      "why": "Dowodzi sposobu działania is a calque; the documentation describes or shows how services work, it does not prove it. Wszystkich usług is ambiguous between all Google services and all services you use. Contains a negation, a quantifier and an evidence-strength verb, so not edited. Consider: Dokumentacja Google nie opisuje, jak działają usługi innych dostawców, if that is the intended meaning; the verifier must decide."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Potwierdź wymagania bezpośrednio u własnego dostawcy.",
+      "why": "U własnego dostawcy is ambiguous: it can be read as the provider of the phone number (operator) or as the provider of each service, while W praktyce says każdego dostawcy. Replacing it would add a quantifier or a population word, so not edited. Consider: u dostawcy każdej używanej usługi."
+    }
+  ],
+  "verdict": "needs_edits"
+}

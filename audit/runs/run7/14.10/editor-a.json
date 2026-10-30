@@ -1,0 +1,98 @@
+{
+  "item": "14.10",
+  "edits": [
+    {
+      "field": "title",
+      "original": "pośrednikom AI",
+      "replacement": "pośrednikom w dostępie do modeli AI",
+      "reason": "title",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "Przed użyciem pośrednika ustal,",
+      "replacement": "Przed użyciem pośrednika (usługi pośredniczącej w dostępie do modeli AI) ustal,",
+      "reason": "term",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "skorzystaj z procedury jego unieważnienia u wystawcy",
+      "replacement": "unieważnij go zgodnie z procedurą wystawcy",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "w preprincie badanie",
+      "replacement": "w preprincie (tekście sprzed recenzji naukowej) badanie",
+      "reason": "term",
+      "requires_reverification": true
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "pośredników API modeli",
+      "replacement": "pośredników w dostępie do modeli AI przez interfejs programistyczny (API)",
+      "reason": "calque",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Nie przekazuj sekretów niesprawdzonym pośrednikom AI",
+      "why": "Słowo „sekretów” to żargon programistyczny (secret = klucz lub hasło); poza środowiskiem IT brzmi jak „tajemnice” i tytuł nie jest zrozumiały bez rozmowy z autorem. Treść porady mówi o kluczach dostępu, cudzych danych i prywatnym kodzie, więc tytuł jest też węższy lub inny niż treść. Zmiana słowa zmienia zakres, więc jej nie proponuję jako edycji; weryfikator może rozważyć nazwę z treści (np. klucze dostępu i poufne dane). Wyrażenie „pośrednikom AI” może też brzmieć jak pośrednicy będący AI; patrz propozycja edycji tytułu."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych.",
+      "why": "Jedno zdanie niesie kilka twierdzeń i długi łańcuch rzeczowników („oceny poufności oraz podstaw przetwarzania danych”). Zakres „bez” jest niejasny: czytane dosłownie zdanie dopuszcza wysłanie kluczy dostępu po uzyskaniu upoważnienia i oceny, a tytuł i Ocena redakcyjna mówią o sekretach bezwarunkowo. Zdanie zawiera zaprzeczenie, wyrażenia prawne (upoważnienie, podstawa przetwarzania), więc go nie edytuję. Do rozważenia przez weryfikatora: rozdzielić klucze dostępu od cudzych danych i prywatnego kodu oraz rozbić warunek na osobne zdania."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami.",
+      "why": "Podmiotem wykonującym polecenia są „odpowiedzi AI”, choć wykonuje je narzędzie lub agent; brzmi to jak kalka i metafora. Niejasne jest też, do czego odnosi się „z szerokimi uprawnieniami” (polecenia czy środowisko wykonania). Zdanie zawiera zaprzeczenie, określenia stanu (niezweryfikowanym, automatycznie) i słowo o uprawnieniach, więc go nie edytuję; naturalniejsze byłoby zdanie z podmiotem człowiekiem (np. o nieuruchamianiu automatycznie poleceń z niezweryfikowanych odpowiedzi AI), ale zmiana szyku może przesunąć sens."
+    },
+    {
+      "field": "W praktyce",
+      "text": "u wystawcy",
+      "why": "„Wystawca” klucza to prawdopodobnie kalka angielskiego issuer; dla kluczy dostępu do usług naturalniej brzmi usługodawca, który klucz wydał. Nie wiem z pakietu, kto jest wystawcą, więc nie zmieniam słowa. Dodatkowo „dostawca”, „operator” i „wystawca” oznaczają w tej pozycji różne lub niejasno powiązane podmioty; weryfikator może ujednolicić nazwy."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "dostęp do badawczych kluczy kontrolnych",
+      "why": "„Klucz kontrolny” oznacza po polsku zwykle sumę lub cyfrę kontrolną. Wygląda na kalkę angielskiego określenia klucza-przynęty (canary) założonego przez badaczy w celu wykrycia nadużycia. To zamiana terminu technicznego, więc tylko zgłaszam; weryfikator powinien sprawdzić oryginał i dobrać polski termin (np. klucze testowe lub wabiki założone przez badaczy). Warto też ujednolicić „klucz”, „klucz dostępu” i „sekret” w całej pozycji."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.",
+      "why": "„Jawna treść” (tekst jawny, plaintext) i „żądania” (requests) to żargon bez objaśnienia, a w pozostałej części pozycji używa się słów „treść”, „polecenia”, „odpowiedzi”, „dane”. Zamiana terminu technicznego może zmienić sens, więc tylko zgłaszam: weryfikator może zdecydować, czy prostsze sformułowanie (np. pośrednicy mogli odczytać treść przekazywanych zapytań) oddaje to samo twierdzenie i siłę twierdzenia „mieli dostęp”."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.",
+      "why": "„Badanie pomiarowe” to kalka (measurement study); jest to określenie typu badania, więc nie edytuję. Przy zaprzeczeniu „nie reprezentatywna” pisownia łączna (nieprezentatywna) lub konstrukcja „nie jest reprezentatywną oceną” byłaby bardziej naturalna, ale zaprzeczenia nie zmieniam. Weryfikator może zastąpić „pomiarowe” opisem, co badanie zmierzyło (np. występowanie zjawiska w badanej próbie)."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy. Ocena musi poprzedzać przekazanie danych.",
+      "why": "Singularny, ogólny „sekret” jest niejasny dla czytelnika (chodzi o prawdziwy klucz lub hasło używane do sprawdzenia usługi). „Ocena” z drugiego zdania nie ma dopełnienia: nie wiadomo, czy to ocena dostawcy, poufności czy podstaw przetwarzania. „Nieznanego” różni się od „niesprawdzonym” w tytule, a „dostawca” oznacza tu pośrednika, podczas gdy w Ograniczeniach oznacza oficjalnego dostawcę modelu. Zdanie zawiera zaprzeczenie, modal i słowo określające stan, więc go nie edytuję. Poza zakresem języka: pole zawiera zalecenia, a nie ocenę opłacalności redakcyjnej opisaną w zasadach."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Oficjalny dostawca też wymaga oceny zasad przetwarzania; bezpośrednie połączenie nie jest gwarancją poufności.",
+      "why": "Niejasne, czyim „oficjalnym dostawcą” jest ten podmiot (modelu AI?) i z czym ma być „bezpośrednie połączenie”. To samo słowo „dostawca” oznacza w Ocenie redakcyjnej nieznanego pośrednika, co psuje spójność. Dopisanie „modelu” mogłoby zmienić sens, więc tylko zgłaszam. Zdanie zawiera zaprzeczenie i słowo „gwarancja”."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Sama zmiana nazwy lub zamaskowanie fragmentu nie musi usuwać danych osobowych.",
+      "why": "„Zmiana nazwy” jest niejasna (nazwy czego: osoby, pliku, zmiennej?) i wygląda na kalkę; Zamaskowanie fragmentu jest zrozumiałe. Zdanie zawiera zaprzeczenie, modal i termin prawny (dane osobowe), więc go nie edytuję. Weryfikator może wskazać, o jaką zmianę chodzi (np. podmianę nazwisk), jeśli źródło na to pozwala."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "jaki odsetek wszystkich pośredników jest złośliwy",
+      "why": "„Złośliwy” w odniesieniu do usługi brzmi jak kalka (malicious); po polsku używa się go głównie o oprogramowaniu lub o osobie. W Korzyści użyto „szkodliwego kodu”. Zamiana na „szkodliwy” lub „działający w złych zamiarach” przesuwa intencję lub intensywność, więc tylko zgłaszam do ujednolicenia przez weryfikatora."
+    }
+  ],
+  "verdict": "needs_edits"
+}

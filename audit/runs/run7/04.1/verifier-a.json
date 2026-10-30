@@ -1,13 +1,13 @@
 {
   "item": "04.1",
-  "status": "UNAVAILABLE",
+  "status": "FAIL",
   "claims": [
     {
       "id": "title#1",
       "kind": "recommendation_derived",
       "claim": "Zapisz, kiedy i w jakiej sytuacji zaczniesz działać",
-      "verdict": "source_unavailable",
-      "reason": "The advice (write down when and in which situation you will act) can only rest on the effect of if-then plans reported by the one cited source, 10.1016/s0065-2601(06)38002-1. That source has no snapshot (access blocked by api.crossref.org, snapshot null), so nothing could be checked or quoted. Not judged from memory."
+      "verdict": "unsupported",
+      "reason": "Advice that rests on the finding of the one cited source (10.1016/s0065-2601(06)38002-1). That source has access blocked and snapshot null, so no snapshot line exists that could back it; no source_claim row has a quote to depend on. Looked for: any snapshot line giving the advice to write down the time and situation of starting an action, or the finding it rests on. Nothing could be read."
     },
     {
       "id": "Koszt#1",
@@ -31,57 +31,56 @@
       "id": "W praktyce#1",
       "kind": "recommendation_derived",
       "claim": "Zamiast „zajmę się tekstem” napisz: „Gdy we wtorek usiądę po śniadaniu przy biurku, otworzę plik i napiszę pierwszy akapit”.",
-      "verdict": "source_unavailable",
-      "reason": "The advice (replace a vague intention with a when-and-where plan) rests on the if-then plan effect reported by the one cited source, which has no snapshot (blocked by api.crossref.org). No source line could be quoted as backing or as giving the same advice."
+      "verdict": "unsupported",
+      "reason": "A worked example of the if-then plan advice. It rests on the finding that if-then plans help goal attainment, but the only cited source is blocked (snapshot null), so no quote backs it and nothing can be listed in depends_on. Looked for: any snapshot line stating that a plan of the form 'when situation X arises, I will do Y' helps, or giving an example like this one. Nothing could be read. The concrete wording (Tuesday, after breakfast, desk, first paragraph) is the editors' illustration."
     },
     {
       "id": "W praktyce#2",
       "kind": "recommendation_derived",
       "claim": "Wybierz cel, który rzeczywiście chcesz zrealizować.",
-      "verdict": "source_unavailable",
-      "reason": "Whether the source gives or supports this condition (a goal the reader really wants to pursue) could not be checked: the only cited source has no snapshot (blocked by api.crossref.org)."
+      "verdict": "unsupported",
+      "reason": "Advice that depends on what the source says about the goal the plan is attached to (for example a condition such as the person's own commitment to the goal). The only cited source is blocked (snapshot null), so no quote backs it and nothing can be listed in depends_on. Looked for: any snapshot line about goal commitment or choice of goal. Nothing could be read."
     },
     {
       "id": "Korzyść i dowody#1",
-      "kind": "source_claim",
+      "kind": "source_description",
       "claim": "Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”.",
       "verdict": "source_unavailable",
-      "reason": "Authors, the count of 94 independent tests and the description of the work as an analysis of if-then plans all depend on the one cited source, 10.1016/s0065-2601(06)38002-1, which has no snapshot (access blocked by api.crossref.org). One row because the author attribution and the count are the same kind of source fact and share the same verdict. The figure 94 is not confirmed by any quote."
+      "reason": "The only cited source 10.1016/s0065-2601(06)38002-1 has access blocked ('blocked by api.crossref.org') and no snapshot. The authors, the document kind (analysis of pooled results) and the count of 94 independent tests cannot be checked against any text."
     },
     {
       "id": "Korzyść i dowody#2",
       "kind": "source_claim",
       "claim": "Średni efekt dla realizacji celów wyniósł d = 0,65.",
       "verdict": "source_unavailable",
-      "reason": "The mean effect size d = 0,65 and its outcome (goal attainment) depend on the one cited source, which has no snapshot (blocked by api.crossref.org). The figure 0,65 is not confirmed by any quote."
+      "reason": "The only cited source 10.1016/s0065-2601(06)38002-1 has access blocked and no snapshot. The mean effect size d = 0,65 and its outcome (goal attainment) cannot be checked against any text."
     },
     {
-      "id": "Korzyść i dowody#3.1",
-      "kind": "source_claim",
-      "claim": "To standaryzowana miara różnicy",
-      "verdict": "source_unavailable",
-      "reason": "That the reported figure is a standardized difference measure is a statement about the source's effect size and could not be checked: the only cited source has no snapshot (blocked by api.crossref.org)."
-    },
-    {
-      "id": "Korzyść i dowody#3.2",
+      "id": "Korzyść i dowody#3",
       "kind": "meta_statement",
-      "claim": "nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin",
-      "verdict": "not_applicable",
-      "reason": "Read as the editors' caveat on how not to interpret d (what the item does not claim). The figure 65% here is d = 0,65 written as a percentage in a negation, not a source figure."
+      "claim": "To standaryzowana miara różnicy, nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin.",
+      "verdict": "not_applicable"
     },
     {
       "id": "Ocena dowodów#1.1",
       "kind": "source_description",
-      "claim": "ilościowa synteza wielu badań",
+      "claim": "A — ilościowa synteza wielu badań",
       "verdict": "source_unavailable",
-      "reason": "The design label (quantitative synthesis of many studies) could not be checked against the source: the only cited source has no snapshot (blocked by api.crossref.org). The grade letter A is editorial and was not checked."
+      "reason": "The grade letter A is editorial and was not checked. The description of the source as a quantitative synthesis of many studies cannot be checked: the only cited source 10.1016/s0065-2601(06)38002-1 has access blocked and no snapshot."
     },
     {
       "id": "Ocena dowodów#1.2",
       "kind": "source_claim",
-      "claim": "wynik dotyczy realizacji celów, nie oszczędności czasu w Polsce",
+      "claim": "wynik dotyczy realizacji celów",
       "verdict": "source_unavailable",
-      "reason": "Both the outcome the source measured (goal attainment) and the clause that time savings in Poland were not measured depend on the one cited source, which has no snapshot (blocked by api.crossref.org). Absence cannot be assessed without any stored text, so absent_in_source does not apply."
+      "reason": "The only cited source has access blocked and no snapshot, so the outcome the result concerns (goal attainment) cannot be checked."
+    },
+    {
+      "id": "Ocena dowodów#1.3",
+      "kind": "source_claim",
+      "claim": "nie oszczędności czasu w Polsce",
+      "verdict": "source_unavailable",
+      "reason": "A clause that says something was not measured (time savings, Polish setting). absent_in_source would need a snapshot with the whole text; the only cited source has access blocked and no snapshot, so absence cannot be shown or searched for."
     },
     {
       "id": "Ocena redakcyjna#1",
@@ -91,7 +90,7 @@
     },
     {
       "id": "Ocena redakcyjna#2",
-      "kind": "meta_statement",
+      "kind": "editorial_estimate",
       "claim": "Sprawdź, czy plan pomaga w twoim konkretnym zadaniu.",
       "verdict": "not_applicable"
     },
@@ -100,16 +99,16 @@
       "kind": "source_claim",
       "claim": "Wynik jest średnią z różnych zadań i grup.",
       "verdict": "source_unavailable",
-      "reason": "That the pooled result averages different tasks and groups is a statement about the source's studies and could not be checked: the only cited source has no snapshot (blocked by api.crossref.org)."
+      "reason": "The only cited source 10.1016/s0065-2601(06)38002-1 has access blocked and no snapshot, so it cannot be checked that the result is an average over different tasks and groups."
     },
     {
       "id": "Ograniczenia#2",
       "kind": "source_claim",
       "claim": "Plan nie zapewnia sukcesu i nie zastępuje umiejętności ani zasobów potrzebnych do działania.",
       "verdict": "source_unavailable",
-      "reason": "Filed as a source_claim because it states what a plan does not do (a negative statement about effectiveness), not only an editor's caveat. Whether the source says this could not be checked: the only cited source has no snapshot (blocked by api.crossref.org)."
+      "reason": "A statement about what the plan does and does not achieve (no guaranteed success, no replacement for skills or resources). Treated as a claim about the world, not as an editor's caveat. The only cited source has access blocked and no snapshot, so no text can show whether the source says this."
     }
   ],
   "scope_gaps": [],
-  "notes": "Packet warnings are empty, but the only source row (origin cited, DOI 10.1016/s0065-2601(06)38002-1) has access blocked (blocked by api.crossref.org), snapshot null and chars 0, so there is no snapshot to read. Every claim that depends on it is source_unavailable and no claim was answered from memory. No quote and no declared number are given because no snapshot line exists. recommendation_derived rows use source_unavailable because their only possible backing is that unavailable source; unsupported was not used because the source was not read, so it cannot be said to be silent. Sources must be fetched again (or the source replaced) before this item can be verified. Nothing outside the allowed set was opened."
+  "notes": "The packet has one cited source (10.1016/s0065-2601(06)38002-1), access blocked by api.crossref.org, snapshot null, 0 chars; packet.warnings is empty. No snapshot was read, so no source_claim or source_description row has a quote and none could be checked. Status is FAIL only because the three recommendation_derived rows (title#1, W praktyce#1, W praktyce#2) have nothing that backs them and the schema allows only unsupported for that case; no text was read that contradicts or fails to support anything. The item needs the source fetched again before it can be judged. Rows Ocena dowodów#1.1 to #1.3 split the sentence, and the grade letter A was not checked. Classification choices that a reviewer may want to look at: Korzyść i dowody#3 filed as meta_statement (an interpretation caveat about d, not a finding); Ograniczenia#2 filed as source_claim (a statement about what the plan achieves); Ocena redakcyjna#2 filed as editorial_estimate. Nothing outside AGENTS.md, the role file, the packet and the report path was opened."
 }

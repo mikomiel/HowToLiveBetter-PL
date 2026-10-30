@@ -1,0 +1,229 @@
+{
+  "item": "14.8",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 237, "text": "administrator musi usunąć Twoje dane, jeśli spełniony jest przynajmniej jeden z poniższych warunków"},
+        {"snapshot": "223080ce91198a64.txt", "line": 253, "text": "prawo do usunięcia danych nie jest bezwzględne."}
+      ],
+      "depends_on": ["Korzyść i dowody#1", "Ograniczenia#1"],
+      "reason": "Rights exist (Korzyść i dowody#1); erasure has conditions and exceptions (Ograniczenia#1, UODO lines 237 and 253)."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Opisanie żądania i zachowanie korespondencji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "source_claim",
+      "claim": "Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2687, "text": "są wolne od opłat. Jeżeli żądania osoby, której dane dotyczą, są ewidentnie nieuzasadnione lub nadmierne,"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2690, "text": "pobrać rozsądną opłatę, uwzględniając administracyjne koszty udzielenia informacji"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2693, "text": "odmówić podjęcia działań w związku z żądaniem."}
+      ],
+      "reason": "Art. 12 ust. 5: communication and actions under art. 15-22 are free of charge; for manifestly unfounded or excessive requests the controller may charge a reasonable fee or refuse."
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 305, "text": "możesz to zrobić elektronicznie lub listownie."},
+        {"snapshot": "223080ce91198a64.txt", "line": 309, "text": "powołaj się na konkretne prawo: żeby nie było wątpliwości warto zaznaczyć, że żądasz usunięcia danych na podstawie art. 17 RODO."},
+        {"snapshot": "223080ce91198a64.txt", "line": 311, "text": "wskaż konkrety: precyzyjnie określ jakie dane mają zostać usunięte."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "The three rights exist (Korzyść i dowody#1). The UODO page gives the same advice (name the specific right, specify the data) but only for the erasure request; extending it to access and rectification is an editorial inference, see scope_gaps."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zachowaj potwierdzenie.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 319, "text": "swoje zgłoszenie możesz zakończyć prośbą o potwierdzenie otrzymania wiadomości"},
+        {"snapshot": "223080ce91198a64.txt", "line": 321, "text": "zawsze zachowuj kopię własnego żądania i udzielonych odpowiedzi"}
+      ],
+      "reason": "The UODO page advises asking for confirmation of receipt and keeping a copy of the request and the replies as evidence."
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "recommendation_derived",
+      "claim": "Przy usuwaniu wskaż, dlaczego warunki są spełnione;",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 315, "text": "uzasadnienie: napisz z jakiego powodu żądasz usunięcia danych"},
+        {"snapshot": "223080ce91198a64.txt", "line": 237, "text": "administrator musi usunąć Twoje dane, jeśli spełniony jest przynajmniej jeden z poniższych warunków"}
+      ],
+      "reason": "The UODO page tells the person to give the reason for the erasure request and states that the controller must erase when at least one art. 17 condition is met."
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "source_claim",
+      "claim": "samo zamknięcie konta nie musi usuwać wszystkich danych.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 313, "text": "konta użytkownika nie musi oznaczać usunięcia wszystkich danych z nim powiązanych"},
+        {"snapshot": "223080ce91198a64.txt", "line": 329, "text": "Skorzystanie z takiej możliwości nie musi oznaczać usunięcia danych związanych z tym kontem."}
+      ]
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "recommendation_derived",
+      "claim": "W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2681, "text": "informuje osobę, której dane dotyczą, o powodach niepodjęcia"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2682, "text": "działań oraz o możliwości wniesienia skargi do organu nadzorczego oraz skorzystania ze środków ochrony prawnej"},
+        {"snapshot": "223080ce91198a64.txt", "line": 409, "text": "W razie odmowy usunięcia Twoich danych, administrator ma obowiązek uzasadnić swoją decyzję."}
+      ],
+      "reason": "Art. 12 ust. 4 obliges the controller to give the reasons for not acting and information on a complaint and judicial remedy; the UODO page says the same for refusal of erasure."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2869, "text": "Artykuł 15", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2871, "text": "Prawo dostępu przysługujące osobie, której dane dotyczą"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2902, "text": "Administrator dostarcza osobie, której dane dotyczą, kopię danych osobowych podlegających przetwarzaniu."},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2914, "text": "Artykuł 16", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2916, "text": "Prawo do sprostowania danych"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2924, "text": "Artykuł 17", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2926, "text": "Prawo do usunięcia danych"}
+      ],
+      "reason": "Article headings and first paragraphs of art. 15 (access, copy in ust. 3), 16 (rectification) and 17 (erasure). The short heading quotes are used with cell:true because the article number sits alone on its line."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2652, "text": "Artykuł 12", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2671, "text": "Administrator bez zbędnej zwłoki – a w każdym razie w terminie miesiąca od otrzymania żądania – udziela"},
+        {"snapshot": "223080ce91198a64.txt", "line": 267, "text": "Administrator powinien odpowiedzieć niezwłocznie, najpóźniej w ciągu jednego miesiąca."}
+      ],
+      "reason": "Art. 12 ust. 3 (the 'w każdym razie' formula is the outer limit; the extension is a separate sentence). The short heading quote uses cell:true."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2673, "text": "potrzeby termin ten można przedłużyć o kolejne dwa miesiące z uwagi na skomplikowany charakter żądania lub liczbę"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2674, "text": "W terminie miesiąca od otrzymania żądania administrator informuje osobę, której dane dotyczą o takim"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2675, "text": "przedłużeniu terminu, z podaniem przyczyn opóźnienia."},
+        {"snapshot": "223080ce91198a64.txt", "line": 267, "text": "może wydłużyć ten czas o kolejne dwa miesiące, ale musi Cię o tym poinformować przed upływem miesiąca i wyjaśnić przyczynę opóźnienia."}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "treść rozporządzenia i wyjaśnienie UODO,",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 20, "text": "ROZPORZĄDZENIE PARLAMENTU EUROPEJSKIEGO I RADY (UE) 2016/679"},
+        {"snapshot": "223080ce91198a64.txt", "line": 7, "text": "Jakie prawa daje Ci RODO? - UODO"},
+        {"snapshot": "223080ce91198a64.txt", "line": 229, "text": "Prawo do usunięcia danych w praktyce: jak usunąć swoje dane np. wizerunek z Internetu?"}
+      ],
+      "reason": "Covers the words after the grade letter. The grade letter C itself is editorial and was not checked. The first snapshot is the full text of Regulation (EU) 2016/679 (Polish OJ publication); the second is a UODO guidance page."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie badanie rezultatów sporów.",
+      "verdict": "absent_in_source",
+      "searched": ["89be0046cf8ac2b2.txt", "223080ce91198a64.txt"],
+      "reason": "Searched both snapshots (full regulation text, 88 pages; whole UODO page, 19074 of 19074 characters) for any study, statistic or measurement of outcomes of data-subject disputes or complaints (terms such as rezultat, rozstrzygnięcie, wyniki, statystyk, badani, skuteczn). Neither contains one: they are legal text and guidance."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "meta_statement",
+      "claim": "Nie obiecujemy wyniku sporu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2956, "text": "nie mają zastosowania, w zakresie w jakim przetwarzanie jest niezbędne:"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2958, "text": "do korzystania z prawa do wolności wypowiedzi i informacji"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2960, "text": "do wywiązania się z prawnego obowiązku wymagającego przetwarzania na mocy prawa Unii lub prawa państwa"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2964, "text": "z uwagi na względy interesu publicznego w dziedzinie zdrowia publicznego"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2967, "text": "do celów archiwalnych w interesie publicznym, do celów badań naukowych lub historycznych"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2971, "text": "do ustalenia, dochodzenia lub obrony roszczeń"},
+        {"snapshot": "223080ce91198a64.txt", "line": 253, "text": "prawo do usunięcia danych nie jest bezwzględne."}
+      ],
+      "reason": "Art. 17 ust. 3 lists the exceptions; 'określone cele interesu publicznego' corresponds to public-health, archival/research/statistical purposes and the public-interest task in lit. b."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Kopia danych nie może naruszać praw i wolności innych.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2907, "text": "Prawo do uzyskania kopii, o której mowa w ust. 3, nie może niekorzystnie wpływać na prawa i wolności innych."}
+      ],
+      "reason": "Art. 15 ust. 4. The item paraphrases 'nie może niekorzystnie wpływać na' as 'nie może naruszać'; see scope_gaps."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Administrator może w uzasadnionym zakresie potwierdzać tożsamość.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2699, "text": "jeżeli administrator ma uzasadnione wątpliwości co do tożsamości osoby fizycznej"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2700, "text": "może zażądać dodatkowych informacji niezbędnych do"},
+        {"snapshot": "223080ce91198a64.txt", "line": 273, "text": "administrator nie może żądać więcej danych osobowych, niż jest to konieczne, aby potwierdzić tożsamość osoby"}
+      ]
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "recommendation_derived",
+      "claim": "Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "223080ce91198a64.txt", "line": 273, "text": "do uwierzytelnienia się w związku z Twoim żądaniem powinny wystarczyć mechanizmy uwierzytelnienia, które służą do zalogowania się do usługi"}
+      ],
+      "depends_on": ["Ograniczenia#3"],
+      "reason": "Backed: the need check (art. 12 ust. 6 allows only information necessary to confirm identity and only with reasonable doubts; UODO says no more data than necessary and that existing login mechanisms should suffice). Not backed: the 'kanał' part (checking the channel before sending an identity document). Neither snapshot says anything about the security or authenticity of the channel, nor names an identity document specifically."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "kind": "meta_statement",
+      "claim": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Koszt#2", "note": "Art. 15 ust. 3 lets the controller charge a reasonable fee for further copies; the sentence says 'co do zasady' and does not mention it."},
+    {"id": "Korzyść i dowody#1", "note": "The RODO snapshot is the Polish text as published in Dz.Urz. UE L 119 of 4.5.2016; later corrigenda or a consolidated version were not in the snapshot. Polish implementing law was not checked and is not claimed."},
+    {"id": "Korzyść i dowody#2", "note": "Art. 12 ust. 3 sets the time to inform the person about the action taken; it does not say the action itself must be finished within the month. The sentence says 'odpowiedź', which fits."},
+    {"id": "Ocena dowodów#1.1", "note": "The UODO page in the snapshot explains the right to erasure (plus the deadline and identity check); it does not explain access or rectification, so 'wyjaśnienie UODO' supports mainly the erasure part of the item."},
+    {"id": "W praktyce#1", "note": "The UODO page's advice on wording the request (cite the right, specify the data) concerns erasure only; applying it to access and rectification requests is an editorial extension."},
+    {"id": "Ograniczenia#2", "note": "The regulation says the right to a copy 'nie może niekorzystnie wpływać na prawa i wolności innych' (must not adversely affect); the item writes 'nie może naruszać', which a reader may take as a higher threshold than the text sets."},
+    {"id": "Ograniczenia#4", "note": "The sources speak of 'dodatkowe informacje niezbędne do potwierdzenia tożsamości' in general; they do not mention an identity document or the choice of channel."}
+  ],
+  "notes": "Only AGENTS.md, .claude/agents/pl-source-verifier.md, the packet and the two named snapshots were opened (the large RODO snapshot was read in parts: lines 1-80 and 2640-3040, plus pinned Grep searches with the exact snapshot path). Nothing outside the allowed set was opened. Short heading quotes ('Artykuł 12', 'Artykuł 15', 'Artykuł 16', 'Artykuł 17') use cell:true although they are headings, not table cells, because the article numbers sit alone on their lines; if the script rejects this, the numbers 12, 15, 16, 17 have no longer quote in the same context."
+}

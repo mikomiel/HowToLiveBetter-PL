@@ -1,99 +1,142 @@
 {
   "item": "04.5",
   "status": "UNAVAILABLE",
-  "attacks_run": ["same-action", "preservation", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "leak", "self-containment", "recency", "limitations"],
   "attacks_not_assessable": [
     {
-      "attack": "grade",
-      "reason": "The letter B and its justification ('dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań') depend on the number and design of the studies. The only stored source is Crossref metadata without abstract (title, authors, journal, year). Only the word 'Perceived' in the title supports the 'subjective assessment' part; the count and design come from the upstream span alone. The README definition of B cannot be matched to the source type from the stored text."
-    },
-    {
-      "attack": "recency",
-      "reason": "Only one snapshot (Crossref metadata for a 2009 paper); no second snapshot or authority to compare, so neither a newer guidance nor a disagreement can be shown."
+      "attack": "scope-words",
+      "reason": "No stored text says who the respondents of the two studies were (organisation type, country, meeting type, meeting size). The only cited snapshot is metadata-only (title, authors, journal, year) and the upstream span gives no population for the agenda result, so a dropped or widened population word cannot be judged."
     }
   ],
   "preservation": [
-    {"upstream_line": 1, "upstream_action": "会前发议程 - send the agenda before the meeting", "fate": "narrowed", "fallback_stated": true},
-    {"upstream_line": 1, "upstream_action": "没议程的会不开 - do not hold a meeting that has no agenda", "fate": "dropped", "fallback_stated": false},
-    {"upstream_line": 1, "upstream_action": "能站着开就站着开 - hold the meeting standing where possible", "fate": "dropped", "fallback_stated": true},
-    {"upstream_line": 3, "upstream_action": "组织者会前花 5 到 10 分钟写一份议程 - organiser writes the agenda in 5 to 10 minutes before the meeting", "fate": "narrowed", "fallback_stated": true},
-    {"upstream_line": 3, "upstream_action": "站着开会要参会者配合 - participants must cooperate for a standing meeting", "fate": "dropped", "fallback_stated": true}
+    {
+      "upstream_line": 1,
+      "upstream_action": "Wyślij porządek obrad przed spotkaniem (会前发议程).",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "Nie urządzaj spotkania bez porządku obrad (没议程的会不开).",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "Jeśli się da, prowadź spotkanie na stojąco (能站着开就站着开).",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Organizator poświęca 5 do 10 minut przed spotkaniem na napisanie porządku obrad.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Spotkanie na stojąco wymaga współpracy uczestników.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Spotkania z porządkiem obrad rozesłanym przed spotkaniem są przez uczestników oceniane jako skuteczniejsze (dwie ankiety, 958 i 292 osoby).",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Spotkania na siedząco trwały o 34% dłużej, a jakość decyzji była taka sama (eksperyment Bluedorna i współautorów).",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 7,
+      "upstream_action": "Drugie źródło: Bluedorn, Turban i Love (1999), badanie spotkań na stojąco i na siedząco.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Leach mierzył subiektywną ocenę skuteczności spotkania, nie faktycznie wykonaną pracę.",
+      "fate": "kept",
+      "fallback_stated": true
+    }
   ],
   "findings": [
     {
       "severity": "major",
       "attack": "numbers",
       "id": "Korzyść i dowody#1",
-      "text": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby.",
-      "why": "The study count and both sample sizes (958 and 292) appear only in the upstream span, which is a lead and not evidence. The single stored snapshot is metadata-only (bibliographic data, no abstract, no sample sizes), so none of these figures is checked against a source, although AGENTS.md requires a checked source for every number and says metadata does not confirm a result. The reader sees them as established facts about the paper.",
+      "text": "w dwóch badaniach, obejmujących 958 i 292 osoby",
+      "why": "The number of studies and both sample sizes are presented as content of the cited Leach et al. paper, but they occur only in the upstream span (a lead, not evidence). The single cited snapshot is metadata-only: it holds DOI, title, authors, journal and year, with no abstract, no methods and no results, so none of the figures can be confirmed from stored evidence. AGENTS.md says metadata do not confirm a result, and the Źródła field calls the link 'DOI i abstrakt wydawcy' although the snapshot contains no abstract. A reader is told that these samples exist and what they showed on the authority of a source that was checked only bibliographically.",
       "evidence": [
-        {"source": "upstream", "line": 5, "text": "两项调查分别有 958 人和 292 人"},
         {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 8, "text": "Title: Perceived Meeting Effectiveness: The Role of Design Characteristics"},
-        {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 9, "text": "Authors: Leach, Rogelberg, Warr, Burnfield"}
+        {"source": "upstream", "line": 5, "text": "两项调查分别有 958 人和 292 人"}
       ],
-      "fix_direction": "Obtain an abstract or full text of the paper into a snapshot and take the study count and sample sizes only from it. Until then keep the figures out of the reader-facing text or label them plainly as unverified."
+      "fix_direction": "Confirm the figures against the abstract or full text of the paper, or state openly that only bibliographic metadata were checked and that the sample sizes come from the upstream adaptation and are unverified. Correct the Źródła wording so that it does not claim an abstract was read."
     },
     {
       "severity": "major",
       "attack": "same-action",
       "id": "Korzyść i dowody#2",
       "text": "Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.",
-      "why": "The only text that states the finding is the upstream span, and it describes meetings where the agenda was SENT BEFORE the meeting (会前发了议程), not an agenda USED during it. The item relabels the studied variable as 'korzystanie z porządku obrad' and then says the advance-sending requirement was removed as unverified, so the one element the upstream ties to the outcome is replaced by an element the stored texts do not name. The snapshot holds no description of the measured variable or the direction of the association (the title only says 'Design Characteristics'). Consequently both the association and the match between advised action ('Przygotuj plan i użyj go podczas spotkania', not labelled editorial; only the plan format in W praktyce#2 is) and studied action are unverified. Koszt#2 also still requires the organiser to share the plan with participants without saying whether that is the studied element.",
+      "why": "The only stored description of the result concerns meetings for which an agenda was sent before the meeting. The item restates the exposure as using the agenda and says in its adaptation note that the verified link concerns using the plan, while the requirement of sending it in advance was removed. The stored snapshot is metadata-only, so nothing stored shows which exposure the paper measured (agenda sent, agenda present, agenda used during the meeting). The dropped element may be exactly the one the association was reported for, and the item presents the changed exposure as verified.",
       "evidence": [
         {"source": "upstream", "line": 4, "text": "会前发了议程的会，参会者更容易觉得这个会有用"},
-        {"source": "upstream", "line": 5, "text": "会前发了议程的会，参会者更容易觉得这个会有效果，这个关系在统计上站得住"},
+        {"source": "upstream", "line": 5, "text": "会前发了议程的会，参会者更容易觉得这个会有效果"},
         {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 8, "text": "Title: Perceived Meeting Effectiveness: The Role of Design Characteristics"}
       ],
-      "fix_direction": "Store an abstract or full text, then name the studied variable exactly as the source defines it (distributed, available or used). If the advised action is wider than that variable, say so in the item and label it an editorial example. Without such a source the association cannot be stated as a finding."
+      "fix_direction": "Establish from the abstract or full text what the paper actually measured. Then either word the association with the measured exposure, or mark the changed wording as an editorial reading that the source does not confirm."
     },
     {
-      "severity": "major",
-      "attack": "limitations",
-      "id": "Zmiany w adaptacji#2",
-      "text": "Pilotaż obejmuje tylko zweryfikowany tu związek dotyczący korzystania z planu.",
-      "why": "The sentence tells the reader the association was verified here, and the Źródła field labels the link 'DOI i abstrakt wydawcy'. The stored snapshot is Crossref metadata only (packet: tylko metadane, bez abstraktu): it holds title, authors, journal, year and DOI and no abstract or result. AGENTS.md says that without full text the item must state what was checked in the abstract, and that metadata does not confirm a result. Nothing about the association, its direction or its subject was checked, so the claim of verification and the mention of an abstract overstate what the stored source supports.",
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Przygotuj plan i użyj go podczas spotkania.",
+      "why": "The upstream prescription is to send an agenda before the meeting. The item's core action, to prepare a plan and use it during the meeting, is wider or different, yet it is not labelled an editorial example. Only the next sentence (W praktyce#2) carries that label, and W praktyce#3 says only that the way of writing the plan was not checked, not that the use-during-meeting action was not checked either.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "会前发议程，没议程的会不开；能站着开就站着开"}
+      ],
+      "fix_direction": "Say plainly which part of the action the source examined and which part is the editors' reading, once the exposure in the paper is confirmed."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań",
+      "why": "The letter B itself is consistent with the README definition (a single publication with limited samples, neither a quantitative synthesis nor a legal or operational norm), and the label 'subiektywnej' matches the paper title. The design label 'obserwacyjne' and the count of two studies are not in the snapshot and rest only on the upstream lead, which calls them surveys. The reader is not told that the grade was assigned without sight of the abstract or results.",
       "evidence": [
         {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 8, "text": "Title: Perceived Meeting Effectiveness: The Role of Design Characteristics"},
-        {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 9, "text": "Authors: Leach, Rogelberg, Warr, Burnfield"},
-        {"source": "upstream", "line": 5, "text": "会前发了议程的会，参会者更容易觉得这个会有效果，这个关系在统计上站得住"}
+        {"source": "upstream", "line": 5, "text": "两项调查分别有 958 人和 292 人"}
       ],
-      "fix_direction": "State plainly that only bibliographic metadata was available, drop 'abstrakt' from the source label unless an abstract is stored, and do not describe the association as verified until a snapshot contains the result."
+      "fix_direction": "Confirm the design from the abstract or full text, or add that the design description and the grade rest on the upstream summary and were not checked against the paper."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę.",
+      "why": "The caution against reading the association as causal is sound and conservative. The detail that the data came from a survey (ankieta) is a design detail that the metadata-only snapshot does not contain; it comes only from the upstream lead, which calls the studies surveys. The limitation sentence therefore asserts a design the stored source does not show.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 10, "text": "Journal: Journal of Business and Psychology"},
+        {"source": "upstream", "line": 5, "text": "两项调查分别有 958 人和 292 人"}
+      ],
+      "fix_direction": "Either confirm the survey design from the abstract or full text, or phrase the limitation so that it does not depend on an unverified design detail."
     },
     {
       "severity": "minor",
       "attack": "limitations",
       "id": "Ograniczenia#2",
       "text": "Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji.",
-      "why": "A statement about what the paper did not measure, together with the design detail 'w ankiecie' in Ograniczenia#1, cannot be supported by a metadata-only snapshot. The title supports only that the outcome was perceived effectiveness. The upstream note says the outcome was participants' own impression and not actual output; it does not mention 'zaoszczędzone godziny', so that phrase is the item's own addition. Protective in direction, but it describes the source beyond what the stored text shows.",
+      "why": "This is a negative claim about what the paper measured. The snapshot title (perceived effectiveness) fits a perception outcome but cannot exclude other measures. The upstream remark says only that Leach measured how effective participants felt the meeting was, not how much work was done. It says nothing about saved hours or decision quality; decision quality appears in the upstream span only for the dropped sitting-versus-standing experiment. The word 'tu' also leaves open whether it refers to the paper or to this item.",
       "evidence": [
-        {"source": "upstream", "line": 8, "text": "Leach 测的是参会者自己觉得效果如何，不是实际干出了多少活"},
-        {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 8, "text": "Title: Perceived Meeting Effectiveness: The Role of Design Characteristics"}
+        {"source": "snapshot", "snapshot": "088a9773da2a17de.txt", "line": 8, "text": "Title: Perceived Meeting Effectiveness: The Role of Design Characteristics"},
+        {"source": "upstream", "line": 8, "text": "Leach 测的是参会者自己觉得效果如何，不是实际干出了多少活"}
       ],
-      "fix_direction": "Limit the sentence to what the title supports (perceived effectiveness), or support the 'not measured' and 'survey' details from a stored abstract or full text."
-    },
-    {
-      "severity": "minor",
-      "attack": "preservation",
-      "id": "Koszt#2",
-      "text": "Organizator musi przygotować plan i udostępnić go uczestnikom.",
-      "why": "The upstream rule 'do not hold a meeting without an agenda' (aimed at every attendee) is dropped, as the item declares, and the remaining advice addresses only the organiser. A participant of a meeting that has no plan gets no path in the item (for example asking for one). The removal itself is justified, but the reader who is not the organiser is left without any action.",
-      "evidence": [
-        {"source": "upstream", "line": 1, "text": "会前发议程，没议程的会不开；能站着开就站着开"}
-      ],
-      "fix_direction": "Consider an editorial, clearly labelled remark for participants, or state that the advice concerns the person who organises the meeting."
-    },
-    {
-      "severity": "minor",
-      "attack": "scope-words",
-      "id": "Korzyść i dowody#1",
-      "text": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby.",
-      "why": "The item states no population, setting or meeting type for the two studies, and the advice and title speak of 'spotkania' in general. Neither the snapshot nor the upstream span says who was surveyed or in what kind of meetings (the upstream gives a population only for the separate standing-meeting experiment, which was dropped). AGENTS.md asks to preserve conditions and population, so a reader could apply the result to any meeting; whether this is a widening cannot be decided from the stored texts.",
-      "evidence": [
-        {"source": "upstream", "line": 5, "text": "两项调查分别有 958 人和 292 人"},
-        {"source": "upstream", "line": 8, "text": "站会那项实验做的是 5 人小组在实验室里的任务"}
-      ],
-      "fix_direction": "After the abstract or full text is stored, state who was surveyed and in what kind of meetings, and keep the advice within that scope or label it an editorial extension."
+      "fix_direction": "Tie the sentence to what is confirmed (the outcome was perceived effectiveness) and do not list specific unmeasured outcomes unless the abstract or full text shows them."
     }
   ],
-  "notes": "No blocker found. Status is UNAVAILABLE because the only snapshot is Crossref metadata without abstract (title, authors, journal, year, DOI): the grade attack cannot be decided and the association, the study count and the sample sizes rest on the upstream span alone, which is a lead and not evidence. No Chinese institution, hotline, threshold or legal rule appears in reader-facing fields (leak: no finding); the item has no cross-reference links, so the self-containment attack found nothing. Id guess: Zmiany w adaptacji and Źródła are not in packet.propositions, so 'Zmiany w adaptacji#2' is my own field#index convention (second sentence of that field). Protocol: I opened only the role file, AGENTS.md, README.md (located the heading with one Grep on README.md, then read lines 38-79, which run past the end of the 'Jak czytać dowody' section into the next section and the start of the reader instructions), the packet and snapshot 088a9773da2a17de.txt. CLAUDE.md was injected into context by the harness; I did not open it myself. Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened, and no shell or network was used."
+  "notes": "Status is UNAVAILABLE because the only cited source (sources[0], DOI 10.1007/s10869-009-9092-6) is a metadata-only snapshot: no abstract, methods or results are stored, so the figures 958 and 292, the exposure studied, the study design and the unmeasured outcomes cannot be confirmed or refuted from stored evidence. No blocker found: the advised action is low-risk and carries no Chinese institution, hotline, threshold, deadline, liability rule or legal or medical statement (leak attack: no finding); with the cross-reference links removed the item is still actionable alone (self-containment: no finding); the snapshots show no newer guidance and no conflicting authority (recency: no finding). Scope-words is in attacks_not_assessable only because no stored text gives the respondents' population. Two statements outside the proposition list also depend on the thin source: the Źródła field says 'DOI i abstrakt wydawcy' although the snapshot access is 'tylko metadane, bez abstraktu', and the Zmiany w adaptacji field calls the link about using the plan 'zweryfikowany tu'. Both are covered in the findings on Korzyść i dowody#1 and #2 because only proposition ids are valid. Protocol: I opened only the brief, .claude/agents/pl-claim-adversary.md, AGENTS.md, README.md (the section 'Jak czytać dowody' from line 42), packet-adversary.json and snapshot 088a9773da2a17de.txt. I ran one Glob on audit/runs/run7/04.5/, which printed the names of other files in that directory; I opened none of them, including the previous adversary-a.json."
 }
