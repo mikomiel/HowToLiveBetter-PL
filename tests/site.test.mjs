@@ -116,6 +116,9 @@ test('the checker finds the ways index.html can reach outside the site that it l
   flagged('<meta http-equiv="refresh" content="0; url=https://evil.example/">', 'meta http-equiv="refresh"');
   flagged('<META HTTP-EQUIV=Refresh CONTENT="0">', 'meta http-equiv="refresh"');
   flagged("<script>fetch('https://evil.example/')</script>", 'inline script');
+  flagged('<SCRIPT>alert(1)</SCRIPT>', 'inline script');
+  flagged('<script type="module">\nimport("./x.mjs")\n</script>', 'inline script');
+  flagged('<script> </script><script>x</script>', 'inline script');
   flagged('<button onclick="location=\'https://evil.example/\'">x</button>', 'event handler attribute: onclick');
   flagged('<body onload="x()">', 'event handler attribute: onload');
   flagged('<iframe srcdoc="&lt;p&gt;x&lt;/p&gt;"></iframe>', 'srcdoc');
@@ -128,7 +131,7 @@ test('the checker finds the ways index.html can reach outside the site that it l
   flagged('<div style="background:url(\'https://example.org/x.png\')"></div>', 'https://example.org/x.png');
   flagged('<style>body { background: u\\72l(https://evil.example/q.png) }</style>', 'CSS escape');
 
-  const fine = check('<a href="https://example.org/">ok</a><a href="#porady">ok</a><a href="./LICENSE">ok</a><a HREF=\'LICENSE-CODE\'>ok</a><img src="book/pl/03-nie-marnuj-energii.md" alt="">');
+  const fine = check('<script src="reader.mjs"></script\t\n >'+'<script src="reader.mjs"> \n </SCRIPT >'+'<a href="https://example.org/">ok</a><a href="#porady">ok</a><a href="./LICENSE">ok</a><a HREF=\'LICENSE-CODE\'>ok</a><img src="book/pl/03-nie-marnuj-energii.md" alt="">');
   assert.deepEqual(fine.filter(p => !/^differs from the repository file: index\.html$/.test(p)), [], 'ordinary https links, anchors and files on the site are fine');
 }));
 
