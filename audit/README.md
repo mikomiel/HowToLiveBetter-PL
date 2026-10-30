@@ -1,6 +1,6 @@
 # Przegląd opublikowanych porad: stan prac i wznowienie
 
-Stan na 2026-10-29. Przegląd jest **wstrzymany na prośbę właściciela**. Wznawiaj go tylko na jego polecenie.
+Stan na 2026-10-30. Przegląd był wstrzymany na prośbę właściciela, który wznowił go 2026-10-30; przebieg run7 jest wykonany (112 z 115 raportów przyjętych, 3 odrzucone po trzech próbach). Wyniki i to, co czeka na właściciela: [runs/run7/STATUS.md](runs/run7/STATUS.md). Dalsze przebiegi i wszelkie zmiany tekstu tylko na polecenie właściciela.
 
 Ten katalog zawiera wszystko, co potrzebne do kontynuacji w dowolnym narzędziu (Codex, Claude Code, inne): raporty z dotychczasowych przebiegów, wykaz źródeł i opis kroków. Nic tu nie zależy od konkretnego agenta. Skrypty są w Node, role to zwykłe pliki Markdown, a sprawdzanie raportów robią skrypty, nie model.
 
