@@ -104,10 +104,10 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Status: verified
 - Koszt: Zmiana sposobu pracy i odłożenie części pobocznych czynności. To ocena redakcji.
 - W praktyce: Wybierz bieżące zadanie i odłóż niezwiązane z nim wiadomości, jeśli możesz to zrobić bezpiecznie. Nie traktuj tego jako zakazu wszystkich czynności równoległych.
-- Korzyść i dowody: Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami. Bezpośrednio po przełączeniu odpowiedzi były wolniejsze i zwykle częściej błędne. Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.
+- Korzyść i dowody: Przegląd Monsella opisuje eksperymenty z przełączaniem między prostymi zadaniami. Bezpośrednio po przełączeniu reakcje były wolniejsze i zwykle częściej błędne. Przygotowanie zmniejszało, lecz nie usuwało kosztu przełączenia.
 - Ocena dowodów: B — przegląd eksperymentów nad przełączaniem prostych zadań, bez jednej uniwersalnej wielkości efektu.
 - Ocena redakcyjna: Warto ograniczać zbędne przełączanie tam, gdzie przeszkadza w wykonaniu pracy.
-- Ograniczenia: Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste używanie mediów powoduje trwały spadek zdolności poznawczych.
+- Ograniczenia: Nie jest to dowód, że każda wielozadaniowość szkodzi tak samo ani że częste korzystanie z mediów powoduje trwały spadek zdolności poznawczych.
 - Źródła: Monsell (2003), Task switching. [Abstrakt przeglądu](https://doi.org/10.1016/S1364-6613%2803%2900028-7).
 - Oryginał: [03.7](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L75-L82)
 - Weryfikacja: 2026-10-28; abstrakt: wolniejsze odpowiedzi, zwykle więcej błędów i wpływ przygotowania. Bez pełnego przeglądu.
