@@ -8,11 +8,11 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 <a id="porada-4-1"></a>
 
-### 1. Zapisz, kiedy i w jakiej sytuacji zaczniesz działać
+### 1. Zapisz, kiedy i w jakiej sytuacji zabierzesz się do zadania
 - Status: verified
-- Koszt: Bez dodatkowych wydatków. Chwila na zapisanie planu i późniejszy wysiłek wykonania zadania. To szacunek redakcji.
-- W praktyce: Zamiast „zajmę się tekstem” napisz: „Gdy we wtorek usiądę po śniadaniu przy biurku, otworzę plik i napiszę pierwszy akapit”. Wybierz cel, który rzeczywiście chcesz zrealizować.
-- Korzyść i dowody: Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”. Średni efekt dla realizacji celów wyniósł d = 0,65. To standaryzowana miara różnicy, nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin.
+- Koszt: Bez dodatkowych wydatków. Chwila na zapisanie planu i późniejszy wysiłek wykonania zadania. To oszacowanie redakcji.
+- W praktyce: Zamiast „zajmę się tekstem” napisz: „Gdy we wtorek po śniadaniu usiądę przy biurku, otworzę plik i napiszę pierwszy akapit”. Wybierz cel, który rzeczywiście chcesz zrealizować.
+- Korzyść i dowody: Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”, takich jak plan z przykładu powyżej. Średni efekt dla realizacji celów wyniósł d = 0,65. To standaryzowana miara różnicy, nie wzrost skuteczności o 65% ani liczba zaoszczędzonych godzin.
 - Ocena dowodów: A — ilościowa synteza wielu badań; wynik dotyczy realizacji celów, nie oszczędności czasu w Polsce.
 - Ocena redakcyjna: Mały koszt przygotowania uzasadnia próbę. Sprawdź, czy plan pomaga w twoim konkretnym zadaniu.
 - Ograniczenia: Wynik jest średnią z różnych zadań i grup. Plan nie zapewnia sukcesu i nie zastępuje umiejętności ani zasobów potrzebnych do działania.
