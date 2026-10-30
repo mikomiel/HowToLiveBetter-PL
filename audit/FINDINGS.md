@@ -4,6 +4,7 @@ Stan na 2026-10-29. Dowody (raporty) są w [runs/](runs/). Jak wznowić przeglą
 
 ## Decyzje właściciela
 
+- **2026-10-30: rozstrzygnięto różnice między dwoma przebiegami weryfikatora w run7** (13 pozycji i 03.3, sekcja F poniżej). Zdania, których nie zawiera żadne czytelne źródło, dostały oznaczenie „Propozycja redakcji:”, zdanie o numerze 112 w 03.18 zawężono do źródła, a w 03.3 zawężono wzmiankę o losowym przydziale. Poprawki są w osobnych commitach „draft: … (for owner review)”.
 - **2026-10-30: właściciel wznowił przegląd.** Wykonano przebieg run7 na wszystkich 32 opublikowanych pozycjach. Wyniki i otwarte sprawy (trzy odrzucone raporty, różnice między przebiegami weryfikatora, propozycje redaktora): [runs/run7/STATUS.md](runs/run7/STATUS.md). Tekst książki nie został zmieniony.
 - **2026-10-29: przyjęto wszystkie poprawki z sekcji A** (03.4, 04.4, 14.2, 14.7) oraz zastrzeżenie o braku przeglądu prawnika w 14.7, 14.8 i 14.9. Commity nazwane „draft: … (for owner review)” zostają w historii pod tą nazwą, bo historii nie przepisujemy. Status `verified` pozostał bez zmian. Każdą poprawkę nadal da się cofnąć osobno.
 - **2026-10-29: dopisano wskaźnik do tego przeglądu w AGENTS.md** (jedno zdanie w „Zakres i źródła”), za zgodą właściciela.
@@ -59,3 +60,22 @@ Wiele z tych zaleceń to zdrowy rozsądek i może zostać jako oznaczone „Prop
 3. **Zakres.** Rozdziały 03, 04 i 14 to uzgodniony zakres. Szersza próba (20–30 pozycji z innych rozdziałów) wymaga zgody właściciela.
 4. ~~Wskaźnik w AGENTS.md~~ Zrobione 2026-10-29 za zgodą właściciela: AGENTS.md odsyła do audit/README.md i audit/FINDINGS.md, więc nowa sesja w Codex lub Claude Code dowie się o wstrzymanym przeglądzie sama.
 5. **Komu wolno wznowić.** Przegląd jest wstrzymany na prośbę właściciela, więc wznowienie wymaga jego polecenia.
+
+## F. Decyzje właściciela o różnicach przebiegu run7 (2026-10-30)
+
+Dwa przebiegi weryfikatora różniły się przy 14 pozycjach (33 wiersze plus jeden w 03.3). Żadne zdanie nie jest sprzeczne ze źródłem; różnice dotyczą tego, czy zdanie jest poradą redakcji, czy twierdzeniem o źródle, i jak surowo je czytać. Szczegóły są w [runs/run7/digest.md](runs/run7/digest.md).
+
+| Pozycja | Decyzja właściciela | Skutek w tekście |
+|---|---|---|
+| 03.2 | oznaczyć oba zdania jako propozycje redakcji | „Nie traktuj regularności…” (W praktyce) i „Praca zmianowa, choroby…” (Ograniczenia) |
+| 03.3 | zawęzić wzmiankę o losowym przydziale | Ocena dowodów: losowy przydział do 4, 6 lub 8 godzin opisano tylko dla eksperymentu z ograniczaniem snu |
+| 03.8 | oznaczyć zdanie o jednej godzinie | „Nie traktuj jednej godziny…” jako propozycja redakcji |
+| 03.18 | oznaczyć i zawęzić | dwa zdania o ruchu jako propozycje redakcji; ze zdania o numerze 112 usunięto „zamiast czekać na rozmowę wspierającą” |
+| 03.26 | oznaczyć zdanie ostrzegawcze | „Nie zmieniaj samodzielnie przepisanych leków…” jako propozycja redakcji |
+| 14.1 | oznaczyć zdanie | „Nie zatwierdzaj logowania, którego nie rozpoczynasz.” jako propozycja redakcji |
+| 14.4 | oznaczyć zdanie | „Powiadom operatora o utracie karty…” jako propozycja redakcji |
+| 14.10 | oznaczyć oba zdania | „Nie pozwalaj niezweryfikowanym odpowiedziom AI…” i „Przy ujawnieniu klucza…” jako propozycje redakcji |
+| 03.27, 04.9, 14.2, 14.6, 14.9, 14.12 | przyjąć bez zmian | różnice dotyczą klasyfikacji zdań lub surowości odczytu; nic nie przeczy źródłu. W 14.6 zostaje słowo „oficjalny”, w 14.9 oba zdania |
+
+Zmiany w tekście wprowadzają commity „draft: … (for owner review)” w osobnym PR, ułożonym na PR z edycjami językowymi, bo oba zmieniają te same wiersze pól. W polu „Zmiany w adaptacji” każdej zmienionej pozycji dopisano, co i dlaczego zmieniono. Status `verified` pozostaje; zdania oznaczone jako propozycje redakcji nie są twierdzeniami o źródle.
+
