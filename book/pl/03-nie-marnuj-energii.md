@@ -118,11 +118,11 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 8. Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie
 - Status: verified
 - Koszt: Zmiana wieczornego nawyku i wybór innego zajęcia. To ocena redakcji, bez obowiązku zakupu urządzenia.
-- W praktyce: Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki. Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.
-- Korzyść i dowody: Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z emitującego światło urządzenia oraz papierowej książki. W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów. Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.
+- W praktyce: Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie książki papierowej. Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.
+- Korzyść i dowody: Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z urządzenia emitującego światło oraz książki papierowej. W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów. Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.
 - Ocena dowodów: B — małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych.
-- Ocena redakcyjna: Zmiana wieczornej rutyny jest próbą do dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.
-- Ograniczenia: Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym. Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu.
+- Ocena redakcyjna: Zmiana wieczornego nawyku jest próbą dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.
+- Ograniczenia: Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym. Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego korzystania z ekranu w domu.
 - Źródła: Chang i współautorzy (2015), Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. [Artykuł, abstrakt i wyniki](https://doi.org/10.1073/pnas.1418490112); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.8](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L84-L91)
 - Weryfikacja: 2026-10-28; abstrakt i Results: 12 osób, randomizowany układ krzyżowy, około czterech godzin i pięć wieczorów; zalecenia NHS.
