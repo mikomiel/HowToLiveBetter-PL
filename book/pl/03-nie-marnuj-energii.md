@@ -88,7 +88,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 6. Ogranicz przerwania w zadaniach wykonywanych krok po kroku
 - Status: verified
 - Koszt: Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”. To ocena redakcji.
-- W praktyce: Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.
+- W praktyce: Przed zadaniem, w którym łatwo stracić miejsce w sekwencji kroków, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.
 - Korzyść i dowody: Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji. Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.
 - Ocena dowodów: B — eksperyment laboratoryjny dotyczący błędów sekwencji.
 - Ocena redakcyjna: Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.
