@@ -1,0 +1,130 @@
+{
+  "item": "03.2",
+  "status": "UNAVAILABLE",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [
+    {
+      "attack": "numbers",
+      "reason": "The only figures in the item (61 students, 30 days) occur only in the upstream span (line 5), which is a lead and not evidence. The one cited source that could confirm them, the Nature article (Phillips et al. 2017), is blocked (HTTP 429, snapshot null), so no stored snapshot can confirm or refute them. The item contains no d, HR, OR, percentage or editorial calculation to test."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Fix the wake-up time, the same at weekends.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Sleep in less at weekends (needs a little willpower, costs no money).",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "After an occasional late night, make up for it by going to bed earlier that evening, not by sleeping until noon the next day (cross-reference to upstream item 2.38).",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Get outdoors in daylight more, in addition to a fixed wake time (upstream itself says this is inferred from the authors' model and was not tested). Dropped deliberately and disclosed in Zmiany w adaptacji.",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania",
+      "why": "The upstream action is a fixed wake time that is the same at weekends, and the weekend sleep-in is the specific behaviour upstream asks the reader to cut. No reader-facing instruction field of the item mentions weekends or 'every day'; the weekend appears only as a removal in Zmiany w adaptacji. The cited NHS page says 'every day', so the item is both narrower and more conditional than its own source. The softening is in the safe direction and is disclosed, so a reader is not endangered, but a reader who reads only W praktyce will not learn which days matter.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "### 2. 固定起床时间，周末也一样"},
+        {"source": "upstream", "line": 3, "text": "周末要少睡懒觉，需要一点毅力"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"}
+      ],
+      "fix_direction": "Say explicitly whether weekends are included in the advice, and keep the 'if obligations allow' condition together with an explicit statement of what is still worth doing when it cannot be met."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#2",
+      "text": "Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania.",
+      "why": "The item introduces a condition that upstream did not have (obligations) and names groups for whom the advice does not fit, but 'inne planowanie' is not an action and no snapshot says what that planning is. A shift worker, a carer or an ill reader whose preferred option (similar wake times) is unavailable gets no path other than the generic doctor sentence for persistent sleep problems. The sentence about illness is editorial and not supported by any snapshot line.",
+      "evidence": [],
+      "fix_direction": "Either state a verified fallback for readers who cannot keep similar wake times, or say plainly that the sources checked give no guidance for them."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Nie traktuj regularności jako powodu do celowego niedosypiania.",
+      "why": "Upstream line 8 carries a second action: after an occasional late night, go to bed earlier that evening and do not sleep until noon. It was dropped, and Zmiany w adaptacji does not list the drop (it lists only the light inference and the weekend order). The cited NHS page also addresses this case ('do not sleep in after a bad night's sleep'). The two sources differ in detail (go to bed earlier vs stick to regular hours), so the item has to choose between them with a stated reason. As it stands, a reader who stayed up late is told nothing about the next morning.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "办法是当晚早点上床，不是第二天睡到中午"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 129, "text": "stick to your regular sleeping hours instead"}
+      ],
+      "fix_direction": "Decide whether the late-night path is kept, narrowed to what the NHS page says, or dropped, and record the decision in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "przeznacz wystarczająco dużo czasu na sen",
+      "why": "The upstream action is only a fixed wake time. 'Allot enough time for sleep' (and the title's 'nie skracając odpoczynku') is not in the upstream span, and the NHS snapshot gives only average sleep need and says it varies; it does not advise allotting time. For a reader with insomnia, which is the context of the cited NHS page, the same page advises going to bed only when sleepy, so 'allot time' can be read as more time in bed. The action is wider than the source, is not labelled as an editorial addition, and Zmiany w adaptacji does not mention it.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "### 2. 固定起床时间，周末也一样"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 37, "text": "Everyone needs different amounts of sleep."},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 103, "text": "only go to bed when you're sleepy"}
+      ],
+      "fix_direction": "Mark the 'enough time for sleep' part as an editorial addition (and record it in Zmiany w adaptacji), or tie it to what the sources actually say about sleep need."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "NHS zaleca stałą porę wstawania jako element dbania o sen.",
+      "why": "In the snapshot this recommendation sits under 'How you can treat insomnia yourself', on a page about people who regularly have trouble sleeping. The item states it as general sleep care and does not say the NHS context is insomnia. Ocena dowodów calls it 'zalecenie dla pacjentów'. The wording widens the population from people with insomnia to everyone.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 97, "text": "How you can treat insomnia yourself"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"}
+      ],
+      "fix_direction": "State that the NHS recommendation appears in self-help advice for people with insomnia."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "mniej regularna grupa miała późniejszy rytm dobowy",
+      "why": "Upstream compares the least regular fifth of the students with the most regular fifth (extremes of the distribution, about 2.5 h apart). 'Mniej regularna grupa' reads as a split into a regular and a less regular group and loses that it is an extreme-group comparison. The point rests on the upstream lead only, because the Nature article is blocked.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "作息最不规律的五分之一，生物钟（昼夜节律）比最规律的五分之一晚约 2.5 小时"}
+      ],
+      "fix_direction": "Say that the comparison is between the least regular and the most regular fifth of the participants, once the article text can be checked."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Organizacja dnia i pogodzenie snu z obowiązkami.",
+      "why": "Upstream states the cost explicitly: no money, and weekend sleep-ins cost a little willpower. The item's Koszt field names neither the money cost nor the effort of giving up weekend sleep-ins. AGENTS.md asks to separate the cost of money, time and effort. This does not change what a reader does.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "成本：不花钱。周末要少睡懒觉，需要一点毅力。"}
+      ],
+      "fix_direction": "State the money and effort cost separately, as editorial estimates."
+    }
+  ],
+  "notes": "The cited Nature article (Phillips et al. 2017) is blocked (HTTP 429, no snapshot), so every claim that depends on it is checked only against the upstream span, which is a lead: 61 students, 30 days, the association with academic results, the later circadian timing, and the wording 'małe badanie obserwacyjne' in Ocena dowodów. Only the NHS snapshot b59686537010480d.txt (page last reviewed 19 March 2024) is evidence. It supports the wake-time action and the 'see a doctor if problems persist' limitation, but it is an insomnia self-help page and not a study of academic results. The grade attack was run only against the item's own description of the evidence and the README definitions (B: single study, limited samples); the study design could not be confirmed from a snapshot. Status UNAVAILABLE because the main evidence source is blocked. No blocker was found. The recency and conflict attack was run and found nothing: the only snapshot is the NHS page, which agrees with the study direction, and no snapshot shows a conflict. Protocol: I opened only AGENTS.md, .claude/agents/pl-claim-adversary.md, README.md (a slice of lines 30-90 around 'Jak czytać dowody', which is wider than that one section), the packet and snapshot b59686537010480d.txt. Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened."
+}
