@@ -1,0 +1,147 @@
+{
+  "version": 2,
+  "item": "14.3",
+  "role": "verifier",
+  "title": "Ustaw blokadę ekranu i rozważ PIN karty SIM",
+  "fields": {
+    "Koszt": "Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu. To ocena redakcji.",
+    "W praktyce": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM. Nie zgaduj kodu początkowego ani PUK. Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.",
+    "Korzyść i dowody": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty. To inne zabezpieczenie niż kod odblokowujący ekran. Google opisuje osobno zdalne zablokowanie utraconego telefonu.",
+    "Ocena dowodów": "C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych.",
+    "Ocena redakcyjna": "Te zabezpieczenia dotyczą różnych dróg dostępu. Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania.",
+    "Ograniczenia": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany. PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora. Dostępność i nazwy ustawień zależą od urządzenia i karty."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ustaw blokadę ekranu i rozważ PIN karty SIM"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Konfiguracja i bezpieczne zachowanie danych potrzebnych do odzyskania dostępu."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie zgaduj kodu początkowego ani PUK."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Instrukcja Apple opisuje blokowanie SIM lub eSIM po ponownym uruchomieniu urządzenia albo wyjęciu karty."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "To inne zabezpieczenie niż kod odblokowujący ekran."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Google opisuje osobno zdalne zablokowanie utraconego telefonu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Te zabezpieczenia dotyczą różnych dróg dostępu."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Warto wiedzieć, którego kodu żąda urządzenie, zanim podejmie się próbę odblokowania."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Dostępność i nazwy ustawień zależą od urządzenia i karty."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://support.apple.com/pl-pl/118228",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 429,
+      "error": null,
+      "via": "https://support.apple.com/pl-pl/118228",
+      "finalUrl": "https://support.apple.com/pl-pl/118228",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "finalUrl": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 9244,
+      "sha256": "bac21f080043d19d8f00087539413e887c944fbb87dd351912bbf7f7046121cb",
+      "snapshot": "7d4296b28eab6e78.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 9122,
+        "wholeChars": 11280,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

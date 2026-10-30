@@ -1,0 +1,181 @@
+{
+  "version": 2,
+  "item": "14.4",
+  "role": "verifier",
+  "title": "Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta",
+  "fields": {
+    "Koszt": "Dostęp do innego zaufanego urządzenia i kontakt z dostawcami usług. Czas i ewentualne opłaty zależą od sytuacji.",
+    "W praktyce": "Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna. Powiadom operatora o utracie karty i ustal jej zabezpieczenie. Jeśli zagrożony jest dostęp do banku lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem. Podejrzenie kradzieży zgłoś policji. Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne.",
+    "Korzyść i dowody": "Google i Apple opisują zdalną blokadę i inne działania po utracie urządzenia. Apple wskazuje także kontakt z operatorem. Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach.",
+    "Ocena dowodów": "C — oficjalne instrukcje reagowania; nie badanie jednego optymalnego porządku działań.",
+    "Ocena redakcyjna": "Przygotowana wcześniej lista oficjalnych kontaktów może ułatwić reakcję. Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów.",
+    "Ograniczenia": "Zdalne funkcje zależą od wcześniejszych ustawień i łączności. Wymazanie może nieodwracalnie usunąć dane; po resecie Android może przestać być widoczny w usłudze lokalizacji. Apple ostrzega przed usunięciem urządzenia z listy Znajdź, bo usuwa to blokadę aktywacji. Zanim wybierzesz kasowanie lub usunięcie z konta, przeczytaj instrukcję dla swojego urządzenia."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Dostęp do innego zaufanego urządzenia i kontakt z dostawcami usług."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Czas i ewentualne opłaty zależą od sytuacji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Powiadom operatora o utracie karty i ustal jej zabezpieczenie."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Jeśli zagrożony jest dostęp do banku lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Podejrzenie kradzieży zgłoś policji."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Google i Apple opisują zdalną blokadę i inne działania po utracie urządzenia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Apple wskazuje także kontakt z operatorem."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — oficjalne instrukcje reagowania; nie badanie jednego optymalnego porządku działań."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przygotowana wcześniej lista oficjalnych kontaktów może ułatwić reakcję."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Zdalne funkcje zależą od wcześniejszych ustawień i łączności."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Wymazanie może nieodwracalnie usunąć dane; po resecie Android może przestać być widoczny w usłudze lokalizacji."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Apple ostrzega przed usunięciem urządzenia z listy Znajdź, bo usuwa to blokadę aktywacji."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Zanim wybierzesz kasowanie lub usunięcie z konta, przeczytaj instrukcję dla swojego urządzenia."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "finalUrl": "https://support.google.com/accounts/answer/6160491?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 9244,
+      "sha256": "bac21f080043d19d8f00087539413e887c944fbb87dd351912bbf7f7046121cb",
+      "snapshot": "7d4296b28eab6e78.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 9122,
+        "wholeChars": 11280,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://support.apple.com/pl-pl/101593",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 429,
+      "error": null,
+      "via": "https://support.apple.com/pl-pl/101593",
+      "finalUrl": "https://support.apple.com/pl-pl/101593",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://rf.gov.pl/edukacja/baza-wiedzy/najczestsze-pytania-i-odpowiedzi-faq/transakcje-nieautoryzowane/",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 200,
+      "error": null,
+      "via": "https://rf.gov.pl/edukacja/baza-wiedzy/najczestsze-pytania-i-odpowiedzi-faq/transakcje-nieautoryzowane/",
+      "finalUrl": "https://rf.gov.pl/edukacja/baza-wiedzy/najczestsze-pytania-i-odpowiedzi-faq/transakcje-nieautoryzowane/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": []
+}

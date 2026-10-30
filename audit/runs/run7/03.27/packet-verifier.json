@@ -1,0 +1,167 @@
+{
+  "version": 2,
+  "item": "03.27",
+  "role": "verifier",
+  "title": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi",
+  "fields": {
+    "Koszt": "Konsultacja, ewentualne badanie snu i leczenie. Organizacja i wydatki zależą od sytuacji; nie podajemy cen aparatu ani zasad refundacji.",
+    "W praktyce": "Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.",
+    "Korzyść i dowody": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego. Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.",
+    "Ocena dowodów": "B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika.",
+    "Ocena redakcyjna": "Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.",
+    "Ograniczenia": "Chrapanie samo w sobie nie jest rozpoznaniem. Rodzaj badania i leczenia dobiera osoba prowadząca. Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem. Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Konsultacja, ewentualne badanie snu i leczenie."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Organizacja i wydatki zależą od sytuacji; nie podajemy cen aparatu ani zasad refundacji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Chrapanie samo w sobie nie jest rozpoznaniem."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Rodzaj badania i leczenia dobiera osoba prowadząca."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.nice.org.uk/guidance/ng202/chapter/1-Obstructive-sleep-apnoeahypopnoea-syndrome",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nice.org.uk/guidance/ng202/chapter/1-Obstructive-sleep-apnoeahypopnoea-syndrome",
+      "finalUrl": "https://www.nice.org.uk/guidance/ng202/chapter/1-Obstructive-sleep-apnoeahypopnoea-syndrome",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 21379,
+      "sha256": "ad4ec7d48eae659d628e5ce784b9b72c3d3b8890f59496552708ab05e328f765",
+      "snapshot": "d2dea5869951c1d9.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 21212,
+        "wholeChars": 21212,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nice.org.uk/guidance/ng202/chapter/4-Information-for-people-with-OSAHS-OHS-or-COPDOSAHS-overlap-syndrome",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nice.org.uk/guidance/ng202/chapter/4-Information-for-people-with-OSAHS-OHS-or-COPDOSAHS-overlap-syndrome",
+      "finalUrl": "https://www.nice.org.uk/guidance/ng202/chapter/4-Information-for-people-with-OSAHS-OHS-or-COPDOSAHS-overlap-syndrome",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4499,
+      "sha256": "7483bd9c3990089976b8bf7908080060a43d45be6a95a058d7896f68ba5e2ce7",
+      "snapshot": "024454efeeae7d39.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4306,
+        "wholeChars": 4306,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

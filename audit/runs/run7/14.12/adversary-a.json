@@ -1,0 +1,223 @@
+{
+  "item": "14.12",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Before changing the number or giving up the old one, rebind bank, payment and social accounts to the new number; do not just let the old number lapse unpaid.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "The phone number reserved at the bank must be changed through the bank itself.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Warning that the hard part is missing accounts, because obscure accounts are forgotten.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Rationale, not an action: a recycled number reaches a new holder, unrebound accounts stay tied to it, and codes go to the new holder, who may log in.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Before switching, change the accounts and the bank-reserved number to the new number.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Carriers advise unbinding payment and messaging apps before changing or cancelling a number and promptly changing the number reserved for bank cards.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Use the carriers' app service for unbinding accounts registered to a previous holder of a recycled number you received.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "First use a state lookup service to see how many accounts are linked to the old number.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Order of work: bank and payment accounts first, then social accounts; cancel accounts you no longer use instead of rebinding them.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "After rebinding, do not stop the old number at once; keep it for one to two months to receive verification SMS from missed accounts.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Cross-references to other items: what to do if an account was already entered by someone else, and logging out and resetting a phone you sell.",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "Ocena redakcyjna#1",
+      "text": "Warto sprawdzić działanie nowej metody przed wyłączeniem starej.",
+      "why": "The upstream tells the reader not to stop the old number right after rebinding, but to keep it for a period to catch verification SMS from accounts that were missed, and it names missing accounts as the hard part. The item keeps only an ordering (check the new method before switching off the old one). Its change note says the retention period was removed. Nothing in the reader-facing fields now tells the reader to keep the old number reachable, so a reader who missed an account, or whose new number is not yet accepted, has no stated path once the old number is gone. The duration is marked in the same upstream line as author experience, so dropping the figure is defensible; the reason does not cover dropping the action itself.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "改完别马上停号，留一两个月接漏掉的验证码短信"
+        },
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "难的是容易漏，冷门账号想不起来"
+        }
+      ],
+      "fix_direction": "Restore the action without the Chinese duration: keep the old number active and reachable for some time after the changes and watch for verification messages from missed accounts, labelled as an editorial step, and say what to do when an account was missed. Re-check against sources before publishing."
+    },
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "ustaw i sprawdź nowy numer lub inną metodę odzyskiwania, zanim stracisz do niego dostęp",
+      "why": "The item makes checking the new number the checkpoint before the old number is given up. The Google page cited as the evidence says that a new number may need up to a week before it can be used to verify identity for sensitive actions such as a password change. A reader who adds the new number, sees it saved and drops the old one the same day may have no usable recovery number on the Google account during that period. This timing condition appears neither in the item nor in Ograniczenia.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 13,
+          "text": "zanim będzie można używać nowego numeru telefonu do weryfikowania tożsamości przy wrażliwych działaniach, takich jak zmiana hasła, może upłynąć tydzień"
+        }
+      ],
+      "fix_direction": "State the Google delay as a condition of that provider, in the snapshot's own terms, and tie the checkpoint to the new number actually working. Do not generalise the one-week period to other providers."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Przed rezygnacją z numeru telefonu sprawdź powiązane konta",
+      "why": "The title names the action as checking linked accounts, while the upstream action is to rebind the accounts to the new number and the body says to set and check the new number. A reader who follows only the title can review the accounts without changing anything. AGENTS.md asks the title to show the action.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 1,
+          "text": "先把银行、支付和社交账号改绑到新号上"
+        }
+      ],
+      "fix_direction": "Make the title name the replacement (a new number or another recovery method) as well as the check."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "W usługach, które korzystają ze starego numeru",
+      "why": "The upstream names missing accounts as the difficulty and gives a first step for finding them: a lookup of the accounts linked to the old number, with a see-item cross-reference. That step is a Chinese state service and was rightly dropped, but the item gives no replacement way to list the services that use the number, so 'Przegląd używanych usług' has no starting point. The Google snapshot does offer one for the Google account (the Telefon section shows some of the services using the number), which the item does not use.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "看旧号关联了多少个账号，见第"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 43,
+          "text": "Aby zobaczyć niektóre z usług, które używają Twojego numeru telefonu"
+        }
+      ],
+      "fix_direction": "Add a neutral way to find the services that use the number, using the provider's own list where the sources show one, and label it editorial where no source covers it."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#1",
+      "text": "Nie podajemy polskiego okresu ponownego przydziału numeru ani jednolitej procedury bankowej.",
+      "why": "The sentence refers to a period of number reassignment that the item never explains, and the hazard it belongs to (a new holder of a recycled number receiving the codes) was dropped from the reader-facing fields. Read alone, the sentence suggests that a Polish reassignment rule exists and that the item rests on it, yet neither snapshot mentions reassignment. The upstream marks the hazard as a carrier-staff statement in a media report with no official notice or ruling, so leaving it unproven is right, but the limitation should not then presuppose it.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "你没改绑的账号还连着这个号，验证码会发到新号主手机上"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "来源是媒体报道里运营商客服的说法，没有官方通报或判决"
+        }
+      ],
+      "fix_direction": "Either explain in one sentence what the reassignment concern is and mark it as unverified for Poland, or reword the limitation so it does not presuppose a rule that no stored source shows."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Uwzględnij pocztę, bank i inne ważne konta, ale postępuj według procedury każdego dostawcy.",
+      "why": "The NCSC page is a guide to recovering a hacked account. It supports only the general point that a provider's recovery process differs per account. It says nothing about replacing a phone number or about number reuse. The evidence field rests only on the Google page and Ocena dowodów describes the evidence as vendor documentation, so the reader is not told that the second source concerns a different situation.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "4f1351e404cb2044.txt",
+          "line": 17,
+          "text": "A step by step guide to recovering online accounts."
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "4f1351e404cb2044.txt",
+          "line": 45,
+          "text": "likely to be different for each account"
+        }
+      ],
+      "fix_direction": "Say in the evidence or limitations that the NCSC page concerns recovery after a compromise and is used only for the point that procedures differ by provider."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "jego zmiana na koncie wpływa tylko na niektóre usługi; inne mogą mieć własne ustawienia",
+      "why": "The snapshot says a change of the number on the account will be visible only in some Google services. The item says the change 'wpływa tylko na niektóre usługi' without naming Google in that clause, which a reader can take as a statement about services in general, and 'wpływa' is not the snapshot's 'będzie widoczna'. The Google page also carries a notice that its Polish text may be AI-translated and contain errors, which Ograniczenia does not mention.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 33,
+          "text": "zmiana numeru telefonu na koncie będzie widoczna tylko w niektórych usługach Google"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "99611c948c4b589f.txt",
+          "line": 125,
+          "text": "Tłumaczenia wygenerowane przez AI mogą zawierać błędy."
+        }
+      ],
+      "fix_direction": "Name Google in the clause, keep the snapshot's wording, and note in the limitations that the checked Polish page carries a machine-translation notice."
+    }
+  ],
+  "notes": "Opened only: the brief, .claude/agents/pl-claim-adversary.md, AGENTS.md, README.md (Grep for the heading, then lines 38 to 77, which runs past the end of the section Jak czytać dowody into the next heading), the packet, and the two snapshots 99611c948c4b589f.txt and 4f1351e404cb2044.txt. No other file, no network, no shell. The existing report at this path was not read. Status PASS because no blocker was found; the two majors (dropped keep-the-old-number fallback, missing one-week Google condition) remain open. Numbers: the reader-facing fields contain no figures; the upstream figures (90 days, 258 apps, 850 million requests, one to two hours, one to two months) were all dropped and none leaked. Grade: C is kept and matches the README definition of C (operational recommendation or editorial judgement with no measured effect) and upstream.grade C. Leak: no Chinese institution, hotline, threshold or deadline in the advice fields; Zmiany w adaptacji names the removed 90-day term only to say it was removed. Recency: no snapshot shows a conflict; the Google page is undated and the NCSC page shows Reviewed 24 August 2022, so no ordering could be compared and no disagreement was found. All upstream quotes were copied from the numbered packet lines; none is taken from line 5."
+}

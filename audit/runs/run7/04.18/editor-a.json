@@ -1,0 +1,62 @@
+{
+  "item": "04.18",
+  "edits": [
+    {
+      "field": "Ocena dowodów",
+      "original": "wnioskach dla ogólnego zadowolenia z życia",
+      "replacement": "wnioskach dotyczących ogólnego zadowolenia z życia",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "niemieckich danych panelowych",
+      "replacement": "niemieckich danych panelowych (zebranych od tych samych osób w kolejnych latach)",
+      "reason": "term",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Koszt",
+      "text": "Nie podajemy niezweryfikowanych cen dla Polski.",
+      "why": "Zdanie brzmi urzędowo i jest dwuznaczne: negacja przy 'niezweryfikowanych' sugeruje, że podawane byłyby ceny zweryfikowane, choć pole nie podaje żadnych cen. 'Cen dla Polski' to kalka, po polsku raczej 'cen w Polsce'. Redaktor nie zmienia negacji ani nazwy jurysdykcji; weryfikator niech rozstrzygnie, czy sens to 'nie podajemy cen, bo nie zweryfikowano ich dla Polski'."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przegląd Chatterjee i współautorów potwierdza",
+      "why": "Nazwa rodzaju badania i czasownik siły dowodu. AGENTS.md każe syntezę badań nazywać syntezą; 'przegląd' może być poprawny (przegląd literatury), ale redaktor nie zna projektu pracy. Weryfikator niech sprawdzi, czy to przegląd systematyczny, narracyjny czy synteza ilościowa, i dobierze nazwę oraz czasownik ('potwierdza' vs 'wskazuje')."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "nie ustala spójnego związku z ogólną satysfakcją z życia",
+      "why": "'Nie ustala' to prawdopodobna kalka z angielskiego 'does not establish'; po polsku naturalniej 'nie wykazuje spójnego związku' lub 'nie daje spójnego obrazu związku'. Czasownik siły dowodu, negacja i przymiotnik 'spójnego' są chronione, więc bez edycji."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "zadowoleniem z samej podróży",
+      "why": "'Podróż' to prawdopodobna kalka z 'travel satisfaction' i kojarzy się z wyjazdem wakacyjnym; w tytule i reszcie pozycji mowa o 'dojeździe'. Może to być termin przyjęty w cytowanym przeglądzie, więc redaktor nie zamienia go na 'dojazd'; weryfikator niech zdecyduje."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "ogólnego zadowolenia z życia",
+      "why": "Ten sam wynik ma w pozycji dwie nazwy: 'ogólnego zadowolenia z życia' tutaj i 'ogólną satysfakcją z życia' w polu 'Korzyść i dowody'. Dla spójności warto zostawić jedną (utrwalone jest 'satysfakcja z życia'), ale to nazwa mierzonego wyniku, więc redaktor jej nie ujednolica. W tym samym zdaniu 'zadowolenie z samej podróży' oznacza inny wynik, więc nie zamieniać hurtowo."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "poprawi samopoczucie konkretnej osoby",
+      "why": "W pozycji ten sam wynik nazywa się 'dobrostan' (Korzyść i dowody), a tu 'samopoczucie', które jest węższe i potoczne. Jeśli oba oznaczają to samo, należy ujednolicić; zamiana nazwy wyniku i czasownik przyczynowy 'poprawi' są chronione, więc bez edycji."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "korzyści z pracy zmieniają bilans",
+      "why": "'Zmieniają bilans' to czasownik przyczynowy w trybie oznajmującym, bez żadnego modalnego ('mogą zmienić'), co brzmi kategoryczniej niż reszta zdania sugeruje. 'Korzyści z pracy' są niejasne (płaca, świadczenia, rozwój?) i bez źródła nie da się ich doprecyzować. Redaktor nie dodaje modalnego ani nie rozwija sformułowania."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "30 minut mniej w każdą stronę przez pięć dni daje 5 godzin tygodniowo",
+      "why": "W jednym zdaniu liczby zapisano raz słowem ('pięć dni'), raz cyfrą ('5 godzin'); konwencję liczb trzeba ujednolicić, ale liczby są chronione. 'Przez pięć dni' można też odczytać jako pięć kolejnych dni, a nie dni tygodnia pracy; weryfikator niech rozważy 'w pięć dni w tygodniu'. Rachunek (2 x 30 min x 5 dni = 300 min = 5 h) zgadza się, ale to ocena sensu, nie języka."
+    }
+  ],
+  "verdict": "needs_edits"
+}

@@ -1,0 +1,143 @@
+{
+  "item": "03.26",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Do CBT-I first for chronic insomnia (3+ nights a week, 3+ months); do not start with long-term sleeping pills", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Seek CBT-I at a clinic (sleep, psychiatry, psychology) or take a cheaper online self-help course", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Keep a daily sleep diary during the course", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Start stimulus control yourself (bed only when sleepy, get up when unable to sleep, bed for sleep and sex only, same wake time, no daytime naps)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Sleep restriction: shorten time in bed for the first weeks and accept more daytime sleepiness", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "CBT-I has five components (sleep restriction, stimulus control, cognitive therapy, relaxation, sleep hygiene) and usually runs 6 to 8 weeks", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "If CBT-I alone does not work, discuss adding short-term medication with a doctor", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Sleeping pills generally not beyond 4 weeks; reassess monthly if continued", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Sleep hygiene alone is not recommended", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Sleep restriction cautions: drivers and machine operators, mania proneness, uncontrolled epilepsy, severe daytime sleepiness; preferably under doctor follow-up", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "A few bad nights is not insomnia disorder; fix the wake time first (cross-reference)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Snoring, breathing pauses or heavy daytime sleepiness: rule out sleep apnoea first", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Low mood together with poor sleep: separate advice (cross-reference)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Do not count on melatonin to cure long-term insomnia", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody",
+      "why": "The only safety condition is a generic phrase. It does not say who establishes safety, names none of the populations for whom the sources flag sleep restriction (drivers and machinery operators, people predisposed to mania or hypomania, poorly controlled seizures, excessive daytime sleepiness), and does not tell the reader that sleep restriction is a built-in component of multicomponent CBT-I, so a digital or in-person CBT-I course that the item itself recommends will usually contain it. The AASM text also names early daytime fatigue, sleepiness, mood impairment and cognitive difficulty as the principal harms of CBT-I; the item mentions no harm at all (Koszt and Korzyść i dowody are silent). The upstream span kept the populations and the 'under doctor follow-up' condition (line 8). A reader who drives for work, has bipolar disorder or has epilepsy gets no cue to raise it before starting a programme.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 261, "text": "plus stimulus control instructions and sleep restriction therapy"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 304, "text": "this treatment may be contraindicated in certain populations such as those working in high risk occupations (eg, heavy machinery operators or drivers) or those predisposed to mania/hypomania or with poorly controlled seizure disorders"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 304, "text": "The principal harms associated with CBT-I are symptoms of daytime fatigue and sleepiness, mood impairment (eg, irritability), and cognitive difficulties (eg, attention problems) during treatment"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 334, "text": "poorly controlled seizure disorders or excessive daytime sleepiness"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 334, "text": "the patient is monitored by a clinician during treatment"},
+        {"source": "upstream", "line": 8, "text": "有躁狂倾向、癫痫没控制住、白天本来就特别困的人也要慎用，最好在医生跟进下做"}
+      ],
+      "fix_direction": "Add a sourced caution that names the groups and states that CBT-I commonly includes time-in-bed restriction with early daytime sleepiness, and make clear that a clinician decides and monitors. Keep the ban on self-started restriction. Do not present replacement wording as verified."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "Koszt#2",
+      "text": "Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.",
+      "why": "The item admits that availability varies but gives a reader who cannot get CBT-I (or for whom it is not suitable) no non-drug path. The upstream gave a self-start action (stimulus control rules, line 3) and a sleep diary; both were dropped. The AASM text says the other behavioural therapies should still be considered when CBT-I is not available, not desired or not appropriate, and gives stimulus control a conditional recommendation (with a note on adapting it for safety for people at risk of falls, with mobility problems or using sedative-hypnotics). What remains is 'tell a doctor' plus a neutral remark that medication may be justified. The Zmiany w adaptacji field discloses only the removal of self-directed sleep restriction, so the removal of stimulus control, the diary, the 6 to 8 week duration and the five-component description is not disclosed as a change.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "自己就能先做的是刺激控制：困了才上床，躺着睡不着就起床"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 364, "text": "should still be considered as viable treatment alternatives when CBT-I is not available or not desired by, or appropriate for, the patient"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 324, "text": "stimulus control may need to be adapted for safety in some patient populations, such as those at high risk for falls, with mobility issues, or using sedative-hypnotics"}
+      ],
+      "fix_direction": "State what a reader can do or ask for when CBT-I is not available or not suitable (for example the other AASM-supported behavioural options, discussed with a clinician), with the safety caveat, or say explicitly that no interim self-help step is offered and why. List the dropped components in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#3",
+      "text": "Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania.",
+      "why": "Accurate as far as it goes, but the sequence and the time limit are gone. The European abstract places medication after CBT-I proves insufficient and sets short-term use at 4 weeks or less, with longer use only in some cases after weighing pros and cons; NHS says sleeping pills are for a few days or weeks and only if other treatments have not worked. The upstream title's point ('not long-term pills first') no longer appears anywhere in the item, so the sentence reads as neutral reassurance about medication.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "When cognitive-behavioural therapy for insomnia is not sufficiently effective, a pharmacological intervention can be offered (A)."},
+        {"source": "snapshot", "snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "can be used for the short-term treatment of insomnia (≤ 4 weeks)"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 163, "text": "Sleeping pills are only prescribed for a few days, or weeks at the most, if:"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 167, "text": "other treatments have not worked"}
+      ],
+      "fix_direction": "Say that medication is a later, clinician-decided step after CBT-I is not enough and is usually short-term, without giving drug names or doses."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "w odpowiednim programie cyfrowym",
+      "why": "'Odpowiednim' is not defined anywhere in the item, and none of the three snapshots says what makes a digital programme appropriate: the European abstract says only 'digitally', NHS says 'an online self-help programme'. Ograniczenia#4 ('Program cyfrowy nie oznacza dowolnej aplikacji') is a caution without a criterion, so the reader cannot act on it. The AASM text, which the item cites for its strong recommendation, bases that recommendation primarily on professionally delivered CBT-I and makes no recommendation on delivery methods. This is not a disagreement with the European guideline, but the item does not say that the digital route rests on the European abstract and NHS, not on AASM.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "either applied in-person or digitally (A)"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 294, "text": "There was insufficient evidence to make recommendations for specific delivery methods"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 300, "text": "based primarily on studies in which CBT-I was delivered by a trained professional"}
+      ],
+      "fix_direction": "Give a checkable criterion for a suitable programme from a stored source, or say that the stored sources do not define one; attribute the digital option to the sources that support it."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#1",
+      "text": "Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu.",
+      "why": "The upstream span names concrete signs that call for ruling out sleep apnoea first (snoring, breathing pauses, heavy daytime sleepiness). The item keeps only the generic 'inne zaburzenia snu', so the reader is not told which symptoms to mention to the doctor. A path exists (see a doctor), hence minor.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "打鼾、睡觉憋气、白天困得厉害的，规范要求先排除睡眠呼吸暂停"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 91, "text": "snoring or interrupted breathing while sleeping (sleep apnoea)"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 159, "text": "You may be referred to a sleep clinic if you have symptoms of another sleep disorder such as sleep apnoea."}
+      ],
+      "fix_direction": "Name the symptoms worth mentioning (snoring, breathing pauses, heavy daytime sleepiness) as a sourced pointer to a doctor, not as a self-diagnosis rule."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#2",
+      "text": "Nie trzeba czekać miesiącami z pilnym objawem.",
+      "why": "'Pilny objaw' is not defined, no stored source says which symptom is urgent, and the sentence gives no destination (same-day GP, emergency number). NHS, the only source that states when to seek care, labels its triggers non-urgent and lists months of trouble as one of them. The sentence is a harmless nudge but unsupported and not actionable on its own.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 143, "text": "Non-urgent advice: See a GP if:"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 147, "text": "you've had trouble sleeping for months"}
+      ],
+      "fix_direction": "Either remove the sentence or say what counts as urgent and whom to contact, citing a stored source."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ocena redakcyjna#1",
+      "text": "Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.",
+      "why": "'Porady dotyczące sypialni' narrows what AASM calls sleep hygiene (lifestyle such as diet, exercise, substance use, plus environment). AASM advises against sleep hygiene as the only treatment, yet says common-sense principles may still help within a comprehensive approach; NHS opens its own advice with changing sleeping habits. The wording can read as dismissing habit changes altogether.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 275, "text": "A set of general recommendations about lifestyle (eg, diet, exercise, substance use)"},
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 364, "text": "may nevertheless be helpful in a comprehensive treatment approach"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."}
+      ],
+      "fix_direction": "Describe sleep hygiene by its content and say that it is not enough alone for chronic insomnia but can accompany therapy."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.",
+      "why": "The letter B fits the README definition (published narrow conclusion from clinical guidelines), and strong and conditional AASM recommendations are kept apart in Korzyść i dowody. The explanation is weaker than the letter: 'oparte na przeglądach' cannot be confirmed for the European guideline from the stored abstract, which does not state its evidence base, and the AASM certainty (moderate, due to imprecision) is not conveyed. The (A) and (B) labels in the European abstract belong to that guideline's own scale and are not explained, which can confuse a reader who sees B here.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "a88b1c1ed450e8e9.txt", "line": 304, "text": "The overall quality of evidence was moderate due to imprecision."},
+        {"source": "snapshot", "snapshot": "4ee456e244f025ef.txt", "line": 264, "text": "Progress in the field of insomnia since 2017 necessitated this update"}
+      ],
+      "fix_direction": "State that the AASM recommendation rests on a systematic review with moderate-quality evidence, say that the European claim was checked in the abstract only, and avoid asserting an evidence base the stored text does not show."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "przewlekłej bezsenności",
+      "why": "The upstream title carried the frequency and duration (3+ nights a week, 3+ months). The item never says what 'przewlekła' means; W praktyce#1 says only that problems 'utrzymują się'. NHS gives 3 months as the boundary. Leaving the threshold to a clinician may be deliberate, but then the reader cannot tell from the item whether the advice applies to them.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 33, "text": "Insomnia that lasts 3 months or longer is called long-term insomnia."},
+        {"source": "upstream", "line": 1, "text": "一周三晚以上、拖了三个月以上"}
+      ],
+      "fix_direction": "Either give the duration boundary from a stored source or state that the label is a clinician's judgement and what the reader should do meanwhile."
+    }
+  ],
+  "notes": "No blocker found, so status is PASS under the role file rules; two major findings remain (safety caution for sleep restriction inside CBT-I, and no fallback when CBT-I is unavailable). No figures other than the years 2021 and 2023 appear in the item, and both match the snapshots. No Chinese institution, hotline, threshold or legal claim appears in reader-facing fields; NHS is used only as a source for when to seek care. Recency attack: AASM (2021), European (2023, PubMed Dec 2023) and NHS (reviewed 2024) do not conflict in the stored text; AASM is silent on delivery methods rather than opposed to digital delivery. Fields Źródła and Zmiany w adaptacji are not in packet.propositions, so findings about their content are attached to the nearest proposition id. Protocol: I read only the role file, AGENTS.md, README.md, the packet and the three snapshot files, and wrote only this report. For README I located the heading with Grep and then read lines 35 to 84, which is wider than the one section (it includes the paragraph before it and the following section on content states and local reader); no content outside that was used. CLAUDE.md text was injected by the harness; I did not open it. I opened nothing under book/, tests/, tools/, the manifest, other snapshots, git history or any chapter file, and used no shell or network."
+}

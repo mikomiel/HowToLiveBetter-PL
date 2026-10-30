@@ -1,0 +1,149 @@
+{
+  "item": "14.4",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["preservation", "grade", "numbers", "scope-words", "leak", "self-containment"],
+  "attacks_not_assessable": [
+    {
+      "attack": "same-action",
+      "reason": "Only the Google snapshot (7d4296b28eab6e78.txt) is readable. The Apple page (HTTP 429, blocked) and the Rzecznik Finansowy page (blocked) have no snapshot, so the actions in W praktyce#2 (operator), W praktyce#3 (bank), W praktyce#4 (police) and the claims Korzyść i dowody#2 and #3 cannot be compared with any cited source. Only W praktyce#1 and Korzyść i dowody#1 (Google part) could be matched to a snapshot, and they match (Google lines 84 and 98)."
+    },
+    {
+      "attack": "limitations",
+      "reason": "Ograniczenia#3 (Apple warning about removal from the Znajdź list and activation lock) rests only on the blocked Apple page, so it cannot be supported or refuted. Ograniczenia#1, #2 and #4 were checked against the Google snapshot; the only issue found there is filed under scope-words."
+    },
+    {
+      "attack": "recency",
+      "reason": "Only one readable snapshot, so there is no second snapshot to compare dates or guidance with, and no pair of authorities that could disagree."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 5,
+      "upstream_action": "Report the SIM card as lost first so that others no longer receive your verification codes",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Phone the operator's customer service from someone else's phone if yours is gone",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Remotely lock the phone even if you only think it was lost (FCC hint)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Remotely wipe the contents of the phone",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Change email and payment passwords from a computer",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Report to the police and get the receipt (if stolen, immediately)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Give the phone model and IMEI to the police and the operator",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Freeze the bank card as needed",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Tell the operator immediately if the phone was stolen",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Note the operators' customer-service numbers and the city where the number was registered in advance",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 7,
+      "upstream_action": "Cross-references to ID card replacement and to identity-theft loans (Chinese procedures; the item gives no Polish counterpart)",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "title#1",
+      "text": "zabezpiecz urządzenie, numer i zagrożone konta",
+      "why": "The title promises to secure endangered accounts, but W praktyce only covers the bank (contact only if bank access is threatened or foreign operations appear). The upstream step of changing email and payment passwords from another device is dropped, and 'Zmiany w adaptacji' does not list this as a deliberate removal. The Google snapshot itself points the reader to securing the Google account. A reader who follows the item literally can leave email and the Google account untouched, although those accounts are what an attacker holding the phone would use.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "第三步，从电脑上改邮箱和支付密码"},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 172, "text": "Jeśli nie możesz znaleźć utraconego lub skradzionego urządzenia, dowiedz się, jak zabezpieczyć konto Google."}
+      ],
+      "fix_direction": "Either add an account-securing action with its condition and source, or narrow the title so it does not promise account protection, and record the removal in 'Zmiany w adaptacji'."
+    },
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "W praktyce#2",
+      "text": "Powiadom operatora o utracie karty i ustal jej zabezpieczenie.",
+      "why": "The word SIM never appears in any reader-facing field. 'Karty' sits next to a bank sentence and can be read as a payment card, so the reader may not ask the mobile operator to block the SIM. The upstream reason for this step (cutting the SMS verification codes) is also dropped, which removes the only explanation of why this action is urgent. 'Ustal jej zabezpieczenie' does not say what to ask for.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "第一步，挂失 SIM 卡，别人就收不到你的验证码了"}
+      ],
+      "fix_direction": "Name the card as the SIM or phone-number card, state the risk it addresses (codes and calls reaching the finder), and say what to ask the operator, each backed by a readable cited source."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna.",
+      "why": "The remote action is conditional, and the condition fails exactly when it is needed (the Google page lists device and settings preconditions). The item gives no path for a reader whose phone cannot be reached remotely. The upstream instruction to give the model and IMEI to the police and operator is dropped, although the Google snapshot says the operator can use the IMEI to disable the device and says how to find it. Without the IMEI route, the reader whose remote lock is unavailable gets no action that disables or traces the handset itself.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 19, "text": "Aby zabezpieczyć urządzenie z Androidem lub wymazać z niego dane, sprawdź, czy urządzenie:"},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 120, "text": "Operator sieci komórkowej może użyć numeru IMEI urządzenia, aby je wyłączyć."},
+        {"source": "upstream", "line": 5, "text": "报上型号和 IMEI 串号（手机的身份编号），并马上告诉运营商"}
+      ],
+      "fix_direction": "State what to do when the remote function was not enabled or the phone is offline (for example the IMEI route through the operator, if the readable sources support it) and record the dropped IMEI step in 'Zmiany w adaptacji'."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#2",
+      "text": "Wymazanie może nieodwracalnie usunąć dane; po resecie Android może przestać być widoczny w usłudze lokalizacji.",
+      "why": "Both clauses are softer than the Google page: the page says the wipe permanently removes all data and that after a factory reset the device will no longer be available in the location service. It also warns that SD cards may not be wiped, which the item omits. Softening a data-loss warning to 'może' changes how firmly a reader is warned before choosing to wipe.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 98, "text": "spowoduje trwałe usunięcie wszystkich danych na urządzeniu, ale karty SD mogą nie zostać wyczyszczone"},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 98, "text": "nie będzie ono już dostępne w Centrum lokalizacji"}
+      ],
+      "fix_direction": "Match the certainty of the source (permanent deletion, no longer available in the service) and decide whether the SD card caveat belongs in the item."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "Użyj oficjalnej usługi producenta",
+      "why": "The item never names the service for either platform. 'Znajdź' appears in Ograniczenia#3 without an introduction, and 'usługa lokalizacji' appears in Ograniczenia#2. The Google page names the Android service and the web entry point, so a reader without the links has to guess which service to open or where to sign in from another device.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 13, "text": "Jeśli na urządzeniu zostało dodane konto Google, Centrum lokalizacji jest automatycznie włączone."}
+      ],
+      "fix_direction": "Name the official service for each platform and where to open it from another device, in the practical field itself."
+    }
+  ],
+  "notes": "Protocol: opened only the role file, AGENTS.md, README.md lines 38-77 (the section 'Jak czytać dowody' plus a few neighbouring lines), the packet and snapshot 7d4296b28eab6e78.txt. Nothing under book/, tests/, tools/, git history or any chapter file was opened, and no script was run. Source access: Apple (429) and Rzecznik Finansowy (blocked) have no snapshot, so they support and refute nothing; the upstream FCC source named in upstream line 7 is not among the packet sources. Consequences the orchestrator should know: (1) W praktyce#3 (bank), W praktyce#4 (police), Korzyść i dowody#2 and #3, Ograniczenia#3 and the claim in 'Zmiany w adaptacji' that a police report is not a precondition for contacting the bank have no support in any readable snapshot, so they are unchecked, not confirmed. (2) 'Ocena dowodów' calls the basis 'oficjalne instrukcje reagowania', but only one such instruction (Google, Android only) was readable. (3) Grade C fits the README definition for an operational recommendation and equals the upstream grade; no grade drift found. (4) The item contains no figures, so the numbers attack found nothing to check. (5) No Chinese institution, hotline, threshold or legal rule remains in the reader-facing fields; the mention of Chinese order and operator numbers is only in the change note. (6) Upstream line 7 attributes the step order to author experience, which supports dropping the fixed order; the SIM rationale is a separate loss (see finding on W praktyce#2). Status is UNAVAILABLE because needed sources are blocked, not because a blocker was found; no blocker was found."
+}

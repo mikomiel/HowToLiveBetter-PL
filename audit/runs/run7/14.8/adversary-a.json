@@ -1,0 +1,154 @@
+{
+  "item": "14.8",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 3, "upstream_action": "Exercising the right costs no money", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "If the other side stalls or does not handle the request, complain first and only then sue; keep chasing repeatedly", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Ask the organisation to let you view and copy your own data", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Ask for correction of your data", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 7, "upstream_action": "Right to correct AND supplement (incomplete) data", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "Ask for deletion; the organisation should delete on its own when service stopped, retention ended, consent withdrawn or purpose achieved", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "A refusal must be justified; read the reasons", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 5, "upstream_action": "If the request is not honoured, go to court directly", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Closing an account and deleting data are two things; after closing, request deletion separately", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Before changing or selling a phone: log out of all accounts, unlink them, factory reset", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Caveat: the right is an after-the-fact deletion right and cannot take back what has already leaked", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#4",
+      "text": "W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej.",
+      "why": "The upstream gives a path for the case where the other side stalls instead of acting (complain first, litigate later). The item covers only an explicit refusal. A reader who gets no answer at all, or only silence after the one-month limit, is told nothing to do. The item also never names the body that receives a complaint (Prezes UODO), although the cited UODO page does, and says a complaint is open also when the controller does not answer in time.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "只有对方拖着不办，才需要去投诉或者起诉"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 409, "text": "Skargę możesz złożyć również wtedy, gdy administrator nie odpowie na Twój wniosek w terminie."},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 409, "text": "przysługuje Ci prawo do złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych"}
+      ],
+      "fix_direction": "State the no-response case next to the refusal case and name the complaint recipient as stated in the cited sources; keep it as a described route, not a promise of outcome."
+    },
+    {
+      "severity": "major",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych.",
+      "why": "The reader is told to show that 'the conditions' are met, but no field of the item states the grounds for erasure. Ograniczenia lists only the exceptions. A reader cannot write the justification, or judge whether erasure is available at all, without the grounds. The upstream line carries the grounds (service stopped, retention ended, consent withdrawn, purpose achieved) and the idea that the organisation must delete without being asked; both were dropped, and Art. 17 and the UODO page list the grounds.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "有几种情形企业应当主动删除：服务停了、约定的保存期限到了、你撤回同意、当初收集的目的已经达到等等"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 237, "text": "Zgodnie z art. 17 RODO, administrator musi usunąć Twoje dane, jeśli spełniony jest przynajmniej jeden z poniższych warunków:"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2932, "text": "dane osobowe nie są już niezbędne do celów, w których zostały zebrane lub w inny sposób przetwarzane"}
+      ],
+      "fix_direction": "Say in the item itself which circumstances of Art. 17(1) make erasure available, in plain words, so that 'warunki' has a content and the reader can match their case; say that where a ground applies the controller has a duty to erase."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania.",
+      "why": "Art. 12(3) says the controller acts without undue delay and in any event within one month; the extension is a separate, notified step. 'Zasadniczo' turns the outer limit into a soft default. The regulation also speaks of information about actions taken, so 'odpowiedź' may be read as a mere acknowledgement. The next sentence does state the two-month extension correctly.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2671, "text": "Administrator bez zbędnej zwłoki – a w każdym razie w terminie miesiąca od otrzymania żądania – udziela"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 267, "text": "Administrator powinien odpowiedzieć niezwłocznie, najpóźniej w ciągu jednego miesiąca."}
+      ],
+      "fix_direction": "Align the wording with 'w każdym razie' (latest within one month, extendable only with notice and reason) and with 'informacja o podjętych działaniach'."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Koszt#2",
+      "text": "Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych.",
+      "why": "The exceptions named read as the whole list. Art. 15(3) also lets the controller charge a reasonable administrative fee for any further copies a person asks for. A reader who asks for repeated copies may be surprised by a fee that the item implies does not exist.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2903, "text": "wszelkie kolejne kopie, o które zwróci się osoba, której dane dotyczą, administrator może pobrać opłatę w rozsądnej"}
+      ],
+      "fix_direction": "Add the further-copies fee case, or word the sentence so it does not read as an exhaustive list of exceptions."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#3",
+      "text": "Administrator może w uzasadnionym zakresie potwierdzać tożsamość.",
+      "why": "Art. 12(6) ties the request for extra identity information to reasonable doubts about identity, and the UODO page adds that a person who already uses the service should be able to verify with the login mechanism. The item's 'w uzasadnionym zakresie' drops the 'reasonable doubts' precondition and the login point, which would be the most useful path for a reader who is asked for a document. 'Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału' (Ograniczenia#4) is an editorial caution; it is consistent with the data-minimisation sentence on the UODO page but is not stated by either source as an instruction.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2699, "text": "jeżeli administrator ma uzasadnione wątpliwości co do tożsamości osoby fizycznej"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 273, "text": "Jeżeli już korzystasz z usług administratora, do uwierzytelnienia się w związku z Twoim żądaniem powinny wystarczyć mechanizmy uwierzytelnienia, które służą do zalogowania się do usługi."}
+      ],
+      "fix_direction": "State the 'uzasadnione wątpliwości' condition and the existing-login point; mark the identity-document caution as editorial or tie it to the data-minimisation statement."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych.",
+      "why": "Art. 16 covers incorrect data and also completing incomplete data, and the upstream names correction and supplementing. 'Sprostowanie nieścisłości' narrows the right to inaccuracies and omits completion. A reader whose problem is missing data gets no hint that the right applies. Also, 'czy ... czy' reads as a choice of one, although a person may ask for several rights in one letter (the sources do not forbid it; this is a wording point only).",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "第四十六条更正、补充权；第四十七条列了五种应当主动删除的情形"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2920, "text": "żądania uzupełnienia niekompletnych danych osobowych, w tym poprzez przedstawienie dodatkowego oświadczenia"}
+      ],
+      "fix_direction": "Cover incorrect and incomplete data; avoid the either-or wording."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "Napisz administratorowi",
+      "why": "'Administrator' (data controller), 'RODO' and 'UODO' are used without explanation in the fields given, against the rule to explain a technical term at first use. The reader is also not told how to find who the controller is or the contact point; the UODO page gives the step (search the privacy policy or contact tab, use the data protection officer if one is named). The upstream used the plain word 'enterprise'. If a glossary or intro sentence exists in the chapter outside these fields, I could not see it.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 299, "text": "przed złożeniem wniosku musisz ustalić, kto jest administratorem Twoich danych i jak można się z nim skontaktować"}
+      ],
+      "fix_direction": "Explain 'administrator danych' in plain words at first use, expand RODO and UODO once, and say where the contact details are usually found."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "samo zamknięcie konta nie musi usuwać wszystkich danych.",
+      "why": "The upstream and the UODO page give an action: after or with closing an account, state explicitly that you also want the data erased. The item keeps the fact but not the action, so a reader may close the account and think the matter is done.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "注销账号和删除信息是两件事，注销之后还要另外提删除"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 313, "text": "Dlatego wyraźnie wskaż, że wraz z usunięciem konta chcesz usunięcia danych."}
+      ],
+      "fix_direction": "Turn the fact into the action: request erasure of the data expressly, separately from closing the account."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń.",
+      "why": "The upstream states that the right is after-the-fact and cannot take back what has already leaked or been passed on. The item's limitation field says nothing about copies already held by others. The sources show a related limit: the controller informs recipients unless that proves impossible or needs disproportionate effort, and delisting from search results does not remove the page itself. The exception list in the item is accurate against Art. 17(3).",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "法律给你的是事后的删除权，它不能替你把已经泄露出去的东西收回来"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 3014, "text": "każdego odbiorcę, któremu ujawniono dane osobowe, chyba że okaże"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 379, "text": "Usunięcie linków z wyników wyszukiwania nie oznacza, że informacja znika z Internetu całkowicie."}
+      ],
+      "fix_direction": "Add a limitation that exercising the right does not guarantee removal of data already disclosed to or copied by others, worded no more strongly than the cited sources."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Zachowaj potwierdzenie.",
+      "why": "'Potwierdzenie' is not defined. The UODO page names two different things: asking the controller to confirm receipt, and keeping a copy of your own request and of the replies as evidence. The item does not say which, so a reader may keep only a delivery receipt. Note that the UODO page covers this practice for erasure; its use for access and rectification is an editorial extension, which the C grade and the item's wording tolerate.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 321, "text": "zawsze zachowuj kopię własnego żądania i udzielonych odpowiedzi"},
+        {"source": "snapshot", "snapshot": "223080ce91198a64.txt", "line": 319, "text": "swoje zgłoszenie możesz zakończyć prośbą o potwierdzenie otrzymania wiadomości"}
+      ],
+      "fix_direction": "Say what to keep: the sent request with its date, any confirmation of receipt, and every reply."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Opisanie żądania i zachowanie korespondencji.",
+      "why": "The upstream cost line counts the effort of chasing a stalling party and the escalation step. The item's cost field lists only writing the request and keeping letters; the wait (up to one month, or three with an extension) and the effort of follow-up or complaint are not separated as time and effort costs, as AGENTS.md asks. The upstream's court-cost statements are Chinese-context and rightly not carried over.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "难的是对方拖着的时候得反复去催"}
+      ],
+      "fix_direction": "Separate money (none, with the stated exceptions), time (the statutory waiting periods) and effort (follow-up, possible complaint); do not invent costs for the complaint or court step that the sources do not state."
+    }
+  ],
+  "notes": "No protocol violation as far as I can tell. I opened only: the brief file named by the harness, the role file, AGENTS.md, README.md (Grep for the heading, then lines 38-87, which also covers two short sections after 'Jak czytać dowody'), the packet, and the two snapshots (89be0046cf8ac2b2.txt via Grep on its exact path and Read of lines 2645-2794 and 2860-3049; 223080ce91198a64.txt in full). No network, no shell. Results: no blocker. Chinese leaks: none in reader-facing fields; the Zmiany w adaptacji field names the removed Chinese legal basis only as a disclosure. Grade C matches the README definition (legal norm and operational guidance, no outcome measurement). All figures (one month, two further months, article numbers 12, 15, 16, 17) match Art. 12(3) and the UODO page; no d, HR, OR or percentages occur. Recency/conflict: the RODO snapshot is the 2016 Official Journal edition and the UODO page is dated 2026-03-10; the two do not conflict on any point used, and the snapshots alone cannot show later amendments, which I did not assert from memory. Limitations: the sentence 'nie miał przeglądu prawnika' is a statement about editorial process that no snapshot can confirm or refute; I treated it as an editorial disclaimer, not as a source claim. Preservation: fallback_stated is true where no fallback was needed or one is present, false where the action is conditional or dropped and no path remains; for the court route (upstream 5) it is false because the item gives no route when the controller is silent. The upstream phone-reset advice (line 8) is dropped and is not disclosed in Zmiany w adaptacji; no packet proposition id exists for that field, so it is recorded here and in preservation instead of as a finding. Two majors remain (no-response path, undefined erasure conditions); the status is PASS only because the role file makes FAIL depend on blockers."
+}

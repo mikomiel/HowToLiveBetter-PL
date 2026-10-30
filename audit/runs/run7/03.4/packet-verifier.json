@@ -1,0 +1,153 @@
+{
+  "version": 2,
+  "item": "03.4",
+  "role": "verifier",
+  "title": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+  "fields": {
+    "Koszt": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny. Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+    "W praktyce": "Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby. Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu. To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa.",
+    "Korzyść i dowody": "Metaanaliza Gardiner i współautorów objęła 24 badania. Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym. Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg).",
+    "Ocena dowodów": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą.",
+    "Ocena redakcyjna": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.",
+    "Ograniczenia": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie. Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Przy trudnościach ze snem przesuń ją wcześniej."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg)."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/j.smrv.2023.101764",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1472,
+      "sha256": "8d78ca8d99ab9921d3275d8a420143eec40ac3a86faacb6542f4b48df6b38e81",
+      "snapshot": "df5a689db3e18396.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,173 @@
+{
+  "item": "14.4",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 11, "text": "możesz zlokalizować to urządzenie i zdalnie je zabezpieczyć bądź wymazać na nim dane"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 172, "text": "Jeśli nie możesz znaleźć utraconego lub skradzionego urządzenia, dowiedz się, jak zabezpieczyć konto Google."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Backed: securing the (Android) device remotely, and the pointer to securing the Google account. Not backed by any readable snapshot: securing the phone number or SIM, and accounts other than the Google account (bank, payment instruments). Those parts rest on the Apple page and the Rzecznik Finansowy page, which have no snapshot (blocked)."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Dostęp do innego zaufanego urządzenia i kontakt z dostawcami usług.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Czas i ewentualne opłaty zależą od sytuacji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 84, "text": "Oznacz jako utracone: powoduje zablokowanie urządzenia kodem PIN, wzorem lub hasłem."},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 19, "text": "Aby zabezpieczyć urządzenie z Androidem lub wymazać z niego dane, sprawdź, czy urządzenie:"}
+      ],
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "The Google snapshot backs mark-as-lost and lock for Android devices, including the conditions under which the function is available. The sentence addresses every phone's manufacturer service; the iPhone part rests on the Apple page, which has no snapshot (blocked, HTTP 429)."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Powiadom operatora o utracie karty i ustal jej zabezpieczenie.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 120, "text": "Operator sieci komórkowej może użyć numeru IMEI urządzenia, aby je wyłączyć."}
+      ],
+      "reason": "The only readable line says the mobile operator can use the device IMEI to disable the device. That concerns the handset, not the SIM card, and gives no advice to notify the operator of card loss or to secure the card. The card-specific advice is attributed in the item to the Apple page, which has no snapshot (blocked, HTTP 429)."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli zagrożony jest dostęp do banku lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem.",
+      "verdict": "unsupported",
+      "reason": "Searched the Google snapshot 7d4296b28eab6e78.txt (whole kept text) for bank, unauthorised or foreign transactions, payment instruments and contacting a bank: nothing. The item attributes this advice to the Rzecznik Finansowy page, which has no snapshot (access blocked), so nothing readable backs it; this reflects an unreadable source, not a found contradiction."
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "recommendation_derived",
+      "claim": "Podejrzenie kradzieży zgłoś policji.",
+      "verdict": "unsupported",
+      "reason": "Searched the Google snapshot 7d4296b28eab6e78.txt for police, reporting a theft, law enforcement: nothing (line 172 only mentions a stolen device and securing the Google account). The item's Korzyść i dowody attributes no police advice to any source. The Apple and Rzecznik Finansowy pages have no snapshot, so they could not be searched."
+    },
+    {
+      "id": "W praktyce#5",
+      "kind": "recommendation_derived",
+      "claim": "Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne.",
+      "verdict": "unsupported",
+      "reason": "Searched the Google snapshot 7d4296b28eab6e78.txt for any guidance on order, parallel reports or urgency of steps: none; the page lists steps without ranking them. The item's own Ocena dowodów says the sources are not a study of the order of actions, so this is an editorial judgement not backed by a source. The Apple and Rzecznik Finansowy pages have no snapshot."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Google i Apple opisują zdalną blokadę i inne działania po utracie urządzenia.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 11, "text": "możesz zlokalizować to urządzenie i zdalnie je zabezpieczyć bądź wymazać na nim dane"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 84, "text": "Oznacz jako utracone: powoduje zablokowanie urządzenia kodem PIN, wzorem lub hasłem."}
+      ],
+      "reason": "The Google part is supported (remote lock, find, erase for Android and Wear OS). The Apple part cannot be checked: the Apple page has no snapshot (blocked, HTTP 429)."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Apple wskazuje także kontakt z operatorem.",
+      "verdict": "source_unavailable",
+      "reason": "The cited Apple page https://support.apple.com/pl-pl/101593 has no readable snapshot (access blocked, HTTP 429). The Google snapshot is not evidence for what Apple says."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach.",
+      "verdict": "source_unavailable",
+      "reason": "The cited Rzecznik Finansowy page (rf.gov.pl, transakcje-nieautoryzowane) has no readable snapshot (access blocked). The Google snapshot is not evidence for what the Rzecznik says."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "oficjalne instrukcje reagowania",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 7, "text": "Znajdowanie i blokowanie utraconego urządzenia z Androidem oraz wymazywanie z niego danych - Konto Google - Pomoc"}
+      ],
+      "reason": "The Google snapshot is a vendor help page (Konto Google - Pomoc) with step-by-step instructions for a lost Android device, which fits the description. The Apple page and the Rzecznik Finansowy page have no snapshot, so the description is not checked for them. The grade letter C is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "nie badanie jednego optymalnego porządku działań",
+      "verdict": "absent_in_source",
+      "searched": ["7d4296b28eab6e78.txt"],
+      "reason": "Searched the Google snapshot for any study, trial or comparison of the order of steps after losing a device: none, the page is a help page listing actions. The stored text is the main region of a longer page (keptChars 9122 of wholeChars 11280), so this is absence from that region only. Apple and Rzecznik Finansowy have no snapshot, so absence is not shown for them."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Przygotowana wcześniej lista oficjalnych kontaktów może ułatwić reakcję.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Zdalne funkcje zależą od wcześniejszych ustawień i łączności.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 19, "text": "Aby zabezpieczyć urządzenie z Androidem lub wymazać z niego dane, sprawdź, czy urządzenie:"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 23, "text": "jest połączone z siecią mobilnej transmisji danych lub Wi-Fi,"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 27, "text": "ma włączone Centrum lokalizacji,"}
+      ]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Wymazanie może nieodwracalnie usunąć dane; po resecie Android może przestać być widoczny w usłudze lokalizacji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 98, "text": "wykonanie tych czynności spowoduje trwałe usunięcie wszystkich danych na urządzeniu"},
+        {"snapshot": "7d4296b28eab6e78.txt", "line": 98, "text": "Po przywróceniu urządzenia do ustawień fabrycznych nie będzie ono już dostępne w Centrum lokalizacji."}
+      ],
+      "reason": "Both parts have the same kind and are supported; the source states them without the hedge 'może'. Source also notes SD cards may not be wiped."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Apple ostrzega przed usunięciem urządzenia z listy Znajdź, bo usuwa to blokadę aktywacji.",
+      "verdict": "source_unavailable",
+      "reason": "The cited Apple page https://support.apple.com/pl-pl/101593 has no readable snapshot (access blocked, HTTP 429). The Google snapshot says nothing about Apple's Find list or Activation Lock."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Zanim wybierzesz kasowanie lub usunięcie z konta, przeczytaj instrukcję dla swojego urządzenia.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "Title speaks of securing the number and endangered accounts in general; the readable snapshot covers only Android device lock/erase and a pointer to securing the Google account."},
+    {"id": "W praktyce#1", "note": "Google snapshot covers Android and Wear OS only; the sentence addresses any phone and any manufacturer."},
+    {"id": "W praktyce#2", "note": "Snapshot mentions the IMEI (device), not the SIM card or its protection."},
+    {"id": "Korzyść i dowody#1", "note": "Only the Google half is checkable; Google page covers Android and Wear OS, not other Google products."},
+    {"id": "Ocena dowodów#1.1", "note": "Only one of three cited sources has a snapshot."},
+    {"id": "Ograniczenia#1", "note": "Source describes Android and Wear OS only; the sentence does not name a platform, so a reader may assume it holds for iPhones as well (not verifiable here)."},
+    {"id": "Ograniczenia#2", "note": "Source describes Android erase and reset only; the first clause is general and may be read as covering all phones."}
+  ],
+  "notes": "Opened only: AGENTS.md, the role file, the packet, and snapshot 7d4296b28eab6e78.txt. No protocol violation. The Apple page (HTTP 429, blocked) and the Rzecznik Finansowy page (HTTP 200, blocked) have no snapshot, so every claim attributed to them is source_unavailable or could not be searched; the item should be re-fetched before judging the police, bank and card advice. The Google snapshot footer says the Polish page may contain AI-translated text with errors, and line 37 is an untranslated English heading. Snapshot is the main region only (9122 of 11280 chars). Status FAIL comes only from W praktyce#3, #4 and #5 being unsupported recommendations; for #3 the cause is an unreadable source, not a contradiction."
+}

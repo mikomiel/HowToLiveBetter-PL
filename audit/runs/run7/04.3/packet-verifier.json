@@ -1,0 +1,130 @@
+{
+  "version": 2,
+  "item": "04.3",
+  "role": "verifier",
+  "title": "Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać. To ocena redakcji.",
+    "W praktyce": "Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”. Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać.",
+    "Korzyść i dowody": "Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu. Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych. Siła efektu zależy od rodzaju decyzji.",
+    "Ocena dowodów": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji.",
+    "Ocena redakcyjna": "To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań.",
+    "Ograniczenia": "Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu. Nie ma tu potwierdzonej liczby odzyskanych godzin."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy decyzji o kontynuacji porównaj przyszłe koszty z przyszłymi korzyściami"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Trzeba zaakceptować, że części wcześniejszego nakładu nie da się odzyskać."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapytaj: „Czy dziś warto poświęcić na to kolejny wieczór?”."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Oddziel nieodwracalny wydatek od tego, co nadal możesz odzyskać lub wykorzystać."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Arkes i Blumer opisują skłonność do kontynuowania działania po wcześniejszym nakładzie pieniędzy, wysiłku lub czasu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Przegląd Rotha i współautorów obejmuje 98 wielkości efektu i potwierdza występowanie tego zjawiska dla kosztów pieniężnych."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Siła efektu zależy od rodzaju decyzji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — badanie pierwotne i przegląd potwierdzają błąd decyzyjny, ale nie mierzą korzyści z tej konkretnej instrukcji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "To punkt kontrolny przed kolejnym nakładem, a nie nakaz rezygnacji z trudnych zadań."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Pominięcie kosztu już poniesionego nie oznacza pominięcia zobowiązań, kosztu wyjścia ani wiedzy zdobytej podczas projektu."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie ma tu potwierdzonej liczby odzyskanych godzin."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/0749-5978(85)90049-4",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 164,
+      "sha256": "bfd8c082f41202982f02369a7217d57b151d0e46be75d1f761f464705d799dc8",
+      "snapshot": "a28d057130b8ad3c.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "10.1007/s40685-014-0014-8",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1122,
+      "sha256": "798092555758ba2a4254a02e310e1966bf2067cb9b5e553713ccf791cff7ee57",
+      "snapshot": "14fb6f3495da5c34.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

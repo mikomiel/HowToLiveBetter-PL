@@ -1,0 +1,136 @@
+{
+  "item": "04.9",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed: the abstract names task aversiveness, task delay, self-efficacy and impulsiveness as strong predictors of procrastination, which supports looking for what hinders starting a task. Not backed: the part 'zamiast poprzestawać na samokrytyce' (the abstract says nothing about self-criticism) and any evidence that checking the obstacle changes whether a person starts; the review reports correlations only."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed in part: 'nieprzyjemne' rests on task aversiveness and 'wydaje się niewykonalne' loosely on self-efficacy, both named as strong predictors in the abstract. Not backed: 'niejasne' (task unclarity is not mentioned in either snapshot) and the practice of asking these questions as a way to start, which the source does not test."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Wybierz mały pierwszy krok.",
+      "verdict": "unsupported",
+      "reason": "Looked for any mention of a small first step, breaking a task down, subgoals, starting rules or any intervention in both snapshots (the abstract and the PubMed page, which carries the same abstract). Neither says anything about it; the abstract only lists predictors of procrastination. No fact in the snapshots backs this advice."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "meta_statement",
+      "claim": "Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 9, "text": "Authors: Steel P."},
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "A meta-analysis of procrastination's possible causes and effects, based on 691 correlations,"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "Strong and consistent predictors of procrastination were task aversiveness, task delay, self-efficacy, and impulsiveness,"}
+      ],
+      "reason": "Task aversiveness (niechęć do zadania), self-efficacy (poczucie własnej skuteczności) and impulsiveness (impulsywność) are stated in the abstract. The abstract names only 'task delay' and does not say what it means; the gloss 'odległość nagrody lub zakończenia w czasie' (distance of the reward or the completion in time) is not in the abstract. The full text would be needed to confirm that definition."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "A meta-analysis of procrastination's possible causes and effects, based on 691 correlations,"},
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "Procrastination is a prevalent and pernicious form of self-regulatory failure that is not entirely understood."}
+      ],
+      "reason": "The abstract describes the result as based on correlations, calls the factors 'possible causes and effects', lists several separate predictors and says the phenomenon is not entirely understood; none of that presents any single factor as an established cause."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 8, "text": "a meta-analytic and theoretical review of quintessential self-regulatory failure"},
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "A meta-analysis of procrastination's possible causes and effects, based on 691 correlations,"},
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "Strong and consistent predictors of procrastination were task aversiveness, task delay, self-efficacy, and impulsiveness,"},
+        {"snapshot": "0b2c8511b26838e3.txt", "line": 300, "text": "Meta-Analysis"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source: a meta-analysis built on correlations, which reports predictors of procrastination (association) and, by design, is a review of possible causes and effects and not a trial of any intervention. The negative clause is read as a statement of design; an abstract cannot show that the full paper contains no intervention test."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Przyjrzenie się przeszkodzie może pomóc dobrać działanie.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "source_claim",
+      "claim": "Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.",
+      "verdict": "not_checkable",
+      "reason": "This says that no effect of changing one's way of thinking was measured in the evidence cited. Both snapshots hold only the abstract (the PubMed page is the abstract record, not the paper), and an abstract cannot show absence; it does not mention any such measurement, but it also says the review drew on experimental findings without describing them. The full text of Steel 2007 would be needed."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d96cbd6fc03d12ce.txt", "line": 14, "text": "Strong and consistent predictors of procrastination were task aversiveness, task delay, self-efficacy, and impulsiveness, as well as conscientiousness and its facets of self-control, distractibility, organization, and achievement motivation."}
+      ],
+      "reason": "Supported in part: the abstract reports several different strong predictors and none of them is named as avoidance of unpleasant emotions or as lack of effort, so a single-cause reading does not follow from it. Not checkable from an abstract: whether the full paper makes any claim about emotion avoidance or effort; the full text would be needed."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Nie jest to diagnoza ani metoda leczenia problemów psychicznych.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The title contrasts checking obstacles with self-criticism; the source is silent on self-criticism and does not test whether looking for the obstacle changes starting."},
+    {"id": "W praktyce#1", "note": "The advice lists 'niejasne' as an obstacle; the source snapshots name no such predictor."},
+    {"id": "W praktyce#2", "note": "No snapshot addresses small first steps or any intervention."},
+    {"id": "Korzyść i dowody#2", "note": "The abstract names 'task delay' without a definition; the item reads it as distance of the reward or the completion in time, which would have to be confirmed in the full text."},
+    {"id": "Ocena dowodów#1", "note": "The sentence describes only the meta-analytic core. The abstract says the paper is also a theoretical review that draws on experimental and qualitative findings and presents temporal motivation theory; a reader might assume the whole paper is purely correlational."},
+    {"id": "Ocena redakcyjna#2", "note": "The abstract does not describe which experimental findings the review used, so whether any measured an effect of a change in thinking is not visible."},
+    {"id": "Ograniczenia#1", "note": "Only the abstract was available; the full paper may discuss emotion regulation or effort in the text of the review."}
+  ],
+  "notes": "Both snapshots are the same document (Steel P., 2007, Psychological Bulletin, DOI 10.1037/0033-2909.133.1.65, PMID 17201571). d96cbd6fc03d12ce.txt is the Europe PMC abstract (1167 chars, journal field empty). 0b2c8511b26838e3.txt is the PubMed record page: mostly navigation boilerplate around the same abstract, no full text. No paper full text exists in either snapshot, so no row could be checked against methods or definitions. No warnings in the packet. Nothing outside the allowed set was opened (AGENTS.md, the role file, the packet and the two snapshots only)."
+}

@@ -1,0 +1,111 @@
+{
+  "item": "14.2",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Use one separate password for the email account and do not repeat it on any website.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Store passwords in a password manager so that you do not have to remember them; break the habit of one password everywhere.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Use a different strong password for every account, at least 16 characters, kept in a password manager.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "If you cannot remember them, use the browser's built-in password manager.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Do not keep passwords in WeChat favourites or in a notes app.",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "W menedżerze wygeneruj długie, unikalne hasła",
+      "why": "The upstream gives an explicit fallback for a reader who will not or cannot use a separate manager: the browser's built-in one. The cited CERT page also calls the built-in browser option 'a simple and good solution'. The item says only 'W menedżerze' and 'przygotowanie menedżera haseł'. It never says that the browser's own password saving counts, so a reader who does not want to install or pay for a separate product has no stated path and may keep reusing one password. The adaptation note lists only the 16-character rule and 'chinese apps' as removals, so this removal is not disclosed either.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "记不住就用浏览器自带的密码管理器。它替你记住每个网站的密码，比到处用同一个密码强得多。"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Jeśli używasz przeglądarki, wbudowane w nią zapamiętywanie haseł jest prostym i dobrym rozwiązaniem."}
+      ],
+      "fix_direction": "State that a manager built into the browser is an acceptable starting point when the reader does not want a separate product, as the cited page does, and list the removal or change in 'Zmiany w adaptacji'. Do not add claims beyond what the page says about it."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "unikalne hasła do usług, które ich używają",
+      "why": "The upstream ends with a prohibition on keeping passwords in a favourites list or a notes app. Only the WeChat example is Chinese; the generic 'notes' part is not, yet the whole sentence is gone, and the adaptation note describes the removal only as Chinese app examples. The cited CERT page lists writing passwords down in a plain text file as a mistake to avoid. A reader who cannot remember generated passwords is not told where not to put them.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "别把密码存在微信收藏或者备忘录里"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 401, "text": "Notowanie haseł na karteczkach przyklejonych do monitora albo w zwykłym pliku tekstowym."}
+      ],
+      "fix_direction": "Keep the non-Chinese part of the prohibition (plain notes or text files) as a short warning, grounded in the cited page, and make the adaptation note say what was removed and why."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#2",
+      "text": "z kilku losowych, niezwiązanych słów",
+      "why": "The master password is the single point of failure of the whole advice. The cited page gives concrete figures: four or five random words and a floor of 14 characters. The item replaces them with the vague 'kilku' (which can be read as two or three) and gives no floor anywhere, while Ograniczenia#3 says that no single length is given. The 16-character figure from the upstream was removed on purpose, but the cited source's own, lower figures were not carried over, so 'długie' is left without any measure.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 365, "text": "łączysz cztery lub pięć losowych, luźno powiązanych ze sobą słów"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 383, "text": "Im dłużej, tym lepiej. Celuj w minimum 14 znaków, a najlepiej więcej."}
+      ],
+      "fix_direction": "Carry the cited page's own word count and character floor for the master password, attributed to CERT Polska, and keep the statement that individual services may impose other requirements."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Koszt#2",
+      "text": "nie wymagamy zakupu konkretnego produktu",
+      "why": "The upstream states a money cost of zero, and the cited page says the tools are free and simple to use today. The item replaces this with 'differ in cost', which no snapshot supports, and which can make a reader expect to pay. Together with the missing browser fallback, the cost line does not tell the reader that a no-cost route exists.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "成本：不花钱。用密码管理器存着就不用自己记。"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 479, "text": "korzystać z narzędzi, które są dziś darmowe i proste w obsłudze."}
+      ],
+      "fix_direction": "Say what the cited page supports (free tools exist, a built-in browser option exists) and keep any claim about paid products clearly editorial or drop it."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#2",
+      "text": "odpowiednią metodę uwierzytelniania z 14.1",
+      "why": "Without the link, the sentence tells the reader to add 'a suitable authentication method from 14.1' and the reader cannot tell which one. W praktyce#3 covers a second factor only for the account used to log in to the manager. The item's subject, the email account, which the cited page names first among the accounts needing a second factor and calls the gateway to password resets, gets no second-factor instruction in the item text itself. The item stays safe, but it is not actionable for the email account alone.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł)"}
+      ],
+      "fix_direction": "Name the kind of protection in the sentence itself (a second login factor on the email account, where the service offers one) and keep the link only as further reading."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "bez zmierzonej kwoty unikniętych strat",
+      "why": "The README defines C as an operational recommendation without direct measurement of effectiveness, so the letter fits. The justification, however, names only a missing money figure, which suggests that some other effect was measured. The cited page is a self-described collection of practical tips and contains no measurement of the effect of any step on the likelihood of account takeover, so the reader is not told that the page offers no outcome data at all.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 347, "text": "W tym artykule zebraliśmy praktyczne porady, dzięki którym poprawisz bezpieczeństwo swoich kont bez zbędnego wysiłku."}
+      ],
+      "fix_direction": "Rephrase the reason to match the README wording (an operational recommendation without direct measurement of effectiveness) and say that the page presents no study or outcome figures."
+    }
+  ],
+  "notes": "No protocol violation. I read only the role file, AGENTS.md, README.md lines 38-77 (the 'Jak czytać dowody' section and the text after it), the packet and snapshot 6a185dd9954fea49.txt. A directory listing (Glob) of the audit folder that holds the output file showed the names of sibling report files; I did not open any of them. Status is PASS because no blocker exists; the one major finding (dropped browser-manager fallback) is an omission, not a wrong or unsafe instruction. Leak attack: no Chinese institution, hotline, threshold or legal statement appears in reader-facing fields. Numbers attack: the item contains no figure; the upstream 16-character figure was removed on purpose and documented. Recency attack: there is a single snapshot (page states last update 2026-09-02) and nothing in it shows staleness or a conflicting authority, so I counted it as run with no finding. Limitations attack: Ograniczenia#1 and #3 are supported by snapshot lines 423, 439 and 375. Not a finding but worth knowing: the cited page also recommends passkeys where a service offers them, and the item does not mention this; whether 14.1 covers it could not be checked within the allowed inputs. Preservation list covers only upstream actions; the master password, second factor for the manager account and backup codes are additions taken from the cited page and are supported by snapshot lines 389, 433 and 435."
+}

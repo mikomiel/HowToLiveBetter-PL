@@ -1,0 +1,129 @@
+{
+  "version": 2,
+  "item": "03.8",
+  "role": "verifier",
+  "title": "Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie",
+  "fields": {
+    "Koszt": "Zmiana wieczornego nawyku i wybór innego zajęcia. To ocena redakcji, bez obowiązku zakupu urządzenia.",
+    "W praktyce": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki. Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.",
+    "Korzyść i dowody": "Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z emitującego światło urządzenia oraz papierowej książki. W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów. Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.",
+    "Ocena dowodów": "B — małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych.",
+    "Ocena redakcyjna": "Zmiana wieczornej rutyny jest próbą do dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.",
+    "Ograniczenia": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym. Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana wieczornego nawyku i wybór innego zajęcia."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji, bez obowiązku zakupu urządzenia."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z emitującego światło urządzenia oraz papierowej książki."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Zmiana wieczornej rutyny jest próbą do dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1073/pnas.1418490112",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1855,
+      "sha256": "bc2e4f619a457b0cf27e8d54b659fd2f33959c2be0091ac8ca8fcccf6c749c9d",
+      "snapshot": "fa247e48351151fd.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

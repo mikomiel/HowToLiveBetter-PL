@@ -1,0 +1,103 @@
+{
+  "item": "03.26",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "prowadzoną osobiście",
+      "replacement": "prowadzoną podczas spotkań z terapeutą",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "wprowadzaj ograniczania",
+      "replacement": "zaczynaj ograniczać",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "oceny klinicznej i przyczyn problemu",
+      "replacement": "oceny klinicznej i oceny przyczyn problemu",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "Farmakoterapia",
+      "replacement": "Farmakoterapia, czyli leczenie lekami,",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "instrukcją odstawiania",
+      "replacement": "instrukcją odstawiania leków",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Koszt",
+      "text": "nie obiecujemy polskiej refundacji",
+      "why": "Unnatural: 'polskiej refundacji' reads as a calque (Polish would say refundacja w Polsce, or name the payer). Also the only place where the item speaks as 'we'; elsewhere it uses the imperative or 'ta porada'. Contains a negation, a jurisdiction word and a term of right, so not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Nie zmieniaj samodzielnie przepisanych leków",
+      "why": "Garden-path ambiguity: 'samodzielnie przepisanych' can be read as 'prescribed by oneself'. The intended sense is probably 'do not change, on your own, the medicines prescribed to you' (for example 'Nie zmieniaj samodzielnie leków, które ci przepisano'). The fix moves the scope of the qualifier 'samodzielnie' and sits next to a negation, so it is reported, not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "bez ustalenia bezpieczeństwa tej metody",
+      "why": "Heavy nominalisation (calque) and vague: it does not say who establishes the safety (the doctor? the therapist?) or that 'ograniczanie czasu w łóżku' is itself a CBT-I technique, which the item never explains. The sentence also carries two prohibitions, so the scope of 'bez' is unclear. Contains a negation and a safety condition, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Europejskie wytyczne z 2023 roku",
+      "why": "The issuing body is not named, so the reader cannot tell which guideline is meant; 'Europejskie wytyczne' reads as if there were one official European text. Name of an institution or document, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "AASM w 2021 roku",
+      "why": "Acronym not expanded at first use; a reader in Poland will not know it. Name of an institution, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "silne zalecenie wieloskładnikowej CBT-I",
+      "why": "'wieloskładnikowej' is a specialist term that is never explained (the components are not listed anywhere in the item), and 'zalecenie CBT-I' is more natural as 'zalecenie stosowania CBT-I'. Adding a list of components would add facts and the word is a technical term, so not edited. Also 'silne' is an evidence-strength word."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "samej higieny snu jako jedynego leczenia tego zaburzenia",
+      "why": "'samej' and 'jedynego' say the same thing twice. 'Higiena snu' is a specialist term not explained at first use. Both words are 'only/alone' quantifiers, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Oddzielnie wydała warunkowe zalecenie",
+      "why": "The subject is dropped, and the previous sentence ends with 'CBT-I', so the feminine 'wydała' can be misread as referring to the therapy instead of AASM. 'Oddzielnie' is a calque of 'separately' (osobno or ponadto is more natural). Naming AASM again would touch an institution name, and 'warunkowe' is an evidence-strength word, so not edited."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "ogólne porady dotyczące sypialni",
+      "why": "Inconsistent with 'higieny snu' in Korzyść i dowody: the same thing is named two ways, and 'porady dotyczące sypialni' narrows sleep hygiene to the bedroom. I cannot judge from the packet whether that narrowing is accurate. Sits in a sentence with a modal ('Warto') and 'nie tylko', so not edited."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "oparte na przeglądach",
+      "why": "'przeglądy' is unspecific (literature reviews? systematic reviews?); AGENTS.md asks that a synthesis of studies be called a synthesis. Describes the type of evidence, so not edited."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "publikowana wersja nie obiecuje jednej wielkości efektu",
+      "why": "Unclear: what 'publikowana wersja' refers to (this advice? the upstream version? the guidelines?), and 'obiecuje' is an odd verb for an effect size (probably 'nie podaje', but that would change the sense). 'jednej wielkości efektu' is a quantity wording. Contains a negation and an attribution verb, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie trzeba czekać miesiącami z pilnym objawem",
+      "why": "Unnatural and possibly wrong in modality: 'Nie trzeba czekać' means 'there is no need to wait', while the sense is probably 'nie należy czekać'. 'Pilny objaw' is unexplained (which symptoms?), and 'czekać z objawem' is a calque. Contains a negation, a modal and a duration word, so not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "04.5",
+  "role": "editor",
+  "title": "Przygotuj plan spotkania i korzystaj z niego",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Organizator musi przygotować plan i udostępnić go uczestnikom. To ocena redakcji.",
+    "W praktyce": "Przygotuj plan i użyj go podczas spotkania. Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik. Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.",
+    "Korzyść i dowody": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby. Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.",
+    "Ocena dowodów": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.",
+    "Ocena redakcyjna": "Przygotowanie planu jest niewielkim nakładem. Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji.",
+    "Ograniczenia": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę. Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji. Rada nie uprawnia do pomijania obowiązkowych spotkań."
+  }
+}

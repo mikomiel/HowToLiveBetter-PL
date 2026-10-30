@@ -1,0 +1,199 @@
+{
+  "item": "14.7",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych",
+      "verdict": "not_applicable",
+      "depends_on": ["Ograniczenia#1"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Aplikacja wyświetli powiadomienie z prośbą o pozwolenie na korzystanie z funkcji urządzenia, którą możesz zaakceptować lub odrzucić."}
+      ],
+      "depends_on": ["Korzyść i dowody#4"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#4", "Ograniczenia#1"]
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2"]
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "RODO wymaga ograniczenia danych do niezbędnych dla celu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2376, "text": "Dane osobowe muszą być:"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2386, "text": "ograniczone do tego, co niezbędne do celów, w których są przetwarzane"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2496, "text": "Jeżeli przetwarzanie odbywa się na podstawie zgody,"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2274, "text": "dobrowolne, konkretne, świadome i jednoznaczne okazanie woli,"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2506, "text": "ma prawo w dowolnym momencie wycofać zgodę."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2511, "text": "Oceniając, czy zgodę wyrażono dobrowolnie, w jak największym stopniu uwzględnia się, czy między innymi od"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2512, "text": "zgody na przetwarzanie danych nie jest uzależnione wykonanie umowy, w tym świadczenie usługi, jeśli przetwarzanie"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2513, "text": "danych osobowych nie jest niezbędne do wykonania tej umowy."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#4",
+      "kind": "source_description",
+      "claim": "Strona pomocy Androida opisuje zmianę uprawnień aplikacji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 7, "text": "Zmienianie uprawnień aplikacji na telefonie z Androidem - Android - Pomoc"},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Możesz też zmienić uprawnienia dla konkretnych aplikacji lub według typu uprawnień w ustawieniach urządzenia."},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 27, "text": "Aby zmienić zbiór uprawnień, kliknij je i wybierz Zezwól lub Nie zezwalaj."}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 20, "text": "ROZPORZĄDZENIE PARLAMENTU EUROPEJSKIEGO I RADY (UE) 2016/679"},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 7, "text": "Zmienianie uprawnień aplikacji na telefonie z Androidem - Android - Pomoc"},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 17, "text": "Otwórz na urządzeniu aplikację Ustawienia."}
+      ],
+      "reason": "The grade letter C is editorial (README scale) and was not checked. The words after it describe the sources: the first snapshot is the text of a Regulation (legal norms, no study), the second is a step-by-step help page for changing app permissions (system instruction). Neither reports an efficacy study."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Możesz zezwolić niektórym aplikacjom na korzystanie z różnych funkcji urządzenia, takich jak aparat czy lista kontaktów."},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2215, "text": "Artykuł 4", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2274, "text": "11) „zgoda” osoby, której dane dotyczą oznacza dobrowolne, konkretne, świadome i jednoznaczne okazanie woli,"}
+      ],
+      "reason": "Both halves are of the same kind (Android help page; definition in the Regulation), so one row. Weakest part: none, both are stated directly. The heading line for Artykuł 4 is quoted with cell:true only so that the article number 4 occurs in a quote."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "To zestawienie redakcji, nie wniosek z cytowanych źródeł.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO).",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2412, "text": "Artykuł 6", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2418, "text": "1.   Przetwarzanie jest zgodne z prawem wyłącznie w przypadkach, gdy"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2419, "text": "co najmniej jeden z poniższych warunków:"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2421, "text": "osoba, której dane dotyczą wyraziła zgodę na przetwarzanie swoich danych osobowych w jednym lub większej"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2424, "text": "przetwarzanie jest niezbędne do wykonania umowy, której stroną jest osoba, której dane dotyczą,"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2427, "text": "przetwarzanie jest niezbędne do wypełnienia obowiązku prawnego ciążącego na administratorze;"}
+      ],
+      "reason": "Art. 6 ust. 1 lists consent as lit. a and further independent conditions (lit. b to f); at least one of the conditions is enough. The heading line for Artykuł 6 is quoted with cell:true only so that the article number occurs in a quote."
+    },
+    {
+      "id": "Ograniczenia#4.1",
+      "kind": "source_claim",
+      "claim": "Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2490, "text": "Artykuł 7", "cell": true},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2511, "text": "4.   Oceniając, czy zgodę wyrażono dobrowolnie, w jak największym stopniu uwzględnia się, czy między innymi od"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2512, "text": "zgody na przetwarzanie danych nie jest uzależnione wykonanie umowy, w tym świadczenie usługi, jeśli przetwarzanie"},
+        {"snapshot": "89be0046cf8ac2b2.txt", "line": 2513, "text": "danych osobowych nie jest niezbędne do wykonania tej umowy."}
+      ],
+      "reason": "The provision is spread over three lines (2511 to 2513), each quoted separately. The heading line for Artykuł 7 is quoted with cell:true only so that the article number occurs in a quote."
+    },
+    {
+      "id": "Ograniczenia#4.2",
+      "kind": "source_claim",
+      "claim": "nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy.",
+      "verdict": "absent_in_source",
+      "searched": ["89be0046cf8ac2b2.txt"],
+      "reason": "Searched the full-text snapshot (whole Regulation, 88 pages): read Artykuł 7 in full (lines 2490 to 2513) and the passages on voluntariness. Art. 7 ust. 4 (lines 2511 to 2513) only names the dependence of a contract or service on consent as a factor to take into account and gives no rule on when a service must be provided despite refusal. Recital 43 in the same snapshot (lines 512 to 518) says consent is not regarded as freely given where performance of a contract is made dependent on consent not necessary for it; that is a recital, not Art. 7 ust. 4, and it is also not a rule on when the service must be available."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "kind": "source_claim",
+      "claim": "Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Możesz zezwolić niektórym aplikacjom na korzystanie z różnych funkcji urządzenia, takich jak aparat czy lista kontaktów."},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 55, "text": "Poniżej znajdziesz listę uprawnień wraz z opisem tego, jak ich włączenie wpływa na działanie aplikacji."},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 7, "text": "Zmienianie uprawnień aplikacji na telefonie z Androidem - Android - Pomoc"},
+        {"snapshot": "96ed8430ad13bbdc.txt", "line": 13, "text": "Ważne: niektóre z tych czynności można wykonać tylko na telefonie Pixel z Androidem 15 lub nowszym."}
+      ],
+      "reason": "All parts describe what the page says, so one row. Weakest part: the page names one phone line (Pixel) and Android 15 or newer, while the sentence says 'wybranych telefonach i wersjach systemu'; the sentence stays general and does not claim more."
+    },
+    {
+      "id": "Ograniczenia#6",
+      "kind": "meta_statement",
+      "claim": "To nie jest rozstrzygnięcie legalności konkretnej aplikacji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#7",
+      "kind": "meta_statement",
+      "claim": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "That app permissions and data-processing consents are two separate things to check is the editors' juxtaposition (Ograniczenia#2 says so); each source describes only its own mechanism and none relates the two."},
+    {"id": "Koszt#1", "note": "Editorial cost estimate. 'Część funkcji może przestać działać' is not stated by the Android page, which only says that with Nie zezwalaj the app cannot use the permission (line 37) and that the page lists how enabling each permission affects the app (line 55)."},
+    {"id": "Korzyść i dowody#1", "note": "Art. 5 ust. 1 lit. c is a principle addressed to the controller of the processing (the app provider). The sentence does not say, and the snapshot does not say, that it gives the user a right to refuse an Android permission or that it governs what the permission screen asks."},
+    {"id": "Korzyść i dowody#3", "note": "Art. 7 ust. 4 makes dependence of a service on unnecessary consent a factor to take into account when assessing voluntariness (between other things); it does not say such consent is automatically invalid. The sentence says only 'uwzględnia', but a reader might assume more."},
+    {"id": "Korzyść i dowody#4", "note": "The page is Google's Polish-language Android help page (region article, 4276 of 6655 characters kept) and describes Android only; the snapshot carries a notice that the page may contain AI-translated text (line 115)."},
+    {"id": "Ocena dowodów#1", "note": "The letter C and its meaning are editorial and were not checked; only the description of the sources was checked."},
+    {"id": "Ograniczenia#4.2", "note": "Absence is claimed only for Art. 7 ust. 4. Recital 43 and other provisions of the Regulation were not searched for a rule on when a service must be available; the snapshot is the original 4.5.2016 Official Journal text, not a consolidated version."}
+  ],
+  "notes": "Opened only: the role file, AGENTS.md, the packet, and the two cited snapshots (89be0046cf8ac2b2.txt full-text Regulation 2016/679 in Polish, 88 pages; 96ed8430ad13bbdc.txt Android help page). No protocol violation. Both snapshots are the documents they should be (title and regulation heading plausible, enough text). No injected instructions found in the snapshots (grep of the Regulation for instruction-like words found only the snapshot header). The Grep count call on the Regulation snapshot was used only to size it. The article heading lines (Artykuł 4, 6, 7) are quoted with cell:true although they are not table cells, only so the article numbers in claims occur in a quote; if the script rejects that, drop those quotes and the numbers must be treated as legal citations. The grade letter C in Ocena dowodów was not checked."
+}

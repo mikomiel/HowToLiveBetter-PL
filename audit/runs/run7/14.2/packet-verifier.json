@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "item": "14.2",
+  "role": "verifier",
+  "title": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+  "fields": {
+    "Koszt": "Zmiana haseł i przygotowanie menedżera haseł. Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.",
+    "W praktyce": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je. Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu. Zacznij od poczty, przez którą resetujesz inne konta.",
+    "Korzyść i dowody": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont. Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.",
+    "Ocena dowodów": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.",
+    "Ocena redakcyjna": "Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony.",
+    "Ograniczenia": "Silne hasło może zostać wyłudzone lub przechwycone. Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1). Nie podajemy jednej długości pasującej do wymagań każdej usługi."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Zmiana haseł i przygotowanie menedżera haseł."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Zacznij od poczty, przez którą resetujesz inne konta."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Silne hasło może zostać wyłudzone lub przechwycone."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie podajemy jednej długości pasującej do wymagań każdej usługi."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "finalUrl": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12734,
+      "sha256": "9c74c6cac3b61b35fcdc3fefbd7e41bc7d0d727cc5d1cceae6bd46a5977c75c0",
+      "snapshot": "6a185dd9954fea49.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12649,
+        "wholeChars": 13207,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

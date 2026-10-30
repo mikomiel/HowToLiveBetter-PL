@@ -1,0 +1,163 @@
+{
+  "item": "04.2",
+  "status": "UNAVAILABLE",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment"
+  ],
+  "attacks_not_assessable": [
+    {
+      "attack": "recency",
+      "reason": "The only cited source (10.1016/s0065-2601(06)38002-1) is blocked (snapshot null, access blocked by api.crossref.org). There is no snapshot at all, so no source date or guidance can be compared and no conflict between authorities can be shown."
+    },
+    {
+      "attack": "limitations",
+      "reason": "The sentences about what the abstract does not give (Korzyść i dowody#2) and what the studies do not justify (Ograniczenia#2) are claims about the content of the blocked source. With snapshot null they can neither be confirmed nor refuted; the item's Źródła label 'abstrakt wydawcy' is not backed by any stored abstract text."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Zapisz warunek wyjścia (kryterium zakończenia) przed rozpoczęciem pracy.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Na starcie poświęć ok. 5 minut i zapisz: do daty X, jeśli wskaźnik Y nie jest osiągnięty, przerywam.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "W dniu terminu przyznaj, że wskaźnika nie osiągnięto, i przerwij mimo niewygody (utrata twarzy przed ludźmi).",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Zapisz przed startem jedno zdanie: do daty X bez wskaźnika Y kończę.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Ustal warunek na samym początku, gdy emocje są chłodne; ustalony później jest zniekształcany przez już poniesiony koszt.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Przy ocenie bierz pod uwagę wyłącznie przyszły nakład i przyszły zwrot (odsyłacz do porady 3).",
+      "fate": "narrowed",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "Ograniczenia#3",
+      "text": "Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3).",
+      "why": "The upstream rule is exclusive: judge ONLY on future input and future return. The item softens it to 'uwzględnij' (take into account), which does not tell the reader to ignore costs already sunk, and the sunk-cost reason for the whole advice appears nowhere in the item. With the cross-reference link removed, the reader is left with the vague 'consider future costs and benefits' and can still let past investment drive the review decision, which is the failure the exit condition is meant to prevent.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "判断时只看未来投入和未来回报"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "事后再定会被已经投进去的成本带偏"
+        }
+      ],
+      "fix_direction": "State inside the item itself that the review decision rests only on future costs and future benefits, and name the sunk-cost trap, after checking that against the cross-referenced advice and a source. Do not leave the guard only behind the link."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "title#1",
+      "text": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz",
+      "why": "The upstream says the condition must be set at the start, while calm, because a condition set later is bent by the cost already invested. The item keeps only the timing ('przed rozpoczęciem') and gives no reason and no path for a reader who is already inside a project, who is the most likely reader of advice about quitting a failing plan. The upstream gives no fallback either, so this is a missing caveat rather than a dropped action.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "退出条件要在刚开工、情绪还冷静的时候定"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "事后再定会被已经投进去的成本带偏"
+        }
+      ],
+      "fix_direction": "Say briefly why the condition is set before starting, and say what a reader already in the project can and cannot expect, only as far as a source or an explicitly labelled editorial note supports it."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "kiedy zmienisz plan lub go zakończysz",
+      "why": "The upstream action is a pre-written STOP rule, and the cited benefit is withdrawal from failing courses of action. The title and the example widen it to 'change the plan or end it' and replace the stop with a review. This widening is declared as editorial only in Ocena redakcyjna and Zmiany w adaptacji; the title and the B in Ocena dowodów ('kierunek wniosku potwierdza przegląd') present it as what the source supports. The 'change scope' branch has no support in the upstream span.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "到某月某日没达到某个指标就停"
+        },
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "disengagement from failing courses of action"
+        }
+      ],
+      "fix_direction": "Make clear in the evidence fields that the source speaks to withdrawing from a failing course of action, and that the 'change scope' branch and the review step are editorial."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego.",
+      "why": "The source is titled as a meta-analysis, i.e. a quantitative synthesis, yet the item calls it 'przegląd' here and in Korzyść i dowody#1. README defines B as 'przegląd bez jednej wspólnej wielkości efektu' and A as 'Ilościowa synteza badań', and AGENTS.md says to call a synthesis a synthesis. The letter B may still be defensible because the disengagement finding is a sub-result, but the stated reason mislabels the source type. Whether B is too high or too low depends on the blocked full text and cannot be decided here.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 7,
+          "text": "A meta-analysis of effects and processes"
+        }
+      ],
+      "fix_direction": "Name the source as a meta-analysis (synthesis) and justify B by the absence of a separate pooled estimate for this specific conclusion, once the source text confirms that."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "w uzgodnionym terminie",
+      "why": "The upstream writes a date that the person sets alone. 'Uzgodnionym' adds an agreement with someone, which a solo project does not have, and may suggest that the condition needs somebody else's consent.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "到某月某日没达到某个指标就停"
+        }
+      ],
+      "fix_direction": "Use wording that matches a date the reader sets, or say explicitly when agreement with others applies."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Uwzględnij też koszt bezpiecznego zakończenia.",
+      "why": "This action has no counterpart in the upstream span and is not listed in Zmiany w adaptacji. 'Bezpiecznego' is undefined (safe for what or whom), and no source or labelled editorial reasoning supports it.",
+      "evidence": [],
+      "fix_direction": "Either remove it, or mark it as an editorial addition in Zmiany w adaptacji and define what 'safe closing' covers."
+    }
+  ],
+  "notes": "Only cited source 10.1016/s0065-2601(06)38002-1 is blocked (snapshot null), so no claim about the review or its abstract can be confirmed or refuted from stored evidence: Korzyść i dowody#1 and #2, Ocena dowodów#1 and Ograniczenia#2 rest only on upstream lines 4, 5 and 8, which are leads. The 2006 date, the DOI and the title appear in the packet only in upstream line 7 and in the item itself; the DOI in Źródła matches upstream line 7. No figure in the item fails (the upstream 5-minute figure was dropped, not carried). No Chinese institution, hotline, threshold or legal statement appears in reader-facing fields. The item's own caveats (editorial example, no separate effect size) are honest, and no upward grade drift was found; A would have been allowed by the README for a quantitative synthesis, so B is the conservative letter. Protocol: I read README.md lines 38-87, which runs past the end of the 'Jak czytać dowody' section (line 57) into the next two sections; I opened no other file and no snapshot."
+}

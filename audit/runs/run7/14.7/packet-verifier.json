@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "item": "14.7",
+  "role": "verifier",
+  "title": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych",
+  "fields": {
+    "Koszt": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać. To ocena redakcji.",
+    "W praktyce": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia. Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje. Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.",
+    "Korzyść i dowody": "RODO wymaga ograniczenia danych do niezbędnych dla celu. Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania. Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy. Strona pomocy Androida opisuje zmianę uprawnień aplikacji.",
+    "Ocena dowodów": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.",
+    "Ocena redakcyjna": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.",
+    "Ograniczenia": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli. To zestawienie redakcji, nie wniosek z cytowanych źródeł. Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO). Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy. Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu. To nie jest rozstrzygnięcie legalności konkretnej aplikacji. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy."
+    },
+    {
+      "id": "Korzyść i dowody#4",
+      "field": "Korzyść i dowody",
+      "index": 4,
+      "text": "Strona pomocy Androida opisuje zmianę uprawnień aplikacji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "To zestawienie redakcji, nie wniosek z cytowanych źródeł."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO)."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu."
+    },
+    {
+      "id": "Ograniczenia#6",
+      "field": "Ograniczenia",
+      "index": 6,
+      "text": "To nie jest rozstrzygnięcie legalności konkretnej aplikacji."
+    },
+    {
+      "id": "Ograniczenia#7",
+      "field": "Ograniczenia",
+      "index": 7,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://support.google.com/android/answer/9431959?hl=pl",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://support.google.com/android/answer/9431959?hl=pl",
+      "finalUrl": "https://support.google.com/android/answer/9431959?hl=pl",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4358,
+      "sha256": "2f9aa0ed1f190b93c63476be758cdc6cb7b57c6b0152265fe3ce6b4e0dd0c4eb",
+      "snapshot": "96ed8430ad13bbdc.txt",
+      "info": {
+        "region": "article",
+        "keptChars": 4276,
+        "wholeChars": 6655,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

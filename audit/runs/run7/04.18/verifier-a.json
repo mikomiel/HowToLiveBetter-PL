@@ -1,0 +1,145 @@
+{
+  "item": "04.18",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy wyborze mieszkania lub pracy policz czas dojazdów",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Sprawdzenie trasy kosztuje czas.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana mieszkania lub pracy może oznaczać znaczne wydatki i trudności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy niezweryfikowanych cen dla Polski.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1.2"],
+      "reason": "Backed part: the Stutzer and Frey abstract links longer commuting time with lower reported subjective well-being, so commute time is worth comparing. Not backed: the method (door-to-door time, measured in the hours one actually travels). Neither snapshot says how commute time should be measured or compared."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zestaw go z kosztem mieszkania, warunkami pracy i potrzebami domowników.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1.2"],
+      "reason": "Backed part: commute time matters for reported well-being (row Korzyść i dowody#1.2). Not backed: weighing it against housing cost, working conditions and household needs. The Stutzer and Frey abstract mentions compensation on the labor or housing market only as the standard-economics assumption it tests, and gives no advice. The Chatterjee snapshot is metadata-only. No snapshot says anything about household needs."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie zakładaj, że przeprowadzka zawsze się opłaci.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1.2"],
+      "reason": "Backed part: the only checkable source fact is an association between longer commuting time and lower reported well-being (row Korzyść i dowody#1.2). Not backed: any statement about outcomes of moving or of a shortened commute; the snapshots say nothing about relocation. The mixed life-satisfaction finding of the Chatterjee review, which would back the caution, could not be checked (metadata-only snapshot)."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "W analizie niemieckich danych panelowych Stutzer i Frey",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d62873daa6a46711.txt", "line": 9, "text": "Authors: Stutzer, Frey"},
+        {"snapshot": "d62873daa6a46711.txt", "line": 14, "text": "with panel data, we find that people with longer commuting time"}
+      ],
+      "reason": "Authors (Stutzer, Frey) and panel data are supported by the snapshot. The word 'niemieckich' (German data) is not in the abstract: it names no country or dataset. Confirming it needs the full text."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "stwierdzili związek dłuższego dojazdu z niższym deklarowanym dobrostanem.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d62873daa6a46711.txt", "line": 14, "text": "people with longer commuting time report systematically lower subjective well‐being"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2.1",
+      "kind": "source_description",
+      "claim": "Przegląd Chatterjee i współautorów",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "cd0a0ef7a610e4bb.txt", "line": 8, "text": "a critical overview of the literature"},
+        {"snapshot": "cd0a0ef7a610e4bb.txt", "line": 9, "text": "Authors: Chatterjee, Chng, Clark"}
+      ],
+      "reason": "Document type and authorship are taken from the title and author metadata only. The title says 'critical overview of the literature' and does not say whether the review is systematic."
+    },
+    {
+      "id": "Korzyść i dowody#2.2",
+      "kind": "source_claim",
+      "claim": "potwierdza związek dłuższego dojazdu z mniejszym zadowoleniem z samej podróży, ale nie ustala spójnego związku z ogólną satysfakcją z życia.",
+      "verdict": "not_checkable",
+      "reason": "The Chatterjee snapshot is metadata-only (title, authors, journal, year) and has no abstract or body text. No line speaks to travel satisfaction or life satisfaction. The finding about travel satisfaction and the mixed finding about overall life satisfaction need the abstract or the full text of the review. Absence cannot be shown from metadata."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — badanie obserwacyjne i przegląd o niejednoznacznych wnioskach dla ogólnego zadowolenia z życia.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d62873daa6a46711.txt", "line": 14, "text": "with panel data, we find that people with longer commuting time"},
+        {"snapshot": "cd0a0ef7a610e4bb.txt", "line": 8, "text": "a critical overview of the literature"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. Supported part: a study using panel data on reported well-being (Stutzer and Frey) and a review-type document (Chatterjee et al.). Not supported by any line: the label 'observational' is not stated in the abstract, and panel data of self-reports is only consistent with that design. Not checkable: 'niejednoznaczne wnioski dla ogólnego zadowolenia z życia', because the Chatterjee snapshot is metadata-only and needs the abstract or full text."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Czas dojazdu jest jednym z kosztów decyzji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Przykład rachunkowy: 30 minut mniej w każdą stronę przez pięć dni daje 5 godzin tygodniowo.",
+      "verdict": "not_applicable",
+      "numbers": [
+        {"value": "5", "editorial_calculation": true, "basis": "30 razy 2 razy 5 = 300 minut, 300 dzielone przez 60"}
+      ]
+    },
+    {
+      "id": "Ocena redakcyjna#3",
+      "kind": "meta_statement",
+      "claim": "To rachunek przy podanych założeniach, nie wynik eksperymentu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "recommendation_derived",
+      "claim": "Związek statystyczny nie dowodzi, że skrócenie dojazdu poprawi samopoczucie konkretnej osoby.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1.2"]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "editorial_estimate",
+      "claim": "Praca zdalna, opieka nad bliskimi, dostępność transportu i korzyści z pracy zmieniają bilans.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#1.1", "note": "The item says German panel data; the stored abstract names no country or dataset."},
+    {"id": "Korzyść i dowody#1.2", "note": "The abstract reports a systematic association between longer commuting time and lower reported subjective well-being. It gives no effect size, population or period, and the item states none."},
+    {"id": "Korzyść i dowody#2.2", "note": "The item reports two specific findings of the review (travel satisfaction, life satisfaction). The snapshot holds only bibliographic metadata, so the findings cannot be checked."},
+    {"id": "Ocena dowodów#1", "note": "The item labels the first source as observational and describes the review's conclusions about life satisfaction as ambiguous. The stored abstract does not use the word observational, and the review snapshot has no content on its conclusions."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet, and the two snapshots d62873daa6a46711.txt (Stutzer and Frey, abstract only, plausible document) and cd0a0ef7a610e4bb.txt (Chatterjee et al., Crossref metadata only: title, authors, journal, year; no abstract, so no finding can be checked). No packet warnings. The harness also attached CLAUDE.md to the session context automatically; I did not open it. Classification choices a reviewer may want to revisit: Ograniczenia#1 filed as recommendation_derived (follows from the association finding) rather than meta_statement; Ograniczenia#2 filed as editorial_estimate (editors' judgement of the cost-benefit balance). No snapshot speaks to remote work, caregiving, transport availability or job benefits, so if it is read as a source_claim it would be unsupported. Koszt#2 is an unsourced editorial judgement about the cost of moving. W praktyce#1 to #3 are advice only partly backed by the one checkable finding. The Ocena dowodów row quotes the whole sentence; the grade letter B was not checked."
+}

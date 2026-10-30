@@ -1,0 +1,250 @@
+{
+  "item": "03.18",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 23,
+          "text": "Osoby w kryzysie psychicznym, potrzebujące pomocy psychologa, terapeuty lub psychiatry lub zmagające się z uzależnieniem mogą uzyskać szybką pomoc."
+        }
+      ],
+      "reason": "Backed in part: the Ministry of Health page tells people in psychological crisis who need a psychologist, therapist or psychiatrist that quick help exists (the 'szukaj wsparcia' part, for crisis, not for persistent low mood in general). Not backed: 'ruch może być częścią pomocy'. Neither readable snapshot mentions exercise or movement, and the only cited source on exercise (BMJ, Noetel) has no readable snapshot (HTTP 403)."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Kontakt z pomocą i dobranie aktywności do zdrowia oraz możliwości.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Koszt i dostępność leczenia zależą od sytuacji",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie podajemy cen",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli nastrój utrudnia codzienne życie, skontaktuj się z profesjonalną pomocą.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 23,
+          "text": "Osoby w kryzysie psychicznym, potrzebujące pomocy psychologa, terapeuty lub psychiatry lub zmagające się z uzależnieniem mogą uzyskać szybką pomoc."
+        },
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 61,
+          "text": "Każda osoba potrzebująca wsparcia i pomocy w stanach wystąpienia kryzysu psychicznego, może skorzystać z Centrum Wsparcia"
+        }
+      ],
+      "reason": "Backed in part: the page says people in psychological crisis who need professional help can get it and where to go. Not backed: the trigger 'jeśli nastrój utrudnia codzienne życie' (impairment of daily life). Neither snapshot states that threshold; they speak of crisis and need of help."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "source_claim",
+      "claim": "Nie musisz najpierw udowodnić, że potrafisz ćwiczyć.",
+      "verdict": "unsupported",
+      "reason": "This states that no proof of ability to exercise is required before help. Both readable snapshots describe how to get psychological and psychiatric help; line 51 of f231cd969d441cef.txt says only that a patient at a centrum zdrowia psychicznego needs no referral, appointment or prior registration. Neither snapshot mentions exercise, movement or physical ability at all, either as a requirement or as a non-requirement."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni.",
+      "verdict": "unsupported",
+      "reason": "Looked for any statement that exercise or movement can complement treatment, or that help should be combined with physical activity, in both readable snapshots (f231cd969d441cef.txt, 601d0f7b15c908cb.txt): none. The editors' basis would be the Noetel network meta-analysis (Korzyść i dowody#2), but that source (BMJ) has no readable snapshot (access blocked, HTTP 403), so no source line backs this recommendation. Re-evaluate if a readable BMJ snapshot is stored."
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "source_claim",
+      "claim": "W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 68,
+          "text": "całodobowego telefonu wsparcia emocjonalnego nr 116 123"
+        },
+        {
+          "snapshot": "601d0f7b15c908cb.txt",
+          "line": 233,
+          "text": "W sytuacjach kryzysowych wsparcia udzielają konsultanci poradni telefonicznej 116 123"
+        },
+        {
+          "snapshot": "601d0f7b15c908cb.txt",
+          "line": 241,
+          "text": "bezpłatnej poradni telefonicznej 116 123 oraz platformy 116sos.pl"
+        },
+        {
+          "snapshot": "601d0f7b15c908cb.txt",
+          "line": 247,
+          "text": "Z pomocy konsultantów można skorzystać całodobowo."
+        },
+        {
+          "snapshot": "601d0f7b15c908cb.txt",
+          "line": 271,
+          "text": "Wsparcie w ramach 116 123 i 116sos.pl kierowane jest do osób dorosłych."
+        }
+      ]
+    },
+    {
+      "id": "W praktyce#5",
+      "kind": "recommendation_derived",
+      "claim": "Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112, zamiast czekać na rozmowę wspierającą.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 70,
+          "text": "W nagłej sytuacji zagrożenia życia lub zdrowia"
+        },
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 71,
+          "text": "dzwoń na numer alarmowy 112"
+        }
+      ],
+      "reason": "Backed: the Ministry of Health page gives the same advice, to call 112 in a sudden threat to life or health. Not backed: 'zamiast czekać na rozmowę wspierającą'. Neither snapshot compares 112 with a support conversation or says not to wait for one; they list the support line and the emergency options as separate offers."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Sieciowa metaanaliza Noetela i współautorów",
+      "verdict": "source_unavailable",
+      "reason": "The cited BMJ article (Noetel et al.) has no readable snapshot: access blocked, HTTP 403, snapshot null. The two gov.pl snapshots do not mention this study, its authors or its design. The full text or at least the abstract is needed."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji",
+      "verdict": "source_unavailable",
+      "reason": "The cited BMJ article has no readable snapshot (access blocked, HTTP 403, snapshot null), so the figures 218 and 14 170 and the inclusion criteria cannot be checked. The gov.pl snapshots do not mention them. The abstract or full text is needed."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych.",
+      "verdict": "source_unavailable",
+      "reason": "The cited BMJ article has no readable snapshot (access blocked, HTTP 403, snapshot null). The gov.pl snapshots say nothing about exercise. The abstract or full text is needed."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji.",
+      "verdict": "source_unavailable",
+      "reason": "The cited BMJ article has no readable snapshot (access blocked, HTTP 403, snapshot null), so the authors' certainty ratings cannot be checked. The gov.pl snapshots do not mention them. The abstract or full text is needed."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "ilościowa synteza prób klinicznych",
+      "verdict": "source_unavailable",
+      "reason": "The design label describes the cited BMJ article (Noetel et al.), which has no readable snapshot (access blocked, HTTP 403, snapshot null). The grade letter A itself is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "meta_statement",
+      "claim": "litera A nie usuwa niskiej pewności tych wyników",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Aktywność nie jest testem charakteru",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2.2",
+      "kind": "source_claim",
+      "claim": "ani warunkiem leczenia",
+      "verdict": "unsupported",
+      "reason": "This states that physical activity is not a condition of treatment. Both readable snapshots describe access to psychological and psychiatric help (line 51 of f231cd969d441cef.txt: no referral, appointment or registration needed at a centrum zdrowia psychicznego) and mention no activity requirement, but they are silent on exercise altogether and do not state that it is not a condition."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "meta_statement",
+      "claim": "Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Telefon wsparcia nie zastępuje numeru alarmowego.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 68,
+          "text": "całodobowego telefonu wsparcia emocjonalnego nr 116 123"
+        },
+        {
+          "snapshot": "f231cd969d441cef.txt",
+          "line": 71,
+          "text": "dzwoń na numer alarmowy 112"
+        }
+      ],
+      "reason": "The Ministry of Health page assigns the 116 123 support line to a crisis situation and the alarm number 112 to a sudden threat to life or health, as separate offers. Neither snapshot says in words that the support line does not replace the alarm number."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "source_claim",
+      "claim": "Podany telefon 116 123 dotyczy dorosłych.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "601d0f7b15c908cb.txt",
+          "line": 271,
+          "text": "Wsparcie w ramach 116 123 i 116sos.pl kierowane jest do osób dorosłych."
+        }
+      ]
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "title#1",
+      "note": "The sources address people in psychological crisis; 'utrzymujące się obniżenie nastroju' short of crisis is not what they describe, and movement is not mentioned in either readable snapshot."
+    },
+    {
+      "id": "W praktyce#1",
+      "note": "The condition 'nastrój utrudnia codzienne życie' is not stated in the sources, which describe crisis and need of help."
+    },
+    {
+      "id": "W praktyce#4",
+      "note": "The two pages are dated 05.12.2024 and 29.07.2025; the current status of the line was not checked beyond them."
+    },
+    {
+      "id": "W praktyce#5",
+      "note": "The comparison with waiting for a support conversation is not made by the source."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "note": "The source lists both numbers for different situations but never says that the support line is not a substitute for the alarm number."
+    }
+  ],
+  "notes": "Opened only: .claude/agents/pl-source-verifier.md, AGENTS.md, audit/runs/run7/03.18/packet-verifier.json and the two snapshots f231cd969d441cef.txt and 601d0f7b15c908cb.txt. No protocol violation. The BMJ Noetel source has no readable snapshot (blocked, HTTP 403), so every claim about that study is source_unavailable and W praktyce#3 (movement can complement treatment) has no readable backing, hence unsupported; re-evaluate it if a BMJ snapshot is stored. Classification choices: Koszt#2.1 kept as editorial_estimate (generic cost hedge); W praktyce#2 and Ocena redakcyjna#2.2 treated as source_claim (what is not required) and unsupported; Ograniczenia#2 treated as meta_statement (referral-type caveat)."
+}

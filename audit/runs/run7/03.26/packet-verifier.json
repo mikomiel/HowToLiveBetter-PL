@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "item": "03.26",
+  "role": "verifier",
+  "title": "Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności",
+  "fields": {
+    "Koszt": "Ocena problemu, udział w terapii i praca między spotkaniami. Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.",
+    "W praktyce": "Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Nie zmieniaj samodzielnie przepisanych leków i nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody.",
+    "Korzyść i dowody": "Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.",
+    "Ocena dowodów": "B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.",
+    "Ocena redakcyjna": "Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.",
+    "Ograniczenia": "Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu. Nie trzeba czekać miesiącami z pilnym objawem. Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania. Program cyfrowy nie oznacza dowolnej aplikacji."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Ocena problemu, udział w terapii i praca między spotkaniami."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie zmieniaj samodzielnie przepisanych leków i nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie trzeba czekać miesiącami z pilnym objawem."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Program cyfrowy nie oznacza dowolnej aplikacji."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://pubmed.ncbi.nlm.nih.gov/38016484/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pubmed.ncbi.nlm.nih.gov/38016484/",
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/38016484/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 16872,
+      "sha256": "3a6124443cb33b1a49dc2d111b5715246e33a1afd4938aec62a72e7dab9823af",
+      "snapshot": "4ee456e244f025ef.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 16764,
+        "wholeChars": 20623,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 47798,
+      "sha256": "4509667dbe49c359f8ec6ed131857557804452a4b3a2b12ff0fea8c496aff691",
+      "snapshot": "a88b1c1ed450e8e9.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 47637,
+        "wholeChars": 49374,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.nhs.uk/conditions/insomnia/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.nhs.uk/conditions/insomnia/",
+      "finalUrl": "https://www.nhs.uk/conditions/insomnia/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 4327,
+      "sha256": "5f3d90a34ea505d538303db8d10012254c66e2942c42a7fdab2da4e273208ffa",
+      "snapshot": "b59686537010480d.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 4304,
+        "wholeChars": 4844,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

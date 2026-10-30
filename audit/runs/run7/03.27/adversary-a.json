@@ -1,0 +1,217 @@
+{
+  "item": "03.27",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Go to hospital for sleep monitoring (hospital or home device) if loud snoring, witnessed breath-holding or sleepiness while driving",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "Moderate-to-severe apnoea: wear a CPAP ventilator at night",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Start at a hospital sleep clinic, respiratory or ENT department",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Cost of effort: mask every night, weeks to get used to it, many remove it after a few hours",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "The machine usually has to be bought by the patient (a substantial sum)",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Diagnosis needs a sleep study, not a questionnaire alone",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Symptom pattern for likelier moderate-severe disease: sleepy on most days plus at least two of snoring, witnessed pauses, hypertension",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "CPAP is for daytime alertness; trials did not show prevention of heart disease or death",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "People with no snoring and no daytime sleepiness need not be specially tested",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Sleepy while driving: stop the car first (cross-reference to another item)",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Cross-references: long daytime sleep over one hour, and chronic insomnia (separate items)",
+      "fate": "dropped",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP",
+      "why": "The sentence states the CPAP recommendation with no population and no symptom condition. The guideline is titled for over 16s, and the CPAP statement in the snapshot is for adults with moderate or severe symptomatic OSAHS. A reader (or a parent of a child) cannot tell from the item that the recommendation is limited to adults and to symptomatic disease, and the item itself carries no adult-only statement in the field.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 21, "text": "Obstructive sleep apnoea/hypopnoea syndrome and obesity hypoventilation syndrome in over 16s"},
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 355, "text": "CPAP is recommended as a treatment option for adults with moderate or severe symptomatic OSAHS"}
+      ],
+      "fix_direction": "State the population of the guideline (adults, over 16) and the 'symptomatic' qualifier as the source words it, or say explicitly that the item covers adults only."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#2",
+      "text": "Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.",
+      "why": "The source recommends CPAP together with lifestyle advice and names an alternative path (a mandibular advancement splint) for a person who cannot tolerate or declines CPAP. The item gives CPAP alone; the only fallback is the generic 'osoba prowadząca dobiera leczenie' in Ograniczenia#2, so a reader who cannot tolerate the mask is not told that other options exist.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 359, "text": "in addition to lifestyle advice, to people with moderate or severe OSAHS."},
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 397, "text": "If a person with moderate or severe OSAHS is unable to tolerate or declines to try CPAP,"}
+      ],
+      "fix_direction": "Add a short conditional: CPAP comes with lifestyle advice, and when it is not tolerated the clinician can consider other treatment options. Keep the choice with the clinician."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "Korzyść i dowody#1",
+      "text": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego.",
+      "why": "NICE tells clinicians to take a sleep history and assess when a person has 2 or more of the listed features, and warns against using sleepiness alone. The item cites NICE for the practical advice to report any one of three signs. Reporting a single sign to a doctor is the upstream title's trigger and a reasonable editorial step, but it is wider than the NICE trigger and is not labelled as editorial.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 105, "text": "Take a sleep history and assess people for OSAHS if they have 2 or more of the following features:"},
+        {"source": "upstream", "line": 1, "text": "打鼾很响、有人看见你睡着时憋气、白天困到开车都想睡的"}
+      ],
+      "fix_direction": "Say that NICE's own trigger for assessment is two or more features, and mark reporting a single sign to a doctor as an editorial, low-threshold step."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego.",
+      "why": "NG202 is British guidance written for NHS services; the pages refer to the DVLA and to a legal duty to notify it. The item never says the guidance is British and cites no Polish or EU source, so a reader in Poland could take it as guidance for Polish services. The item does disclaim Polish driving-licence procedure (Ograniczenia#4) but not the origin of the clinical guidance.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "024454efeeae7d39.txt", "line": 79, "text": "when there is a legal requirement for the person to notify the DVLA of their condition"}
+      ],
+      "fix_direction": "Name NICE as British guidance and say that availability of tests and treatment in Poland may differ, or add a Polish or EU source. Do not assert Polish practice from memory."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży.",
+      "why": "The only cited support is the NHS insomnia page, whose one relevant line is a self-care 'don't' item. The source label 'NHS: senność i prowadzenie' does not describe that page, and the instruction to stop safely and travel another way is wider than that line and is not in any snapshot. The item does not mark it as an editorial extension.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 127, "text": "do not drive when you feel sleepy"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 11, "text": "Insomnia means you regularly have problems sleeping."}
+      ],
+      "fix_direction": "Describe the NHS page as the insomnia page, say that it supports only 'do not drive when you feel sleepy', and mark the safe-stop and alternative-transport wording as editorial."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#3",
+      "text": "Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.",
+      "why": "No snapshot or upstream line states this prohibition. NICE only places adherence support and start-up of treatment with trained specialist staff. The item turns that into an unconditional instruction without saying it is an editorial inference, under a single grade B for the whole item.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 593, "text": "Interventions to support adherence to treatment for OSAHS should be given by trained specialist staff"}
+      ],
+      "fix_direction": "Mark the sentence as editorial and ground it in the clinician-led set-up and follow-up the source describes, or make it conditional on the reader having a prescription."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży.",
+      "why": "Read alone, the item says nothing about occupational risk. The source prioritises people who drive for work or whose job needs vigilance for safety, and tells clinicians to inform patients about sleepiness and occupational risk. A professional driver or safety-critical worker is given no sign that they should say so when reporting.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 199, "text": "they have a vocational driving job"},
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 201, "text": "they have a job for which vigilance is critical for safety"},
+        {"source": "snapshot", "snapshot": "024454efeeae7d39.txt", "line": 77, "text": "the impact of excessive sleepiness on safe driving and occupational risk"}
+      ],
+      "fix_direction": "Add a conditional line telling people who drive for work or do safety-critical work to say so when they report symptoms. Do not state any legal duty without a primary source."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Konsultacja, ewentualne badanie snu i leczenie.",
+      "why": "The cost field lists services but no effort cost. The upstream marks willpower as required because the mask is worn every night, takes weeks to get used to, and many people take it off after a few hours. The source treats adherence as a distinct task with specialist support. AGENTS.md asks to separate money, time and effort.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "难在坚持：每晚都要戴着面罩睡，头几周不习惯，不少人戴几个小时就摘了。"},
+        {"source": "snapshot", "snapshot": "024454efeeae7d39.txt", "line": 99, "text": "the benefits of continuing with treatment and advice on encouraging adherence"}
+      ],
+      "fix_direction": "Add the effort of regular nightly use and getting used to a mask, with the note that support for adherence exists, without quoting Chinese cost or ownership rules."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#3",
+      "text": "Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem.",
+      "why": "The upstream states what trials found: randomised trials did not show that CPAP prevents heart disease or death, and its purpose is daytime alertness. 'We do not promise' reads as 'unknown', and the item never states that the purpose of treatment is relief of sleepiness. The softened wording drops a result the upstream reports; the snapshots hold no passage on these outcomes, so the upstream line stays a lead until a cited source is checked.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "但试验没看出它能防心脏病、能让人少死，戴它是为了白天清醒。"},
+        {"source": "upstream", "line": 8, "text": "呼吸机能不能防心脏病、让人多活，随机试验没看出来。"}
+      ],
+      "fix_direction": "Say what has been tested, with a primary source that is checked and stored, or keep the non-promise and state that the item makes no claim about heart disease or death outcomes because no stored source covers them."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika.",
+      "why": "Grade B fits the NICE statements in Korzyść i dowody. A single letter, however, also covers W praktyce#2, which rests on one NHS insomnia-page bullet, W praktyce#3, which has no passage, and Ocena redakcyjna#1 (coffee), which no snapshot addresses. The letter merges guideline-backed and editorial sentences without saying which is which.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 127, "text": "do not drive when you feel sleepy"},
+        {"source": "snapshot", "snapshot": "d2dea5869951c1d9.txt", "line": 593, "text": "Interventions to support adherence to treatment for OSAHS should be given by trained specialist staff"}
+      ],
+      "fix_direction": "State that B applies to the NICE recommendations, and that the driving and device-setting sentences and the coffee remark are editorial judgement."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi",
+      "why": "The title can be read as loud snoring accompanied by pauses or by sleepiness, while W praktyce#1 and the upstream treat snoring, witnessed pauses and sleepiness as three separate triggers. A reader with witnessed pauses but no loud snoring, or with sleepiness only, may conclude the advice is not for them.",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "打鼾很响、有人看见你睡着时憋气、白天困到开车都想睡的"}
+      ],
+      "fix_direction": "Reword the title so that each sign is an independent reason to see a doctor."
+    }
+  ],
+  "notes": "Protocol: I opened only the role file, AGENTS.md, README.md (a Grep to locate the section, then lines 42-81, which run slightly past 'Jak czytać dowody' into the next two sections), the packet and the three named snapshots. I did not open the earlier report at the output path, or anything under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files. No network, shell or scripts used. All finding ids are sentences from packet.propositions; the Źródła and Zmiany w adaptacji fields have no ids, so points about them are anchored to the proposition they touch. Numbers attack: the item has no figures except the identifier NG202 and the grade letter; the '70%' in Zmiany w adaptacji only describes a removed upstream claim (RR 0.3 gives about 70% in relative terms), so no finding. No second snapshot shows a recency conflict (NICE page published 20 August 2021, NHS page reviewed 19 March 2024, no disagreement between them). No blocker: nothing in the item is a wrong or unsafe instruction, and no Chinese institution, hotline, threshold or legal rule appears in reader-facing fields. In the preservation list I set fallback_stated true where no alternative path is at stake (non-actions, deliberate omissions)."
+}

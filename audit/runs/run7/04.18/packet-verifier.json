@@ -1,0 +1,142 @@
+{
+  "version": 2,
+  "item": "04.18",
+  "role": "verifier",
+  "title": "Przy wyborze mieszkania lub pracy policz czas dojazdów",
+  "fields": {
+    "Koszt": "Sprawdzenie trasy kosztuje czas. Zmiana mieszkania lub pracy może oznaczać znaczne wydatki i trudności. Nie podajemy niezweryfikowanych cen dla Polski.",
+    "W praktyce": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz. Zestaw go z kosztem mieszkania, warunkami pracy i potrzebami domowników. Nie zakładaj, że przeprowadzka zawsze się opłaci.",
+    "Korzyść i dowody": "W analizie niemieckich danych panelowych Stutzer i Frey stwierdzili związek dłuższego dojazdu z niższym deklarowanym dobrostanem. Przegląd Chatterjee i współautorów potwierdza związek dłuższego dojazdu z mniejszym zadowoleniem z samej podróży, ale nie ustala spójnego związku z ogólną satysfakcją z życia.",
+    "Ocena dowodów": "B — badanie obserwacyjne i przegląd o niejednoznacznych wnioskach dla ogólnego zadowolenia z życia.",
+    "Ocena redakcyjna": "Czas dojazdu jest jednym z kosztów decyzji. Przykład rachunkowy: 30 minut mniej w każdą stronę przez pięć dni daje 5 godzin tygodniowo. To rachunek przy podanych założeniach, nie wynik eksperymentu.",
+    "Ograniczenia": "Związek statystyczny nie dowodzi, że skrócenie dojazdu poprawi samopoczucie konkretnej osoby. Praca zdalna, opieka nad bliskimi, dostępność transportu i korzyści z pracy zmieniają bilans."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przy wyborze mieszkania lub pracy policz czas dojazdów"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Sprawdzenie trasy kosztuje czas."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Zmiana mieszkania lub pracy może oznaczać znaczne wydatki i trudności."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "Nie podajemy niezweryfikowanych cen dla Polski."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Porównaj czas od drzwi do drzwi w godzinach, w których rzeczywiście podróżujesz."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zestaw go z kosztem mieszkania, warunkami pracy i potrzebami domowników."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Nie zakładaj, że przeprowadzka zawsze się opłaci."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "W analizie niemieckich danych panelowych Stutzer i Frey stwierdzili związek dłuższego dojazdu z niższym deklarowanym dobrostanem."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Przegląd Chatterjee i współautorów potwierdza związek dłuższego dojazdu z mniejszym zadowoleniem z samej podróży, ale nie ustala spójnego związku z ogólną satysfakcją z życia."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — badanie obserwacyjne i przegląd o niejednoznacznych wnioskach dla ogólnego zadowolenia z życia."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Czas dojazdu jest jednym z kosztów decyzji."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Przykład rachunkowy: 30 minut mniej w każdą stronę przez pięć dni daje 5 godzin tygodniowo."
+    },
+    {
+      "id": "Ocena redakcyjna#3",
+      "field": "Ocena redakcyjna",
+      "index": 3,
+      "text": "To rachunek przy podanych założeniach, nie wynik eksperymentu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Związek statystyczny nie dowodzi, że skrócenie dojazdu poprawi samopoczucie konkretnej osoby."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Praca zdalna, opieka nad bliskimi, dostępność transportu i korzyści z pracy zmieniają bilans."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1111/j.1467-9442.2008.00542.x",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 807,
+      "sha256": "7d8c91571e44e8843ff5ac9257e1b8641c4239af05a266821e984ed46bb48039",
+      "snapshot": "d62873daa6a46711.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "10.1080/01441647.2019.1649317",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 271,
+      "sha256": "ea029221cd7f09bff2592b3b537c0a449541abfd5519bb96becb2efdcc085a57",
+      "snapshot": "cd0a0ef7a610e4bb.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

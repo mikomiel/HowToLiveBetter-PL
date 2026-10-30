@@ -1,0 +1,145 @@
+{
+  "item": "14.6",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"],
+      "reason": "Backed: checking email forwarding rules (line 51) and making sure devices and apps still logged in are logged out after a password change (line 69), plus checking accounts for unauthorised activity (line 25). Not backed: 'uprawnienia aplikacji' (permissions granted to apps) is not mentioned anywhere in the snapshot, and the snapshot advises no routine, ongoing checking ('Sprawdzaj'); its steps are for recovering an account that has been hacked."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Przegląd ustawień i ustalenie, co nadal jest potrzebne.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Only the part about finding devices and apps that are still logged in and logging them out via the Settings/Privacy/Account menus of the service (line 69, after a password change) is backed. Not backed: a routine check of lists of sessions and of connected apps. The snapshot has no 'list of sessions' or 'connected apps' (permission grants) and gives this as a post-incident step, not as a review."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Usuń zbędne dostępy.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed only in the narrow form: after changing passwords, log devices and apps that may still be logged in out of the account (line 69). Not backed: removing 'zbędne' (no longer needed) access as a general or preventive measure; the snapshot gives no such advice."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 45, "text": "Go to the account provider's website and search their help or support pages."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 51, "text": "Check your email filters and forwarding rules."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 59, "text": "a. change the password for any account that has been hacked"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 61, "text": "change the password for any accounts that are using the same password"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 69, "text": "you need to make sure that any devices and apps (that may still be logged in) are logged out of the relevant account."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 69, "text": "For specific instructions on how to do this, you'll need to refer to the support page for the relevant service."}
+      ],
+      "reason": "Each action is backed by the quoted lines: provider help pages for recovery, forwarding rules, changing the hacked and the reused passwords, logging devices and apps out per the service's support page. Not backed: the trigger. The snapshot's steps are headed 'Steps to take if your account has been hacked' (after the signs of unauthorised activity are checked); it does not say to run them on mere suspicion."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 25, "text": "Check your online accounts to see if there's been any unauthorised activity."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 33, "text": "logins or attempted logins from strange locations or at unusual times"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 29, "text": "changes to your security settings"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 31, "text": "messages or notifications sent from your account that you don't recognise"}
+      ],
+      "reason": "Lines 25-33 list these under 'Things to look out for' when checking for unauthorised activity. The page is the NCSC's (title line 7)."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 51, "text": "A common tactic used by cyber criminals is to set up a forwarding rule, which means that they will automatically be sent a copy of all emails sent to your account"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 69, "text": "Once you have changed your passwords, you need to make sure that any devices and apps (that may still be logged in) are logged out of the relevant account."}
+      ],
+      "reason": "Both parts have the same kind and both are supported. 'Przechwytywanie' is the editors' paraphrase of criminals automatically receiving a copy of all emails."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "oficjalny poradnik odzyskiwania konta",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 7, "text": "Recovering a hacked account | National Cyber Security Centre"},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 17, "text": "A step by step guide to recovering online accounts."}
+      ],
+      "reason": "The document type (step-by-step guide to recovering accounts) and the publisher (NCSC) are supported. The word 'oficjalny' (that the NCSC is an official government body) is not stated in the snapshot text between the markers. The grade letter C itself is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez oceny skuteczności okresowego przeglądu",
+      "verdict": "absent_in_source",
+      "searched": ["4f1351e404cb2044.txt"],
+      "reason": "Searched for effective/effectiveness, evidence, study/studies, research, periodic, regular, review, audit, routine, permission, connected, third-party, revoke, session. The only hits were the 'Reviewed' date field (line 150), 'often' in unrelated sentences (lines 75, 81, 93) and 'unauthorised' (lines 25, 35). None evaluates the effectiveness of a periodic review of sessions, apps or forwarding rules, and the page does not recommend a periodic review at all. Absence is from the stored main region only (keptChars 6804 of wholeChars 9603), not from the full page."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nieznana lokalizacja sama nie rozstrzyga o ataku.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 25, "text": "Check your online accounts to see if there's been any unauthorised activity."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 33, "text": "logins or attempted logins from strange locations or at unusual times"}
+      ],
+      "reason": "The source lists logins from strange locations only as one of the 'things to look out for' when checking for unauthorised activity, which is consistent with a prompt to check. It never states that an unknown location alone does or does not establish an attack; that part is an inference by the editors."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "4f1351e404cb2044.txt", "line": 69, "text": "Once you have changed your passwords, you need to make sure that any devices and apps (that may still be logged in) are logged out of the relevant account."},
+        {"snapshot": "4f1351e404cb2044.txt", "line": 65, "text": "Log all devices and apps out of your account"}
+      ],
+      "reason": "The source treats changing passwords (step 3) and logging devices and apps out (step 4) as separate steps, and says apps may still be logged in after the password change."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "Source covers checking forwarding rules and logging devices/apps out when recovering a hacked account. It does not mention app permissions or an ongoing routine of checking sessions."},
+    {"id": "W praktyce#1", "note": "Source gives logging out of devices and apps as a step after a password change in a hacked-account recovery, not as a routine review of lists of sessions or connected apps."},
+    {"id": "W praktyce#2", "note": "Source: log out devices and apps after changing passwords. The sentence generalises to removing unneeded access."},
+    {"id": "W praktyce#3", "note": "Source's steps are for an account that has been hacked, not for a suspicion. The source is UK guidance and is generic about provider procedures; the UK-specific Report Fraud step is not carried into the sentence."},
+    {"id": "Korzyść i dowody#1", "note": "Source lists 'changes to your security settings' and unrecognised messages; the sentence's 'nieznane zmiany' is a narrower, reasonable reading."},
+    {"id": "Ocena dowodów#1.1", "note": "'Oficjalny' (government status of the NCSC) is not stated in the snapshot text."},
+    {"id": "Ograniczenia#1", "note": "Source does not say whether an unknown location alone is conclusive."},
+    {"id": "Ograniczenia#2", "note": "Source speaks of logging devices and apps out of the account (sessions). It does not discuss revoking permissions granted to third-party apps; the sentence does not claim that, but a reader might assume it."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and snapshot 4f1351e404cb2044.txt. Snapshot is a real NCSC page (not a stub or error page); stored text is the main region (6804 of 9603 chars, truncated false), so absence is from that region only. No warnings in the packet. Classification judgement calls: Koszt#2 and Ograniczenia#3 treated as meta_statement (what the item offers or its editorial basis), Ograniczenia#1 and #2 treated as source_claim."
+}

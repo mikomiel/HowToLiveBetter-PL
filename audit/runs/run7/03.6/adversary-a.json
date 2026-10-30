@@ -1,0 +1,116 @@
+{
+  "item": "03.6",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "When doing work that needs continuous thinking, keep even a few seconds of interruption out",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Close the door",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Put on headphones",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Hang a do-not-disturb sign",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "For self-initiated interruptions (opening things yourself), switch off non-essential notifications (item 1)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "For self-initiated interruptions, process messages in batches (item 5)",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania.",
+      "why": "The only cited source (abstract) reports what imposed short interruptions did to sequence errors in one task. It does not test any intervention that prevents interruptions, so the action (limit avoidable interruptions, extended in the title to step-by-step tasks in general) is an editorial inference from the harm measurement. The item half-discloses this in Ocena redakcyjna (organisational attempt, not a guarantee), but Ograniczenia never says that the benefit of limiting interruptions was not measured, and the letter B in Ocena dowodów attaches to the harm experiment, not to the advised action (README C covers an operational recommendation without direct measurement of effectiveness). A reader can take B as grading the advice itself.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96995263a3e68870.txt", "line": 14, "text": "We investigated the effect of short interruptions on performance of a task"},
+        {"source": "upstream", "line": 3, "text": "关上门，戴上耳机，或者挂一个「勿扰」牌。"}
+      ],
+      "fix_direction": "Add to Ograniczenia or Ocena dowodów an explicit sentence that the abstract measures the effect of imposed interruptions and that the effect of preventing them was not measured, and that the action is an editorial inference. Keep B only as a description of the harm experiment."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "ogranicz możliwe do uniknięcia przerwania",
+      "why": "The upstream split interruptions into two kinds and said a closed door stops only the first kind (others coming to you); the self-initiated kind needs notifications switched off and message batching. The item drops this caveat and both actions without saying so. What remains is a generic instruction with no concrete method: door, headphones and sign are gone, and the phrase tryb nie przeszkadzać appears only in Koszt, not in W praktyce. A reader whose interruptions come from their own checking of messages gets no named path. Zmiany w adaptacji lists the removed 25 minute claim and the merging of studies but not these omissions. Dropping the field-study classification itself is defensible because that source is only a metadata-only lead; the dropped part is the practical action for self-initiated interruptions.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "一类是自己点开的。关门只挡得住前一类。后一类要配合第 1 条（关掉非必要通知）和第 5 条（批量处理消息）一起用。"},
+        {"source": "upstream", "line": 3, "text": "关上门，戴上耳机，或者挂一个「勿扰」牌。"}
+      ],
+      "fix_direction": "Decide explicitly whether the item should name concrete means (door, headphones, status or do-not-disturb mode) and whether it should carry a self-contained sentence about switching off non-essential notifications, without citing the lead study as evidence for the two kinds of interruption. Record the omission in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#2",
+      "text": "liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym",
+      "why": "The abstract states a change in the rate of sequence errors on post-interruption trials relative to baseline trials. The item says liczba (count) and compares with warunek bazowy (a condition), which reads as total errors in the task or session. The figures are purely relative: the abstract gives no baseline error rate, so the absolute effect (for example in percentage points) cannot be read from it, and a reader may overestimate it. The wording po przerwaniach partly carries the post-interruption scope, and Ograniczenia partly offsets it, so this changes precision, not the action.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96995263a3e68870.txt", "line": 14, "text": "Interruptions averaging 4.4 s long tripled the rate of sequence errors on post-interruption trials relative to baseline trials."},
+        {"source": "upstream", "line": 5, "text": "会让按顺序一步步做的任务（序列任务）步骤出错率翻倍。"}
+      ],
+      "fix_direction": "Use the source's measure (rate or frequency of sequence errors on trials right after an interruption, compared with baseline trials) and state that the multiples are relative and that the abstract gives no absolute error rates."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "Po przerwaniach trwających średnio 2,8 sekundy",
+      "why": "The abstract ties the 2.8 s interruption to the length of one step of this particular task (about the time to perform a step in the interrupted task). The item drops that qualifier, so the seconds look like a general duration threshold for any step-by-step work. Ograniczenia disclaims a universal return-to-focus time but not a universal interruption length.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96995263a3e68870.txt", "line": 14, "text": "Interruptions averaging 2.8 s long--about the time to perform a step in the interrupted task--doubled the rate of sequence errors."}
+      ],
+      "fix_direction": "Keep the information that the 2.8 s interruption was about as long as one step of the studied task, or add a limitation that the durations are task-specific."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ocena dowodów#1",
+      "text": "B — eksperyment laboratoryjny dotyczący błędów sekwencji.",
+      "why": "The stored abstract describes participants, trials and baseline trials but never says the study was done in a laboratory. The word laboratoryjny is present only in the upstream line, which is a lead and not evidence. Ograniczenia also does not say that the check was abstract-only, so the abstract gives no sample size, population, design details or baseline rates. The grade letter B itself is consistent with a single experimental study under the README table.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96995263a3e68870.txt", "line": 14, "text": "We investigated the effect of short interruptions on performance of a task"},
+        {"source": "upstream", "line": 5, "text": "这是实验室里做的。另一项是对"}
+      ],
+      "fix_direction": "Describe the source as an experiment on a sequence task as shown by the abstract, drop laboratoryjny unless a snapshot supports it, and state in Ograniczenia that the abstract was the only text checked and what it does not report."
+    }
+  ],
+  "notes": "No blocker found, so status is PASS; five minor findings remain. Observations without a separate finding: (1) Źródła says Abstrakt wydawcy, but the stored snapshot labels the text as ABSTRACT (Europe PMC) retrieved via Europe PMC; the provider label is not supported by the snapshot (Źródła is not in packet.propositions, so no id was available). (2) Zmiany w adaptacji describes the removed claim as every interruption costs about 25 minutes, whereas upstream line 5 gives 25 min 26 s as the average time to return to the interrupted work the same day, with 2.26 other events in between; the description of the removal is looser than the upstream wording. (3) Koszt does not state money, time and effort separately and drops the upstream zero-money claim (not a number needing a source). (4) W praktyce#2 (do not switch off required alarms and safety procedures) is an editorial safety addition absent from the upstream span and I found nothing unsafe in it. (5) Recency and conflict: the snapshots show no later guidance and no disagreement (one abstract, two metadata-only lead stubs), so the attack was run with no finding. (6) Leak attack: no Chinese institution, hotline, threshold or legal statement in reader-facing fields. (7) Self-containment: the item has no cross-reference links and is safe and actionable alone, only thin on method (see preservation finding). (8) The two origin lead snapshots (10.1145/1054972.1055017 and 10.1145/1357054.1357072) are metadata-only, so no claim about the 24-worker field study, the 11 minute switching, the 57% figure, 25 min 26 s or the 48-person speed and stress experiment could be supported or refuted; the item rightly does not state them. Protocol: I opened only the role file, AGENTS.md, the packet and the three listed snapshots; I also read README.md lines 38-77, which goes a little beyond the Jak czytać dowody section into the next two headings (Stan treści i pochodzenie and the start of Uruchom lokalny czytnik). Nothing under book/, tests/, tools/, the manifest, other snapshots, git history or chapter files was opened and no script was run."
+}

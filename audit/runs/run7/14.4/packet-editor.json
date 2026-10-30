@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "14.4",
+  "role": "editor",
+  "title": "Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta",
+  "fields": {
+    "Koszt": "Dostęp do innego zaufanego urządzenia i kontakt z dostawcami usług. Czas i ewentualne opłaty zależą od sytuacji.",
+    "W praktyce": "Użyj oficjalnej usługi producenta, by oznaczyć telefon jako utracony lub go zablokować, jeżeli ta funkcja była dostępna. Powiadom operatora o utracie karty i ustal jej zabezpieczenie. Jeśli zagrożony jest dostęp do banku lub widzisz obce operacje, skontaktuj się pilnie z bankiem oficjalnym kanałem. Podejrzenie kradzieży zgłoś policji. Nie czekaj na zakończenie jednego zgłoszenia, jeżeli inne ryzyko jest pilne.",
+    "Korzyść i dowody": "Google i Apple opisują zdalną blokadę i inne działania po utracie urządzenia. Apple wskazuje także kontakt z operatorem. Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach.",
+    "Ocena dowodów": "C — oficjalne instrukcje reagowania; nie badanie jednego optymalnego porządku działań.",
+    "Ocena redakcyjna": "Przygotowana wcześniej lista oficjalnych kontaktów może ułatwić reakcję. Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów.",
+    "Ograniczenia": "Zdalne funkcje zależą od wcześniejszych ustawień i łączności. Wymazanie może nieodwracalnie usunąć dane; po resecie Android może przestać być widoczny w usłudze lokalizacji. Apple ostrzega przed usunięciem urządzenia z listy Znajdź, bo usuwa to blokadę aktywacji. Zanim wybierzesz kasowanie lub usunięcie z konta, przeczytaj instrukcję dla swojego urządzenia."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.2",
+  "role": "editor",
+  "title": "Dbaj o regularne pory snu, nie skracając odpoczynku",
+  "fields": {
+    "Koszt": "Organizacja dnia i pogodzenie snu z obowiązkami. To ocena redakcji, bez wyceny czasu.",
+    "W praktyce": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen. Nie traktuj regularności jako powodu do celowego niedosypiania.",
+    "Korzyść i dowody": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni. Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy. NHS zaleca stałą porę wstawania jako element dbania o sen.",
+    "Ocena dowodów": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pobudki.",
+    "Ocena redakcyjna": "To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.",
+    "Ograniczenia": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki. Praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania. Utrzymujące się problemy ze snem omów z lekarzem."
+  }
+}

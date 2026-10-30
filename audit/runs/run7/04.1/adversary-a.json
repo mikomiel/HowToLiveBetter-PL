@@ -1,0 +1,118 @@
+{
+  "item": "04.1",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["preservation", "numbers", "scope-words", "leak", "self-containment"],
+  "attacks_not_assessable": [
+    {
+      "attack": "same-action",
+      "reason": "The only cited source (10.1016/s0065-2601(06)38002-1) is blocked by api.crossref.org and has snapshot null, so what the meta-analysis manipulated (a written plan versus any if-then plan formed in another way) cannot be checked. Against the upstream span alone the advised action (a when/where/trigger plan, written down) is kept, but upstream is only a lead."
+    },
+    {
+      "attack": "grade",
+      "reason": "The type match holds on the citation title in upstream line 7 (a meta-analysis, so a quantitative synthesis, which README defines as A). Whether the pooled tests are experimental or correlational and how certain the synthesis is cannot be decided without the source text, and the only source is blocked. README says A still needs a separate assessment of design, risk of bias and certainty."
+    },
+    {
+      "attack": "recency",
+      "reason": "There is no stored snapshot, so there is no source to date and no second snapshot to compare."
+    },
+    {
+      "attack": "limitations",
+      "reason": "No snapshot exists, so no limitation sentence can be checked against what the source contains. The sentences 'Wynik jest średnią z różnych zadań i grup.' and 'Plan nie zapewnia sukcesu i nie zastępuje umiejętności ani zasobów potrzebnych do działania.' have no support in the upstream span either (see the scope-words finding on Ograniczenia#1). The link label 'DOI i abstrakt wydawcy' in Źródła claims an abstract was consulted, but no abstract is stored."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Rewrite the intention as a plan naming what time, where and what trigger leads to what action.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Write one 'if... then...' sentence per task, 1 to 2 minutes each.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Rewrite 'I will do this' as 'Tuesday 8 am, sitting at the desk, I first write the introduction'.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Use of the plan at three points: starting to act, holding up when interrupted, and withdrawing from things doomed to fail.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Use the technique only for something you really want to do; for a goal you do not want, more written sentences do not help.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Caveat: the studies mostly used students and mostly health habits, so transfer to work settings is not guaranteed.",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Ograniczenia#1",
+      "text": "Wynik jest średnią z różnych zadań i grup.",
+      "why": "The upstream span limits generality: the studies mostly recruited students, mostly measured health habits, and transfer to work settings is not guaranteed. The item replaces this with a neutral 'different tasks and groups', which hides that the evidence base is narrow. The item's own lead example in W praktyce#1 ('zajmę się tekstem', open a file, write a paragraph at a desk) is exactly the work-setting transfer the upstream warns about, and nothing next to it says so. Ocena dowodów#1 also says the result 'dotyczy realizacji celów' without the population or domain. Zmiany w adaptacji lists only an added Polish example and the explanation of d, not the removal of this caveat. AGENTS.md requires keeping conditions, population, uncertainty and source limitations. The caveat could not be checked against the paper because the only source is blocked, but it is not refuted by anything stored either, so dropping it is unsupported.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "这些研究找的多是学生，看的多是健康方面的习惯，搬到工作场景不一定同样管用"}
+      ],
+      "fix_direction": "Keep the students, health-habits and work-transfer caveat in Ograniczenia (or state a source-backed reason for dropping it), and either mark the writing example as an editorial example of a work task not directly tested, or add a non-work example. Record the change in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Wybierz cel, który rzeczywiście chcesz zrealizować.",
+      "why": "The upstream states an only-if condition and its consequence: the technique works only for what you yourself really want to do, and for a goal you do not want, more sentences do not help. The item keeps the condition only as an imperative and drops the consequence. A reader with an imposed or obligatory task (the example 'zajmę się tekstem' reads like one) is not told that the plan may not help. Ograniczenia does not repeat the condition.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "这招只对你自己真想做的事有效。目标本身你就不想要，写再多句也没用"}
+      ],
+      "fix_direction": "State the condition and its consequence as a limitation (the plan is described as helping mainly with goals the reader really wants), without adding an unsourced remedy for unwanted goals."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#2",
+      "text": "Średni efekt dla realizacji celów wyniósł d = 0,65.",
+      "why": "The upstream benefit line names three points where the plan is said to work: starting, holding up when interrupted, and withdrawing from doomed goals. The item reduces this to 'realizacja celów' and drops all three, so the reader loses the information that the benefit is described for specific phases. This does not change what a reader would do, and the three-point claim cannot be checked because the source is blocked, so this is only a recorded drop.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "管用的环节有三个：开始动手、被打扰的时候顶住、从注定做不成的事上撤出来"}
+      ],
+      "fix_direction": "Either omit the three phases deliberately and say so in Zmiany w adaptacji, or carry them over only after a source check."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#1",
+      "text": "Gollwitzer i Sheeran przeanalizowali wyniki 94 niezależnych testów planów „jeśli–to”.",
+      "why": "Both figures in the item, 94 independent tests and d = 0,65 (Korzyść i dowody#2), appear only in the upstream span. The one cited source is blocked and has no snapshot, so both figures remain leads and are confirmed by no stored passage. This is not a finding that they are wrong. The item does handle d correctly (Korzyść i dowody#3 says it is not a 65% gain), and the upstream's 'medium to large' label is not carried over.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "把 94 项独立检验合起来算"},
+        {"source": "upstream", "line": 5, "text": "效果大小 d = 0.65，算中到大"}
+      ],
+      "fix_direction": "Confirm 94 and d = 0,65 against a stored snapshot of the paper or its abstract before the item is treated as verified; if the source stays blocked, the figures cannot be published as sourced numbers."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Korzyść i dowody#1",
+      "text": "planów „jeśli–to”",
+      "why": "The term 'plany jeśli–to' is used for the first time in the evidence field without a definition, while the example in W praktyce#1 is phrased with 'Gdy ... otworzę ...', not 'jeśli ... to'. A reader who does not link the two may not see that the example is the studied plan type. The item is otherwise safe and actionable alone: it has no cross-reference links, only the DOI link.",
+      "evidence": [],
+      "fix_direction": "Name the plan type in W praktyce (an 'if-then' plan) so the term is explained before it is used for the studies."
+    }
+  ],
+  "notes": "Protocol: the only cited source row has access blocked (blocked by api.crossref.org) and snapshot null, so no file under .cache/sources was opened and nothing in the item could be checked against a source; every figure and caveat above comes from the upstream span, which is a lead, not evidence. This is why the status is UNAVAILABLE and not PASS, although no blocker was found. In the preservation list I set fallback_stated to true for entries where no fallback is needed (kept, or a dropped cost estimate) and to false where a reader loses a stated condition. The item's Źródła label 'DOI i abstrakt wydawcy' implies an abstract was used, but the packet has no Weryfikacja or Oryginał field, so what was checked in the abstract could not be judged. One minor departure: I ran a Glob on audit/runs/run7/04.1 to see which files exist and it returned the names of sibling files (packet-verifier.json, packet-editor.json, prompt-*.md); I did not open any of them. I read README.md lines 38 to 77, slightly more than the section 'Jak czytać dowody'."
+}

@@ -1,0 +1,50 @@
+{
+  "item": "04.9",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "Zapytaj, czy",
+      "replacement": "Zapytaj siebie, czy",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji.",
+      "why": "A bare surname with no first name, year or description. A reader without the Źródła field cannot tell who Steel is or what kind of work this is. The field never names the work a synteza (or metaanaliza), although Ocena dowodów calls it 'synteza badań korelacyjnych' and AGENTS.md asks that a synthesis be called a synthesis. A name, a number and an attribution verb are protected, so I propose no edit. The verifier should decide whether the sentence should open with the study type, for example 'W syntezie badań Steela ...', if the source supports it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "odległość nagrody lub zakończenia w czasie",
+      "why": "Reads like a literal rendering ('distance of reward or ending in time'). A more natural Polish phrasing would be 'nagroda lub zakończenie zadania odległe w czasie' or similar. 'zakończenia' is also unclear: it may mean the end of the task or a deadline (termin). This is a duration/meaning question, so I leave it to the verifier to decide against the source."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "poczucie własnej skuteczności i impulsywność",
+      "why": "'Wiązały się' is followed by four listed factors with no direction. Read literally, 'poczucie własnej skuteczności' sits next to 'impulsywność' as if both increased delaying, so a reader may take high self-efficacy to go with more procrastination. If the source gives different directions, the sentence needs to say so, for example 'niskie poczucie ...'. This is an association claim, so no edit from me."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "nie dowód jednej przyczyny prokrastynacji",
+      "why": "Ambiguous: it can mean 'does not prove that there is a single cause', or 'does not prove that any one of these factors is a cause'. The two readings differ. Negation, quantifier and causal wording are all protected. The verifier should check which one the source supports and make the sentence say it."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Z tego przeglądu nie wynika",
+      "why": "Consistency of the term for the same source. Korzyść i dowody says 'Steel przeanalizował', Ocena dowodów says 'synteza badań korelacyjnych', and Ograniczenia says 'tego przeglądu'. 'Przegląd' and 'synteza' can name different study designs, so replacing one with the other is a technical-term swap and I report it instead of editing. The verifier should pick one term supported by the source ('synteza' or 'metaanaliza') and use it in all three places."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "ani że wynika z braku wysiłku",
+      "why": "The verb 'wynika' is used twice in one sentence in two senses: 'z przeglądu nie wynika' (it follows from) and 'wynika z braku wysiłku' (is caused by). This is clumsy and the second clause is easy to misparse. 'Wynika z' is a causal verb, so no edit from me. A possible fix is 'ani że jest skutkiem braku wysiłku', but only if the source supports the causal wording. 'Braku wysiłku' may also be a literal rendering, and the verifier should check what the source says."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.",
+      "why": "The referent is unclear. The item has not introduced any 'zmiana sposobu myślenia'. Koszt speaks of 'zmiany sposobu pracy', so the two phrases look like different things under different names. 'Tutaj' is also vague: it may mean in the cited synthesis, in this advice, or in general. Negation, scope and effect claim are protected, so I do not edit. The verifier should decide what the sentence refers to and whether 'sposobu myślenia' and 'sposobu pracy' should be the same term."
+    }
+  ],
+  "verdict": "needs_edits"
+}

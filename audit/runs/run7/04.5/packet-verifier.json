@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "item": "04.5",
+  "role": "verifier",
+  "title": "Przygotuj plan spotkania i korzystaj z niego",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Organizator musi przygotować plan i udostępnić go uczestnikom. To ocena redakcji.",
+    "W praktyce": "Przygotuj plan i użyj go podczas spotkania. Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik. Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.",
+    "Korzyść i dowody": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby. Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.",
+    "Ocena dowodów": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.",
+    "Ocena redakcyjna": "Przygotowanie planu jest niewielkim nakładem. Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji.",
+    "Ograniczenia": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę. Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji. Rada nie uprawnia do pomijania obowiązkowych spotkań."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Przygotuj plan spotkania i korzystaj z niego"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Organizator musi przygotować plan i udostępnić go uczestnikom."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przygotuj plan i użyj go podczas spotkania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przygotowanie planu jest niewielkim nakładem."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Rada nie uprawnia do pomijania obowiązkowych spotkań."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1007/s10869-009-9092-6",
+      "access": "metadata-only",
+      "accessWords": "tylko metadane, bez abstraktu",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 203,
+      "sha256": "ccb4fa4997e11e0be207e5d3d6a8ec5423e5b6af569a1722857918f273dcad2f",
+      "snapshot": "088a9773da2a17de.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

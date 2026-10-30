@@ -1,0 +1,81 @@
+{
+  "item": "14.2",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "Zmiana haseł i przygotowanie menedżera haseł.",
+      "replacement": "Zmiana haseł i przygotowanie menedżera haseł (aplikacji do tworzenia i przechowywania haseł).",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "które serwis pokaże przy jego włączaniu",
+      "replacement": "które usługa pokaże przy włączaniu drugiego składnika logowania",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "przez którą resetujesz inne konta",
+      "replacement": "przez którą resetujesz hasła do innych kont",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "powtórzone hasło",
+      "replacement": "ponownie użyte hasło",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Tytuł",
+      "text": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+      "why": "Tytuł mówi tylko o haśle do poczty, a pole W praktyce dotyczy głównie menedżera haseł i unikalnych haseł do wszystkich usług. Tytuł jest zrozumiały, ale węższy niż opis działania; to decyzja redakcyjna i merytoryczna dla weryfikatora, nie poprawka językowa."
+    },
+    {
+      "field": "W praktyce",
+      "text": "do usług, które ich używają",
+      "why": "Nienaturalne: to nie usługi używają haseł, tylko użytkownik loguje się nimi do usług. Wygląda na kalkę. Możliwe sformułowania do rozważenia przez weryfikatora: \"do usług, które wymagają hasła\" lub \"do usług, w których logujesz się hasłem\". Zdanie ogranicza zakres działania, więc go nie zmieniam."
+    },
+    {
+      "field": "W praktyce",
+      "text": "z kilku losowych, niezwiązanych słów",
+      "why": "\"Niezwiązanych\" nie ma dopełnienia: niezwiązanych z czym? Naturalnie brzmiałoby \"niezwiązanych ze sobą\", ale to zmienia zakres przeczenia (inne czytanie: niezwiązanych z użytkownikiem), więc nie edytuję. Dotyczy też liczebnika \"kilku\". Do decyzji weryfikatora."
+    },
+    {
+      "field": "W praktyce",
+      "text": "drugi składnik logowania",
+      "why": "Termin techniczny. W polu Ograniczenia ta sama sprawa nazwana jest \"metodą uwierzytelniania\". Nie widzę 14.1 ani reszty rozdziału, więc nie wiem, który termin jest ustalony. Weryfikator powinien ujednolicić, bez zamiany dwuskładnikowe/dwuetapowe."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu.",
+      "why": "Zdanie jest zbyt długie i niesie kilka poleceń. Nie dzielę go, bo warunek \"Jeśli to możliwe\" obejmuje oba polecenia, a po podziale mógłby objąć tylko pierwsze. Jeśli weryfikator zdecyduje o podziale, warunek musi zostać zachowany w obu zdaniach."
+    },
+    {
+      "field": "Koszt",
+      "text": "nie wymagamy zakupu konkretnego produktu",
+      "why": "Rejestr: \"wymagamy\" brzmi tak, jakby autorzy coś nakładali. Naturalniej: \"porada nie wymaga zakupu konkretnego produktu\". Zawiera przeczenie, więc tylko zgłaszam."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.",
+      "why": "Litera oceny, nazwa instytucji i przeczenie są chronione. Językowo \"zmierzonej kwoty unikniętych strat\" jest ciężkie i kalkowe. Zdanie miesza uzasadnienie oceny dowodów z kwotą strat (opłacalnością); AGENTS.md każe je rozdzielać. Do oceny przez weryfikatora."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "why": "Tekst odsyłacza jest chroniony. Brzmi niejasno: \"odpowiednią\" nie mówi, jaką metodę. Polecenie w polu Ograniczenia zaburza też rejestr tego pola. Nie widzę 14.1, więc nie proponuję brzmienia."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+      "why": "Sztywne, kalkowe: imiesłów \"pasującej do wymagań\" i brak słowa \"hasła\". Naturalniej np. \"Nie podajemy jednej długości hasła, która spełniałaby wymagania każdej usługi\". Zdanie zawiera przeczenie i kwantyfikatory (jednej, każdej), więc nie edytuję."
+    }
+  ],
+  "verdict": "needs_edits"
+}

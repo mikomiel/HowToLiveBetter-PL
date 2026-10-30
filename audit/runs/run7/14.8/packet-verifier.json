@@ -1,0 +1,167 @@
+{
+  "version": 2,
+  "item": "14.8",
+  "role": "verifier",
+  "title": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki",
+  "fields": {
+    "Koszt": "Opisanie żądania i zachowanie korespondencji. Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych.",
+    "W praktyce": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych. Zachowaj potwierdzenie. Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych. W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej.",
+    "Korzyść i dowody": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17. Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania. Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu.",
+    "Ocena dowodów": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów.",
+    "Ocena redakcyjna": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź. Nie obiecujemy wyniku sporu.",
+    "Ograniczenia": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń. Kopia danych nie może naruszać praw i wolności innych. Administrator może w uzasadnionym zakresie potwierdzać tożsamość. Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Opisanie żądania i zachowanie korespondencji."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zachowaj potwierdzenie."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Nie obiecujemy wyniku sporu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Kopia danych nie może naruszać praw i wolności innych."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Administrator może w uzasadnionym zakresie potwierdzać tożsamość."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.uodo.gov.pl/pl/493/4098",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.uodo.gov.pl/pl/493/4098",
+      "finalUrl": "https://www.uodo.gov.pl/pl/493/4098",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 19115,
+      "sha256": "c7140d0fc9f080e2a36ab0a9f32950c1b250f210fdf19ede7606db3c04f2d464",
+      "snapshot": "223080ce91198a64.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 19074,
+        "wholeChars": 19074,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

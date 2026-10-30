@@ -1,0 +1,186 @@
+{
+  "version": 2,
+  "item": "04.9",
+  "role": "adversary",
+  "title": "Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy. To ocena redakcji.",
+    "W praktyce": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne. Wybierz mały pierwszy krok. Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).",
+    "Korzyść i dowody": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji. Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność. Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.",
+    "Ocena dowodów": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.",
+    "Ocena redakcyjna": "Przyjrzenie się przeszkodzie może pomóc dobrać działanie. Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.",
+    "Ograniczenia": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku. Nie jest to diagnoza ani metoda leczenia problemów psychicznych.",
+    "Źródła": "Steel (2007), The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. [DOI](https://doi.org/10.1037/0033-2909.133.1.65); [abstrakt w PubMed](https://pubmed.ncbi.nlm.nih.gov/17201571/).",
+    "Zmiany w adaptacji": "Zastąpiono ogólne wyjaśnienie emocjonalne ostrożnym opisem wielu czynników. Ocenę obniżono z A do B, ponieważ synteza korelacji nie sprawdza skuteczności tej porady. Mały pierwszy krok jest sugestią redakcyjną, nie wynikiem tej metaanalizy."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Wybierz mały pierwszy krok."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1)."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Steel przeanalizował 691 korelacji dotyczących prokrastynacji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Przyjrzenie się przeszkodzie może pomóc dobrać działanie."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Z tego przeglądu nie wynika, że każda prokrastynacja jest unikaniem przykrych emocji ani że wynika z braku wysiłku."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Nie jest to diagnoza ani metoda leczenia problemów psychicznych."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/0033-2909.133.1.65",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1167,
+      "sha256": "dab6d959b5a9213e181bc0858eb0280b895e1c9f43eae215c968c16deee0ae94",
+      "snapshot": "d96cbd6fc03d12ce.txt",
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6795,
+      "sha256": "6d42dd0a106a25e5af6e988d075d442bdc2cbce0396931bc39575a3d02caf743",
+      "snapshot": "0b2c8511b26838e3.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 6666,
+        "wholeChars": 6666,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 9. 把拖延当成在躲开难受，不要当成不够努力"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。改的只是判断方向：先问这件事哪里让你难受，再想办法。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：这件事让人多难受、觉不觉得自己做得成、容不容易被眼前的东西带走、自控强不强，和拖延关系最强。神经质、爱寻求刺激这类性格，和拖延只有很弱的关联。所以可以先把任务改得没那么难受、把第一步改小，别光靠骂自己一顿再硬上。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：一份汇总了 691 个相关系数的荟萃分析发现，和拖延关系强而稳定的有几样：任务让人厌恶的程度、离截止还有多远、自我效能感（觉得自己做得成）、冲动性，以及尽责性和它下面的自控、易分心、条理性、成就动机。而神经质、叛逆、寻求刺激和拖延只有很弱的关联。作者用时间动机理论来解释这组结果：一件事现在的吸引力，随着回报变远而快速变小。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Steel P (2007). The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94. <https://doi.org/10.1037/0033-2909.133.1.65>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：收益量级记「中」，因为这些研究只指出方向，没有量过能省下多少小时。具体动作在本节第 1 条（写成「几点、在哪、遇到什么就做什么」）、第 7 条（把大任务拆成子任务）、第 8 条（给没有外部截止的事定一个日期）。这些是相关研究的汇总，看不出谁导致谁。"
+      }
+    ]
+  }
+}
