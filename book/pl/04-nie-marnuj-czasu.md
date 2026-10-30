@@ -85,12 +85,12 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 ### 7. Rozpisz złożone zadanie na części, zanim oszacujesz czas
 - Status: verified
-- Koszt: Bez dodatkowych wydatków. Przygotowanie listy etapów też zabiera czas. To ocena redakcji.
-- W praktyce: Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie. Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.
-- Korzyść i dowody: Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań. Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.
+- Koszt: Bez dodatkowych wydatków. Przygotowanie listy części zadania też zabiera czas. To ocena redakcji.
+- W praktyce: Przy szacowaniu czasu na raport wyodrębnij części: zebranie danych, analizę, napisanie tekstu i sprawdzenie. Oszacuj osobno czas tych części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.
+- Korzyść i dowody: Kruger i Evans prosili uczestników o oszacowanie czasu potrzebnego na różne zadania. Rozpisanie zadania na części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu. W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.
 - Ocena dowodów: B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.
 - Ocena redakcyjna: Rozpisuj zadania złożone. Drobna, dobrze znana czynność nie wymaga osobnego planu.
-- Ograniczenia: Dłuższe oszacowanie nie zawsze jest trafniejsze. Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4. Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację.
+- Ograniczenia: Dłuższe oszacowanie nie zawsze jest trafniejsze. Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4. Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację (odkładanie spraw na później).
 - Źródła: Kruger i Evans (2004), If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. [DOI i abstrakt z opisami eksperymentów](https://doi.org/10.1016/j.jesp.2003.11.001).
 - Oryginał: [04.7](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L61-L68)
 - Weryfikacja: 2026-10-27; abstrakt i dostępne opisy eksperymentów wydawcy. Zweryfikowano różnicę między dłuższą prognozą a mniejszym błędem.
