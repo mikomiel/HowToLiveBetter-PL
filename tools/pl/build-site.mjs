@@ -73,8 +73,11 @@ function pageProblems(html, found) {
     const target = ref.split(/[?#]/)[0].replace(/^\.\//, '');
     if (!ref.startsWith('#') && !found.includes(target)) problems.push(`${where} reaches a file that is not on the site: ${ref}`);
   };
-  for (const [, rawName, attributes] of html.matchAll(TAG)) {
+  for (const match of html.matchAll(TAG)) {
+    const [whole, rawName, attributes] = match;
     const name = rawName.toLowerCase();
+    // A script element must be empty: its end tag has to follow its start tag, so nothing runs from the page itself.
+    if (name === 'script' && !html.slice(match.index + whole.length).trimStart().toLowerCase().startsWith('</script')) problems.push('index.html has an inline script');
     if (FORBIDDEN_TAGS.has(name)) problems.push(`index.html uses <${name}>, which this site does not need`);
     const attrs = [...attributes.matchAll(ATTRIBUTE)].map(([, attribute, double, single, bare]) => [attribute.toLowerCase(), decodeEntities(double ?? single ?? bare ?? '').trim()]);
     if (name === 'meta' && attrs.some(([key, value]) => key === 'http-equiv' && /refresh/i.test(value))) problems.push('index.html redirects with <meta http-equiv="refresh">');
@@ -93,7 +96,6 @@ function pageProblems(html, found) {
       }
     }
   }
-  for (const [, body] of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)) if (body.trim()) problems.push('index.html has an inline script');
   const css = decodeEntities(html);
   for (const match of css.matchAll(CSS_REFERENCE)) {
     const ref = (match.slice(1).find(part => part !== undefined) ?? '').trim();
@@ -101,7 +103,7 @@ function pageProblems(html, found) {
     if (EXTERNAL.test(ref) || ref.startsWith('/')) problems.push(`index.html CSS points outside the site: ${ref}`);
     else local(ref, 'index.html CSS');
   }
-  if (/\\[0-9a-f]/i.test(css.replace(/<script[\s\S]*?<\/script>/gi, ''))) problems.push('index.html has a CSS escape sequence, which this check cannot follow');
+  if (/\\[0-9a-f]/i.test(css)) problems.push('index.html has a CSS escape sequence, which this check cannot follow');
   return problems;
 }
 
