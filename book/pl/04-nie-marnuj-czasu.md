@@ -55,7 +55,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 ### 4. Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi
 - Status: verified
-- Koszt: Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To szacunek redakcji.
+- Koszt: Bez dodatkowych wydatków. Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac. To ocena redakcji.
 - W praktyce: Przykład redakcyjny: sprawdź, ile trwało poprzednie podobne zadanie, zapisz, jak ma się ono do zadania, które planujesz, i dopiero wtedy wyznacz termin. To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu. Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć: w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.
 - Korzyść i dowody: W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia. W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej. To różnica 30,7 punktu procentowego w tym eksperymencie, nie uniwersalny wzrost produktywności.
 - Ocena dowodów: B — pojedynczy eksperyment z udziałem 123 studentów.
