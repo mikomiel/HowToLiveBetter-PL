@@ -2,6 +2,8 @@
 
 Przegląd wznowiony na polecenie właściciela (2026-10-30); run7 to nowy przebieg. Obejmuje teksty 32 opublikowanych porad z `book/pl` w stanie z `main` 754b21c (treść `book/` jest identyczna jak w 1a7f91e, na którym przygotowano przebieg). Źródła: pamięć podręczna odbudowana 2026-10-30 przez `node tools/pl/fetch.mjs --published`. Tekst żadnej porady nie został zmieniony.
 
+Uwaga o aktualności: raporty dotyczą tekstu z `main` 754b21c. Edycje językowe (PR „draft: language edits of run7”) i decyzje z sekcji F w `audit/FINDINGS.md` zmieniają tekst części pozycji, więc po ich scaleniu `audit.mjs status` i `check-reports.mjs` oznaczą raporty zmienionych pozycji jako nieaktualne (README: raport starszy niż tekst może być odrzucony, choć był poprawny). Pliki `checks.txt` i `digest.md` pokazują stan sprzed tych zmian. Zmienione pozycje trzeba sprawdzić ponownie nowym przebiegiem.
+
 Ten plik napisał agent AI (Claude Code) prowadzący przebieg, nie człowiek i nie skrypt. `digest.md` i `checks.txt` generują skrypty. Wszystkie raporty napisali agenci AI. Skrypty sprawdzają tylko formę raportu i zgodność cytatów z migawkami, nie poprawność merytoryczną. Żaden raport nie został sprawdzony przez człowieka ani przez eksperta dziedzinowego (lekarza, prawnika).
 
 ## Wynik kontroli skryptów (`audit.mjs status`, `check-reports.mjs`)
