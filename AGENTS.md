@@ -6,7 +6,8 @@ To niezależna polska adaptacja HowToLiveBetter: „Jak żyć lepiej. Praktyczny
 
 - Autorytatywne repozytorium: https://github.com/mikomiel/HowToLiveBetter-PL. PR kieruj do jego gałęzi main, nigdy do eternity4719/HowToLiveBetter.
 - Pracuj na gałęzi zadania. Jeden autor zapisuje gałąź. Zachowaj cudze zmiany. Nie używaj reset, clean, stash, rebase ani force-push do usuwania lub obchodzenia cudzej pracy.
-- Zatrzymaj się przed scaleniem przez człowieka. Bez osobnej zgody nie scalaj PR, nie publikuj wydań, nie włączaj GitHub Pages ani automatycznego wdrożenia.
+- Decyzja o scaleniu należy do człowieka. Agent może wykonać sam merge dopiero po zgodzie operatora na dany PR, zaliczonym zatwierdzeniu uprawnionego recenzenta-człowieka dla aktualnego HEAD i przejściu wymaganych kontroli GitHuba. Sam komentarz AI nie jest zatwierdzeniem. Nowe zmiany wymagają ponownego sprawdzenia i aktualnej akceptacji. Bez osobnej zgody nie publikuj wydań, nie włączaj GitHub Pages ani automatycznego wdrożenia.
+- Do docelowego scalania używaj odrębnej tożsamości agenta ograniczonej do tego repozytorium, bez uprawnień Administration. Inny token tego samego konta nie tworzy innego recenzenta. Nie używaj --admin ani bypassu, nie zmieniaj ochrony main, aby umożliwić merge. Sprawdź dokładny SHA przez --match-head-commit. Dopóki osobna tożsamość nie jest skonfigurowana, agent nie wykonuje merge; robi to człowiek. Nie deklaruj wtedy rozdzielenia uprawnień ani gotowości automatycznego scalania. Zmiany administracyjne wymagają osobnej zgody operatora.
 - Do prac repozytoryjnych używaj git i gh zgodnie z lokalnymi uprawnieniami.
 - Kanoniczną polską treścią są rozdziały w book/pl/. Czytnik czyta te pliki Markdown. Jedyny rejestr CHAPTERS w reader.mjs zawiera identyfikatory i ścieżki plików, nie kopie porad ani ich weryfikacji. Nie kopiuj porad do HTML, JavaScript ani osobnej bazy.
 - Chińskie book/*.md, docs/, selfcheck.html, skills/ i historyczne narzędzia są materiałem upstream, nie ukończonym polskim wydaniem. Nie stosuj odziedziczonego chińskiego skilla do polskich porad.
@@ -42,9 +43,10 @@ Zachowaj format nagłówków rozdziału i porad, jawne kotwice porada-R-N (numer
 
 ## Sprawdzenie i publikacja
 
-- Uruchom npm ci --ignore-scripts, npm test i npm run test:browser. Instalacja przeglądarki testowej: npx playwright install chromium. Nie dodawaj zależności do działania czytnika.
+- Uruchom npm ci --ignore-scripts, npm test i npm run test:browser. Instalacja przeglądarek testowych: npx playwright install chromium firefox webkit. Nie dodawaj zależności do działania czytnika.
 - Testy jednostkowe sprawdzają treść i bezpieczeństwo workflow. Testy przeglądarkowe muszą uruchamiać rzeczywisty czytnik z rzeczywistym Markdown, także na małym ekranie i z klawiaturą.
 - Po zmianie treści sprawdź źródła, liczby, odnośniki, kotwice i liczbę opublikowanych porad w README oraz czytniku. Sprawdź wszystkie decyzje źródłowe, nawigację i błąd odczytu jednego rozdziału. Nie pokazuj części zbioru jako całości po błędzie. Starszy sync-stats.mjs dotyczy chińskiego wydania; nie uruchamiaj go do polskiej treści.
+- Workflowy repozytorium wykonują wyłącznie walidację, z contents: read, persist-credentials: false i Actions przypiętymi do pełnych SHA. Nie używaj pull_request_target, sekretów, automatycznego zatwierdzania PR ani publikacji. CodeQL jest zarządzany przez ustawienia GitHuba; nie twórz drugiej konfiguracji. Nie wyłączaj skanu ani progu podatności tylko po to, aby uzyskać zielony wynik.
 - Przejrzyj cały diff i nowe pliki. Zrób osobny przegląd języka oraz zgodności wniosków z dowodami. Użyj niezależnego przeglądu, jeśli jest dostępny. Nie deklaruj takiego przeglądu, jeśli się nie odbył.
 - Raportuj kontrole jako PASS, FAIL, NOT_RUN lub UNAVAILABLE. Podaj testowany commit. Przegląd PR musi dotyczyć dokładnego opublikowanego HEAD.
 - Teksty adaptacji są na CC BY 4.0. Zachowaj autorstwo eternity4719, tytuł oryginału, odnośnik do źródła i informację o zmianach. Zachowaj LICENSE oraz pełne zawiadomienie MIT w LICENSE-CODE dla kodu. Nie sugeruj oficjalnego zatwierdzenia przez autora upstream.
