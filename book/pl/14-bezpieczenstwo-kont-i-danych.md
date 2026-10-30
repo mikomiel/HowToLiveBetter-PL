@@ -142,7 +142,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 10. Nie przekazuj sekretów niesprawdzonym pośrednikom AI
 - Status: verified
 - Koszt: Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia. Cena nie jest tu dowodem bezpieczeństwa.
-- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza unieważnij go zgodnie z procedurą wystawcy.
+- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Propozycja redakcji: nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Propozycja redakcji: przy ujawnieniu klucza unieważnij go zgodnie z procedurą wystawcy.
 - Korzyść i dowody: Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli. W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych. Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.
 - Ocena dowodów: B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.
 - Ocena redakcyjna: Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy. Ocena musi poprzedzać przekazanie danych.
@@ -150,7 +150,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 - Źródła: Liu i współautorzy (2026), Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain. [Abstrakt autorów i wersje preprintu](https://arxiv.org/abs/2604.08407).
 - Oryginał: [14.10](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L88-L95)
 - Weryfikacja: 2026-10-28; abstrakt autorów: projekt pomiaru, liczebności, dostęp pośredników i typy zaobserwowanych nadużyć. Nie wykonano własnych testów usług ani pełnej walidacji kodu badaczy.
-- Zmiany w adaptacji: Zachowano B z jawnym statusem preprintu. Usunięto chiński komunikat urzędowy jako polską podstawę oraz kwoty szkód i instrukcje ataku. Nie obiecujemy, że każde bezpośrednie połączenie jest bezpieczne.
+- Zmiany w adaptacji: Zachowano B z jawnym statusem preprintu. Usunięto chiński komunikat urzędowy jako polską podstawę oraz kwoty szkód i instrukcje ataku. Nie obiecujemy, że każde bezpośrednie połączenie jest bezpieczne. 2026-10-30 (przegląd run7, decyzja właściciela): dwa zdania ostrzegawcze oznaczono jako propozycje redakcji; abstrakt opisuje nadużycia ujawnionych kluczy i obronę po stronie klienta, ale nie podaje ani takiej reguły, ani procedury unieważniania.
 
 <a id="porada-14-11"></a>
 
