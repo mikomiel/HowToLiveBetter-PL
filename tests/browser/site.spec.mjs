@@ -2,27 +2,35 @@ import { test, expect } from '@playwright/test';
 import { createServer } from 'node:http';
 import { mkdtempSync, readFileSync, rmSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { extname, join, normalize, sep } from 'node:path';
+import { extname, join, normalize, resolve, sep } from 'node:path';
 import { CHAPTERS, parseChapter, published } from '../../reader.mjs';
-import { buildSite } from '../../tools/pl/build-site.mjs';
+import { buildSite, checkSite } from '../../tools/pl/build-site.mjs';
 
 // The folder GitHub Pages publishes, served the way a project page is served: under /<repository>/, nothing at the host root.
+// By default the folder is built here; with SITE_DIR set, that already built folder is served and checked instead.
 const PREFIX = '/HowToLiveBetter-PL/';
 const TYPES = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.md': 'text/markdown; charset=utf-8' };
 const count = CHAPTERS.flatMap(c => published(parseChapter(readFileSync(new URL('../../' + c.path, import.meta.url), 'utf8'), c.id).entries)).length;
 
-let tmp, server, origin;
+let tmp, server, origin, siteDir;
 
 test.beforeAll(async () => {
-  tmp = mkdtempSync(join(tmpdir(), 'site-browser-'));
-  const site = join(tmp, PREFIX.slice(1, -1));
-  buildSite(site);
+  if (process.env.SITE_DIR) {
+    // The folder the deploy workflow has just built, checked as it is, instead of a second build.
+    siteDir = resolve(process.env.SITE_DIR);
+    const problems = checkSite(siteDir);
+    if (problems.length) throw new Error(`SITE_DIR is not what may be published:\n- ${problems.join('\n- ')}`);
+  } else {
+    tmp = mkdtempSync(join(tmpdir(), 'site-browser-'));
+    siteDir = join(tmp, 'site');
+    buildSite(siteDir);
+  }
   server = createServer((req, res) => {
     const path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-    const file = normalize(join(tmp, path));
     let body = null;
     try {
-      if (path.startsWith(PREFIX) && file.startsWith(tmp + sep)) {
+      const file = normalize(join(siteDir, path.slice(PREFIX.length)));
+      if (path.startsWith(PREFIX) && (file === siteDir || file.startsWith(siteDir + sep))) {
         const target = statSync(file).isDirectory() ? join(file, 'index.html') : file;
         body = readFileSync(target);
         res.setHeader('content-type', TYPES[extname(target)] ?? 'text/plain; charset=utf-8');
@@ -37,7 +45,7 @@ test.beforeAll(async () => {
 
 test.afterAll(async () => {
   await new Promise(done => server.close(done));
-  rmSync(tmp, { recursive: true, force: true });
+  if (tmp) rmSync(tmp, { recursive: true, force: true });
 });
 
 test('the built site loads every verified advice under the project path, with no failed and no external request', async ({ page }) => {
