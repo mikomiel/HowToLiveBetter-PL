@@ -1,0 +1,268 @@
+{
+  "item": "03.23",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Do not vent anger by hitting a punching bag or going for a run; slow the body down first.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Spend a few minutes on something that slows the heartbeat: breathe slowly.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Sit down and be still; the hard part is that venting is what one most wants to do at that moment.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Cost framing: no money, a few minutes, some willpower.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Mindfulness and meditation as further ways to calm the body.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Effect sizes g = -0.63 (95% CI -0.82 to -0.43) for calming and g = -0.02 (95% CI -0.13 to 0.09) for arousal-increasing activities, 154 studies, 184 samples, 10,189 people.",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Result stable across gender, race, age and culture.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Authors' conclusion: venting anger or going for a run are not effective ways to calm anger.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "In-the-moment alternatives pointed to elsewhere: cyclic sighing and leaving the scene first.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Running is not useless; over the long term it helps low mood, it is only unsuited to calming anger on the spot.",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "When angry, do not drive, do not send messages, do not make decisions.",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "If someone is hitting you, leave first and call the police; do not work on your emotions then.",
+      "fate": "narrowed",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "zamiast agresywnego wyładowania",
+      "why": "The comparison in the source is calming activities (deep breathing, mindfulness, meditation) versus arousal-increasing activities, whose named examples are hitting a bag, jogging and cycling. The item relabels that class as „agresywne wyładowanie” in the title and „agresywna reakcja” in W praktyce, and never names the tested arousal-increasing activities. Jogging and cycling are not aggression, so the title does not describe what was compared. A reader who vents by going for a run is not told that this is the class that did not help, and a reader may take the result to be about shouting or hitting a person, which this abstract does not test. The item does not call „agresywne” an editorial label.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "whereas others focus on increasing arousal (e.g., hitting a bag, jogging, cycling)"
+        },
+        {
+          "source": "upstream",
+          "line": 1,
+          "text": "生气时别靠打沙袋、跑一圈来发泄，先让身体慢下来"
+        },
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "让身体更兴奋的办法，比如打沙袋、慢跑、骑车，整体无效"
+        }
+      ],
+      "fix_direction": "Name the tested arousal-increasing activities (hitting a bag, jogging, cycling) as the comparator, state that „agresywne” is an editorial shorthand if it is kept, and keep the separate sentence that this is not a ban on exercise."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji.",
+      "why": "The only snapshot is an abstract on anger management. It contains nothing about exercise as a treatment, about depression or about mood, so this limitation sentence is not supported by any stored source. The upstream basis is a cross-referenced note that running helps „情绪低落” (low mood) over the long term, which is a lead and not depression. The Polish sentence moves from low mood to the clinical term depression and hints that exercise may work as treatment, in a published health item whose own rules do not allow promising depression treatment. The abstract only says that venting and going for a run are not effective ways to manage anger.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "These findings do not support the ideas that venting anger or going for a run are effective anger management activities."
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "跑步不是没用。长期看，它对情绪低落有效"
+        }
+      ],
+      "fix_direction": "Limit the sentence to what the anger meta-analysis shows (it does not test exercise for other purposes), or support any statement about exercise and mood or depression with its own cited source; do not move from low mood to depression treatment without one."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#2",
+      "text": "Działania zmniejszające pobudzenie obniżały złość i agresję",
+      "why": "The counts (154 studies, 184 samples, 10,189 people), g = -0.63 and g = -0.02 match the abstract, and the zero-including interval for -0.02 holds ([-0.13, 0.09]). But the effect measure g is given with no gloss (a standardised effect size, not a percentage), the interval for -0.63 is left out while the zero-crossing interval is mentioned for -0.02, and the abstract does not say what the comparison condition was. A reader can take g = -0,63 for a percentage drop in anger. The terms metaanaliza and pobudzenie are also not glossed at first use.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "decreased anger and aggression (g = -0.63, [-0.82, -0.43])"
+        }
+      ],
+      "fix_direction": "Say in plain words that g is a standardised effect size and not a percentage, give the interval for both values or neither, and gloss metaanaliza and pobudzenie at first use."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "A — ilościowa synteza badań nad złością i agresją, nie nad liczbą odzyskanych godzin.",
+      "why": "The letter A matches the README definition (a quantitative synthesis of an action and an outcome) and equals the upstream grade. But the stored source is abstract-only, and the README says the design, risk of bias and certainty of an A synthesis still need separate assessment. The item states none of that: not that only the abstract was available, and not that the abstract gives no study design, comparison groups or certainty rating. The Źródła label „Abstrakt i wprowadzenie” also claims an introduction was read, while the stored snapshot has the Europe PMC abstract only. The letter therefore reads as stronger than what was seen.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 13,
+          "text": "ABSTRACT (Europe PMC):"
+        }
+      ],
+      "fix_direction": "State in the item that the check covered the abstract only and that design, risk of bias and certainty were not assessed; make the Źródła label match what the snapshot actually holds."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie",
+      "why": "The advised action is a short self-directed calming pause in the middle of a real dispute. The abstract describes arousal-decreasing activities delivered by digital platforms, researchers and therapists, in group and individual sessions, in the field and in the laboratory. It does not show that a brief unguided pause during a live argument was what was tested. The action is wider than the source. The item hedges with „propozycja łagodnej próby”, but does not call itself an editorial application of the finding.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "Arousal-decreasing activities were effective regardless of how they were delivered (e.g., digital platforms, researchers, therapists), in both group and individual sessions"
+        },
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "气头上改做几分钟让心跳慢下来的事"
+        }
+      ],
+      "fix_direction": "Label the in-the-moment pause as an editorial application of a finding about calming activities in general, not as the tested intervention."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "spróbuj uspokoić ciało, na przykład przez spokojne oddychanie",
+      "why": "Several concrete upstream actions are dropped. Sitting down and being still, and the time frame of a few minutes, are not kept. The caution not to drive, send messages or take decisions while angry is gone. The in-the-moment alternatives that the upstream pointed to by cross-reference (leaving the scene first) are gone, and mindfulness and meditation are narrowed to breathing alone. A reader for whom breathing does not work gets only the general „Przerwa od sporu” in Koszt. Zmiany w adaptacji lists none of these drops.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "气头上改做几分钟让心跳慢下来的事：慢慢呼吸，坐下来，静一静。"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "气头上别开车，别发消息，别做决定。"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "还有本节第 17 条（生气时先离场）"
+        }
+      ],
+      "fix_direction": "Decide for each dropped action whether it stays out of the Polish item, and say so in Zmiany w adaptacji; if a fallback is kept, state it without a cross-reference."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#2",
+      "text": "To ocena redakcji, nie ustalony czas leczenia.",
+      "why": "The upstream cost line says no money, a few minutes, and that the hard part is that venting is what one most wants to do. The item states none of the three: it does not say the action is free, how long it takes, or that the effort is mostly resisting the urge. The sentence about „czas leczenia” frames an anger pause as a treatment course, which the source does not do. AGENTS asks that money, time and effort are stated separately.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "不花钱。气头上改做几分钟让心跳慢下来的事"
+        },
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "难在当时最想做的恰恰是发泄"
+        }
+      ],
+      "fix_direction": "Give money, time and effort as separate short statements that follow the upstream cost line, and drop the treatment-time wording."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji.",
+      "why": "The upstream gives two concrete steps to a reader being attacked: leave first, and call the police, and it points to a separate section on domestic violence. With the cross-reference gone, the item only says that safety and „wezwanie pomocy” come first. It names no first action (leaving) and no channel for the help, so a reader in danger is told what ranks higher but not what to do. No Chinese contact appears, which is correct; the point is the missing concrete step that is allowed by the project rules.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "如果是有人在打你，先离开、报警。"
+        }
+      ],
+      "fix_direction": "State the first concrete step (get out of the situation) and point to a verified Polish emergency path only if one is verified; otherwise say plainly that no number is given here."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ocena dowodów#1",
+      "text": "nie nad liczbą odzyskanych godzin",
+      "why": "The phrase refers to an hours-regained measure that is never introduced in the item. It is a leftover of the upstream cost bookkeeping (time as the accounting basis), which the upstream calls the author's own classification. The upstream sentence it comes from says the study measured anger and aggression, not energy. A Polish reader meets „odzyskane godziny” with no context and cannot tell what is being denied.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "量的是怒气和攻击性，不是精力。口径记成时间，是作者的归类"
+        }
+      ],
+      "fix_direction": "Say directly what the synthesis measured (anger and aggression) and that it did not measure time saved, or remove the reference to hours."
+    }
+  ],
+  "notes": "No protocol violation: I opened only AGENTS.md, .claude/agents/pl-claim-adversary.md, README.md (the Jak czytać dowody section and the lines after it), the packet and the one snapshot 1d00098ec43b4f15.txt. The numbers 154, 184, 10,189, g = -0.63 and g = -0.02 with a zero-including interval were checked against snapshot line 14 and match. The only snapshot is abstract-only (access: abstract), so there is no second snapshot and the recency attack found nothing to compare. Status is PASS because no blocker was found, but two major findings remain (title#1 and Ograniczenia#2) and should be resolved before the item is treated as clean. Snapshot line numbers are those shown by the Read tool; the abstract text is on line 14."
+}

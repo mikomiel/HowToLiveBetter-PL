@@ -1,0 +1,142 @@
+{
+  "item": "04.5",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przygotuj plan spotkania i korzystaj z niego",
+      "verdict": "unsupported",
+      "reason": "The only cited snapshot (088a9773da2a17de.txt) holds Crossref metadata only (DOI, title, authors, journal, year; no abstract). No line speaks about agendas or about using a plan, so no source fact for this advice is quoted and nothing backs it. Looked for: any statement on agenda, plan, or design characteristics of meetings. The source rows it would rest on (Korzyść i dowody#2) are not_checkable for the same reason; a full abstract or full text is needed."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Organizator musi przygotować plan i udostępnić go uczestnikom.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przygotuj plan i użyj go podczas spotkania.",
+      "verdict": "unsupported",
+      "reason": "Metadata-only snapshot: no line states anything about preparing or using an agenda during a meeting. Looked for: agenda, plan, use of a plan in the meeting. Nothing is quoted, so nothing backs the advice."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik.",
+      "verdict": "unsupported",
+      "reason": "Labelled by the item itself as an editorial example. The metadata-only snapshot says nothing about agenda contents (topics, expected outcome). Looked for: agenda content or format. Nothing backs this specific way of writing a plan."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "source_claim",
+      "claim": "Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.",
+      "verdict": "not_checkable",
+      "reason": "This is a claim of absence from the source. The snapshot is metadata only (no abstract, no body), so absence cannot be shown or refuted. Needed: the full text of Leach, Rogelberg, Warr, Burnfield (2009) to see whether agenda content (topics plus expected outcome) was measured."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Leach i współautorzy badali postrzeganą skuteczność spotkań",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "088a9773da2a17de.txt",
+          "line": 9,
+          "text": "Leach, Rogelberg, Warr, Burnfield"
+        },
+        {
+          "snapshot": "088a9773da2a17de.txt",
+          "line": 8,
+          "text": "Perceived Meeting Effectiveness: The Role of Design Characteristics"
+        }
+      ],
+      "reason": "Author list (Leach first, with three co-authors) and the paper title on perceived meeting effectiveness match. Only metadata was read; it does not itself show the empirical design."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "w dwóch badaniach, obejmujących 958 i 292 osoby",
+      "verdict": "not_checkable",
+      "reason": "Number of studies and the sample sizes 958 and 292 occur in no line of the snapshot, which holds metadata only (no abstract). Needed: the abstract or full text of the article. No quote was written because none exists in the snapshot."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.",
+      "verdict": "not_checkable",
+      "reason": "The snapshot has title, authors, journal and year only. No line mentions agenda use or its association with perceived effectiveness. Needed: the abstract or full text (results on agenda use and perceived meeting effectiveness)."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "088a9773da2a17de.txt",
+          "line": 8,
+          "text": "Perceived Meeting Effectiveness: The Role of Design Characteristics"
+        }
+      ],
+      "reason": "The title supports only the topic (perceived, that is subjective, meeting effectiveness). That there are two studies and that they are observational is not stated in the metadata-only snapshot; the full text is needed. The grade letter B itself is editorial and was not checked."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Przygotowanie planu jest niewielkim nakładem.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę.",
+      "verdict": "not_checkable",
+      "reason": "Depends on the study design (survey, correlational) and on what the association was. The snapshot is metadata only and states neither. Needed: abstract or full text describing the design."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji.",
+      "verdict": "not_checkable",
+      "reason": "Claim of absence (read as: not measured in the cited study). A metadata-only snapshot cannot show absence. Needed: the full text of the article to check the measures used. The word 'tu' is ambiguous (study or item); read here as the study."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Rada nie uprawnia do pomijania obowiązkowych spotkań.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "Ocena dowodów#1",
+      "note": "The sentence gives the number of studies (two) and the design (observational); the stored metadata states neither."
+    },
+    {
+      "id": "W praktyce#3",
+      "note": "Speaks of 'cytowanym badaniu' (one study) while Korzyść i dowody describes two studies; one DOI is cited and only its metadata was stored."
+    }
+  ],
+  "notes": "The only cited source (10.1007/s10869-009-9092-6) is a Crossref metadata-only snapshot with no abstract (title, authors, journal, year, 203 characters). Packet warnings were empty and the row is origin cited with a snapshot, so I did not return UNAVAILABLE under step 0, but almost every content claim is not_checkable. The FAIL status comes only from the three recommendation_derived rows (title#1, W praktyce#1, W praktyce#2), which have no not_checkable verdict available and are therefore unsupported because no quote backs them; this reflects the thin snapshot, not a contradiction by the source. The remedy is to store an abstract or the full text, not to rewrite the item. The figures 958 and 292 (Korzyść i dowody#1.2) occur in no snapshot line, so that row has no quote and declares no numbers; a figure check may flag it. Row judgement calls: W praktyce#3 and Ograniczenia#2 treated as source_claim (absence), Ograniczenia#1 as source_claim (depends on design), Ograniczenia#3 as meta_statement (scope of the advice, not a statement about the world), Ocena redakcyjna#2 as editorial_estimate. No protocol violation: I opened only AGENTS.md, the role file, the packet and the snapshot 088a9773da2a17de.txt."
+}

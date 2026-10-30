@@ -1,0 +1,115 @@
+{
+  "item": "03.18",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "Kontakt z pomocą",
+      "replacement": "Zgłoszenie się po pomoc",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "dobranie aktywności",
+      "replacement": "dobranie aktywności fizycznej",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Koszt",
+      "original": "do zdrowia oraz możliwości",
+      "replacement": "do stanu zdrowia i możliwości",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "skontaktuj się z profesjonalną pomocą",
+      "replacement": "zgłoś się po profesjonalną pomoc",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "Sieciowa metaanaliza",
+      "replacement": "Metaanaliza sieciowa",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "Aktywność nie jest",
+      "replacement": "Aktywność fizyczna nie jest",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "szukaj wsparcia; ruch może być częścią pomocy",
+      "why": "The title says 'wsparcie' and 'pomoc', while W praktyce says 'profesjonalna pomoc'. 'Szukaj wsparcia' alone can be read as support from family or friends, so the professional character of the help, which may be a condition that must survive in the title, is not visible. Possible wording: 'szukaj profesjonalnego wsparcia'. It narrows the claim and contains a modal ('może'), so I did not edit it; verifier to decide against the source."
+    },
+    {
+      "field": "title",
+      "text": "Przy utrzymującym się obniżeniu nastroju",
+      "why": "The title names 'utrzymujące się obniżenie nastroju' with no duration, while Korzyść i dowody speaks of people meeting criteria of depression ('depresji') and Ograniczenia of 'ciężkie objawy'. Three different condition names are used for one population. Names a condition and a population, so protected; verifier to confirm that the lay wording in the title is faithful to the source condition."
+    },
+    {
+      "field": "W praktyce",
+      "text": "W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123.",
+      "why": "'W kryzysie' has no qualifier (kryzys of what kind?) and is not explained at first use. The sentence also switches from the second person used elsewhere in the field ('skontaktuj się', 'dla ciebie', 'dzwoń') to the third person ('dorosła osoba ... może'), and does not say what service answers the number. A second-person form and a named service would read more naturally, but the sentence holds numbers, a population word, a jurisdiction, a modal and duration/price words ('bezpłatny', 'całodobowy'), so I did not edit it."
+    },
+    {
+      "field": "W praktyce",
+      "text": "zamiast czekać na rozmowę wspierającą",
+      "why": "'Rozmowa wspierająca' is unclear: it can mean a counselling conversation or the call to the helpline. The instruction is safety-relevant and I cannot tell from the packet which meaning is intended. A clearer wording such as 'zamiast czekać na połączenie z telefonem wsparcia' depends on that meaning, so I left it to the verifier. The same helpline is also named differently elsewhere (see Ograniczenia)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Sieciowa metaanaliza Noetela i współautorów",
+      "why": "'Metaanaliza sieciowa' (network meta-analysis) is a specialist term with no gloss in this item. I did not open the chapter, so I do not know whether it is explained earlier. A short gloss (for example that it compares many forms of exercise in one analysis) would add a methodological statement, so I leave it to the verifier. The study is also cited by surname only, with no year or journal; names of studies are protected."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "spełniających przyjęte w przeglądzie kryteria depresji",
+      "why": "'Kryteria depresji' is a calque of 'criteria for depression'. Polish would say 'kryteria rozpoznania depresji' (diagnostic) or describe a score threshold on a symptom scale. Which one is right depends on how the review defined participants, and the phrase names a condition and a population, so I did not edit it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "względem aktywnych warunków kontrolnych",
+      "why": "'Aktywne warunki kontrolne' is a calque of 'active control conditions'. A lay reader will not know what an active control is; Polish would say 'aktywna grupa kontrolna' with a short gloss on what that group received. The phrase carries the comparison ('względem') for the causal verb 'zmniejszała' and the quantifier 'Część', and a gloss would add meaning, so I did not edit it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "niską dla marszu lub biegania",
+      "why": "'Marsz' reads as a march (military, protest); for walking as exercise Polish says 'chodzenie' or 'spacery', and 'marsz lub bieganie' is not parallel (noun versus gerund; 'chodzenia lub biegania' would be). But the modality names carry the evidence claim, and 'bieganie' versus 'trucht' or 'jogging' differs in intensity, and I cannot see the source wording. Left to the verifier. Also contains 'niską' (certainty level)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "bardzo niską dla pozostałych porównań interwencji",
+      "why": "'Porównań interwencji' is a heavy stacked genitive, and 'interwencja' is likely to be read by lay readers as crisis or police intervention. A natural wording depends on what was compared (for example 'form ruchu w porównaniu z grupami kontrolnymi'). The sentence contains the intensity phrase 'bardzo niską' and the quantifier 'pozostałych', so I did not edit it."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "A — ilościowa synteza prób klinicznych",
+      "why": "The same study type is called 'badania z randomizacją' in Korzyść i dowody and 'próby kliniczne' here. 'Próby kliniczne' is a calque of 'clinical trials'; 'badania kliniczne' is the established Polish term. The field starts with a grade letter and the text after the dash is probably the fixed legend wording from the README (not opened by me), so I did not edit it. Verifier should check the legend and keep one term across the book."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej.",
+      "why": "'Ocena kliniczna' is an unexplained clinical term (calque of 'clinical assessment'); a lay reader does not learn who does it, and 'Potrzeby ... wymagają oceny' is stiff. 'Zagrożenie samobójcze' is clinical register and 'myśli samobójcze' would not be equal in meaning. A plainer form, such as 'Osoby z ... potrzebują oceny lekarza lub psychologa', depends on the source. The sentence has 'wymagają' (duty), 'ciężkimi' (intensity) and a population, so I did not edit it."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Telefon wsparcia nie zastępuje numeru alarmowego.",
+      "why": "The same helpline is called 'numer 116 123' and 'rozmowa wspierająca' (W praktyce), 'Telefon wsparcia' and 'telefon 116 123' (Ograniczenia). 'Telefon wsparcia' is not the established Polish term for such lines (the usual one is 'telefon zaufania'), but I cannot check the official name of the service, and names of institutions and numbers are protected. Contains a negation ('nie'). Verifier should fix one name and use it throughout the item."
+    },
+    {
+      "field": "Koszt",
+      "text": "nie podajemy cen",
+      "why": "The only first-person plural ('podajemy') in the item; the rest is impersonal or second person. It contains a negation, so I did not edit it. An impersonal form would fit better, but only if it matches the chapter convention, which I did not check."
+    }
+  ],
+  "verdict": "needs_edits"
+}

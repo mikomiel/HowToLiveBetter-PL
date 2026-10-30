@@ -1,0 +1,119 @@
+{
+  "item": "04.2",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz",
+      "verdict": "unsupported",
+      "reason": "Looked for source lines that give this advice (fix a change or stop criterion before a project starts) or state the fact it rests on. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so no line could be read or quoted. No source_claim row has a quote, so depends_on stays empty. Nothing backs the advice."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To szacunek redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”.",
+      "verdict": "unsupported",
+      "reason": "Looked for source lines that give the same advice (write down a review condition with a deadline and a deliverable) or state the fact it rests on. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so no line could be read or quoted. No source_claim row has a quote, so depends_on stays empty. Nothing backs the advice."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Uwzględnij też koszt bezpiecznego zakończenia.",
+      "verdict": "unsupported",
+      "reason": "Looked for source lines that give this advice (count the cost of a safe wind-down) or state the fact it rests on. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so no line could be read or quoted. No source_claim row has a quote, so depends_on stays empty. Nothing backs the advice."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Przegląd Gollwitzera i Sheerana",
+      "verdict": "source_unavailable",
+      "reason": "The item describes the source as a review by Gollwitzer and Sheeran. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so the document type, authors and design cannot be checked. Not answered from memory."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań.",
+      "verdict": "source_unavailable",
+      "reason": "The finding is attributed to the cited review. That source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so the claim cannot be checked for or against it. Not answered from memory."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.",
+      "verdict": "source_unavailable",
+      "reason": "An absence claim about the abstract of the cited source. The source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so neither the abstract nor the text could be searched. Absence cannot be shown without the text."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — kierunek wniosku potwierdza przegląd,",
+      "verdict": "source_unavailable",
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source as a review that confirms the direction of the conclusion. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so the document type and what it concludes cannot be checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "ale dla tej konkretnej rady brak osobnego wyniku ilościowego.",
+      "verdict": "source_unavailable",
+      "reason": "A not-measured clause about the cited source. The source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so nothing could be searched and absence cannot be shown."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Kryterium może ułatwić decyzję.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "meta_statement",
+      "claim": "Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości.",
+      "verdict": "source_unavailable",
+      "reason": "A statement about what a weak result means, not about the item itself. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so nothing could be checked for or against it. Not answered from memory."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu.",
+      "verdict": "source_unavailable",
+      "reason": "A statement about what the research does and does not justify. The only cited source (DOI 10.1016/s0065-2601(06)38002-1) has no readable snapshot (blocked by api.crossref.org, snapshot null), so neither the studies' conclusions nor their absence could be checked. Not answered from memory."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3).",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "W praktyce#1",
+      "note": "The advice sets a project-level rule (agreed deadline, working prototype, then change scope or stop). No source line could be read, so whether any cited source covers project work, deadlines or stopping rules is unknown."
+    }
+  ],
+  "notes": "Only source row: origin cited, DOI 10.1016/s0065-2601(06)38002-1, access blocked (blocked by api.crossref.org), snapshot null, 0 chars; packet.warnings is empty. No snapshot exists, so no quote was written and no claim was answered from memory. The three recommendation_derived rows (title#1, W praktyce#1, W praktyce#2) are unsupported because nothing could back them; the status FAIL follows from that rule, although the cause is an unreadable source, not a read source that is silent. Files opened: the brief in the scratchpad, .claude/agents/pl-source-verifier.md, AGENTS.md and audit/runs/run7/04.2/packet-verifier.json. Nothing else was opened; no network or shell was used."
+}

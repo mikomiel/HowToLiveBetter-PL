@@ -56,12 +56,21 @@ test('HTML becomes readable text: no scripts, no markup, articles kept, entities
 
 test('hostile markup is converted in linear time', () => {
   for (const hostile of ['<a'.repeat(200000), '<!--'.repeat(100000), '<script>'.repeat(50000), '<p'.repeat(100000) + '>', '&#'.repeat(100000), '<'.repeat(200000), '<svg>'.repeat(50000),
-    '<svg>'.repeat(50000) + '</svg>'.repeat(50000), '<title'.repeat(100000), '<TITLE '.repeat(100000), '<a "' + '<'.repeat(100000) + '>', '<a'.repeat(4000000), 'İ'.repeat(100000) + '<main>' + 'x'.repeat(2000) + '</main>']) {
+    '<svg>'.repeat(50000) + '</svg>'.repeat(50000), '<title'.repeat(100000), '<TITLE '.repeat(100000), '<a "' + '<'.repeat(100000) + '>', '<a'.repeat(4000000), 'İ'.repeat(100000) + '<main>' + 'x'.repeat(2000) + '</main>',
+    // Deep nesting: each pass of the tag removal peels one level, so an uncapped loop would take tens of seconds here.
+    '<'.repeat(128000) + 'a' + '>'.repeat(128000), '<p'.repeat(64000) + '>'.repeat(64000), '<a'.repeat(64000) + '>'.repeat(64000)]) {
     const start = process.hrtime.bigint();
     htmlToText(hostile);
     stripXml(hostile);
     assert.ok(Number(process.hrtime.bigint() - start) / 1e6 < 3000, `slow on ${hostile.slice(0, 12)}`);
   }
+});
+
+test('tags assembled from the pieces of other tags are removed too, up to a bounded depth', () => {
+  assert.equal(stripXml('a<scr<b>ipt>b'), 'ab');
+  assert.equal(stripXml('<!<!-- x -->-- y -->z'), 'z');
+  assert.equal(stripXml('<<<a>>>x'), 'x');
+  assert.equal(stripXml('<'.repeat(7) + 'a' + '>'.repeat(7)), '');
 });
 
 test('charset is honoured and replacement characters are reported', () => {
@@ -197,7 +206,13 @@ test('a DOI reaches Europe PMC decoded once, and a refusal from both sources is 
 
 test('only a well-formed PMC identifier is ever placed into a request path', async () => {
   const json = body => new Response(JSON.stringify(body), { status: 200, headers: { 'content-type': 'application/json' } });
-  stub(url => (url.includes('europepmc.org') || url.includes('ebi.ac.uk') ? json({ resultList: { result: [{ doi: '10.1000/evil', pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } }) : json({})));
+  stub(url => {
+    const host = new URL(url).hostname.toLowerCase();
+    const allowedHosts = new Set(['europepmc.org', 'www.europepmc.org', 'ebi.ac.uk', 'www.ebi.ac.uk']);
+    return allowedHosts.has(host)
+      ? json({ resultList: { result: [{ doi: '10.1000/evil', pmcid: '../../etc/passwd', isOpenAccess: 'Y', abstractText: 'abstrakt' }] } })
+      : json({});
+  });
   const record = await fetchSource('10.1000/evil', dir);
   assert.equal(record.access, 'abstract');
   assert.ok(calls.every(c => !c.url.includes('passwd')));

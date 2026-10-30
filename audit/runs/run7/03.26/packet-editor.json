@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.26",
+  "role": "editor",
+  "title": "Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności",
+  "fields": {
+    "Koszt": "Ocena problemu, udział w terapii i praca między spotkaniami. Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.",
+    "W praktyce": "Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Nie zmieniaj samodzielnie przepisanych leków i nie wprowadzaj ograniczania czasu w łóżku bez ustalenia bezpieczeństwa tej metody.",
+    "Korzyść i dowody": "Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.",
+    "Ocena dowodów": "B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.",
+    "Ocena redakcyjna": "Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.",
+    "Ograniczenia": "Rozpoznanie wymaga oceny klinicznej i przyczyn problemu, w tym innych zaburzeń snu. Nie trzeba czekać miesiącami z pilnym objawem. Farmakoterapia może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania. Program cyfrowy nie oznacza dowolnej aplikacji."
+  }
+}

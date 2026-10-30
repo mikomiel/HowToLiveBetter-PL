@@ -1,0 +1,206 @@
+{
+  "version": 2,
+  "item": "14.8",
+  "role": "adversary",
+  "title": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki",
+  "fields": {
+    "Koszt": "Opisanie żądania i zachowanie korespondencji. Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych.",
+    "W praktyce": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych. Zachowaj potwierdzenie. Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych. W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej.",
+    "Korzyść i dowody": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17. Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania. Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu.",
+    "Ocena dowodów": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów.",
+    "Ocena redakcyjna": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź. Nie obiecujemy wyniku sporu.",
+    "Ograniczenia": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń. Kopia danych nie może naruszać praw i wolności innych. Administrator może w uzasadnionym zakresie potwierdzać tożsamość. Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.",
+    "Źródła": "[RODO, art. 12 i 15–17, tekst urzędowy na stronie UODO](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [UODO: prawo do usunięcia i wyjątki](https://www.uodo.gov.pl/pl/493/4098).",
+    "Zmiany w adaptacji": "Oryginalne A zastąpiono C. Usunięto chińską podstawę prawną i bezwarunkową obietnicę usunięcia. Dodano wyjątki, tryb odpowiedzi oraz rozróżnienie zamknięcia konta od usunięcia danych. Dodano 2026-10-29 zastrzeżenie, że tekst nie jest poradą prawną i nie miał przeglądu prawnika."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Korzystaj z praw do danych, ale sprawdź warunki i wyjątki"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Opisanie żądania i zachowanie korespondencji."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Działania na żądanie są co do zasady bezpłatne, lecz RODO przewiduje wyjątki dla żądań ewidentnie nieuzasadnionych lub nadmiernych."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Napisz administratorowi, czy żądasz dostępu i kopii danych, sprostowania nieścisłości, czy usunięcia danych."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Zachowaj potwierdzenie."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy usuwaniu wskaż, dlaczego warunki są spełnione; samo zamknięcie konta nie musi usuwać wszystkich danych."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "W razie odmowy przeczytaj uzasadnienie i informacje o skardze lub ochronie sądowej."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Nie obiecujemy wyniku sporu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Kopia danych nie może naruszać praw i wolności innych."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Administrator może w uzasadnionym zakresie potwierdzać tożsamość."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału."
+    },
+    {
+      "id": "Ograniczenia#5",
+      "field": "Ograniczenia",
+      "index": 5,
+      "text": "Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "access": "full-text",
+      "accessWords": "pełny tekst",
+      "status": 200,
+      "error": null,
+      "via": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "finalUrl": "https://uodo.gov.pl/data/filemanager_pl/727.pdf",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 420783,
+      "sha256": "85b3ee29cca28d745157d9d04bafb7c79f96d03a4a66cc1986f48857c81cd5b9",
+      "snapshot": "89be0046cf8ac2b2.txt",
+      "info": {
+        "pages": 88
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://www.uodo.gov.pl/pl/493/4098",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.uodo.gov.pl/pl/493/4098",
+      "finalUrl": "https://www.uodo.gov.pl/pl/493/4098",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 19115,
+      "sha256": "c7140d0fc9f080e2a36ab0a9f32950c1b250f210fdf19ede7606db3c04f2d464",
+      "snapshot": "223080ce91198a64.txt",
+      "info": {
+        "region": "document",
+        "keptChars": 19074,
+        "wholeChars": 19074,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "A",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 8. 你有权查看、复制、更正和删除自己的个人信息，被拒绝可以起诉"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。只有对方拖着不办，才需要去投诉或者起诉。真打官司就是几个月起步，律师费还要自己出，所以先投诉更划算。难的是对方拖着的时候得反复去催。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：你有权要求企业让你查看、复制、更正和删除自己的信息。服务停了、保存期限到了、你撤回同意的，企业本来就该自己删掉。它拒绝你，必须说明理由；不办，你可以直接去法院告它。注销账号和删除信息是两件事，注销之后还要另外提删除。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：有几种情形企业应当主动删除：服务停了、约定的保存期限到了、你撤回同意、当初收集的目的已经达到等等。它没删，你可以要求它删。它拒绝你行使这些权利的，必须说明理由。你可以直接向法院起诉"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：A"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第四十五条「个人有权向个人信息处理者查阅、复制其个人信息……个人请求查阅、复制其个人信息的，个人信息处理者应当及时提供」；第四十六条更正、补充权；第四十七条列了五种应当主动删除的情形，含「（一）处理目的已实现、无法实现或者为实现处理目的不再必要」「（二）个人信息处理者停止提供产品或者服务，或者保存期限已届满」「（三）个人撤回同意」，「个人信息处理者未删除的，个人有权请求删除」；第五十条「个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制。拒绝个人行使权利的请求的，应当说明理由」「个人可以依法向人民法院提起诉讼」"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：注销账号和删除个人信息是两件事，注销之后还要单独提出删除。换手机或者卖旧手机之前，先在旧手机上把所有账号退出、解除绑定，再恢复出厂设置。法律给你的是事后的删除权，它不能替你把已经泄露出去的东西收回来。"
+      }
+    ]
+  }
+}

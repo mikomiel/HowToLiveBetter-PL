@@ -1,0 +1,108 @@
+{
+  "version": 2,
+  "item": "03.6",
+  "role": "verifier",
+  "title": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku",
+  "fields": {
+    "Koszt": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”. To ocena redakcji.",
+    "W praktyce": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.",
+    "Korzyść i dowody": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji. Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.",
+    "Ocena dowodów": "B — eksperyment laboratoryjny dotyczący błędów sekwencji.",
+    "Ocena redakcyjna": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.",
+    "Ograniczenia": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy. W badaniu błędy niesekwencyjne nie wykazały tego efektu. Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ogranicz przerwania w zadaniach wykonywanych krok po kroku"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Przed zadaniem, w którym łatwo zgubić kolejny krok, ogranicz możliwe do uniknięcia przerwania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — eksperyment laboratoryjny dotyczący błędów sekwencji."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie dotyczy to podwojenia wszystkich błędów w każdej pracy."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "W badaniu błędy niesekwencyjne nie wykazały tego efektu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1037/a0030986",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Europe PMC",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1213,
+      "sha256": "223fd2e5bfc0175968bd3bbfd2dd94edcb6b6c03cdb9cc42c33c351521349293",
+      "snapshot": "96995263a3e68870.txt",
+      "info": null
+    }
+  ],
+  "warnings": []
+}

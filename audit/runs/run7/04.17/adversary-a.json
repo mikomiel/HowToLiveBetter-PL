@@ -1,0 +1,122 @@
+{
+  "item": "04.17",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "grade",
+      "reason": "The only cited snapshot (13d78a52f21a4281.txt) is metadata-only: DOI, title, authors, journal, year. The study type and sample sizes on which 'B' rests (a survey plus a very small experiment) are in no stored source text, so the letter cannot be compared with the README definitions beyond the item's own, unverified, description of the design."
+    },
+    {
+      "attack": "recency",
+      "reason": "There is one snapshot only (a 2005 record, metadata-only), so there is no second snapshot or guidance to compare. Whether the interface studied in 2005 or its finding is outdated would need knowledge outside the stored texts, which may not be asserted from memory."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "花一次时间学常用软件的键盘快捷键 (spend one-off time learning keyboard shortcuts of commonly used software)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "和自动化 (and learn automation)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "要一次性投入几小时到几十小时去学；刚上手那阵子比用鼠标还慢 (one-off investment of hours to dozens of hours; slower than the mouse at first)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "只学你每天要用到十次以上的操作 (learn only operations used ten or more times a day)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "学得太全是另一种浪费 (do not learn the whole set)",
+      "fate": "kept",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Abstrakt nie podaje liczby zaoszczędzonych sekund.",
+      "why": "The stored source is metadata-only (packet: access 'metadata-only', 'tylko metadane, bez abstraktu'; the snapshot text holds only DOI, title, authors, journal and year). The item states what the abstract does not contain, and the Źródła link is labelled 'DOI i abstrakt wydawcy', although no abstract is stored. The sentence matches upstream line 8, which is only a lead. A reader is told an abstract was checked when only bibliographic metadata was. AGENTS.md: without the full text say what was checked in the abstract; metadata does not confirm a result.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "13d78a52f21a4281.txt", "line": 8, "text": "Hidden Costs of Graphical User Interfaces"},
+        {"source": "upstream", "line": 8, "text": "摘要也没有给出每次操作节省的秒数"}
+      ],
+      "fix_direction": "Say that only bibliographic metadata was checked (or store the abstract or full text in a snapshot and re-verify). Do not describe the abstract's content, or label the link as an abstract, until it is stored."
+    },
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#1",
+      "text": "Lane i współautorzy zbadali ankietą 251 doświadczonych użytkowników Worda.",
+      "why": "The figure 251 (and 'doświadczonych', and that the users were Word users) occurs only in upstream line 5, which is a lead, not evidence. It is in no snapshot and is not an editorial calculation. The stored snapshot is metadata-only, so the sample size cannot be checked. Readers and the B grade lean on it.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "研究看了 251 名有经验的 Word 用户"},
+        {"source": "snapshot", "snapshot": "13d78a52f21a4281.txt", "line": 8, "text": "Failure to Make the Transition from Menus and Icon Toolbars to Keyboard Shortcuts"}
+      ],
+      "fix_direction": "Verify the figure against the abstract or full text in a stored snapshot, or present it explicitly as taken from the upstream summary and not confirmed."
+    },
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#3",
+      "text": "W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę; skróty były najszybszą z tych metod.",
+      "why": "Both the participant count ('sześć osób') and the headline result ('skróty były najszybszą z tych metod') appear only in the upstream span (lines 5 and 8, leads). No snapshot line states the experiment, its size or its direction; the snapshot title only names the menu/icon-to-shortcut transition. The central benefit claim of the item and the 'bardzo mały eksperyment' in Ocena dowodów#1 are therefore unverified.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "那项效率实验只有 6 名参与者"},
+        {"source": "upstream", "line": 5, "text": "分组对比的实验确认，菜单、图标、快捷键这三种方式里，快捷键最快"},
+        {"source": "snapshot", "snapshot": "13d78a52f21a4281.txt", "line": 8, "text": "Failure to Make the Transition from Menus and Icon Toolbars to Keyboard Shortcuts"}
+      ],
+      "fix_direction": "Confirm the experiment's size and result from a stored abstract or full text, or mark the sentence as an upstream claim not checked against the source."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "zbadali ankietą",
+      "why": "The word 'ankietą' (questionnaire survey) names a method that the upstream span does not state; it says only that the study 'looked at' 251 users. The snapshot cannot decide the method. The word feeds the grade line 'B - ankieta i bardzo mały eksperyment' (Ocena dowodów#1), and a survey (self-report) versus observed behaviour changes how strongly 'rzadko używała skrótów' can be read.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "研究看了 251 名有经验的 Word 用户"}
+      ],
+      "fix_direction": "Use a neutral verb unless the method is confirmed from a stored abstract or full text."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "sześć osób wykonywało polecenia przez menu, ikony i klawiaturę",
+      "why": "The wording suggests that each of the six people used all three methods. The upstream span describes a grouped comparison ('分组对比') and does not say that every participant used every method. The design is not recoverable from the snapshot.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "分组对比的实验里，快捷键比菜单和图标都快"},
+        {"source": "upstream", "line": 8, "text": "那项效率实验只有 6 名参与者"}
+      ],
+      "fix_direction": "Describe the comparison without implying the within-person design unless it is confirmed from the source."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Naucz się skrótów do czynności, które często wykonujesz w programie",
+      "why": "The evidence the item reports is about Word users (Korzyść i dowody#1; upstream line 5), while the title and W praktyce advise any 'program'. The item does not call the extension beyond Word an editorial example; Ograniczenia#2 only says the result does not prove every program is faster. The stored title speaks of graphical user interfaces in general, so the snapshot cannot say whether Word was the whole scope. Per the upstream span the measured outcome is speed of using each method, not the effect of learning and practising a shortcut, and the item's slowdown caveat is labelled editorial (Koszt#3).",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "研究看了 251 名有经验的 Word 用户"},
+        {"source": "snapshot", "snapshot": "13d78a52f21a4281.txt", "line": 8, "text": "Hidden Costs of Graphical User Interfaces"}
+      ],
+      "fix_direction": "Say in the item that applying the advice to programs other than Word, and to the act of learning a shortcut, is an editorial extension of what was studied, or scope the wording to the evidence."
+    }
+  ],
+  "notes": "No blocker found: nothing in the item is a Chinese rule, a legal or medical statement, or an unsafe instruction (leak attack: no Chinese institution, hotline, threshold or rule in reader-facing fields; self-containment attack: with the DOI link removed the item is still actionable and safe). Status is UNAVAILABLE because the only cited source is metadata-only (title, authors, journal, year; no abstract), so the number, result, design and limitation claims of the item cannot be confirmed or refuted from stored text, and grade and recency are not assessable. The dropped upstream automation action (line 1) is disclosed in 'Zmiany w adaptacji' and Ograniczenia#3 and the item does not advise it, so it is not a finding; fallback_stated is false for it only because no automation path is offered. Protocol: I opened only the role file, AGENTS.md, README.md (a grep for the heading, then lines 38-77, slightly wider than the section 'Jak czytać dowody' at lines 42-56), the packet and snapshot 13d78a52f21a4281.txt. I did not open book/, tests/, tools/, the manifest, other snapshots, git history or chapter files."
+}

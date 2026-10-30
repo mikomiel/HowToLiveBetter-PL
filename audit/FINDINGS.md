@@ -4,6 +4,7 @@ Stan na 2026-10-29. Dowody (raporty) są w [runs/](runs/). Jak wznowić przeglą
 
 ## Decyzje właściciela
 
+- **2026-10-30: właściciel wznowił przegląd.** Wykonano przebieg run7 na wszystkich 32 opublikowanych pozycjach. Wyniki i otwarte sprawy (trzy odrzucone raporty, różnice między przebiegami weryfikatora, propozycje redaktora): [runs/run7/STATUS.md](runs/run7/STATUS.md). Tekst książki nie został zmieniony.
 - **2026-10-29: przyjęto wszystkie poprawki z sekcji A** (03.4, 04.4, 14.2, 14.7) oraz zastrzeżenie o braku przeglądu prawnika w 14.7, 14.8 i 14.9. Commity nazwane „draft: … (for owner review)” zostają w historii pod tą nazwą, bo historii nie przepisujemy. Status `verified` pozostał bez zmian. Każdą poprawkę nadal da się cofnąć osobno.
 - **2026-10-29: dopisano wskaźnik do tego przeglądu w AGENTS.md** (jedno zdanie w „Zakres i źródła”), za zgodą właściciela.
 - Wcześniej tego dnia: ustalenia dotyczące opublikowanych pozycji mają trafiać do poprawek do przeglądu, nie do zmian bez wiedzy właściciela; dwa niezależne przebiegi weryfikatora dla pozycji ryzykownych; następny etap to dokończenie przeglądu wszystkich 32 pozycji (obecnie wstrzymane); zastrzeżenie przy pozycjach prawnych zostaje.

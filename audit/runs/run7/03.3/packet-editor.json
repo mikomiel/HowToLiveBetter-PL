@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "item": "03.3",
+  "role": "editor",
+  "title": "Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania",
+  "fields": {
+    "Koszt": "Czas na odpoczynek może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.",
+    "W praktyce": "Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.",
+    "Korzyść i dowody": "Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności.",
+    "Ocena dowodów": "B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.",
+    "Ocena redakcyjna": "Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.",
+    "Ograniczenia": "7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci. Liczy się też jakość snu. Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu. Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27)."
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "version": 2,
+  "item": "04.12",
+  "role": "adversary",
+  "title": "Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności. To ocena redakcji.",
+    "W praktyce": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania. Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.",
+    "Korzyść i dowody": "Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem. Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39. W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana wyniosła 66 dni.",
+    "Ocena dowodów": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem.",
+    "Ocena redakcyjna": "Stały kontekst jest sposobem organizacji powtórzeń. Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej.",
+    "Ograniczenia": "Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym. Zakres 18–254 nie jest gwarancją dla każdego. Nie mierzono pracy twórczej ani oszczędności czasu. Przykład z biurkiem jest adaptacją, nie badaną czynnością.",
+    "Źródła": "Lally, van Jaarsveld, Potts i Wardle (2010), How are habits formed: Modelling habit formation in the real world. [Pełny tekst wydawcy](https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674), sekcje Results i tabela 2; [DOI](https://doi.org/10.1002/ejsp.674).",
+    "Zmiany w adaptacji": "Uściślono liczebność grupy i ekstrapolację poza okres obserwacji. Nie traktujemy 21 ani 66 dni jako normy dla wszystkich."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Powtarzaj mały nawyk w stałej sytuacji i nie oczekuj jednego terminu dla wszystkich"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Potrzebny jest wielokrotny wysiłek powtarzania wybranej czynności."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To ocena redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Powiąż prostą czynność ze stałym zdarzeniem, na przykład odłożenie potrzebnych materiałów na biurko z zakończeniem śniadania."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Lally i współautorzy obserwowali przez 12 tygodni 96 osób wybierających prosty nawyk, głównie związany z jedzeniem, piciem lub ruchem."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Dane 82 osób wystarczały do analizy, model dopasowano u 62, a dobre dopasowanie uzyskano u 39."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni; mediana wyniosła 66 dni."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — jedno małe badanie obserwacyjne z samoopisem i modelowaniem."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Stały kontekst jest sposobem organizacji powtórzeń."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Wybierz mały nawyk, którego koszt jesteś gotów ponosić dłużej."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Obserwacja trwała 84 dni, więc 254 dni jest ekstrapolacją modelu, nie czasem bezpośrednio obserwowanym."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zakres 18–254 nie jest gwarancją dla każdego."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie mierzono pracy twórczej ani oszczędności czasu."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "field": "Ograniczenia",
+      "index": 4,
+      "text": "Przykład z biurkiem jest adaptacją, nie badaną czynnością."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": 403,
+      "error": null,
+      "via": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.674",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    },
+    {
+      "origin": "cited",
+      "input": "10.1002/ejsp.674",
+      "access": "abstract",
+      "accessWords": "abstrakt",
+      "status": null,
+      "error": null,
+      "via": "Crossref",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 1547,
+      "sha256": "9e7bdd77b8543102309ce4234597f79876344e6f1209cae485bcc3f5d433dc90",
+      "snapshot": "248f8ea4bd81051a.txt",
+      "info": null
+    }
+  ],
+  "warnings": [],
+  "upstream": {
+    "grade": "B",
+    "lines": [
+      {
+        "n": 1,
+        "text": "### 12. 新习惯按月算，不要按「21 天」算"
+      },
+      {
+        "n": 2,
+        "text": "<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=中 口径=时间 -->"
+      },
+      {
+        "n": 3,
+        "text": "- 成本：不花钱。要的是在同一个场景下每天重复同一个动作，持续几个月。"
+      },
+      {
+        "n": 4,
+        "text": "- 说人话：「21 天养成一个习惯」没有依据。一项跟踪 12 周的研究算下来，一个动作变得不用想就做，快的 18 天，慢的要 254 天。两三周还没变轻松是正常的。中间漏掉一天，也不会把进度清零。"
+      },
+      {
+        "n": 5,
+        "text": "- 收益：96 名志愿者各挑一个吃、喝或者活动方面的动作，在固定场景下（比如「早饭后」）每天做，持续 12 周，每天给自己的自动化程度打分。82 人的数据够用来分析，模型在 62 人身上拟合成功。达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天。研究还发现，漏掉一次执行机会对习惯养成过程没有实质影响。"
+      },
+      {
+        "n": 6,
+        "text": "- 证据等级：B"
+      },
+      {
+        "n": 7,
+        "text": "- 来源：Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>"
+      },
+      {
+        "n": 8,
+        "text": "- 备注：只有这一项研究，96 人，做的都是简单动作（比如饭后吃一份水果）。复杂的事要多久，比如每周跑三次、每天写作，没人测过。所以两周后还很费劲，不能当成失败的证据。要让重复真的发生，把动作绑在一个固定场景上，见本节第 1 条（写成「几点、在哪、遇到什么就做什么」）。"
+      }
+    ]
+  }
+}

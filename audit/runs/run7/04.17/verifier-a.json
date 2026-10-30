@@ -1,0 +1,175 @@
+{
+  "item": "04.17",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Naucz się skrótów do czynności, które często wykonujesz w programie",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "13d78a52f21a4281.txt",
+          "line": 8,
+          "text": "Failure to Make the Transition from Menus and Icon Toolbars to Keyboard Shortcuts"
+        }
+      ],
+      "reason": "Only the source title backs the general direction: it frames not moving from menus and icon toolbars to keyboard shortcuts as a failure. The snapshot holds metadata only (title, authors, journal, year), so no text states that shortcuts are faster, recommends learning them, or speaks of frequently performed actions or of any program in general. The facts the advice rests on (Korzyść i dowody#2, #3.2) have no quote."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków, jeśli korzystasz z posiadanego programu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Nauka i ćwiczenie zabierają czas, a początkowo mogą spowalniać.",
+      "verdict": "not_applicable",
+      "reason": "Editorial cost judgement in Koszt, not attributed to the source in the item (Koszt#3 says it is the editors' assessment). Not checked against the snapshot."
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Wybierz często używane polecenie, sprawdź skrót w pomocy swojego programu i przećwicz go.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "13d78a52f21a4281.txt",
+          "line": 8,
+          "text": "Failure to Make the Transition from Menus and Icon Toolbars to Keyboard Shortcuts"
+        }
+      ],
+      "reason": "Only the general direction (moving to keyboard shortcuts) is hinted at by the source title. The concrete steps (choose a frequently used command, look the shortcut up in the program's help, practise it) are not in the snapshot, which is metadata only; they are the editors' practical instructions. The speed finding the advice rests on is not checkable here (Korzyść i dowody#3.2)."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zostań przy sposobie obsługi, który jest dla ciebie dostępny i wygodny.",
+      "verdict": "unsupported",
+      "reason": "Looked in the only snapshot (13d78a52f21a4281.txt, metadata only: title, authors, journal, year) for any text on accessibility, comfort or keeping to an alternative way of operating a program, or for a source finding this caveat rests on. There is none, and no source_claim row with a quote contains a fact it could depend on. It reads as an editorial precaution not derived from the source."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Lane i współautorzy zbadali ankietą",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "13d78a52f21a4281.txt",
+          "line": 9,
+          "text": "Authors: Lane, Napier, Peres, Sandor"
+        }
+      ],
+      "reason": "The author attribution (Lane with three co-authors) matches the metadata. That the study was a survey (ankieta) is not in the snapshot: it holds no abstract and no body text. The abstract or full text would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "251 doświadczonych użytkowników Worda",
+      "verdict": "not_checkable",
+      "reason": "The sample size 251, the description 'experienced' and the product Word do not occur in the snapshot, which holds only title, authors, journal and year (access: metadata-only, no abstract). The abstract or full text would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Większość rzadko używała skrótów.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "13d78a52f21a4281.txt",
+          "line": 8,
+          "text": "Failure to Make the Transition from Menus and Icon Toolbars to Keyboard Shortcuts"
+        }
+      ],
+      "reason": "The title suggests the gist (users fail to move to keyboard shortcuts) but does not say that most of the surveyed people, or how many, rarely used shortcuts. 'Most' and 'rarely' are not in the snapshot. The abstract or full text would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#3.1",
+      "kind": "source_description",
+      "claim": "W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "13d78a52f21a4281.txt",
+          "line": 8,
+          "text": "Menus and Icon Toolbars to Keyboard Shortcuts"
+        }
+      ],
+      "reason": "The title only names the three interaction methods (menus, icon toolbars, keyboard shortcuts) as the subject. That there was a separate comparison, that it had six participants and that commands were executed by each method are not in the snapshot (metadata only). The abstract or full text would be needed."
+    },
+    {
+      "id": "Korzyść i dowody#3.2",
+      "kind": "source_claim",
+      "claim": "skróty były najszybszą z tych metod",
+      "verdict": "not_checkable",
+      "reason": "The title speaks of 'Hidden Costs of Graphical User Interfaces' but does not say what the costs are, nor that shortcuts were the fastest method. No quote of the snapshot states or measures speed. The abstract or full text would be needed."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — ankieta i bardzo mały eksperyment dotyczący konkretnego interfejsu.",
+      "verdict": "not_checkable",
+      "reason": "The grade letter B is editorial and was not checked. The words after it describe the source's design (survey plus a very small experiment) and scope (a specific interface). The snapshot is metadata only; its title speaks of graphical user interfaces in general and says nothing on design or sample size. The abstract or full text would be needed."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Najpierw wypróbuj skrót do powtarzalnej czynności.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Nie ucz się całej listy tylko dlatego, że istnieje.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Abstrakt nie podaje liczby zaoszczędzonych sekund.",
+      "verdict": "not_checkable",
+      "reason": "Absence from the abstract cannot be shown: the snapshot (13d78a52f21a4281.txt) is metadata only and contains no abstract at all (title, authors, journal, year). The abstract text, or the full text, would be needed."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Wynik nie dowodzi, że każdy skrót i każdy program są szybsze dla każdego użytkownika.",
+      "verdict": "not_applicable",
+      "reason": "Filed as the editors' caveat on how far the result generalises, not as a source finding. If a reviewer reads it as a limitation taken from the source, it would be a source_claim and not_checkable for the same reason as the other rows (metadata-only snapshot)."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Nie badano tu automatyzacji skryptami.",
+      "verdict": "not_checkable",
+      "reason": "Absence of script automation from the study cannot be shown from metadata alone. The snapshot (13d78a52f21a4281.txt) lacks abstract and body text; only the title (menus, icon toolbars, keyboard shortcuts) is available. The full text would be needed."
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "title#1",
+      "note": "The advice speaks of any program and of any frequently performed action. The only source text available is a title about the transition from menus and icon toolbars to keyboard shortcuts in graphical user interfaces."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "note": "The sentence states a majority and a frequency ('most', 'rarely'); the title says only that a transition to shortcuts fails, with no proportion and no population."
+    },
+    {
+      "id": "Korzyść i dowody#3.2",
+      "note": "'Fastest' is a measure (speed) and a comparison of methods; the snapshot contains neither the measure nor the comparison."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "note": "The item describes the design as a survey plus a very small experiment on a specific interface; the metadata says only 'Graphical User Interfaces' in general, so design, sample size and interface cannot be compared."
+    }
+  ],
+  "notes": "Protocol: I opened only AGENTS.md, the role file, the packet and snapshot 13d78a52f21a4281.txt. Source check: packet.warnings is empty. The single cited source (10.1207/s15327590ijhc1802_1, Crossref) has access metadata-only. The snapshot is the plausible document (title on menus, icon toolbars and keyboard shortcuts; authors Lane, Napier, Peres, Sandor; International Journal of Human-Computer Interaction, 2005) but is a stub: 273 characters, no abstract and no body. Consequently every finding of the item (survey, 251 users, Word, rare use of shortcuts, six-person comparison, shortcuts fastest, no seconds in the abstract, no script automation) is not_checkable or only partly echoed by the title or authors line. The abstract or full text must be stored before the source rows can be settled. The FAIL status comes only from W praktyce#2 (an advice sentence with no source basis, an unsupported recommendation); the source rows themselves would give UNAVAILABLE. The item's Ograniczenia refer to 'Abstrakt', which suggests the drafter saw an abstract that this snapshot does not contain."
+}

@@ -1,0 +1,90 @@
+{
+  "item": "04.7",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "listy etapów",
+      "replacement": "listy części zadania",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie.",
+      "replacement": "Przy szacowaniu czasu na raport wyodrębnij części: zebranie danych, analizę, napisanie tekstu i sprawdzenie.",
+      "reason": "register",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Oszacuj części, zamiast",
+      "replacement": "Oszacuj osobno czas tych części, zamiast",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "o szacowanie czasu różnych zadań",
+      "replacement": "o oszacowanie czasu potrzebnego na różne zadania",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "Rozpisanie części",
+      "replacement": "Rozpisanie zadania na części",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "prokrastynację",
+      "replacement": "prokrastynację (odkładanie spraw na później)",
+      "reason": "term",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+      "why": "Contains a negation (bez) and a numeral (jedną), so not edited. The clause 'bez wcześniejszego sprawdzenia zakresu zadania' is a heavy nominal chain that is hard to parse (does it attach to 'podawać' or to 'liczbę'?) and it introduces a step, checking the scope of the task, that appears nowhere else in the item (title, Koszt, Korzyść i dowody). The verifier should decide whether the clause is supported and what it means. If it only restates 'before estimating', a plainer wording would be 'zamiast od razu podawać jedną liczbę dla całego zadania', but that drops the negation, so it is not proposed as an edit."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu.",
+      "why": "Two claims in one sentence (AGENTS.md: one claim per sentence); the sentence holds a causal verb (prowadziło do), comparatives (dłuższych, mniejszego) and experiment numbers, so it is not edited. A split would read: 'Rozpisanie zadania na części prowadziło do dłuższych oszacowań. W eksperymentach 3 i 4 prowadziło też do mniejszego zaniżania czasu.' Also, 'zaniżanie czasu' is an ambiguous term for the outcome: it can be read as lowering the time itself rather than underestimating it. 'Niedoszacowanie czasu' or 'zaniżanie oszacowań czasu' would be clearer. A swapped technical term is invisible to the script and the same term is used in Ograniczenia, so any change must be made in both places by the verifier."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+      "why": "'Znaczenie rozpisania' reads as 'importance of unpacking', probably a calque of 'effect of unpacking' (wpływ, efekt). It sits next to an association phrase (rosło wraz ze) and a condition word (złożonością), so it is not edited. It also sits uneasily with Ocena dowodów, which says effect size was not verified: 'znaczenie' can suggest magnitude. The verifier should check the abstract and choose between 'wpływ', 'efekt' and 'skutek', or restate what grew."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Kruger i Evans prosili uczestników",
+      "why": "Names of authors, so not edited. The researchers are introduced with no descriptor or year; I cannot see the Źródła field. If Źródła does not introduce them at first use in the chapter, 'Badacze Kruger i Evans' would help a general reader."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "B — seria eksperymentów w jednej publikacji; zweryfikowano kierunek wyniku, bez wielkości efektu.",
+      "why": "Contains a grade letter, an attribution verb (zweryfikowano) and a negation (bez), so not edited. The clause after the semicolon is elliptical and telegraphic, and 'kierunek wyniku' and 'wielkość efektu' are unexplained for a general reader. A plainer wording would be 'sprawdzono, w którą stronę zmienił się wynik, ale nie jak duży był efekt'. 'Zweryfikowano' may also sound stronger than a check made only in the abstract (Ograniczenia says 'abstrakt'). The verifier should decide whether 'sprawdzono w abstrakcie' is the accurate verb. The em dash after the grade was left alone on the assumption that it is the chapter convention, which I could not check."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4.",
+      "why": "Fronted object ('Mniejsze zaniżanie czasu ... abstrakt podaje') is awkward word order; the natural order is 'Abstrakt podaje mniejsze zaniżanie czasu tylko dla eksperymentów 3 i 4.' Not edited because it contains a comparative, the limiter 'tylko', experiment numbers and an attribution verb (podaje). 'Abstrakt' is a deliberate term (AGENTS.md separates the abstract from someone else's summary), so I did not replace it with 'streszczenie'; if this is its first use in the chapter it needs a short explanation. See also the 'zaniżanie czasu' term note above."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Rozpisuj zadania złożone.",
+      "why": "Postpositive adjective ('zadania złożone') is translationese; natural word order is 'Rozpisuj złożone zadania', as in the title. 'Złożone' is the scope condition of the advice, so I did not touch it; the verifier may allow the reorder without further checks."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+      "why": "Contains a negation and a verb of duty (nie wymaga), so not edited. Consistency: the item recommends rozpisanie na części and a list of parts, not a 'plan', and it uses 'zadanie' elsewhere where this sentence says 'czynność'. The verifier should decide whether 'osobnego planu' should read 'rozpisywania na części' and whether 'czynność' is an intended contrast."
+    }
+  ],
+  "verdict": "needs_edits"
+}

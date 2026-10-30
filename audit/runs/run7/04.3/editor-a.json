@@ -1,0 +1,50 @@
+{
+  "item": "04.3",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "Zapytaj:",
+      "replacement": "Zapytaj siebie:",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "obejmuje 98 wielkości efektu",
+      "why": "Reads as a calque of the English '98 effect sizes'. After a number the phrase 'wielkości efektu' is unclear in Polish (singular 'efektu' after 98). More natural options such as '98 oszacowań wielkości efektu' or '98 wielkości efektów' touch a number and a statistical term, so I did not edit. The verifier should choose the wording."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przegląd Rotha i współautorów",
+      "why": "AGENTS.md says a synthesis of studies must be called a synthesis. 'Przegląd' is vague (narrative review or meta-analysis?) and the same word is reused in 'Ocena dowodów' ('badanie pierwotne i przegląd'). I cannot see the source, so the verifier should decide whether 'synteza badań' or 'metaanaliza' is the correct name. This is a study-name and evidence-type wording, so I did not edit."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "potwierdza występowanie tego zjawiska dla kosztów pieniężnych",
+      "why": "'dla kosztów pieniężnych' is a calque of 'for monetary costs'; 'w przypadku kosztów pieniężnych' would be more natural. It also names the scope of the confirmation: the previous sentence speaks of money, effort or time, and this one confirms the phenomenon only for money. The reader may not know if 'tylko' is meant. The wording carries a condition and an evidence verb, so I did not edit."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Siła efektu zależy od rodzaju decyzji.",
+      "why": "Two terms for one statistic within the item: 'wielkości efektu' in the previous sentence and 'Siła efektu' here. If the same measure is meant, one term should be used. 'zależy od' is an association verb and the sentence states a moderator, so I did not edit. The verifier may also check whether 'różni się w zależności od rodzaju decyzji' states the finding more clearly."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nieodwracalny wydatek",
+      "why": "Term and consistency. The item calls the same notion 'wcześniejszy nakład' (Koszt, Korzyść i dowody), 'nieodwracalny wydatek' (W praktyce), 'koszt już poniesiony' (Ograniczenia), and the phenomenon 'skłonność', 'zjawisko' and 'błąd decyzyjny'. 'Wydatek' suggests money only, while the item covers money, effort and time and the example is an evening. The established Polish term 'koszt utopiony' (or 'błąd utopionych kosztów') is not used anywhere in the item. I cannot check whether the chapter explains it elsewhere. A swap of a technical term could change meaning, so I did not edit. The verifier should decide whether to introduce and explain the established term at first use."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "kosztu wyjścia",
+      "why": "Probable calque of 'exit cost' and not explained at first use. It likely means the cost of quitting (for example a contractual penalty or a lost deposit). Candidates are 'kosztu rezygnacji' or 'kosztu wycofania się'. A swapped technical term could change meaning, so I did not edit."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie ma tu potwierdzonej liczby odzyskanych godzin.",
+      "why": "Unclear meaning. Nothing earlier in the item promises recovered hours, and 'odzyskać' is used earlier for another sense (recovering part of the earlier outlay). It probably means hours saved by following the advice ('zaoszczędzonych godzin'). The sentence carries a negation and a quantity word, so I did not edit. The verifier should confirm what the sentence is meant to say."
+    }
+  ],
+  "verdict": "needs_edits"
+}

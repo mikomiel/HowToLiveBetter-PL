@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "item": "14.1",
+  "role": "verifier",
+  "title": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu",
+  "fields": {
+    "Koszt": "Konfiguracja każdej usługi i przechowanie zapasu. Klucz sprzętowy może wymagać zakupu; nie podajemy cen.",
+    "W praktyce": "Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku. Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie. Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Nie zatwierdzaj logowania, którego nie rozpoczynasz.",
+    "Korzyść i dowody": "CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie. Kody SMS i kody z aplikacji można wyłudzić. Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.",
+    "Ocena dowodów": "C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków.",
+    "Ocena redakcyjna": "Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania.",
+    "Ograniczenia": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę. Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta. Korzystaj z metod rzeczywiście oferowanych przez usługę."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Konfiguracja każdej usługi i przechowanie zapasu."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Klucz sprzętowy może wymagać zakupu; nie podajemy cen."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zacznij od poczty i innych ważnych kont."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku."
+    },
+    {
+      "id": "W praktyce#4",
+      "field": "W praktyce",
+      "index": 4,
+      "text": "Kody SMS i z aplikacji nadal można wyłudzić na fałszywej stronie."
+    },
+    {
+      "id": "W praktyce#5",
+      "field": "W praktyce",
+      "index": 5,
+      "text": "Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi."
+    },
+    {
+      "id": "W praktyce#6",
+      "field": "W praktyce",
+      "index": 6,
+      "text": "Nie zatwierdzaj logowania, którego nie rozpoczynasz."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Kody SMS i kody z aplikacji można wyłudzić."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "field": "Korzyść i dowody",
+      "index": 3,
+      "text": "Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Korzystaj z metod rzeczywiście oferowanych przez usługę."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "finalUrl": "https://wiedza.cert.pl/dobre-praktyki/hasla/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12734,
+      "sha256": "9c74c6cac3b61b35fcdc3fefbd7e41bc7d0d727cc5d1cceae6bd46a5977c75c0",
+      "snapshot": "6a185dd9954fea49.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12649,
+        "wholeChars": 13207,
+        "truncated": false
+      }
+    },
+    {
+      "origin": "cited",
+      "input": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "finalUrl": "https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 12475,
+      "sha256": "e3e47ed20f0684fe4e53049ba9d32a97bc361adc1d59b2d2cf00f96782b42f65",
+      "snapshot": "27b6fdf8ffbd5964.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 12401,
+        "wholeChars": 12948,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}

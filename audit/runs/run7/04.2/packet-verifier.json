@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "item": "04.2",
+  "role": "verifier",
+  "title": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz",
+  "fields": {
+    "Koszt": "Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To szacunek redakcji.",
+    "W praktyce": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.",
+    "Korzyść i dowody": "Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań. Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.",
+    "Ocena dowodów": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego.",
+    "Ocena redakcyjna": "Kryterium może ułatwić decyzję. Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu.",
+    "Ograniczenia": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości. Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu. Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3)."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub go zakończysz"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Bez dodatkowych wydatków."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa."
+    },
+    {
+      "id": "Koszt#3",
+      "field": "Koszt",
+      "index": 3,
+      "text": "To szacunek redakcji."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Zapisz warunek przeglądu: „Jeśli w uzgodnionym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Uwzględnij też koszt bezpiecznego zakończenia."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej rady brak osobnego wyniku ilościowego."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Kryterium może ułatwić decyzję."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "field": "Ocena redakcyjna",
+      "index": 2,
+      "text": "Termin i próg trzeba dobrać samemu; przykład nie jest procedurą sprawdzoną w badaniu."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nie każdy słaby wynik oznacza, że projekt nie ma przyszłości."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Badania nie uzasadniają automatycznego przerywania pracy po dowolnym opóźnieniu."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Przy decyzji uwzględnij [przyszłe koszty i korzyści z porady 04.3](#porada-4-3)."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "10.1016/s0065-2601(06)38002-1",
+      "access": "blocked",
+      "accessWords": "dostęp zablokowany przez serwis",
+      "status": null,
+      "error": null,
+      "via": "blocked by api.crossref.org",
+      "finalUrl": null,
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": null,
+      "info": null
+    }
+  ],
+  "warnings": []
+}

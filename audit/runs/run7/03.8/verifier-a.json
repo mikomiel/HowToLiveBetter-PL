@@ -1,0 +1,200 @@
+{
+  "item": "03.8",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed snem ogranicz jasne ekrany, jeśli utrudniają ci wyciszenie",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "b59686537010480d.txt",
+          "line": 123,
+          "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"
+        }
+      ],
+      "depends_on": ["Korzyść i dowody#3"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana wieczornego nawyku i wybór innego zajęcia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "To ocena redakcji, bez obowiązku zakupu urządzenia.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie papierowej książki.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {
+          "snapshot": "b59686537010480d.txt",
+          "line": 107,
+          "text": "relax at least 1 hour before bed – for example, take a bath or read a book"
+        },
+        {
+          "snapshot": "b59686537010480d.txt",
+          "line": 123,
+          "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"
+        }
+      ],
+      "depends_on": ["Korzyść i dowody#1.3", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "b59686537010480d.txt",
+          "line": 107,
+          "text": "relax at least 1 hour before bed – for example, take a bath or read a book"
+        },
+        {
+          "snapshot": "b59686537010480d.txt",
+          "line": 123,
+          "text": "do not watch television or use devices, like smartphones, right before going to bed, because the blue light makes you more awake"
+        }
+      ],
+      "reason": "Backed only in part: the NHS page ties its one-hour figure to winding down (line 107) and gives no hour figure for devices, only 'right before going to bed' (line 123), and the Chang abstract tests reading 'in the hours before bedtime' with no threshold. Not backed: no snapshot states that no scientifically established one-hour limit exists for all devices. The abstract-only Chang snapshot cannot show such an absence, and the NHS page does not discuss the evidence base for any time limit."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "Chang i współautorzy porównali",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 9,
+          "text": "Chang AM, Aeschbach D, Duffy JF, Czeisler CA."
+        },
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "Here we compare the biological effects of reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book in the hours before bedtime"
+        }
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_description",
+      "claim": "u 12 zdrowych młodych dorosłych",
+      "verdict": "not_checkable",
+      "reason": "The Chang snapshot is abstract-only. It speaks only of 'Participants' and gives no number of participants, no health status and no age. The full text of the PNAS article would be needed to check 12 healthy young adults."
+    },
+    {
+      "id": "Korzyść i dowody#1.3",
+      "kind": "source_description",
+      "claim": "czytanie z emitującego światło urządzenia oraz papierowej książki.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "reading an electronic book on a light-emitting device (LE-eBook) with reading a printed book in the hours before bedtime"
+        }
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2.1",
+      "kind": "source_description",
+      "claim": "W losowanym badaniu krzyżowym",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "reduced next-morning alertness than when reading a printed book"
+        }
+      ],
+      "reason": "The quote shows that the same participants were compared across the two reading conditions (a within-participant comparison, consistent with a crossover). The abstract does not use the words randomised or crossover and does not say how the order of conditions was assigned. Full text needed for the randomisation and the design label."
+    },
+    {
+      "id": "Korzyść i dowody#2.2",
+      "kind": "source_description",
+      "claim": "każda sesja trwała około 4 godzin przed snem przez pięć wieczorów.",
+      "verdict": "not_checkable",
+      "reason": "The Chang snapshot is abstract-only. It says only that reading took place 'in the hours before bedtime'. It does not state the length of a session (about 4 hours) or the number of evenings (five). Full text of the PNAS article needed."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.",
+      "verdict": "supported",
+      "quotes": [
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "Participants reading an LE-eBook took longer to fall asleep and had reduced evening sleepiness, reduced melatonin secretion, later timing of their circadian clock, and reduced next-morning alertness than when reading a printed book."
+        },
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "evening exposure to an LE-eBook phase-delays the circadian clock, acutely suppresses melatonin"
+        }
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych.",
+      "verdict": "partly",
+      "quotes": [
+        {
+          "snapshot": "fa247e48351151fd.txt",
+          "line": 14,
+          "text": "reduced next-morning alertness than when reading a printed book"
+        }
+      ],
+      "reason": "The grade letter B is editorial and was not checked. The quote supports only a within-participant comparison of the two reading conditions (consistent with a crossover). The abstract does not give the sample size (small), the setting (laboratory, controlled conditions) or the design label. Full text needed."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana wieczornej rutyny jest próbą do dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym.",
+      "verdict": "not_checkable",
+      "reason": "Absence cannot be shown from an abstract-only snapshot. The Chang abstract names only 'a light-emitting device (LE-eBook)' and does not list the devices or display modes used. The NHS page (main region only, 4304 of 4844 characters) was also searched for night mode and e-ink screens and says nothing on them, but it is not a report of the study. Full text of the PNAS article needed."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego użycia ekranu w domu.",
+      "verdict": "not_checkable",
+      "reason": "The Chang snapshot is abstract-only. It does not state the size of the exposure, the laboratory setting or anything on brief use at home, and it reports no effect size. The NHS page does not discuss exposure duration or setting. Full text of the PNAS article would be needed to check the exposure and setting, and it would still not state the caveat itself."
+    }
+  ],
+  "scope_gaps": [
+    {
+      "id": "title#1",
+      "note": "The Chang abstract concerns reading an e-book on a light-emitting device in the hours before bedtime; the NHS page names television and devices 'like smartphones' right before bed. The title's 'jasne ekrany' is broader than the single device type described in the abstract."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "note": "'Warunek ekranu' is the light-emitting e-reader condition of the study; the abstract does not extend the result to phones, night mode or other screens. The sentence does not claim that, a reader might assume it."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "note": "Sample size, setting and design label are not in the abstract-only snapshot, so 'małe' and 'w kontrolowanych warunkach laboratoryjnych' are not checked."
+    },
+    {
+      "id": "W praktyce#2",
+      "note": "Neither snapshot says whether a one-hour limit has or has not been established by research; the sentence presents that absence as a fact."
+    }
+  ],
+  "notes": "No protocol violation: I opened only AGENTS.md, the role file, packet-verifier.json and the two snapshots fa247e48351151fd.txt and b59686537010480d.txt. Chang snapshot (DOI 10.1073/pnas.1418490112, Europe PMC) is abstract-only, title and authors match, the Journal line is empty; NHS snapshot (Insomnia, page reviewed 19 March 2024) is the main region only (keptChars 4304 of wholeChars 4844). Neither snapshot contained instructions. Sentences Korzyść i dowody#1 and #2 are split into parts of the same kind because their figures (12, 4) and verdicts differ and no figure may appear in a supported row without a quote. Nothing in the item is unsupported or contradicted; every non-passing row is abstract-only not_checkable or partly."
+}

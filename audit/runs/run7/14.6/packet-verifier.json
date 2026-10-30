@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "item": "14.6",
+  "role": "verifier",
+  "title": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty",
+  "fields": {
+    "Koszt": "Przegląd ustawień i ustalenie, co nadal jest potrzebne. Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.",
+    "W praktyce": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji. Usuń zbędne dostępy. Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.",
+    "Korzyść i dowody": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł.",
+    "Ocena dowodów": "C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu.",
+    "Ocena redakcyjna": "Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji.",
+    "Ograniczenia": "Nieznana lokalizacja sama nie rozstrzyga o ataku. Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność. Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta."
+  },
+  "propositions": [
+    {
+      "id": "title#1",
+      "field": "title",
+      "index": 1,
+      "text": "Sprawdzaj sesje, uprawnienia aplikacji i przekazywanie poczty"
+    },
+    {
+      "id": "Koszt#1",
+      "field": "Koszt",
+      "index": 1,
+      "text": "Przegląd ustawień i ustalenie, co nadal jest potrzebne."
+    },
+    {
+      "id": "Koszt#2",
+      "field": "Koszt",
+      "index": 2,
+      "text": "Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania."
+    },
+    {
+      "id": "W praktyce#1",
+      "field": "W praktyce",
+      "index": 1,
+      "text": "Sprawdź dostępne w usłudze listy sesji i połączonych aplikacji."
+    },
+    {
+      "id": "W praktyce#2",
+      "field": "W praktyce",
+      "index": 2,
+      "text": "Usuń zbędne dostępy."
+    },
+    {
+      "id": "W praktyce#3",
+      "field": "W praktyce",
+      "index": 3,
+      "text": "Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania, sprawdź obce reguły przekazywania poczty, zmień przejęte lub powtórzone hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "field": "Korzyść i dowody",
+      "index": 1,
+      "text": "NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "field": "Korzyść i dowody",
+      "index": 2,
+      "text": "Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "field": "Ocena dowodów",
+      "index": 1,
+      "text": "C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "field": "Ocena redakcyjna",
+      "index": 1,
+      "text": "Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "field": "Ograniczenia",
+      "index": 1,
+      "text": "Nieznana lokalizacja sama nie rozstrzyga o ataku."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "field": "Ograniczenia",
+      "index": 2,
+      "text": "Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "field": "Ograniczenia",
+      "index": 3,
+      "text": "Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta."
+    }
+  ],
+  "snapshotDir": ".cache/sources",
+  "sources": [
+    {
+      "origin": "cited",
+      "input": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "access": "page",
+      "accessWords": "treść strony",
+      "status": 200,
+      "error": null,
+      "via": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+      "redirectedHost": false,
+      "replacementChars": false,
+      "chars": 6873,
+      "sha256": "2680430c2ca39b314f2e7f353477c6d14b9f6b1223e64ed9d3da5782863b3f29",
+      "snapshot": "4f1351e404cb2044.txt",
+      "info": {
+        "region": "main",
+        "keptChars": 6804,
+        "wholeChars": 9603,
+        "truncated": false
+      }
+    }
+  ],
+  "warnings": []
+}
