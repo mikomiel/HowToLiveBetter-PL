@@ -176,17 +176,67 @@ test('licenses and attribution remain present, with no runtime dependencies', ()
   assert.match(read('reader.mjs'), /Copyright \(c\) 2026 eternity4719/);
 });
 
-test('all GitHub workflows remain validation-only and least privilege', () => {
-  assert.deepEqual(readdirSync(resolve(root, '.github/workflows')), ['book.yml']);
-  const workflow = read('.github/workflows/book.yml');
-  assert.match(workflow, /on:\n  pull_request:\n    branches: \[main\]/);
-  assert.match(workflow, /  push:\n    branches: \[main\]/);
-  assert.match(workflow, /permissions:\n  contents: read\n/);
-  assert.match(workflow, /persist-credentials: false/);
-  assert.match(workflow, /runs-on: ubuntu-24\.04/);
-  assert.match(workflow, /run: npm ci --ignore-scripts/);
-  assert.match(workflow, /run: npm test/);
-  assert.match(workflow, /run: npm run test:browser/);
-  assert.doesNotMatch(workflow, /contents: write|pull_request_target|gh release|git push|git tag|deploy|pages|upload-artifact|tools\/(epub|pdf|anki|offline)/i);
+test('repository workflows stay read-only, validation-only and SHA-pinned', () => {
+  const files = readdirSync(resolve(root, '.github/workflows')).sort();
+  assert.deepEqual(files, ['book.yml', 'dependency-review.yml']);
+  const allowedActions = new Set(['actions/checkout', 'actions/setup-node', 'actions/dependency-review-action']);
+  const validate = workflow => {
+    assert.match(workflow, /on:\n  pull_request:\n    branches: \[main\]/);
+    assert.match(workflow, /permissions:\n  contents: read\n/);
+    assert.match(workflow, /persist-credentials: false/);
+    assert.match(workflow, /runs-on: ubuntu-24\.04/);
+    assert.match(workflow, /timeout-minutes: \d+/);
+    assert.doesNotMatch(workflow, /\b[\w-]+: write|pull_request_target|secrets\.|gh release|gh pr merge|git push|git tag|deploy|pages|upload-artifact|tools\/(epub|pdf|anki|offline)/i);
+    const actions = [...workflow.matchAll(/uses: ([^@\s]+)@([^\s#]+)/g)];
+    assert.ok(actions.length > 0);
+    for (const [, action, sha] of actions) {
+      assert.ok(allowedActions.has(action), action);
+      assert.match(sha, /^[a-f0-9]{40}$/);
+    }
+  };
+  for (const file of files) validate(read('.github/workflows/' + file));
+  const book = read('.github/workflows/book.yml');
+  assert.match(book, /  push:\n    branches: \[main\]/);
+  for (const command of ['npm ci --ignore-scripts', 'npm test', 'npx playwright install --with-deps chromium firefox webkit', 'npm run test:browser']) assert.ok(book.includes('run: ' + command));
+  // The guard must reject real regressions, not merely discover valid files.
+  assert.throws(() => validate(book.replace(/(actions\/checkout@)[a-f0-9]{40}/, '$1v7')));
+  assert.throws(() => validate(book.replace('contents: read', 'contents: write')));
+  assert.throws(() => validate(book.replace('pull_request:', 'pull_request_target:')));
+  const dependencies = read('.github/workflows/dependency-review.yml');
+  assert.match(dependencies, /name: Dependency review/);
+  assert.match(dependencies, /fail-on-severity: high/);
+  assert.match(dependencies, /fail-on-scopes: runtime, development, unknown/);
+  assert.match(dependencies, /vulnerability-check: true/);
+  assert.match(dependencies, /warn-only: false/);
+  assert.match(dependencies, /comment-summary-in-pr: never/);
   assert.equal(existsSync(resolve(root, '.github/FUNDING.yml')), false);
+});
+
+test('Dependabot schedules bounded npm and Actions update groups without auto-merge', () => {
+  const config = read('.github/dependabot.yml');
+  assert.match(config, /^version: 2\n/);
+  assert.deepEqual([...config.matchAll(/package-ecosystem: (\S+)/g)].map(m => m[1]).sort(), ['github-actions', 'npm']);
+  assert.equal([...config.matchAll(/directory: \/$/gm)].length, 2);
+  assert.equal([...config.matchAll(/interval: weekly/g)].length, 2);
+  assert.equal([...config.matchAll(/open-pull-requests-limit: 3/g)].length, 2);
+  assert.match(config, /dependency-type: development/);
+  assert.match(config, /groups:\n      github-actions:/);
+  assert.doesNotMatch(config, /auto-merge|registries:|token:|password:/);
+});
+
+test('merge instructions keep human approval, exact HEAD and a separate non-admin identity', () => {
+  const policy = read('AGENTS.md');
+  for (const condition of ['zgodzie operatora na dany PR', 'uprawnionego recenzenta-człowieka dla aktualnego HEAD', 'odrębnej tożsamości agenta', 'bez uprawnień Administration', 'Nie używaj --admin ani bypassu', '--match-head-commit']) assert.ok(policy.includes(condition), condition);
+  assert.match(policy, /Sam komentarz AI nie jest zatwierdzeniem/);
+  assert.match(policy, /Dopóki osobna tożsamość nie jest skonfigurowana, agent nie wykonuje merge; robi to człowiek/);
+  assert.match(policy, /Nie deklaruj wtedy rozdzielenia uprawnień/);
+});
+
+test('browser projects cover Chromium desktop and mobile plus Firefox and WebKit', async () => {
+  const config = (await import('../playwright.config.mjs')).default;
+  assert.deepEqual(config.projects.map(p => p.name), ['desktop', 'mobile', 'firefox', 'webkit']);
+  assert.equal(config.use.browserName, 'chromium');
+  assert.equal(config.projects.find(p => p.name === 'mobile').use.isMobile, true);
+  assert.equal(config.projects.find(p => p.name === 'firefox').use.browserName, 'firefox');
+  assert.equal(config.projects.find(p => p.name === 'webkit').use.browserName, 'webkit');
 });
