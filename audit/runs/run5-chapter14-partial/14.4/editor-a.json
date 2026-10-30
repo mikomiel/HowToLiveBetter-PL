@@ -1,0 +1,114 @@
+{
+  "item": "14.4",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "o utracie karty",
+      "replacement": "o utracie karty SIM",
+      "reason": "term",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "ustal jej zabezpieczenie",
+      "replacement": "ustal, jak ją zabezpieczyć",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "dostęp do banku",
+      "replacement": "dostęp do konta bankowego",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "obce operacje",
+      "replacement": "nierozpoznane operacje",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ocena dowodów",
+      "original": "jednego optymalnego porządku działań",
+      "replacement": "jednej optymalnej kolejności działań",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "Wymazanie może",
+      "replacement": "Wymazanie urządzenia może",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "po resecie Android może przestać być widoczny",
+      "replacement": "po resecie urządzenie z Androidem może przestać być widoczne",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "kasowanie lub usunięcie z konta",
+      "replacement": "wymazanie lub usunięcie urządzenia z konta",
+      "reason": "consistency",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "jeżeli ta funkcja była dostępna",
+      "why": "Past tense is unnatural for an instruction given at the moment of loss. It may mean 'is available now' (jest dostępna) or 'was switched on beforehand' (była włączona); Ograniczenia says remote functions depend on earlier settings, which supports the second reading. This is a condition (jeżeli) and a tense, so I did not edit it; the verifier should pick the reading the sources support."
+    },
+    {
+      "field": "W praktyce",
+      "text": "oficjalnej usługi producenta",
+      "why": "Google (Android) and Apple are named as sources, but for many Android phones the remote-lock service belongs to the system provider, not to the phone manufacturer. 'producenta' may be too narrow or inexact. Possible alternatives are 'producenta systemu' or 'dostawcy systemu'. This names a provider category, so it is reported, not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Jeśli zagrożony jest dostęp do banku ... jeżeli ta funkcja była dostępna ... jeżeli inne ryzyko jest pilne",
+      "why": "Consistency: the item uses 'Jeśli' once and 'jeżeli' twice for the same kind of condition. The words are synonyms. Both are protected condition words, so I did not unify them. Check the chapter convention."
+    },
+    {
+      "field": "W praktyce",
+      "text": "skontaktuj się pilnie z bankiem oficjalnym kanałem",
+      "why": "The sentence reads clipped, and 'oficjalnym kanałem' does not say whose channel it is (the bank's own app, hotline or website, as opposed to a link received in an SMS). The sentence is safety-relevant and 'pilnie' is an urgency/duration word, so I left it unedited. An addition such as 'oficjalnym kanałem banku' is for the verifier to decide."
+    },
+    {
+      "field": "W praktyce / Korzyść i dowody",
+      "text": "obce operacje (W praktyce) vs nieautoryzowanych operacjach (Korzyść i dowody)",
+      "why": "Two different words for what may be one thing. 'nieautoryzowane' is a term of payment law and I did not propose it in place of the colloquial word. My edit 'obce' to 'nierozpoznane' keeps the colloquial register but adds a 'nie-' prefix. The verifier should confirm that the practical wording does not claim more or less than the source's 'nieautoryzowane'."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Rzecznik Finansowy zaleca kontakt z dostawcą i zabezpieczenie instrumentu przy nieautoryzowanych operacjach",
+      "why": "'dostawca' and 'instrument' are bare specialist terms that are not explained anywhere in the item. A lay reader will not know that they probably mean 'dostawca usług płatniczych' (the bank or card issuer) and 'instrument płatniczy' (card, BLIK or banking app). 'dostawca' also clashes with 'operator' (mobile operator) used in the same field and in W praktyce, and with 'dostawcami usług' in Koszt. These are law-adjacent terms attributed to an institution, so I did not edit them. The expansion needs a check against the source."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Nie potrzebujemy do tego jednolitego scenariusza dla wszystkich telefonów.",
+      "why": "First-person plural ('Nie potrzebujemy') is an unusual voice next to the imperative and impersonal style of the other fields, and 'do tego' is vague: it could refer to speeding up the response or to publishing this advice. The sentence contains a negation and a quantifier ('wszystkich'), so I did not edit it. Suggested direction for the verifier: an impersonal wording with the object of the claim made explicit."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "po resecie",
+      "why": "'reset' is an anglicism and is ambiguous in Polish (restart vs restoring factory settings). The official term 'przywrócenie ustawień fabrycznych' would be clearer, but I cannot see the sources and cannot tell which operation the source describes, so swapping the technical term would risk a change of meaning."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "z listy Znajdź",
+      "why": "This is a product or interface name. I cannot verify against Apple's Polish documentation whether the Polish name of the app or list is 'Znajdź' or another name (for example 'Lokalizator'). The name should be checked against the source. Also 'bo usuwa to blokadę aktywacji' is clipped: 'to' refers to the removal; this is a causal clause and was left as it is."
+    },
+    {
+      "field": "title",
+      "text": "Po utracie telefonu zabezpiecz urządzenie, numer i zagrożone konta",
+      "why": "The title is an action and understandable. Two small notes for the verifier. 'telefon' and 'urządzenie' name the same object in one title. 'numer' is not named in W praktyce, which speaks of 'karta' and 'operator' (my edit makes it 'karta SIM'). 'zagrożone konta' in the plural promises accounts in general, while W praktyce covers only bank access. This is a coverage question, not a language edit, so I left the title as it is."
+    }
+  ],
+  "verdict": "needs_edits"
+}

@@ -1,0 +1,76 @@
+{
+  "item": "04.4",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "szacunek",
+      "replacement": "oszacowanie",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "sprawdzenia historii",
+      "replacement": "sprawdzenia wcześniejszych podobnych zadań",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "deklaracją",
+      "replacement": "zadeklarowaniem",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "bezwzględnego błędu prognozy",
+      "replacement": "bezwzględnego błędu prognozy (różnicy między przewidywanym a rzeczywistym czasem, bez względu na kierunek pomyłki)",
+      "reason": "term",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "i dopiero wtedy wyznacz termin",
+      "why": "Terminology drift for one step: the title says 'Przed oceną terminu' (estimating), this field says 'wyznacz termin' (setting), Ocena redakcyjna says 'deklaracją terminu' (announcing), and Korzyść i dowody / Ograniczenia use 'prognoz', 'oszacowań', 'przewidzianym przez siebie czasie'. Aligning them (for example 'oszacuj termin') would change whether the advice is about predicting or committing to a deadline, so I did not edit. Verifier to decide which action the source supports."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zapisz, jak wcześniejsze podobne zadania odnoszą się do tego, które planujesz",
+      "why": "Reads as a calque of English 'relate'. 'odnoszą się do' is vague: it is not clear what the reader should write down (similarities, differences, durations). A clearer wording would change the practical instruction, so it is reported, not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "w badaniu sam ten warunek nie zmniejszył optymizmu prognoz",
+      "why": "'ten warunek' (calque of experimental 'condition') has no clear antecedent for a lay reader, and 'optymizmu prognoz' is stilted. A natural form such as 'w badaniu samo przypomnienie nie zmniejszyło optymizmu prognoz' would touch 'sam', the negation and the causal verb, so it is reported only."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "W badaniu 4 Buehlera i współautorów",
+      "why": "The bare number 4 next to a genitive surname can be misread as '4 Buehlera'; 'W badaniu nr 4 (Buehler i współautorzy)' or 'W czwartym badaniu Buehlera i współautorów' would read better. It touches a study number and a name, so it is reported. Also 'badanie' and 'eksperyment' are used for the same study within the item ('w tym eksperymencie', 'pojedynczy eksperyment')."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "rzadziej zaniżały termin ukończenia",
+      "why": "'zaniżać termin' is an unnatural collocation (a time or duration is underestimated, a date is not lowered); something like 'zbyt optymistycznie przewidywały czas ukończenia' would be more natural. This touches 'rzadziej' and the time word (termin vs czas, a possible change of what was measured), so it is reported only."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego.",
+      "why": "Elliptical calque: 'przewidywali ukończenie' reads as predicting that the task would be finished, not when. 'przewidywali, kiedy ukończą krótkie zadanie komputerowe' would be clearer. It touches 'krótkiego' (duration word) and the measured quantity, so it is reported only."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy.",
+      "why": "'Zmiana instrukcji' is introduced here for the first time and the reader is not told which instruction was changed; it probably refers to the instruction to link earlier experiences to the new task. Making that explicit would touch the negations and causal verbs, so it is reported only. The gloss I added for 'bezwzględnego błędu prognozy' assumes the standard definition of absolute error and should be checked by the verifier against the source."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Niski koszt sprawdzenia historii przemawia za taką próbą przed deklaracją terminu.",
+      "why": "Heavy nominal style (calque-like). A lighter sentence would replace 'przemawia za' with a modal such as 'warto', which would strengthen the editorial judgment, so only the two small edits above were made and the rest is reported."
+    }
+  ],
+  "verdict": "needs_edits"
+}

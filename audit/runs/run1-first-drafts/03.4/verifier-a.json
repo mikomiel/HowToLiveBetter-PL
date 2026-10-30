@@ -1,0 +1,208 @@
+{
+  "item": "03.4",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Ogranicz kofeinę przed snem zamiast stosować jedną godzinę graniczną dla wszystkich",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "To avoid reductions in total sleep time, coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "a standard serve of pre-workout supplement (217.5 mg) should be consumed at least 13.2 h prior to bedtime"},
+        {"snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"}
+      ],
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3", "W praktyce#3.1"],
+      "reason": "Backed: limiting caffeine before sleep (Gardiner abstract: caffeine cut total sleep time; both sources give a minimum interval before bed) and the cutoff differing with the caffeine source/dose (8.8 h for coffee vs 13.2 h for a pre-workout serve; NHS gives 6 h for tea/coffee). Not backed: the contrast 'dla wszystkich' if it means that the cutoff differs between people. Neither snapshot reports individual differences, and Ograniczenia#3 of the item itself says so. Also no snapshot mentions a single clock hour."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana nawyku i ewentualny wybór napoju bez kofeiny.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."},
+        {"snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"}
+      ],
+      "depends_on": ["W praktyce#3.1", "W praktyce#4"]
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "source_claim",
+      "claim": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"}
+      ]
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "meta_statement",
+      "claim": "nie jest to gwarancja braku wpływu u każdej osoby",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#4",
+      "kind": "source_claim",
+      "claim": "Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "To avoid reductions in total sleep time, coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"},
+        {"snapshot": "df5a689db3e18396.txt", "line": 8, "text": "The effect of caffeine on subsequent sleep: A systematic review and meta-analysis."}
+      ]
+    },
+    {
+      "id": "W praktyce#5.1",
+      "kind": "source_claim",
+      "claim": "To zalecenie oparte na zbiorczych wynikach badań",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "The results of the present study provide evidence-based guidance for the appropriate consumption of caffeine to mitigate the deleterious effects on sleep."},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "This systematic review and meta-analysis investigated the effect of caffeine on the characteristics of night-time sleep, with the intent to identify the time after which caffeine should not be consumed prior to bedtime."}
+      ],
+      "reason": "The abstract ties the 8.8 h and 13.2 h guidance to the results of the systematic review and meta-analysis. How the hours were derived from the pooled data (method) is not in the abstract."
+    },
+    {
+      "id": "W praktyce#5.2",
+      "kind": "meta_statement",
+      "claim": "nie osobista granica bezpieczeństwa",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Metaanaliza Gardiner i współautorów objęła 24 badania.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 8, "text": "The effect of caffeine on subsequent sleep: A systematic review and meta-analysis."},
+        {"snapshot": "df5a689db3e18396.txt", "line": 9, "text": "Authors: Gardiner C, Weakley J, Burke LM, Roach GD, Sargent C, Maniar N, Townshend A, Halson SL."},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "A systematic search of the literature was undertaken with 24 studies included in the analysis."}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "Caffeine consumption reduced total sleep time by 45 min and sleep efficiency by 7%"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg).",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "To avoid reductions in total sleep time, coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "a standard serve of pre-workout supplement (217.5 mg) should be consumed at least 13.2 h prior to bedtime"}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "ilościowa synteza badań nad kofeiną i snem",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 8, "text": "The effect of caffeine on subsequent sleep: A systematic review and meta-analysis."},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "This systematic review and meta-analysis investigated the effect of caffeine on the characteristics of night-time sleep"}
+      ],
+      "reason": "The grade letter A is an editorial judgement and was not checked; only the description of the source after it was checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "meta_statement",
+      "claim": "średni wynik nie jest osobistą prognozą",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#1.1",
+      "kind": "editorial_estimate",
+      "claim": "Przesunięcie napoju może być prostą zmianą",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#1.2",
+      "kind": "recommendation_derived",
+      "claim": "nie zastępuje oceny przyczyn przewlekłych problemów ze snem",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 147, "text": "you've had trouble sleeping for months"},
+        {"snapshot": "b59686537010480d.txt", "line": 153, "text": "A GP will try to find out what's causing your insomnia so you get the right treatment."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#1.1",
+      "kind": "source_claim",
+      "claim": "Nie ma uniwersalnej granicy",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "To avoid reductions in total sleep time, coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "a standard serve of pre-workout supplement (217.5 mg) should be consumed at least 13.2 h prior to bedtime"},
+        {"snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"}
+      ],
+      "reason": "The snapshots give different minimum intervals before bedtime (8.8 h coffee, 13.2 h pre-workout serve in the Gardiner abstract; 6 h tea/coffee in NHS), which supports that there is no single interval for all caffeine sources. Neither snapshot says that no universal cutoff exists, and neither mentions a clock-time rule or individual differences. The claim is supported only in the narrower sense of product/dose-dependent intervals."
+    },
+    {
+      "id": "Ograniczenia#1.2",
+      "kind": "meta_statement",
+      "claim": "o 14:00",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Zawartość kofeiny różni się między napojami: autorzy podają jako przykłady 107 mg w 250 mL kawy i 217,5 mg w porcji suplementu przedtreningowego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "coffee (107 mg per 250 mL)"},
+        {"snapshot": "df5a689db3e18396.txt", "line": 14, "text": "a standard serve of pre-workout supplement (217.5 mg)"}
+      ],
+      "reason": "The abstract gives only these two figures as examples; the general statement that content differs between drinks rests on them."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Cytowane źródła nie opisują indywidualnej wrażliwości na kofeinę.",
+      "verdict": "not_checkable",
+      "reason": "Absence can be shown only from a whole text. The Gardiner snapshot is an abstract only (Europe PMC); it does not mention individual sensitivity, but the full text of Gardiner et al. would be needed to show absence. The NHS snapshot is the main region (4304 of 4844 chars): searched for sensitiv*, individual, genetic, metabol*, toleran*, habitual, vary/variab*, differ, personal; the only hit is 'Everyone needs different amounts of sleep' (line 37), which concerns sleep need, not caffeine sensitivity. So absence holds for the NHS main region and is undecided for the full text of the meta-analysis."
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "'dla wszystkich' can be read as all caffeine sources (the Gardiner abstract gives two different intervals) or all people (no snapshot reports individual differences). Neither snapshot mentions a single clock hour."},
+    {"id": "W praktyce#3.1", "note": "The NHS line is general self-help for insomnia and lists smoking and alcohol next to tea and coffee. It gives no dose, no other caffeine sources and no reason or effect size for the 6 hours."},
+    {"id": "W praktyce#4", "note": "The abstract does not state the population, the doses/timings of the underlying studies, or the confidence interval. The interval is tied only to avoiding a reduction in total sleep time, not to sleep onset, efficiency or deep sleep."},
+    {"id": "W praktyce#5.1", "note": "Only an abstract was read: the method by which 8.8 h and 13.2 h were derived from the pooled data is not shown."},
+    {"id": "Korzyść i dowody#2", "note": "The abstract gives no comparator, dose, timing, population or confidence interval for the 45 min figure. A reader might assume a fixed dose or healthy adults; the sentence does not say so."},
+    {"id": "Korzyść i dowody#3", "note": "The two intervals are minimums ('at least') and are tied to avoiding reduced total sleep time only. A reader might assume they protect other sleep measures or all people; the sentence does not say so."},
+    {"id": "Ograniczenia#1.1", "note": "The sentence as a whole names a clock hour (14:00). No snapshot contains 14:00 or any clock-time rule; both give hours before bedtime. The figure 14:00 is therefore not quoted from any source."},
+    {"id": "Ograniczenia#2", "note": "The coffee figure is per 250 mL and the supplement figure per standard serve with no volume given, so the two are not like-for-like, and the supplement is not described as a drink. The sentence does not claim a like-for-like comparison."},
+    {"id": "Ograniczenia#3", "note": "'Cytowane źródła' covers two cited snapshots: the Gardiner abstract (abstract only) and the NHS page (main region only)."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet, and snapshots df5a689db3e18396.txt (Gardiner 2023, abstract only via Europe PMC; its Journal field is empty, but DOI, title, authors and year match) and b59686537010480d.txt (NHS Insomnia page, main region 4304 of 4844 chars, last reviewed 19 March 2024). The lead source fcfee9b228206080.txt was not opened and not used as evidence. Nothing outside the allowed set was opened. No warnings in packet. Judgement calls: (1) Ograniczenia#1 was split so that '14:00', which occurs in no snapshot, sits in a separate meta_statement part and is not run through the numbers check of a source_claim; the orchestrator should decide whether 14:00 needs a source or a rewrite. (2) 'Nie zakładamy...' in Koszt#2 was filed as editorial_estimate (Koszt content) although it could be a meta_statement; the verdict is the same. (3) 'Ocena dowodów' second clause 'średni wynik nie jest osobistą prognozą' and the clause 'nie jest to gwarancja...' were filed as meta_statement (editor's caveats); if a person reads them as claims about the world, no snapshot states them. (4) Korzyść i dowody#1 was kept as one source_claim (design, authors and count of studies, all quoted) rather than split into description and claim. (5) W praktyce#1 and W praktyce#2 were marked fully backed by their dependencies; the self-observation step in #1 is editorial but rests on the facts in Korzyść i dowody#2 and #3. Status UNAVAILABLE comes from the partly title, the partly Ograniczenia#1.1 and the not_checkable Ograniczenia#3; no row is unsupported or contradicted."
+}

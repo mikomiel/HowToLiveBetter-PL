@@ -66,7 +66,7 @@ Kanoniczne porady i rekordy redakcyjne są w trzech plikach [book/pl/](book/READ
 | needs_localization | Brakuje sprawdzonego zastosowania w polskich przepisach, instytucjach, rynku lub procedurach. |
 | not_applicable | Brak odpowiedniego zastosowania w Polsce. To dostępny stan, niewykorzystany w nowych rozdziałach. |
 
-Chińskie pliki w [book/](book/) i [docs/](docs/), odziedziczony selfcheck.html, skille oraz starsze generatory są **materiałem referencyjnym upstream**, nie gotową polską treścią. Nie są ładowane przez czytnik ani nowe kontrole.
+Chińskie pliki w [book/](book/) i [docs/](docs/), odziedziczony selfcheck.html, skille oraz starsze generatory są **materiałem referencyjnym upstream**, nie gotową polską treścią. Czytnik ich nie ładuje. Kontrole czytają je wyłącznie po to, by sprawdzić przypięte odsyłacze, numerację i liczby przeniesione z oryginału.
 
 ## Uruchom lokalny czytnik
 

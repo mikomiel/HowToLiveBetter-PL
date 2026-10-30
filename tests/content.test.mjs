@@ -11,19 +11,27 @@ const chapters = CHAPTERS.map(c => ({ ...c, text: read(c.path), ...parseChapter(
 const entries = chapters.flatMap(c => c.entries);
 const advice = published(entries);
 const time = chapters.find(c => c.id === '04');
-const sourcePaths = { '03': 'book/03-不要浪费精力.md', '04': 'book/04-不要浪费时间.md', '14': 'book/14-账号与信息安全.md' };
+// Consent guard: AGENTS.md limits the edition to these chapters. Change this list only with the owner's agreement.
+const AGREED_SCOPE = ['03', '04', '14'];
+// Upstream file of a chapter, found by its number prefix, so scope changes do not require editing paths here.
+const sourcePaths = Object.fromEntries(CHAPTERS.map(({ id }) => {
+  const file = readdirSync(resolve(root, 'book')).find(name => name.startsWith(id + '-') && name.endsWith('.md'));
+  assert.ok(file, `no upstream file for chapter ${id}`);
+  return [id, 'book/' + file];
+}));
 const baseline = 'e2605d3e2242bd6216c9255192b8a8957a08c55a';
 const states = ['verified', 'needs_verification', 'needs_localization', 'not_applicable'];
 
-test('one file registry covers only the three authorized chapters', () => {
-  assert.deepEqual(CHAPTERS.map(c => c.id), ['03', '04', '14']);
+test('one file registry covers only the authorized chapters', () => {
+  assert.deepEqual(CHAPTERS.map(c => c.id), AGREED_SCOPE);
   assert.equal(new Set(CHAPTERS.map(c => c.path)).size, CHAPTERS.length);
   for (const c of CHAPTERS) assert.deepEqual(Object.keys(c).sort(), ['id', 'path']);
 });
 
-test('all 39 new source items have exactly one decision; chapter 04 stays intact', () => {
+test('every source item of the new chapters has exactly one decision; chapter 04 stays intact', () => {
   const newChapters = chapters.filter(c => c.id !== '04');
-  assert.equal(newChapters.flatMap(c => c.entries).length, 39);
+  const sourceTotal = newChapters.reduce((sum, c) => sum + [...read(sourcePaths[c.id]).matchAll(/^### \d+\. /gm)].length, 0);
+  assert.equal(newChapters.flatMap(c => c.entries).length, sourceTotal);
   for (const c of newChapters) {
     const sourceNumbers = [...read(sourcePaths[c.id]).matchAll(/^### (\d+)\. /gm)].map(m => `${c.id}.${m[1]}`);
     assert.deepEqual(c.entries.map(e => e.number), sourceNumbers);
@@ -45,7 +53,7 @@ test('all 39 new source items have exactly one decision; chapter 04 stays intact
 
 test('README totals and per-chapter coverage match the canonical Markdown', () => {
   const readme = read('README.md');
-  assert.match(readme, new RegExp(`Stan treści: ${advice.length} zweryfikowane polskie porady`));
+  assert.match(readme, new RegExp(`Stan treści: ${advice.length} zweryfikowan(?:e|ych) polsk(?:ie|ich) porad`));
   for (const c of chapters) {
     const total = [...read(sourcePaths[c.id]).matchAll(/^### \d+\. /gm)].length;
     const row = readme.split('\n').find(line => line.startsWith(`| [${c.id}.`));
@@ -85,7 +93,7 @@ test('published items have all provenance, evidence, limits and calendar-valid d
   for (const e of advice) {
     for (const field of FIELDS) assert.ok(e.fields[field], `${e.number}: ${field}`);
     assert.equal(e.fields.Status, 'verified');
-    assert.match(e.fields['Ocena dowodów'], /^[ABC] — .+/);
+    assert.match(e.fields['Ocena dowodów'], /^[ABC] [\u2014-] .+/);
     assert.match(e.fields.Weryfikacja, /^\d{4}-\d{2}-\d{2}; .+/);
     assert.equal(new Date(e.fields.Weryfikacja.slice(0, 10)).toISOString().slice(0, 10), e.fields.Weryfikacja.slice(0, 10));
     assert.match(e.fields['Źródła'], /https:\/\//);
@@ -107,6 +115,13 @@ test('all unpublished states are excluded and malformed files fail closed', () =
   assert.throws(() => parseChapter(time.text, '03'), /Niezgodny numer/);
   assert.throws(() => parseChapter(''), /Brak/);
   assert.throws(() => parseChapter('# 3. Pusty\n'), /Brak/);
+});
+
+test('a grade separator written as a hyphen is accepted and other separators are not', () => {
+  const swap = separator => parseChapter(time.text.replace(/(- Ocena dowodów: [ABC]) \u2014 /, `$1${separator}`));
+  assert.doesNotThrow(() => swap(' - '));
+  assert.throws(() => swap(': '), /oceny dowodów/);
+  assert.throws(() => swap(' '), /oceny dowodów/);
 });
 
 test('authentication advice keeps the available-2FA fallback and its phishing limit', () => {

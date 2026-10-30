@@ -1,0 +1,75 @@
+{
+  "item": "14.9",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "inny sposób weryfikacji",
+      "replacement": "inną metodę weryfikacji",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę",
+      "why": "Not understandable without the author for a lay reader: „podstawę” has no complement (the body means the legal basis of processing), „alternatywę” does not say alternative to what (another way of confirming identity), and „przekażesz biometrię” treats biometrics as an object handed over (the item itself speaks of dane biometryczne). Candidate wording for the verifier: „podstawę prawną”, „dane biometryczne”. Not edited: legal terms. The chapter was not consulted, so I do not know whether the chapter already uses „biometria” as a plain term."
+    },
+    {
+      "field": "W praktyce",
+      "text": "kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo",
+      "why": "„na jakiej podstawie” lacks „prawnej”, so a lay reader may not know what basis is meant (same gap as in the title). „jak długo” is elliptical: it does not say whether the duration of processing or of storage is meant. Not edited: legal term and a duration word."
+    },
+    {
+      "field": "Koszt",
+      "text": "inny sposób weryfikacji",
+      "why": "Terminology: this field says „weryfikacji”, while W praktyce and Korzyść i dowody speak of „identyfikacji”, and the title and Ograniczenia say „alternatywa”. In biometrics verification (confirming a claimed identity) and identification (establishing who someone is) are different operations. My only edit here changes „sposób” to „metoda” for consistency with W praktyce and leaves „weryfikacji” untouched. The verifier should decide whether „weryfikacji” is intended."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację.",
+      "why": "„definiuje ... przez” is a loose, calque-like rendering of a definition. The participles „umożliwiające lub potwierdzające” can attach to „przetwarzanie” or to „dane”, so the reader cannot tell what enables identification, and the sentence never says what the data describe. „RODO” is not expanded anywhere in this item; if this is its first use in the chapter it needs a first-use explanation (chapter not consulted). Not edited: names of law and legal terms („specjalne przetwarzanie techniczne”, „jednoznaczna identyfikacja”)."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu",
+      "why": "Reads badly: the instrumental „szczególną ochroną” sits between verb and object and collides with „biometrię” (ochroną biometrię). „Art. 9” opens the sentence without naming the act, so the referent rests on the previous sentence. A more natural order would put the object first (obejmuje biometrię ... szczególną ochroną). Not edited: article reference and legal terms of protection and purpose."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "zasadniczy zakaz ma wymienione w prawie wyjątki",
+      "why": "Clearest calque in the item. „ma wymienione w prawie wyjątki” follows English/Chinese word order (has exceptions listed in law); a Polish reader expects „wyjątki przewidziane w przepisach” or a clause with „od którego przepisy przewidują wyjątki”. „zasadniczy zakaz” is also unanchored: the colon introduces a ban that was never named (ban on what?). Not edited: „zakaz”, „wyjątki”, „prawo” are terms of law and duty."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+      "why": "„jednym z nich” points back to „wyjątki”, but the sentence ends on „podstawą”, so exception and basis read as one notion although they may be two. Please check that the author means the same thing. Also a negation with a quantifier-like phrase („nie jedyną możliwą”). Not edited: „wyraźna zgoda” and „podstawa” are legal terms."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+      "why": "Heavy nominal style („znać sposób wykorzystania ... przed ich przekazaniem”) and two claims in one sentence joined by „zamiast”. A plainer version that keeps every protected word could read: „Warto wiedzieć, jak dane zostaną wykorzystane, zanim się je przekaże, i nie utożsamiać wygody z koniecznością prawną.” Not edited: „warto” is a modal and „konieczność prawna” is a legal term."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu.",
+      "why": "Category mismatch: a photo (a thing) is called a processing (an operation). „w tym znaczeniu” has no clear anchor, because the item defines „dane biometryczne”, not „przetwarzanie biometryczne”. Not edited: negation, quantifier („każde”) and „automatycznie”."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia.",
+      "why": "An advice item concerns the reader's situation, not „organizacji”; „nie jest oceną” is an odd verb for what is a scope statement (plainer: does not cover); „lokalnego odblokowania urządzenia” is abstract and calque-like (plain: unlocking a phone or computer with face or fingerprint). Not edited: scope and condition words („organizacji”, „lokalnego”) and the negation."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Ochronę logowania opisuje [14.1](#porada-14-1).",
+      "why": "The link text is a bare number, so the reader does not see that it is an advice item; „porada [14.1]” would read better. I do not know the chapter's convention for cross-references, so I did not edit. Not edited: link."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "nie miał przeglądu prawnika",
+      "why": "Slightly bureaucratic calque (did not have a review); „nie został sprawdzony przez prawnika” is more natural. Not edited: negation and a statement about a legal review."
+    }
+  ],
+  "verdict": "needs_edits"
+}

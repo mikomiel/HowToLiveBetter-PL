@@ -1,0 +1,175 @@
+{
+  "item": "14.2",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 395, "text": "Używanie tego samego hasła w wielu miejscach."}
+      ],
+      "depends_on": ["Korzyść i dowody#1", "W praktyce#4.2"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana haseł i przygotowanie menedżera haseł.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Dostępne rozwiązania różnią się kosztem",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie wymagamy zakupu konkretnego produktu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 357, "text": "Hasło powinno być wystarczająco długie."}
+      ],
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 467, "text": "Stwórz jedno silne hasło główne metodą hasła-zdania (4-5 losowych słów)."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Ty musisz pamiętać tylko jedno hasło główne, dlatego warto, by było stworzone metodą hasła-zdania opisaną wyżej."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 381, "text": "Stawiaj na losowe, niezwiązane słowa."}
+      ]
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł), bank, media społecznościowe oraz jeśli to możliwe na koncie, którym logujesz się do menedżera haseł."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "Zapisz je w bezpiecznym miejscu"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 429, "text": "coś, co masz: np. telefon, klucz sprzętowy lub jednorazowy kod"}
+      ]
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "source_claim",
+      "claim": "które serwis pokaże przy jego włączaniu.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "podczas konfiguracji 2FA serwis pokaże Ci kody zapasowe."}
+      ],
+      "reason": "Source states it for 2FA setup in general; the item's 'jego' refers to the second factor."
+    },
+    {
+      "id": "W praktyce#4.1",
+      "kind": "recommendation_derived",
+      "claim": "Zacznij od poczty,",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł)"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont: poczty, banku, mediów społecznościowych."}
+      ],
+      "depends_on": ["W praktyce#4.2"]
+    },
+    {
+      "id": "W praktyce#4.2",
+      "kind": "source_claim",
+      "claim": "przez którą resetujesz inne konta.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "poczta (bo to brama do resetowania innych haseł)"}
+      ],
+      "reason": "Source says mail is the gateway to resetting other passwords; the item says other accounts."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "Jeśli używasz tego samego hasła w wielu miejscach, jeden wyciek daje przestępcom dostęp do wielu Twoich kont."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "bazy danych z hasłami regularnie wyciekają z różnych serwisów"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 7, "text": "Jak tworzyć bezpieczne hasła i chronić swoje konta – Baza wiedzy CERT Polska"}
+      ],
+      "reason": "Attribution to CERT Polska checked against the snapshot title (line 7). The source states the consequence without hedging ('daje'); the item's 'może' is the weaker wording, so no overstatement."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 409, "text": "Pamiętanie unikalnego, silnego hasła dla każdego konta jest nierealne."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 413, "text": "bezpiecznie przechowuje je w zaszyfrowanym"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 363, "text": "ludzie tworzą hasła zbyt skomplikowane, więc ich nie pamiętają i notują na karteczkach albo używają jednego wszędzie"}
+      ],
+      "reason": "Source describes what a manager does and calls it the solution to the unrealistic task of remembering unique passwords; 'ułatwia' is a qualitative claim, no measured effect in the source."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "C — praktyczne zalecenia CERT Polska",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 347, "text": "zebraliśmy praktyczne porady, dzięki którym poprawisz bezpieczeństwo swoich kont"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 7, "text": "Jak tworzyć bezpieczne hasła i chronić swoje konta – Baza wiedzy CERT Polska"}
+      ],
+      "reason": "The grade letter C is editorial and was not checked. The words after it describe the source as practical guidance of CERT Polska; the snapshot is a knowledge-base guidance article, not a study."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez zmierzonej kwoty unikniętych strat.",
+      "verdict": "absent_in_source",
+      "searched": ["6a185dd9954fea49.txt"],
+      "reason": "Searched the stored text for strat, zł, PLN, kwot, euro, %, $, koszt, mln, milion, szkod, pieni. No monetary amount of losses or avoided losses appears (hits were 'przeszłością', 'miliony kombinacji' and 'dodatkowym kosztem' of a hardware key). Absence is from the stored main region of the page (12649 of 13207 chars, not truncated), which contains the whole article body."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Silne hasło może zostać wyłudzone lub przechwycone.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 423, "text": "Nawet najsilniejsze hasło można wykraść albo przechwycić."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 439, "text": "można je wyłudzić za pomocą fałszywej strony logowania"}
+      ]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [],
+  "notes": "Opened only the role file, AGENTS.md, the packet and snapshot 6a185dd9954fea49.txt (Read plus one Grep with the exact snapshot path). No protocol violation. Snapshot is the CERT Polska 'Hasła' page (access page, status 200, main region 12649 of 13207 chars, not truncated, last update line 2026-09-02). Ograniczenia#2 is a cross-reference to item 14.1, whose content was not available to me and is not checked. Grade letter C in Ocena dowodów was not checked (editorial)."
+}

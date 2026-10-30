@@ -1,0 +1,77 @@
+[
+ {
+  "item": "03.4",
+  "high": true,
+  "domains": [
+   "health"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The report for item 03.4 is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit3/03.4/verifier-a.json`, with status PASS. The role file left these points open, and I made these calls:\n\n- **W praktyce#1** (self-monitoring advice): no snapshot recommends observing your own caffeine timing and sleep. I judged the advice backed through `depends_on`, because it rests on the timing facts, and recorded the gap in `scope_gaps` instead of using `partly`. The role file does not say whether a trivial self-observation step counts as fully backed.\n- **Splits of mixed sentences:** the splits were `W praktyce#3` and `#5`, and `Ocena dowodów#1`. I took \"nie jest to gwarancja...\", \"nie osobista granica bezpieczeństwa\" and \"średni wynik nie jest osobistą prognozą\" as editor's caveats (`meta_statement`) rather than world claims.\n- **Row kinds:** `Koszt#2` is `editorial_estimate`. `Ocena redakcyjna#1` is one `editorial_estimate` row, although its second clause is a caveat that NHS lines 143-153 also back. I treated `Korzyść i dowody#1` as one `source_description` row covering both the design label and the \"24\" figure.\n- **Supported with scope gaps:** `Ograniczenia#1` (\"dla różnych źródeł kofeiny\") and `Korzyść i dowody#3` (drops \"co najmniej\") got `supported` plus a scope gap, because the role file's line between `partly` and a harmless gap is a judgement call.\n\nI opened only AGENTS.md, the role file, the packet and the two cited snapshots, `df5a689db3e18396.txt` and `b59686537010480d.txt`. I did not open the lead snapshot `fcfee9b228206080.txt` or anything under book/, tests/, tools/, the manifest or git history, and I ran no scripts."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "The report is at `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit3/03.4/verifier-b.json`, with status UNAVAILABLE because two rows are `partly` (W praktyce#1 and Ograniczenia#1).\n\nThe role file was clear enough, but I made these judgement calls:\n- **Splits:** I split sentences where the kinds differ, using the `.1/.2` ids. These were W praktyce#3 and #5, Ocena dowodów#1 and Ocena redakcyjna#1.\n- **Caveat clauses:** I filed \"nie jest to gwarancja...\", \"nie osobista granica bezpieczeństwa\" and \"średni wynik nie jest osobistą prognozą\" as `meta_statement`, because the role file gives \"to nie gwarancja\" as the example.\n- **Ocena redakcyjna#1.2:** \"nie zastępuje oceny przyczyn...\" sits on the border between `meta_statement` and `recommendation_derived`. I chose `recommendation_derived` and backed it with NHS \"See a GP\" lines.\n- **W praktyce#1:** I marked the self-monitoring advice `partly`, not `unsupported`. The fact it rests on (caffeine cut total sleep time) is in the abstract, but neither snapshot recommends tracking.\n- **W praktyce#5.1:** I marked \"oparte na zbiorczych wynikach badań\" `supported` from the abstract, although the abstract does not describe how the 8.8 h cut-off was derived. It is a judgement call between `supported` and `partly`.\n- **Ograniczenia#1:** I marked it `partly` because the NHS 6 h applies to tea or coffee, not to a separate caffeine source.\n- **Ograniczenia#2:** I marked \"jako przykłady\" `supported` and recorded the gap in `scope_gaps`.\n- **Quote line:** I used the full-line `Title:` line (line 8) for the design label, cutting the quote to start after \"Title: \".\n\nI opened nothing outside the allowed set: only the role file, AGENTS.md, the packet, the two cited snapshots and the one report file I wrote. I did not open the lead snapshot."
+   }
+  ],
+  "compare": {
+   "exitCode": 1,
+   "agree": false,
+   "statusA": "PASS",
+   "statusB": "UNAVAILABLE",
+   "disagreements": [
+    "W praktyce#1 | strength | A: recommendation_derived not_applicable | B: recommendation_derived partly",
+    "Ograniczenia#1 | strength | A: source_claim supported | B: source_claim partly"
+   ]
+  }
+ },
+ {
+  "item": "14.7",
+  "high": true,
+  "domains": [
+   "health",
+   "law",
+   "accounts"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The report is at `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit3/14.7/verifier-a.json`, with status PASS. I did not run the report-checking script, so I have not confirmed that it accepts it.\n\n**Where the role file was unclear and I had to guess:**\n- **Article numbers:** The role file allows `cell: true` only for table cells. The claims cite \"art. 4\", \"art. 6\" and \"art. 7\", and those numbers must occur in a quote. I quoted the one-line headings \"Artykuł 4\", \"Artykuł 6\" and \"Artykuł 7\" with `cell: true`. If the script rejects that, those rows need another treatment.\n- **Ocena dowodów#1:** I kept \"nie badanie skuteczności interwencji\" in one `source_description` row. I did not split it off as an \"absent in source\" clause, because it names the type of document rather than an unmeasured figure.\n- **Koszt#1:** I filed \"część funkcji może przestać działać\" as `editorial_estimate`, and recorded in `scope_gaps` that the Android page does not state it.\n- **Ograniczenia#5:** I kept it as one `source_claim` row, because every part says what the page contains.\n- **Ograniczenia#4:** I split it at the semicolon into 4.1 and 4.2. For 4.2 (\"nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy\") I used `absent_in_source`, limited to art. 7 ust. 4.\n- **title#1:** I filed it as `recommendation_derived` and fully backed, depending on Ograniczenia#1. The item itself says that pairing is an editorial juxtaposition, so a stricter reader might call the title `partly` backed.\n\nI opened nothing outside the allowed set: only the role file, AGENTS.md, the packet and the two cited snapshots."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit3/14.7/verifier-b.json` with status PASS. I did not run the checking script, so I don't know whether it accepts the report.\n\n**Where the role file was unclear or I had to guess**\n- **Short quotes:** quotes under 12 characters are allowed only for table cells. The article numbers in \"art. 4 pkt 11\", \"art. 6 ust. 1\" and \"Art. 7 ust. 4\" appear in no longer quote. I quoted the standalone heading lines \"Artykuł 4\", \"Artykuł 6\" and \"Artykuł 7\" with `cell: true`, which stretches the cell rule.\n- **\"Nie badanie skuteczności interwencji\":** the file does not say whether this clause is a design label or an absence claim. I split it from the grade and filed it as a `source_claim` with verdict `absent_in_source`.\n- **Koszt#1:** I treated \"część funkcji może przestać działać\" as part of the editors' cost estimate, not a source claim.\n- **Fully backed advice:** \"Fully backed\" is not defined precisely. I marked `title#1` and `W praktyce#1-3` as `not_applicable` because the facts they rest on are quoted in the listed dependencies. I recorded in `scope_gaps` that the juxtaposition of Android permissions and RODO consent is the editors' own.\n- **Recital quotes:** I added two RODO recital quotes (lines 507 and 516) to `W praktyce#1` and `W praktyce#3`, although the item cites only articles.\n\nI opened nothing outside the allowed set: only the role file, `AGENTS.md`, the packet and the two snapshots."
+   }
+  ],
+  "compare": {
+   "exitCode": 0,
+   "agree": true,
+   "disagreements": [],
+   "statusA": "PASS",
+   "statusB": "PASS"
+  }
+ }
+]

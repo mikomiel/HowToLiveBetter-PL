@@ -1,0 +1,99 @@
+{
+  "item": "03.4",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "metaanalizy",
+      "replacement": "metaanalizy, czyli łącznej analizy wyników badań,",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "Po kofeinie",
+      "replacement": "Po przyjęciu kofeiny",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "Przesunięcie napoju",
+      "replacement": "Przesunięcie porcji kofeiny",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Zachowaj odstęp między ostatnią kofeiną a snem, liczony od pory snu",
+      "why": "Tytuł jest niezgrabny: powtarza „snem ... pory snu”, a „ostatnia kofeina” brzmi nienaturalnie, bo w treści mowa o „ostatniej porcji kofeiny”. Warunek, że odstęp liczy się od pory snu, a nie od godziny na zegarze, musi przetrwać w tytule. Możliwy zapis do rozważenia przez weryfikatora: „Zachowaj odstęp między ostatnią porcją kofeiny a porą snu”. Dotyka słów odstęp i ostatnią, więc go nie edytuję."
+    },
+    {
+      "field": "Koszt",
+      "text": "Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+      "why": "Zdanie łączy spójnikiem „ani” dwie różne myśli (brak dodatkowych wydatków oraz brak założenia, że zmiana jest jednakowo trudna). „Nie zakładamy dodatkowych wydatków” da się przeczytać dwojako: jako „nie liczymy żadnych wydatków” albo „nie zakładamy, że ich nie będzie”. „Jednakowej trudności” to też kalka. Zawiera negację i kwantyfikator, więc to decyzja weryfikatora. Jaśniej byłoby rozdzielić na dwa zdania, np. „Nie liczymy dodatkowych wydatków. Trudność zmiany bywa różna u różnych osób.” (o ile taki jest zamierzony sens)."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz.",
+      "why": "Dopełnienie „ogranicz” jest domyślne: można je czytać jako „ogranicz tę porcję” albo „ogranicz kofeinę w ogóle”. To rozróżnienie dotyczy dawki, więc nie edytuję. Weryfikator powinien ustalić zamierzony sens i dopisać dopełnienie."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem",
+      "why": "Skrót NHS nie jest wyjaśniony dla czytelnika w Polsce (nazwa instytucji i jurysdykcja brytyjska; nie mogłem sprawdzić, czy rozdział wyjaśnia go wcześniej). Konstrukcja „unikanie ... co najmniej 6 godzin przed snem” jest dwuznaczna: może znaczyć „nie pić w ciągu 6 godzin przed snem” albo „unikać przez co najmniej 6 godzin”. Dotyczy nazwy instytucji, liczby i czasu, więc tylko zgłaszam."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie jest to gwarancja braku wpływu u każdej osoby",
+      "why": "Rzeczownikowa konstrukcja jest ciężka i niejasna (czego dokładnie nie gwarantuje: 6 godzin?). Naturalniej: „6 godzin nie gwarantuje, że kofeina nie wpłynie na sen u każdej osoby” albo prościej. Zawiera negację, kwantyfikator i słowo o przyczynowości, więc nie edytuję."
+    },
+    {
+      "field": "W praktyce",
+      "text": "250 mL",
+      "why": "Jednostka zapisana jako „mL”. W polskich tekstach zwykle stosuje się „ml”. Jednostka jest chroniona, więc tylko zgłaszam; konwencji rozdziału nie sprawdzałem."
+    },
+    {
+      "field": "W praktyce",
+      "text": "To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa.",
+      "why": "Zdanie bez orzeczenia, z kalką „osobista granica bezpieczeństwa” (po polsku raczej „indywidualna”, np. „nie wyznacza granicy bezpieczeństwa dla konkretnej osoby”). Zawiera negację i kwalifikację zakresu, więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania.",
+      "why": "Niezgodna deklinacja nazwiska: „Gardiner i współautorów” miesza mianownik z dopełniaczem. Po polsku: „Metaanaliza Gardinera i współautorów”. Nazwa autora jest chroniona, więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym.",
+      "why": "Brak punktu odniesienia: krótszy niż po czym (placebo, brak kofeiny)? Sformułowanie „w wyniku zbiorczym” to sztywna kalka z angielskiego „pooled”; naturalniej np. „w łącznym wyniku badań” lub „średnio”. Zdanie ma liczbę i porównanie, więc nie edytuję. Moja edycja zmienia tylko początek „Po kofeinie”."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny",
+      "why": "Niespójny punkt odniesienia odstępu w pozycji: „odstęp od snu” (tu), „przed snem” (W praktyce), „odstęp od pory snu” (tytuł, Ograniczenia). Cała porada opiera się na tym, że liczy się od pory snu, więc ujednolicenie dotyka sensu i zostawiam je weryfikatorowi."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "średni wynik nie jest osobistą prognozą",
+      "why": "„Osobistą prognozą” to kalka (po polsku „indywidualną” albo „nie przesądza, jak zareagujesz ty”). To samo słowo „osobista” pojawia się w W praktyce („osobista granica bezpieczeństwa”), więc warto ujednolicić. Zawiera negację i dotyczy interpretacji dowodów, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "(6 godzin, 8,8 godziny i 13,2 godziny dla różnych napojów)",
+      "why": "„Dla różnych napojów” jest mylące: według W praktyce 6 godzin dotyczy kawy i herbaty, a 8,8 godziny kawy, więc różnica nie wynika z różnych napojów. Suplement przedtreningowy też nie musi być napojem. Dotyczy liczb i populacji, więc nie edytuję; weryfikator powinien sprawdzić, co jest źródłem różnicy, i poprawić opis."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego.",
+      "why": "Te same liczby (107 mg, 250 mL, 217,5 mg) padają już w W praktyce i w Korzyść i dowody, więc zdanie jest powtórzeniem i zbędnym wypełniaczem. Usunięcie lub skrócenie dotyka liczb i jednostek, więc decyzja należy do weryfikatora."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami",
+      "why": "Błąd składni (zeugma): „dawki bezpiecznej dla ... interakcji z lekami” nie ma sensu, a „dla ciąży” to kalka (po polsku „w ciąży”). Naturalniej np. „Nie podajemy bezpiecznej dawki kofeiny w ciąży, w chorobach ani przy lekach, które wchodzą z nią w interakcje”. Zawiera negację, populację i warunki, więc nie edytuję."
+    }
+  ],
+  "verdict": "needs_edits"
+}

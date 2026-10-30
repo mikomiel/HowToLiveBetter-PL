@@ -6,7 +6,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/content.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "lint:content": "node tools/pl/lint.mjs",
+    "fetch:source": "node tools/pl/fetch.mjs",
     "test:browser": "playwright test"
   },
   "devDependencies": {

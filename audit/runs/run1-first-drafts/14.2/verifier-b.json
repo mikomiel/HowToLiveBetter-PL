@@ -1,0 +1,175 @@
+{
+  "item": "14.2",
+  "status": "PASS",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 395, "text": "Używanie tego samego hasła w wielu miejscach. Jeden wyciek daje dostęp do wszystkich kont."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Zmiana haseł i przygotowanie menedżera.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Dostępne rozwiązania różnią się kosztem;",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie wymagamy zakupu konkretnego produktu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont: poczty, banku, mediów społecznościowych."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła,"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 357, "text": "Hasło powinno być wystarczająco długie."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zabezpiecz dostęp do samego menedżera: jeśli to możliwe, włącz drugi składnik logowania na koncie, którym się do niego logujesz, i zapisz kody zapasowe w bezpiecznym miejscu.",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "oraz jeśli to możliwe na koncie, którym logujesz się do menedżera haseł."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "Zapisz je w bezpiecznym miejscu (np. w menedżerze haseł lub na kartce schowanej w bezpiecznym miejscu w domu)."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 473, "text": "Zapisz kody zapasowe z 2FA w bezpiecznym miejscu."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Ty musisz pamiętać tylko jedno hasło główne, dlatego warto, by było stworzone metodą hasła-zdania opisaną wyżej."}
+      ]
+    },
+    {
+      "id": "W praktyce#3.1",
+      "kind": "recommendation_derived",
+      "claim": "Zacznij od poczty,",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Włącz 2FA przede wszystkim na najważniejszych kontach: poczta (bo to brama do resetowania innych haseł)"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 469, "text": "Wygeneruj w menedżerze nowe, unikalne hasła dla najważniejszych kont: poczty, banku, mediów społecznościowych."}
+      ],
+      "depends_on": ["W praktyce#3.2"]
+    },
+    {
+      "id": "W praktyce#3.2",
+      "kind": "source_claim",
+      "claim": "przez którą resetujesz inne konta.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "poczta (bo to brama do resetowania innych haseł)"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "Jeśli używasz tego samego hasła w wielu miejscach, jeden wyciek daje przestępcom dostęp do wielu Twoich kont."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 395, "text": "Używanie tego samego hasła w wielu miejscach. Jeden wyciek daje dostęp do wszystkich kont."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 351, "text": "bazy danych z hasłami regularnie wyciekają z różnych serwisów."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 9, "text": "Baza wiedzy CERT Polska"}
+      ],
+      "reason": "The attribution to CERT Polska rests on the snapshot being the CERT Polska knowledge base page (title and header). The source states the mechanism without a frequency or a measured outcome; the item's 'może' is not stronger than the source."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 409, "text": "Pamiętanie unikalnego, silnego hasła dla każdego konta jest nierealne. Rozwiązaniem jest menedżer haseł, czyli program, który:"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 411, "text": "generuje dla Ciebie losowe, bardzo długie hasła,"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 413, "text": "bezpiecznie przechowuje je w zaszyfrowanym"}
+      ]
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "C — praktyczne zalecenia CERT Polska,",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 347, "text": "W tym artykule zebraliśmy praktyczne porady, dzięki którym poprawisz bezpieczeństwo swoich kont bez zbędnego wysiłku."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 345, "text": "Jak tworzyć bezpieczne hasła i chronić swoje konta"},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 9, "text": "Baza wiedzy CERT Polska"}
+      ],
+      "reason": "Checked only the description of the source: a practical-advice article in the CERT Polska knowledge base. The grade letter C itself is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez zmierzonej kwoty unikniętych strat.",
+      "verdict": "absent_in_source",
+      "searched": ["6a185dd9954fea49.txt"],
+      "reason": "Searched the whole stored text for amounts, currency, percentages, statistics, studies, losses or damage figures (strat, zł, PLN, euro, %, procent, statyst, badani, szkod, kwot, pieni, koszt, cen). No monetary amount or measured loss avoided appears; the only cost mention is that a hardware key is an extra cost for an ordinary user (line 461). The snapshot is the main region of a longer page (keptChars 12649 of wholeChars 13207), so this is absence from that region."
+    },
+    {
+      "id": "Ocena redakcyjna#1.1",
+      "kind": "recommendation_derived",
+      "claim": "Unikalność haseł usuwa wspólny punkt słabości,",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 395, "text": "Używanie tego samego hasła w wielu miejscach. Jeden wyciek daje dostęp do wszystkich kont."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 355, "text": "Każde konto powinno mieć inne hasło."}
+      ],
+      "depends_on": ["Korzyść i dowody#1"]
+    },
+    {
+      "id": "Ocena redakcyjna#1.2",
+      "kind": "source_claim",
+      "claim": "ale menedżer też wymaga ochrony.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "oraz jeśli to możliwe na koncie, którym logujesz się do menedżera haseł."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 419, "text": "Ty musisz pamiętać tylko jedno hasło główne, dlatego warto, by było stworzone metodą hasła-zdania opisaną wyżej."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Silne hasło może zostać wyłudzone lub przechwycone.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 423, "text": "Nawet najsilniejsze hasło można wykraść albo przechwycić."},
+        {"snapshot": "6a185dd9954fea49.txt", "line": 439, "text": "można je wyłudzić za pomocą fałszywej strony logowania"}
+      ]
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "recommendation_derived",
+      "claim": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "verdict": "not_applicable",
+      "quotes": [
+        {"snapshot": "6a185dd9954fea49.txt", "line": 423, "text": "włączenie uwierzytelniania dwuskładnikowego (ang. two-factor authentication, w skrócie 2FA) to jedna z najważniejszych rzeczy, jakie możesz zrobić dla bezpieczeństwa konta."}
+      ],
+      "depends_on": ["Ograniczenia#1"]
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#2", "note": "A reader might assume the manager removes the need to remember anything; the source says the user still has to remember one master password (line 419). The sentence does not say otherwise."}
+  ],
+  "notes": "Opened only AGENTS.md, the role file, the packet and snapshot 6a185dd9954fea49.txt (one Grep on that exact path); no protocol violation. Snapshot is the CERT Polska 'Hasla' page, main region only (12649 of 13207 chars); no injected instructions seen. Judgement calls: Koszt#2.1 ('Dostępne rozwiązania różnią się kosztem') filed as editorial_estimate because it is the Koszt field and states no figure or product; the snapshot only says tools are 'darmowe' (line 479) and a hardware key is an extra cost (line 461) and gives no price comparison of managers, so if a reviewer treats it as a source_claim it would be partly. W praktyce#3.1 ('Zacznij od poczty') is marked fully backed because the source says to enable 2FA 'przede wszystkim' on key accounts with mail first and gives the reset-gateway reason, but it never states an explicit order of work. Ograniczenia#2 is filed as recommendation_derived (advice to add 2FA), not meta_statement; the cross-reference target #porada-14-1 and the content of item 14.1 were not checkable from this packet."
+}

@@ -1,0 +1,201 @@
+{
+  "item": "04.4",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Przed oceną terminu porównaj nowe zadanie z podobnymi wcześniejszymi",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1", "Korzyść i dowody#2"],
+      "reason": "Rests on the Study 4 recall-relevant condition (link past similar assignments to the new one before predicting), see the two Korzyść rows."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Chwila na sprawdzenie wcześniejszych terminów i porównanie zakresu prac.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To szacunek redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1.1",
+      "kind": "meta_statement",
+      "claim": "Przykład redakcyjny:",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1.2",
+      "kind": "recommendation_derived",
+      "claim": "sprawdź, ile trwało poprzednie podobne zadanie.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Backed only as the first step of the combined procedure that worked (recall plus linking to the new task, row Korzyść i dowody#1). Taken alone, checking how long a past task took is the recall-only condition, which the source found did not reduce optimism (row W praktyce#4.2). The source also asked participants about how far before the deadline several earlier assignments were typically finished, not about the duration of one previous task. The source gives no advice of this kind itself."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Zapisz, jak wcześniejsze podobne zadania odnoszą się do tego, które planujesz, i dopiero wtedy wyznacz termin.",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Corresponds to the recall-relevant procedure: participants answered questions linking past assignments to the new one and wrote a scenario based on their past, and only then gave their prediction. The source describes this as an experimental manipulation, not as advice."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "meta_statement",
+      "claim": "To sposób zastosowania wniosku, nie dokładna instrukcja z eksperymentu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#4.1",
+      "kind": "recommendation_derived",
+      "claim": "Samo przypomnienie sobie wcześniejszych podobnych zadań może nie wystarczyć:",
+      "verdict": "not_applicable",
+      "depends_on": ["W praktyce#4.2"]
+    },
+    {
+      "id": "W praktyce#4.2",
+      "kind": "source_claim",
+      "claim": "w badaniu sam ten warunek nie zmniejszył optymizmu prognoz.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 719, "text": "their predictions. However, leading people to remember past ex-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 720, "text": "periences did not, in itself, reduce the optimistic bias. The bias"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 730, "text": "would finish the computer assignment. Despite this seemingly"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 731, "text": "powerful manipulation, subjects continued to make overly opti-"}
+      ],
+      "reason": "The recall condition (describe past experiences, keep them in mind) is what the item calls 'sam ten warunek'."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "W badaniu 4 Buehlera i współautorów osoby, które powiązały wcześniejsze doświadczenia z nowym zadaniem, rzadziej zaniżały termin ukończenia.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "3fcf7218a7f1a5b5.txt", "line": 9, "text": "Authors: Buehler, Griffin, Ross"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 15, "text": "Roger Buehler, Dale Griffin, and Michael Ross"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 562, "text": "In Study 4, we examined the impact that asking subjects to"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 572, "text": "In the recall-relevant condition, subjects described"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 575, "text": "to link these experiences to the present computer assignment."},
+        {"snapshot": "e70647d0627ff840.txt", "line": 689, "text": "derestimated their completion times significantly in the control"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 691, "text": "but not in the recall-relevant"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 652, "text": "recall-relevant condition were less biased but no more accurate"}
+      ],
+      "reason": "Study 4: recall-relevant participants were not significantly biased toward underestimation while control and recall participants were, and a larger share finished within their predicted time (see the next row). 'Rzadziej zaniżały' is read as the lower share of underestimating predictions plus the smaller mean bias."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "W przewidzianym przez siebie czasie skończyło 60,0% tej grupy i 29,3% grupy kontrolnej.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 631, "text": "centage of subjects finished the assignments in the predicted"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 633, "text": "and control conditions (38.1% and 29.3%, respectively)"}
+      ]
+    },
+    {
+      "id": "Korzyść i dowody#3.1",
+      "kind": "source_claim",
+      "claim": "To różnica 30,7 punktu procentowego w tym eksperymencie,",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 632, "text": "time in the recall-relevant condition (60.0%) than in the recall"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 633, "text": "and control conditions (38.1% and 29.3%, respectively)"}
+      ],
+      "numbers": [
+        {"value": "30,7", "editorial_calculation": true, "basis": "60,0 minus 29,3"}
+      ],
+      "reason": "30,7 is the editors' subtraction of two reported percentages (60.0 and 29.3); arithmetic is correct and it is a difference in percentage points, not a relative figure."
+    },
+    {
+      "id": "Korzyść i dowody#3.2",
+      "kind": "source_claim",
+      "claim": "nie uniwersalny wzrost produktywności.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 677, "text": "not differ among the three thought-focus conditions (means"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 682, "text": "predictions, it did not influence when they finished the assign-"}
+      ],
+      "reason": "Consistent with the source and weaker than it: actual completion times did not differ between conditions, so the difference concerns the share finishing within their own prediction, not speed."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "pojedynczy eksperyment z udziałem 123 studentów.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 619, "text": "Subjects were 123 undergraduate psychol-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 620, "text": "ogy students (46 men and 77 women) who received course credit for"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 609, "text": "deadlines to create six experimental conditions. Individuals were as-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 610, "text": "signed randomly to experimental treatments, and the experimenter was"}
+      ],
+      "reason": "The grade letter B is editorial and was not checked. Words after it checked against Study 4: 123 undergraduate psychology students, randomly assigned to conditions. The article itself reports five studies; the result in this item comes from Study 4 only."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Niski koszt sprawdzenia historii przemawia za taką próbą przed deklaracją terminu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Uczestnicy przewidywali ukończenie krótkiego zadania komputerowego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 564, "text": "predictions. Subjects were each given a standard computer as-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 565, "text": "signment to complete and were asked to predict when they"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 560, "text": "proximately 1 hr to complete. To prevent subjects from treating the"}
+      ],
+      "reason": "'Krótkiego' rests on the stated work time of about 1 hour (the word 'required' sits at the end of line 628, the figure on line 560)."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Zmiana instrukcji nie przyspieszyła wykonania i nie zmniejszyła bezwzględnego błędu prognozy.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 677, "text": "not differ among the three thought-focus conditions (means"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 682, "text": "predictions, it did not influence when they finished the assign-"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 637, "text": "ANOVA on absolute difference scores yielded no significant"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 638, "text": "effects of thought focus. Predictions were no more accurate in"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 705, "text": "pletion times, nor was the absolute prediction error any smaller."}
+      ]
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Wynik dotyczy mniejszego optymizmu oszacowań, nie dokładności każdej prognozy.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "e70647d0627ff840.txt", "line": 652, "text": "recall-relevant condition were less biased but no more accurate"},
+        {"snapshot": "e70647d0627ff840.txt", "line": 705, "text": "pletion times, nor was the absolute prediction error any smaller."},
+        {"snapshot": "e70647d0627ff840.txt", "line": 706, "text": "The optimistic bias was eliminated in the recall-relevant condi-"}
+      ]
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The advice generalises from one condition of Study 4 (about 1 hour of work on a computer tutorial assignment, psychology undergraduates, 1 or 2 week deadlines) to any new task and any person. The tested procedure was structured (list past assignments, state how far before the deadline they were typically finished, compute a date on that basis, write a scenario from past experience) and 'porównaj' is looser. In the General Discussion the authors say they have no compelling evidence that recollection of past performance improves the accuracy of time estimates; the item does not claim accuracy."},
+    {"id": "W praktyce#1.2", "note": "The source asked about the distribution of several earlier assignments relative to their deadlines and a typical finish time, not the duration of the one previous similar task."},
+    {"id": "W praktyce#2", "note": "Same population and task limits as the title; the tested procedure had two extra questions and a written scenario, which the item mentions only as 'zapisz, jak ... odnoszą się'."},
+    {"id": "Korzyść i dowody#1", "note": "Participants were instructed and prompted by two specific questions to link past and present, not merely free to compare. The source reports that even then only 12.5% of this group mentioned past experience in their thought listing. The item does not say how the linking was done."},
+    {"id": "Korzyść i dowody#2", "note": "Group sizes were 41 (control) and 40 (recall-relevant) per the Table 4 note; a third group (recall only, 38.1%) is not mentioned in the sentence, which compares only the two named groups."},
+    {"id": "Korzyść i dowody#3.1", "note": "The figure is the difference in the share of participants who finished within their own predicted time. It is not a difference in speed or in accuracy; the source reports no difference in actual completion times or absolute error."},
+    {"id": "Korzyść i dowody#3.2", "note": "'Nie uniwersalny' is weaker than the source: in this experiment there was no productivity change at all (actual completion times were equal across conditions)."},
+    {"id": "Ocena dowodów#1", "note": "'Studentów' were undergraduate psychology students who took part for course credit; the word is not wrong but the population is narrower than students in general."},
+    {"id": "Ograniczenia#1", "note": "'Krótkie' refers to about 1 hour of work; the predicted and actual completion times covered days (actual means from 4.3 to 9.1 days across deadline conditions) because subjects had 1 or 2 weeks."},
+    {"id": "Ograniczenia#2", "note": "The source reports no significant effect of thought focus on absolute error and on actual completion time, which is not proof of no difference; the item states it as 'nie przyspieszyła ... nie zmniejszyła'."}
+  ],
+  "notes": "Opened only: the role file, AGENTS.md, the packet, and the two cited snapshots 3fcf7218a7f1a5b5.txt (Crossref metadata only: title, authors Buehler/Griffin/Ross, JPSP, 1994, no abstract) and e70647d0627ff840.txt (full text of the article, a PDF copy hosted at web.mit.edu with JPSP 1994 vol. 67 no. 3 pages 366-381, so the document matches the DOI). The two lead snapshots (2757a11eba265541.txt, 4cec846a0874c64c.txt) were not opened because leads are not evidence. Nothing outside the allowed set was opened; no protocol violation. The full-text snapshot is a two-column PDF extraction: columns are interleaved line by line and there are OCR artefacts (joined words, a few garbled test statistics), so every quote was taken from a single column of one line and statistics were not relied on beyond the percentages and means quoted. Judgement calls: (1) W praktyce#1.2 marked partly because the recall-only step is the condition the source found ineffective, while the title and W praktyce#2 were marked fully backed because they correspond to the recall-relevant (linking) condition; a reader could reasonably argue W praktyce#1.2 is backed as step 1 of the combined procedure, in which case the status would be PASS. (2) Korzyść i dowody#3.2 treated as a source_claim, not a meta_statement, because it states what the figure does and does not show. (3) Korzyść i dowody#1 was not split into a source_description part and a finding part because both are checked against the same snapshot lines. The Ocena dowodów grade letter was not checked."
+}

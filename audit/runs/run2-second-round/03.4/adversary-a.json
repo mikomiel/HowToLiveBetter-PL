@@ -1,0 +1,128 @@
+{
+  "item": "03.4",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "No caffeine after 14:00 (fixed afternoon cutoff)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Resist afternoon coffee; costs no money, needs some willpower", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Finish a 250 mL (107 mg) coffee at least 8.8 h before sleep", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Someone going to sleep at 23:00 treats 14:00 as the cutoff (worked clock-time example)", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Drake: 400 mg caffeine (3-4 cups) 6 h before bed cost over 1 h of instrument-measured sleep", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Sleep diary showed no difference, so the loss is not noticed by the sleeper", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Meta-analysis: caffeine cut total sleep time by 45 min on average", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Meta-analysis: sleep efficiency down 7%", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Slow caffeine metabolisers need an even earlier cutoff", "fate": "dropped", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Daily cap of three to four cups (cross-reference to chapter 2 item 26)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Pair with sleeping 7-8 h a night (cross-reference to item 3)", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz.",
+      "why": "The action is made conditional on the reader noticing sleep trouble (also W praktyce#1: 'jak śpisz'), while the title is unconditional and the cited synthesis guidance (avoid reductions in total sleep time) is not conditional on perceived trouble. The upstream span says the sleep-diary showed no difference and the sleeper does not notice the loss; that point was dropped and is not listed in Zmiany w adaptacji. I cannot confirm the diary claim from the stored snapshots (Drake is only a lead and its abstract does not state the diary result), so the item may be right to omit it, but the omission is unrecorded and the reader whose sleep seems fine receives no action at all.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "可是受试者自己写的睡眠日记没有报出差别，自己察觉不到"},
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "To avoid reductions in total sleep time"}
+      ],
+      "fix_direction": "Say explicitly that the trouble-triggered wording is editorial, or state the interval rule without the trigger; record in Zmiany w adaptacji that the diary point was left out because it could not be checked."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "przesuń ją wcześniej lub ogranicz",
+      "why": "Both cited sources prescribe a time gap before bed. 'ogranicz' (reduce the amount) and the self-monitoring in W praktyce#1 are not what either source prescribes, and the item does not label them as an editorial example. The abstract gives two dose-specific intervals but no reduce-the-dose advice, and the adaptation notes themselves removed the dose-dependence claim.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"},
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"}
+      ],
+      "fix_direction": "Mark the reduce-the-amount and self-observation steps as the editors' own suggestion, or drop them."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "Korzyść i dowody#2",
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym.",
+      "why": "The 45 min is the pooled effect of caffeine consumption on total sleep time; it is not the effect of keeping an interval, and the abstract does not state the comparator, doses, timings or population behind it. Placed under Korzyść it can be read as the gain from following the advice. The item says nothing about which of these conditions are unknown.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "Caffeine consumption reduced total sleep time by 45 min and sleep efficiency by 7%"},
+        {"source": "upstream", "line": 5, "text": "咖啡因平均让总睡眠时间减少"}
+      ],
+      "fix_direction": "State that this is the average harm of caffeine across the pooled studies, not the benefit of a given interval, and that the abstract does not give comparator, dose or timing conditions."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania.",
+      "why": "The abstract names no population (age, health status, habitual caffeine use) and no setting. Neither the advice nor the limitations say that the population is unknown, or restrict the advice to adults, although the pooled figures and the 8.8 h and 13.2 h intervals are presented as general guidance.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "undertaken with 24 studies included in the analysis"}
+      ],
+      "fix_direction": "Add a limitation that the abstract does not describe the participants and that the figures should not be applied to children, pregnancy or illness; keep the existing referral sentence."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "liczony od pory snu",
+      "why": "Both sources anchor the interval to going to bed (bedtime), not to a 'pora snu' that a reader could take as the time of falling asleep or the sleep period. For someone who lies awake after going to bed the two readings differ.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "consumed at least 8.8 h prior to bedtime"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 117, "text": "at least 6 hours before going to bed"}
+      ],
+      "fix_direction": "Use wording that says the interval is counted from the time of going to bed."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Ograniczenia#1",
+      "text": "6 godzin, 8,8 godziny i 13,2 godziny dla różnych napojów",
+      "why": "The phrase assigns the three figures to different drinks. 6 h (NHS) already covers coffee and tea, and 8.8 h is also for coffee, so two different figures exist for the same drink from sources with different aims. A reader can take 6 h as belonging to a drink other than coffee.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"},
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"}
+      ],
+      "fix_direction": "Attribute each figure to its source and drink (NHS: coffee and tea; Gardiner: 250 mL coffee and a supplement) instead of the 'different drinks' wording."
+    },
+    {
+      "severity": "minor",
+      "attack": "recency",
+      "id": "W praktyce#3",
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby.",
+      "why": "For coffee the two cited authorities give different minimum gaps (6 h NHS, 8.8 h for 250 mL coffee in the meta-analysis, which says that gap is needed to avoid reduced total sleep time). The item prints both after 'Z kolei' but never says which applies when or that the 6 h figure is the shorter one. The clause 'nie jest to gwarancja braku wpływu' is the editors' own and is not in the NHS page. The NHS page is also a UK patient page for self-treating insomnia, which the item does not say.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 117, "text": "do not smoke or drink alcohol, tea or coffee at least 6 hours before going to bed"},
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "coffee (107 mg per 250 mL) should be consumed at least 8.8 h prior to bedtime"}
+      ],
+      "fix_direction": "State that the two figures differ for coffee and why (different purposes), say the NHS text is the UK service's insomnia self-help advice, and mark the 'no guarantee' clause as editorial."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest osobistą prognozą.",
+      "why": "A fits the source type under the README definition (systematic review with meta-analysis). But the stored source is the abstract only: it gives no study design, risk of bias, heterogeneity or certainty, and does not say how the 8.8 h and 13.2 h figures were derived. The rating field does not say that these were not assessed, and the single A also sits over the NHS 6 h sentence, which is a different type of source. The abstract-only access is also not stated in Źródła, whose link label reads 'Artykuł i abstrakt'.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "df5a689db3e18396.txt", "line": 14, "text": "The results of the present study provide evidence-based guidance for the appropriate consumption of caffeine"}
+      ],
+      "fix_direction": "Say in the rating or the limitations that only the abstract was read and that design, risk of bias and certainty were not assessed; make clear that A refers to the meta-analysis, not to the NHS sentence."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ocena redakcyjna#1",
+      "text": "Przesunięcie napoju może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.",
+      "why": "The item tells readers with sleep trouble to shift caffeine and says this does not replace assessment of causes, but it gives no next step if shifting does not help. The NHS snapshot it cites gives one, which the item leaves out. The only referral to a doctor or pharmacist concerns pregnancy, illness and drug interactions.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 143, "text": "Non-urgent advice: See a GP if:"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 145, "text": "changing your sleeping habits has not helped your insomnia"}
+      ],
+      "fix_direction": "Add a plain pointer to a doctor in Poland when changing habits does not help or trouble persists, worded for the Polish setting; do not copy the NHS 'GP' wording."
+    }
+  ],
+  "notes": "No blockers or majors found. I read lines 38-87 of README.md in one Read call (the section 'Jak czytać dowody' is lines 42-56), so I also saw the sections 'Stan treści i pochodzenie' and 'Uruchom lokalny czytnik'; this goes beyond the section the role file allows and is a minor protocol overrun. I opened nothing under book/, tests/, tools/, the manifest, git history or any chapter file, and no other snapshot than the three listed in the packet (the Drake snapshot fcfee9b228206080.txt is a lead and I used it as nothing more). The packet does not carry the fields Weryfikacja or Oryginał, so I could not check whether the abstract-only scope is disclosed there. The A grade is judged only against the README definition; the certainty of the synthesis cannot be decided from an abstract, which is why it appears as a disclosure finding rather than in attacks_not_assessable."
+}

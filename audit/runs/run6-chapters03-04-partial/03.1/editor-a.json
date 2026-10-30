@@ -1,0 +1,50 @@
+{
+  "item": "03.1",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "To nakład redakcyjnie oceniany",
+      "replacement": "Redakcja ocenia ten nakład",
+      "reason": "register",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "W praktyce",
+      "text": "wycisz niepotrzebne sygnały telefonu",
+      "why": "Noun: the title and the Korzyść field call the same thing \"powiadomienia\"; here it is the vaguer \"sygnały telefonu\", which reads like a different object (sounds, calls). Using \"powiadomienia\" throughout would read more naturally and consistently, but swapping a term can change scope (alerts versus calls), so the verifier decides."
+    },
+    {
+      "field": "W praktyce",
+      "text": "wycisz",
+      "why": "Verb: the title says \"wyłącz\" and Ograniczenia says \"wyłączenia\", while this field says \"wycisz\". Muting and disabling differ in intensity, so I do not harmonise them. The verifier should confirm which action the source supports and use one verb in title, W praktyce and Ograniczenia."
+    },
+    {
+      "field": "W praktyce",
+      "text": "opiece nad innymi",
+      "why": "\"opieka nad innymi\" is vague and sounds translated; more natural Polish would name the people (for example \"opiece nad bliskimi\" or \"osobami wymagającymi opieki\"). The phrase names a population and touches a duty, so it is left to the verifier."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu",
+      "why": "Two language problems. (1) Zeugma: one switches off alarms, but not a \"kontakt\"; the phrase would be clearer as a channel of contact, in line with \"kanał kontaktu\" in W praktyce. (2) \"obowiązkowego\" here versus \"wymagany\" in W praktyce names the same thing with two words, and \"obowiązkowy\" is a term of duty. Also the scope of \"lub\" is ambiguous (does \"bezpieczeństwa\" apply to both?). Protected wording, so reported only."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "skutków wieloletnich",
+      "why": "Postposed adjective is translationese; natural order is \"wieloletnich skutków\" (or \"skutków długotrwałych\"). It is a duration word, so I do not edit it."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu",
+      "why": "\"same\" and \"nawet bez korzystania z telefonu\" say the same thing twice (alone / even without use), and \"bez korzystania z telefonu\" is ambiguous (never touching the phone, or not picking it up). The sentence also stacks attribution (wykazali), method (w eksperymencie), a causal verb (zakłócały) and a condition, with the nominal \"wykonanie zadania\". Splitting into two sentences and dropping the redundancy would read better, but it touches a causal verb, an evidence verb and a limiter, so only the verifier may change it."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "zadania uwagowego",
+      "why": "\"zadanie uwagowe\" is not an established plain Polish term and differs from \"zadania wymagającego uwagi\" in Korzyść i dowody, apparently for the same experiment. For consistency and first-use clarity the second wording is better, but it is a technical-term swap that I cannot check against sources, so I report it instead of editing."
+    }
+  ],
+  "verdict": "needs_edits"
+}

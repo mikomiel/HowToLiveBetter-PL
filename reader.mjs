@@ -31,7 +31,7 @@ export function parseChapter(markdown, expectedId) {
       throw new Error('Brak poprawnej daty i zakresu weryfikacji');
     }
     if (!entry.fields['Oryginał'].includes(`[${entry.number}]`)) throw new Error('Niezgodny identyfikator oryginału');
-    if (entry.fields.Status === 'verified' && !/^[ABC] — .+/.test(entry.fields['Ocena dowodów'])) {
+    if (entry.fields.Status === 'verified' && !/^[ABC] [—-] .+/.test(entry.fields['Ocena dowodów'])) {
       throw new Error('Brak oceny dowodów');
     }
     chapter.entries.push(entry);

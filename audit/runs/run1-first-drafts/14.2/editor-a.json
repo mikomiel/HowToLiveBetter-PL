@@ -1,0 +1,76 @@
+{
+  "item": "14.2",
+  "edits": [
+    {
+      "field": "Koszt",
+      "original": "przygotowanie menedżera",
+      "replacement": "przygotowanie menedżera haseł (narzędzia do ich tworzenia i przechowywania)",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "do usług, które ich używają",
+      "replacement": "do usług, w których logujesz się hasłem",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "na koncie, którym się do niego logujesz",
+      "replacement": "na koncie, za pomocą którego logujesz się do menedżera",
+      "reason": "calque",
+      "requires_reverification": true
+    },
+    {
+      "field": "W praktyce",
+      "original": "resetujesz inne konta",
+      "replacement": "resetujesz hasła do innych kont",
+      "reason": "calque",
+      "requires_reverification": true
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "nie powtarzaj go w innych usługach",
+      "why": "\"Powtarzać hasło\" to kalka z angielskiego \"reuse\"; po polsku \"powtórz hasło\" kojarzy się z ponownym wpisaniem hasła w formularzu. Naturalniej: \"nie używaj go w innych usługach\" albo \"nie używaj go ponownie\". Zdanie zawiera przeczenie, więc nie edytuję; decyzja należy do weryfikatora."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont",
+      "why": "Ta sama kalka (\"powtórzone hasło\"; lepiej \"ponownie użyte hasło\" lub \"to samo hasło użyte w kilku usługach\"). Ponadto \"może\" jest oddzielone od \"umożliwić\" przydawką, a \"po wycieku jednej usługi\" jest eliptyczne (naturalniej: \"po wycieku danych z jednej usługi\"). Zdanie zawiera modalność \"może\", czasownik przyczynowy \"umożliwić\" i liczebnik \"jednej\", więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "zamiast zapamiętywania jednego do wszystkiego",
+      "why": "Brak rzeczownika po \"jednego\" brzmi niezręcznie; naturalniej \"zamiast pamiętać jedno hasło do wszystkiego\" lub \"zamiast zapamiętywania jednego hasła do wszystkiego\". Fragment zawiera liczebnik i kwantyfikator (\"jednego\", \"wszystkiego\"), więc nie edytuję."
+    },
+    {
+      "field": "W praktyce",
+      "text": "drugi składnik logowania",
+      "why": "Termin nie jest wyjaśniony, a w polu Ograniczenia ta sama rzecz nazywa się \"metoda uwierzytelniania\". Ustalony polski termin to \"uwierzytelnianie dwuskładnikowe\" (2FA). Zamiana terminu technicznego mogłaby zmienić sens (np. dwuskładnikowe a dwuetapowe), więc nie edytuję; weryfikator powinien wybrać jedno nazewnictwo spójne z poradą 14.1."
+    },
+    {
+      "field": "W praktyce",
+      "text": "jeśli to możliwe, włącz drugi składnik logowania na koncie, którym się do niego logujesz, i zapisz kody zapasowe w bezpiecznym miejscu",
+      "why": "Jedno zdanie niesie trzy działania (zabezpiecz, włącz, zapisz), ale zakres warunku \"jeśli to możliwe\" jest niejasny: obejmuje tylko drugi składnik czy także kody zapasowe? Rozdzielenie zdania przesunęłoby warunek, więc go nie dzielę. Do rozstrzygnięcia przez weryfikatora."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "bez zmierzonej kwoty unikniętych strat",
+      "why": "\"Zmierzona kwota\" strat brzmi nienaturalnie (straty raczej się szacuje; zwykle \"wielkość\" lub \"wartość\"). Fragment zawiera przeczenie \"bez\", więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1).",
+      "why": "Tekst odsyłacza jest niejasny bez znajomości 14.1 (\"odpowiednią\", \"z 14.1\"), a polecenie w polu ograniczeń dubluje W praktyce. Nazewnictwo (\"metoda uwierzytelniania\") nie zgadza się z \"drugi składnik logowania\". Odsyłacz jest słowem chronionym, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy jednej długości pasującej do wymagań każdej usługi.",
+      "why": "Zdanie jest sztywne, a \"długości\" bez dopowiedzenia \"hasła\" jest eliptyczne (naturalniej: \"Nie ma jednej długości hasła, która pasuje do wymagań każdej usługi\"). Zawiera przeczenie i kwantyfikatory (\"nie\", \"jednej\", \"każdej\"), więc nie edytuję."
+    }
+  ],
+  "verdict": "needs_edits"
+}

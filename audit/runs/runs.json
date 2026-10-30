@@ -1,0 +1,32 @@
+{
+ "run1-first-drafts": {
+  "bookCommit": "9800901",
+  "about": "first drafts of the corrections",
+  "state": "complete"
+ },
+ "run2-second-round": {
+  "bookCommit": "3938efd",
+  "about": "second-round corrections",
+  "state": "complete"
+ },
+ "run3-verifier-03.4-14.7": {
+  "bookCommit": "518c3b3",
+  "about": "third-round corrections, verifier only",
+  "state": "complete"
+ },
+ "run4-verifier-03.4": {
+  "bookCommit": "1173be1",
+  "about": "last 03.4 edits, verifier only",
+  "state": "complete"
+ },
+ "run5-chapter14-partial": {
+  "bookCommit": "1173be1",
+  "about": "chapter 14, stopped",
+  "state": "stopped"
+ },
+ "run6-chapters03-04-partial": {
+  "bookCommit": "1173be1",
+  "about": "chapters 03 and 04, stopped",
+  "state": "stopped"
+ }
+}

@@ -1,0 +1,2 @@
+03.4/verifier-a: accepted, UNAVAILABLE
+03.4/verifier-b: accepted, UNAVAILABLE

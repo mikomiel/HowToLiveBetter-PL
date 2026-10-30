@@ -1,0 +1,158 @@
+{
+  "item": "14.7",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "recency",
+      "reason": "The two snapshots are on different subjects (a 4.5.2016 Official Journal text of the regulation and an undated Google help page), so there is no second dated source on the same subject to compare, and the snapshots show no disagreement between authorities. Whether either source has been superseded or corrected would need knowledge that is not in the texts, so it is not asserted."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Do not click 'agree to all' to use an app (flat prohibition)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "If the information is not necessary for the service you may refuse it, and the app may not deny you the service because of that",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Legal rule 1: no refusal of service because of non-consent or withdrawal, unless processing is necessary for the service",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Legal rule 2: collection limited to the minimum needed for the purpose",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 7,
+      "upstream_action": "Right to withdraw consent, and the controller must give a convenient way to withdraw",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Judge by whether the information is necessary for the service (map needs location, flashlight does not need contacts)",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "After installing, go to the phone settings app-permissions page and switch off the unnecessary permissions",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "When a permission is really needed, choose 'allow only this time'",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "why": "The upstream gives a middle path for a permission that is really needed: grant it only for this use. The item drops it and the 'Zmiany w adaptacji' field does not mention the drop. A reader who does use the function only occasionally is left with 'revoke' or 'keep', although the cited Google page lists intermediate choices (for location, camera and microphone only; for contacts the page offers just allow or deny).",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "- 备注：判断标准是这项信息是不是提供这个服务所必需的。地图要位置是必需的，手电筒要通讯录不是。App 装完，先到手机设置里的应用权限页，把不必需的权限关掉。等真用到的时候，再选只这一次允许。"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 29, "text": "W przypadku uprawnień do wykorzystywania lokalizacji, aparatu i mikrofonu możesz wybrać następujące opcje:"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 33, "text": "Zezwalaj tylko podczas używania aplikacji: aplikacja może korzystać z uprawnień tylko wtedy, gdy jej używasz."}
+      ],
+      "fix_direction": "Say in the item or in 'Zmiany w adaptacji' that the 'allow only this time' step was dropped or narrowed, and decide whether to keep a limited-access path for permissions that are needed, limited to what the Google page actually lists and to the permission types it names."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia.",
+      "why": "The upstream assurance that a refusal cannot cost the reader the service was removed on purpose and the removal is disclosed. The side effect is that a reader whose preferred option (refuse the extra data) is unavailable because the app will not work without it gets no stated path: only 'część funkcji może przestać działać' and 'Niektóre funkcje wymagają określonego dostępu'. Nothing says that the reader may weigh the feature against the access, or leave the feature unused.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "- 说人话：App 要你的信息，如果不是提供这项服务必须用的，你不同意给，它不能因此不让你用。它能收的，也只限于用得着的那些。地图要你的位置是必须的，手电筒要你的通讯录就不是。"}
+      ],
+      "fix_direction": "Add a neutral statement of the choice a reader has when an app insists on access (grant what the feature needs, or do without the feature or the app) without restoring the upstream legal promise and without any unverified instruction about complaints or rights."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "Korzyść i dowody#1",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu.",
+      "why": "The cited RODO provisions state duties of the controller (Administrator), while the advised action is a user-side change of a device permission, which the Google page only describes. The 'Korzyść i dowody' field presents the legal norms as the evidence for the action but never states what the reader gains from revoking, nor that this gain is an editorial inference. The bridge is disclosed only in 'Ograniczenia' (Ograniczenia#2 speaks of permission versus consent, not of controller duty versus user action). Read alone, the field can suggest that RODO supports revoking permissions.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2386, "text": "adekwatne, stosowne oraz ograniczone do tego, co niezbędne do celów, w których są przetwarzane"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2407, "text": "Administrator jest odpowiedzialny za przestrzeganie przepisów ust. 1 i musi być w stanie wykazać ich"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 27, "text": "Aby zmienić zbiór uprawnień, kliknij je i wybierz Zezwól lub Nie zezwalaj."}
+      ],
+      "fix_direction": "State in 'Korzyść i dowody' who bears the RODO duties, and mark the expected user-side benefit as an editorial inference that neither source measures."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "Ograniczenia#4",
+      "text": "Art. 7 ust. 4 mówi tylko, że przy ocenie dobrowolności zgody uwzględnia się uzależnienie usługi od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy.",
+      "why": "The article reference is correct and the 'does not decide' reading holds, but the paraphrase drops 'w jak największym stopniu' and 'między innymi', so the factor sounds weaker and more exclusive than the text, and it moves from 'wykonanie umowy, w tym świadczenie usługi' to 'usługi ... jej wykonania'. The error direction is conservative, so the wording does not change what a reader would do.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2511, "text": "w jak największym stopniu uwzględnia się, czy między innymi od"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2512, "text": "zgody na przetwarzanie danych nie jest uzależnione wykonanie umowy, w tym świadczenie usługi, jeśli przetwarzanie"}
+      ],
+      "fix_direction": "Align the paraphrase with the text of art. 7 ust. 4: keep 'w jak największym stopniu', say 'między innymi' and refer to performance of the contract, including provision of a service."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#4",
+      "text": "Strona pomocy Androida (Google) opisuje zmianę uprawnień aplikacji.",
+      "why": "The only system source is an Android page. 'W praktyce' and the title speak of apps in general, so a reader on another system gets no source and no signal that the step is Android-specific. The page itself says some steps work only on a Pixel phone with Android 15 or newer, and that the Polish text may be machine translated and contain errors; neither caveat appears in the item.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 13, "text": "Ważne: niektóre z tych czynności można wykonać tylko na telefonie Pixel z Androidem 15 lub nowszym."},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 115, "text": "Ta strona może zawierać treści przetłumaczone przy użyciu technologii AI. Tłumaczenia wygenerowane przez AI mogą zawierać błędy."}
+      ],
+      "fix_direction": "State the platform scope of the system source and its version and translation caveats in 'Ograniczenia'. Do not add steps for other systems without a source."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje.",
+      "why": "With the links removed, the item does not say where the permission screen is (the upstream names the phone settings app-permissions page) nor that a permission can be switched back on, although the cited page shows both. A cautious reader may not act, or may not know how to undo a change that breaks a feature. 'RODO' is never expanded in any field of the item.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 27, "text": "Aby zmienić zbiór uprawnień, kliknij je i wybierz Zezwól lub Nie zezwalaj."},
+        {"source": "upstream", "line": 8, "text": "- 备注：判断标准是这项信息是不是提供这个服务所必需的。地图要位置是必需的，手电筒要通讯录不是。App 装完，先到手机设置里的应用权限页，把不必需的权限关掉。等真用到的时候，再选只这一次允许。"}
+      ],
+      "fix_direction": "Say in one clause where the setting lives and that a permission can be granted again, and expand RODO at first use if the chapter does not already do so."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Uprawnienie systemowe dotyczy dostępu aplikacji do funkcji urządzenia, a zgoda w rozumieniu RODO to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli.",
+      "why": "Both halves are supported by the snapshots, but the definition of consent comes from art. 4 pkt 11, which lies outside the cited range 'art. 5–7' in 'Źródła', and the sentence names no article. A reader or checker who follows the citation range will not find the definition.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2274, "text": "oznacza dobrowolne, konkretne, świadome i jednoznaczne okazanie woli,"},
+        {"source": "snapshot", "snapshot": "96ed8430ad13bbdc.txt", "line": 11, "text": "Możesz zezwolić niektórym aplikacjom na korzystanie z różnych funkcji urządzenia, takich jak aparat czy lista kontaktów."}
+      ],
+      "fix_direction": "Name art. 4 pkt 11 in the sentence and widen the cited range in 'Źródła' to include it."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Rozdziel wymagane uprawnienia aplikacji od dodatkowych zgód",
+      "why": "The title presents 'wymagane uprawnienia' and 'dodatkowe zgody' as two categories the reader can separate, while 'Ograniczenia' says the cited sources do not decide when a system permission is a RODO consent. The title is also not clearly an action: 'rozdziel' does not say what the reader does (check, refuse or revoke).",
+      "evidence": [],
+      "fix_direction": "Reword the title around the concrete action the body advises and avoid implying a legal classification that the item itself says the sources do not make."
+    }
+  ],
+  "notes": "No blocker or major finding. Status is UNAVAILABLE only because the recency attack could not be assessed from the texts given (see attacks_not_assessable); the role requires every attack to be run for PASS. The leak attack found nothing: no Chinese institution, hotline, threshold or liability rule appears in reader-facing fields (Zmiany w adaptacji only names the replacement of Chinese rules and states no rule), and the legal statements rest on a primary source among the snapshots (the Official Journal text of Regulation 2016/679, snapshot 89be0046cf8ac2b2.txt). Grade C matches the README definition for a legal norm plus an operational instruction, and the item records the change from the upstream A. The article references art. 5, 6 ust. 1 and 7 ust. 4 hold against the snapshot. Ograniczenia#7 ('nie miał przeglądu prawnika') is a statement about process that no snapshot can confirm or refute; it is not asserted either way. Snapshot evidence uses file line numbers (the numbering of the Read tool, counting the header lines of the snapshot file), and snapshot quotes are exact substrings of the line with leading indentation removed. Protocol: I read only AGENTS.md, the packet, the role file, README.md lines 40-79 (a little past the end of the 'Jak czytać dowody' section, which ends at line 56) and the two listed snapshots, using Grep only with explicit snapshot paths. I opened nothing under book/, tests/ or tools/, no manifest, no other snapshot, no git history and no chapter file, and I did not read the earlier report at this path."
+}

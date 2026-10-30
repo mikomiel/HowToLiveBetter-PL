@@ -1,0 +1,155 @@
+{
+  "item": "03.1",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "关掉非必要通知 (turn off non-essential notifications)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "工作时把手机放到视线之外 (while working, put the phone out of sight)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "花几分钟改一下设置 (spend a few minutes changing settings)",
+      "fate": "kept",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "真正需要随叫随到的岗位，可以只留少数几个联系人的通知 (on-call roles may keep notifications from a few contacts only)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi",
+      "why": "The upstream span states two conditions of the evidence: it was done in a laboratory and the participants were university students. The Polish item keeps neither in Korzyść i dowody, Ocena dowodów or Ograniczenia (AGENTS.md: 'Zachowaj warunki, populację, niepewność i ograniczenia źródła'). The stored abstract names no sample or setting at all (it only says 'participants'), so the snapshots can neither confirm nor refute the student/lab claim; the item neither carries it nor says that the sample is unspecified in the abstract. A reader (an adult at work in Poland) is given an unqualified result from a single attention task with no hint about who was tested.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "这是实验室里做的，受试者是大学生"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "b9e3431329fe78b2.txt",
+          "line": 14,
+          "text": "even when participants did not directly interact with a mobile device during the task"
+        }
+      ],
+      "fix_direction": "State the setting and the sample as far as the stored sources allow (laboratory attention task; sample not specified in the abstract, upstream says university students) or have the full text checked, and carry that into Ograniczenia."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Korzyść i dowody#1",
+      "text": "wykazali w eksperymencie",
+      "why": "'Experiment' (and the same word in Ocena dowodów#1) is a design claim that appears in no stored snapshot: both the Europe PMC record and the PubMed page hold only the abstract, which says 'We found' and gives no design, randomisation, sample size or number of studies. The word rests on the upstream Chinese text only (a lead). AGENTS.md requires saying what was checked in the abstract when the full text was not read; the packet fields do not show that this limit is stated (Weryfikacja was not in the packet).",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "b9e3431329fe78b2.txt",
+          "line": 14,
+          "text": "We found that cellular phone notifications alone significantly disrupted performance on an attention-demanding task"
+        },
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "这是实验室里做的，受试者是大学生"
+        }
+      ],
+      "fix_direction": "Either name the design only if the full text confirms it, or word the claim as 'according to the authors' abstract' and say in Ograniczenia that only the abstract was read."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich.",
+      "why": "The upstream limitation is that nobody measured what accumulates when this is done every day ('天天这样累积下来是什么结果，没人测过'); it mentions neither 'time savings' nor 'multi-year' effects. The Polish sentence introduces both. The abstract says the outcome was performance on an attention-demanding task, not time saved, so 'oszczędności czasu' names an outcome nobody claimed. The impersonal 'Nie zmierzono' is also ambiguous (this study vs. any study) and an abstract-only snapshot cannot support either reading. The real gap (effect on actual work output, cumulative daily effect, the muting itself) is not stated.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "天天这样累积下来是什么结果，没人测过"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "b9e3431329fe78b2.txt",
+          "line": 14,
+          "text": "significantly disrupted performance on an attention-demanding task"
+        }
+      ],
+      "fix_direction": "Reword the limitation to what the abstract supports: the outcome was performance on one attention task and the abstract reports nothing on everyday work output or cumulative daily use; do not add time-saving or multi-year wording that neither the source nor upstream contains."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu.",
+      "why": "The source manipulated receiving a notification during a lab attention task while participants did not touch the phone. It did not test muting, did not test choosing which notifications are 'unnecessary', and did not test real focused work. The step from 'receiving a notification hurts that task' to 'mute the unnecessary ones during a chosen task' is an editorial extension, but the item does not label it as one (Ocena redakcyjna does not say so and Ograniczenia does not mention that muting was not tested).",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "b9e3431329fe78b2.txt",
+          "line": 14,
+          "text": "even when participants did not directly interact with a mobile device during the task"
+        }
+      ],
+      "fix_direction": "Add to Ograniczenia or Ocena redakcyjna that the study tested receiving alerts, not muting, and that the choice of what counts as unnecessary and the extension to everyday focused work are editorial."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+      "why": "The title says 'wyłącz ... powiadomienia' (turn off notifications) and 'skupionej pracy', while W praktyce says 'wycisz ... sygnały telefonu' for 'wybranego zadania'. Switching notifications off and silencing the sound are different actions, and the abstract only describes auditory or tactile alerts. The title is wider than both the body text and the source.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "b9e3431329fe78b2.txt",
+          "line": 14,
+          "text": "mobile phones generate auditory or tactile notifications to alert users of incoming calls and messages"
+        }
+      ],
+      "fix_direction": "Make the title and W praktyce use the same verb and the same time scope, and tie both to sound and vibration alerts."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "title#1",
+      "text": "Na czas skupionej pracy wyłącz niepotrzebne powiadomienia",
+      "why": "The upstream title carries two actions: turn off non-essential notifications and put the phone out of sight while working. The second action is dropped. Zmiany w adaptacji names only the omitted claim about the mere presence of the phone and says nothing about the dropped action, nor about the dropped claim that the drop is larger for people more dependent on their phone. Dropping is defensible (the only source for it, Ward 2017, is metadata-only here), but a reader comparing with upstream cannot tell it was deliberate.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 1,
+          "text": "关掉非必要通知，工作时把手机放到视线之外"
+        }
+      ],
+      "fix_direction": "Say in Zmiany w adaptacji that the 'phone out of sight' action and the phone-dependence claim were dropped because no checked source supports them."
+    }
+  ],
+  "notes": "No protocol violations: only the role file, AGENTS.md, README 'Jak czytać dowody', the packet and the three listed snapshots were opened. The PubMed page snapshot (b394b3e33ccec52e.txt) repeats the same abstract as the Europe PMC record (b9e3431329fe78b2.txt), so it adds no independent corroboration. The Ward 2017 row (2ced224983905c12.txt) is origin 'lead' and metadata-only, and was not used as evidence. The Weryfikacja and Oryginał fields were not in the packet, so whether the item states that only the abstract was read could not be checked. The PubMed MeSH tag 'Young Adult' (snapshot b394b3e33ccec52e.txt, line 374) hints at the sample but is only 11 characters and was not quotable as evidence. No numbers other than the year 2015 and the letter B appear in the item; year, authors, title and DOI match the PubMed page. Grade B fits the README definition for a single study. No Chinese institution, hotline, threshold or legal statement appears in reader-facing fields. The safety fallback (keep the contact channel needed for work or care, agree how urgent messages arrive) is present, though the upstream concrete method (keep notifications from a few contacts only) is not spelled out."
+}

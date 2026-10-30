@@ -1,0 +1,19 @@
+14.1/verifier-a: accepted, UNAVAILABLE
+14.1/verifier-b: accepted, FAIL
+14.1/adversary-a: accepted, PASS
+14.1/editor-a: accepted
+14.3/verifier-a: accepted, FAIL
+14.3/verifier-b: accepted, FAIL
+14.3/adversary-a: accepted, UNAVAILABLE
+14.3/editor-a: accepted
+14.4/verifier-a: rejected, FAIL, 1 failure(s) (claim 6 (W praktyce#3) a derived recommendation has verdict not_applicable (fully backed), partly (backed in part) or unsupported (nothing backs it))
+14.4/verifier-b: accepted, FAIL
+14.4/adversary-a: accepted, UNAVAILABLE
+14.4/editor-a: accepted
+14.6/verifier-a: accepted, UNAVAILABLE
+14.6/verifier-b: accepted, UNAVAILABLE
+14.6/adversary-a: accepted, PASS
+14.6/editor-a: accepted
+14.9/verifier-a: accepted, UNAVAILABLE
+14.9/adversary-a: accepted, PASS
+14.9/editor-a: accepted

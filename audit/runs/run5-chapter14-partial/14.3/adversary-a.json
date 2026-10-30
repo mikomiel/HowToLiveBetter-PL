@@ -1,0 +1,164 @@
+{
+  "item": "14.3",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["preservation", "grade", "numbers", "scope-words", "leak", "self-containment"],
+  "attacks_not_assessable": [
+    {
+      "attack": "same-action",
+      "reason": "The SIM/eSIM PIN half of the item (title, W praktyce#1, Korzyść i dowody#1 and #2) rests only on the Apple page, whose access is blocked (HTTP 429, snapshot null). The one readable snapshot (Google, 7d4296b28eab6e78.txt) contains no mention of SIM, eSIM or PUK (searched the whole file), so it cannot show whether the advised SIM action matches what Apple prescribes. Only the screen-lock and remote-lock halves can be compared with Google."
+    },
+    {
+      "attack": "recency",
+      "reason": "Only one readable snapshot (Google) exists; the Apple snapshot is blocked, so there is nothing to compare for age or for disagreement between authorities."
+    },
+    {
+      "attack": "limitations",
+      "reason": "Ograniczenia#1 (wrong attempts, card blocked, operator help or replacement) and Ograniczenia#2 (PIN SIM is no guarantee for accounts or every operator procedure) are SIM claims that only the blocked Apple page could support or refute. Google contains nothing on them. Only Ograniczenia#3 can be partly checked (Google names Android 9, 12 and 17 version conditions), which does not decide the attack."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Set a phone lock-screen password",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "Set a PIN on the SIM card",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Cost statement: no money, set each code once",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Report the lost phone to the operator immediately",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Use a strong lock-screen password to restrict others' use (FCC advice)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Set the PIN in the phone's SIM-lock setting",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Initial code is usually 1234 or 0000 (default codes named)",
+      "fate": "dropped",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "After three consecutive wrong entries the operator-issued PUK is needed",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "After setting the code, write it down on paper",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "For what to do first when the phone is lost, see item 4",
+      "fate": "dropped",
+      "fallback_stated": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "Google opisuje osobno zdalne zablokowanie utraconego telefonu.",
+      "why": "The cited Google page is about Android devices and Wear OS watches, not about any phone, and the remote lock works only when the device is charged, online, linked to a Google account and has Centrum lokalizacji on. The item widens the scope to 'telefonu' and drops the conditions. A reader may count on a remote lock in exactly the cases where it cannot work, for example an iPhone or a phone that is switched off or offline after the SIM is pulled.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 11, "text": "Jeśli utracisz urządzenie z Androidem lub zegarek z Wear OS, możesz zlokalizować to urządzenie i zdalnie je zabezpieczyć bądź wymazać na nim dane."},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 23, "text": "jest połączone z siecią mobilnej transmisji danych lub Wi-Fi,"},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 27, "text": "ma włączone Centrum lokalizacji,"}
+      ],
+      "fix_direction": "Name the platform (Android) and state the prerequisites in the sentence, or mark it clearly as a description of one feature that is not available to every phone or in every situation."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ograniczenia#2",
+      "text": "PIN SIM nie jest gwarancją ochrony kont ani zabezpieczeniem każdej procedury operatora.",
+      "why": "The item admits that SIM PIN is not a guarantee and (Ograniczenia#3) may be unavailable, but it gives no next step. The upstream action 'report the lost phone to the operator at once' was dropped, and the Zmiany w adaptacji field does not disclose that drop (it names only the default codes and the Chinese case). A reader whose SIM PIN option is missing, or whose phone is already lost, has no stated path inside this item. The Google snapshot itself offers a readable operator route (disabling the device by IMEI), so a path can be sourced without Chinese rules. Rated minor because the item's scope is set-up and it is safe on its own; the loss procedure may belong to another item, which I could not open.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "工信部借这件事提醒用户及时设置 SIM 卡密码，丢了手机第一时间挂失"},
+        {"source": "upstream", "line": 8, "text": "丢了手机先做什么，见第 4 条（手机丢了按这个顺序做）"},
+        {"source": "snapshot", "snapshot": "7d4296b28eab6e78.txt", "line": 120, "text": "Operator sieci komórkowej może użyć numeru IMEI urządzenia, aby je wyłączyć."}
+      ],
+      "fix_direction": "Add a short, sourced fallback for 'SIM PIN unavailable or phone already lost' (contact the operator), without a Chinese procedure or an invented Polish hotline, and list the dropped upstream action in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Ograniczenia#1",
+      "text": "Wiele błędnych prób może zablokować kartę i wymagać pomocy operatora lub wymiany.",
+      "why": "The upstream threshold is three consecutive wrong entries before the operator-issued PUK is needed. 'Wiele' (many) suggests a large tolerance and so understates how few tries there are. The sentence also merges two stages (PIN wrong, then PUK needed) and adds 'lub wymiany' (replacement), which appears in neither the upstream span nor any readable snapshot. The Apple page that would have to carry it is blocked, so this is unverified, not refuted.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "连着输错三次，就要用运营商给的 PUK 码才能解开"}
+      ],
+      "fix_direction": "State the attempt limit only if a readable Apple or operator source gives it, otherwise use a wording that does not imply many tries are allowed. Separate the PIN stage from the PUK stage, and keep 'wymiana' only if a readable source supports it."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#2",
+      "text": "Nie zgaduj kodu początkowego ani PUK.",
+      "why": "PUK and 'kod początkowy' are not explained, and neither are PIN SIM and eSIM in W praktyce#1. A reader who does not know that the PUK is an unlock code issued by the operator, requested after wrong PIN entries, cannot tell what is being warned about. AGENTS.md requires that a technical term be explained at first use. The upstream span explains it as the operator-supplied code.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "连着输错三次，就要用运营商给的 PUK 码才能解开"}
+      ],
+      "fix_direction": "Explain PUK, the initial SIM code and PIN SIM/eSIM in plain Polish at first use, without default code values."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "Gdy go nie znasz, sprawdź dokumenty lub oficjalne wsparcie swojego operatora.",
+      "why": "The pronoun 'go' (singular) has two possible antecedents, 'kodu początkowego' and 'PUK'. It is unclear whether the reader should look for both codes or one. It also does not cover a reader who set their own SIM PIN and later forgot it. No source evidence is involved, hence minor.",
+      "evidence": [],
+      "fix_direction": "Name the code(s) the sentence refers to, or use a plural form, and say what the reader does if they forgot their own PIN."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "C — oficjalna dokumentacja urządzeń i usług, nie badanie strat finansowych.",
+      "why": "The letter C fits the README definition of C (technical instruction, no direct measurement of effectiveness) and does not overstate certainty. But the rationale mentions 'strat finansowych', and no sentence of the item states an expected benefit or any financial loss. The upstream benefit (a finder moves the SIM to another phone, receives SMS codes and resets accounts) was dropped, and the benefit field only says what Apple and Google describe. The reader meets a dangling reference to an outcome nobody told them about. The text also calls the Apple page documentation, but its snapshot is blocked, so that part is unverified.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "手机丢了，捡到的人可能把这张卡拔下来，插进别的手机收验证码，再挨个重置你的账号"},
+        {"source": "upstream", "line": 8, "text": "没有研究算过设了 PIN 码能少丢多少钱"}
+      ],
+      "fix_direction": "State the expected benefit in Korzyść i dowody as a clearly labelled editorial expectation, not as a measured effect, or drop the reference to financial loss from the grade rationale. Keep C."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Włącz blokadę ekranu urządzenia i sprawdź możliwość używania PIN-u SIM lub eSIM.",
+      "why": "The upstream FCC advice asks for a strong lock-screen password. The item says only 'blokadę ekranu' and drops the strength qualifier, so a reader could satisfy it with a trivial code. The Google snapshot lists PIN, pattern or password without any strength advice, so the qualifier can be sourced only from the upstream span (a lead).",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "给手机设一个强密码，限制别人使用"}
+      ],
+      "fix_direction": "Decide explicitly whether to keep the strength qualifier (only if a readable source supports it) or to record the narrowing in Zmiany w adaptacji."
+    }
+  ],
+  "notes": "Status is UNAVAILABLE because the Apple page (https://support.apple.com/pl-pl/118228) is blocked (HTTP 429, no snapshot) and it is the only cited source for the SIM/eSIM half of the item. Unverified from the stored sources: Korzyść i dowody#1 and #2, Ograniczenia#1 and #2, Ocena redakcyjna#2 and the SIM parts of W praktyce#1-3. Supported by Google: Korzyść i dowody#3 as a bare description (line 84: 'Oznacz jako utracone: powoduje zablokowanie urządzenia kodem PIN, wzorem lub hasłem.'), with the scope and condition caveats in the first finding; Ograniczenia#3 only partly (Android version conditions on lines 56, 84 and 140). Found no blocker. Leak attack: no Chinese institution, hotline, threshold, deadline or liability rule and no legal-right statement in the reader-facing fields (the MIIT and FCC sources and the 1234/0000 defaults are gone). The Zmiany w adaptacji field mentions 'chiński przypadek' only as a removal note. Koszt#1 describes tasks and does not state money, time or effort cost, so the upstream 'no money' claim (line 3) is neither kept nor verified. In the preservation list, fallback_stated true means no path gap for that action (kept, or a path exists in the item); false means no path is stated. Protocol: I opened only the role file, AGENTS.md, README.md (lines 38-77, which runs 21 lines past the end of the section 'Jak czytać dowody'), the packet and snapshot 7d4296b28eab6e78.txt, plus Grep on README.md and on that snapshot. Nothing outside the allowed set. I did not run any script."
+}

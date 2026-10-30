@@ -1,0 +1,37 @@
+[
+ {
+  "item": "03.4",
+  "high": true,
+  "domains": [
+   "health"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "Report written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit4/03.4/verifier-a.json` with status UNAVAILABLE. The only row that is not supported is W praktyce#1.2, a recommendation the snapshots back only in part. I opened nothing outside the allowed set. I read only the role file, AGENTS.md, the packet and the two cited snapshots, `df5a689db3e18396.txt` and `b59686537010480d.txt`. I did not open the lead snapshot `fcfee9b228206080.txt`, because a lead is not evidence under the role file.\n\nThe role file left these points unclear, and I guessed on each:\n- **Splitting by kind:** \"Propozycja redakcji:\" at the start of W praktyce#1 was filed as a separate meta_statement.\n- **Meta or world claim:** I filed \"nie osobista granica bezpieczeństwa\" (W praktyce#5.2) and \"średni wynik nie jest osobistą prognozą\" (Ocena dowodów#1.2) as meta_statement caveats. The rule that a negated or hedged statement about the world is a source_claim could equally apply to them.\n- **Ocena dowodów split:** the role says one source_description row covers the words after the grade letter. I split that caveat clause off anyway, because it is a different kind, and I excluded the letter \"A\" from the claim text.\n- **Ocena redakcyjna#1:** I filed it whole as editorial_estimate, although its second clause looks like advice the NHS page partly echoes.\n- **Verdict for the monitoring advice:** I chose \"partly\" over \"unsupported\" for the editors' self-monitoring advice (W praktyce#1.2). Its premise is backed, but neither snapshot gives that advice.\n- **Quotes on fully backed rows:** the role says a fully backed recommendation \"needs no quotes\" but also allows them, so I added source lines where a source gives the same advice.\n- **Scope gaps:** the line between a \"supported\" row with a scope_gap and a \"partly\" row is a judgement call, and I kept several scope_gaps on supported rows."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "The report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit4/03.4/verifier-b.json`, with status UNAVAILABLE. The only non-passing row is `W praktyce#1.2`, which I marked `partly`.\n\nThe role file did not settle these points, so I guessed:\n- **Editor's caveats:** I filed \"nie jest to gwarancja...\", \"nie osobista granica bezpieczeństwa\" and \"średni wynik nie jest osobistą prognozą\" as `meta_statement`. All three could be read as claims about the world.\n- **Ocena dowodów:** the role says one `source_description` row covers the words after the grade letter. I split off the caveat clause anyway, because that clause is a different kind.\n- **Ocena redakcyjna#1:** I kept the whole sentence as `editorial_estimate`. Its second half (\"nie zastępuje oceny przyczyn...\") could also count as a recommendation backed by the NHS page.\n- **W praktyce#1:** I split \"Propozycja redakcji:\" into a `meta_statement` row. I then marked the rest as `partly` backed, because no snapshot advises monitoring one's own sleep. Calling the whole sentence `meta_statement` would have been another valid reading, and then status would be PASS.\n- **Title, `W praktyce#2` and `Ograniczenia#2`:** I treated \"pora snu\" as bedtime and judged \"jako przykłady\" a fair gloss of the stated doses. I judged \"trudności ze snem\" close enough to the NHS definition of insomnia. All three are recorded in `scope_gaps` or `reason`.\n\nI opened nothing outside the allowed set. I read the role file, `AGENTS.md`, the packet and the two cited snapshots `df5a689db3e18396.txt` and `b59686537010480d.txt`. I did not open the lead snapshot `fcfee9b228206080.txt`."
+   }
+  ],
+  "compare": {
+   "exitCode": 0,
+   "agree": true,
+   "disagreements": [],
+   "statusA": "UNAVAILABLE",
+   "statusB": "UNAVAILABLE"
+  }
+ }
+]

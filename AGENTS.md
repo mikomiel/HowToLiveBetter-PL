@@ -12,6 +12,7 @@ To niezależna polska adaptacja HowToLiveBetter: „Jak żyć lepiej. Praktyczny
 - Kanoniczną polską treścią są rozdziały w book/pl/. Czytnik czyta te pliki Markdown. Jedyny rejestr CHAPTERS w reader.mjs zawiera identyfikatory i ścieżki plików, nie kopie porad ani ich weryfikacji. Nie kopiuj porad do HTML, JavaScript ani osobnej bazy.
 - Chińskie book/*.md, docs/, selfcheck.html, skills/ i historyczne narzędzia są materiałem upstream, nie ukończonym polskim wydaniem. Nie stosuj odziedziczonego chińskiego skilla do polskich porad.
 - Uzgodniony zakres obejmuje rozdziały 03, 04 i 14. Nie dodawaj innych rozdziałów bez uzgodnienia. Zachowaj pochodzenie i jawne powody zmian w istniejącej treści.
+- Stan wstrzymanego przeglądu opublikowanych porad, decyzje właściciela i kroki wznowienia są w audit/README.md oraz audit/FINDINGS.md. Wznawiaj przegląd tylko na polecenie właściciela.
 
 ## Redakcja i dowody
 
