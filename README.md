@@ -92,20 +92,26 @@ Przeczytaj [AGENTS.md](AGENTS.md). Edytuj Markdown, nie kopię porady w kodzie. 
 
 ## Kontrole
 
-Potrzebujesz Node.js 22 lub nowszego. Playwright pozostaje jedyną nową zależnością, wyłącznie testową. Czytnik nie ma zależności uruchomieniowych.
+Potrzebujesz Node.js 22 lub nowszego. Playwright pozostaje jedyną nową zależnością, wyłącznie testową. Czytnik nie ma zależności uruchomieniowych. Na Linuksie przeglądarki wymagają też bibliotek systemowych; samo pobranie binarek nie wystarcza. CI instaluje je przez --with-deps w jednorazowym runnerze. Instalacja pakietów na hoście roboczym wymaga zgody jego właściciela.
 
 ```bash
 npm ci --ignore-scripts
 npm test
-npx playwright install chromium
+npx playwright install chromium firefox webkit
 npm run test:browser
 ```
 
-Testy obejmują wszystkie decyzje źródłowe, stany, pochodzenie, liczby, odsyłacze i workflow. Przeglądarka wczytuje rzeczywiste pliki i sprawdza rozdziały, wyszukiwanie, filtry, klawiaturę, mały ekran i błędy. Chromium z emulacją urządzenia mobilnego nie zastępuje testu fizycznego telefonu, innych silników ani technologii asystujących. Zielony CI nie potwierdza sam naukowej lub prawnej poprawności. Osobny przegląd musi dotyczyć dokładnego opublikowanego HEAD.
+Testy obejmują wszystkie decyzje źródłowe, stany, pochodzenie, liczby, odsyłacze i workflow. Przeglądarki wczytują rzeczywiste pliki i sprawdzają rozdziały, wyszukiwanie, filtry, klawiaturę, mały ekran i błędy. Playwright uruchamia Chromium na komputerze i z emulacją telefonu oraz Firefox i WebKit na komputerze. WebKit na Linuksie nie jest testem rzeczywistego Safari. Nie zastępuje to fizycznych urządzeń ani audytu technologii asystujących. Zielony CI nie potwierdza sam naukowej lub prawnej poprawności. Osobny przegląd musi dotyczyć dokładnego opublikowanego HEAD.
+
+[Dependency Review](.github/workflows/dependency-review.yml) sprawdza zmieniane zależności, także deweloperskie, i kończy się błędem po wykryciu nowych znanych podatności high lub critical. Nie ocenia prawdziwości porad. [Dependabot](.github/dependabot.yml) proponuje cotygodniowe, grupowane aktualizacje npm i GitHub Actions; sam ich nie scala. CodeQL działa w zarządzanym trybie GitHuba dla JavaScript i Actions. Jego kanoniczną konfiguracją są ustawienia repozytorium, nie drugi workflow. Alerty wymagają oceny; poprawne wykonanie analizy nie oznacza braku podatności.
 
 ## Publikacja i licencje
 
-GitHub jest jedynym autorytatywnym forge. Scalenie PR wymaga decyzji człowieka. GitHub Actions wykonuje wyłącznie walidację, z contents: read i bez zachowywania poświadczeń checkoutu. Runner Ubuntu 24.04 jest przypięty do wersji obsługiwanej przez testową przeglądarkę. Workflow nie tworzy e-booków, tagów, wydań, artefaktów do publikacji ani wdrożeń Pages. [Starsze generatory](tools/README.md) nie służą do publikacji polskiego wydania.
+GitHub jest jedynym autorytatywnym forge. Decyzja o scaleniu należy do człowieka. Po zgodzie operatora na dany PR agent może wykonać squash merge, ale dopiero po zatwierdzeniu aktualnego HEAD przez uprawnionego recenzenta-człowieka i przejściu wymaganych kontroli. Nie używa --admin ani bypassu. Sprawdza SHA przez --match-head-commit. Docelowo korzysta z osobnej tożsamości bez uprawnień Administration, ograniczonej do tego repozytorium. Sama zmiana tokenu tego samego konta nie rozdziela autora i recenzenta. Dopóki osobna tożsamość nie jest skonfigurowana, agent nie wykonuje merge; robi to człowiek. Ten model nie jest jeszcze w pełni uruchomiony.
+
+Ochronę main utrzymuje operator w [rulesecie GitHuba](https://github.com/mikomiel/HowToLiveBetter-PL/rules/25998214): PR, jedno zatwierdzenie, aktualna gałąź, unieważnianie starych akceptacji, rozwiązywanie wątków i brak bypassu. Wymagany jest check „Treść i czytnik” z GitHub Actions. Po scaleniu konfiguracji Dependency Review operator powinien dodać także check „Dependency review” jako wymagany; nie należy wymagać workflow, którego nie ma jeszcze na main. Komentarz z przeglądem AI nie jest zatwierdzeniem GitHuba.
+
+Workflowy repozytorium wykonują wyłącznie walidację, z contents: read, Actions przypiętymi do pełnych SHA i bez zachowywania poświadczeń checkoutu. Używają standardowego runnera Ubuntu 24.04. Nie tworzą e-booków, tagów, wydań, artefaktów do publikacji ani wdrożeń Pages. CodeQL publikuje wyniki w zakładce Security, nie wydanie książki. Nie włączamy większych płatnych runnerów, płatnych dodatków ani zwiększonych limitów storage. [Starsze generatory](tools/README.md) nie służą do publikacji polskiego wydania.
 
 Nie uruchomiono publicznej strony. robots.txt nie reklamuje sitemap upstream i zawiera Disallow: /, czyli prośbę do robotów o nieprzeglądanie witryny; nie jest to kontrola dostępu ani gwarancja braku indeksowania. Odziedziczony sitemap.xml usunięto, bo nie ma zatwierdzonego adresu publicznego. Nie deklarujemy fikcyjnego adresu GitHub Pages.
 

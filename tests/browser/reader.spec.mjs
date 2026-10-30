@@ -198,16 +198,32 @@ test('raw HTML and unsafe Markdown URLs are inert in the actual reader', async (
   expect(dialogs).toEqual([]);
 });
 
-test('module failure and file URLs retain actionable static fallback and disabled controls', async ({ page }) => {
+test('module and file URL failures keep actionable HTTP guidance and disabled controls', async ({ page }) => {
   await page.route('**/reader.mjs', route => route.abort('failed'));
   await page.goto('/');
   await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika. Użyj lokalnego serwera HTTP');
   await expect(page.locator('article')).toHaveCount(0);
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
   await expect(page.getByRole('link', { name: 'O wydaniu i metodzie' })).toBeVisible();
+  await page.addInitScript(() => {
+    globalThis.__readerModuleLoadFailed = false;
+    window.addEventListener('error', event => {
+      if (event.target instanceof HTMLScriptElement && event.target.type === 'module') {
+        globalThis.__readerModuleLoadFailed = true;
+      }
+    }, true);
+  });
   await page.goto(new URL('../../index.html', import.meta.url).href);
-  await expect(page.locator('#status')).toContainText('Nie uruchomiono czytnika.');
+  // Wait for a real module failure or the reader's terminal fetch error, not initial HTML.
+  await expect.poll(() => page.evaluate(() =>
+    globalThis.__readerModuleLoadFailed ||
+    document.querySelector('#status').textContent.startsWith('Nie wczytano kompletnego zbioru.')
+  ), { timeout: 12000 }).toBe(true);
+  await expect(page.locator('#status')).toContainText('Użyj lokalnego serwera HTTP');
   await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+  await expect(page.getByLabel('Rozdział', { exact: true })).toBeDisabled();
+  await expect(page.getByLabel('Ocena dowodów')).toBeDisabled();
 });
 
 test('small screens keep controls, long evidence and navigation within the viewport', async ({ page }) => {
