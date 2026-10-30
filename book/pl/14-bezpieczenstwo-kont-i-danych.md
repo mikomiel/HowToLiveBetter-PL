@@ -13,7 +13,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 1. Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu
 - Status: verified
 - Koszt: Konfiguracja każdej usługi i przechowanie zapasu. Klucz sprzętowy może wymagać zakupu; nie podajemy cen.
-- W praktyce: Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku. Kody SMS i kody z aplikacji nadal można wyłudzić na fałszywej stronie. Zapisz bezpiecznie kody odzyskiwania, które oferuje usługa, lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Nie zatwierdzaj logowania, którego nie rozpoczynasz.
+- W praktyce: Zacznij od poczty i innych ważnych kont. Jeżeli usługa obsługuje klucze dostępu, czyli passkeys, lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę. Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową (2FA), zwłaszcza dla poczty i banku. Kody SMS i kody z aplikacji nadal można wyłudzić na fałszywej stronie. Zapisz bezpiecznie kody odzyskiwania, które oferuje usługa, lub dodaj zapasowy klucz zgodnie z instrukcją usługi. Propozycja redakcji: nie zatwierdzaj logowania, którego nie rozpoczynasz.
 - Korzyść i dowody: CERT Polska wyjaśnia, że klucze dostępu są związane z adresem witryny i odporne na wyłudzanie danych na fałszywej stronie. Kody SMS i kody z aplikacji można wyłudzić. Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.
 - Ocena dowodów: C — aktualne zalecenia techniczne CERT Polska, nie eksperyment o procencie zablokowanych ataków.
 - Ocena redakcyjna: Warto poprawić ochronę najważniejszych kont, ale wcześniej upewnić się, że utrata jednego urządzenia nie odetnie wszystkich dróg odzyskania.
@@ -21,7 +21,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 - Źródła: [CERT Polska: hasła, klucze dostępu i zapas](https://wiedza.cert.pl/dobre-praktyki/hasla/); [CERT Polska: MFA i weryfikacja użytkownika w WebAuthn](https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/).
 - Oryginał: [14.1](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L7-L14)
 - Weryfikacja: 2026-10-28; pełna treść dwóch poradników CERT Polska: phishing, WebAuthn, weryfikacja użytkownika, odzyskiwanie i zalecenie dostępnej 2FA przy braku passkeys. Bez przenoszenia statystyki jednego dostawcy.
-- Zmiany w adaptacji: Oryginalne A zastąpiono C dla zalecenia operacyjnego. Usunięto ranking „push przed SMS” oraz procenty z badania Google z 2019 roku jako ogólną gwarancję. Dodano odporność na phishing i odzyskiwanie. Zachowano ogólne zalecenie włączenia 2FA również wtedy, gdy usługa nie obsługuje kluczy dostępu.
+- Zmiany w adaptacji: Oryginalne A zastąpiono C dla zalecenia operacyjnego. Usunięto ranking „push przed SMS” oraz procenty z badania Google z 2019 roku jako ogólną gwarancję. Dodano odporność na phishing i odzyskiwanie. Zachowano ogólne zalecenie włączenia 2FA również wtedy, gdy usługa nie obsługuje kluczy dostępu. 2026-10-30 (przegląd run7, decyzja właściciela): zdanie o niezatwierdzaniu logowania, którego nie rozpoczynasz, oznaczono jako propozycję redakcji, bo żadna ze stron CERT Polska go nie zawiera.
 
 <a id="porada-14-2"></a>
 
