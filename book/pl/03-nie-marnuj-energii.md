@@ -40,13 +40,13 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 <a id="porada-3-3"></a>
 
-### 3. Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania
+### 3. Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania się
 - Status: verified
 - Koszt: Czas na odpoczynek może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.
-- W praktyce: Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją zamiast jedynie zwiększać ilość kofeiny.
-- Korzyść i dowody: Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty wykonania zadań, których nie odzwierciedlał w pełni samoopis senności.
+- W praktyce: Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją, zamiast jedynie zwiększać ilość kofeiny.
+- Korzyść i dowody: Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty w wykonywaniu zadań, których nie odzwierciedlał w pełni wynik własnej oceny senności.
 - Ocena dowodów: B — badania laboratoryjne z randomizacją oraz ogólna informacja NHS o potrzebie snu.
-- Ocena redakcyjna: Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia.
+- Ocena redakcyjna: Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia się do niedosypiania.
 - Ograniczenia: 7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci. Liczy się też jakość snu. Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu. Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).
 - Źródła: Van Dongen i współautorzy (2003), The cumulative cost of additional wakefulness. [Abstrakt wydawcy](https://doi.org/10.1093/sleep/26.2.117); [NHS: potrzeba snu i objawy bezsenności](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.3](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L39-L46)
