@@ -1,6 +1,6 @@
 # Przegląd opublikowanych porad: stan prac i wznowienie
 
-Stan na 2026-10-30. Przegląd był wstrzymany na prośbę właściciela, który wznowił go 2026-10-30; przebieg run7 jest wykonany (112 z 115 raportów przyjętych, 3 odrzucone po trzech próbach). Wyniki i to, co czeka na właściciela: [runs/run7/STATUS.md](runs/run7/STATUS.md). Dalsze przebiegi i wszelkie zmiany tekstu tylko na polecenie właściciela.
+Stan na 2026-10-30. Przegląd był wstrzymany na prośbę właściciela, który wznowił go 2026-10-30. Przebieg run7 jest przeprowadzony, ale niepełny: 112 z 115 raportów przeszło kontrolę skryptów (sprawdzają formę i cytaty, nie zastępują oceny człowieka), 3 odrzucono po trzech próbach. Wyniki i sprawy czekające na właściciela: [runs/run7/STATUS.md](runs/run7/STATUS.md). Dalsze przebiegi i wszelkie zmiany tekstu wymagają polecenia właściciela.
 
 Ten katalog zawiera wszystko, co potrzebne do kontynuacji w dowolnym narzędziu (Codex, Claude Code, inne): raporty z dotychczasowych przebiegów, wykaz źródeł i opis kroków. Nic tu nie zależy od konkretnego agenta. Skrypty są w Node, role to zwykłe pliki Markdown, a sprawdzanie raportów robią skrypty, nie model.
 
@@ -46,7 +46,7 @@ Przegląd PR musi dotyczyć dokładnego opublikowanego HEAD. Nie scalaj PR, nie 
 | `runs/runs.json` | commit tekstu, który oceniał każdy przebieg |
 | `sources-manifest-2026-10-29.jsonl` | adresy, stan dostępu i skróty pobranych źródeł. Samych tekstów nie przechowujemy (to cudze utwory) |
 
-Przebiegi: run1 (pierwsze wersje poprawek), run2 (druga runda), run3 i run4 (tylko weryfikator, po kolejnych poprawkach), run5 i run6 (przerwany przegląd pozostałych pozycji: rozdział 14, rozdziały 03 i 04). Raporty z przebiegów 1–4 powstały przy pomocy narzędzia Workflow w Claude Code, a 5–6 przerwano w trakcie. Skrypt orkiestracji tego narzędzia jest w `tools/pl/workflows/audit-items.js`; jest opcjonalny, bo `audit.mjs` robi to samo bez orkiestratora.
+Przebiegi: run1 (pierwsze wersje poprawek), run2 (druga runda), run3 i run4 (tylko weryfikator, po kolejnych poprawkach), run5 i run6 (przerwany przegląd pozostałych pozycji: rozdział 14, rozdziały 03 i 04). Raporty z przebiegów 1–4 powstały przy pomocy narzędzia Workflow w Claude Code, a 5–6 przerwano w trakcie. Skrypt orkiestracji tego narzędzia jest w `tools/pl/workflows/audit-items.js`; jest opcjonalny, bo `audit.mjs` robi to samo bez orkiestratora. run7 (2026-10-30): wznowiony przegląd wszystkich 32 opublikowanych pozycji; 45 raportów przejęto z wcześniejszych przebiegów, 70 napisano w świeżych sesjach agentów. Kroki powyżej opisują, jak go przygotowano; kolejny przebieg nazwij run8.
 
 ## Ograniczenia, o których trzeba pamiętać
 
