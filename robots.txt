@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-# Brak publicznego wdrożenia tego wydania. Nie deklarujemy adresu sitemap.
+# Ten plik nie jest publikowany na GitHub Pages i nie wyłącza indeksowania strony projektu. Zostaje jako zapis wcześniejszej decyzji. Nie deklarujemy adresu sitemap.

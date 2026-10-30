@@ -193,7 +193,8 @@ test('licenses and attribution remain present, with no runtime dependencies', ()
 
 test('repository workflows stay read-only, validation-only and SHA-pinned', () => {
   const files = readdirSync(resolve(root, '.github/workflows')).sort();
-  assert.deepEqual(files, ['book.yml', 'dependency-review.yml']);
+  // pages.yml is the one workflow that publishes; tests/site.test.mjs holds its own, stricter checks.
+  assert.deepEqual(files, ['book.yml', 'dependency-review.yml', 'pages.yml']);
   const allowedActions = new Set(['actions/checkout', 'actions/setup-node', 'actions/dependency-review-action']);
   const validate = workflow => {
     assert.match(workflow, /on:\n  pull_request:\n    branches: \[main\]/);
@@ -209,7 +210,7 @@ test('repository workflows stay read-only, validation-only and SHA-pinned', () =
       assert.match(sha, /^[a-f0-9]{40}$/);
     }
   };
-  for (const file of files) validate(read('.github/workflows/' + file));
+  for (const file of files.filter(f => f !== 'pages.yml')) validate(read('.github/workflows/' + file));
   const book = read('.github/workflows/book.yml');
   assert.match(book, /  push:\n    branches: \[main\]/);
   for (const command of ['npm ci --ignore-scripts', 'npm test', 'npx playwright install --with-deps chromium firefox webkit', 'npm run test:browser']) assert.ok(book.includes('run: ' + command));
