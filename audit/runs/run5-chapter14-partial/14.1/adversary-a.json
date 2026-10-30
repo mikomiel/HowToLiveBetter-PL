@@ -1,0 +1,147 @@
+{
+  "item": "14.1",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Turn on second-step verification for email, payment and social accounts", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 1, "upstream_action": "Prefer phone-popup confirmation first, SMS code only second", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Use device-based verification (phone popup or insert a security key)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Do not rely on knowledge-based challenges (where did you last log in, backup email) as the second step", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Enable it on the email account first, because other accounts can usually be reset through email", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Use verification codes only for yourself; do not read codes out or scan your face for other people", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Expect that genuine users are sometimes locked out (52% failed first time, 97% got in eventually) - the study's lockout finding", "fate": "narrowed", "fallback_stated": true}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "W praktyce#6",
+      "text": "Nie zatwierdzaj logowania, którego nie rozpoczynasz.",
+      "why": "No snapshot contains this action. The CERT page describes push approval as the case where the victim DID start the login (typed credentials on a fake page) and expects the prompt, so this rule gives false assurance in exactly the phishing scenario the item is about. The item does not label it an editorial example, and Ocena dowodów attributes the field to CERT guidance, so a reader will take it as sourced. Affects every reader who uses push prompts as the second step.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 395, "text": "Powiadomienia push są pod tym względem jeszcze mniej bezpieczne."},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 395, "text": "Użytkownik, który chwilę wcześniej wpisał dane na fałszywej stronie, spodziewa się prośby o potwierdzenie, więc jej zatwierdzenie jest dla niego naturalne."}
+      ],
+      "fix_direction": "Either label the sentence as an editorial example, or drop it, or restate it so it covers only unsolicited prompts and says that a prompt arriving right after typing a password on a page the reader opened is the phishing case; do not present it as CERT guidance."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#3",
+      "text": "Sama prośba push nie zapewnia takiej odporności jak poprawnie wdrożony WebAuthn.",
+      "why": "The upstream advice ranked push above SMS; the item drops that ranking but its replacement understates the cited source. CERT compares push with SMS and app codes and calls push worse against phishing; the snapshot never compares push with WebAuthn in these words. A reader who keeps the old belief that push beats SMS gets no corrected ordering among fallback 2FA methods, although the sources contain one (push worse than codes; app 2FA enough for most).",
+      "evidence": [
+        {"source": "upstream", "line": 1, "text": "优先用手机弹窗确认，其次才是短信验证码"},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 395, "text": "Powiadomienia push są pod tym względem jeszcze mniej bezpieczne."}
+      ],
+      "fix_direction": "State what the source actually says (push approval is less safe than SMS or app codes against a fake login page) and say which fallback 2FA the sources prefer, or explicitly state that no ordering is given."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "włącz dostępną weryfikację dwuskładnikową (2FA)",
+      "why": "The upstream span's central contrast (device-based second step vs knowledge-based challenges, which stopped as few as one tenth of phishing takeovers) is dropped entirely and Zmiany w adaptacji does not declare it. 'Dostępną weryfikację' does not exclude a security-question option that a service may present as extra verification; CERT says such a combination is not multi-factor and should not be used. A reader could enable the weaker option.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "靠回答「上次在哪登的」「备用邮箱是什么」这种老办法，钓鱼盗号最少的只拦下一成。"},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 383, "text": "Połączenie hasła i odpowiedzi na pytanie bezpieczeństwa nie stanowi uwierzytelniania wieloskładnikowego, ponieważ oba składniki opierają się na wiedzy."},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 381, "text": "Nie należy ich stosować. Te same pytania powtarzają się w wielu serwisach"}
+      ],
+      "fix_direction": "Add the scope that the second step must be a different category (code, app, key), not an answer to a security question, and record in Zmiany w adaptacji that the knowledge-challenge comparison was dropped or replaced."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#3",
+      "text": "Gdy usługa nie obsługuje kluczy dostępu",
+      "why": "The fallback to 2FA is triggered only when the SERVICE lacks passkeys. A reader whose service offers passkeys but who cannot use them (CERT notes the QR/phone route may not work on older computers) is told only to 'rozważ' passkeys and gets no explicit path to 2FA. The unavailability of the preferred option can be on the user's side.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 443, "text": "Potrzebny jest do tego włączony Bluetooth, więc na starszych komputerach ta metoda może nie zadziałać"}
+      ],
+      "fix_direction": "Widen the condition to cover 'service does not offer passkeys or you cannot or do not want to use them', so the 2FA path is reachable in both cases."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#2",
+      "text": "lub klucz sprzętowy FIDO/WebAuthn, rozważ tę metodę",
+      "why": "CERT scopes hardware keys to especially important accounts and says that for an ordinary user they cost extra and reduce convenience, while a password manager plus app 2FA is enough for most. The item puts hardware keys on par with passkeys without that scope. 'FIDO' appears in neither snapshot and neither 'FIDO' nor 'WebAuthn' is explained to the reader at first use.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 457, "text": "Jeśli chcesz zabezpieczyć szczególnie ważne konto (poczta, hosting, VPN, dane firmowe), rozważ klucz sprzętowy"},
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 461, "text": "Dla zwykłego użytkownika klucz sprzętowy jest dodatkowym kosztem i nieco zmniejsza wygodę. Menedżer haseł + 2FA przez aplikację to dla większości wystarczający poziom bezpieczeństwa."}
+      ],
+      "fix_direction": "Restore the scope (hardware key mainly for the most important accounts; app 2FA is a sufficient baseline for most), and either explain FIDO/WebAuthn at first use or use the term the sources use."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "Odporność na phishing nie chroni przed każdym złośliwym programem, kradzieżą aktywnej sesji lub oszustwem przy odzyskiwaniu konta.",
+      "why": "Only the malware part is stated in a snapshot. Active-session theft appears in neither snapshot (the word 'sesją' occurs only as a navigation label). Recovery fraud is not stated either; the CERT page only says to require MFA on every login route and to plan recovery as carefully as login. The sentence presents CERT-derived content that the stored sources do not contain.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 433, "text": "passkeys przechowywane w menedżerze haseł mogą zostać wykradzione przez złośliwe oprogramowanie"},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 447, "text": "zaplanować odzyskiwanie dostępu równie starannie jak samo logowanie i umożliwić dodanie zapasowego klucza."}
+      ],
+      "fix_direction": "Limit the sentence to what the snapshots support (malware, theft of the physical key, weak alternative login or recovery routes) or mark the session-theft and recovery-fraud clauses as editorial knowledge with a source to be added."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#5",
+      "text": "Zapisz bezpiecznie oferowane kody odzyskiwania lub dodaj zapasowy klucz zgodnie z instrukcją usługi.",
+      "why": "'Bezpiecznie' is not defined; CERT gives concrete places and the consequence of losing them, which the item drops. 'Zapasowy klucz' comes from a recommendation addressed to people implementing MFA in a service, not from advice to end users; the end-user version (two hardware keys) is only for hardware keys. A reader gets no concrete storage guidance and no backup route for a passkey.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 435, "text": "Zapisz je w bezpiecznym miejscu (np. w menedżerze haseł lub na kartce schowanej w bezpiecznym miejscu w domu)."},
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 439, "text": "Przy wdrażaniu MFA należy:"}
+      ],
+      "fix_direction": "Say where the sources suggest keeping the codes and why (losing the phone may leave them as the only way in), and name what the backup is for each method (second hardware key, synced passkey, backup codes) only as far as the sources support."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Ograniczenia#1",
+      "text": "Passkey nie zawsze oznacza dwa składniki: zależy to także od wymagania i sprawdzenia weryfikacji użytkownika przez usługę.",
+      "why": "The statement is supported, but it comes from guidance for service implementers and the reader cannot check whether the service verifies the user. The item gives no reader action: the 2FA fallback in W praktyce#3 applies only when passkeys are not offered, so a reader using a passkey that may be a single factor is not told what, if anything, to add.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 429, "text": "Serwis powinien sprawdzać jej wartość po swojej stronie."}
+      ],
+      "fix_direction": "Say what the reader should do with this information (for example keep the password-side protections the service offers) or state that the reader cannot verify it and what that implies."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#2",
+      "text": "Kody SMS i kody z aplikacji można wyłudzić.",
+      "why": "Korzyść i dowody states only the weaknesses of the fallback methods and never the benefit that the source gives for 2FA itself (a stolen or leaked password alone no longer opens the account). The advised fallback in W praktyce#3 therefore has no stated benefit and may read as pointless to a reader who stops at the weakness.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 433, "text": "Nawet jeśli ktoś zdobędzie Twoje hasło, nie wejdzie na konto bez drugiego składnika."},
+        {"source": "upstream", "line": 5, "text": "超过 94% 源于钓鱼的劫持尝试和 100% 的自动化劫持尝试"}
+      ],
+      "fix_direction": "Add the source-supported benefit of 2FA next to its phishing limit, without importing the upstream percentages."
+    },
+    {
+      "severity": "minor",
+      "attack": "recency",
+      "id": "Ocena dowodów#1",
+      "text": "C — aktualne zalecenia techniczne CERT Polska",
+      "why": "'Aktualne' is a recency claim. Only the passwords page shows a date; the MFA page snapshot shows none, so its currency cannot be read from the stored text. No conflict between the two pages or with any other snapshot is shown.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "6a185dd9954fea49.txt", "line": 481, "text": "Ostatnia aktualizacja artykułu: 2026-09-02."}
+      ],
+      "fix_direction": "Drop 'aktualne' or tie it to the dated page and say that the MFA page carries no date in the checked text."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "Włącz silne uwierzytelnianie i przygotuj odzyskiwanie dostępu",
+      "why": "'Silne uwierzytelnianie' is not a term used by either snapshot (they use 2FA, MFA, passkeys) and is not defined in the item; the title does not tell the reader which methods count as strong. No evidence quote is possible for an absence; a grep of both snapshots for 'silne uwierz' found no match.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "27b6fdf8ffbd5964.txt", "line": 361, "text": "Uwierzytelnianie dwuskładnikowe (2FA) to odmiana uwierzytelniania wieloskładnikowego (MFA)"}
+      ],
+      "fix_direction": "Use the sources' vocabulary in the title (for example naming 2FA or passkeys) or define 'silne' in the first field."
+    }
+  ],
+  "notes": "No blocker found. Grade attack: C fits the README definition (operational recommendation, no direct effectiveness measurement) and the item says so; no finding. Numbers attack: the item contains no figures; all upstream figures (94%, 100%, 10%, 73%, 4%, 1%, 76%, 90%, 52%, 97%, 350,000) are dropped and Zmiany w adaptacji says the percentages were removed; the Crossref row is a metadata-only lead and was not used as evidence. Leak attack: no Chinese institution, hotline, threshold or liability rule in the reader-facing fields; the upstream pointer to the code-sharing item (liability) was not carried over. Undeclared drops not covered by a finding because Zmiany w adaptacji has no proposition id: the upstream warning to use verification codes only for oneself (line 8), the 52%/97% lockout finding, the dropped time estimate, and the narrowing of 'payment' accounts to 'bank' and of social accounts to 'inne ważne konta'; none of these is listed in Zmiany w adaptacji. Protocol note: I read README.md lines 38-87 (not only the 'Jak czytać dowody' section, lines 42-56), so about 30 lines beyond that section were read; nothing from them was used. Nothing else outside the allowed set was opened."
+}

@@ -1,0 +1,82 @@
+{
+  "item": "14.7",
+  "edits": [
+    {
+      "field": "title",
+      "original": "Rozdziel",
+      "replacement": "Oddziel",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "Odbierz",
+      "replacement": "Cofnij",
+      "reason": "term",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "wymagane uprawnienia aplikacji od dodatkowych zgód",
+      "why": "Terminology drift between title and body: the body never says wymagane or dodatkowe; it says zbędne uprawnienia and funkcji, która ich potrzebuje. In the title it is unclear who requires the permission (the function the reader uses, the app, or the law), so the title is hard to understand without the author. Duty word and legal term, so not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie akceptuj zbiorczo wszystkiego bez zastanowienia",
+      "why": "Double negation (nie ... bez) makes the instruction ambiguous: literally it forbids accepting everything without thought, which can be read as allowing bulk acceptance after thought. zbiorczo is stilted. Contains negation and quantifier, so not edited; one plain affirmative instruction would read better."
+    },
+    {
+      "field": "W praktyce",
+      "text": "przeczytaj cel i możliwość wycofania zgody",
+      "why": "Zeugma: one verb (przeczytaj) governs both cel and możliwość wycofania; a reader can read a purpose but has to check whether withdrawal is possible. Names a right (withdrawal of consent), so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu",
+      "why": "First use of RODO in this item without expansion or explanation; I did not open the chapter, so I cannot tell whether an earlier item explains it. The phrase ograniczenia danych do niezbędnych dla celu is clipped and calque-like; the official Polish wording of data minimisation is closer to ograniczone do tego, co niezbędne do celów, w których są przetwarzane (recalled from memory, not checked here, the verifier should confirm). Law name and duty verb, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania.",
+      "why": "Subject of określa (RODO) is elided across sentences; określa jej dobrowolność is not idiomatic (voluntariness is a condition the regulation sets, not something it determines). podstawą lacks prawną or przetwarzania; the same elision recurs in Ograniczenia as podstawą przetwarzania. Legal terms and a right, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy.",
+      "why": "Subject elided again (reads as if a person takes this into account); heavy nominalisation uzależnianie usługi od zgody is hard for a lay reader. Paraphrases the same provision as Ograniczenia with different wording (see next finding). Legal wording, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "uzależnienie usługi od zgody na dane zbędne do jej wykonania",
+      "why": "Consistency: the same provision is rendered in Korzyść i dowody as uzależnianie ... do wykonania umowy and here as uzależnienie ... do jej wykonania. jej can refer to zgody or usługi (both feminine), and umowy versus usługi is a substantive difference in what is performed. The verifier should align both to the official wording."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "żadne z cytowanych źródeł nie rozstrzyga, kiedy jedno jest drugim",
+      "why": "jedno jest drugim has unclear referents (system permission versus consent under RODO) and sounds cryptic or colloquial; naming both would be clearer. Negation and quantifier, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "nie miał przeglądu prawnika",
+      "why": "Calque of legal review: przegląd in Polish suggests inspection or survey; natural wording is nie został sprawdzony przez prawnika or nie był konsultowany z prawnikiem. It is a negated claim about whether a review took place, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "To nie jest rozstrzygnięcie legalności konkretnej aplikacji.",
+      "why": "rozstrzygnięcie legalności is stilted (ocena zgodności z prawem reads more naturally) and To has no clear referent. Negation and legal term, so not edited."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "normy prawne i instrukcja systemu, nie badanie skuteczności interwencji",
+      "why": "normy prawne is lawyer jargon where lay readers would expect przepisy prawa; instrukcja systemu differs from Strona pomocy Androida (Google) in Korzyść i dowody (naming inconsistency); interwencji is a translationese-flavoured, unexplained term for a lay reader (działania would be plainer), but I could not check whether the chapter uses it as a fixed phrase. Contains negation and evidence wording, so not edited."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie",
+      "why": "Kontrola konkretnego celu is unnatural (kontrola means oversight or inspection; the meaning is sprawdzenie, do czego służy dany dostęp). A fix with a different noun would change the gender and therefore the ending of the comparative użyteczniejsza, which is protected; użyteczniejsza is also heavy (bardziej użyteczna is more usual). Not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

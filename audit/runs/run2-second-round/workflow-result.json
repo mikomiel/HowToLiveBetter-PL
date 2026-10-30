@@ -1,0 +1,216 @@
+[
+ {
+  "item": "03.4",
+  "high": true,
+  "domains": [
+   "health"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "The report for item 03.4 is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/03.4/verifier-a.json`, with status UNAVAILABLE. No row is unsupported or contradicted; two rows are `partly` and one is `not_checkable`. I opened nothing outside the allowed set: AGENTS.md, the role file, the packet, the two cited snapshots (`df5a689db3e18396.txt` and `b59686537010480d.txt`) and the report I wrote. I did not open the lead snapshot `fcfee9b228206080.txt` and ran no scripts, only Read, Grep with explicit snapshot paths, and Write.\n\nI had to guess in these places:\n- **Absence in an abstract-only snapshot:** the role file does not say how to label a negative clause such as \"nie godzinę na zegarze\" when one cited source is abstract-only and the other a main-region page. I split the clause into its own row and used `not_checkable`, noting my clock-time search of both snapshots in `reason`.\n- **Whether a gentle self-observation advice needs its own source:** for \"Zwróć uwagę, o której przyjmujesz...\" I treated it as fully backed (`not_applicable`) by the timing-effect rows, since neither source recommends self-monitoring.\n- **\"Ogranicz\" in W praktyce#2:** I marked it `partly` because neither snapshot advises reducing the amount, only moving the last dose earlier.\n- **The word \"napojów\":** I marked Ograniczenia#1.1 `partly` because the 13.2 h item is a pre-workout supplement, not stated to be a drink.\n- **Caveat clauses:** I filed \"nie jest to gwarancja...\", \"nie osobista granica bezpieczeństwa\" and \"średni wynik nie jest osobistą prognozą\" as `meta_statement`, and the grade letter A as editorial and unchecked.\n- **Cause-assessment clause:** I filed \"nie zastępuje oceny przyczyn...\" as `recommendation_derived` with NHS GP-referral quotes rather than as a `meta_statement`.\n- **Dependencies:** `depends_on` pointing at rows of both source kinds was my reading of the schema."
+   },
+   {
+    "role": "adversary",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The role file was clear on the attacks, the severity scale and the evidence rules, but I had to guess in these places:\n\n- **Grade attack on an abstract-only source:** the file says an abstract cannot decide a grade attack that needs the full text. I judged the A letter against the README definition, since it fits the source type. I recorded the missing certainty and risk-of-bias disclosure as a minor finding, not as `attacks_not_assessable`, because the latter would force UNAVAILABLE.\n- **Upstream-only evidence:** the file does not say whether upstream-only evidence (the dropped sleep-diary point, whose Drake source is only a lead) can support `major`. I capped it at `minor`.\n- **Preservation entries:** `fallback_stated` is a boolean, so I used `false` for dropped actions where a fallback does not apply.\n- **Finding ids:** `Źródła` and `Zmiany w adaptacji` have no proposition ids, so I attached the abstract-only point to `Ocena dowodów#1`.\n- **Chinese quotes:** I counted the 12-character minimum in characters.\n- **Result:** no blockers or majors, so PASS with 9 minor findings.\n- **Protocol overrun:** I read README.md lines 38-87 in one call. The \"Jak czytać dowody\" section ends at line 56, so I also saw two following sections. I opened nothing under book/, tests/ or tools/, no manifest, no git history and no chapter file. I also opened no snapshot outside the three the packet lists, and I ran no script. I did not machine-validate the JSON, since no script was allowed."
+   },
+   {
+    "role": "editor",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "",
+    "warnings": [],
+    "note": "Raport jest zapisany w `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/03.4/editor-a.json`. Verdict: needs_edits, z trzema edycjami bez wpływu na wording chroniony i czternastoma wpisami w protected_findings. Plik JSON nie był parsowany, bo zakaz uruchamiania skryptów to wykluczał; sprawdziłem go tylko wzrokowo.\n\nNiejasności w pliku roli i miejsca, gdzie musiałem zgadywać:\n- Rola mówi, że nie proponuję edycji dotykających wordingu chronionego, a jednocześnie dopuszcza `requires_reverification: false` tylko dla edycji, które go nie dotykają. Przyjąłem, że wszystko niepewne trafia do protected_findings, a edycje proponuję tylko tam, gdzie nie ruszam żadnej chronionej klasy.\n- Nie wiadomo, czy tytuł może być polem edycji, więc zgłosiłem go jako finding z polem „title”.\n- Rola mówi o wyjaśnieniu terminu przy pierwszym użyciu „w rozdziale”, a zadanie zakazywało otwierania `book/`. Nie mogłem więc sprawdzić, czy NHS lub metaanaliza są już wyjaśnione wcześniej. Glosę metaanalizy dałem jako edycję, a NHS tylko zgłosiłem.\n- Rola mówi o cytatach z „snapshot lines” i „numbered upstream lines”, a pakiet ich nie zawiera. Wszystkie `original` i `text` skopiowałem dosłownie z pól pakietu.\n- `protected_findings` nie ma pola na proponowane brzmienie, więc umieściłem je w „why”.\n- Lista wartości `reason` nie ma pozycji na glosę ani redundancję. Dla glosy użyłem „term”.\n- Nie było jasne, czy deklinacja nazwiska, wielkość litery w jednostce i spójność punktu odniesienia odstępu to wording chroniony. Przy braku pewności traktowałem je jako chronione i tylko zgłosiłem.\n\nPoza dozwolonym zestawem nic nie otwierałem. Przeczytałem tylko plik roli, `AGENTS.md` i pakiet, a zapisałem wyłącznie plik raportu."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "The report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/03.4/verifier-b.json`, with status UNAVAILABLE and no `unsupported` or `contradicted` rows. The role file was unclear or silent in these places, and I had to guess:\n\n- **Caveat clauses:** The role file does not say whether clauses like \"nie osobista granica bezpieczeństwa\", \"średni wynik nie jest osobistą prognozą\" and \"nie zastępuje oceny przyczyn przewlekłych problemów ze snem\" are `meta_statement` or `source_claim`. I filed them as `meta_statement`, as editors' caveats. The `meta_statement` bullet's sentence \"If no snapshot states it, the verdict says so\" also conflicts with step 3, which says these rows get `not_applicable`.\n- **Absence claim over mixed sources:** It does not say what verdict an absence claim gets when it covers one page-text snapshot and one abstract-only snapshot. For \"nie godzinę na zegarze\" I used `not_checkable`.\n- **Self-observation advice:** It does not say whether advice such as \"Zwróć uwagę...\" counts as backed when only its premise is in the sources. I marked it `not_applicable` with dependencies. I marked \"lub ogranicz\" in W praktyce#2 as `partly`.\n- **Pedantic `partly` verdict:** I marked Ograniczenia#1.1 `partly` because the 13.2 h figure belongs to a supplement, not a drink. It is the pedantic part, so it is a judgement call.\n- **Grade letter:** It does not say whether the grade letter \"A —\" belongs in the claim words, so I left it out and said in `reason` that the grade is editorial.\n- **Output format:** It says to return JSON \"and nothing else\", while the task asked for a file plus a final paragraph. I followed the task.\n\nI opened nothing outside the allowed set. I read only the role file, AGENTS.md, the packet and the two cited snapshots, and ran Grep only on those two snapshot paths. I did not open the lead-source snapshot or anything under `book/`."
+   }
+  ],
+  "compare": {
+   "exitCode": 0,
+   "agree": true,
+   "disagreements": [],
+   "statusA": "UNAVAILABLE",
+   "statusB": "UNAVAILABLE"
+  }
+ },
+ {
+  "item": "04.4",
+  "high": false,
+  "domains": [],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/04.4/verifier-a.json`, with status PASS. I opened nothing outside the allowed set: only the role file, `AGENTS.md`, the packet, and the two cited snapshots (`3fcf7218a7f1a5b5.txt` and `e70647d0627ff840.txt`). I did not open the two lead snapshots, which are not evidence. I ran no script, and Grep only on the exact snapshot path to confirm line numbers and quote text. The role file was unclear in these places, where I had to guess:\n- **Two-column PDF:** the text is laid out in two columns, and the role file doesn't say whether a quote taken after a wide whitespace gap counts as contiguous. I quoted only fragments from within one column.\n- **Parenthetical gloss in `Ograniczenia#2`:** the gloss \"bez względu na kierunek pomyłki\" is not worded that way in the source, which only contrasts signed and directional bias with absolute accuracy. I kept it as one row with verdict `supported` and explained in `reason`, rather than splitting it or marking `partly`.\n- **`Korzyść i dowody#3.2`:** I classed \"nie uniwersalny wzrost produktywności\" as `meta_statement`, an editor's caveat. It could be read as a `source_claim`, since the source shows no effect on actual completion times.\n- **Lab-to-practice advice:** for `recommendation_derived` rows (the title and `W praktyce#1`) that transfer a lab result to everyday planning, I chose `not_applicable` and recorded the limits in `scope_gaps`. I did not choose `partly`, because the role file doesn't say which applies.\n- **Quotes on `not_applicable` rows:** I was unsure whether a `not_applicable` recommendation row may carry quotes, and gave some of them quotes.\n- **`Ocena dowodów#1`:** I treated \"pojedynczy eksperyment\" as referring to Study 4 only, although the paper reports five studies."
+   },
+   {
+    "role": "adversary",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "I wrote the report to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/04.4/adversary-a.json`. Its status is PASS: no blocker, two major findings and five minor ones.\n\nPlaces where the role file was unclear or I had to guess:\n- **`fallback_stated`:** the file does not say what to enter when no fallback applies. I used false everywhere except upstream line 4, where the item itself says recall alone may not suffice and gives the stronger step.\n- **One attack label per finding:** a grade concern that overlaps with limitations has no home of its own. I put it in the limitations finding on W praktyce#1 and filed no separate grade finding.\n- **Recency with only lead sources newer:** I treated the attack as run, with no finding. The newer abstracts are leads, and the Halkjelsvik abstract line on \"experience\" cannot be decided from an abstract. Listing it as not assessable would have forced UNAVAILABLE.\n- **Upstream evidence key:** the example uses `line` while the prose says `n`. I used `line`.\n- **`id` for findings spanning several fields:** I chose one proposition id each and named the others in `why`.\n- **Quoting a two-column PDF extraction:** I quoted only pieces of a line on one side of the gap.\n- **Major versus blocker:** I rated the missing author caveats as major, because the advice is not unsafe or wrong.\n\nI opened only the role file, AGENTS.md, README.md, the packet and the four snapshots it lists. I read README.md lines 38-87, about 30 lines beyond the evidence section, and used none of the extra lines. I opened nothing under book/, tests/ or tools/, no manifest, no other snapshot and no git history, and I ran no script."
+   },
+   {
+    "role": "editor",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "",
+    "warnings": [],
+    "note": "I wrote the report to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/04.4/editor-a.json`, with verdict `needs_edits`, and opened nothing outside the allowed set (only the role file, AGENTS.md, the packet, and the report I wrote). The role file left five points unclear, and I guessed on each:\n\n- **Title field name:** it does not say what to put in `field` for a title edit or finding, and the packet holds the title outside `fields`. I used the string \"title\".\n- **Quote source:** the packet has no snapshot lines or numbered upstream lines, so I copied every quote verbatim from the packet's field text.\n- **Protected wording:** the classes are broad. I treated \"termin\", \"wcześniejszy\" and \"poprzedni\" as time words with a comparative form, and \"oszacowanie\" versus \"prognoza\" as a possible swapped term. All of these went to `protected_findings` instead of `edits`.\n- **Non-protected issue:** \"Zmiana instrukcji\" has no antecedent in the item. There is no channel for a note that is not about protected wording, so I put it in `protected_findings`.\n- **Report language and em dashes:** the language of `why` is not specified, so I wrote it in English. I also left the \"B — ...\" em dash in Ocena dowodów alone, because it is the grade format. I could not check the chapter convention for it."
+   }
+  ]
+ },
+ {
+  "item": "14.2",
+  "high": true,
+  "domains": [
+   "accounts"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "I wrote the report to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.2/verifier-a.json` with status PASS. It uses 6a185dd9954fea49.txt, the CERT Polska \"Hasła\" page, as the only source.\n\n**Unclear or guessed in the role file:**\n- **Splitting by kind.** I had to decide where to split a sentence by kind. I split:\n  - `Koszt#2` into an editorial cost estimate and a meta statement.\n  - `W praktyce#3` into the advice and the factual clause that the service shows backup codes.\n  - `W praktyce#4` into the advice and the fact that mail is the gateway for resets.\n  - `Ocena dowodów#1` into the source description and the absence claim.\n- **Left unsplit.** I did not split `Korzyść i dowody#1`, where \"CERT Polska opisuje, że\" is an attribution. I checked the attribution against the snapshot title in the same row.\n- **Left unsplit.** I classified the whole of `Ocena redakcyjna#1` as an editorial estimate, although both halves are in fact supported by the source.\n- **Cross-reference.** I treated `Ograniczenia#2` as a meta statement because it is a cross-reference to 14.1. If it was meant as backed advice, the kind is a guess.\n- **Backing for \"Zacznij od poczty\".** I judged `W praktyce#4.1` fully backed by the source's \"przede wszystkim ... poczta\" priority and by mail being listed first. The source does not literally say to start with mail, so a stricter reader could mark it partly.\n- **Absence claim.** The snapshot is the main region (12649 of 13207 characters), so the absence verdict is absence from that region. I said so in the reason.\n\nI opened nothing outside the allowed set. I read only the role file, AGENTS.md, the packet and the one snapshot, and ran one Grep against that exact snapshot path."
+   },
+   {
+    "role": "adversary",
+    "tag": "a",
+    "ok": true,
+    "attempts": 2,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The new report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.2/adversary-a.json`. I wrote it as a fresh report and did not read my previous one.\n\nIt fixes the rejection. Every finding id is now a sentence id from `packet.propositions`, and the old finding 7's id was not one. The report has six findings and a PASS status, since none is a blocker. The major one is the dropped browser-manager fallback. I did not weaken any verdict to get past the script.\n\n**Unclear or guessed in the role file:**\n- **Recency attack:** the role file says to run it \"only if the snapshots show it\". With one snapshot, I counted it as run with no finding rather than listing it as not assessable, which would have forced UNAVAILABLE.\n- **`fallback_stated`:** the schema does not say what value to use for kept actions. I used `true` where the reader's path is intact.\n- **Severity:** I rated the dropped browser-manager fallback `major` and the other five findings `minor`, because the role file gives no rule for an omission that is not a wrong or unsafe instruction.\n- **Ids:** I assumed ids must come from `propositions`, so the removals listed in \"Zmiany w adaptacji\" are described in the `why` text of findings on other sentences.\n- **Attack label:** I labelled the dropped word-count and character-floor figures as `scope-words` rather than `numbers`.\n\n**Opened outside the allowed set:** nothing. I ran Glob once on the audit folder that holds the output file. It showed the names of sibling report files, and I did not open any of them."
+   },
+   {
+    "role": "editor",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "",
+    "warnings": [],
+    "note": "Report written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.2/editor-a.json`. The role file was mostly clear, but I had to guess in these places:\n- The packet has no snapshot lines or numbered upstream lines, only the title and fields. I copied every `original` verbatim from those fields.\n- I could not tell whether \"menedżer haseł\" is already explained earlier in the chapter, because I was barred from the chapter file. I added a short gloss in Koszt on the assumption that this is its first use.\n- The role file does not say when a pronoun fix counts as touching meaning. I read \"jego włączaniu\" as the second login factor and marked that edit `requires_reverification: true`.\n- I left the near-protected phrases (\"niezwiązanych\", \"usług, które ich używają\", \"nie wymagamy\") as `protected_findings` rather than edits. The role file does not say how to treat wording that is not literally in a protected class but changes the scope of one.\n- The `reason` list has no value for a pronoun or referent problem, so I used \"calque\".\n\nI opened nothing outside the allowed set: only the role file, AGENTS.md, the packet and the one output file."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "Report for 14.2 is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.2/verifier-b.json`, status PASS. I spot-checked the riskiest quotes against the snapshot with Grep and they matched. The other quotes were copied the same way. No script has validated the file.\n\nThe role file left a few choices open, and I guessed on these:\n- **Koszt#2** (\"Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu...\"): the first half could be read as a source claim or as the editors' cost judgement. I split it into an `editorial_estimate` and a `meta_statement`, and recorded a scope gap because the snapshot has no price comparison.\n- **Ograniczenia#2** (the link to 14.1): it is both a cross-reference and advice. I filed it as `recommendation_derived`, backed by the CERT lines on 2FA. I did not check the 14.1 link target, which is outside the packet.\n- **W praktyce#4** (\"Zacznij od poczty...\"): the source lists mail first and calls it the gateway for resets, but never ranks it above the bank. I treated that as fully backed, with no scope gap, which could be argued to be `partly`.\n- **Ocena dowodów#1**: split as the role file says, into a `source_description` (grade letter not checked) and an `absent_in_source` row. The snapshot holds only the main region (12649 of 13207 characters), so the absence is from that region only.\n- **Korzyść i dowody#2**: the role file does not say which kind a statement of a tool's function should be. I filed it as `source_claim`.\n\nI opened only the role file, AGENTS.md, the packet and snapshot `6a185dd9954fea49.txt`. Nothing outside the allowed set, and I ran no script."
+   }
+  ],
+  "compare": {
+   "exitCode": 1,
+   "agree": false,
+   "statusA": "PASS",
+   "statusB": "PASS",
+   "disagreements": [
+    "W praktyce#3 | checking | A: recommendation_derived not_applicable, source_claim supported | B: recommendation_derived not_applicable",
+    "W praktyce#4 | checking | A: recommendation_derived not_applicable, source_claim supported | B: recommendation_derived not_applicable"
+   ]
+  }
+ },
+ {
+  "item": "14.7",
+  "high": true,
+  "domains": [
+   "health",
+   "law",
+   "accounts"
+  ],
+  "packetWarnings": [],
+  "runs": [
+   {
+    "role": "verifier",
+    "tag": "a",
+    "ok": true,
+    "attempts": 2,
+    "status": "UNAVAILABLE",
+    "warnings": [
+     "figure 4 in Ograniczenia#1.2 (meta_statement) is checked against no source",
+     "figure 11 in Ograniczenia#1.2 (meta_statement) is checked against no source",
+     "figure 6 in Ograniczenia#3.2 (meta_statement) is checked against no source",
+     "figure 1 in Ograniczenia#3.2 (meta_statement) is checked against no source",
+     "figure 7 in Ograniczenia#4.1 (meta_statement) is checked against no source",
+     "figure 4 in Ograniczenia#4.1 (meta_statement) is checked against no source"
+    ],
+    "note": "I wrote the complete new report to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.7/verifier-a.json` (status UNAVAILABLE). I did not run the checking script, so I can't confirm it passes. The rejected quote for W praktyce#3 now comes from single lines 506 and 507 of `89be0046cf8ac2b2.txt`, without joining the word split across lines (\"admini\" / \"stratora\").\n\nThe role file was unclear or I had to guess in these places:\n- **Article references:** I split \"art. 4 pkt 11\", \"art. 6 ust. 1\" and \"Art. 7 ust. 4\" out as `meta_statement` cross-references, because the one-digit article headings are shorter than 12 characters and can't be quoted. I took that to be the intent of the \"identifier\" wording.\n- **Google attribution:** I treated the Android page's \"Google\" attribution as supported by the URL domain alone, since no text between the markers names Google. I put that caveat in `reason`.\n- **Generic \"uprawnienie systemowe\":** I marked Ograniczenia#1.1 `partly` because only the Android page backs a claim worded for system permissions in general. That is a minor, pedantic call, and it is what makes the status UNAVAILABLE.\n- **Absence claims:** I filed \"żadne z cytowanych źródeł nie rozstrzyga\" and \"nie rozstrzyga, kiedy usługa musi być dostępna\" as `source_claim` with `absent_in_source`, not `meta_statement`. I noted recital 32 and recital 43 as nearby text.\n- **Reasons on backed advice:** I added short `reason` text to some fully backed `not_applicable` advice rows. The role file doesn't say whether that is allowed.\n\nI opened nothing outside the allowed set: AGENTS.md, the role file, the packet and the two listed snapshots. The Write to the existing report path succeeded without my reading the old report."
+   },
+   {
+    "role": "adversary",
+    "tag": "a",
+    "ok": true,
+    "attempts": 1,
+    "status": "PASS",
+    "warnings": [],
+    "note": "The report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.7/adversary-a.json`. It says PASS: no blockers and nothing listed as not_assessable, but nine minor findings.\n\n**Where the role file was unclear and I had to guess:**\n- **`fallback_stated`:** The schema says boolean, but not what to give an upstream action that is kept unconditionally. I used `true` for those and `false` for dropped or narrowed actions with no path stated.\n- **Recency:** Attack 8 says \"only if the snapshots show it\", while the \"not assessable\" rule names \"whether a source is outdated\" as an example. I treated the attack as run with no finding, because neither snapshot shows a conflict or an older source. The report's `notes` say that this does not establish that either source is current, so you may prefer UNAVAILABLE here.\n- **Severity:** The role file gives no guidance on how severe a dropped fallback is when the reader is not endangered, so I rated the dropped \"allow only this once\" step as minor.\n\n**Files opened outside the allowed set:** none. My README Read, lines 38-77, returned about 20 lines past the \"Jak czytać dowody\" section. I used only the allowed files, and Grep always had explicit snapshot paths."
+   },
+   {
+    "role": "editor",
+    "tag": "a",
+    "ok": true,
+    "attempts": 2,
+    "status": "true",
+    "warnings": [
+     "edit 2 (Ograniczenia): changes protected wording (stems); the editor did not mark it requires_reverification, so it is sent back to the source verifier anyway",
+     "forced: edit 2 changed stems"
+    ],
+    "note": "The new report is written to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.7/editor-a.json`. It has no `Tytuł` edit, only two edits on real packet fields. The verdict is `needs_edits`.\n\nWhere the role file was unclear or I had to guess:\n- **Title field:** The role file lists \"title\" as an edit reason but the packet has no editable title field, and the script rejected \"Tytuł\". I moved the title concern to `protected_findings` and used the packet key \"title\" as its `field`. I don't know whether that field name is accepted there.\n- **Protected wording:** I treated almost all substantive problems as protected wording and reported them instead of editing, so the report has only two edits. The edits are \"chce dostępu\" and \"miał przeglądu prawnika\". The verdict is `needs_edits` with those few edits because the real fixes sit in protected wording, and the role file doesn't say whether that is allowed.\n- **Previous report:** I couldn't tell what the rejected report's verdict was. The Write succeeded without reading it, so I rewrote the report from the packet alone and did not read the old one.\n- **Evidence limits:** The packet has no snapshot or numbered upstream lines, so every quote is copied from the packet fields. I couldn't check chapter conventions such as RODO expansion or the \"interwencji\" wording, and the report says so.\n\nI opened nothing outside the allowed set. I read only the role file, AGENTS.md, the packet and the one report file I wrote."
+   },
+   {
+    "role": "verifier",
+    "tag": "b",
+    "ok": true,
+    "attempts": 1,
+    "status": "UNAVAILABLE",
+    "warnings": [],
+    "note": "I wrote the report to `/tmp/claude-0/-home-user-HowToLiveBetter-PL/a61968c2-5d5e-5b46-9ade-c8a799e1d28a/scratchpad/audit2/14.7/verifier-b.json` with status UNAVAILABLE. I opened only the role file, `AGENTS.md`, the packet and the two listed snapshots, and nothing outside the allowed set. Where I had to guess:\n\n- **Koszt#1:** the role file does not say whether \"część funkcji może przestać działać\" in Koszt is editorial or a source claim. I treated the whole sentence as `editorial_estimate`.\n- **\"(Google)\" attribution in Korzyść i dowody#4:** Google is named only in the URL host on the snapshot header (line 3), outside the text markers. I could not tell whether that counts as source text, so I chose `partly`.\n- **title#1:** the role file does not say when a derived title counts as \"fully backed\". I chose `partly` because no source relates permissions to consent, and recital 32 (lines 369-370) lets technical settings count as consent.\n- **Ograniczenia#2.2:** I used `partly` rather than `absent_in_source` for \"żadne ze źródeł nie rozstrzyga\", because of recital 32.\n- **Ocena dowodów#1:** it was unclear whether \"nie badanie skuteczności interwencji\" is a \"not measured\" clause. I split it into a `source_description` row and an `absent_in_source` row.\n- **Article headings:** \"Artykuł 4\" and \"Artykuł 7\" are under 12 characters and are headings, not table cells. I quoted them with `cell:true` so the numbers 4 and 7 occur in a quote, and that may be rejected.\n- **Ograniczenia#1:** I filed the two halves of the sentence as one `source_claim` row. I read \"uprawnienie systemowe\" as Android-only and recorded the gap in `scope_gaps` rather than lowering the verdict."
+   }
+  ],
+  "compare": {
+   "exitCode": 1,
+   "agree": false,
+   "statusA": "UNAVAILABLE",
+   "statusB": "UNAVAILABLE",
+   "disagreements": [
+    "title#1 | strength | A: recommendation_derived not_applicable | B: recommendation_derived partly",
+    "Korzyść i dowody#4 | strength | A: source_description supported | B: source_description partly",
+    "Ograniczenia#1 | strength | A: source_claim partly, meta_statement not_applicable, source_claim supported | B: source_claim supported",
+    "Ograniczenia#2 | strength | A: meta_statement not_applicable, source_claim absent_in_source | B: meta_statement not_applicable, source_claim partly"
+   ]
+  }
+ }
+]

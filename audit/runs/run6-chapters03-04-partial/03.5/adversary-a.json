@@ -1,0 +1,104 @@
+{
+  "item": "03.5",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {"attack": "recency", "reason": "only one snapshot exists and it is a Crossref metadata stub (DOI, title, authors, journal, year); there is no second source or newer guidance to compare, and no authorities that could disagree"}
+  ],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Batch email AND messages into a fixed number of checks per day", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Tell colleagues how often you will reply", "fate": "kept", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Resist opening email at any time (the upstream names a willpower cost)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 4, "upstream_action": "Limit email checking to 3 times per day", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Caveats to carry with the advice: only one study, small-to-medium effect, measures stress not work output, instant messaging only inferred", "fate": "narrowed", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#1",
+      "text": "W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie.",
+      "why": "The only stored source for this item is a Crossref metadata stub with no abstract and no results. The figures 124 adults, two weeks and three checks per day, and the direction of the result (lower stress), appear only in the upstream span, which is a lead and not evidence. The snapshot does confirm the citation (authors, journal, year, title), but a title does not confirm a result or a sample size. Despite this, Źródła labels the link 'Abstrakt i opis badania' and Zmiany w adaptacji says the effect size was omitted because it was 'niewskazaną w sprawdzonym abstrakcie'. Both statements claim an abstract check that the stored snapshot cannot show. A reader is told these numbers were checked against the abstract when no such text is stored. Źródła and Zmiany w adaptacji have no proposition ids, so this finding is attached to the nearest evidence sentence (the same applies to Korzyść i dowody#2).",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 5, "text": "Access: metadata-only"},
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"},
+        {"source": "upstream", "line": 5, "text": "124 名成年人，两周里同一批人前后对比（自身对照）"}
+      ],
+      "fix_direction": "Either obtain the abstract or full text and re-quote sample size, duration, limit and outcome from it, or state in Korzyść i dowody, Źródła and Zmiany w adaptacji that only metadata was checked and the figures come from the upstream description. Do not describe a metadata-only check as an abstract check."
+    },
+    {
+      "severity": "major",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu.",
+      "why": "The grade rationale asserts a design detail, randomised order of conditions, that is in neither the snapshot (metadata only) nor the upstream span. The upstream describes the design only as the same people compared '前后对比（自身对照）' (a before-and-after, self-controlled comparison), which does not state that order was randomised. The detail makes the evidence look more rigorous than anything stored supports, and it is exactly the kind of design detail that cannot come from a source with no abstract. The letter B itself matches upstream.grade and the README definition 'Pojedyncze badanie', but only if the upstream description of a single study is accepted, since the snapshot cannot show the source type. 'Wewnątrzosobnicze' and 'krótkie' are consistent with the upstream wording.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 5, "text": "Access: metadata-only"},
+        {"source": "upstream", "line": 5, "text": "两周里同一批人前后对比（自身对照）"},
+        {"source": "upstream", "line": 4, "text": "同一批人对比了两周。把邮件限制成每天只查 3 次的那一周"}
+      ],
+      "fix_direction": "Remove the randomisation claim unless it is confirmed from the abstract or full text; describe the design only as far as the checked text states it."
+    },
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach",
+      "why": "What the source manipulated was a cap on the number of checks (three per day for one week versus no limit), not checking at set times of day. The title and W praktyce advise a schedule ('ustalonych porach', 'Dopasuj rytm do obowiązków') whose benefit was never tested: a reader who picks scheduled slots but checks many times a day, or any other count, gets no support from the study. The item does not call this an editorial extension and Ograniczenia does not say that only the three-per-day cap was tested. Grade B and 'Ocena redakcyjna' attach the study's result to the wider action. The upstream title ('每天固定几次') frames it as a fixed number of times, which is closer to a cap than to set hours.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "把邮件限制成每天只查 3 次的那一周，日常压力明显更低"},
+        {"source": "upstream", "line": 1, "text": "把邮件和消息改成每天固定几次批量处理"}
+      ],
+      "fix_direction": "State in the item that the study tested a cap of three checks per day, that scheduled times or other counts are an editorial extension, and that no benefit of those variants was measured. Name the tested action in the title or the first practical sentence."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie.",
+      "why": "The separate urgent channel is an editorial addition: nothing in the upstream span says it was part of the study, and no snapshot shows whether participants had one. It is a sensible safeguard, but it is not labelled as editorial, so a reader may take it as part of what was tested. 'Kiedy odpowiadasz' (when you reply) is also not the same action as the study's limit on how often mail was checked.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "要花点时间跟同事说清楚你多久回一次"},
+        {"source": "upstream", "line": 5, "text": "限制为每天查 3 次邮件的那周"}
+      ],
+      "fix_direction": "Mark the urgent-contact arrangement as an editorial addition, and keep 'when you reply' separate from 'how often you check' as in the source."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#2",
+      "text": "W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.",
+      "why": "Several upstream qualifiers did not reach the reader. The upstream says the effect was medium-to-small and that there is only one study; the Polish item gives no magnitude at all, only 'był niższy', and the grade line does not say it is the single study. The upstream also states that sent and received email volume did not differ between the weeks, which matters to a reader worried about missing mail, and that the baseline was 15.5 checks per day; both are dropped. The willpower cost named in the upstream Koszt line is not named in Koszt. Zmiany w adaptacji discloses only that the effect size was omitted, and gives as reason that the abstract did not state it, which cannot be verified here (see Korzyść i dowody#1).",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "只有一项研究，效果中等偏小，量的是压力，不是干出来的活"},
+        {"source": "upstream", "line": 5, "text": "两周收到和回复的邮件数量并没有差别"},
+        {"source": "upstream", "line": 3, "text": "忍住不随时翻邮件，需要一点毅力"}
+      ],
+      "fix_direction": "Say in the item that the effect was small to moderate and rests on a single study, and decide explicitly whether the unchanged email volume and the effort cost are kept or dropped, with the reason."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów.",
+      "why": "This sentence says what the study did and did not measure, but the stored snapshot has no outcome list, so it cannot support or refute it. The only basis is the upstream note ('量的是压力，不是干出来的活'; instant messaging 'only inferred'), which is a lead. The upstream wording for messaging is broader ('nobody has directly studied it'); the Polish narrows it to 'tu', which is safer but then also reads as a claim about this study's measures that was not checked against its abstract.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 5, "text": "Access: metadata-only"},
+        {"source": "upstream", "line": 8, "text": "即时消息没人直接研究过，这里只是照着推的"}
+      ],
+      "fix_direction": "Attribute the limitation to the upstream note or confirm it from the abstract; do not present it as a checked property of the study."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "odczuwany codzienny stres",
+      "why": "'Odczuwany' (felt, perceived) adds a claim about how stress was measured (self-report). The upstream only says '日常压力' (everyday stress) and no stored text describes the measure. The word is a design detail not supported by what was stored.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "把邮件限制成每天只查 3 次的那一周，日常压力明显更低"}
+      ],
+      "fix_direction": "Use the source's own wording for the outcome, or add the measurement method only after it is confirmed from the abstract or full text."
+    }
+  ],
+  "notes": "No protocol violation: I read only the role file, AGENTS.md, the README section 'Jak czytać dowody' (lines 38-56), the packet and the one listed snapshot fc3c2cf54e0262ec.txt. Status is UNAVAILABLE because the only snapshot is a Crossref metadata stub (Access: metadata-only; DOI, title, authors, journal, year), which is too thin to decide the numbers, grade and limitation attacks, and because the recency attack has no second source. No finding is a blocker: nothing here is an unsafe instruction, a Chinese rule or a legal or medical statement, and the leak attack found none (no Chinese institution, hotline, threshold or legal claim). The citation fields (title, authors, journal, year, DOI) in Źródła match snapshot lines 3 and 7-11. The Źródła and Zmiany w adaptacji fields have no proposition ids in the packet, so claims about them are attached to the nearest proposition ids. I did not check the cross-reference 04-nie-marnuj-czasu.md#porada-4-5 (outside the allowed set); with the link removed the item stays safe and actionable alone, so no self-containment finding. The urgent-duty fallback ('Dopasuj rytm do obowiązków', 'Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie') is present."
+}

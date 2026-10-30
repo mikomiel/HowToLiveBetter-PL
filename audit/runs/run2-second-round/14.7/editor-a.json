@@ -1,0 +1,112 @@
+{
+  "item": "14.7",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "do czego aplikacja chce dostępu",
+      "replacement": "o jaki dostęp prosi aplikacja",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ograniczenia",
+      "original": "miał przeglądu prawnika",
+      "replacement": "został przejrzany przez prawnika",
+      "reason": "calque",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Rozdziel uprawnienia aplikacji od zgód na przetwarzanie danych",
+      "why": "Reported, not edited: the packet exposes the title only as top-level metadata, not as an editable field, and it contains terms of right (uprawnienia, zgód). 'Rozdziel' looks like a literal rendering of 'separate': in Polish 'rozdzielić' does not normally take 'od', the standard construction for keeping two things apart is 'oddzielić X od Y' or 'odróżniać X od Y'. The title also does not name a concrete action the reader performs. Direction for the verifier: 'Odróżniaj uprawnienia aplikacji od zgód na przetwarzanie danych' or the more actionable 'Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych'. See also the finding on 'danych' versus 'danych osobowych'."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie akceptuj zbiorczo wszystkiego bez zastanowienia",
+      "why": "Double negation (nie ... bez) and three overlapping ways of saying the same thing (zbiorczo, wszystkiego, bez zastanowienia). It is also unclear whether 'wszystkiego' means all permissions or all consents. Contains negations and a quantifier, so not edited. Direction: a single negation, for example 'nie zatwierdzaj wszystkich próśb bez zastanowienia'."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Odbierz zbędne uprawnienia",
+      "why": "'Odbierz' is a less usual verb for permissions; 'cofnij' (cofnąć uprawnienie) is the more common wording. I cannot check which verb the chapter or the Polish Android interface uses, so this is a question for the verifier. The wording contains a term of right (uprawnienia) and the qualifier 'zbędne', so not edited."
+    },
+    {
+      "field": "W praktyce",
+      "text": "przeczytaj cel i możliwość wycofania zgody",
+      "why": "Zeugma: one reads a purpose, but one checks whether withdrawal is possible. 'Cel' alone is vague (purpose of what). Contains the modality word 'możliwość', so not edited. Direction: 'sprawdź, w jakim celu dane będą przetwarzane i czy można wycofać zgodę' (the verifier must confirm that 'czy można' keeps the meaning)."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Przy zgodach na przetwarzanie danych",
+      "why": "Term: the established Polish term is 'dane osobowe' ('przetwarzanie danych osobowych'). The unqualified 'danych' recurs in the title, in Korzyść i dowody ('ograniczenia danych', 'zgody na dane') and in Ograniczenia. RODO covers personal data only, so this is also a scope question, not only a style one. Names a legal concept, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "RODO wymaga",
+      "why": "Specialist abbreviation (name of a law) used without explanation in this item. I did not open the chapter file, so I cannot tell whether RODO is expanded at first use earlier in the chapter. If it is not, the first use needs an explanation, for example 'ogólne rozporządzenie o ochronie danych (RODO)'. Name of a law, so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "RODO wymaga ograniczenia danych do niezbędnych dla celu",
+      "why": "Clipped phrasing: 'do niezbędnych' has no noun and 'dla celu' is vague ('celu przetwarzania'). A reader has to reconstruct 'do tych danych, które są niezbędne dla celu przetwarzania'. Contains a duty verb (wymaga) and a necessity word (niezbędnych), so not edited."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania",
+      "why": "The subject of 'określa' is dropped and, after a clause whose nearest noun is 'zgoda', reads as if the consent were the subject. 'Określa jej dobrowolność' is unnatural (a rule sets conditions for voluntariness, it does not 'specify voluntariness'), and 'prawo wycofania' is normally 'prawo do wycofania zgody'. Contains a condition (jeżeli), an attribution verb and a term of right, so not edited. Direction: name the subject, for example 'Jeżeli podstawą jest zgoda, RODO wymaga, by była dobrowolna, i przyznaje prawo do jej wycofania'; the verifier must confirm this matches the source."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy",
+      "why": "Dropped subject again, repetition 'uwzględnia uzależnianie', and elliptical 'zgody na dane' (zgody na przetwarzanie danych). Consistency: here the condition is 'uzależnianie usługi', while Ograniczenia says 'uzależnienie wykonania umowy, w tym usługi'; the verifier should check that the shorter wording does not narrow the scope. Contains an attribution verb and legal terms, so not edited."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "skuteczności interwencji",
+      "why": "'Interwencja' is research jargon (calque of English 'intervention') that a general reader in Poland may not understand, and it is not explained. I cannot tell whether the README or the chapter uses this as a fixed formula for grade C. If it is fixed, keep it consistent across items; if not, a plainer wording such as 'skuteczności działania' could be considered. The surrounding wording holds a negation and an effect word, so not edited."
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "text": "Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie",
+      "why": "'Kontrola' suggests supervising or inspecting, while the item means checking the stated purpose; 'konkretnego celu' is vague (purpose of what). 'Użyteczniejsza' is heavy, 'przydatniejsza' is the more usual comparative. The two sides of the comparison are not parallel (noun of control versus gerund of choosing). Contains a comparative, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Uprawnienie systemowe dotyczy dostępu aplikacji do funkcji urządzenia",
+      "why": "Consistency: the title and W praktyce say 'uprawnienia aplikacji', here the term becomes 'uprawnienie systemowe' without linking the two. One term should be used for the same thing, or the equivalence stated once. Term of right, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "żadne z cytowanych źródeł nie rozstrzyga, kiedy jedno jest drugim",
+      "why": "'Kiedy jedno jest drugim' forces the reader to reconstruct which is which. Naming the two things, for example 'kiedy uprawnienie systemowe jest zgodą w rozumieniu RODO', would be clearer, but the direction of the claim (permission counts as consent) must be confirmed by the verifier. Contains a quantifier, a negation, a condition and the name of a law, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody",
+      "why": "'Mówi' is colloquial for a legal provision ('stanowi'). The citation also omits 'RODO', unlike 'art. 6 ust. 1 RODO' two sentences earlier, which is inconsistent. Attribution verb and name of a law, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy",
+      "why": "After the semicolon the subject (art. 7 ust. 4 RODO) is implied, and the sentence carries two claims. Splitting it into two sentences with the subject repeated would follow the one-claim-per-sentence rule. Contains a negation, a condition word and a modal (musi), so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "opisuje, jak ich włączenie wpływa na działanie aplikacji",
+      "why": "'Ich' is ambiguous (uprawnień or funkcji urządzenia). 'Włączenie' fits functions, whereas for permissions the usual word is 'przyznanie'. Contains a causal verb (wpływa), so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu",
+      "why": "'Kroki obowiązują' is unnatural: 'obowiązywać' is used for rules. More natural: 'część kroków dotyczy tylko wybranych telefonów i wersji systemu' or 'jest dostępna tylko na ...'. Contains 'tylko' and a duty word, so not edited."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "To nie jest rozstrzygnięcie legalności konkretnej aplikacji",
+      "why": "Nominal, translationese style ('is not a determination of the legality'). More natural: 'Nie rozstrzyga to, czy konkretna aplikacja działa zgodnie z prawem'. Contains a negation and a legal term, so not edited."
+    }
+  ],
+  "verdict": "needs_edits"
+}

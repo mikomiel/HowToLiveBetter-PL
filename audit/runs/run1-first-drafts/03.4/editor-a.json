@@ -1,0 +1,114 @@
+{
+  "item": "03.4",
+  "edits": [
+    {
+      "field": "title",
+      "original": "przed snem zamiast stosować",
+      "replacement": "przed snem, zamiast stosować",
+      "reason": "title",
+      "requires_reverification": false
+    },
+    {
+      "field": "W praktyce",
+      "original": "autorzy metaanalizy",
+      "replacement": "autorzy metaanalizy (statystycznego połączenia wyników badań)",
+      "reason": "term",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "Przesunięcie napoju",
+      "replacement": "Przesunięcie pory picia napoju z kofeiną",
+      "reason": "consistency",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "title",
+      "text": "Ogranicz kofeinę przed snem zamiast stosować jedną godzinę graniczną dla wszystkich",
+      "why": "‘Stosować godzinę graniczną’ brzmi jak dosłowne przeniesienie (apply a cutoff time); po polsku naturalniej ‘trzymać się jednej godziny granicznej’ albo ‘wyznaczać’. Poprawka dotyka liczebnika ‘jedną’ i kwantyfikatora ‘wszystkich’, więc jej nie wprowadzam. Weryfikator niech zdecyduje."
+    },
+    {
+      "field": "title",
+      "text": "Ogranicz kofeinę przed snem",
+      "why": "Tytuł podaje bezwarunkowe działanie, a W praktyce czyni je zależnym od sytuacji (‘Przy trudnościach ze snem przesuń ją wcześniej lub ogranicz’). Warunek, który ma znaczenie, nie przetrwał w tytule. Dodanie warunku zmienia populację i zakres, więc zgłaszam zamiast edytować."
+    },
+    {
+      "field": "Koszt",
+      "text": "Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.",
+      "why": "Jedno zdanie łączy spójnikiem ‘ani’ dwa różne twierdzenia: brak oczekiwanych wydatków oraz brak założenia, że zmiana jest jednakowo trudna dla wszystkich. ‘Nie zakładamy dodatkowych wydatków’ można też odczytać jako ‘nie przyjmujemy, że wydatki wystąpią’ albo ‘nie liczymy ich’. Lepiej rozdzielić na dwa zdania z osobnymi orzeczeniami. Wszystko to dotyka negacji i kwantyfikatora, więc nie edytuję."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem",
+      "why": "Skrót NHS nie jest wyjaśniony dla czytelnika w Polsce (brytyjska publiczna służba zdrowia). Nie mogłem sprawdzić, czy rozdział wyjaśnia go wcześniej. Nazwa instytucji jest zastrzeżona, więc zgłaszam."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty",
+      "why": "Rzeczownikowy zwrot ‘obejmują unikanie’ to typowa kalka; naturalniej ‘NHS zaleca unikać kawy i herbaty’. Zmiana czasownika ‘obejmują’ na ‘zaleca’ zmienia siłę przypisania (obejmują to słabsze niż zaleca), więc nie edytuję. W tym zdaniu mowa o kawie i herbacie, w tytule i gdzie indziej o kofeinie ogółem; różnica zakresu do oceny przez weryfikatora."
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie jest to gwarancja braku wpływu u każdej osoby",
+      "why": "Podwójne zaprzeczenie (‘nie jest gwarancja braku’) z kwantyfikatorem ‘każdej’ jest niejasne: można odczytać ‘nie u każdego jest pewne, że nie ma wpływu’ albo ‘u żadnej osoby’. Prawdopodobny zamiar: u niektórych osób kofeina może wpływać na sen mimo zachowania tego odstępu. Negacja, kwantyfikator i czasownik przyczynowy są zastrzeżone, więc nie edytuję."
+    },
+    {
+      "field": "W praktyce",
+      "text": "Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu.",
+      "why": "Zdanie niesie kilka twierdzeń naraz (przypisanie, porcja, odstęp, cel), ma ciężki szyk (długi dopełniacz przed bezokolicznikiem ‘wypić’, który stoi daleko od ‘by’) i dwa spójniki celu pod rząd (‘by’ ... ‘aby’). ‘O objętości ... i zawartości ...’ to urzędowy rejestr. Warto rozbić na dwa zdania. Ruszałoby to liczby, jednostki, czas i czasownik przypisania, więc nie edytuję."
+    },
+    {
+      "field": "W praktyce",
+      "text": "250 mL",
+      "why": "Jednostka pisana ‘mL’; w polskich tekstach zdrowotnych i kulinarnych zwykle ‘ml’. To samo w polu Ograniczenia (‘250 mL kawy’). Jednostka jest zastrzeżona; weryfikator niech zdecyduje, czy ujednolicić z konwencją rozdziału."
+    },
+    {
+      "field": "W praktyce",
+      "text": "To zalecenie oparte na zbiorczych wynikach badań, nie osobista granica bezpieczeństwa.",
+      "why": "Zdanie bez orzeczenia, w stylu nagłówka: ‘nie osobista granica’ wisi bez czasownika. Naturalniej ‘To zalecenie opiera się na zbiorczych wynikach badań i nie jest osobistą granicą bezpieczeństwa’. Dotyka negacji ‘nie’ i słowa ‘bezpieczeństwa’ (twierdzenie o bezpieczeństwie), więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Metaanaliza Gardiner i współautorów objęła 24 badania.",
+      "why": "Nazwisko ‘Gardiner’ jest nieodmienione. To poprawne tylko, jeśli pierwsza autorka jest kobietą; dla mężczyzny należałoby ‘Gardinera i współautorów’. Pakiet nie podaje płci. Nazwa badania i nazwisko są zastrzeżone, więc zgłaszam do sprawdzenia."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "łączny czas snu",
+      "why": "Ustalony polski termin dla total sleep time to ‘całkowity czas snu’. ‘Łączny’ wygląda na dosłowne oddanie ‘total’. Nie widzę źródła, więc nie wiem, czy mierzono total sleep time, czy inną miarę; podmiana terminu technicznego jest zastrzeżona."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym.",
+      "why": "Brak porównania: krótszy o 45 minut niż po czym (bez kofeiny, po placebo)? ‘Po kofeinie’ jest eliptyczne (naturalniej ‘po przyjęciu kofeiny’). ‘W wyniku zbiorczym’ na pierwszy rzut oka przypomina idiom ‘w wyniku’ (wskutek). Dopisanie grupy porównawczej to treść merytoryczna, a ‘krótszy o 45 minut’ to porównanie i liczba, więc nie edytuję."
+    },
+    {
+      "field": "Korzyść i dowody",
+      "text": "Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny",
+      "why": "‘Odstęp od snu’ to dosłowne przeniesienie (interval from sleep); po polsku ‘odstęp czasu przed snem’ albo ‘ile godzin przed snem’. Słowa dotyczą czasu trwania i liczebności (‘różny’, ‘dwóch’), więc są zastrzeżone."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "średni wynik nie jest osobistą prognozą",
+      "why": "To samo pojęcie nazwane jest w Korzyść i dowody ‘wynikiem zbiorczym’, a tu ‘średnim’. Dla spójności lepsze jedno słowo, ale ‘średni’ i ‘zbiorczy’ mogą znaczyć w statystyce coś innego; zawiera też negację. Do oceny przez weryfikatora."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie ma uniwersalnej granicy o 14:00.",
+      "why": "Godzina 14:00 pojawia się dopiero tutaj i nic w pozycji nie tłumaczy, skąd ten przykład. Termin jest też niespójny z tytułem (‘godzinę graniczną’ w tytule, ‘granicy o 14:00’ tutaj); ‘granica o 14:00’ to kalka. Zdanie zawiera negację, kwantyfikator ‘uniwersalnej’ i godzinę, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Zawartość kofeiny różni się między napojami",
+      "why": "Przykład w tym samym zdaniu to porcja suplementu przedtreningowego, a nie napój; gdzie indziej użyto ‘źródeł kofeiny’. Zamiana na ‘produktami’ rozszerzałaby zakres twierdzenia, więc zgłaszam zamiast edytować. Ponadto ‘autorzy podają’ w tym polu nie wskazuje, których autorów dotyczy."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami",
+      "why": "Zeugma: ‘dawki bezpiecznej dla ... interakcji z lekami’ nie ma sensu logicznego, a ‘bezpiecznej dla ciąży’ to kalka (po polsku ‘w ciąży’). Po negacji naturalniejsze ‘ani’ niż ‘lub’. Zdanie zawiera negację, dawkę, populację i warunki zdrowotne, więc nie edytuję. Do przebudowy z osobnymi członami dla ciąży, chorób i przyjmowanych leków."
+    }
+  ],
+  "verdict": "needs_edits"
+}

@@ -1,0 +1,129 @@
+{
+  "item": "14.9",
+  "status": "PASS",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Treat the rule as a right: where another way exists, a face scan cannot be the only verification and you may refuse and be given another way", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "Ask whether another verification method exists", "fate": "kept", "fallback_stated": false},
+    {"upstream_line": 3, "upstream_action": "If told there is none, demand that the organisation provide one", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 4, "upstream_action": "Insist on card, password or ID instead of a face scan; do not accept 'then the service cannot be done' as pressure", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Give only separate, informed, voluntary consent to face processing", "fate": "narrowed", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Withdraw consent at any time, using an easy withdrawal route the processor must provide", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Guardian consent for a child under 14", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 5, "upstream_action": "Public-place devices only where necessary for public safety and with a notice; no devices in private spaces; templates stored on the device, not sent over the internet", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Quote the rule to staff who say the system only supports face scan, then demand card, password or ID", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "If the organisation still refuses, report it to the local regulator", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Where national rules require face verification (some finance and government cases), follow those rules", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Be more careful with a face than with a password because a leaked face cannot be changed", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Ask whether an organisation holding 100000+ face records registered with the regulator within 30 working days", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "Use the rights to access, correct and delete own personal data (cross-reference to upstream item 8)", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Zapytaj także o inną metodę.",
+      "why": "The upstream gives the reader a next step in both failure cases: demand an alternative when told there is none, and report to the regulator when the organisation still refuses. The Polish item keeps only the question. A reader who asks and hears 'no' or gets no answer is left with no path at all, and the only caveat (Ograniczenia#2) says refusal 'zależy od kontekstu'. The cited RODO text does contain a sourced route that the item never mentions: Art. 13 requires the controller to state the right to lodge a complaint with the supervisory authority. The Chinese authority was rightly not mapped mechanically, but nothing replaces it.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "对方说没有，就要求它提供一个。"},
+        {"source": "upstream", "line": 8, "text": "还是不给的，向当地网信部门反映。"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2760, "text": "informacje o prawie wniesienia skargi do organu nadzorczego"}
+      ],
+      "fix_direction": "Add a conditional, sourced next step for a reader whose organisation gives no alternative or no answer (for example, the information Art. 13 obliges the controller to provide, including the complaint right), worded so it does not assert a general right to an alternative."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Korzyść i dowody#3",
+      "text": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+      "why": "The item discusses consent as an exception but drops the upstream point that consent can be withdrawn at any time. The cited RODO text supports it directly (Art. 7 ust. 3, and Art. 13 ust. 2 lit. c requires the controller to inform about it). A reader who consented, or who is told to consent, gets no hint that withdrawal exists. The Zmiany w adaptacji field does not list this removal.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "你有权撤回同意，处理者要提供便捷的撤回方式。"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2506, "text": "Osoba, której dane dotyczą, ma prawo w dowolnym momencie wycofać zgodę."}
+      ],
+      "fix_direction": "Either carry the sourced withdrawal point into the item or list it among the removed upstream points in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.",
+      "why": "The sentence is true but drops two conditions that sit in the same snapshots. Art. 9 ust. 2 lit. a lifts the ban for explicit consent only unless EU or member-state law says the ban cannot be lifted by the person, and Art. 9 ust. 4 lets member states add further conditions or limits for biometric data. The UODO presentation and Art. 7 ust. 4 also show that consent counts only if voluntary. A reader may take 'wyraźna zgoda' as making biometric processing lawful in itself. Ograniczenia#2 only hints at this.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2560, "text": "chyba że prawo Unii lub prawo państwa członkowskiego przewidują, iż osoba, której dane"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2612, "text": "Państwa członkowskie mogą zachować lub wprowadzić dalsze warunki, w tym ograniczenia w odniesieniu do"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2511, "text": "Oceniając, czy zgodę wyrażono dobrowolnie, w jak największym stopniu uwzględnia się, czy między innymi od"},
+        {"source": "snapshot", "snapshot": "37cae0082d72986d.txt", "line": 157, "text": "W tym przypadku zgoda nie może być przesłanką legalizującą przetwarzanie"}
+      ],
+      "fix_direction": "State that consent is an exception only when it meets the RODO conditions (voluntary, for specific purposes) and that national law can narrow or exclude it, without presenting any of this as a verified Polish rule beyond what the snapshots show."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Zapytaj także o inną metodę.",
+      "why": "The title and W praktyce#2 name an 'alternatywa' as one of three things to ask about, but Korzyść i dowody contains no support for it. In the cited UODO presentation, the question of less invasive alternatives and a choice for the person is a duty-side assessment the controller must make, not something the data subject is told to request. The item does not label the alternatives question as an editorial suggestion, so the three asks look equally backed by Art. 13, although only purpose, basis, controller identity and retention map to Art. 13.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "37cae0082d72986d.txt", "line": 86, "text": "Administrator musi ocenić zasadność zastosowania danych biometrycznych."},
+        {"source": "snapshot", "snapshot": "37cae0082d72986d.txt", "line": 94, "text": "czy można dać osobie, której dane dotyczą, wybór rozwiązania?"},
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2732, "text": "cele przetwarzania danych osobowych, oraz podstawę prawną przetwarzania;"}
+      ],
+      "fix_direction": "Mark the alternatives question as an editorial suggestion and say which asks are backed by Art. 13 information duties and which only by the controller's assessment duty and context."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację.",
+      "why": "Art. 4 pkt 14 defines the data as data that result from special technical processing, concern physical, physiological or behavioural characteristics, and enable or confirm unique identification. The item omits the characteristics element and attaches the identification criterion to the processing rather than to the data. A reader cannot tell from the sentence which kinds of data fall under the definition.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "89be0046cf8ac2b2.txt", "line": 2287, "text": "cech fizycznych, fizjologicznych lub behawioralnych osoby fizycznej oraz umożliwiają lub potwierdzają"}
+      ],
+      "fix_direction": "Restate the definition with all its elements, or say it is a shortened paraphrase."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.",
+      "why": "The letter C fits the README definition (norma prawna), and the change from upstream A is disclosed. The explanation, however, speaks of 'metod logowania', which is login, while the item concerns identification and verification by an organisation. This looks like carry-over from the chapter 14 login items and can mislead about what is being graded.",
+      "evidence": [],
+      "fix_direction": "Reword the explanation to the actual subject (identification or verification by an organisation) and, if wanted, state that the 'ask about an alternative' step is an editorial prompt not covered by the legal norm."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Ocena redakcyjna#1",
+      "text": "Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.",
+      "why": "The upstream gives the main reason for extra caution: a face, unlike a password, cannot be changed after a leak. The snapshots support the same reason. The item gives no such reason, so the reader is not told why biometrics deserve more care than other data.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "人脸和密码最大的区别是泄露之后改不掉，所以它值得比密码更谨慎。"},
+        {"source": "snapshot", "snapshot": "37cae0082d72986d.txt", "line": 315, "text": "do zalogowania możemy zmienić, ale naszych linii papilarnych już nie."}
+      ],
+      "fix_direction": "Add the sourced rationale (biometric traits cannot be changed after a leak) or drop it explicitly in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Przeczytanie informacji i zapytanie o inny sposób weryfikacji.",
+      "why": "The upstream cost line says money is zero and that the hard part is asking in person. The Polish Koszt field does not state money, time or effort separately and drops the effort note, although AGENTS.md requires cost in money, time and effort to be separated.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "就要求它提供一个。难的是要当面开口问。"}
+      ],
+      "fix_direction": "State the money, time and effort cost separately, keeping the social effort of asking in person."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#1",
+      "text": "Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo.",
+      "why": "Read alone, 'na jakiej podstawie' is not explained (it means legal basis, such as consent or a statute) and 'RODO' is never expanded. The item also never says what the reader should do with the answers or which answers are warning signs. It stays safe, because it advises only asking, but the reader may not know what a good answer looks like.",
+      "evidence": [],
+      "fix_direction": "Explain 'podstawa prawna' and RODO at first use and add a short, sourced indication of what an adequate answer contains."
+    }
+  ],
+  "notes": "No blocker. Item text contains no Chinese institution, hotline, threshold or deadline; Zmiany w adaptacji only names removed Chinese elements. Numbers: only article references (Art. 4 pkt 14, Art. 9, Art. 13); all exist in snapshot 89be0046cf8ac2b2.txt and match (lines 2286-2288, 2551-2561, 2724-2760). The mapping of kto, cel, podstawa and jak długo to Art. 13 ust. 1 lit. a, lit. c and ust. 2 lit. a holds (lines 2727, 2732, 2750). Grade C vs upstream A: correct under README definitions and disclosed. Limitations: Ograniczenia#1 is supported by recital 51 in the same RODO snapshot (line 650, photographs are biometric data only when processed by special technical means); Ograniczenia#2 is supported only generally (Art. 7 ust. 4 and the UODO school example); Ograniczenia#3 and #5 are scope or editorial statements that no snapshot needs to support. Recency and conflict: snapshot 37cae0082d72986d.txt is a UODO presentation dated 28 April 2021, school-specific, and reports a pending cassation after a WSA judgment overturned the UODO decision (lines 164-197); the item does not rely on that point, so nothing in the item is affected, but the Źródła label 'omówienie danych biometrycznych' hides that the source is school-focused and from 2021. Whether Polish national law adds conditions beyond Art. 9 ust. 4 is not decidable from the snapshots and was not asserted. Protocol: I opened only the role file, AGENTS.md, the packet, and the two snapshots. For README.md I read lines 38-77, which is slightly more than the section 'Jak czytać dowody' (lines 42-56); the extra lines are the start of 'Stan treści i pochodzenie' and were not used. I did not open book/, tests/, tools/, the manifest, git history or chapter files, and ran no script."
+}

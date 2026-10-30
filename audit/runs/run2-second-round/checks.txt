@@ -1,0 +1,15 @@
+03.4/verifier-a: rejected, UNAVAILABLE, 3 failure(s) (claim 5 (W praktyce#2) claim text is not part of that sentence of the item)
+03.4/verifier-b: rejected, UNAVAILABLE, 3 failure(s) (claim 5 (W praktyce#2) claim text is not part of that sentence of the item)
+03.4/adversary-a: accepted, PASS
+03.4/editor-a: accepted
+04.4/verifier-a: accepted, PASS
+04.4/adversary-a: accepted, PASS
+04.4/editor-a: accepted
+14.2/verifier-a: accepted, PASS
+14.2/verifier-b: accepted, PASS
+14.2/adversary-a: accepted, PASS
+14.2/editor-a: accepted
+14.7/verifier-a: rejected, UNAVAILABLE, 4 failure(s) (claim 1 (title#1) claim text is not part of that sentence of the item)
+14.7/verifier-b: rejected, UNAVAILABLE, 4 failure(s) (claim 1 (title#1) claim text is not part of that sentence of the item)
+14.7/adversary-a: accepted, PASS
+14.7/editor-a: accepted

@@ -27,16 +27,16 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 ### 2. Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach
 - Status: verified
-- Koszt: Zmiana haseł i przygotowanie menedżera. Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.
-- W praktyce: W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera i przygotuj odzyskiwanie konta. Zacznij od poczty, przez którą resetujesz inne konta.
+- Koszt: Zmiana haseł i przygotowanie menedżera haseł. Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.
+- W praktyce: W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je. Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu. Zacznij od poczty, przez którą resetujesz inne konta.
 - Korzyść i dowody: CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont. Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.
-- Ocena dowodów: C — zalecenie operacyjne zespołu reagowania, bez zmierzonej kwoty unikniętych strat.
+- Ocena dowodów: C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.
 - Ocena redakcyjna: Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony.
 - Ograniczenia: Silne hasło może zostać wyłudzone lub przechwycone. Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1). Nie podajemy jednej długości pasującej do wymagań każdej usługi.
 - Źródła: [CERT Polska: bezpieczne hasła i menedżery](https://wiedza.cert.pl/dobre-praktyki/hasla/).
 - Oryginał: [14.2](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L16-L23)
-- Weryfikacja: 2026-10-28; pełny poradnik CERT Polska: ponowne użycie haseł, menedżery i ochrona najważniejszych kont.
-- Zmiany w adaptacji: Zachowano C. Usunięto uniwersalne wymaganie 16 znaków i przykłady chińskich aplikacji. Nie obiecujemy, że menedżer sam chroni przed phishingiem.
+- Weryfikacja: 2026-10-28; pełny poradnik CERT Polska: ponowne użycie haseł, menedżery i ochrona najważniejszych kont. 2026-10-29: ponowne sprawdzenie zapisanej strony (główna część tekstu): drugi składnik logowania dla konta menedżera, kody zapasowe i hasło główne z losowych słów, zamiast ogólnego odzyskiwania konta; strona nie opisuje, czym jest CERT Polska.
+- Zmiany w adaptacji: Zachowano C. Usunięto uniwersalne wymaganie 16 znaków i przykłady chińskich aplikacji. Nie obiecujemy, że menedżer sam chroni przed phishingiem. Poprawka 2026-10-29: zamiast ogólnego „przygotuj odzyskiwanie konta” opisano to, co mówi źródło (hasło główne, drugi składnik dla konta menedżera, kody zapasowe), a opis źródła w Ocenie dowodów ograniczono do tego, co strona mówi o sobie.
 
 <a id="porada-14-3"></a>
 
@@ -94,18 +94,18 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 <a id="porada-14-7"></a>
 
-### 7. Rozdziel wymagane uprawnienia aplikacji od dodatkowych zgód
+### 7. Sprawdzaj osobno uprawnienia aplikacji i zgody na przetwarzanie danych
 - Status: verified
 - Koszt: Przeczytanie celu dostępu i zmiana ustawień; część funkcji może przestać działać. To ocena redakcji.
 - W praktyce: Sprawdź, do czego aplikacja chce dostępu, i nie akceptuj zbiorczo wszystkiego bez zastanowienia. Odbierz zbędne uprawnienia, na przykład do kontaktów, jeśli nie używasz funkcji, która ich potrzebuje. Przy zgodach na przetwarzanie danych przeczytaj cel i możliwość wycofania zgody.
-- Korzyść i dowody: RODO wymaga ograniczenia danych do niezbędnych dla celu. Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania. Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy. Dokumentacja Androida opisuje zarządzanie uprawnieniami aplikacji.
+- Korzyść i dowody: RODO wymaga ograniczenia danych do niezbędnych dla celu. Jeżeli podstawą jest zgoda, określa jej dobrowolność oraz prawo wycofania. Przy ocenie dobrowolności uwzględnia uzależnianie usługi od zgody na dane zbędne do wykonania umowy. Strona pomocy Androida opisuje zmianę uprawnień aplikacji.
 - Ocena dowodów: C — normy prawne i instrukcja systemu, nie badanie skuteczności interwencji.
 - Ocena redakcyjna: Kontrola konkretnego celu jest użyteczniejsza niż automatyczne wybieranie „zgadzam się na wszystko”.
-- Ograniczenia: Uprawnienie systemowe nie jest automatycznie zgodą RODO na każde przetwarzanie. Zgoda nie jest jedyną podstawą prawną, a odmowa nie daje bezwarunkowego prawa do każdej usługi. Niektóre funkcje wymagają określonego dostępu. To nie jest rozstrzygnięcie legalności konkretnej aplikacji.
-- Źródła: [RODO, art. 5–7, tekst urzędowy udostępniony przez UODO](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [Google: zmiana uprawnień aplikacji](https://support.google.com/android/answer/9431959?hl=pl).
+- Ograniczenia: Uprawnienie aplikacji w Androidzie dotyczy dostępu do funkcji urządzenia, a zgoda w rozumieniu RODO (art. 4 pkt 11) to dobrowolne, konkretne, świadome i jednoznaczne okazanie woli. To zestawienie redakcji, nie wniosek z cytowanych źródeł. Zgoda nie jest jedyną podstawą przetwarzania (art. 6 ust. 1 RODO). Art. 7 ust. 4 mówi, że przy ocenie dobrowolności zgody w jak największym stopniu uwzględnia się między innymi uzależnienie wykonania umowy, w tym usługi, od zgody na dane zbędne do jej wykonania; nie rozstrzyga, kiedy usługa musi być dostępna mimo odmowy. Strona pomocy Androida wiąże uprawnienia z funkcjami urządzenia, takimi jak aparat czy lista kontaktów, i opisuje, jak ich włączenie wpływa na działanie aplikacji; dotyczy Androida, a część kroków obowiązuje tylko na wybranych telefonach i wersjach systemu. To nie jest rozstrzygnięcie legalności konkretnej aplikacji. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.
+- Źródła: [RODO, art. 4 pkt 11 oraz art. 5–7, tekst urzędowy udostępniony przez UODO](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [Google: zmiana uprawnień aplikacji](https://support.google.com/android/answer/9431959?hl=pl).
 - Oryginał: [14.7](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L61-L68)
-- Weryfikacja: 2026-10-28; polski tekst art. 5 ust. 1 lit. c, art. 6 i art. 7 RODO; polska instrukcja Androida. Bez analizy umowy konkretnej usługi.
-- Zmiany w adaptacji: Oryginalne A zastąpiono C dla normy prawnej. Chińskie przepisy zastąpiono odpowiednim zakresem RODO, bez obietnicy, że każda odmowa zgody musi pozostawić usługę dostępną.
+- Weryfikacja: 2026-10-28; polski tekst art. 5 ust. 1 lit. c, art. 6 i art. 7 RODO; polska instrukcja Androida. Bez analizy umowy konkretnej usługi. 2026-10-29: ponowne sprawdzenie na zapisanych źródłach: art. 4 pkt 11, art. 5 ust. 1 lit. c, art. 6 ust. 1 i art. 7 ust. 3 i 4 RODO oraz strona pomocy Androida. Żadne z tych źródeł nie łączy uprawnienia systemowego ze zgodą RODO.
+- Zmiany w adaptacji: Oryginalne A zastąpiono C dla normy prawnej. Chińskie przepisy zastąpiono odpowiednim zakresem RODO, bez obietnicy, że każda odmowa zgody musi pozostawić usługę dostępną. Poprawka 2026-10-29: źródło systemowe nazwano stroną pomocy, związek między uprawnieniem a zgodą opisano jako zestawienie redakcji, a zdanie o odmowie ograniczono do treści art. 7 ust. 4; dodano zastrzeżenie o braku przeglądu prawnika. Tytuł nie wprowadza już podziału „wymagane”/„dodatkowe” ani nie twierdzi, że uprawnienie nie jest zgodą, czego żadne z cytowanych źródeł nie opisuje; zdanie o funkcjach zastąpiono opisem tego, co mówi strona pomocy.
 
 <a id="porada-14-8"></a>
 
@@ -116,26 +116,26 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 - Korzyść i dowody: RODO określa prawo dostępu i kopii w art. 15, sprostowania w art. 16 oraz usunięcia w art. 17. Art. 12 przewiduje odpowiedź bez zbędnej zwłoki, zasadniczo w ciągu miesiąca od otrzymania żądania. Termin może być przedłużony o dwa kolejne miesiące ze względu na skomplikowanie lub liczbę żądań, z informacją i przyczyną przekazaną w pierwszym miesiącu.
 - Ocena dowodów: C — treść rozporządzenia i wyjaśnienie UODO, nie badanie rezultatów sporów.
 - Ocena redakcyjna: Precyzyjne żądanie i zapis korespondencji pomagają ustalić, czego dotyczy odpowiedź. Nie obiecujemy wyniku sporu.
-- Ograniczenia: Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń. Kopia danych nie może naruszać praw i wolności innych. Administrator może w uzasadnionym zakresie potwierdzać tożsamość. Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału.
+- Ograniczenia: Usunięcie nie jest bezwarunkowe: wyjątki obejmują między innymi obowiązek prawny, wolność wypowiedzi, określone cele interesu publicznego oraz ustalenie, dochodzenie lub obronę roszczeń. Kopia danych nie może naruszać praw i wolności innych. Administrator może w uzasadnionym zakresie potwierdzać tożsamość. Nie wysyłaj dokumentu tożsamości bez sprawdzenia potrzeby i kanału. Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.
 - Źródła: [RODO, art. 12 i 15–17, tekst urzędowy na stronie UODO](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [UODO: prawo do usunięcia i wyjątki](https://www.uodo.gov.pl/pl/493/4098).
 - Oryginał: [14.8](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L70-L77)
 - Weryfikacja: 2026-10-28; polski tekst art. 12, 15, 16 i 17, fizyczne strony 39–44 dokumentu; oficjalny poradnik UODO o usunięciu, terminie i potwierdzeniu tożsamości. Nie oceniano indywidualnego żądania.
-- Zmiany w adaptacji: Oryginalne A zastąpiono C. Usunięto chińską podstawę prawną i bezwarunkową obietnicę usunięcia. Dodano wyjątki, tryb odpowiedzi oraz rozróżnienie zamknięcia konta od usunięcia danych.
+- Zmiany w adaptacji: Oryginalne A zastąpiono C. Usunięto chińską podstawę prawną i bezwarunkową obietnicę usunięcia. Dodano wyjątki, tryb odpowiedzi oraz rozróżnienie zamknięcia konta od usunięcia danych. Dodano 2026-10-29 zastrzeżenie, że tekst nie jest poradą prawną i nie miał przeglądu prawnika.
 
 <a id="porada-14-9"></a>
 
 ### 9. Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę
 - Status: verified
 - Koszt: Przeczytanie informacji i zapytanie o inny sposób weryfikacji. To ocena redakcji.
-- W praktyce: Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę. Nie zakładaj jednak, że chiński przepis o obowiązkowej alternatywie działa w Polsce.
+- W praktyce: Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę.
 - Korzyść i dowody: RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację. Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki. Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.
 - Ocena dowodów: C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.
 - Ocena redakcyjna: Warto znać sposób wykorzystania danych przed ich przekazaniem, zamiast utożsamiać wygodę z koniecznością prawną.
-- Ograniczenia: Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu. Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej. Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia. Ochronę logowania opisuje [14.1](#porada-14-1).
+- Ograniczenia: Nie każde zdjęcie jest automatycznie przetwarzaniem biometrycznym w tym znaczeniu. Możliwość odmowy i żądania alternatywy zależy od kontekstu i podstawy prawnej. Ta porada dotyczy organizacji przetwarzającej biometrię, nie jest oceną lokalnego odblokowania urządzenia. Ochronę logowania opisuje [14.1](#porada-14-1). Tekst opisuje przepisy ogólnie, nie jest poradą prawną i nie miał przeglądu prawnika.
 - Źródła: [RODO, art. 4 pkt 14, art. 9 i informacje z art. 13](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [UODO: omówienie danych biometrycznych](https://uodo.gov.pl/pl/file/3534).
 - Oryginał: [14.9](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L79-L86)
 - Weryfikacja: 2026-10-28; polski tekst art. 4 pkt 14, art. 9 i art. 13; definicje i podstawy prawne w materiale UODO. Nie przenoszono opisanych w starszej prezentacji rozstrzygnięć konkretnej sprawy szkolnej.
-- Zmiany w adaptacji: Oryginalne A zastąpiono C. Usunięto chińskie nakazy, progi liczby osób, terminy rejestracji i granice wieku. Nie utworzono fikcyjnego polskiego prawa do alternatywy w każdej sytuacji.
+- Zmiany w adaptacji: Oryginalne A zastąpiono C. Usunięto chińskie nakazy, progi liczby osób, terminy rejestracji i granice wieku. Nie utworzono fikcyjnego polskiego prawa do alternatywy w każdej sytuacji. Dodano 2026-10-29 zastrzeżenie, że tekst nie jest poradą prawną i nie miał przeglądu prawnika.
 
 <a id="porada-14-10"></a>
 

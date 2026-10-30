@@ -1,0 +1,115 @@
+{
+  "item": "03.2",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "scope-words", "leak", "self-containment", "recency", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "numbers",
+      "reason": "The cited Phillips article (nature.com) has snapshot null and access blocked. The only figures in the item (61 students, 30 days) appear in no cited, readable snapshot: they are only in upstream line 5 and in the lead row (Europe PMC, origin lead), which cannot support or refute. The NHS snapshot contains no figure used in the item. Pointers for the verifier, not evidence: the lead text gives n = 59 for the grade correlation (r = 0.37) and n = 12 vs n = 12 for the melatonin comparison, so '61 studentów' is not the denominator of every result in Korzyść i dowody#2."
+    }
+  ],
+  "preservation": [
+    {"upstream_line": 1, "upstream_action": "Fix wake time, weekends the same", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 3, "upstream_action": "Sleep in less at weekends (cost: some willpower)", "fate": "narrowed", "fallback_stated": true},
+    {"upstream_line": 8, "upstream_action": "Spend more time outdoors in daylight in addition to a fixed wake time (upstream itself calls it an inference from the authors' model, untested)", "fate": "dropped", "fallback_stated": false},
+    {"upstream_line": 8, "upstream_action": "After an occasional late night, go to bed earlier that evening instead of sleeping until noon the next day", "fate": "dropped", "fallback_stated": false}
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen.",
+      "why": "Upstream line 8 carries a concrete recovery action for a reader who has already stayed up late: go to bed earlier that evening, do not sleep until noon. The item drops it, and the Zmiany w adaptacji field does not list the drop (it names only the weekend rule and the light model). A reader after a late night is left with 'similar wake time' and 'enough time for sleep' and no way to reconcile the two. The cited NHS snapshot states the same recovery rule, so the action is source-supported and was available to keep. The effect on the reader is small, which is why this is minor.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "办法是当晚早点上床，不是第二天睡到中午"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 129, "text": "stick to your regular sleeping hours instead"}
+      ],
+      "fix_direction": "Either restore the late-night recovery action (earlier bedtime the same evening, not a long sleep-in) with its NHS support, or list the drop with a reason in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "title#1",
+      "text": "Dbaj o regularne pory snu, nie skracając odpoczynku",
+      "why": "The title promises regular sleep times, while W praktyce advises similar waking times only. The Phillips source studied the regularity of the whole sleep/wake pattern (its title says 'sleep/wake patterns'), not wake time alone, and upstream line 1 is about fixing the wake time. Only the NHS snapshot supports 'same wake-up time' as such, and it does so in an insomnia self-help list. A reader cannot tell from the title whether bedtime or wake time is the action. The second half of the title ('nie skracając odpoczynku') comes from neither upstream line.",
+      "evidence": [
+        {"source": "upstream", "line": 7, "text": "Irregular sleep/wake patterns are associated with poorer academic performance"},
+        {"source": "upstream", "line": 1, "text": "固定起床时间，周末也一样"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"}
+      ],
+      "fix_direction": "Make the title and the action name the same thing (regular wake time or regular sleep and wake pattern) and say in the item which of the two the study measured and which the NHS page recommends."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "przeznacz wystarczająco dużo czasu na sen",
+      "why": "This is an added action that does not appear in the upstream span, and the Zmiany w adaptacji field does not say it was added. 'Wystarczająco dużo' has no criterion in the item, although the cited NHS snapshot gives one (an average range for adults and a sign of too little sleep). The advice is safe, but the origin of the extra action is not disclosed and the reader gets no way to judge 'enough'.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 41, "text": "adults need 7 to 9 hours"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 47, "text": "You probably do not get enough sleep if you're constantly tired during the day."}
+      ],
+      "fix_direction": "Mark the sleep-time clause as an editorial addition in Zmiany w adaptacji and, if kept, tie it to the NHS statement with its wording about averages and individual differences."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "NHS zaleca stałą porę wstawania jako element dbania o sen.",
+      "why": "In the NHS snapshot the same-wake-time advice sits under 'How you can treat insomnia yourself', i.e. self-help for people with insomnia, and the page opens with the claim that insomnia usually improves by changing sleeping habits. The item widens it to general 'dbania o sen' and does not say it is insomnia advice. The item also does not expand 'NHS' or say it is the British health service, while AGENTS.md asks for Polish or EU sources for health topics and for technical terms to be explained at first use. The wake-time advice itself is correctly attributed.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 97, "text": "How you can treat insomnia yourself"},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 99, "text": "Insomnia usually gets better by changing your sleeping habits."},
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 105, "text": "wake up and get out of bed at the same time every day"}
+      ],
+      "fix_direction": "State the population (people with insomnia, self-help section) and that NHS is the UK health service; say plainly that no Polish or EU source for this point is in the snapshots."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#2",
+      "text": "mniej regularna grupa miała późniejszy rytm dobowy",
+      "why": "Upstream line 5 says the circadian difference is between the least regular fifth and the most regular fifth of the 61. 'Mniej regularna grupa' reads as an ordinary comparison of two parts of the sample and drops the extremes-only design and the size of the shift. The item also does not say that a later rhythm in irregular sleepers is only an association here. The wording does not change what a reader would do, so minor.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "作息最不规律的五分之一，生物钟（昼夜节律）比最规律的五分之一晚约 2.5 小时"}
+      ],
+      "fix_direction": "Name the comparison as the least regular versus the most regular fifth of participants, and say it was measured on a small subgroup (a number only after it is verified against a cited full text)."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "Phillips i współautorzy obserwowali 61 studentów przez 30 dni.",
+      "why": "Upstream line 5 says the students recorded their own sleep for 30 days. 'Obserwowali' suggests researcher observation and hides that sleep timing was self-recorded. This is a method detail that bears on how far the result can be trusted. The count itself cannot be checked here (see attacks_not_assessable).",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "61 名大学生记录了 30 天"}
+      ],
+      "fix_direction": "Reword so that the students kept sleep records and the researchers analysed them; keep the limitation visible in the same sentence or in Ograniczenia."
+    },
+    {
+      "severity": "minor",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pobudki.",
+      "why": "The README definition of B covers a single study, and that is what holds the letter. The NHS snapshot is patient self-help text, not shown here to be a clinical guideline, so it should not be read as a second source that lifts the grade. The sentence puts both under one B. The item does say that no efficacy trial of a fixed wake time exists, so the letter does not hide the low certainty. This is a wording precision issue.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "b59686537010480d.txt", "line": 97, "text": "How you can treat insomnia yourself"}
+      ],
+      "fix_direction": "Say that B rests on the single observational study and that the NHS page is general patient advice, not a clinical guideline and not a measurement of the effect."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Korelacja nie dowodzi poprawy ocen po zmianie pobudki.",
+      "why": "The sentence limits only the grades finding. The other reported result (later circadian rhythm in irregular sleepers) is placed under Korzyść i dowody with no matching limit, although upstream line 8 says there is one study, few participants, no controlled comparison, and that the light-based adjustment was never tested in a trial. A reader can take 'later rhythm' as something a fixed wake time will shift. The sentence stated is itself correct and supported by upstream line 8.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "只有这一项研究，人数少，也没有分组对照"},
+        {"source": "upstream", "line": 8, "text": "但没有做试验验证"}
+      ],
+      "fix_direction": "Extend the limitation to both reported associations (grades and circadian timing) and add that there is a single small study without a comparison group."
+    }
+  ],
+  "notes": "Cited Phillips source (nature.com) is blocked with snapshot null, so every statement about the paper rests on upstream lines (a lead) and on a lead-origin Europe PMC full text; I used the lead only to decide where to look and did not put any lead quote in evidence. Lead pointers for the verifier, not evidence: the lead text reports n = 59 for the GPA correlation, GPA self-reported, 12 vs 12 for the melatonin comparison, Harvard undergraduates living on campus (excluding first-years), and no correlation between sleep regularity and sleep duration; none of these is in the item's Ograniczenia. No blocker found. Status is UNAVAILABLE only because the numbers attack cannot be decided from a cited readable source. NHS claims checked against the cited snapshot: same wake time (line 105) is supported; recency shows no conflict (NHS page last reviewed 19 March 2024, next review due 19 March 2027, consistent with a 2017 study). No Chinese institution, hotline, threshold or legal statement appears in reader-facing fields. The item has no cross-reference links and is self-contained. Protocol: I read README.md lines 38-77, which is slightly more than the section 'Jak czytać dowody' (lines 42-56); I opened nothing else outside the allowed set."
+}

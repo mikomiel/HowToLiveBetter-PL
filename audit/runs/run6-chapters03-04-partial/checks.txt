@@ -1,0 +1,20 @@
+03.1/verifier-a: accepted, UNAVAILABLE
+03.1/adversary-a: accepted, PASS
+03.1/editor-a: accepted
+03.2/verifier-a: accepted, UNAVAILABLE
+03.2/verifier-b: accepted, FAIL
+03.2/adversary-a: rejected, UNAVAILABLE, 1 failure(s) (finding 8 (limitations) upstream quote is shorter than 12 characters)
+03.2/editor-a: accepted
+03.3/verifier-a: rejected, UNAVAILABLE, 7 failure(s) (claim 7 (Korzyść i dowody#1) quote is not on line 14 of b6bab3851cebff29.txt (that line starts: "objectivesto inform the debate over whether human sleep can be )
+03.3/verifier-b: accepted, UNAVAILABLE
+03.3/adversary-a: rejected, PASS, 1 failure(s) (finding 4 (grade) quote is not on line 14 of b6bab3851cebff29.txt (that line starts: "objectivesto inform the debate over whether human sleep can be chronic"))
+03.3/editor-a: accepted
+03.5/verifier-a: accepted, FAIL
+03.5/adversary-a: rejected, UNAVAILABLE, 3 failure(s) (finding 1 (numbers) line 5 is outside the source text of fc3c2cf54e0262ec.txt)
+03.5/editor-a: accepted
+03.6/verifier-a: accepted, UNAVAILABLE
+03.6/adversary-a: accepted, PASS
+03.6/editor-a: accepted
+03.7/verifier-a: accepted, UNAVAILABLE
+03.7/adversary-a: accepted, PASS
+03.7/editor-a: accepted

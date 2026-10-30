@@ -1,0 +1,111 @@
+{
+  "item": "03.5",
+  "status": "FAIL",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Only the general direction is backed: the article title in the snapshot says less frequent email checking reduces stress. The snapshot is metadata only (no abstract), so it says nothing about checking at fixed times or about any schedule; the condition 'jeśli obowiązki pozwalają' is the editors' own hedge and is not in the snapshot."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie.",
+      "verdict": "partly",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "Backed only in part: the title in the snapshot supports the idea that checking email less often lowers stress, which is the basis for limiting when ordinary email is answered. Nothing in the snapshot (metadata only) speaks to keeping a separate channel for urgent matters or to setting specific answering times; that part is not backed."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie.",
+      "verdict": "unsupported",
+      "reason": "Searched fc3c2cf54e0262ec.txt for any text on a three-per-day limit, on adapting the schedule, or on work obligations. The snapshot holds only DOI, title, authors, journal and year, so no source line backs this advice and no quote contains the three-per-day regime it refers to. The advice is a conservative hedge and is not contradicted by anything in the snapshot."
+    },
+    {
+      "id": "Korzyść i dowody#1.1",
+      "kind": "source_description",
+      "claim": "W badaniu Kushleva i Dunn",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "fc3c2cf54e0262ec.txt", "line": 9, "text": "Authors: Kushlev, Dunn"}
+      ],
+      "reason": "Authorship matches the metadata of the DOI. The metadata does not state the document type or design."
+    },
+    {
+      "id": "Korzyść i dowody#1.2",
+      "kind": "source_claim",
+      "claim": "124 dorosłych porównywało dwa tygodnie.",
+      "verdict": "not_checkable",
+      "reason": "The snapshot is metadata only (DOI, title, authors, journal, year) with no abstract or methods text. Sample size (124 adults), the age group and the two-week comparison design need the abstract or the full text."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"}
+      ],
+      "reason": "The article title supports only the general finding that less frequent email checking reduces stress. The three-times-a-day limit, the measure of perceived daily stress, the within-person comparison of a limited week with an unlimited week and the direction within that design are not in the metadata-only snapshot; the abstract or full text is needed."
+    },
+    {
+      "id": "Ocena dowodów#1",
+      "kind": "source_description",
+      "claim": "B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"}
+      ],
+      "reason": "The title supports that the outcome concerns stress. The design label (short, within-subject, randomised order of conditions) is not in the metadata-only snapshot and needs the abstract or full text. The grade letter B is editorial and was not checked."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Warto sprawdzić taki sposób obsługi zwykłej poczty.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "meta_statement",
+      "claim": "Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5).",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów.",
+      "verdict": "not_checkable",
+      "reason": "Absence of a measure or of a messenger condition can only be shown from the abstract or full text. The snapshot is metadata only (DOI, title, authors, journal, year), so it cannot show what was or was not measured."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "meta_statement",
+      "claim": "Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "title#1", "note": "The title speaks of checking at fixed times; the snapshot only says 'less frequently', with no population (people with duties) or schedule."},
+    {"id": "Korzyść i dowody#1.1", "note": "Metadata confirms authors only; it does not show that the paper is a study with the design the item describes."},
+    {"id": "Korzyść i dowody#2", "note": "The sentence names a specific condition (limit of three checks a day versus no limit, compared across two weeks, outcome perceived daily stress) that the snapshot title does not state; the title is a general statement without limit, design or outcome measure."},
+    {"id": "Ocena dowodów#1", "note": "Design details (short duration, within-subject, randomised order) go beyond the metadata; only the stress outcome is reflected in the title."},
+    {"id": "W praktyce#1", "note": "Separate urgent channel and chosen answering times go beyond a title that only says less frequent checking reduces stress."}
+  ],
+  "notes": "Snapshot fc3c2cf54e0262ec.txt is a Crossref metadata-only stub (154 chars: DOI, title, authors, journal, year; no abstract), so every detail except authorship and the generic direction of the finding (title) needs the abstract or full text fetched again. The plausible identity of the paper was confirmed by DOI, title and authors. packet.warnings was empty. FAIL comes only from W praktyce#2 (recommendation with no backing); it is a conservative hedge, not contradicted. Opened only the role file, AGENTS.md, the packet and the one listed snapshot; nothing outside the allowed set."
+}
