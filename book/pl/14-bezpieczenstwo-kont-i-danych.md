@@ -142,7 +142,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 10. Nie przekazuj sekretów niesprawdzonym pośrednikom AI
 - Status: verified
 - Koszt: Sprawdzenie operatora, warunków przetwarzania i uprawnień narzędzia. Cena nie jest tu dowodem bezpieczeństwa.
-- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza skorzystaj z procedury jego unieważnienia u wystawcy.
+- W praktyce: Przed użyciem pośrednika ustal, kto otrzymuje treść, jakie dane przechowuje i komu je przekazuje. Nie wysyłaj mu kluczy dostępu, cudzych danych ani prywatnego kodu bez właściwego upoważnienia i oceny poufności oraz podstaw przetwarzania danych. Nie pozwalaj niezweryfikowanym odpowiedziom AI automatycznie wykonywać poleceń z szerokimi uprawnieniami. Przy ujawnieniu klucza unieważnij go zgodnie z procedurą wystawcy.
 - Korzyść i dowody: Liu i współautorzy opisali w preprincie badanie 28 płatnych i 400 bezpłatnych pośredników API modeli. W tej próbie wykryli między innymi wstrzykiwanie szkodliwego kodu do odpowiedzi oraz dostęp do badawczych kluczy kontrolnych. Badani pośrednicy mieli dostęp do jawnej treści przekazywanych żądań.
 - Ocena dowodów: B — pojedyncze badanie pomiarowe opublikowane jako preprint, nie reprezentatywna ocena całego rynku.
 - Ocena redakcyjna: Sekretu nie należy używać do sprawdzania wiarygodności nieznanego dostawcy. Ocena musi poprzedzać przekazanie danych.
