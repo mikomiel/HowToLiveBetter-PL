@@ -22,7 +22,7 @@ Nie poprawiano ich ręcznie. Są w katalogu tak, jak je napisała rola, i `diges
 
 ## Różnice między dwoma przebiegami weryfikatora (decyduje człowiek)
 
-Liczba różnic w nawiasie, szczegóły w `digest.md`: 03.2 (2), 03.8 (1), 03.18 (7), 03.26 (3), 03.27 (1), 04.9 (3), 14.1 (2), 14.2 (2), 14.4 (1), 14.6 (2), 14.9 (2), 14.10 (6), 14.12 (1). Przy 03.18 i 14.10 różnic jest najwięcej.
+Liczba różnic w nawiasie, szczegóły w `digest.md`: 03.2 (2), 03.8 (1), 03.18 (7), 03.26 (3), 03.27 (1), 04.9 (3), 14.1 (2), 14.2 (2), 14.4 (1), 14.6 (2), 14.9 (2), 14.10 (6), 14.12 (1). Przy 03.18 i 14.10 różnic jest najwięcej. `digest.md` pokazuje też jedną różnicę przy 03.3, ale liczy ją z odrzuconego raportu verifier-a, więc `audit.mjs status` jej nie zalicza i tu nie jest policzona.
 
 ## Granice tego przebiegu
 
