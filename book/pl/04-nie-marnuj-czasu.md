@@ -71,10 +71,10 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 5. Przygotuj plan spotkania i korzystaj z niego
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Organizator musi przygotować plan i udostępnić go uczestnikom. To ocena redakcji.
-- W praktyce: Przygotuj plan i użyj go podczas spotkania. Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik. Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.
+- W praktyce: Przygotuj plan i korzystaj z niego podczas spotkania. Przykład redakcyjny: zapisz tematy do omówienia i oczekiwany wynik. Tego konkretnego sposobu pisania planu nie sprawdzono w cytowanym badaniu.
 - Korzyść i dowody: Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby. Korzystanie z porządku obrad wiązało się z lepszą oceną skuteczności spotkania przez uczestników.
 - Ocena dowodów: B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.
-- Ocena redakcyjna: Przygotowanie planu jest niewielkim nakładem. Warto sprawdzić, czy ułatwia waszemu zespołowi podjęcie decyzji.
+- Ocena redakcyjna: Przygotowanie planu jest niewielkim nakładem pracy. Warto sprawdzić, czy ułatwia twojemu zespołowi podjęcie decyzji.
 - Ograniczenia: Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę. Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji. Rada nie uprawnia do pomijania obowiązkowych spotkań.
 - Źródła: Leach, Rogelberg, Warr i Burnfield (2009), Perceived meeting effectiveness: The role of design characteristics. [DOI i abstrakt wydawcy](https://doi.org/10.1007/s10869-009-9092-6).
 - Oryginał: [04.5](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md#L43-L50)
