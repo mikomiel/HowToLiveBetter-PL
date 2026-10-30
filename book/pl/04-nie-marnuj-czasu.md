@@ -101,7 +101,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 ### 9. Sprawdź, co utrudnia rozpoczęcie zadania, zamiast poprzestawać na samokrytyce
 - Status: verified
 - Koszt: Bez dodatkowych wydatków. Potrzebna jest chwila na rozpoznanie przeszkody i wysiłek zmiany sposobu pracy. To ocena redakcji.
-- W praktyce: Zapytaj, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne. Wybierz mały pierwszy krok. Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).
+- W praktyce: Zapytaj siebie, czy zadanie jest niejasne, nieprzyjemne albo wydaje się niewykonalne. Wybierz mały pierwszy krok. Możesz wykorzystać [plan „jeśli–to” z porady 04.1](#porada-4-1).
 - Korzyść i dowody: Steel przeanalizował 691 korelacji dotyczących prokrastynacji. Z odkładaniem zadań wiązały się między innymi niechęć do zadania, odległość nagrody lub zakończenia w czasie, poczucie własnej skuteczności i impulsywność. Są to związki statystyczne, nie dowód jednej przyczyny prokrastynacji.
 - Ocena dowodów: B — synteza badań korelacyjnych potwierdza związki, ale nie jest testem skuteczności proponowanego działania.
 - Ocena redakcyjna: Przyjrzenie się przeszkodzie może pomóc dobrać działanie. Sama zmiana sposobu myślenia nie ma tutaj zmierzonego efektu.
