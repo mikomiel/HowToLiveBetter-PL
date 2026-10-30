@@ -313,7 +313,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 27. Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi
 - Status: verified
 - Koszt: Konsultacja, ewentualne badanie snu i leczenie. Organizacja i wydatki zależą od sytuacji; nie podajemy cen aparatu ani zasad refundacji.
-- W praktyce: Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.
+- W praktyce: Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność za kierownicą, nie kontynuuj jazdy; zatrzymaj się w bezpiecznym miejscu i wybierz inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.
 - Korzyść i dowody: Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego. Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.
 - Ocena dowodów: B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika.
 - Ocena redakcyjna: Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.
