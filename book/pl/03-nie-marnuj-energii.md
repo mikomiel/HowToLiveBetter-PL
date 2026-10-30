@@ -298,7 +298,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 26. Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności
 - Status: verified
 - Koszt: Ocena problemu, udział w terapii i praca między spotkaniami. Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.
-- W praktyce: Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Nie zmieniaj samodzielnie przepisanych leków i nie zaczynaj ograniczać czasu w łóżku bez ustalenia bezpieczeństwa tej metody.
+- W praktyce: Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Propozycja redakcji: nie zmieniaj samodzielnie przepisanych leków i nie zaczynaj ograniczać czasu w łóżku bez ustalenia bezpieczeństwa tej metody.
 - Korzyść i dowody: Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.
 - Ocena dowodów: B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.
 - Ocena redakcyjna: Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.
@@ -306,7 +306,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Źródła: Riemann i współautorzy (2023), The European Insomnia Guideline. [Abstrakt autorów](https://pubmed.ncbi.nlm.nih.gov/38016484/); Edinger i współautorzy (2021), AASM clinical practice guideline. [Pełny tekst zaleceń](https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/); [NHS: kiedy zgłosić bezsenność](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.26](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L246-L253)
 - Weryfikacja: 2026-10-28; abstrakt europejskich wytycznych oraz zalecenia 1 i 6 AASM i ich zakres dla dorosłych; informacja NHS dla pacjentów. Nie jest to pełny przegląd leków.
-- Zmiany w adaptacji: Oryginalne A zastąpiono B dla węższego wniosku klinicznego. Usunięto instrukcję samodzielnego ograniczania snu, chińskie ścieżki leczenia oraz liczby korzyści i szkód z różnych populacji. Nie stawiamy rozpoznania wyłącznie na podstawie liczby nocy.
+- Zmiany w adaptacji: Oryginalne A zastąpiono B dla węższego wniosku klinicznego. Usunięto instrukcję samodzielnego ograniczania snu, chińskie ścieżki leczenia oraz liczby korzyści i szkód z różnych populacji. Nie stawiamy rozpoznania wyłącznie na podstawie liczby nocy. 2026-10-30 (przegląd run7, decyzja właściciela): zdanie ostrzegawcze o lekach i ograniczaniu czasu w łóżku oznaczono jako propozycję redakcji; wytyczne AASM mówią tylko, że ograniczanie snu może być przeciwwskazane u części osób.
 
 <a id="porada-3-27"></a>
 
