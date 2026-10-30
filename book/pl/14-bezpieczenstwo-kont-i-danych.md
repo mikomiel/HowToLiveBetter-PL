@@ -126,7 +126,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 ### 9. Zanim przekażesz biometrię, zapytaj o cel, podstawę i alternatywę
 - Status: verified
-- Koszt: Przeczytanie informacji i zapytanie o inny sposób weryfikacji. To ocena redakcji.
+- Koszt: Przeczytanie informacji i zapytanie o inną metodę weryfikacji. To ocena redakcji.
 - W praktyce: Gdy organizacja chce używać twarzy lub odcisku palca do identyfikacji, zapytaj, kto przetwarza dane, w jakim celu, na jakiej podstawie i jak długo. Zapytaj także o inną metodę.
 - Korzyść i dowody: RODO definiuje dane biometryczne przez specjalne przetwarzanie techniczne umożliwiające lub potwierdzające jednoznaczną identyfikację. Art. 9 obejmuje szczególną ochroną biometrię używaną do takiego celu: zasadniczy zakaz ma wymienione w prawie wyjątki. Wyraźna zgoda jest jednym z nich, nie jedyną możliwą podstawą.
 - Ocena dowodów: C — norma prawna dotycząca kategorii danych, nie porównanie skuteczności metod logowania.
