@@ -1,0 +1,230 @@
+{
+  "item": "03.23",
+  "status": "PASS",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 3,
+      "upstream_action": "Instead of venting, switch for a few minutes to something that slows the heartbeat: breathe slowly (慢慢呼吸)",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Sit down and be still (坐下来，静一静); also the cost facts: free, a few minutes, hard because the urge is to vent",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Mindfulness and meditation as further arousal-decreasing options (正念、冥想)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Do not use punching bag, jogging or cycling to vent; the upstream conclusion is that venting and going for a run are not effective ways to calm anger",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Practical on-the-spot options live in other items: leave the scene first, cyclic sighing (生气时先离场, 循环叹息)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Running is not useless: long-term it helps low mood (情绪低落); it is only unsuitable for calming anger on the spot",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "When angry do not drive, do not send messages, do not make decisions (气头上别开车，别发消息，别做决定)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "If someone is hitting you: leave first, call the police (先离开、报警); the task then is not managing your emotions",
+      "fate": "narrowed",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "title#1",
+      "text": "zamiast agresywnego wyładowania",
+      "why": "The item defines what to avoid as 'aggressive discharge' (the title, and 'intensywnego wyładowania' in Ocena redakcyjna) and nowhere names the arousal-increasing activities the source rated ineffective: hitting a bag, jogging and cycling. The abstract and the upstream state outright that going for a run is not an effective way to manage anger. A reader who would go for a run or a bike ride to cool down does not recognise that as the discouraged category, so narrowing 'arousal-increasing' to 'aggressive' changes what that reader does. Korzyść i dowody#3 ('Działania zwiększające pobudzenie') leaves the category undefined for the same reason.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "Some anger management activities focus on decreasing arousal (e.g., deep breathing, mindfulness, meditation), whereas others focus on increasing arousal (e.g., hitting a bag, jogging, cycling)."
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "These findings do not support the ideas that venting anger or going for a run are effective anger management activities."
+        },
+        {
+          "source": "upstream",
+          "line": 5,
+          "text": "让身体更兴奋的办法，比如打沙袋、慢跑、骑车，整体无效"
+        }
+      ],
+      "fix_direction": "Name the arousal-increasing examples that the abstract lists in the reader-facing fields, or word the title and Ocena redakcyjna with the source's own category instead of 'aggressive'. Keep the statement that the finding concerns anger and aggression only."
+    },
+    {
+      "severity": "major",
+      "attack": "limitations",
+      "id": "Źródła#1",
+      "text": "Abstrakt i wprowadzenie",
+      "why": "The source label says that the abstract and the introduction were used. The stored snapshot is abstract-only (Access: abstract, Europe PMC abstract block) and contains no introduction text, so the stated scope of what was checked is wider than what the packet holds. AGENTS.md asks for the item to say what was actually checked in the abstract when no full text exists. All numbers in the item do appear in the abstract, so a reader's action does not change, but the verification scope is overstated.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 5,
+          "text": "Access: abstract"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 13,
+          "text": "ABSTRACT (Europe PMC):"
+        }
+      ],
+      "fix_direction": "State the scope that the snapshot supports (abstract only), or attach a stored snapshot of the introduction before claiming it. Source: Źródła is not listed in packet.propositions, so the id follows the field#index pattern."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie",
+      "why": "The meta-analysis compared categories of anger management activities. It does not show that pausing an aggressive reaction, or a break from a dispute (Koszt#1, Ocena redakcyjna#1), works while a conflict is under way. Its listed breathing example is 'deep breathing', while the item advises calm breathing 'bez forsowania oddechu', a modified practice. Upstream itself sends the on-the-spot methods to other items. The item calls this 'propozycja łagodnej próby' but does not label it an editorial example.",
+      "evidence": [
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "Some anger management activities focus on decreasing arousal (e.g., deep breathing, mindfulness, meditation)"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "当场能用的办法见第 22 节第 8 条（循环叹息），还有本节第 17 条（生气时先离场）"
+        }
+      ],
+      "fix_direction": "Mark the concrete step (pausing the dispute, calm breathing without forcing) as an editorial application of the studied category, separate from what the synthesis measured."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "W praktyce#1",
+      "text": "na przykład przez spokojne oddychanie",
+      "why": "Upstream gives mindfulness and meditation as further calming options and 'sit down, be still'. The item keeps only breathing, so a reader for whom breathing exercises are uncomfortable (the item itself warns against forcing breath) is told only to 'calm the body' without a concrete alternative. Upstream also warns not to drive, send messages or make decisions while angry; none of these cautions survives in the item.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 4,
+          "text": "慢呼吸、正念、冥想这类让身体静下来的办法"
+        },
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "气头上别开车，别发消息，别做决定。"
+        }
+      ],
+      "fix_direction": "Decide explicitly whether the alternative calming options and the three cautions are kept or deliberately removed, and record a removal in Zmiany w adaptacji."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Przerwa od sporu i próba spokojnego działania.",
+      "why": "Upstream gives the cost as no money, a few minutes, some effort, and says the hard part is that the urge in the moment is to vent. The item's Koszt field gives none of the three components (money, time, effort), although AGENTS.md asks to separate them. Koszt#2 also uses 'czas leczenia', which suggests treatment rather than an anger-management try.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "不花钱。气头上改做几分钟让心跳慢下来的事"
+        },
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "难在当时最想做的恰恰是发泄"
+        }
+      ],
+      "fix_direction": "State money, time and effort separately in the Koszt field, as editorial estimates, and drop the treatment wording."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "W praktyce#3",
+      "text": "pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji",
+      "why": "Upstream says: if someone is hitting you, leave first and call the police. The item drops 'leave first' and replaces the concrete call with 'wezwanie pomocy' without saying whom to call. With cross-references removed, a reader in the urgent branch gets no usable contact. The item also does not say whose violence is meant (being hit, or the reader's own urge to hit). No Polish contact is present among the stored sources, so none can be verified from the packet.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "如果是有人在打你，先离开、报警。"
+        }
+      ],
+      "fix_direction": "Make the urgent branch state the leave-first step and either a contact backed by a Polish primary source or a clear statement that no contact is given here. Cover both a reader who is threatened and one who is afraid of their own aggression."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#2",
+      "text": "zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji",
+      "why": "Two problems. First, 'ruchu' has no antecedent: no reader-facing field says that jogging or cycling were among the activities rated ineffective, so the sentence cannot be understood alone. Second, upstream speaks of 情绪低落 (low mood), not depression, and the stored snapshot contains nothing about depression or exercise as treatment. The sentence is only a disclaimer, but it widens the scope word to a clinical condition and Zmiany w adaptacji adds 'korzyści zdrowotnych ruchu' with no source in the packet.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 8,
+          "text": "跑步不是没用。长期看，它对情绪低落有效"
+        },
+        {
+          "source": "snapshot",
+          "snapshot": "1d00098ec43b4f15.txt",
+          "line": 14,
+          "text": "These findings do not support the ideas that venting anger or going for a run are effective anger management activities."
+        }
+      ],
+      "fix_direction": "Name the movement concerned and use the source's scope (low mood) or drop the depression reference. Do not add any claim about exercise and depression without a source."
+    },
+    {
+      "severity": "minor",
+      "attack": "self-containment",
+      "id": "Korzyść i dowody#2",
+      "text": "Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63.",
+      "why": "'Pobudzenie', 'metaanaliza' and the effect size g are not explained in the item. Upstream explains arousal through a slowing heartbeat. A reader cannot tell what size 'g = −0,63' means and may read it as a percentage (the README warns against that). The figures themselves match the abstract and no percentage conversion is made.",
+      "evidence": [
+        {
+          "source": "upstream",
+          "line": 3,
+          "text": "改做几分钟让心跳慢下来的事"
+        }
+      ],
+      "fix_direction": "Explain pobudzenie (physiological activation) and g (a standardised effect size, not a percentage) at first use, as AGENTS.md requires for technical terms."
+    }
+  ],
+  "notes": "Opened only the role file, AGENTS.md, the README.md file (read whole, not only the section 'Jak czytać dowody'), the packet and snapshot 1d00098ec43b4f15.txt. CLAUDE.md was injected into context by the harness; I did not open it. No book/, tests/, tools/, manifest, other snapshots, git history or chapter file was opened; no shell or network was used. Numbers: 154, 184, 10,189, g -0.63 and g -0.02 with an interval including zero all match snapshot line 14; no percent conversion appears. Leaks: no Chinese institution, hotline, threshold or legal rule appears in reader-facing fields; upstream 报警 became the generic 'wezwanie pomocy'. Grade: letter A matches the README definition for a quantitative synthesis of an action and an outcome. Study design, risk of bias and certainty cannot be judged from an abstract-only snapshot, and the item's visible fields say nothing about them; the Weryfikacja field is not in the packet, so I could not see whether the scope of check is stated there. Recency: one snapshot only, so the snapshots show no older guidance or disagreement; whether the 2024 synthesis is superseded is outside the packet and was not asserted. Cross-references in upstream (sections 22.8, 22.6, 3.17, 8.43) were not opened. Abstract metadata line 'Journal:' is empty in the snapshot."
+}

@@ -1,0 +1,119 @@
+{
+  "item": "04.7",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Rozpisz złożone zadanie na części, zanim oszacujesz czas",
+      "verdict": "source_unavailable",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"],
+      "reason": "The advice rests on the findings in Korzyść i dowody#2 and #3, whose only cited source (10.1016/j.jesp.2003.11.001) has no readable snapshot (access blocked, via blocked by api.crossref.org, snapshot null). The backing could not be checked and nothing was decided from memory."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Bez dodatkowych wydatków.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2",
+      "kind": "editorial_estimate",
+      "claim": "Przygotowanie listy etapów też zabiera czas.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#3",
+      "kind": "meta_statement",
+      "claim": "To ocena redakcji.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Przy pisaniu raportu uwzględnij zebranie danych, analizę, tekst i sprawdzenie.",
+      "verdict": "source_unavailable",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "The advice to decompose a task rests on Korzyść i dowody#2, whose source has no readable snapshot (blocked by api.crossref.org, snapshot null). The four listed components of a report look like the editors' own example; with no snapshot it could not be checked whether the source backs any of them. Nothing was decided from memory."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Oszacuj części, zamiast podawać jedną liczbę bez wcześniejszego sprawdzenia zakresu zadania.",
+      "verdict": "source_unavailable",
+      "depends_on": ["Korzyść i dowody#2"],
+      "reason": "The advice rests on Korzyść i dowody#2, whose source has no readable snapshot (blocked by api.crossref.org, snapshot null). The backing could not be checked and nothing was decided from memory."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_description",
+      "claim": "Kruger i Evans prosili uczestników o szacowanie czasu różnych zadań.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org). Authors, design and the task given to participants could not be checked. A readable snapshot of the paper or at least its abstract is needed."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Rozpisanie części prowadziło do dłuższych oszacowań, a w eksperymentach 3 i 4 także do mniejszego zaniżania czasu.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org). Both parts (longer estimates; less underestimation in experiments 3 and 4) and the experiment numbers could not be checked. A readable snapshot of the paper or its abstract is needed."
+    },
+    {
+      "id": "Korzyść i dowody#3",
+      "kind": "source_claim",
+      "claim": "W eksperymencie 5 znaczenie rozpisania rosło wraz ze złożonością zadania.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org). The result for experiment 5 could not be checked. A readable snapshot of the paper or its abstract is needed."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "B — seria eksperymentów w jednej publikacji",
+      "verdict": "source_unavailable",
+      "reason": "The grade letter B is editorial and was not checked. The description (a series of experiments in one publication) could not be checked because the only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org)."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "meta_statement",
+      "claim": "zweryfikowano kierunek wyniku, bez wielkości efektu",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "recommendation_derived",
+      "claim": "Rozpisuj zadania złożone.",
+      "verdict": "source_unavailable",
+      "depends_on": ["Korzyść i dowody#2", "Korzyść i dowody#3"],
+      "reason": "The advice, limited to complex tasks, rests on Korzyść i dowody#2 and #3, whose source has no readable snapshot (blocked by api.crossref.org, snapshot null). The backing could not be checked and nothing was decided from memory."
+    },
+    {
+      "id": "Ocena redakcyjna#2",
+      "kind": "editorial_estimate",
+      "claim": "Drobna, dobrze znana czynność nie wymaga osobnego planu.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Dłuższe oszacowanie nie zawsze jest trafniejsze.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org). Whether the source says that longer estimates are not always more accurate could not be checked. A readable snapshot of the paper or its abstract is needed."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Mniejsze zaniżanie czasu abstrakt podaje tylko dla eksperymentów 3 i 4.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org). What the abstract states about reduced underestimation, and that it limits it to experiments 3 and 4, could not be checked or searched for. The snapshot of the abstract is needed."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "source_claim",
+      "claim": "Ta publikacja nie potwierdza, że rozpisanie zadania samo w sobie zmniejsza prokrastynację.",
+      "verdict": "source_unavailable",
+      "reason": "The only cited source, 10.1016/j.jesp.2003.11.001, has no snapshot (access blocked, via blocked by api.crossref.org), so absence of a procrastination finding could not be searched for. A readable snapshot holding the whole text is needed to show absence."
+    }
+  ],
+  "scope_gaps": [],
+  "notes": "Packet has no warnings. The single source row (origin cited, DOI 10.1016/j.jesp.2003.11.001) has access blocked (blocked by api.crossref.org) and snapshot null, so no snapshot exists and no quote could be written. No claim was answered from memory, and the item needs the source fetched again. Kind and verdict choices to review: (1) recommendation_derived rows (title#1, W praktyce#1, W praktyce#2, Ocena redakcyjna#1) carry verdict source_unavailable and a depends_on pointing at rows that themselves have no quotes, because the backing source is unreadable. (2) Ocena redakcyjna#1 was filed as recommendation_derived and Ocena redakcyjna#2 as editorial_estimate. (3) Ocena dowodów#1 was split: 1.1 is the source_description after the grade letter, and 1.2 ('zweryfikowano kierunek wyniku, bez wielkości efektu') is a meta_statement about what the editors verified, not a source absence claim. If the editors meant that the source reports no effect size, 1.2 should be a source_claim with absent_in_source, which needs a snapshot with the whole text. (4) Numbers 3, 4 and 5 in Korzyść i dowody#2 and #3 and Ograniczenia#2 have no quote because the source is unavailable. Only AGENTS.md, .claude/agents/pl-source-verifier.md and audit/runs/run7/04.7/packet-verifier.json were opened; CLAUDE.md reached me only as injected context."
+}

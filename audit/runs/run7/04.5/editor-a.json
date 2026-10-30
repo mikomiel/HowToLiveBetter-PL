@@ -1,0 +1,71 @@
+{
+  "item": "04.5",
+  "edits": [
+    {
+      "field": "W praktyce",
+      "original": "użyj go podczas spotkania",
+      "replacement": "korzystaj z niego podczas spotkania",
+      "reason": "consistency",
+      "requires_reverification": false
+    },
+    {
+      "field": "Korzyść i dowody",
+      "original": "Korzystanie z porządku obrad",
+      "replacement": "Korzystanie z planu spotkania",
+      "reason": "consistency",
+      "requires_reverification": true
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "nakładem",
+      "replacement": "nakładem pracy",
+      "reason": "calque",
+      "requires_reverification": false
+    },
+    {
+      "field": "Ocena redakcyjna",
+      "original": "waszemu zespołowi",
+      "replacement": "twojemu zespołowi",
+      "reason": "register",
+      "requires_reverification": false
+    }
+  ],
+  "protected_findings": [
+    {
+      "field": "Korzyść i dowody",
+      "text": "Leach i współautorzy badali postrzeganą skuteczność spotkań w dwóch badaniach, obejmujących 958 i 292 osoby.",
+      "why": "Nienaturalne: „badali … w dwóch badaniach” powtarza ten sam rdzeń, a imiesłów „obejmujących” brzmi urzędowo. Wątpliwa jest też składnia „958 i 292 osoby”: dwa połączone liczebniki wymagają różnych form rzeczownika (958 osób, 292 osoby), a zapis nie mówi wprost, że to dwie osobne próby. Zdanie zawiera liczby, nazwisko i liczbę badań, więc nie edytuję. Do rozważenia przez weryfikatora, o ile liczby odpowiadają kolejnym badaniom: „W dwóch badaniach (odpowiednio 958 i 292 uczestników) Leach i współautorzy analizowali postrzeganą skuteczność spotkań.”"
+    },
+    {
+      "field": "W praktyce",
+      "text": "nie sprawdzono w cytowanym badaniu",
+      "why": "Liczba pojedyncza („badaniu”) nie zgadza się z resztą pozycji: Korzyść i dowody mówi o dwóch badaniach, Ocena dowodów o dwóch badaniach obserwacyjnych. Poprawna może być liczba mnoga („w cytowanych badaniach”) albo pojedyncza, jeśli chodzi o jedną publikację z dwoma badaniami; to dotyczy liczby i zakresu negacji, więc rozstrzyga weryfikator ze źródłem."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Związek w ankiecie nie dowodzi, że sam plan spowodował poprawę.",
+      "why": "Zdanie jest skrótowe i brzmi niezgrabnie. „Związek” bez dopełnienia może być odczytany jako związek przyczynowy, czyli dokładnie to, co zdanie neguje. Liczba pojedyncza „w ankiecie” nie zgadza się z dwoma badaniami w innych polach. Możliwy bardziej naturalny zapis dla weryfikatora: „Powiązanie zaobserwowane w ankietach nie dowodzi, że sam plan spowodował poprawę.” Zdanie zawiera termin skojarzenia, negację i czasownik przyczynowy, więc nie edytuję."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Nie zmierzono tu liczby zaoszczędzonych godzin ani obiektywnej jakości decyzji.",
+      "why": "Słowo „tu” jest niejednoznaczne: może znaczyć „w tych badaniach” albo „w tej poradzie”. Zasięg negacji (czego nie zmierzono i gdzie) jest częścią twierdzenia, więc nie edytuję. Weryfikator może ustalić, czy chodzi o „w tych badaniach”."
+    },
+    {
+      "field": "Ograniczenia",
+      "text": "Rada nie uprawnia do pomijania obowiązkowych spotkań.",
+      "why": "Język prawniczy i sztywny: porada niczego nie „uprawnia”, a „rada” w tej książce konsekwentnie nazywa się „porada” (AGENTS.md, np. „przed dodaniem porady”). Sens jest czytelny, ale brzmi jak przepis. Możliwy naturalniejszy zapis dla weryfikatora: „Ta porada nie oznacza, że można pomijać obowiązkowe spotkania.” Zdanie zawiera termin prawa i obowiązku oraz negację, więc nie edytuję."
+    },
+    {
+      "field": "Koszt",
+      "text": "To ocena redakcji.",
+      "why": "Zdanie jest bardzo skrótowe, a „To” nie wskazuje, czego dotyczy: samego braku wydatków czy też wysiłku organizatora. Nazwa w innych miejscach brzmi „Przykład redakcyjny” i „Ocena redakcyjna”, a tu „ocena redakcji”; dla spójności można rozważyć „To ocena redakcyjna.” Fraza przypisuje twierdzenie redakcji, a nie badaniu, więc nie edytuję."
+    },
+    {
+      "field": "Ocena dowodów",
+      "text": "B — dwa badania obserwacyjne dotyczące subiektywnej oceny spotkań.",
+      "why": "Termin „badania obserwacyjne” nie jest tu objaśniony. Nie mogę sprawdzić, czy został wyjaśniony przy pierwszym użyciu w rozdziale; pośrednio tłumaczy go pole Ograniczenia, ale nie nazywa go. Jeśli to pierwsze użycie w rozdziale, wymaga krótkiego objaśnienia, a to dotyczy terminu planu badania i liczby badań. Myślnik „—” wygląda na konwencję zapisu oceny w rozdziale, więc go nie zmieniam."
+    }
+  ],
+  "verdict": "needs_edits"
+}

@@ -1,0 +1,166 @@
+{
+  "item": "03.27",
+  "status": "UNAVAILABLE",
+  "claims": [
+    {
+      "id": "title#1",
+      "kind": "recommendation_derived",
+      "claim": "Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi",
+      "verdict": "not_applicable",
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Read as snoring together with breathing pauses, or snoring together with sleepiness, the title matches NICE 1.1.1: assess for OSAHS when 2 or more listed features (snoring, witnessed apnoeas, unexplained excessive sleepiness) are present. The patient-side step 'tell a doctor' is derived from that clinician-side recommendation; no snapshot addresses the public directly. The word 'Głośne' (loud) is not in the source but only narrows the title. If the title is instead read as 'loud snoring with pauses' OR 'sleepiness alone', the single-feature case is not backed (see W praktyce#1)."
+    },
+    {
+      "id": "Koszt#1",
+      "kind": "editorial_estimate",
+      "claim": "Konsultacja, ewentualne badanie snu i leczenie.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.1",
+      "kind": "editorial_estimate",
+      "claim": "Organizacja i wydatki zależą od sytuacji",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Koszt#2.2",
+      "kind": "meta_statement",
+      "claim": "nie podajemy cen aparatu ani zasad refundacji",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "W praktyce#1",
+      "kind": "recommendation_derived",
+      "claim": "Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 105, "text": "Take a sleep history and assess people for OSAHS if they have 2 or more of the following features:"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 109, "text": "witnessed apnoeas"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 115, "text": "unexplained excessive sleepiness, tiredness or fatigue"}
+      ],
+      "depends_on": ["Korzyść i dowody#1"],
+      "reason": "Backed: witnessed apnoeas, snoring and unexplained excessive sleepiness are all among the features for which NICE 1.1.1 says to take a sleep history and assess for OSAHS. Not backed: NICE sets the trigger at 2 or more of the listed features, while the sentence tells the reader to report each of the three on its own, including a single one; 'nasilone' (intensified) snoring is also not in the source, which lists plain 'snoring'. The NICE lines are addressed to clinicians, not to people reporting symptoms."
+    },
+    {
+      "id": "W praktyce#2",
+      "kind": "recommendation_derived",
+      "claim": "Jeśli czujesz senność podczas prowadzenia, nie kontynuuj jazdy; wybierz bezpieczne zatrzymanie i inny sposób podróży.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "b59686537010480d.txt", "line": 127, "text": "do not drive when you feel sleepy"}
+      ],
+      "reason": "Backed: the NHS insomnia page, in its self-help Don't list, says not to drive when sleepy. Not backed: choosing a safe place to stop and using another way of travelling; no snapshot says either. The NICE chapter 4 snapshot only lists 'the impact of excessive sleepiness on safe driving' as an information topic and gives no driving instruction. The NHS line sits in an insomnia section, not an apnoea one."
+    },
+    {
+      "id": "W praktyce#3",
+      "kind": "recommendation_derived",
+      "claim": "Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 503, "text": "Offer people with OSAHS having CPAP access to a sleep service for advice, support and equipment between follow-up appointments."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 593, "text": "Interventions to support adherence to treatment for OSAHS should be given by trained specialist staff when treatment is started and as needed at follow-up."},
+        {"snapshot": "024454efeeae7d39.txt", "line": 101, "text": "how to get support for technical and clinical problems, including side effects, and obtain replacement masks and other parts"}
+      ],
+      "reason": "Backed only indirectly: the guideline describes CPAP as treatment offered and followed up through a sleep service with specialist staff and equipment support. Not backed: any instruction or statement that people should not choose a CPAP device or its settings themselves; no snapshot says that, and none gives reasons or risks of self-selection."
+    },
+    {
+      "id": "Korzyść i dowody#1",
+      "kind": "source_claim",
+      "claim": "Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 25, "text": "Reference number: NG202"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 97, "text": "Obstructive sleep apnoea/hypopnoea syndrome (OSAHS) is a condition in which the upper airway is narrowed or closes during sleep"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 105, "text": "Take a sleep history and assess people for OSAHS if they have 2 or more of the following features:"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 221, "text": "Offer home respiratory polygraphy to people with suspected OSAHS."}
+      ],
+      "reason": "1.1.1 gives the symptom assessment and 1.3.1 the sleep study (home respiratory polygraphy) for suspected OSAHS."
+    },
+    {
+      "id": "Korzyść i dowody#2",
+      "kind": "source_claim",
+      "claim": "Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 359, "text": "Offer fixed-level CPAP, in addition to lifestyle advice, to people with moderate or severe OSAHS."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 355, "text": "CPAP is recommended as a treatment option for adults with moderate or severe symptomatic OSAHS"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 281, "text": "continuous positive airway pressure (CPAP)"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 389, "text": "setting up the device at home by video consultation"}
+      ],
+      "reason": "Recommendation 1.6.1 states CPAP for moderate or severe OSAHS without a symptom qualifier. The Polish gloss is the expansion of the acronym (line 281) plus the source's calling CPAP a 'device' (line 389); the snapshots give no fuller description of how the device works. 'Rozpoznanym' follows from 1.3.6 (diagnosis and severity come from the sleep study)."
+    },
+    {
+      "id": "Ocena dowodów#1.1",
+      "kind": "source_description",
+      "claim": "wytyczne kliniczne dotyczące diagnostyki i leczenia",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 23, "text": "NICE guideline"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 215, "text": "1.3 Diagnostic tests for OSAHS"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 349, "text": "1.6 Treatments for moderate and severe OSAHS"}
+      ],
+      "reason": "The source is a NICE guideline with recommendations on diagnostic tests and treatments. The grade letter B itself is editorial and was not checked."
+    },
+    {
+      "id": "Ocena dowodów#1.2",
+      "kind": "source_claim",
+      "claim": "bez jednej prognozy korzyści dla czytelnika",
+      "verdict": "absent_in_source",
+      "searched": ["d2dea5869951c1d9.txt", "024454efeeae7d39.txt", "b59686537010480d.txt"],
+      "reason": "Searched all three snapshots for any single prediction or estimate of benefit (a figure, risk reduction, effect size or expected outcome for the person). None found: the NICE pages give recommendations only, with qualitative remarks such as that lifestyle changes can help to prevent OSAHS from worsening, and the NHS page is about insomnia. The two NICE snapshots hold the whole stored page text; the NHS snapshot holds the main region only (4304 of 4844 characters), so absence there is absence from that region. The NICE rationale and evidence-review pages are not stored, so absence is from chapters 1 and 4 only."
+    },
+    {
+      "id": "Ocena redakcyjna#1",
+      "kind": "editorial_estimate",
+      "claim": "Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.",
+      "verdict": "not_applicable",
+      "reason": "Editors' judgement of priority. No snapshot speaks to coffee as a response to sleepiness."
+    },
+    {
+      "id": "Ograniczenia#1",
+      "kind": "source_claim",
+      "claim": "Chrapanie samo w sobie nie jest rozpoznaniem.",
+      "verdict": "supported",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 101, "text": "When to suspect OSAHS"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 105, "text": "Take a sleep history and assess people for OSAHS if they have 2 or more of the following features:"},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 241, "text": "Use the results of the sleep study to diagnose OSAHS and determine the severity of OSAHS (mild, moderate or severe)."}
+      ],
+      "reason": "No line says in so many words that snoring is not a diagnosis. The source treats snoring as one of nine features that lead to suspicion and assessment, and says diagnosis and severity come from the sleep study results; together these state the claim."
+    },
+    {
+      "id": "Ograniczenia#2",
+      "kind": "source_claim",
+      "claim": "Rodzaj badania i leczenia dobiera osoba prowadząca.",
+      "verdict": "partly",
+      "quotes": [
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 233, "text": "Consider hospital respiratory polygraphy for people with suspected OSAHS if home respiratory polygraphy and home oximetry are impractical or additional monitoring is needed."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 423, "text": "Consider a positional modifier for people with mild or moderate positional OSAHS if other treatments are unsuitable or not tolerated."},
+        {"snapshot": "d2dea5869951c1d9.txt", "line": 85, "text": "People have the right to be involved in discussions and make informed decisions about their care"},
+        {"snapshot": "024454efeeae7d39.txt", "line": 89, "text": "choosing the best treatment for the person"}
+      ],
+      "reason": "The source supports that the choice of test and treatment depends on clinical circumstances and severity, with recommendations addressed to professionals. It does not say the treating clinician alone chooses; it says people have the right to be involved in decisions and lists choosing the best treatment among the topics to explain to the person."
+    },
+    {
+      "id": "Ograniczenia#3",
+      "kind": "meta_statement",
+      "claim": "Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem.",
+      "verdict": "not_applicable"
+    },
+    {
+      "id": "Ograniczenia#4",
+      "kind": "meta_statement",
+      "claim": "Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania.",
+      "verdict": "not_applicable"
+    }
+  ],
+  "scope_gaps": [
+    {"id": "Korzyść i dowody#1", "note": "NG202 is a UK (NHS) guideline for people over 16 and its recommendations are written for clinicians; the sentence names NG202 but not the population or country, which a reader might assume carries over to Poland."},
+    {"id": "Korzyść i dowody#2", "note": "Recommendation 1.6.1 pairs CPAP with lifestyle advice and says fixed-level CPAP; the cross-referenced TA139 line limits CPAP to adults with symptomatic moderate or severe OSAHS. The sentence says neither, but 1.6.1 itself states the recommendation without a symptom limit."},
+    {"id": "W praktyce#1", "note": "Source trigger is 2 or more listed features, assessed by a clinician; the sentence tells the reader to report any one of three, and says 'nasilone' chrapanie where the source says snoring."},
+    {"id": "W praktyce#2", "note": "Only 'do not drive when you feel sleepy' is in a source, and it sits in the NHS insomnia self-help list; stopping safely and using other transport are not in any snapshot."},
+    {"id": "W praktyce#3", "note": "No snapshot gives an instruction or reason against choosing a CPAP device or settings oneself; the sources only show a service-led care pathway."},
+    {"id": "Ograniczenia#2", "note": "Source stresses involvement of the person in decisions; the sentence names only the clinician as the one who chooses."}
+  ],
+  "notes": "No protocol violation: opened only AGENTS.md, the role file, packet-verifier.json and the three listed snapshots (d2dea5869951c1d9.txt, 024454efeeae7d39.txt, b59686537010480d.txt). CLAUDE.md was attached to my context automatically by the harness; I did not open it. All three snapshots are the documents they should be (NICE NG202 chapter 1, NG202 chapter 4, NHS Insomnia) with full readable text; no stub, wall or error page; packet warnings empty. NHS snapshot holds 4304 of 4844 characters of the page (main region). The NICE rationale and evidence-review pages and NG202 chapters 2 and 3 are not in the snapshots. The NHS page supports only W praktyce#2 (one line). Grade letter B in Ocena dowodów was not checked (editorial). Status UNAVAILABLE because of four partly rows (W praktyce#1, #2, #3 and Ograniczenia#2); there is no unsupported or contradicted row."
+}

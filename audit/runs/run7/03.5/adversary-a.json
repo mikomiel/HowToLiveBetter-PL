@@ -1,0 +1,119 @@
+{
+  "item": "03.5",
+  "status": "UNAVAILABLE",
+  "attacks_run": ["same-action", "preservation", "grade", "numbers", "scope-words", "leak", "self-containment", "limitations"],
+  "attacks_not_assessable": [
+    {
+      "attack": "recency",
+      "reason": "Only one snapshot exists and it holds metadata only (title, authors, journal, year 2015). Whether the 2015 study is outdated or contradicted by other guidance would need knowledge outside the stored texts, and no second snapshot is available to compare."
+    }
+  ],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Obsługiwać e-maile wsadowo, stałą liczbę razy dziennie (把邮件...改成每天固定几次批量处理)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 1,
+      "upstream_action": "To samo dla wiadomości błyskawicznych (消息)",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Powiedzieć współpracownikom, jak często odpowiadasz (跟同事说清楚你多久回一次)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Powstrzymać się od zaglądania do poczty poza ustalonymi porami (忍住不随时翻邮件)",
+      "fate": "narrowed",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Ograniczyć sprawdzanie poczty do 3 razy dziennie (限制成每天只查 3 次)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#1",
+      "text": "W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie.",
+      "why": "Wszystkie liczby tego zdania i następnego (124 osoby, dwa tygodnie, limit trzech sprawdzeń dziennie) występują wyłącznie w upstream, czyli są tropem, nie dowodem. Jedyne źródło cytowane (Crossref) ma w migawce tylko metadane: DOI, tytuł, autorów, czasopismo i rok; packet podaje access = metadata-only, czyli tylko metadane, bez abstraktu. Migawka potwierdza co najwyżej kierunek z samego tytułu (rzadsze sprawdzanie poczty zmniejsza stres), nie wielkość próby, czas trwania ani limit. Mimo to pole Źródła nazywa źródło „Abstrakt i opis badania”, a pole Zmiany w adaptacji powołuje się na „sprawdzony abstrakt”, czego zapisane źródło nie zawiera. Czytelnik dostaje liczby jako sprawdzony wynik badania, a AGENTS.md mówi, że metadane nie potwierdzają wyniku.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 5, "text": "Access: metadata-only"},
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"},
+        {"source": "upstream", "line": 5, "text": "124 名成年人，两周里同一批人前后对比"}
+      ],
+      "fix_direction": "Zapisać abstrakt lub pełny tekst i dopiero z niego potwierdzić liczby, albo ograniczyć pole do tego, co potwierdzają metadane. Poprawić stwierdzenia o sprawdzonym abstrakcie w polach Źródła i Zmiany w adaptacji tak, by zgadzały się z tym, co faktycznie zapisano."
+    },
+    {
+      "severity": "major",
+      "attack": "grade",
+      "id": "Ocena dowodów#1",
+      "text": "z losowaniem kolejności warunków",
+      "why": "Losowanie kolejności warunków nie występuje ani w migawce (są tylko metadane), ani w upstream. Upstream opisuje porównanie tej samej grupy jako przed i po (前后对比, 自身对照) i mówi, że „na początku” (一开始) nie było limitu, co nie jest opisem losowania ani zrównoważenia kolejności. Szczegół projektu, który podnosi wiarygodność oceny B i wyklucza efekt kolejności, jest podany jako ustalony fakt bez oparcia w jakimkolwiek dostępnym tekście. Czytelnik może uznać, że efekty kolejności wykluczono. Także podstawa litery B według README (pojedyncze badanie) wynika tylko z upstream, nie z zapisanego źródła.",
+      "evidence": [
+        {"source": "upstream", "line": 5, "text": "两周里同一批人前后对比（自身对照）"},
+        {"source": "upstream", "line": 5, "text": "一开始不加限制时，人们平均每天查邮件"},
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"}
+      ],
+      "fix_direction": "Usunąć szczegół o losowaniu, dopóki zapisane źródło go nie potwierdza, i opisywać projekt tylko słowami, które da się sprawdzić w abstrakcie lub pełnym tekście. Uwzględnić w ocenie, że podstawa B jest na razie niepotwierdzona."
+    },
+    {
+      "severity": "major",
+      "attack": "same-action",
+      "id": "W praktyce#2",
+      "text": "Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie.",
+      "why": "Pole Korzyść i dowody opisuje wynik dla ograniczenia do trzech sprawdzeń dziennie, a W praktyce#2 zastępuje to nieokreślonym, dopasowanym rytmem, który nie ma ani limitu, ani liczby; tytuł mówi o „ustalonych porach”. Rytm dopasowany do obowiązków (także wiele ustalonych pór dziennie) nie był porównywany: migawka daje tylko tytuł o rzadszym sprawdzaniu, a upstream opisuje limit 3 sprawdzeń. Pole nie nazywa tego przykładem redakcyjnym, a ocena B odnosi się do całego działania. Czytelnik może sprawdzać pocztę kilka razy więcej niż trzy razy o stałych godzinach i uznać, że wykonuje zalecenie z oceną B.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "fc3c2cf54e0262ec.txt", "line": 8, "text": "Checking email less frequently reduces stress"},
+        {"source": "upstream", "line": 5, "text": "限制为每天查 3 次邮件的那周"}
+      ],
+      "fix_direction": "Nazwać dopasowany rytm i ustalone pory jawnie redakcyjnym uogólnieniem poza badaniem, a ocenę B przypisać wyłącznie do ograniczenia do trzech sprawdzeń dziennie. Rozważyć podanie testowanej liczby jako punktu odniesienia z warunkiem, że obowiązki na to pozwalają."
+    },
+    {
+      "severity": "minor",
+      "attack": "same-action",
+      "id": "W praktyce#1",
+      "text": "Ustal, kiedy odpowiadasz na zwykłe e-maile",
+      "why": "Tytuł mówi o sprawdzaniu poczty, ale pierwsze zdanie W praktyce mówi o porze odpowiadania. W upstream zmieniana była liczba sprawdzeń poczty, a powściągliwość w zaglądaniu do skrzynki jest nazwana częścią działania. Kto tylko zaplanuje odpowiedzi, a dalej będzie zaglądać do poczty bez ograniczeń, nie odtworzy działania, z którym wiązał się niższy stres. Tytuł częściowo to koryguje, więc wpływ na czytelnika jest niewielki.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "把邮件限制成每天只查 3 次的那一周"},
+        {"source": "upstream", "line": 3, "text": "忍住不随时翻邮件，需要一点毅力"}
+      ],
+      "fix_direction": "Ujednolicić czasownik z tytułem i z opisem badania, tak by działanie dotyczyło ograniczenia sprawdzania poczty, a ustalenie pór odpowiedzi było jego uzupełnieniem."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#1",
+      "text": "Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów.",
+      "why": "Zdanie mówi, czego badanie nie mierzyło („tu”), a migawka nie zawiera ani listy zmiennych, ani opisu projektu. Oparcie jest tylko w upstream (lead). Zdanie jest ostrożne i zgodne z upstream, więc nie zmienia działania czytelnika, ale nie jest potwierdzone zapisanym źródłem.",
+      "evidence": [
+        {"source": "upstream", "line": 8, "text": "即时消息没人直接研究过，这里只是照着推的"}
+      ],
+      "fix_direction": "Po zapisaniu abstraktu lub pełnego tekstu sprawdzić, co badanie faktycznie mierzyło, albo sformułować zdanie jako ograniczenie wynikające z dostępnego opisu."
+    },
+    {
+      "severity": "minor",
+      "attack": "preservation",
+      "id": "Koszt#1",
+      "text": "Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki.",
+      "why": "Upstream rozdziela koszt na brak wydatku, trochę czasu na uzgodnienie z kolegami i wysiłek woli (powstrzymanie się od zaglądania do poczty). Wersja polska nie mówi, że koszt pieniężny jest zerowy, i nie nazywa wysiłku powstrzymywania się. AGENTS.md wymaga oddzielenia kosztu pieniędzy, czasu i wysiłku. Uzgodnienie z osobami współpracującymi występuje tylko jako koszt, a nie jako krok w W praktyce. Nie zmienia to bezpośrednio działania czytelnika, ale zubaża opis kosztu.",
+      "evidence": [
+        {"source": "upstream", "line": 3, "text": "不花钱。要花点时间跟同事说清楚你多久回一次"},
+        {"source": "upstream", "line": 3, "text": "忍住不随时翻邮件，需要一点毅力"}
+      ],
+      "fix_direction": "Osobno nazwać koszt pieniężny, czasowy i wysiłkowy oraz uwzględnić poinformowanie współpracowników jako krok działania, a nie tylko jako koszt."
+    }
+  ],
+  "notes": "Status UNAVAILABLE: no blocker found, but the only cited source is a metadata-only Crossref snapshot (no abstract), too thin to confirm any figure or design detail the item relies on, and recency is not assessable. Provenance statements in the fields Źródła (\"Abstrakt i opis badania\") and Zmiany w adaptacji (\"sprawdzonym abstrakcie\") conflict with access = metadata-only; those fields are not packet propositions, so the point is anchored on Korzyść i dowody#1. Quoted snapshot line 5 (\"Access: metadata-only\") is a header line outside the SNAPSHOT-TEXT markers; it is quoted only to show the access level, since an absence cannot be quoted. Upstream facts not carried into the item and not listed in Zmiany w adaptacji: equal number of emails received and answered in both weeks (line 5), the baseline of 15.5 checks per day (lines 4-5), and the effect being medium-to-small (line 8); none is harmful to omit. Ocena redakcyjna#2 (cross-reference to 04.5) was not followed and is not needed: the item is safe and actionable without it. Ograniczenia#2 is an unlabelled editorial caution phrased as \"mogą\" and cautious, so no finding. No leak of Chinese institutions, hotlines, thresholds or legal claims in reader-facing fields. No protocol violation: I opened only the role file, AGENTS.md, README.md (Grep for the heading line, then Read of the section), the packet and the one snapshot; CLAUDE.md reached me only as harness-attached context."
+}

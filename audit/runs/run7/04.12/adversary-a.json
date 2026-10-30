@@ -1,0 +1,178 @@
+{
+  "item": "04.12",
+  "status": "UNAVAILABLE",
+  "attacks_run": [
+    "same-action",
+    "preservation",
+    "grade",
+    "numbers",
+    "scope-words",
+    "leak",
+    "self-containment",
+    "recency",
+    "limitations"
+  ],
+  "attacks_not_assessable": [],
+  "preservation": [
+    {
+      "upstream_line": 1,
+      "upstream_action": "Count a new habit in months, not in 21 days",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 3,
+      "upstream_action": "Repeat the same action every day in the same context for several months (the cost)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Do not treat 21 days as the norm; two or three weeks without it getting easier is normal",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 4,
+      "upstream_action": "Missing one day does not reset progress",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Pick one eating, drinking or activity action and do it daily in a fixed context (for example after breakfast) for 12 weeks",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Time to reach 95% of one's own automaticity limit ranged from 18 to 254 days (model fitted for 62)",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 5,
+      "upstream_action": "Missing one opportunity to perform the behaviour had no material effect on habit formation",
+      "fate": "dropped",
+      "fallback_stated": false
+    },
+    {
+      "upstream_line": 6,
+      "upstream_action": "Evidence grade B",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Only one study, 96 people, simple actions",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Complex behaviours (running three times a week, writing daily) were never measured",
+      "fate": "narrowed",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Still finding it hard after two weeks is not evidence of failure",
+      "fate": "kept",
+      "fallback_stated": true
+    },
+    {
+      "upstream_line": 8,
+      "upstream_action": "Tie the action to a fixed context: time, place, what triggers it",
+      "fate": "narrowed",
+      "fallback_stated": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "attack": "numbers",
+      "id": "Korzyść i dowody#3",
+      "text": "mediana wyniosła 66 dni",
+      "why": "The median is presented as a sourced result, but it is in neither text a reader of this audit can check. The stored Crossref abstract gives only the 18 to 254 range, and upstream line 5 also gives only the range, so 66 is not even a lead. The Źródła field points to Results and table 2 of the Wiley full text, which is blocked (403) and has no snapshot. The figure can be neither confirmed nor refuted from the stored sources, yet it gives the reader a precise typical timeline.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"},
+        {"source": "upstream", "line": 5, "text": "达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天"}
+      ],
+      "fix_direction": "Either remove the median or obtain a stored full-text snapshot that contains it and have it re-verified. Until then it must not be presented as sourced."
+    },
+    {
+      "severity": "major",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#3",
+      "text": "W tej ostatniej grupie modelowany czas osiągnięcia 95% indywidualnego poziomu automatyzmu wynosił od 18 do 254 dni",
+      "why": "The item narrows the 18 to 254 day range to the 39 people with a good fit. The abstract does not tie the range to either the 62 or the 39. In the upstream the range sentence directly follows the 62 sentence and the 39 is not mentioned at all. If the range belongs to the 62, the item states the wrong population for its headline figure (and for the median attached to it). Stored sources cannot settle this.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The model fitted for 62 individuals, of whom 39 showed a good fit."},
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "The time it took participants to reach 95% of their asymptote of automaticity ranged from 18 to 254 days"},
+        {"source": "upstream", "line": 5, "text": "模型在 62 人身上拟合成功。达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天"}
+      ],
+      "fix_direction": "Name the group only as far as a stored full-text snapshot establishes it; otherwise describe the range without assigning it to the 39. Re-verify against the full text."
+    },
+    {
+      "severity": "major",
+      "attack": "preservation",
+      "id": "W praktyce#2",
+      "text": "Obserwuj regularność, zamiast uznawać brak automatyzmu po 21 dniach za porażkę.",
+      "why": "Both the abstract and the upstream report that missing one opportunity did not materially affect habit formation, and the upstream states it twice as practical reassurance (lines 4 and 5). The item drops it completely and tells the reader only to watch regularity. A reader who skips a day gets no path: they may read it as a broken streak, restart the count or give up, the opposite of what the source says.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "Missing one opportunity to perform the behaviour did not materially affect the habit formation process"},
+        {"source": "upstream", "line": 4, "text": "中间漏掉一天，也不会把进度清零"},
+        {"source": "upstream", "line": 5, "text": "研究还发现，漏掉一次执行机会对习惯养成过程没有实质影响"}
+      ],
+      "fix_direction": "Restore the missed-opportunity finding as a stated fallback, worded no more strongly than the abstract (one missed opportunity, not repeated or long gaps)."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "Korzyść i dowody#1",
+      "text": "głównie związany z jedzeniem, piciem lub ruchem",
+      "why": "Abstract and upstream both say each participant chose an eating, drinking or activity behaviour. 'Głównie' (mainly) invents an exception, implying some chosen habits were of other kinds, which blurs the scope of what the study covered.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "96 volunteers chose an eating, drinking or activity behaviour"},
+        {"source": "upstream", "line": 5, "text": "96 名志愿者各挑一个吃、喝或者活动方面的动作"}
+      ],
+      "fix_direction": "Remove the hedge so the scope matches the three categories the source names."
+    },
+    {
+      "severity": "minor",
+      "attack": "scope-words",
+      "id": "W praktyce#1",
+      "text": "Powiąż prostą czynność ze stałym zdarzeniem",
+      "why": "The evidence concerns doing the behaviour every day in the same context, and the upstream cost line says every day for several months. The advice and the evidence description (Korzyść i dowody#1) say neither daily nor how long, so a reader could attach a weekly or occasional action to a trigger and think the evidence applies. The Koszt field gives no time scale either.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "behaviour to carry out daily in the same context"},
+        {"source": "upstream", "line": 3, "text": "要的是在同一个场景下每天重复同一个动作，持续几个月"}
+      ],
+      "fix_direction": "State that participants repeated the action daily in the same context, and give the observed 12-week window in the cost or practice text."
+    },
+    {
+      "severity": "minor",
+      "attack": "limitations",
+      "id": "Ograniczenia#3",
+      "text": "Nie mierzono pracy twórczej ani oszczędności czasu.",
+      "why": "The upstream limitation is that complex behaviours (running three times a week, writing daily) were never measured. The item narrows this to 'creative work' and adds 'time savings', which neither upstream nor the abstract mentions. The general gap (complex habits are not covered) is not stated, so a reader building a demanding habit gets no warning beyond the word 'prosty'.",
+      "evidence": [
+        {"source": "snapshot", "snapshot": "248f8ea4bd81051a.txt", "line": 14, "text": "chose an eating, drinking or activity behaviour"},
+        {"source": "upstream", "line": 8, "text": "复杂的事要多久，比如每周跑三次、每天写作，没人测过"}
+      ],
+      "fix_direction": "Say that only simple eating, drinking or activity behaviours were studied and that the time for complex habits is unknown; drop or support the time-savings clause."
+    },
+    {
+      "severity": "minor",
+      "attack": "numbers",
+      "id": "W praktyce#2",
+      "text": "po 21 dniach",
+      "why": "The figure 21 appears only in the upstream span, which is a lead, not evidence. It is in no snapshot, and the item never explains that it is a popular rule of thumb that was not tested. A reader without context cannot tell where 21 comes from.",
+      "evidence": [
+        {"source": "upstream", "line": 4, "text": "「21 天养成一个习惯」没有依据"}
+      ],
+      "fix_direction": "Identify 21 days as a common belief rather than a study result, or remove the figure."
+    }
+  ],
+  "notes": "Status is UNAVAILABLE because the cited full text (Wiley, access blocked 403) has no snapshot, and the only stored text is the Crossref abstract. The abstract cannot decide the median of 66 days or the group behind 18 to 254 days, which are headline figures in a reader-facing field; I ran every attack and no checkable blocker was found. I did not assert from memory whether 66 or the 39-person group is correct. The abstract confirms 96 people, 12 weeks, 82, 62, 39, 84 days and 18 to 254 days. Grade B matches upstream grade B and the README definition of B (single study); the item discloses small sample, observational design, self-report and modelling. Same-action: the desk example is flagged as an adaptation (Ograniczenia#4) and the fixed-context advice is flagged as editorial; no finding. Leak and self-containment: no Chinese institution, law, hotline or cross-reference link in the packet fields; no finding. Recency: only one readable snapshot and it shows no newer guidance or disagreement, so nothing to report. Źródła cites the year 2010 and upstream line 7 also says 2010, but the snapshot says Year: 2009 and Copyright 2009; this may be online versus issue year, which stored texts cannot decide. Źródła also names Results and table 2 of a source whose full text was not stored; the packet does not carry the Weryfikacja, Status or Oryginał fields, so I could not see whether the abstract-only limitation (AGENTS.md rule for missing full text) is stated there. Protocol: I opened only the role file, AGENTS.md, README.md lines 38 to 77 (the section Jak czytać dowody and a few following lines), the packet and snapshot 248f8ea4bd81051a.txt. CLAUDE.md was injected into my context by the harness; I did not open it."
+}
