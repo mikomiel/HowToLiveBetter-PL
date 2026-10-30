@@ -83,7 +83,7 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 - Status: verified
 - Koszt: Przegląd ustawień i ustalenie, co nadal jest potrzebne. Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.
 - W praktyce: Sprawdź listy sesji i połączonych aplikacji dostępne w usłudze. Sesja to trwające zalogowanie na urządzeniu lub w przeglądarce. Usuń zbędne dostępy. Przy podejrzeniu przejęcia konta: skorzystaj z oficjalnej instrukcji odzyskiwania; sprawdź obce reguły przekazywania poczty; zmień przejęte lub powtórzone hasła; wyloguj pozostałe sesje zgodnie z procedurą dostawcy.
-- Korzyść i dowody: NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę cofnięcia dostępu urządzeniom i aplikacjom po zmianie haseł.
+- Korzyść i dowody: NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł.
 - Ocena dowodów: C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu.
 - Ocena redakcyjna: Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji.
 - Ograniczenia: Nieznana lokalizacja logowania sama nie rozstrzyga o ataku. Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność. Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta.
