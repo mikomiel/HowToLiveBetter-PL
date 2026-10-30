@@ -265,10 +265,10 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 23. Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania
 - Status: verified
 - Koszt: Przerwa od sporu i próba spokojnego działania. To ocena redakcji, nie ustalony czas leczenia.
-- W praktyce: Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie. To propozycja łagodnej próby, bez forsowania oddechu. Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie emocji.
+- W praktyce: Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie. Potraktuj to jako łagodną próbę, bez forsowania oddechu. Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie uspokajające.
 - Korzyść i dowody: Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób. Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63. Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero.
 - Ocena dowodów: A — ilościowa synteza badań nad złością i agresją, nie nad liczbą odzyskanych godzin.
-- Ocena redakcyjna: Nie trzeba organizować intensywnego „wyładowania”, żeby zrobić przerwę od sporu.
+- Ocena redakcyjna: Nie trzeba szukać intensywnego „wyładowania”, żeby zrobić przerwę od sporu.
 - Ograniczenia: Średni wynik nie gwarantuje efektu każdej techniki u każdej osoby. Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji. Samopomoc nie zastępuje pomocy przy przemocy lub nawracających niebezpiecznych zachowaniach.
 - Źródła: Kjærvik i Bushman (2024), A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? [Abstrakt i wprowadzenie](https://doi.org/10.1016/j.cpr.2024.102414).
 - Oryginał: [03.23](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L219-L226)
