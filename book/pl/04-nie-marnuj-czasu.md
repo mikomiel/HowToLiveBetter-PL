@@ -25,7 +25,7 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 ### 2. Ustal przed rozpoczęciem projektu, kiedy zmienisz plan lub zakończysz projekt
 - Status: verified
-- Koszt: Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To oszacowanie redakcji.
+- Koszt: Bez dodatkowych wydatków. Czas na zapisanie kryterium oraz trudność przyznania, że dotychczasowy plan nie działa. To ocena redakcji.
 - W praktyce: Zapisz warunek przeglądu: „Jeśli w ustalonym terminie nie mam działającego prototypu, sprawdzę przyczynę i zdecyduję, czy zmienić zakres, czy zakończyć projekt”. Uwzględnij też koszt bezpiecznego zakończenia.
 - Korzyść i dowody: Przegląd Gollwitzera i Sheerana opisuje, że plany „jeśli–to” pomagały także wycofywać się z nieskutecznych działań. Nie podaje w abstrakcie osobnej wielkości efektu ani liczby godzin zaoszczędzonych dzięki warunkowi zakończenia projektu.
 - Ocena dowodów: B — kierunek wniosku potwierdza przegląd, ale dla tej konkretnej porady brak osobnego wyniku ilościowego.
