@@ -128,9 +128,9 @@ To niezależna adaptacja rozdziału 04 książki HowToLiveBetter autorstwa etern
 
 <a id="porada-4-17"></a>
 
-### 17. Naucz się skrótów do czynności, które często wykonujesz w programie
+### 17. Naucz się skrótów klawiszowych do czynności, które często wykonujesz w programie
 - Status: verified
-- Koszt: Bez dodatkowych wydatków, jeśli korzystasz z posiadanego programu. Nauka i ćwiczenie zabierają czas, a początkowo mogą spowalniać. To ocena redakcji.
+- Koszt: Bez dodatkowych wydatków, jeśli korzystasz z programu, który już masz. Nauka i ćwiczenie zabierają czas, a początkowo mogą spowalniać. To ocena redakcji.
 - W praktyce: Wybierz często używane polecenie, sprawdź skrót w pomocy swojego programu i przećwicz go. Zostań przy sposobie obsługi, który jest dla ciebie dostępny i wygodny.
 - Korzyść i dowody: Lane i współautorzy zbadali ankietą 251 doświadczonych użytkowników Worda. Większość rzadko używała skrótów. W osobnym porównaniu sześć osób wykonywało polecenia przez menu, ikony i klawiaturę; skróty były najszybszą z tych metod.
 - Ocena dowodów: B — ankieta i bardzo mały eksperyment dotyczący konkretnego interfejsu.
