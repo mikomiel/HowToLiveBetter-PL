@@ -169,7 +169,7 @@ test('one delayed failed chapter never exposes a partial collection; retry reloa
 
 test('network, empty file, wrong chapter and missing state fail the entire load', async ({ page }) => {
   const failures = [
-    [route => route.abort('failed'), 'Nie można połączyć się z lokalnym serwerem.'],
+    [route => route.abort('failed'), 'Nie można pobrać rozdziału.'],
     [route => route.fulfill({ body: '' }), 'Brak rozdziału'],
     [route => route.fulfill({ body: chapters[0].markdown }), 'Niezgodny numer rozdziału'],
     [route => route.fulfill({ body: time.markdown.replace('- Status: verified\n', '') }), 'Nieprawidłowy stan'],

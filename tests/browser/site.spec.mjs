@@ -44,7 +44,7 @@ test.beforeAll(async () => {
 });
 
 test.afterAll(async () => {
-  await new Promise(done => server.close(done));
+  if (server) await new Promise(done => server.close(done));
   if (tmp) rmSync(tmp, { recursive: true, force: true });
 });
 

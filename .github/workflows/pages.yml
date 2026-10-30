@@ -1,5 +1,5 @@
-# Polskie wydanie: ręczna publikacja strony czytnika w GitHub Pages. Bez automatycznego wdrożenia. Publikuje wyłącznie pliki z tools/pl/build-site.mjs.
-# Warunek `if` poniżej działa tylko w pliku z gałęzi, z której uruchomiono workflow. Granicą dla main jest reguła środowiska github-pages
+# Polskie wydanie: ręczna publikacja strony czytnika w GitHub Pages. Bez automatycznego wdrożenia. Publikuje wyłącznie pliki, które buduje tools/pl/build-site.mjs.
+# Warunek `if` poniżej działa tylko w pliku z gałęzi, z której uruchomiono workflow. Wdrożenia do gałęzi main ogranicza dopiero reguła środowiska github-pages
 # (Settings, Environments, github-pages, Deployment branches: tylko main), którą ustawia właściciel. Pozostałe workflowy tylko walidują.
 name: Publikacja strony czytnika
 
