@@ -58,4 +58,4 @@ Wiele z tych zaleceń to zdrowy rozsądek i może zostać jako oznaczone „Prop
 2. **Recenzenci dziedzinowi** (lekarz, prawnik, osoba znająca podatki i świadczenia) dla pozycji o dużym ryzyku. Bez nich takie pozycje pozostają „sprawdzone maszynowo”, nie „zatwierdzone przez eksperta”. Sformułowania w książce i panelu stanu powinny to odróżniać.
 3. **Zakres.** Rozdziały 03, 04 i 14 to uzgodniony zakres. Szersza próba (20–30 pozycji z innych rozdziałów) wymaga zgody właściciela.
 4. ~~Wskaźnik w AGENTS.md~~ Zrobione 2026-10-29 za zgodą właściciela: AGENTS.md odsyła do audit/README.md i audit/FINDINGS.md, więc nowa sesja w Codex lub Claude Code dowie się o wstrzymanym przeglądzie sama.
-5. **Komu wolno wznowić.** Przegląd jest wstrzymany na prośbę właściciela, więc wznowienie wymaga jego polecenia.
+5. **Komu wolno wznowić.** Przegląd wznowiono 2026-10-30 na polecenie właściciela (przebieg run7). Kolejne przebiegi i zmiany tekstu wymagają jego polecenia.
