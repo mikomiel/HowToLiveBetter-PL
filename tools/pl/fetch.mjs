@@ -214,7 +214,12 @@ export function decodeBody(buffer, contentType = '') {
   else if (buffer[0] === 0xff && buffer[1] === 0xfe) label = 'utf-16le';
   else if (buffer[0] === 0xfe && buffer[1] === 0xff) label = 'utf-16be';
   if (!label) {
-    const head = buffer.subarray(0, 4096).toString('latin1').replace(/<!--[\s\S]*?-->/g, '');
+    let head = buffer.subarray(0, 4096).toString('latin1');
+    let prev;
+    do {
+      prev = head;
+      head = head.replace(/<!--[\s\S]*?-->/g, '');
+    } while (head !== prev);
     label = /charset=["']?([\w-]+)/i.exec(contentType)?.[1] ?? /<meta[^>]+charset=["']?([\w-]+)/i.exec(head)?.[1] ?? 'utf-8';
     if (/^utf-?16/i.test(label) && !/charset=["']?utf-?16/i.test(contentType)) label = 'utf-8';
   }
