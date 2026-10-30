@@ -70,14 +70,14 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 <a id="porada-3-5"></a>
 
-### 5. Jeśli obowiązki pozwalają, sprawdzaj pocztę w ustalonych porach
+### 5. Jeśli obowiązki pozwalają, sprawdzaj pocztę o ustalonych porach
 - Status: verified
 - Koszt: Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki. To ocena redakcji.
-- W praktyce: Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie. Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy odczyty dziennie.
+- W praktyce: Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie. Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy sprawdzenia poczty dziennie.
 - Korzyść i dowody: W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie. W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.
-- Ocena dowodów: B — krótkie badanie wewnątrzosobnicze z losowaniem kolejności warunków; wynik dotyczy stresu.
+- Ocena dowodów: B — krótkie badanie wewnątrzosobnicze (porównanie u tych samych osób) z losowaniem kolejności warunków; wynik dotyczy stresu.
 - Ocena redakcyjna: Warto sprawdzić taki sposób obsługi zwykłej poczty. Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5).
-- Ograniczenia: Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły dla komunikatorów. Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie.
+- Ograniczenia: Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły w komunikatorach. Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie.
 - Źródła: Kushlev i Dunn (2015), Checking email less frequently reduces stress. [Abstrakt i opis badania](https://doi.org/10.1016/j.chb.2014.11.005).
 - Oryginał: [03.5](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L57-L64)
 - Weryfikacja: 2026-10-28; abstrakt oraz dostępny opis metody: 124 osoby, dwa tygodnie, trzy odczyty i stres; bez pełnego tekstu.
