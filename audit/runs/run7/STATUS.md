@@ -6,23 +6,25 @@ Ten plik napisał agent AI (Claude Code) prowadzący przebieg, nie człowiek i n
 
 ## Wynik kontroli skryptów (`audit.mjs status`, `check-reports.mjs`)
 
-- 115 plików raportów, 112 przyjętych przez skrypty sprawdzające, 3 odrzucone (poniżej). Kod wyjścia `status` jest niezerowy, bo pozostały te 3 odrzucone raporty i różnice między przebiegami weryfikatora.
+- 115 plików raportów, wszystkie 115 przyjęte przez skrypty sprawdzające. Trzy raporty, które wcześniej odrzucono po trzech próbach, opisuje następna sekcja. Kod wyjścia `status` jest niezerowy, bo zostały różnice między przebiegami weryfikatora.
 - 45 raportów przejęto z wcześniejszych przebiegów (`audit.mjs adopt`), 70 napisano w świeżych sesjach agentów, w tym ponowienia po odrzuceniu.
 - 13 raportów (14.8, 14.9 `verifier-b`, 14.10, 14.12) nie powstało za pierwszym razem, bo agentom skończył się limit użycia; napisano je po jego odnowieniu.
 
-## Trzy raporty odrzucone po trzech próbach (zgłoszenie właścicielowi, zgodnie z `audit/README.md`, krok 7)
+## Trzy raporty odrzucone po trzech próbach i co z nimi zrobiono
 
-Nie poprawiano ich ręcznie. Są w katalogu tak, jak je napisała rola, a `digest.md` je uwzględnia bez oznaczenia, więc czytaj je z tą wiedzą.
+Po trzech nieudanych próbach te raporty zgłoszono właścicielowi (`audit/README.md`, krok 7). Właściciel zdecydował 2026-10-30, że opisy ról i skrypt mają zostać poprawione, a raporty napisane na nowo. Poprawki są w tym samym PR: `tools/pl/quotes.mjs`, `pl-source-verifier.md` i `pl-claim-adversary.md`. Żaden raport nie został poprawiony ręcznie; nowe napisały świeże sesje agentów.
 
-| Raport | Powód odrzucenia | Uwaga |
+| Raport | Przyczyna odrzucenia | Co zrobiono |
 |---|---|---|
-| 03.3 `verifier-a` | cytaty w twierdzeniach 8 i 9 nie są w wierszu 14 migawki `b6bab3851cebff29.txt`; liczby 48, 21, 38 poza cytatem | Skrypt przyjmuje cytat tylko od granicy słowa. Abstrakt w migawce ma sklejone nagłówki („ParticipantsA total of n = 48…”, „ResultsChronic restriction…”), więc cytat zaczynający się od „A total…” nie przechodzi. Opis roli tego nie mówi. Drugi przebieg (`verifier-b`) tej pozycji jest przyjęty. |
-| 04.7 `adversary-a` | ustalenie 3 (atak `grade`, czyli zgodność litery A/B/C z rodzajem źródła): cytat nie znajduje się w wierszu 8 fragmentu oryginału | We wszystkich trzech próbach agent podał ten sam cytat i leży on w wierszu 8. Skrypt go odrzuca, bo wiersz jest po chińsku, a cytat zaczyna się w środku ciągu chińskich znaków, które reguła granicy słowa traktuje jak litery. To decyzja o skrypcie, jak przy 03.3, a nie o kolejnej próbie. |
-| 04.12 `adversary-a` | status UNAVAILABLE nie zgadza się z ustaleniami, które dają PASS | Agent sam zauważył, że według opisu roli status UNAVAILABLE wynika z niepustej listy `attacks_not_assessable` (ataki to sprawdzenia, które wykonuje rola przeciwnika). Tu pełny tekst wydawcy jest zablokowany (HTTP 403) i dostępny jest tylko abstrakt, ale agent nie uznał żadnego ataku za niemożliwy do oceny. Wymaga decyzji o brzmieniu zasady w opisie roli, a nie kolejnej próby. |
+| 03.3 `verifier-a` | cytaty zaczynały się od „A total…” sklejonego w migawce z nagłówkiem („ParticipantsA total of n = 48…”), a skrypt przyjmuje cytat tylko od granicy słowa; opis roli tego nie mówił | Opis roli podaje regułę granicy słowa i przypadek sklejonego nagłówka, a komunikat skryptu mówi, gdzie cytat zaczyna się w środku słowa. Odrzucony plik usunięto z drzewa (historia git go zachowuje), żeby świeży agent go nie zobaczył, i raport napisano od nowa. |
+| 04.7 `adversary-a` | cytat z wiersza 8 oryginału zaczynał się w środku ciągu chińskich znaków, które reguła granicy słowa traktowała jak litery | Błąd był w skrypcie: pismo chińskie nie ma spacji, więc znak Han nie jest już znakiem słowa. Ten sam raport, bez zmian, przechodzi teraz kontrolę. |
+| 04.12 `adversary-a` | status UNAVAILABLE nie zgadzał się z ustaleniami, które dawały PASS | Opis roli przeciwnika zawierał dwa sprzeczne zdania o statusie. Teraz mówi, że status jest wyprowadzany mechanicznie (FAIL przy blokerze, UNAVAILABLE tylko przy niepustym `attacks_not_assessable`, w pozostałych przypadkach PASS), a komunikat skryptu przypomina tę regułę. Raport napisano od nowa. |
+
+Wszystkie 115 raportów sprawdzono ponownie nowymi regułami: żaden raport przyjęty wcześniej nie jest teraz odrzucany. Dwie nowe sesje zgłosiły odstępstwa: agent 03.3 `verifier-a` napisał, że narzędzie zapisu odmówiło nadpisania istniejącego pliku bez wcześniejszego odczytu (dlatego plik usunięto i uruchomiono agenta jeszcze raz), a agent 04.12 `adversary-a` raz odczytał ścieżkę wyjściową z przesunięciem poza koniec pliku, co zwróciło tylko ostrzeżenie bez treści; zapisał to w `notes`.
 
 ## Różnice między dwoma przebiegami weryfikatora (decyduje człowiek)
 
-Liczba różnic w nawiasie, szczegóły w `digest.md`: 03.2 (2), 03.8 (1), 03.18 (7), 03.26 (3), 03.27 (1), 04.9 (3), 14.1 (2), 14.2 (2), 14.4 (1), 14.6 (2), 14.9 (2), 14.10 (6), 14.12 (1). Przy 03.18 i 14.10 różnic jest najwięcej. `digest.md` pokazuje też jedną różnicę przy 03.3, ale liczy ją z odrzuconego raportu `verifier-a`, więc `audit.mjs status` jej nie zalicza i tu nie jest policzona.
+Liczba różnic w nawiasie, szczegóły w `digest.md`: 03.2 (2), 03.3 (1), 03.8 (1), 03.18 (7), 03.26 (3), 03.27 (1), 04.9 (3), 14.1 (2), 14.2 (2), 14.4 (1), 14.6 (2), 14.9 (2), 14.10 (6), 14.12 (1). Przy 03.18 i 14.10 różnic jest najwięcej. Różnice przy 03.3 wynikają z nowego raportu `verifier-a`.
 
 ## Granice tego przebiegu
 
@@ -34,6 +36,5 @@ Liczba różnic w nawiasie, szczegóły w `digest.md`: 03.2 (2), 03.8 (1), 03.18
 
 ## Co dalej (czeka na właściciela)
 
-1. Decyzja, co zrobić z trzema odrzuconymi raportami (osobna decyzja o zasadzie UNAVAILABLE z 04.12) i czy poprawić opisy ról.
-2. Rozstrzygnięcie różnic z listy wyżej.
-3. Które propozycje redaktora i ustalenia przeciwnika wprowadzić do tekstu (kontynuacja sekcji B i C w `audit/FINDINGS.md`).
+1. Rozstrzygnięcie różnic z listy wyżej (właściciel rozstrzyga je po kolei; decyzje zapisuje `audit/FINDINGS.md`).
+2. Które z 24 propozycji redaktora, wymagających ponownej weryfikacji (na 121), i które ustalenia przeciwnika wprowadzić do tekstu (kontynuacja sekcji B i C w `audit/FINDINGS.md`). Edycje wyłącznie językowe są w osobnym PR.

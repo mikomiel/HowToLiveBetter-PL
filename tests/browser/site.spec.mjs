@@ -57,6 +57,8 @@ test('the built site loads every verified advice under the project path, with no
   await expect(page.locator('#status')).toContainText(`z ${count} zweryfikowanych`);
   await expect(page.locator('article:visible')).toHaveCount(count);
   await expect(page.getByRole('link', { name: 'MIT', exact: true })).toHaveAttribute('href', 'LICENSE-CODE');
+  await expect(page.locator('#review-notice')).toHaveText('Porady są sprawdzane ze źródłami maszynowo, a przegląd trwa. Nie zatwierdził ich lekarz ani prawnik.');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex');
   expect(external).toEqual([]);
   expect(failed).toEqual([]);
   expect(errors).toEqual([]);
