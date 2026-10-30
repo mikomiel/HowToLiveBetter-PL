@@ -190,8 +190,16 @@ export const htmlToText = html => htmlToDoc(html).text;
 
 // Block-level JATS elements become line breaks and inline ones vanish, so full text keeps one paragraph per line.
 const JATS_BLOCK = /<\/?(?:[a-z0-9]+:)?(?:p|sec|title|caption|label|td|th|tr|table|list-item|list|ref|abstract|body|front|back|fig|boxed-text|disp-quote|def-item|article-title)\b[^<>]*>/gi;
-export const stripXml = xml => decode(String(xml).replace(JATS_BLOCK, '\n').replace(/<[^<>]*>/g, ''))
-  .replace(/[ \t\u00a0]+/g, ' ').replace(/ ?\n ?/g, '\n').replace(/\n{2,}/g, '\n').trim();
+export const stripXml = xml => {
+  let out = String(xml);
+  let prev;
+  do {
+    prev = out;
+    out = out.replace(JATS_BLOCK, '\n').replace(/<[^<>]*>/g, '');
+  } while (out !== prev);
+  return decode(out)
+    .replace(/[ \t\u00a0]+/g, ' ').replace(/ ?\n ?/g, '\n').replace(/\n{2,}/g, '\n').trim();
+};
 
 const WALL = /_incapsula_resource|incapsula|cf-chl|captcha-delivery|just a moment|attention required|access denied|client challenge|verifying you are human|checking your browser|are you a robot|a required part of this site|enable javascript and cookies|sign in to continue|access through your institution|request unsuccessful|purchase this article|buy this article|subscribe to read/i;
 export function looksBlocked(status, headers, text = '', raw = '') {
