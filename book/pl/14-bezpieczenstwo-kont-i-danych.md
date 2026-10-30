@@ -27,9 +27,9 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 
 ### 2. Używaj osobnego hasła do poczty i nie powtarzaj go w innych usługach
 - Status: verified
-- Koszt: Zmiana haseł i przygotowanie menedżera haseł. Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.
-- W praktyce: W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je. Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu. Zacznij od poczty, przez którą resetujesz inne konta.
-- Korzyść i dowody: CERT Polska opisuje, że powtórzone hasło może po wycieku jednej usługi umożliwić przejęcie innych kont. Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.
+- Koszt: Zmiana haseł i przygotowanie menedżera haseł (aplikacji do tworzenia i przechowywania haseł). Dostępne rozwiązania różnią się kosztem; nie wymagamy zakupu konkretnego produktu.
+- W praktyce: W menedżerze wygeneruj długie, unikalne hasła do usług, które ich używają. Zabezpiecz dostęp do samego menedżera: ustaw jedno hasło główne z kilku losowych, niezwiązanych słów i zapamiętaj je. Jeśli to możliwe, włącz drugi składnik logowania (na przykład jednorazowy kod z telefonu) na koncie, za pomocą którego logujesz się do menedżera, i zapisz w bezpiecznym miejscu kody zapasowe, które serwis pokaże przy jego włączaniu. Zacznij od poczty, przez którą resetujesz hasła do innych kont.
+- Korzyść i dowody: CERT Polska opisuje, że ponownie użyte hasło może po wycieku jednej usługi umożliwić przejęcie innych kont. Menedżer ułatwia tworzenie i przechowywanie różnych haseł zamiast zapamiętywania jednego do wszystkiego.
 - Ocena dowodów: C — praktyczne zalecenia CERT Polska, bez zmierzonej kwoty unikniętych strat.
 - Ocena redakcyjna: Unikalność haseł usuwa wspólny punkt słabości, ale menedżer też wymaga ochrony.
 - Ograniczenia: Silne hasło może zostać wyłudzone lub przechwycone. Dodaj [odpowiednią metodę uwierzytelniania z 14.1](#porada-14-1). Nie podajemy jednej długości pasującej do wymagań każdej usługi.
