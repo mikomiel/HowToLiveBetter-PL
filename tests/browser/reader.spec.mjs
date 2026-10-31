@@ -41,22 +41,53 @@ test('chapter 01 is searchable, keyboard-accessible and keeps pending records ou
   await expect(page.locator('#porada-1-21 h3')).toBeFocused();
 });
 
-test('chapter 01 is required too: a missing or malformed new chapter fails the full collection', async ({ page }) => {
-  const c = chapters.find(c => c.id === '01');
-  for (const failure of [
-    route => route.fulfill({ status: 404, body: 'brak' }),
-    route => route.fulfill({ body: c.markdown.replace('- Status: verified', '- Status: ready') }),
-  ]) {
-    await page.route(routeFor(c), failure);
-    await page.goto('/');
-    await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
-    await expect(page.locator('article')).toHaveCount(0);
-    await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
-    await page.unroute(routeFor(c));
+test('chapter 02 exposes withdrawal help and potassium-salt limits through search, links and the keyboard', async ({ page }) => {
+  const c = chapters.find(c => c.id === '02');
+  await ready(page, '/#porada-2-19');
+  await expect(page.locator('#porada-2-19 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('02');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  for (const e of c.entries.filter(e => e.fields.Status !== 'verified')) {
+    await expect(page.locator('#' + e.id)).toHaveCount(0);
   }
-  await page.getByRole('button', { name: 'Spróbuj wczytać ponownie' }).click();
-  await expect(visibleCards(page)).toHaveCount(count);
+  await page.getByLabel('Szukaj w polskich poradach').fill('Nie zaczynaj pić');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await page.locator('#porada-2-19').getByRole('link', { name: '02.20', exact: true }).click();
+  await expect(page.locator('#porada-2-20 h3')).toBeFocused();
+  await expect(page.locator('#porada-2-20 .practical')).toContainText('nie planuj gwałtownego odstawienia bez pomocy medycznej');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('02');
+  await page.getByLabel('Szukaj w polskich poradach').fill('hiperkaliemii');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(visibleCards(page)).toHaveAttribute('id', 'porada-2-9');
+  await expect(page.locator('#porada-2-9 .practical')).toContainText('nie obejmuje dzieci ani ciężarnych');
+  await page.locator('#porada-2-9 summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#porada-2-9 details')).toHaveAttribute('open', '');
+  await expect(page.locator('#porada-2-9')).toContainText('Brak danych dla dzieci i ciąży nie jest dowodem bezpieczeństwa');
+  await page.getByRole('link', { name: 'Stały link do porady 02.9', exact: true }).click();
+  await expect(page.locator('#porada-2-9 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-2-9 h3')).toBeFocused();
 });
+
+for (const id of ['01', '02']) {
+  test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
+    const c = chapters.find(c => c.id === id);
+    for (const failure of [
+      route => route.fulfill({ status: 404, body: 'brak' }),
+      route => route.fulfill({ body: c.markdown.replace('- Status: verified', '- Status: ready') }),
+    ]) {
+      await page.route(routeFor(c), failure);
+      await page.goto('/');
+      await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+      await expect(page.locator('article')).toHaveCount(0);
+      await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+      await page.unroute(routeFor(c));
+    }
+    await page.getByRole('button', { name: 'Spróbuj wczytać ponownie' }).click();
+    await expect(visibleCards(page)).toHaveCount(count);
+  });
+}
 
 test('renders actual chapters, all verified provenance and no external requests', async ({ page, baseURL }) => {
   const external = [], requests = [], errors = [];
