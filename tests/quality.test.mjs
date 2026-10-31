@@ -27,6 +27,7 @@ test('payment advice keeps consumer scope, prompt reporting and conditional liab
 });
 
 test('GDPR and credentials retain the distinctions the legal review required', () => {
+  assert.match(fields('14.6')['Korzyść i dowody'], /wylogowania urządzeń i aplikacji/);
   assert.match(fields('14.7').Ograniczenia, /Nie wykluczamy, że jedno działanie może spełniać obie funkcje/);
   const rights = fields('14.8');
   assert.match(rights['W praktyce'], /nie musisz sporządzać uzasadnienia prawnego/);
