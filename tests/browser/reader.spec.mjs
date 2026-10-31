@@ -70,7 +70,29 @@ test('chapter 02 exposes withdrawal help and potassium-salt limits through searc
   await expect(page.locator('#porada-2-9 h3')).toBeFocused();
 });
 
-for (const id of ['01', '02']) {
+test('chapter 05 exposes withdrawal and deposit-guarantee boundaries through search and links', async ({ page }) => {
+  const c = chapters.find(c => c.id === '05');
+  await ready(page, '/#porada-5-23');
+  await expect(page.locator('#porada-5-23 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('05');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  for (const e of c.entries.filter(e => e.fields.Status !== 'verified')) {
+    await expect(page.locator('#' + e.id)).toHaveCount(0);
+  }
+  await page.getByLabel('Szukaj w polskich poradach').fill('bez podawania przyczyny');
+  await expect(page.locator('#porada-5-23')).toBeVisible();
+  await expect(page.locator('#porada-5-23 .practical')).toContainText('14 dni od otrzymania towaru');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('05');
+  await page.getByLabel('Szukaj w polskich poradach').fill('BFG');
+  await expect(page.locator('#porada-5-42')).toBeVisible();
+  await expect(page.locator('#porada-5-42 .practical')).toContainText('BFG');
+  await page.getByRole('link', { name: 'Stały link do porady 05.42', exact: true }).click();
+  await expect(page.locator('#porada-5-42 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-5-42 h3')).toBeFocused();
+});
+
+for (const id of ['01', '02', '05']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
