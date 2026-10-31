@@ -14,8 +14,10 @@ const ACTION_FIELDS = new Set(['Koszt', 'W praktyce']);
 const CHINA = /chi[nń]sk|chi[nń]czy(?:k|c)|\bChin(?:y|ach|ami|om)?\b|Pekin|Szanghaj|WeChat|Alipay|Taobao|Weixin|Weibo|Douyin|Baidu|Alibaba|Tencent|Hong ?kong|Tajwan|Makau|Macau|Beijing|Shanghai|Shenzhen|Guangzhou|ChRL|Union ?Pay|renminbi|TikTok|Huawei|ByteDance|Meituan|Pinduoduo|hukou|Xi Jinping|Państw\w* Środka|\bjuan|\byuan|\bRMB\b|\bCNY\b/iu;
 const SECONDARY_HOSTS = ['lexlege.pl', 'standardyprawa.pl', 'arslege.pl', 'poradnikprzedsiebiorcy.pl', 'infor.pl', 'gazetaprawna.pl', 'wikipedia.org', 'wikiwand.com'];
 
-// Emergency and crisis numbers that were individually checked for Poland. Add one only with its source.
-export const PHONE_ALLOWLIST = new Set(['112', '997', '998', '999', '116 123', '116 111']);
+// Polish numbers individually checked against their public owner. Add one only with its source.
+// Chapter 01: 992 — psgaz.pl/bezpieczenstwo; 800 702 222 — gov.pl/web/wsse-bydgoszcz/swiatowy-dzien-zapobiegania-samobojstwom.
+// PAA contacts — gov.pl/web/paa/niekontrolowane-zrodla-promieniotworcze. Checked 2026-10-31; scopes stay in book/pl/.
+export const PHONE_ALLOWLIST = new Set(['112', '997', '998', '999', '116 123', '116 111', '992', '800 702 222', '22 194 30', '22 621 02 56']);
 const PHONE_DIGITS = new Set([...PHONE_ALLOWLIST].map(n => n.replace(/\s/g, '')));
 const PHONE_WORD = /telefon\w*|(?<![\p{L}])tel\b\.?|numer\w*|infolini\w*|(?<![\p{L}])lini[aięi](?![\p{L}])|zadzwo\w*|dzwo\w*|połącz\w*|kontakt\w*|zgłoś\w*/giu;
 const SEP = '[ \\u00a0\\u202f\\u2009.\\u2010-\\u2015-]';

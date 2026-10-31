@@ -38,7 +38,7 @@ test('each Chinese term is recognised and look-alike Polish words are not', () =
 
 test('phone numbers near a phone word must be allowlisted, in every reader field', () => {
   for (const field of READER_FIELDS) assert.ok(has(withField(field, 'Zadzwoń pod 800 123 456.'), 'phone-number', 'error', field), field);
-  assert.deepEqual([...PHONE_ALLOWLIST].sort(), ['112', '116 111', '116 123', '997', '998', '999']);
+  assert.deepEqual([...PHONE_ALLOWLIST].sort(), ['112', '116 111', '116 123', '22 194 30', '22 621 02 56', '800 702 222', '992', '997', '998', '999']);
   for (const text of ['Zadzwoń pod 112 lub 116 123.', 'Zadzwoń pod numer 116\u00a0123.', 'numer 116-123', 'Zadzwoń pod 116123.', 'Przy zagrożeniu zadzwoń na numer 112.']) {
     assert.ok(!has(withField('W praktyce', text), 'phone-number'), text);
   }
@@ -135,7 +135,7 @@ test('importing the tool never throws, and the command works through a symlink',
     symlinkSync(lint, join(dir, 'link.mjs'));
     const run = spawnSync(process.execPath, [join(dir, 'link.mjs')]);
     assert.equal(run.status, 0);
-    assert.match(run.stdout.toString(), /49 records, 0 errors/);
+    assert.match(run.stdout.toString(), new RegExp(`${loadAll(root).flatMap(c => c.entries).length} records, 0 errors`));
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
