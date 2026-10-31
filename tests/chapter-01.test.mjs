@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { CHAPTERS, parseChapter, published } from '../reader.mjs';
 import { lintEntry, phoneNumbers, upstreamSpanOf } from '../tools/pl/lint.mjs';
 import { searchAdvice } from '../tools/pl/search.mjs';
+import { citedInputs } from '../tools/pl/sources.mjs';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -102,8 +103,10 @@ test('crisis advice routes to help without method comparisons or a personal coun
   }
   assert.match(f(25).Ograniczenia, /Nie odstawiaj samodzielnie przepisanych leków/);
   for (const n of [25, 43]) {
-    assert.ok(f(n)['Źródła'].includes('https://116sos.pl/dokumenty/zasady-korzystania'));
-    assert.ok(f(n)['Źródła'].includes('https://centrumwsparcia.pl/centrum-wsparcia/'));
+    const inputs = citedInputs(entry(n));
+    for (const expected of ['https://116sos.pl/dokumenty/zasady-korzystania', 'https://centrumwsparcia.pl/centrum-wsparcia/']) {
+      assert.ok(inputs.some(input => input === expected), expected);
+    }
   }
   assert.match(f(43).Ograniczenia, /Sama odpowiedź „nie” nie wyklucza zagrożenia/);
   assert.equal(f(37).Status, 'needs_localization');
