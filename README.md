@@ -4,16 +4,16 @@
 
 Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](https://github.com/eternity4719/HowToLiveBetter), autorstwa eternity4719. Wybieramy praktyczne zalecenia, sprawdzamy źródła i opisujemy ich ograniczenia. To nie jest oficjalne wydanie autora ani automatyczne tłumaczenie.
 
-**Stan treści: 32 zweryfikowane polskie porady z trzech rozdziałów.** Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
+**Stan treści: 33 opracowane polskie porady z trzech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
 
-| Rozdział | Ocenione pozycje źródłowe | Zweryfikowane | Pozostałe |
+| Rozdział | Ocenione pozycje źródłowe | W czytniku (verified) | Pozostałe |
 | --- | --- | --- | --- |
 | [03. Nie marnuj energii](book/pl/03-nie-marnuj-energii.md) | 27 | 12 | 13 needs_verification, 2 needs_localization |
 | [04. Nie marnuj czasu](book/pl/04-nie-marnuj-czasu.md) | 18 | 10 | 8 wcześniejszych wyłączeń, bez pełnego tłumaczenia |
-| [14. Bezpieczeństwo kont i danych](book/pl/14-bezpieczenstwo-kont-i-danych.md) | 12 | 10 | 2 needs_localization |
-| Razem | 57 | 32 | 17 rekordów oczekujących i 8 wcześniejszych wyłączeń |
+| [14. Bezpieczeństwo kont i danych](book/pl/14-bezpieczenstwo-kont-i-danych.md) | 12 | 11 | 1 needs_localization |
+| Razem | 57 | 33 | 16 rekordów oczekujących i 8 wcześniejszych wyłączeń |
 
-W rozszerzeniu oceniono **39 nowych pozycji** rozdziałów 03 i 14. Z nich 22 dopuszczono do czytnika, a 17 pozostało rekordami redakcyjnymi. Nie są to niepełne porady do zastosowania. Rozdział 04 zachowuje 10 porad i osiem dotychczasowych wyłączeń.
+Oceniono **39 pozycji** rozdziałów 03 i 14. Pierwotnie do czytnika dopuszczono 22; po polskiej lokalizacji 14.5 z 2026-10-30 są to 23 pozycje. Pozostałych 16 to rekordy redakcyjne, nie niepełne porady do zastosowania. Rozdział 04 zachowuje 10 porad i osiem dotychczasowych wyłączeń.
 
 - [Uruchom lokalny czytnik](index.html) według instrukcji poniżej.
 - [Zgłoś błąd lub zaproponuj korektę](https://github.com/mikomiel/HowToLiveBetter-PL/pulls).
@@ -26,7 +26,7 @@ Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](h
 Każda nowa pozycja ma oryginalny numer i decyzję. Nie zmieniamy numeracji, aby zapełnić luki.
 
 - W rozdziale 03 pozycje 9–17, 20–22 i 24 wymagają dalszej weryfikacji. Powody obejmują nieuprawnione uogólnienia, przenoszenie korelacji na interwencję, różne populacje i niezweryfikowane liczby. Pozycje 19 i 25 wymagają polskiej lokalizacji procedur lub informacji o lekach.
-- W rozdziale 14 pozycja 5 wymaga pełnej oceny polskich zasad odpowiedzialności za nieautoryzowaną płatność. Pozycja 11 wymaga sprawdzenia polskich procedur i zakresu dostępnych rejestrów. Nie skopiowano chińskich uprawnień ani usług.
+- W rozdziale 14 pozycja 11 nadal wymaga sprawdzenia polskich procedur i zakresu dostępnych rejestrów. Pozycja 14.5 opisuje już zawężone zasady dla konsumenta korzystającego ze zwykłego rachunku płatniczego, na podstawie polskiej ustawy i oficjalnych objaśnień. Nie gwarantuje zwrotu pieniędzy w każdym oszustwie. Nie skopiowano chińskich uprawnień ani usług.
 - Osiem wcześniejszych wyłączeń rozdziału 04 ma uzasadnienia w jego końcowej tabeli. Nie zmieniono ich na podstawie nowych rozdziałów.
 
 Szczegółowy powód i wymagane dalsze źródła są przy każdym rekordzie. Ich treść nie trafia do wyszukiwania ani kart porad.
@@ -61,7 +61,7 @@ Kanoniczne porady i rekordy redakcyjne są w trzech plikach [book/pl/](book/READ
 
 | Stan | Znaczenie |
 | --- | --- |
-| verified | Sprawdzona kompletna polska porada. Tylko ten stan trafia do czytnika. |
+| verified | Opracowana porada ze źródłami sprawdzonymi w opisanym zakresie, ograniczeniami i pochodzeniem. To stan redakcyjny, nie zatwierdzenie przez specjalistę ani gwarancja skuteczności. Tylko ten stan trafia do czytnika. |
 | needs_verification | Rekord oczekuje na potwierdzenie materialnego twierdzenia lub działania. Nie jest gotową poradą. |
 | needs_localization | Brakuje sprawdzonego zastosowania w polskich przepisach, instytucjach, rynku lub procedurach. |
 | not_applicable | Brak odpowiedniego zastosowania w Polsce. To dostępny stan, niewykorzystany w nowych rozdziałach. |
@@ -86,7 +86,7 @@ Zbiór jest pokazywany dopiero po odczycie i sprawdzeniu wszystkich plików. Bł
 
 ## Jak zgłosić poprawkę
 
-Napisz komentarz do właściwego otwartego PR albo prześlij PR z korektą. Kanał nie wymaga włączania Issues. Podaj identyfikator, kwestionowane zdanie, źródło pierwotne i proponowaną korektę. Nie przesyłaj cudzych danych, haseł ani sekretów. Jeżeli dowodu brakuje, napisz to zamiast dopisywać pewny wniosek.
+Napisz komentarz do właściwego otwartego PR albo prześlij PR z korektą. Kanał nie wymaga włączania Issues. Podaj identyfikator lub stały link z karty porady, kwestionowane zdanie, źródło pierwotne i proponowaną korektę. Nie zamieszczaj publicznie danych zdrowotnych, danych kont, haseł ani opisów indywidualnych spraw — własnych lub cudzych. Jeżeli dowodu brakuje, napisz to zamiast dopisywać pewny wniosek.
 
 Przeczytaj [AGENTS.md](AGENTS.md). Edytuj Markdown, nie kopię porady w kodzie. Zmiana materialnego twierdzenia wymaga ponownej oceny i daty. Niezweryfikowana treść pozostaje poza czytnikiem. PR kieruj wyłącznie do main w mikomiel/HowToLiveBetter-PL.
 
@@ -97,6 +97,7 @@ Potrzebujesz Node.js 22 lub nowszego. Playwright pozostaje jedyną nową zależn
 ```bash
 npm ci --ignore-scripts
 npm test
+npm run lint:content
 npx playwright install chromium firefox webkit
 npm run test:browser
 ```
@@ -109,11 +110,21 @@ Testy obejmują wszystkie decyzje źródłowe, stany, pochodzenie, liczby, odsy�
 
 GitHub jest jedynym autorytatywnym forge. Decyzja o scaleniu należy do człowieka. Po zgodzie operatora na dany PR agent może wykonać squash merge, ale dopiero po zatwierdzeniu aktualnego HEAD przez uprawnionego recenzenta-człowieka i przejściu wymaganych kontroli. Nie używa --admin ani bypassu. Sprawdza SHA przez --match-head-commit. Docelowo korzysta z osobnej tożsamości bez uprawnień Administration, ograniczonej do tego repozytorium. Sama zmiana tokenu tego samego konta nie rozdziela autora i recenzenta. Dopóki osobna tożsamość nie jest skonfigurowana, agent nie wykonuje merge; robi to człowiek. Ten model nie jest jeszcze w pełni uruchomiony.
 
-Ochronę main utrzymuje operator w [rulesecie GitHuba](https://github.com/mikomiel/HowToLiveBetter-PL/rules/25998214): PR, jedno zatwierdzenie, aktualna gałąź, unieważnianie starych akceptacji, rozwiązywanie wątków i brak bypassu. Wymagany jest check „Treść i czytnik” z GitHub Actions. Po scaleniu konfiguracji Dependency Review operator powinien dodać także check „Dependency review” jako wymagany; nie należy wymagać workflow, którego nie ma jeszcze na main. Komentarz z przeglądem AI nie jest zatwierdzeniem GitHuba.
+Reguły redakcyjne wymagają PR, zatwierdzenia człowieka dla aktualnego HEAD, aktualnej gałęzi, rozwiązanych wątków i braku bypassu. To wymagania procesu, nie deklaracja aktualnych ustawień serwera. Faktyczną ochronę main sprawdzaj w [rulesecie GitHuba](https://github.com/mikomiel/HowToLiveBetter-PL/rules/25998214), którym zarządza operator. Powinna wymagać checków „Treść i czytnik” i „Dependency review” z GitHub Actions, gdy ich workflowy są już na main. Jeżeli konfiguracja jest słabsza, nie znosi to obowiązku uzyskania akceptacji człowieka. Agent nie zmienia reguł w celu umożliwienia merge. Komentarz z przeglądem AI nie jest zatwierdzeniem GitHuba.
 
 Workflowy repozytorium wykonują walidację, z contents: read, Actions przypiętymi do pełnych SHA i bez zachowywania poświadczeń checkoutu. Używają standardowego runnera Ubuntu 24.04. Nie tworzą e-booków, tagów ani wydań. Jedynym wyjątkiem od zasady „tylko walidacja” jest ręcznie uruchamiany pages.yml, opisany niżej: wdraża stronę czytnika, ale nie tworzy e-booków, tagów ani wydań. CodeQL publikuje wyniki w zakładce Security, nie wydanie książki. Nie włączamy większych płatnych runnerów, płatnych dodatków ani zwiększonych limitów storage. [Starsze generatory](tools/README.md) nie służą do publikacji polskiego wydania.
 
-Strona czytnika w GitHub Pages jest przygotowana, ale dopóki właściciel nie uruchomi pages.yml, strona nie jest publiczna. Workflow uruchamia ręcznie właściciel (Actions, „Run workflow”, gałąź main); nie startuje po pushu ani według harmonogramu. Przed pierwszym uruchomieniem właściciel ustawia w Settings, Pages, źródło „GitHub Actions” oraz w Settings, Environments, github-pages regułę Deployment branches: tylko main. Warunek if w pliku pages.yml sam nie wystarcza, bo działa tylko w pliku z gałęzi, z której uruchomiono workflow. Workflow uruchamia npm test, buduje folder poleceniem `node tools/pl/build-site.mjs _site`, sprawdza go w prawdziwej przeglądarce i publikuje tylko jego zawartość: index.html, reader.mjs, rozdziały z rejestru CHAPTERS oraz LICENSE i LICENSE-CODE. Odziedziczone reklamy, chińskie docs/, selfcheck.html, og.png, audit/ i narzędzia nie trafiają na stronę; pilnują tego tests/site.test.mjs i tests/browser/site.spec.mjs. Adres strony poda GitHub po pierwszym wdrożeniu; nie wpisujemy go do repozytorium przed wdrożeniem. robots.txt z repozytorium nie jest publikowany. Przy domyślnym adresie strony projektu (nazwa-konta.github.io/HowToLiveBetter-PL/) roboty, zgodnie ze standardem, czytają robots.txt z katalogu głównego hosta, więc ten plik nie wyłącza indeksowania strony. Właściciel zdecydował 2026-10-30, że strona nie ma być indeksowana, dlatego index.html zawiera meta robots noindex. To prośba do wyszukiwarek, a nie kontrola dostępu: adres strony pozostaje publiczny. Nagłówek strony mówi też wprost, że porady są sprawdzane ze źródłami maszynowo, przegląd trwa i nie zatwierdził ich lekarz ani prawnik (za zgodą właściciela z 2026-10-30). Odziedziczony sitemap.xml usunięto.
+Wdrożeniem strony czytnika w GitHub Pages zarządza właściciel. Samo scalenie kodu nie jest dowodem wdrożenia strony. Workflow uruchamia ręcznie właściciel (Actions, „Run workflow”, gałąź main); nie startuje po pushu ani według harmonogramu. Przed pierwszym uruchomieniem właściciel ustawia w Settings, Pages, źródło „GitHub Actions” oraz w Settings, Environments, github-pages regułę Deployment branches: tylko main. Warunek if w pliku pages.yml sam nie wystarcza, bo działa tylko w pliku z gałęzi, z której uruchomiono workflow. Workflow uruchamia npm test, buduje folder poleceniem `node tools/pl/build-site.mjs _site`, sprawdza go w prawdziwej przeglądarce i publikuje tylko jego zawartość: index.html, reader.mjs, rozdziały z rejestru CHAPTERS oraz LICENSE i LICENSE-CODE. Odziedziczone reklamy, chińskie docs/, selfcheck.html, og.png, audit/ i narzędzia nie trafiają na stronę; pilnują tego tests/site.test.mjs i tests/browser/site.spec.mjs. Adres strony poda GitHub po pierwszym wdrożeniu; nie wpisujemy go do repozytorium przed wdrożeniem. robots.txt z repozytorium nie jest publikowany. Przy domyślnym adresie strony projektu (nazwa-konta.github.io/HowToLiveBetter-PL/) roboty, zgodnie ze standardem, czytają robots.txt z katalogu głównego hosta, więc ten plik nie wyłącza indeksowania strony. Właściciel zdecydował 2026-10-30, że strona nie ma być indeksowana, dlatego index.html zawiera meta robots noindex. To prośba do wyszukiwarek, a nie kontrola dostępu: adres strony pozostaje publiczny. Nagłówek strony mówi też wprost, że porady są sprawdzane ze źródłami maszynowo, przegląd trwa i nie zatwierdził ich lekarz ani prawnik (za zgodą właściciela z 2026-10-30). Odziedziczony sitemap.xml usunięto.
+
+## Prywatność i gotowość do publikacji
+
+Adaptację przygotowywano i przeglądano z pomocą generatywnej AI. Konsultacja z agentem Prawnik AI nie jest przeglądem przez adwokata lub radcę prawnego. Historyczny run7 i jego liczba przyjętych raportów nie potwierdzają automatycznie aktualnego brzmienia porad: zmiana tekstu unieważnia odpowiednie pakiety audytu. Aktualne daty i zakres sprawdzenia pozostają przy poradach.
+
+Sam kod czytnika nie tworzy kont, formularzy ani własnej analityki i pobiera treść z tego samego hosta. Nie oznacza to, że hosting nie przetwarza danych. [GitHub dokumentuje zapisywanie adresów IP odwiedzających Pages dla bezpieczeństwa](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection), także bez logowania. Nie deklarujemy braku przetwarzania danych przez GitHub ani kompletnej informacji o prywatności wydawcy.
+
+Przed pierwszym publicznym wdrożeniem właściciel powinien ustalić, kto i w jakim charakterze publikuje, jaki podaje kontakt do korekt oraz jakie są role i obowiązki związane z hostingiem i korespondencją. Musi sprawdzić rzeczywiste operacje strony, w tym ewentualne zapisy na urządzeniu, i uzupełnić adekwatną informację o prywatności. Nie dodajemy fikcyjnych danych wydawcy, uniwersalnego regulaminu ani banera zgody bez ustalenia potrzeby. Te kwestie i ewentualne obowiązki przejrzystości dotyczące AI pozostają bramką właściciela, nie są załatwione samym zastrzeżeniem w poradniku.
+
+## Warunki licencji
 
 Tekst oryginału oraz polska adaptacja, w tym README i book/pl/, są udostępnione na [CC BY 4.0](LICENSE). Możesz kopiować, adaptować i używać ich komercyjnie zgodnie z [warunkami licencji](https://creativecommons.org/licenses/by/4.0/). Zachowaj oznaczenie eternity4719, tytuł i link do HowToLiveBetter, link do licencji, informację o adaptacji i dokonanych zmianach. Nie sugeruj zatwierdzenia adaptacji przez autora. Nie ma gwarancji poprawności; pełne warunki i wyłączenia zawiera LICENSE. Prawa do znaków i materiałów osób trzecich nie wynikają automatycznie z tej licencji.
 

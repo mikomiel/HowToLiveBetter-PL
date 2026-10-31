@@ -1,6 +1,6 @@
 ---
 name: jak-zyc-lepiej
-description: Odpowiada na konkretne pytania o decyzje życiowe (czy warto, jak zacząć, co zrobić najpierw) wyłącznie na podstawie zweryfikowanych polskich porad z "Jak żyć lepiej" w tym repozytorium. Najpierw wyszukuje porady narzędziem tools/pl/search.mjs, potem odpowiada: działanie, koszt, korzyść i dowody, ograniczenia, numer porady. Użyj przy pytaniach o sen, uwagę i koncentrację, planowanie czasu i spotkania, hasła, konta i dane. Nie zastępuje lekarza, prawnika ani numeru alarmowego.
+description: Odpowiada na konkretne pytania o decyzje życiowe (czy warto, jak zacząć, co zrobić najpierw) wyłącznie na podstawie opracowanych polskich porad w stanie verified z "Jak żyć lepiej" w tym repozytorium. Najpierw wyszukuje porady narzędziem tools/pl/search.mjs, potem odpowiada: działanie, koszt, korzyść i dowody, ograniczenia, numer porady. Użyj przy pytaniach o sen, uwagę i koncentrację, planowanie czasu i spotkania, hasła, konta i dane. Nie zastępuje lekarza, prawnika ani numeru alarmowego.
 ---
 
 # Decyzje życiowe: najpierw znajdź poradę, potem odpowiadaj
@@ -9,7 +9,7 @@ Reguły redakcyjne repozytorium są w AGENTS.md. Ten plik opisuje tylko, jak z n
 
 ## Co książka obejmuje
 
-Opublikowane są tylko zweryfikowane porady z kilku rozdziałów. Narzędzie wyszukiwania podaje w pierwszym wierszu, ile ich jest i z których rozdziałów. Powiedz o tym zakresie, gdy pytanie wykracza poza niego. Rekordy redakcyjne i porady niezweryfikowane nie są wynikami i nie wolno ich cytować ani streszczać.
+Opublikowane są tylko opracowane porady w stanie verified z kilku rozdziałów. Stan verified nie oznacza zatwierdzenia przez lekarza lub prawnika; zakres sprawdzenia jest przy każdej poradzie. Narzędzie wyszukiwania podaje w pierwszym wierszu, ile ich jest i z których rozdziałów. Powiedz o tym zakresie, gdy pytanie wykracza poza niego. Rekordy redakcyjne i porady niezweryfikowane nie są wynikami i nie wolno ich cytować ani streszczać.
 
 ## Krok 0: zagrożenie
 
@@ -29,6 +29,7 @@ Zrób dwa lub trzy zapytania z różnymi słowami (rdzenie, synonimy, rzeczownik
 - Podaj osobno: co zrobić, koszt (pieniądze, czas i wysiłek oddzielnie), korzyść i dowody, ocenę dowodów A, B lub C z jej znaczeniem według README ("Jak czytać dowody") oraz ograniczenia.
 - Nie przeliczaj czasu na pieniądze ani na długość życia. Nie zamieniaj d, HR ani OR w procenty. Nie zamieniaj korelacji w przyczynę.
 - Nie dodawaj liczb, nazw instytucji, cen, przepisów ani dawek, których nie ma w znalezionej poradzie.
+- Nie przedstawiaj znalezionej porady ani konsultacji z agentem AI jako zatwierdzenia przez specjalistę. Nie rozstrzygaj indywidualnego roszczenia i nie proś o dane zdrowotne, numery kont ani dokumenty prywatnej sprawy.
 - Jeśli ograniczenia porady pasują do sytuacji pytającego (choroba, ciąża, wiek, leki), powiedz to i odeślij do lekarza lub innego specjalisty. Porada zdrowotna nie zastępuje diagnozy ani leczenia.
 
 ## Krok 3: gdy nic nie znaleziono

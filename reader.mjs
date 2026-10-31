@@ -133,6 +133,13 @@ async function startReader() {
   let sections = [];
   const chapterAnchor = id => 'rozdzial-' + Number(id);
 
+  function updateCurrentLinks() {
+    for (const link of document.querySelectorAll('#toc a, #chapters a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      if (link.hash === location.hash && target && !target.hidden) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+  }
   function apply() {
     if (!chapters.length) return;
     const query = fold(search.value.trim());
@@ -145,14 +152,16 @@ async function startReader() {
       if (match) visible++;
     }
     for (const { id, section } of sections) section.hidden = !cards.some(c => c.entry.chapterId === id && !c.article.hidden);
-    status.textContent = `Wyświetlono ${visible} z ${cards.length} zweryfikowanych polskich porad. Wczytane rozdziały: ${chapters.length}.`
+    status.textContent = `Wyświetlono ${visible} z ${cards.length} opracowanych polskich porad. Wczytane rozdziały: ${chapters.length}.`
       + (visible ? '' : ' Brak wyników. Zmień wyszukiwanie lub filtr.');
+    updateCurrentLinks();
   }
   function reset() {
     search.value = grade.value = chapterFilter.value = '';
     apply();
   }
   function revealHash() {
+    updateCurrentLinks();
     const card = cards.find(c => '#' + c.entry.id === location.hash);
     if (card) {
       if (card.article.hidden) reset();
@@ -224,7 +233,12 @@ async function startReader() {
           const practical = document.createElement('p');
           practical.className = 'practical';
           inline(practical, entry.fields['W praktyce']);
-          article.append(badge, title, practical);
+          const permalink = document.createElement('a');
+          permalink.className = 'permalink';
+          permalink.href = '#' + entry.id;
+          permalink.textContent = 'Stały link';
+          permalink.setAttribute('aria-label', 'Stały link do porady ' + entry.number);
+          article.append(badge, title, permalink, practical);
           article.append(fieldsList(entry, ['Koszt', 'Korzyść i dowody', 'Ocena dowodów', 'Ograniczenia', 'Ocena redakcyjna']));
           const details = document.createElement('details');
           const summary = document.createElement('summary');

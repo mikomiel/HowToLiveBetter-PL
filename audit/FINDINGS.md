@@ -79,3 +79,45 @@ Dwa przebiegi weryfikatora różniły się przy 14 pozycjach (33 wiersze plus je
 
 Zmiany w tekście wprowadzają commity „draft: … (for owner review)” w osobnym PR, ułożonym na PR z edycjami językowymi, bo oba zmieniają te same wiersze pól. W polu „Zmiany w adaptacji” każdej zmienionej pozycji dopisano, co i dlaczego zmieniono. Status `verified` pozostaje; zdania oznaczone jako propozycje redakcji nie są twierdzeniami o źródle.
 
+## G. Quality review and implementation handoff (2026-10-30)
+
+The operator requested a full review and implementation, then confirmed that the previous writer had stopped. The integration branch preserves PR #9 (`564c9f8`) and PR #10 (`5283aa0`) and merges main `9ef1b87`; it does not overwrite either branch. This section owns the improvement backlog. Canonical advice and verification scope remain in `book/pl/`, not in a second evidence database.
+
+The review read all 32 published entries, the 17 pending records and the eight chapter-04 exclusions. Baseline checks: 172 Node tests and 26 Chromium desktop/mobile tests passed; content lint reported zero errors and 16 warnings. This was not a new systematic literature review. Sources without newly checked material retain their previous verification dates and limitations.
+
+| Priority | Finding and action | Boundary |
+| --- | --- | --- |
+| P1 | Separate an editorial `verified` state from expert approval in the headline, counts and reader labels. Keep the machine state and the fail-closed publication rule. | Source change |
+| P1 | In 14.7–14.9 distinguish OS permissions from GDPR consent; remove the implied duty to supply a legal argument for erasure; name the supervisory complaint route; explain Article 6 together with Article 9. | Source change after legal consultation and direct statutory reads |
+| P1 | Complete 14.5 only as a narrow consumer-account tip: immediate reporting, authentication versus authorization, D+1 versus final liability, the 13-month limit and statutory exceptions. Do not promise a refund for every fraud. | Source change; requires human review before merge |
+| P1 | In 14.10 distinguish API credentials from passkeys and from personal data/confidential code. Explain the intermediary and preprint. Permission to process data does not authorize exposing credentials. | Source change |
+| P1 | In 14.12 state Google's possible one-week security delay without exporting it to every provider. Preserve the check-before-disconnection instruction. | Source change |
+| P1 | In 03.4 identify 8.8/13.2 hours as model-derived population estimates, not personal safety deadlines. Read the full methods and results, rather than relying only on the abstract. | Source change |
+| P2 | Preserve the crisis and clinical safeguards. Explain exercise comparisons and effect sizes, CBT-I and CPAP in plain Polish; retain adult scope, low certainty and no self-prescribed treatment. | Source change |
+| P2 | Apply the remaining justified language fixes: unclear pronouns, who performed the study, unexplained jargon and inconsistent terms. Do not mechanically apply every stylistic suggestion or change protected meaning without evidence. | Source change |
+| P2 | Replace generic pending-record verification text with the actual item-specific gap. Do not imply the missing study was read or promote an unsupported item. | Source change |
+| P2 | Add a direct link on each card, expose the current advice in navigation and associate grade help with its filter. Preserve keyboard focus, mobile layout and historical anchors. | Reader and real-browser regression tests |
+| P2 | State hosting/privacy limits and make correction intake warn against public health, account and case details. Do not invent publisher identity, legal capacity or a complete privacy policy. | Source documentation; owner facts remain a release gate |
+| P2 | Keep run7 historical. Its report acceptance is not factual approval, and changed book text makes old packets stale. Do not regenerate old reports as if they reviewed new wording. | Audit documentation |
+| Owner | Confirm the intended main-review policy and require Dependency Review through repository administration. The 2026-10-30 API snapshot required zero approvals and only `Treść i czytnik`; that does not waive the human-review rule in AGENTS. | Separate administrative approval; no setting changed here |
+| Owner | Register and isolate the repository-scoped GitHub App. A second token for `mikomiel` does not separate author and reviewer. | Owner registration and secure credential route |
+| Owner | Decide publisher identity/capacity, hosting/contact data roles and any applicable AI-transparency obligations before the first manual Pages publication. | Legal readiness remains yellow; no deployment here |
+| Separate triage | Five HIGH CodeQL alerts remain in inherited `tools/` generators/checkers. These files are not invoked by the Polish reader, its validation scripts or its Pages workflow. Do not dismiss them or replace their HTML handling without separate context and behavioral tests. | GitHub alerts remain the finding owner; not claimed fixed |
+| No change | Keep a dependency-free reader, the three-chapter scope, original numbering, withheld medical/institutional material, attribution and both licences. Do not add a CMS, tracking, paid CI, automated deployment or more chapters. | Preserved constraints |
+
+### Implementation state
+
+The candidate keeps all inherited PR commits and adds a source-level quality pass. It publishes 33 entries after completing the scoped Polish consumer-payment entry 14.5; 16 pending records and eight chapter-04 exclusions stay outside the reader. The factual edit dates and scopes are recorded on the affected entries. Generic pending-record descriptions now identify their own gap without claiming the missing source was read. Content lint reports zero errors and zero warnings.
+
+The reader, CLI and answering skill use editorial rather than expert-approval wording. Card permalinks and current-location navigation have browser regressions. The build and deployment permissions, file whitelist, noindex notice, licences and dependency-free runtime are unchanged. Validation-only CI also runs content lint explicitly.
+
+A baseline test froze the corpus at 74 citations. The candidate legitimately has 76: the test now checks the documented empty records, nonempty published citations, unique valid inputs and discovery of the new official statute; its synthetic exact-extraction cases remain. This fixes a brittle corpus-count assertion, not a failed source parser.
+
+### Evidence and limits
+
+Prawnik completed an anonymized Polish/EU consultation on 2026-10-30. It is an AI analysis, not approval by a licensed lawyer. The implementation owner independently read the selected GDPR Articles 6–9, 12, 15–17 and the payment-act Articles 40, 42, 44–46, plus the official UOKiK/RF explanations. The recent TSUE case mentioned by RF is not presented as independently reviewed case law.
+
+Primary references: [GDPR, official Polish text](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [payment act, Dz.U. 2026 poz. 623](https://eli.gov.pl/api/acts/DU/2026/623/text.pdf); [UOKiK on unauthorized transactions](https://uokik.gov.pl/nieautoryzowane-transakcje-platnicze-cztery-banki-zmieniaja-praktyki-po-decyzjach-prezesa-uokik); [RF explanation of prompt refunds and later liability](https://rf.gov.pl/kradziez-pieniedzy-z-konta-bank-musi-je-niezwlocznie-zwrocic-tsue-potwierdza-stanowisko-rzecznika-finansowego/); [caffeine meta-analysis, sections 2.5 and 3.3.9](https://doi.org/10.1016/j.smrv.2023.101764); [exercise review, methods and abstract](https://www.bmj.com/content/384/bmj-2023-075847); [AASM clinical guideline](https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/); [CERT Polska](https://wiedza.cert.pl/dobre-praktyki/hasla/); [Google number-change limits](https://support.google.com/accounts/answer/3463280?hl=pl); [116 123 operator](https://116sos.pl/otrzymaj-pomoc/telefon); [GitHub Pages data collection](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection).
+
+Release, deployment, paid resources, new account permissions and merging remain outside this implementation's authority. Each source change still needs exact-head tests, independent review and the operator's merge decision.
+
