@@ -104,7 +104,9 @@ test('the only skill is the Polish one: no Chinese text, no remote instructions,
   const text = read('.claude/skills/jak-zyc-lepiej/SKILL.md');
   const front = /^---\n([\s\S]*?)\n---\n/.exec(text)?.[1] ?? '';
   assert.match(front, /^name: jak-zyc-lepiej$/m);
-  assert.match(front, /^description: .*zweryfikowanych polskich porad/m);
+  assert.match(front, /^description: .*opracowanych polskich porad w stanie verified/m);
+  assert.match(text, /Stan verified nie oznacza zatwierdzenia przez lekarza lub prawnika/);
+  assert.match(text, /Nie rozstrzygaj indywidualnego roszczenia/);
   assert.doesNotMatch(text, /\p{Script=Han}/u);
   assert.doesNotMatch(text, /curl|wget|git clone|raw\.githubusercontent|https?:\/\//i, 'a skill must not fetch or follow instructions from the network');
   assert.match(text, /tools\/pl\/search\.mjs/);
