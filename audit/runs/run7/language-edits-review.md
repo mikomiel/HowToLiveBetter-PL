@@ -49,7 +49,7 @@ Reworked after the check (applied in the commits named "one language edit rework
 - 04.1 Koszt: Replacing 'szacunek' (read by most people as 'respect') is right, but the target is wrong for the book. 'To ocena redakcji.' is used 15 times (6 in ch. 03, 6 in ch. 04, 3 in ch. 14) and the same Koszt field in 04.3, 04.5, 04.7, 04.9, 04.12 and 04.17 uses it. 'Oszacowanie' creates a third variant. In
 - 04.1 Korzyść i dowody: Two problems. (1) 'takich jak plan z przykładu' makes a statement about the 94 studied plans. The example is the editors' own addition ('Dodano polski przykład' in Zmiany w adaptacji), so the reader may take it that the studies examined plans like this one (a writing task tied to breakfast and desk)
 - 04.2 Koszt: Same reason as 04.1 Koszt: the book formula is 'To ocena redakcji.'; 'oszacowanie' is a third variant and clashes with the chapter's time-estimate vocabulary.
-- 04.7 W praktyce: The intent is right: the original sentence did not say the list was about estimating time, and 'tekst' was the odd item out. But the item's own term for the operation is 'rozpisz' (title) and 'Rozpisanie zadania na części' (Korzyść); 'wyodrębnij' is a third word for the same step. After a colon the 
+- 04.7 W praktyce: The intent is right: the original sentence did not say the list was about estimating time, and 'tekst' was the odd item out. But the item's own term for the operation is 'rozpisz' (title) and 'Rozpisanie zadania na części' (Korzyść); 'wyodrębnij' is a third word for the same step. After a colon the
 
 Language problems the reviewer noticed in text the edits did not touch (not changed here, for the owner to decide):
 
@@ -104,4 +104,3 @@ Language problems the reviewer noticed in text the edits did not touch (not chan
 - 14.10: "pośrednikom AI" (title), "Przed użyciem pośrednika" and "pośredników API modeli" - 'pośrednik' is never explained; "w preprincie" - 'preprint' is not explained; "dostęp do badawczych kluczy kontrolnych" is unclear; "Nie przekazuj sekretów" - 'sekret' is an English calque. The editor's fixes were marked requires_reverification and not applied.
 - 14.10 W praktyce: "Nie wysyłaj mu kluczy dostępu" - here 'klucz dostępu' means an API key or credential, whereas in 14.1 'klucze dostępu' = passkeys (the term the 14.1 Ograniczenia edit now uses). The same term has two meanings in one chapter.
 - 14.12 Korzyść i dowody: "numer może służyć do logowania lub odzyskiwania" - 'odzyskiwania' without 'konta', while Koszt and W praktyce now say 'odzyskiwania konta'. The editor's fix was marked requires_reverification and not applied.
-

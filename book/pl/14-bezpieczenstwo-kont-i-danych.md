@@ -88,15 +88,15 @@ Informacje prawne są ogólne i dotyczą wskazanego zakresu źródeł. Nie rozst
 ### 6. Sprawdzaj sesje logowania, połączone aplikacje i przekazywanie poczty
 - Status: verified
 - Koszt: Przegląd ustawień i ustalenie, co nadal jest potrzebne. Częstotliwość przeglądu jest wyborem redakcyjnym, nie wynikiem badania.
-- W praktyce: Sprawdź listy sesji i aplikacji połączonych z kontem. Sesja to trwające zalogowanie na urządzeniu lub w przeglądarce; połączona aplikacja może mieć osobny dostęp do konta. Zakończ zbędne sesje i sprawdź, jak odłączyć niepotrzebne aplikacje. Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania; sprawdź obce reguły przekazywania poczty, zmień przejęte lub ponownie użyte hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.
-- Korzyść i dowody: NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz potrzebę zakończenia dostępu urządzeń i aplikacji po zmianie haseł.
+- W praktyce: Sprawdź listy sesji i aplikacji połączonych z kontem. Sesja to trwające zalogowanie na urządzeniu lub w przeglądarce; połączona aplikacja może mieć osobny dostęp do konta. Propozycja redakcji: zakończ zbędne sesje i sprawdź w instrukcji dostawcy, jak odłączyć niepotrzebne aplikacje. Przy podejrzeniu przejęcia konta skorzystaj z oficjalnej instrukcji odzyskiwania; sprawdź obce reguły przekazywania poczty, zmień przejęte lub ponownie użyte hasła i wyloguj pozostałe sesje zgodnie z procedurą dostawcy.
+- Korzyść i dowody: NCSC opisuje nietypowe logowania i nieznane zmiany jako sygnały do sprawdzenia. Wskazuje też reguły przekazywania poczty używane do przechwytywania wiadomości oraz zalecenie wylogowania urządzeń i aplikacji po zmianie haseł.
 - Ocena dowodów: C — oficjalny poradnik odzyskiwania konta, bez oceny skuteczności okresowego przeglądu.
 - Ocena redakcyjna: Warto znać te ustawienia, zanim będą potrzebne w nagłej sytuacji.
 - Ograniczenia: Nieznana lokalizacja logowania sama nie rozstrzyga o ataku. Zmiana hasła i cofnięcie dostępu aplikacji to nie zawsze ta sama czynność. Nie ma tu jednego harmonogramu dla wszystkich usług ani gwarancji odzyskania konta.
 - Źródła: [NCSC: Recovering a hacked account](https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account).
 - Oryginał: [14.6](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md#L52-L59)
-- Weryfikacja: 2026-10-28; pełny poradnik NCSC: sygnały przejęcia, przekazywanie poczty, zmiana haseł, sesje i oficjalne odzyskiwanie.
-- Zmiany w adaptacji: Zachowano C. Okresowy przegląd pozostaje sugestią redakcyjną. Nie przeniesiono brytyjskich numerów zgłoszeniowych ani nazw chińskich aplikacji.
+- Weryfikacja: 2026-10-31; pełny poradnik NCSC: sygnały przejęcia, przekazywanie poczty, zmiana haseł i krok 4 o wylogowaniu urządzeń i aplikacji. Wylogowanie nie jest opisem cofania wszystkich uprawnień aplikacji. Nie testowano procedury konkretnej usługi.
+- Zmiany w adaptacji: Zachowano C. Okresowy przegląd pozostaje sugestią redakcyjną. Nie przeniesiono brytyjskich numerów zgłoszeniowych ani nazw chińskich aplikacji. 2026-10-31 (przegląd jakości): doprecyzowano pojęcia i wskazanie NCSC o wylogowaniu; sprawdzenie możliwości odłączenia aplikacji nazwano propozycją redakcji, nie osobną procedurą z tego źródła.
 
 <a id="porada-14-7"></a>
 
