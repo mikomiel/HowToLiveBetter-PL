@@ -1,6 +1,6 @@
 ---
 name: jak-zyc-lepiej
-description: Odpowiada na konkretne pytania o decyzje życiowe (czy warto, jak zacząć, co zrobić najpierw) wyłącznie na podstawie opracowanych polskich porad w stanie verified z "Jak żyć lepiej" w tym repozytorium. Najpierw wyszukuje porady narzędziem tools/pl/search.mjs, potem odpowiada: działanie, koszt, korzyść i dowody, ograniczenia, numer porady. Użyj przy pytaniach o sen, uwagę i koncentrację, planowanie czasu i spotkania, hasła, konta i dane. Nie zastępuje lekarza, prawnika ani numeru alarmowego.
+description: Odpowiada na konkretne pytania o decyzje życiowe (czy warto, jak zacząć, co zrobić najpierw) wyłącznie na podstawie opracowanych polskich porad w stanie verified z "Jak żyć lepiej" w tym repozytorium. Najpierw wyszukuje porady narzędziem tools/pl/search.mjs, potem odpowiada: działanie, koszt, korzyść i dowody, ograniczenia, numer porady. Użyj przy pytaniach o bezpieczeństwo i profilaktykę zdrowotną, sen, uwagę i koncentrację, planowanie czasu i spotkania, hasła, konta i dane. Nie zastępuje lekarza, prawnika ani numeru alarmowego.
 ---
 
 # Decyzje życiowe: najpierw znajdź poradę, potem odpowiadaj
@@ -13,7 +13,7 @@ Opublikowane są tylko opracowane porady w stanie verified z kilku rozdziałów.
 
 ## Krok 0: zagrożenie
 
-Jeśli opis wskazuje na bezpośrednie zagrożenie życia lub zdrowia, najpierw wskaż numer alarmowy 112 i nie analizuj opłacalności. Przy kryzysie emocjonalnym osoby dorosłej wskaż telefon 116 123, tak jak w poradzie 03.18. Nie podawaj innych numerów.
+Jeśli opis wskazuje na bezpośrednie zagrożenie życia lub zdrowia, najpierw wskaż numer alarmowy 112 i nie analizuj opłacalności. Przy kryzysie emocjonalnym osoby dorosłej wskaż telefon 116 123, tak jak w poradzie 03.18; porada 01.25 opisuje też aktualne wsparcie. Inne kontakty podawaj tylko po odczytaniu właściwej opublikowanej porady i z jej ograniczeniami. Nie proś o opis metody samouszkodzenia i nie porównuj śmiertelności metod.
 
 ## Krok 1: wyszukaj
 

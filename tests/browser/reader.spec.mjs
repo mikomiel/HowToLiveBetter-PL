@@ -18,6 +18,46 @@ async function ready(page, suffix = '/') {
   await expect(page.locator('#status')).toContainText(`z ${count} opracowanych`);
 }
 
+test('chapter 01 is searchable, keyboard-accessible and keeps pending records out of the reader', async ({ page }) => {
+  const c = chapters.find(c => c.id === '01');
+  await ready(page, '/#porada-1-18');
+  await expect(page.locator('#porada-1-18 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('01');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  for (const e of c.entries.filter(e => e.fields.Status !== 'verified')) {
+    await expect(page.locator('#' + e.id)).toHaveCount(0);
+  }
+  await page.getByLabel('Szukaj w polskich poradach').fill('polpasiec');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(visibleCards(page)).toHaveAttribute('id', 'porada-1-21');
+  await page.locator('#porada-1-21 summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#porada-1-21 details')).toHaveAttribute('open', '');
+  await expect(page.locator('#porada-1-21')).toContainText('nie oznacza to takiego odsetka ciężkich zdarzeń');
+  await page.getByRole('link', { name: 'Stały link do porady 01.21', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-1-21$/);
+  await expect(page.locator('#porada-1-21 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-1-21 h3')).toBeFocused();
+});
+
+test('chapter 01 is required too: a missing or malformed new chapter fails the full collection', async ({ page }) => {
+  const c = chapters.find(c => c.id === '01');
+  for (const failure of [
+    route => route.fulfill({ status: 404, body: 'brak' }),
+    route => route.fulfill({ body: c.markdown.replace('- Status: verified', '- Status: ready') }),
+  ]) {
+    await page.route(routeFor(c), failure);
+    await page.goto('/');
+    await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+    await expect(page.locator('article')).toHaveCount(0);
+    await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+    await page.unroute(routeFor(c));
+  }
+  await page.getByRole('button', { name: 'Spróbuj wczytać ponownie' }).click();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
 test('renders actual chapters, all verified provenance and no external requests', async ({ page, baseURL }) => {
   const external = [], requests = [], errors = [];
   page.on('request', request => {

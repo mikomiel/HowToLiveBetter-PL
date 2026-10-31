@@ -4,27 +4,29 @@
 
 Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](https://github.com/eternity4719/HowToLiveBetter), autorstwa eternity4719. Wybieramy praktyczne zalecenia, sprawdzamy źródła i opisujemy ich ograniczenia. To nie jest oficjalne wydanie autora ani automatyczne tłumaczenie.
 
-**Stan treści: 33 opracowane polskie porady z trzech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
+**Stan treści: 66 opracowanych polskich porad z czterech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
 
 | Rozdział | Ocenione pozycje źródłowe | W czytniku (verified) | Pozostałe |
 | --- | --- | --- | --- |
+| [01. Unikaj przedwczesnej śmierci](book/pl/01-unikaj-przedwczesnej-smierci.md) | 48 | 33 | 4 needs_verification, 11 needs_localization |
 | [03. Nie marnuj energii](book/pl/03-nie-marnuj-energii.md) | 27 | 12 | 13 needs_verification, 2 needs_localization |
 | [04. Nie marnuj czasu](book/pl/04-nie-marnuj-czasu.md) | 18 | 10 | 8 wcześniejszych wyłączeń, bez pełnego tłumaczenia |
 | [14. Bezpieczeństwo kont i danych](book/pl/14-bezpieczenstwo-kont-i-danych.md) | 12 | 11 | 1 needs_localization |
-| Razem | 57 | 33 | 16 rekordów oczekujących i 8 wcześniejszych wyłączeń |
+| Razem | 105 | 66 | 31 rekordów oczekujących i 8 wcześniejszych wyłączeń |
 
-Oceniono **39 pozycji** rozdziałów 03 i 14. Pierwotnie do czytnika dopuszczono 22; po polskiej lokalizacji 14.5 z 2026-10-30 są to 23 pozycje. Pozostałych 16 to rekordy redakcyjne, nie niepełne porady do zastosowania. Rozdział 04 zachowuje 10 porad i osiem dotychczasowych wyłączeń.
+Rozdział 01 dodaje 33 zawężone porady oraz 15 niepublikowanych rekordów. Nie przeniesiono automatycznie chińskich progów badań, prawa, cen, schematów lekowych ani numerów pomocowych. Rozdziały 03, 04 i 14 zachowują wcześniejsze decyzje: 33 porady, 16 rekordów oczekujących i osiem wyłączeń rozdziału 04. To ocena redakcyjna pozycji, nie kompletny systematyczny przegląd medyczny.
 
 - [Uruchom lokalny czytnik](index.html) według instrukcji poniżej.
 - [Zgłoś błąd lub zaproponuj korektę](https://github.com/mikomiel/HowToLiveBetter-PL/pulls).
 - [Przeczytaj zasady redakcyjne](AGENTS.md).
 
-Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Nowe rozdziały oceniono 2026-10-28. Daty i zakresy sprawdzenia rozdziału 04 pozostają przy jego poradach.
+Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Rozdziały 03 i 14 oceniono początkowo 2026-10-28, a rozdział 01 — 2026-10-31. Daty późniejszych korekt i zakresy sprawdzenia pozostają przy poszczególnych poradach. Historyczny run7 nie obejmuje nowego rozdziału 01.
 
 ## Co pozostało poza czytnikiem
 
 Każda nowa pozycja ma oryginalny numer i decyzję. Nie zmieniamy numeracji, aby zapełnić luki.
 
+- W rozdziale 01 pozycje 26 oraz 32–34 wymagają dalszej weryfikacji: wynik edukacji nie dowodzi skuteczności całego zestawu wyposażenia, a dane o następstwach zdarzeń nie dowodzą bezpieczeństwa i skuteczności straszącego przekazu kryzysowego. Pozycje 8, 23, 24, 35, 37, 39, 40, 44, 45, 47 i 48 wymagają polskiej lokalizacji lub aktualnej kwalifikacji. Nie publikujemy zaleceń przekazywania haseł bankowych rodzinie, samodzielnego leczenia ani zagranicznych harmonogramów jako polskich zaleceń.
 - W rozdziale 03 pozycje 9–17, 20–22 i 24 wymagają dalszej weryfikacji. Powody obejmują nieuprawnione uogólnienia, przenoszenie korelacji na interwencję, różne populacje i niezweryfikowane liczby. Pozycje 19 i 25 wymagają polskiej lokalizacji procedur lub informacji o lekach.
 - W rozdziale 14 pozycja 11 nadal wymaga sprawdzenia polskich procedur i zakresu dostępnych rejestrów. Pozycja 14.5 opisuje już zawężone zasady dla konsumenta korzystającego ze zwykłego rachunku płatniczego, na podstawie polskiej ustawy i oficjalnych objaśnień. Nie gwarantuje zwrotu pieniędzy w każdym oszustwie. Nie skopiowano chińskich uprawnień ani usług.
 - Osiem wcześniejszych wyłączeń rozdziału 04 ma uzasadnienia w jego końcowej tabeli. Nie zmieniono ich na podstawie nowych rozdziałów.
@@ -53,11 +55,11 @@ Litera nie zastępuje opisu źródła. A może dotyczyć syntezy o niskiej pewno
 
 Przy części publikacji dostępny był tylko abstrakt autorów. Przy prawie sprawdzono wskazane artykuły lub oficjalne wyjaśnienia, nie każdą możliwą sprawę. Preprint pozostaje oznaczony jako preprint. Każda porada podaje datę i zakres. Stan verified nie oznacza ponownego wykonania badania, formalnej porady prawnej ani pełnego systematycznego przeglądu najnowszej literatury.
 
-Informacje zdrowotne dotyczą dorosłych w opisanym zakresie i nie zastępują diagnozy ani leczenia. Nie publikujemy dawkowania leków, samodzielnego ograniczania snu ani obietnicy leczenia depresji przez wykonanie listy nawyków. Chińskie kontakty pomocowe zastąpiono sprawdzonym polskim kontaktem tylko tam, gdzie przygotowano pełną poradę. Przy pilnym zagrożeniu nie należy czekać na wykonanie zaleceń produktywności.
+Informacje zdrowotne dotyczą opisanych populacji i nie zastępują diagnozy ani leczenia. Porady o bezpieczeństwie dzieci są skierowane do dorosłych opiekunów, nie stanowią instrukcji samoleczenia dzieci. Badanie przesiewowe bez objawów nie jest tym samym co diagnostyka niepokojącego objawu. Nie publikujemy dawkowania leków, samodzielnego ograniczania snu ani obietnicy leczenia depresji przez wykonanie listy nawyków. Chińskie kontakty pomocowe zastąpiono sprawdzonymi polskimi kontaktami tylko tam, gdzie przygotowano pełną poradę. Przy pilnym zagrożeniu nie należy czekać na wykonanie zaleceń produktywności.
 
 ## Stan treści i pochodzenie
 
-Kanoniczne porady i rekordy redakcyjne są w trzech plikach [book/pl/](book/README.md). Rejestr CHAPTERS w reader.mjs przechowuje tylko identyfikatory i ścieżki. Czytnik pobiera Markdown, nie osobną bazę ani chińskie rozdziały. Każda porada zawiera oryginalny numer, przypięty odsyłacz do upstream, źródła, projekt dowodu, ograniczenia, datę, zakres oraz opis zmian.
+Kanoniczne porady i rekordy redakcyjne są w czterech plikach [book/pl/](book/README.md). Rejestr CHAPTERS w reader.mjs przechowuje tylko identyfikatory i ścieżki. Czytnik pobiera Markdown, nie osobną bazę ani chińskie rozdziały. Każda porada zawiera oryginalny numer, przypięty odsyłacz do upstream, źródła, projekt dowodu, ograniczenia, datę, zakres oraz opis zmian.
 
 | Stan | Znaczenie |
 | --- | --- |
