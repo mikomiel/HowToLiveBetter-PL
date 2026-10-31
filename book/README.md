@@ -5,6 +5,7 @@ Pliki 01–34 są chińskim materiałem referencyjnym upstream HowToLiveBetter, 
 Polskie rozdziały i ich rekordy redakcyjne:
 
 - [01. Unikaj przedwczesnej śmierci](pl/01-unikaj-przedwczesnej-smierci.md)
+- [02. Dbaj o zdrowie na co dzień](pl/02-dbaj-o-zdrowie-na-co-dzien.md)
 - [03. Nie marnuj energii](pl/03-nie-marnuj-energii.md)
 - [04. Nie marnuj czasu](pl/04-nie-marnuj-czasu.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)

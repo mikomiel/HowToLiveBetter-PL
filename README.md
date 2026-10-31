@@ -4,23 +4,24 @@
 
 Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](https://github.com/eternity4719/HowToLiveBetter), autorstwa eternity4719. Wybieramy praktyczne zalecenia, sprawdzamy źródła i opisujemy ich ograniczenia. To nie jest oficjalne wydanie autora ani automatyczne tłumaczenie.
 
-**Stan treści: 66 opracowanych polskich porad z czterech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
+**Stan treści: 96 opracowanych polskich porad z pięciu rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
 
 | Rozdział | Ocenione pozycje źródłowe | W czytniku (verified) | Pozostałe |
 | --- | --- | --- | --- |
 | [01. Unikaj przedwczesnej śmierci](book/pl/01-unikaj-przedwczesnej-smierci.md) | 48 | 33 | 4 needs_verification, 11 needs_localization |
+| [02. Dbaj o zdrowie na co dzień](book/pl/02-dbaj-o-zdrowie-na-co-dzien.md) | 47 | 30 | 13 needs_verification, 4 needs_localization |
 | [03. Nie marnuj energii](book/pl/03-nie-marnuj-energii.md) | 27 | 12 | 13 needs_verification, 2 needs_localization |
 | [04. Nie marnuj czasu](book/pl/04-nie-marnuj-czasu.md) | 18 | 10 | 8 wcześniejszych wyłączeń, bez pełnego tłumaczenia |
 | [14. Bezpieczeństwo kont i danych](book/pl/14-bezpieczenstwo-kont-i-danych.md) | 12 | 11 | 1 needs_localization |
-| Razem | 105 | 66 | 31 rekordów oczekujących i 8 wcześniejszych wyłączeń |
+| Razem | 152 | 96 | 48 rekordów oczekujących i 8 wcześniejszych wyłączeń |
 
-Rozdział 01 dodaje 33 zawężone porady oraz 15 niepublikowanych rekordów. Nie przeniesiono automatycznie chińskich progów badań, prawa, cen, schematów lekowych ani numerów pomocowych. Rozdziały 03, 04 i 14 zachowują wcześniejsze decyzje: 33 porady, 16 rekordów oczekujących i osiem wyłączeń rozdziału 04. To ocena redakcyjna pozycji, nie kompletny systematyczny przegląd medyczny.
+Rozdział 02 dodaje 30 zawężonych porad oraz 17 niepublikowanych rekordów. Dotyczy m.in. palenia, ruchu, żywienia i bezpiecznej drogi do pomocy; nie wyznacza osobistego celu BMI, domowego detoksu ani obietnicy dłuższego życia. Rozdział 01 zawiera 33 zawężone porady oraz 15 niepublikowanych rekordów. Nie przeniesiono automatycznie chińskich progów badań, prawa, cen, schematów lekowych ani numerów pomocowych. Rozdziały 03, 04 i 14 zachowują wcześniejsze decyzje: 33 porady, 16 rekordów oczekujących i osiem wyłączeń rozdziału 04. To ocena redakcyjna pozycji, nie kompletny systematyczny przegląd medyczny.
 
 - [Uruchom lokalny czytnik](index.html) według instrukcji poniżej.
 - [Zgłoś błąd lub zaproponuj korektę](https://github.com/mikomiel/HowToLiveBetter-PL/pulls).
 - [Przeczytaj zasady redakcyjne](AGENTS.md).
 
-Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Rozdziały 03 i 14 oceniono początkowo 2026-10-28, a rozdział 01 — 2026-10-31. Daty późniejszych korekt i zakresy sprawdzenia pozostają przy poszczególnych poradach. Historyczny run7 nie obejmuje nowego rozdziału 01.
+Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Rozdziały 03 i 14 oceniono początkowo 2026-10-28, a rozdziały 01 i 02 — 2026-10-31. Daty późniejszych korekt i zakresy sprawdzenia pozostają przy poszczególnych poradach. Historyczny run7 nie obejmuje rozdziałów 01 i 02.
 
 ## Co pozostało poza czytnikiem
 
@@ -59,7 +60,7 @@ Informacje zdrowotne dotyczą opisanych populacji i nie zastępują diagnozy ani
 
 ## Stan treści i pochodzenie
 
-Kanoniczne porady i rekordy redakcyjne są w czterech plikach [book/pl/](book/README.md). Rejestr CHAPTERS w reader.mjs przechowuje tylko identyfikatory i ścieżki. Czytnik pobiera Markdown, nie osobną bazę ani chińskie rozdziały. Każda porada zawiera oryginalny numer, przypięty odsyłacz do upstream, źródła, projekt dowodu, ograniczenia, datę, zakres oraz opis zmian.
+Kanoniczne porady i rekordy redakcyjne są w pięciu plikach [book/pl/](book/README.md). Rejestr CHAPTERS w reader.mjs przechowuje tylko identyfikatory i ścieżki. Czytnik pobiera Markdown, nie osobną bazę ani chińskie rozdziały. Każda porada zawiera oryginalny numer, przypięty odsyłacz do upstream, źródła, projekt dowodu, ograniczenia, datę, zakres oraz opis zmian.
 
 | Stan | Znaczenie |
 | --- | --- |
