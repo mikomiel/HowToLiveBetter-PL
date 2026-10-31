@@ -2,6 +2,7 @@
 // Copyright (c) 2026 eternity4719. MIT; see LICENSE-CODE.
 export const CHAPTERS = [
   { id: '01', path: 'book/pl/01-unikaj-przedwczesnej-smierci.md' },
+  { id: '02', path: 'book/pl/02-dbaj-o-zdrowie-na-co-dzien.md' },
   { id: '03', path: 'book/pl/03-nie-marnuj-energii.md' },
   { id: '04', path: 'book/pl/04-nie-marnuj-czasu.md' },
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
