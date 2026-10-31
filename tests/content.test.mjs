@@ -53,7 +53,7 @@ test('every source item of the new chapters has exactly one decision; chapter 04
 
 test('README totals and per-chapter coverage match the canonical Markdown', () => {
   const readme = read('README.md');
-  assert.match(readme, new RegExp(`Stan treści: ${advice.length} zweryfikowan(?:e|ych) polsk(?:ie|ich) porad`));
+  assert.match(readme, new RegExp(`Stan treści: ${advice.length} opracowan(?:e|ych) polsk(?:ie|ich) porad`));
   for (const c of chapters) {
     const total = [...read(sourcePaths[c.id]).matchAll(/^### \d+\. /gm)].length;
     const row = readme.split('\n').find(line => line.startsWith(`| [${c.id}.`));
@@ -127,7 +127,7 @@ test('a grade separator written as a hyphen is accepted and other separators are
 test('authentication advice keeps the available-2FA fallback and its phishing limit', () => {
   const entry = advice.find(e => e.number === '14.1');
   assert.match(entry.fields['W praktyce'], /Gdy usługa nie obsługuje kluczy dostępu, włącz dostępną weryfikację dwuskładnikową \(2FA\)/);
-  assert.match(entry.fields['W praktyce'], /Kody SMS i z aplikacji nadal można wyłudzić/);
+  assert.match(entry.fields['W praktyce'], /Kody SMS i kody z aplikacji nadal można wyłudzić/);
   assert.match(entry.fields['Zmiany w adaptacji'], /2FA.*kluczy dostępu/);
   assert.equal(entry.fields['Ocena dowodów'][0], 'C');
 });

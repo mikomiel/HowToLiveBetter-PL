@@ -43,7 +43,14 @@ test('cited sources come from every link form and plain DOIs, once each', () => 
 test('every real record is covered, and only the three records with no cited source have nothing to fetch', () => {
   const empty = entries.filter(e => citedInputs(e).length === 0).map(e => e.number);
   assert.deepEqual(empty, ['03.19', '03.25', '14.11']);
-  assert.equal(entries.reduce((n, e) => n + citedInputs(e).length, 0), 74);
+  // Corpus growth is legitimate; exact extraction is covered by the synthetic cases above.
+  for (const e of entries) {
+    const inputs = citedInputs(e);
+    assert.equal(new Set(inputs).size, inputs.length, e.number);
+    assert.ok(inputs.every(input => input.startsWith('https://') || doiFromInput(input)), e.number);
+    if (e.fields.Status === 'verified') assert.ok(inputs.length > 0, e.number);
+  }
+  assert.ok(citedInputs(entry('14.5')).includes('https://eli.gov.pl/api/acts/DU/2026/623/text.pdf'));
   assert.deepEqual(citedInputs(entry('14.1')), ['https://wiedza.cert.pl/dobre-praktyki/hasla/', 'https://wiedza.cert.pl/odpornosc-infrastruktury/bezpieczenstwo-webowe/mfa/']);
   assert.deepEqual(citedInputs(entry('03.9')), ['10.1001/jamapediatrics.2016.2341']);
 });
