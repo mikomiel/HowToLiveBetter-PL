@@ -55,7 +55,7 @@ Litera nie zastępuje opisu źródła. A może dotyczyć syntezy o niskiej pewno
 
 Przy części publikacji dostępny był tylko abstrakt autorów. Przy prawie sprawdzono wskazane artykuły lub oficjalne wyjaśnienia, nie każdą możliwą sprawę. Preprint pozostaje oznaczony jako preprint. Każda porada podaje datę i zakres. Stan verified nie oznacza ponownego wykonania badania, formalnej porady prawnej ani pełnego systematycznego przeglądu najnowszej literatury.
 
-Informacje zdrowotne dotyczą opisanych populacji i nie zastępują diagnozy ani leczenia. Porady o bezpieczeństwie dzieci są skierowane do dorosłych opiekunów, nie stanowią instrukcji samoleczenia dzieci. Badanie przesiewowe bez objawów nie jest tym samym co diagnostyka niepokojącego objawu. Nie publikujemy dawkowania leków, samodzielnego ograniczania snu ani obietnicy leczenia depresji przez wykonanie listy nawyków. Chińskie kontakty pomocowe zastąpiono sprawdzonym polskim kontaktem tylko tam, gdzie przygotowano pełną poradę. Przy pilnym zagrożeniu nie należy czekać na wykonanie zaleceń produktywności.
+Informacje zdrowotne dotyczą opisanych populacji i nie zastępują diagnozy ani leczenia. Porady o bezpieczeństwie dzieci są skierowane do dorosłych opiekunów, nie stanowią instrukcji samoleczenia dzieci. Badanie przesiewowe bez objawów nie jest tym samym co diagnostyka niepokojącego objawu. Nie publikujemy dawkowania leków, samodzielnego ograniczania snu ani obietnicy leczenia depresji przez wykonanie listy nawyków. Chińskie kontakty pomocowe zastąpiono sprawdzonymi polskimi kontaktami tylko tam, gdzie przygotowano pełną poradę. Przy pilnym zagrożeniu nie należy czekać na wykonanie zaleceń produktywności.
 
 ## Stan treści i pochodzenie
 

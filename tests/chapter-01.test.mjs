@@ -68,7 +68,7 @@ test('screening eligibility is Polish, conditional and never a reason to delay d
   assert.match(f(18)['W praktyce'], /dalsze postępowanie zależy od wyniku i historii/);
   assert.match(f(18)['W praktyce'], /nie uznawaj dodatniego HPV za rozpoznanie raka/);
   assert.match(f(18)['Korzyść i dowody'], /52 grup wsi.*131 746/);
-  assert.match(f(18)['Korzyść i dowody'], /34 zgony.*64.*HR 0,52/);
+  assert.match(f(18)['Korzyść i dowody'], /34 126 kobiet.*31 488.*34 i 64 zgony.*HR 0,52/);
   assert.match(f(19)['W praktyce'], /bez objawów w wieku 50–65.*40–49/);
   assert.match(f(19)['Korzyść i dowody'], /42,0%/);
   assert.match(f(19)['Korzyść i dowody'], /0,98%.*1,20%/);
@@ -83,7 +83,8 @@ test('vaccine evidence does not change population, product, endpoint or adverse-
   assert.match(f(16)['W praktyce'], /przed 14\. urodzinami/);
   assert.match(f(16).Ograniczenia, /Finansowanie nie jest równoznaczne ze wskazaniem/);
   assert.match(f(20)['Korzyść i dowody'], /2571.*2532/);
-  assert.match(f(20)['Korzyść i dowody'], /2,9%.*4,9%/);
+  assert.match(f(20)['Korzyść i dowody'], /Główny wynik.*5,3%.*7,2%.*HR 0,72.*0,52–0,99/);
+  assert.match(f(20)['Korzyść i dowody'], /kluczowym wynikiem drugorzędowym.*2,9%.*4,9%/);
   assert.match(f(20).Ograniczenia, /nie wolno przypisać wszystkim zdrowym seniorom/);
   assert.match(f(20).Ograniczenia, /niskiej pewności.*bardzo niskiej/);
   assert.match(f(21)['Korzyść i dowody'], /15 411.*3,2 roku.*6 osób.*210/);
@@ -100,6 +101,10 @@ test('crisis advice routes to help without method comparisons or a personal coun
     assert.doesNotMatch(f(n)['W praktyce'], /12356|10 minut|śmiertelno|dawki|przymus/);
   }
   assert.match(f(25).Ograniczenia, /Nie odstawiaj samodzielnie przepisanych leków/);
+  for (const n of [25, 43]) {
+    assert.ok(f(n)['Źródła'].includes('https://116sos.pl/dokumenty/zasady-korzystania'));
+    assert.ok(f(n)['Źródła'].includes('https://centrumwsparcia.pl/centrum-wsparcia/'));
+  }
   assert.match(f(43).Ograniczenia, /Sama odpowiedź „nie” nie wyklucza zagrożenia/);
   assert.equal(f(37).Status, 'needs_localization');
   assert.equal(f(37)['W praktyce'], undefined, 'no instruction to hand over banking credentials');
@@ -117,11 +122,11 @@ test('HIV prevention separates a test, PrEP and urgent care after exposure, with
 test('the checked contacts are accepted, but one-digit mistakes and inherited Chinese numbers still fail', () => {
   const base = entry(25);
   const check = text => lintEntry({ ...base, fields: { ...base.fields, 'W praktyce': text } }, { today: '2026-10-31' });
-  for (const number of ['992', '800 702 222', '22 194 30', '22 621 02 56']) {
+  for (const number of ['992', '800 702 222', '22 621 02 56']) {
     assert.deepEqual(phoneNumbers(`Zadzwoń pod ${number}.`), [number]);
     assert.deepEqual(check(`Zadzwoń pod ${number}.`), [], number);
   }
-  for (const number of ['991', '800 702 223', '22 194 31', '22 621 02 57', '12356', '110', '120']) {
+  for (const number of ['991', '800 702 223', '22 194 30', '22 194 31', '22 621 02 57', '12356', '110', '120']) {
     assert.ok(check(`Zadzwoń pod ${number}.`).some(finding => finding.rule === 'phone-number' && finding.severity === 'error'), number);
   }
 });

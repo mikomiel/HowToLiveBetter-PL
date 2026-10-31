@@ -75,7 +75,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 ### 5. Nie jedz grzyba, którego nie rozpoznajesz z pewnością
 - Status: verified
 - Koszt: Rezygnacja z niepewnego zbioru; ewentualna konsultacja w stacji sanitarno-epidemiologicznej.
-- W praktyce: Nie próbuj nieznanego grzyba, żeby sprawdzić, czy jest jadalny. Wątpliwe okazy pokaż grzyboznawcy lub klasyfikatorowi grzybów w sanepidzie. Jeśli podejrzewasz zatrucie, pilnie skontaktuj się z pomocą medyczną; w zagrożeniu dzwoń pod 112. Nie wywołuj samodzielnie wymiotów bez polecenia lekarza lub operatora numeru alarmowego.
+- W praktyce: Nie próbuj nieznanego grzyba, żeby sprawdzić, czy jest jadalny. Wątpliwe okazy pokaż grzyboznawcy lub klasyfikatorowi grzybów w sanepidzie. Jeśli podejrzewasz zatrucie, pilnie skontaktuj się z pomocą medyczną; w zagrożeniu dzwoń pod 112. Nie wywołuj samodzielnie wymiotów bez polecenia lekarza lub operatora numeru alarmowego. Jeśli podejrzewasz zatrucie po wspólnym posiłku, ocenę medyczną powinni uzyskać także pozostali, którzy go jedli, nawet bez objawów.
 - Korzyść i dowody: GIS opisuje pomyłki w rozpoznawaniu grzybów i możliwość ciężkiego uszkodzenia wątroby. Zaleca fachową ocenę niepewnych okazów. Portal Pacjent ostrzega, że wymioty mogą pogorszyć zatrucie i wymagają wcześniejszego uzgodnienia z pomocą medyczną.
 - Ocena dowodów: C — zalecenia bezpieczeństwa żywności i postępowania przy zatruciu.
 - Ocena redakcyjna: Odstąpienie od jedzenia niepewnego okazu jest prostsze niż próba domowego odtruwania.
@@ -239,7 +239,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Korzyść i dowody: PZH zaleca szczepienie obu płci i wyjaśnia, że najwyższą skuteczność obserwuje się przed zakażeniem. Nie jest to szczepienie wyłącznie dla kobiet ani leczenie już istniejącej zmiany nowotworowej.
 - Ocena dowodów: B — wąski wniosek z zaleceń klinicznych i polskiego programu.
 - Ocena redakcyjna: Warto sprawdzić uprawnienia odpowiednio wcześnie; nie trzeba czekać na rozpoczęcie życia seksualnego.
-- Ograniczenia: Szczepienie nie zastępuje badań szyjki macicy. Schemat zależy od wieku, preparatu i stanu zdrowia. Finansowanie nie jest równoznaczne ze wskazaniem klinicznym; nie obiecujemy bezpłatnego dowolnego preparatu każdej osobie dorosłej.
+- Ograniczenia: Szczepienie nie zastępuje badań szyjki macicy. Schemat zależy od wieku, preparatu i stanu zdrowia. Finansowanie nie jest równoznaczne ze wskazaniem klinicznym; nie obiecujemy bezpłatnego dowolnego preparatu każdej osobie dorosłej. Osobny czasowy program GIS dla części wcześniej niezaszczepionych dorosłych wymaga rozpoczęcia przed 25. urodzinami, w październiku lub listopadzie 2026 r., i zakończenia cyklu do 31 maja 2027 r. Pełne warunki i dostępność potwierdź w POZ.
 - Źródła: [PZH: Kto powinien zostać zaszczepiony przeciw HPV](https://szczepienia.pzh.gov.pl/faq/kto-powinien-zostac-zaszczepiony-przeciw-zakazeniom-hpv-i-kiedy/); [GIS: ograniczony czasowo program dla części dorosłych od października 2026 r.](https://www.gov.pl/web/gis/komunikat-gis-bezplatne-szczepienia-przeciw-hpv-dla-osob-w-wieku-1926-lat--zasady-od-1-pazdziernika-2026-r).
 - Oryginał: [01.16](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L158-L166)
 - Weryfikacja: 2026-10-31; pełne komunikaty PZH i GIS, w tym ograniczenia wieku, preparatu, rozpoczęcia i zakończenia czasowego programu. Nie jest to gwarancja dostępności dawek w wybranym POZ.
@@ -255,9 +255,9 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Ocena dowodów: B — opublikowany wąski wniosek z wytycznych przesiewu oraz polskie warunki programu.
 - Ocena redakcyjna: Warto sprawdzić kwalifikację i wcześniejsze wyniki, zamiast kupować przypadkowy pakiet badań obrazowych.
 - Ograniczenia: Przesiew dotyczy osób bez niepokojących objawów. Możliwe są wyniki fałszywie dodatnie, dodatkowe procedury, przeoczenia i nadrozpoznanie — wykrycie zmian, które nie zagroziłyby zdrowiu. Duże ryzyko dziedziczne i przebyte leczenie wymagają osobnego planu. Brak kryteriów programu nie oznacza, że diagnostyka przed 45. rokiem życia jest niepotrzebna.
-- Źródła: [Pacjent: mammografia i kryteria programu](https://pacjent.gov.pl/aktualnosc/badz-zapobiegliwa); [USPSTF 2024: Breast Cancer Screening](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening).
+- Źródła: [Pacjent: mammografia i kryteria programu](https://pacjent.gov.pl/aktualnosc/badz-zapobiegliwa); [USPSTF 2024: Breast Cancer Screening](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening). [NFZ: bezpłatna mammografia i test HPV HR w programach](https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/centralna-e-rejestracja-na-mammografie-test-hpv-hr-i-pierwsza-wizyte-u-kardiologa,8969.html).
 - Oryginał: [01.17](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L167-L175)
-- Weryfikacja: 2026-10-31; pełny komunikat Pacjent oraz początkowe sekcje zalecenia USPSTF: populacja, odstęp, bilans i szkody; nie cały dokument ani badania składowe.
+- Weryfikacja: 2026-10-31; pełne komunikaty Pacjent i NFZ, w tym finansowanie w programie oraz początkowe sekcje zalecenia USPSTF: populacja, odstęp, bilans i szkody; nie cały dokument ani badania składowe.
 - Zmiany w adaptacji: Oryginalne A zastąpiono B. Oddzielono amerykańskie zalecenie od polskiego programu. Nie potraktowano niewystarczających danych o dodatkowym USG lub MRI jako zakazu diagnostyki przy objawach.
 
 <a id="porada-1-18"></a>
@@ -266,13 +266,13 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Status: verified
 - Koszt: Wizyta i pobranie materiału; badanie w programie NFZ po spełnieniu kryteriów jest bezpłatne.
 - W praktyce: Jeśli jesteś objęta programem w wieku 25–64 lat, sprawdź termin badania HPV HR, czyli testu na typy wirusa zwiększające ryzyko nowotworu. Zwykły odstęp w ścieżce HPV wynosi 5 lat, ale dalsze postępowanie zależy od wyniku i historii. Po dodatnim teście z tego samego materiału wykonywana jest cytologia płynna. Ustal dalsze kroki z placówką; nie uznawaj dodatniego HPV za rozpoznanie raka.
-- Korzyść i dowody: Indyjska próba z randomizacją 52 grup wsi objęła 131 746 kobiet w wieku 30–59 lat. W grupie jednorazowego testu HPV odnotowano 34 zgony z powodu raka szyjki macicy, w kontrolnej 64; HR 0,52 (95% przedział ufności 0,33–0,83). Program obejmował dalszą diagnostykę i leczenie po wyniku dodatnim, nie sam test bez dalszych działań.
+- Korzyść i dowody: Indyjska próba z randomizacją 52 grup wsi objęła 131 746 kobiet w wieku 30–59 lat. Grupa jednorazowego testu HPV liczyła 34 126 kobiet, a kontrolna 31 488. Odnotowano w nich odpowiednio 34 i 64 zgony z powodu raka szyjki macicy; HR 0,52 (95% przedział ufności 0,33–0,83). Program obejmował dalszą diagnostykę i leczenie po wyniku dodatnim, nie sam test bez dalszych działań.
 - Ocena dowodów: B — jedna próba przesiewowa z randomizacją grup oraz polska ścieżka programu.
 - Ocena redakcyjna: Najważniejsze są udział we właściwym terminie i wykonanie zaleconej kontroli po wyniku.
 - Ograniczenia: Wynik z wiejskich Indii nie przewiduje osobistej korzyści w Polsce i nie wyznacza polskiego wieku ani odstępu. Szczepienie HPV nie znosi potrzeby przesiewu. Objawy, wcześniejsze nieprawidłowości, leczenie lub szczególne ryzyko mogą wymagać innej ścieżki; nie czekaj wtedy automatycznie 5 lat.
-- Źródła: [Pacjent: program HPV HR](https://pacjent.gov.pl/aktualnosc/badz-zapobiegliwa); Sankaranarayanan i współautorzy (2009), HPV screening for cervical cancer in rural India. [Abstrakt autorów](https://pubmed.ncbi.nlm.nih.gov/19339719/); [DOI](https://doi.org/10.1056/NEJMoa0808516).
+- Źródła: [Pacjent: program HPV HR](https://pacjent.gov.pl/aktualnosc/badz-zapobiegliwa); Sankaranarayanan i współautorzy (2009), HPV screening for cervical cancer in rural India. [Abstrakt autorów](https://pubmed.ncbi.nlm.nih.gov/19339719/); [DOI](https://doi.org/10.1056/NEJMoa0808516). [NFZ: bezpłatna mammografia i test HPV HR w programach](https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/centralna-e-rejestracja-na-mammografie-test-hpv-hr-i-pierwsza-wizyte-u-kardiologa,8969.html).
 - Oryginał: [01.18](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L176-L184)
-- Weryfikacja: 2026-10-31; publiczne polskie kryteria i pełny abstrakt próby: grupowanie, wiek, liczebność, zgony, HR i leczenie po wyniku. Bez pełnego tekstu badania.
+- Weryfikacja: 2026-10-31; polskie kryteria i finansowanie w komunikatach Pacjent/NFZ oraz pełny abstrakt próby: grupowanie, wiek, liczebność, zgony, HR i leczenie po wyniku. Bez pełnego tekstu badania.
 - Zmiany w adaptacji: Oryginalne A zastąpiono B. Zmieniono zagraniczny próg wieku na polski program; pięcioletniego odstępu nie przedstawiono jako reguły dla każdego wyniku.
 
 <a id="porada-1-19"></a>
@@ -285,9 +285,9 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Ocena dowodów: B — jedna próba z randomizacją zaproszenia do przesiewu i polskie kryteria programu.
 - Ocena redakcyjna: Warto omówić badanie, przygotowanie, potencjalne korzyści i szkody, zamiast utożsamiać brak objawów z brakiem potrzeby profilaktyki.
 - Ograniczenia: To efekt zaproszenia, nie wyliczony efekt u każdej osoby z wykonaną kolonoskopią. Badanie może prowadzić do krwawienia, perforacji i komplikacji sedacji; brak takich zdarzeń w części próby nie oznacza zerowego ryzyka. Wyniki dawnych prób z testem gwajakolowym na krew utajoną nie są automatycznie dowodem tej samej wielkości efektu testu immunochemicznego FIT.
-- Źródła: [Pacjent: kryteria kolonoskopii](https://pacjent.gov.pl/aktualnosc/badz-zapobiegliwa); Bretthauer i współautorzy (2022), Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death. [Artykuł NordICC](https://www.nejm.org/doi/full/10.1056/NEJMoa2208375).
+- Źródła: [Pacjent: bezpłatny program dla kobiet i mężczyzn oraz kryteria kolonoskopii](https://pacjent.gov.pl/profilaktyka-nowotworow-czy-mozna-ustrzec-sie-raka); Bretthauer i współautorzy (2022), Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death. [Artykuł NordICC](https://www.nejm.org/doi/full/10.1056/NEJMoa2208375).
 - Oryginał: [01.19](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L185-L193)
-- Weryfikacja: 2026-10-31; polski komunikat oraz abstrakt i dostępna część metod NordICC: populacja, udział, wyniki po 10 latach i szkody. Bez całego tekstu i bez pełnej oceny nowszych wyników lub programów FIT.
+- Weryfikacja: 2026-10-31; sekcje polskiego komunikatu o bezpłatnych programach i kolonoskopii dla obu płci oraz abstrakt i dostępna część metod NordICC: populacja, udział, wyniki po 10 latach i szkody. Bez całego tekstu i bez pełnej oceny nowszych wyników lub programów FIT.
 - Zmiany w adaptacji: Oryginalne A zastąpiono B. Nie przeniesiono efektu Hemoccult na FIT. Oddzielono przesiew bez objawów, diagnostykę objawów i polskie warunki finansowania.
 
 <a id="porada-1-20"></a>
@@ -296,7 +296,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Status: verified
 - Koszt: Kwalifikacja i szczepienie co sezon; odpłatność zależy od aktualnych zasad refundacji i preparatu.
 - W praktyce: Zaplanuj szczepienie na aktualny sezon, zwłaszcza jeśli masz chorobę przewlekłą lub jesteś osobą starszą. Po zawale ustal termin z zespołem prowadzącym. Preparat i przeciwwskazania ocenia osoba kwalifikująca do szczepienia.
-- Korzyść i dowody: W próbie IAMI przydzielono losowo 2571 osób, prawie wszystkie krótko po zawale; 2532 otrzymały interwencję i weszły do analizy. Po 12 miesiącach odsetek zgonów z dowolnej przyczyny wynosił 2,9% po szczepieniu i 4,9% po placebo; HR 0,59 (95% przedział ufności 0,39–0,89). Główny wynik obejmował łącznie zgon, zawał lub zakrzepicę w stencie. PZH zaleca szczepienie sezonowe, zwłaszcza w grupach ryzyka.
+- Korzyść i dowody: W próbie IAMI przydzielono losowo 2571 osób, prawie wszystkie krótko po zawale; 2532 otrzymały interwencję i weszły do analizy. Główny wynik obejmował łącznie zgon z dowolnej przyczyny, zawał lub zakrzepicę w stencie po 12 miesiącach: 5,3% po szczepieniu i 7,2% po placebo; HR 0,72 (95% przedział ufności 0,52–0,99). Zgon z dowolnej przyczyny był kluczowym wynikiem drugorzędowym w hierarchicznej analizie: 2,9% i 4,9%; HR 0,59 (0,39–0,89). PZH zaleca szczepienie sezonowe, zwłaszcza w grupach ryzyka.
 - Ocena dowodów: B — pojedyncza próba po zawale, uzupełniona zaleceniem klinicznym i opisem niepewności osobnej syntezy.
 - Ocena redakcyjna: Warto włączyć pytanie o szczepienie do zwykłej kontroli choroby przewlekłej.
 - Ograniczenia: IAMI zakończono wcześniej z powodu pandemii; wyniku po zawale nie wolno przypisać wszystkim zdrowym seniorom. Cochrane 2018 ocenił dane o zapobieganiu grypie u osób 65+ jako niskiej pewności, a o śmiertelności jako bardzo niskiej. Starsza synteza nie rozstrzyga skuteczności każdego współczesnego preparatu i sezonu. Możliwe są odczyny; kwalifikacja pozostaje konieczna.
@@ -365,9 +365,9 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Ocena dowodów: C — zalecenia pomocy kryzysowej; nie pomiar skuteczności samej infolinii.
 - Ocena redakcyjna: Priorytetem jest bezpieczny kontakt z człowiekiem i odpowiednią pomocą, nie samodzielne wykonywanie całej listy.
 - Ograniczenia: Rozmowa nie gwarantuje ustąpienia zagrożenia. Nie odstawiaj samodzielnie przepisanych leków; sposób ich bezpiecznego przechowywania i podawania uzgodnij z bliską osobą oraz lekarzem. Nie podejmuj siłowej interwencji narażającej Ciebie lub innych.
-- Źródła: [NIMH: pięć kroków pomocy](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide); [WSSE: polskie kontakty i reagowanie w kryzysie, 2026](https://www.gov.pl/web/wsse-bydgoszcz/swiatowy-dzien-zapobiegania-samobojstwom).
+- Źródła: [NIMH: pięć kroków pomocy](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide); [WSSE: polskie kontakty i reagowanie w kryzysie, 2026](https://www.gov.pl/web/wsse-bydgoszcz/swiatowy-dzien-zapobiegania-samobojstwom). [116sos: zasady korzystania, telefon 116 123 dostępny całodobowo](https://116sos.pl/dokumenty/zasady-korzystania); [Centrum Wsparcia: 800 702 222, całodobowa pomoc psychologa](https://centrumwsparcia.pl/centrum-wsparcia/).
 - Oryginał: [01.25](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L239-L247)
-- Weryfikacja: 2026-10-31; pełne publiczne instrukcje NIMH i polskiej WSSE, zakres dla dorosłych i rozróżnienie alarmu od wsparcia. Bez badania skuteczności konkretnego polskiego telefonu.
+- Weryfikacja: 2026-10-31; pełne publiczne instrukcje NIMH i WSSE oraz zasady 116sos i strona Centrum Wsparcia: numery, bezpłatność i całodobowa pomoc. Dotyczy dorosłych; 112 w bezpośrednim zagrożeniu. Bez pomiaru skuteczności infolinii lub sprawdzania połączeń telefonicznych.
 - Zmiany w adaptacji: Oryginalne B zastąpiono C. Zastąpiono chiński numer sprawdzonymi polskimi kontaktami; nie przeniesiono procentów z populacyjnych interwencji na pojedynczą rozmowę lub dom.
 
 <a id="porada-1-26"></a>
@@ -430,7 +430,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 ### 30. Używaj prezerwatyw prawidłowo i nie współdziel igieł ani strzykawek
 - Status: verified
 - Koszt: Zakup zabezpieczenia i przygotowanie go przed kontaktem; dostęp do jałowego sprzętu.
-- W praktyce: Używaj prezerwatywy prawidłowo, od początku do końca kontaktu zgodnie z instrukcją. Nie współdziel igieł ani strzykawek; przy zabiegach naruszających skórę wybieraj jałowy sprzęt i wykwalifikowane osoby. Jeśli mogło dojść do narażenia na HIV, pilnie skontaktuj się z placówką prowadzącą profilaktykę poekspozycyjną; nie czekaj na wynik późniejszego testu.
+- W praktyce: Używaj prezerwatywy prawidłowo, od początku do końca kontaktu zgodnie z instrukcją. Nie współdziel igieł ani strzykawek; przy zabiegach naruszających skórę wybieraj jałowy sprzęt i wykwalifikowane osoby. Jeśli mogło dojść do narażenia na HIV, natychmiast zgłoś się do szpitala zakaźnego prowadzącego profilaktykę poekspozycyjną; nie czekaj na wynik późniejszego testu. Wykaz placówek jest w sekcji „Sytuacje nagłe” Krajowego Centrum ds. AIDS wskazanej przez MZ.
 - Korzyść i dowody: WHO wskazuje konsekwentne, prawidłowe stosowanie prezerwatyw jako skuteczną metodę ograniczania zakażeń przenoszonych drogą płciową. MZ opisuje ochronę przed kontaktem z zakażoną krwią i znaczenie pilnej kwalifikacji po narażeniu.
 - Ocena dowodów: C — zalecenia profilaktyczne WHO i MZ, bez przenoszenia jednego efektu liczbowego między populacjami.
 - Ocena redakcyjna: Zabezpieczenie przygotowane wcześniej jest łatwiejsze do prawidłowego użycia.
@@ -445,7 +445,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 ### 31. Po możliwym narażeniu na HIV ustal właściwy termin testu
 - Status: verified
 - Koszt: Test w punkcie konsultacyjno-diagnostycznym jest bezpłatny; potrzebne są czas i rozmowa z doradcą.
-- W praktyce: Po sytuacji niosącej ryzyko zakażenia omów test z lekarzem lub doradcą punktu konsultacyjno-diagnostycznego (PKD). MZ wskazuje w PKD badanie bezpłatne, anonimowe i bez skierowania. Termin i ewentualne powtórzenie zależą od rodzaju testu oraz czasu od narażenia. Przy świeżym narażeniu najpierw pilnie zapytaj o profilaktykę poekspozycyjną, zamiast czekać na test.
+- W praktyce: Po sytuacji niosącej ryzyko zakażenia omów test z lekarzem lub doradcą punktu konsultacyjno-diagnostycznego (PKD). MZ wskazuje w PKD badanie bezpłatne, anonimowe i bez skierowania. Termin i ewentualne powtórzenie zależą od rodzaju testu oraz czasu od narażenia. Przy świeżym narażeniu natychmiast zgłoś się do szpitala zakaźnego prowadzącego profilaktykę poekspozycyjną, zamiast czekać na test. Wykaz placówek jest w sekcji „Sytuacje nagłe” Krajowego Centrum ds. AIDS wskazanej przez MZ.
 - Korzyść i dowody: HIV może długo nie dawać charakterystycznych objawów. MZ odróżnia testy III i IV generacji oraz ich okna diagnostyczne. Dodatni wynik przesiewowy wymaga potwierdzenia, a rozpoznanie — kontaktu ze specjalistą.
 - Ocena dowodów: C — polska instrukcja dostępu do badania i postępowania, nie pomiar skuteczności pojedynczego testowania.
 - Ocena redakcyjna: Rozmowa z doradcą pomaga wybrać termin zamiast wielokrotnie interpretować zbyt wczesny wynik.
@@ -500,7 +500,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 ### 36. Nie dotykaj przedmiotu podejrzanego o zawieranie źródła promieniotwórczego
 - Status: verified
 - Koszt: Odstąpienie od zabrania znaleziska i zgłoszenie z bezpiecznego miejsca.
-- W praktyce: Jeśli przedmiot ma znak promieniowania lub podejrzewasz, że jest niekontrolowanym źródłem, nie dotykaj go, nie otwieraj i nie rozbieraj. Oddal się, ostrzeż osoby w pobliżu bez zbliżania ich do przedmiotu. PAA wskazuje zgłoszenie do wojewódzkiego centrum zarządzania kryzysowego oraz Centrum ds. Zdarzeń Radiacyjnych PAA, m.in. pod 22 194 30 lub 22 621 02 56. Przy bezpośrednim zagrożeniu dzwoń pod 112.
+- W praktyce: Jeśli przedmiot ma znak promieniowania lub podejrzewasz, że jest niekontrolowanym źródłem, nie dotykaj go, nie otwieraj i nie rozbieraj. Oddal się, ostrzeż osoby w pobliżu bez zbliżania ich do przedmiotu. PAA wskazuje zgłoszenie do wojewódzkiego centrum zarządzania kryzysowego oraz Centrum ds. Zdarzeń Radiacyjnych PAA, pod 22 621 02 56. Przy bezpośrednim zagrożeniu dzwoń pod 112.
 - Korzyść i dowody: PAA wyjaśnia ryzyko zgubionych i porzuconych źródeł, także bardzo małych, oraz znaczenie ograniczenia czasu i zwiększenia odległości. Nie trzeba umieć samodzielnie rozpoznać zawartości pojemnika.
 - Ocena dowodów: C — instrukcja polskiego organu dozoru jądrowego, nie badanie skuteczności zgłaszania.
 - Ocena redakcyjna: Nie warto podejmować ryzyka dla wartości nieznanego fragmentu urządzenia lub złomu.
@@ -529,7 +529,7 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Korzyść i dowody: MZ opisuje PrEP jako dostępną w Polsce metodę profilaktyki wymagającą kwalifikacji, przestrzegania zaleceń oraz monitorowania zakażeń i działań niepożądanych. Wskazaniem jest ocenione ryzyko i sytuacja medyczna, nie sama tożsamość lub orientacja.
 - Ocena dowodów: B — wąskie zalecenie kliniczne dotyczące kwalifikacji i nadzoru; nie nowa synteza prób PrEP.
 - Ocena redakcyjna: Warto poznać tę możliwość bez wstydu i bez samodzielnego kupowania leków z niepewnego źródła.
-- Ograniczenia: PrEP nie chroni przed wszystkimi zakażeniami przenoszonymi seksualnie i nie zastępuje PEP po już zaistniałej ekspozycji. Przy świeżym narażeniu kontakt z placówką powinien być natychmiastowy. Ta porada nie ustala dawkowania, schematu doraźnego ani zasad dla osoby zakażonej HBV.
+- Ograniczenia: PrEP nie chroni przed wszystkimi zakażeniami przenoszonymi seksualnie i nie zastępuje PEP po już zaistniałej ekspozycji. Przy świeżym narażeniu zgłoś się natychmiast do szpitala zakaźnego prowadzącego profilaktykę poekspozycyjną; MZ wskazuje wykaz w sekcji „Sytuacje nagłe” Krajowego Centrum ds. AIDS. Ta porada nie ustala dawkowania, schematu doraźnego ani zasad dla osoby zakażonej HBV.
 - Źródła: [MZ: Profilaktyka i testowanie w kierunku HIV, PrEP i PEP](https://www.gov.pl/web/zdrowie/profilaktyka-i-testowanie-w-kierunku-hiv).
 - Oryginał: [01.38](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L357-L365)
 - Weryfikacja: 2026-10-31; pełna publiczna instrukcja MZ o kwalifikacji, kontrolach i rozdzieleniu PrEP od PEP. Bez nowego odczytu prób iPrEx, PROUD i IPERGAY oraz aktualizacji cen.
@@ -595,9 +595,9 @@ W bezpośrednim zagrożeniu życia dzwoń pod 112. Jeśli jesteś osobą dorosł
 - Ocena dowodów: B — wąski wniosek kliniczny przedstawiony w publicznej instrukcji; bez niezależnego przeglądu badań składowych.
 - Ocena redakcyjna: Bezpośrednie, życzliwe pytanie jest lepsze niż unikanie tematu z obawy przed „podpowiedzeniem” go.
 - Ograniczenia: To nie gwarancja bezpieczeństwa ani metoda przewidywania samobójstwa. Sama odpowiedź „nie” nie wyklucza zagrożenia; ocenę i pomoc dostosuj do sytuacji. Nie prowadź samodzielnie terapii ani nie ryzykuj siłowej interwencji.
-- Źródła: [NIMH: pięć kroków pomocy, Ask](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide); [WSSE: polskie kontakty wsparcia](https://www.gov.pl/web/wsse-bydgoszcz/swiatowy-dzien-zapobiegania-samobojstwom).
+- Źródła: [NIMH: pięć kroków pomocy, Ask](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide); [WSSE: polskie kontakty wsparcia](https://www.gov.pl/web/wsse-bydgoszcz/swiatowy-dzien-zapobiegania-samobojstwom). [116sos: zasady korzystania, telefon 116 123 dostępny całodobowo](https://116sos.pl/dokumenty/zasady-korzystania); [Centrum Wsparcia: 800 702 222, całodobowa pomoc psychologa](https://centrumwsparcia.pl/centrum-wsparcia/).
 - Oryginał: [01.43](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md#L402-L410)
-- Weryfikacja: 2026-10-31; pełne instrukcje NIMH i WSSE. Nie odczytano ponownie pełnych tekstów próby Gould i przeglądów; nie przedstawiamy tego jako własnej metaanalizy.
+- Weryfikacja: 2026-10-31; pełne instrukcje NIMH i WSSE oraz teksty operatorów 116sos i Centrum Wsparcia o numerach, bezpłatności i godzinach pomocy. Bez ponownego odczytu pełnych tekstów próby Gould i przeglądów; to nie własna metaanaliza ani test połączenia.
 - Zmiany w adaptacji: Zachowano B. Usunięto chińskie numery i twierdzenia o przymusowym przewiezieniu przez rodzinę. Nie przeniesiono wyniku ankiet na gwarancję skutku każdej rozmowy.
 
 <a id="porada-1-44"></a>
