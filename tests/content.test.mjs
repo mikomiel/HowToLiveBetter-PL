@@ -53,7 +53,7 @@ test('every source item of the new chapters has exactly one decision; chapter 04
 
 test('README totals and per-chapter coverage match the canonical Markdown', () => {
   const readme = read('README.md');
-  assert.match(readme, new RegExp(`Stan treści: ${advice.length} zweryfikowan(?:e|ych) polsk(?:ie|ich) porad`));
+  assert.match(readme, new RegExp(`Stan treści: ${advice.length} opracowan(?:e|ych) polsk(?:ie|ich) porad`));
   for (const c of chapters) {
     const total = [...read(sourcePaths[c.id]).matchAll(/^### \d+\. /gm)].length;
     const row = readme.split('\n').find(line => line.startsWith(`| [${c.id}.`));

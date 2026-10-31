@@ -44,7 +44,7 @@ export function coverage(chapters) {
 
 export function formatResults(chapters, rows) {
   const cov = coverage(chapters);
-  const out = [`Zakres: ${cov.published} zweryfikowanych porad z rozdziałów ${cov.chapters.join(', ')}. Pozostałe rozdziały książki nie są opublikowane.`];
+  const out = [`Zakres: ${cov.published} opracowanych porad z rozdziałów ${cov.chapters.join(', ')}. Pozostałe rozdziały książki nie są opublikowane.`, 'Stan verified oznacza sprawdzenie w opisanym zakresie, nie zatwierdzenie przez lekarza lub prawnika.'];
   if (!rows.length) out.push('Brak wyników: w opublikowanych poradach nie ma pozycji pasującej do tych słów. Spróbuj innych słów kluczowych lub odpowiedz, że książka nie zawiera tego tematu.');
   rows.forEach(({ entry, chapter }, i) => {
     out.push('', `[${i + 1}] ${entry.number} ${entry.title}`, `    Odsyłacz: ${chapter.path}#${entry.id}`);

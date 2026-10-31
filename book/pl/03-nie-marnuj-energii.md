@@ -2,7 +2,7 @@
 
 # 3. Nie marnuj energii
 
-Oceniono wszystkie 27 pozycji źródła. Publikujemy 12 zweryfikowanych porad. Pozostałe 15 sekcji to rekordy redakcyjne, nie porady do zastosowania: 13 ma stan needs_verification, a 2 needs_localization. Czytnik ich nie pokazuje. Numery są oryginalne, bez uzupełniania luk.
+Oceniono wszystkie 27 pozycji źródła. Publikujemy 12 opracowanych porad z opisem źródeł i ograniczeń. Pozostałe 15 sekcji to rekordy redakcyjne, nie porady do zastosowania: 13 ma stan needs_verification, a 2 needs_localization. Czytnik ich nie pokazuje. Numery są oryginalne, bez uzupełniania luk.
 
 To niezależna adaptacja HowToLiveBetter autorstwa eternity4719, na podstawie wersji e2605d3e2242bd6216c9255192b8a8957a08c55a. Tekst: CC BY 4.0; [licencja](../../LICENSE). Każda pozycja wskazuje przypięty oryginał i zakres sprawdzenia. Koszty i opłacalność są ocenami redakcji, nie wynikami badań. [Znaczenie ocen](../../README.md#jak-czytac-dowody).
 
@@ -13,11 +13,11 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 1. Na czas skupionej pracy wyłącz niepotrzebne powiadomienia
 - Status: verified
 - Koszt: Zmiana ustawień i uzgodnienie, jak odbierać pilne wiadomości. Redakcja ocenia ten nakład jako niewielki.
-- W praktyce: Na czas wybranego zadania wycisz niepotrzebne sygnały telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad innymi.
-- Korzyść i dowody: Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.
+- W praktyce: Na czas wybranego zadania wyłącz niepotrzebne powiadomienia telefonu. Zachowaj kanał kontaktu wymagany w pracy lub opiece nad bliskimi.
+- Korzyść i dowody: Stothart i współautorzy wykazali w eksperymencie, że same powiadomienia zakłócały wykonywanie zadania wymagającego uwagi, nawet bez korzystania z telefonu.
 - Ocena dowodów: B — eksperyment dotyczący konkretnego zadania uwagowego.
 - Ocena redakcyjna: Warto wypróbować zmianę ustawień, jeżeli można bezpiecznie opóźnić odpowiedź.
-- Ograniczenia: Nie zmierzono codziennych oszczędności czasu ani skutków wieloletnich. Wynik nie uzasadnia wyłączenia alarmów bezpieczeństwa lub obowiązkowego kontaktu.
+- Ograniczenia: Sprawdzony abstrakt nie podaje codziennych oszczędności czasu ani wieloletnich skutków. Wynik nie uzasadnia wyłączania alarmów bezpieczeństwa ani rezygnacji z wymaganego kontaktu.
 - Źródła: Stothart, Mitchum i Yehnert (2015), The attentional cost of receiving a cell phone notification. [DOI](https://doi.org/10.1037/xhp0000100); [abstrakt autorów w PubMed](https://pubmed.ncbi.nlm.nih.gov/26121498/).
 - Oryginał: [03.1](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L21-L28)
 - Weryfikacja: 2026-10-28; abstrakt autorów: efekt samych powiadomień i zakres zadania. Bez pełnego tekstu.
@@ -25,12 +25,12 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 <a id="porada-3-2"></a>
 
-### 2. Dbaj o regularne pory snu, nie skracając odpoczynku
+### 2. Dbaj o regularne pory wstawania, nie skracając snu
 - Status: verified
 - Koszt: Organizacja dnia i pogodzenie snu z obowiązkami. To ocena redakcji, bez wyceny czasu.
 - W praktyce: Jeśli pozwalają na to obowiązki, wybierz zbliżone pory wstawania i przeznacz wystarczająco dużo czasu na sen. Propozycja redakcji: nie traktuj regularności jako powodu do celowego niedosypiania.
-- Korzyść i dowody: Phillips i współautorzy obserwowali 61 studentów przez 30 dni. Większa regularność snu wiązała się z lepszymi wynikami akademickimi; mniej regularna grupa miała późniejszy rytm dobowy. NHS zaleca stałą porę wstawania jako element dbania o sen.
-- Ocena dowodów: B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie próba skuteczności samej stałej pory wstawania.
+- Korzyść i dowody: Phillips i współautorzy obserwowali 61 studentów przez 30 dni. Większa regularność snu wiązała się z lepszymi wynikami w nauce; osoby o mniej regularnym śnie miały późniejszy rytm dobowy. NHS zaleca stałą porę wstawania jako element dbania o sen.
+- Ocena dowodów: B — małe badanie obserwacyjne oraz zalecenie dla pacjentów, nie badanie skuteczności samej stałej pory wstawania.
 - Ocena redakcyjna: To rozsądny punkt do obserwacji własnego rytmu, a nie obowiązek identycznego planu dla każdego.
 - Ograniczenia: Korelacja nie dowodzi poprawy ocen po zmianie pory wstawania. Propozycja redakcji: praca zmianowa, choroby i opieka nad bliskimi wymagają innego planowania. Utrzymujące się problemy ze snem omów z lekarzem.
 - Źródła: Phillips i współautorzy (2017), Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. [Artykuł](https://www.nature.com/articles/s41598-017-03171-4); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).
@@ -42,9 +42,9 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 ### 3. Zarezerwuj czas na sen zamiast uznawać brak senności za dowód wyspania się
 - Status: verified
-- Koszt: Czas na odpoczynek może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.
-- W praktyce: Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiedniej możliwości spania nadal występuje znaczna senność, skonsultuj ją, zamiast jedynie zwiększać ilość kofeiny.
-- Korzyść i dowody: Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitą deprywacją snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach narastały deficyty w wykonywaniu zadań, których nie odzwierciedlał w pełni wynik własnej oceny senności.
+- Koszt: Czas na sen może ograniczyć inne zajęcia. Nie wyceniamy go ani nie zakładamy jednakowej potrzeby snu.
+- W praktyce: Planując dzień, uwzględnij własną potrzebę snu. NHS podaje dla dorosłych przeciętnie 7–9 godzin. Jeśli mimo odpowiednio długiego czasu na sen nadal odczuwasz znaczną senność, omów ją z lekarzem, zamiast jedynie zwiększać ilość kofeiny.
+- Korzyść i dowody: Van Dongen i współautorzy porównali laboratoryjne ograniczanie czasu w łóżku do 4, 6 lub 8 godzin przez 14 dni z całkowitym pozbawieniem snu. W eksperymentach uczestniczyło łącznie 48 zdrowych osób w wieku 21–38 lat. Przy 4 i 6 godzinach w łóżku pogarszały się wyniki zadań, a subiektywna ocena senności nie oddawała w pełni tych zmian.
 - Ocena dowodów: B — badania laboratoryjne (w eksperymencie z ograniczaniem snu osoby losowo przydzielono do 4, 6 lub 8 godzin w łóżku) oraz ogólna informacja NHS o potrzebie snu.
 - Ocena redakcyjna: Nie warto planować długotrwałego niedosypiania na podstawie samego poczucia przyzwyczajenia się do niego.
 - Ograniczenia: 7–9 godzin to orientacja dla dorosłych, nie indywidualna recepta ani limit dla dzieci. Liczy się też jakość snu. Badanie nie określa dokładnej potrzeby każdej osoby i nie uzasadnia samodzielnego leczenia zaburzeń snu. Zobacz [ocenę podejrzenia bezdechu w 03.27](#porada-3-27).
@@ -58,15 +58,15 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 ### 4. Zachowaj odstęp między ostatnią porcją kofeiny a porą snu
 - Status: verified
 - Koszt: Zmiana nawyku i ewentualny wybór napoju bez kofeiny. Nie zakładamy dodatkowych wydatków ani jednakowej trudności zmiany.
-- W praktyce: Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej. Zalecenia NHS dotyczące bezsenności obejmują unikanie kawy i herbaty co najmniej 6 godzin przed snem; nie jest to gwarancja braku wpływu u każdej osoby. Z kolei autorzy metaanalizy zalecają, by porcję kawy o objętości 250 mL i zawartości 107 mg kofeiny wypić co najmniej 8,8 godziny przed snem, aby uniknąć skrócenia czasu snu. To zalecenie oparte na zbiorczych wynikach badań, nie indywidualna granica bezpieczeństwa.
-- Korzyść i dowody: Metaanaliza Gardiner i współautorów objęła 24 badania. Po kofeinie łączny czas snu był krótszy o 45 minut w wyniku zbiorczym. Autorzy podają różny odstęp od snu dla dwóch źródeł kofeiny: 8,8 godziny dla kawy (107 mg) i 13,2 godziny dla standardowej porcji suplementu przedtreningowego (217,5 mg).
+- W praktyce: Propozycja redakcji: zwróć uwagę, o której przyjmujesz ostatnią porcję kofeiny i jak śpisz. Przy trudnościach ze snem przesuń ją wcześniej. NHS zaleca w poradach o bezsenności unikanie kawy i herbaty co najmniej 6 godzin przed snem. To ogólna wskazówka, nie gwarancja braku wpływu na sen. Nie wyznaczaj własnej bezpiecznej pory wyłącznie na podstawie średnich z badań.
+- Korzyść i dowody: Metaanaliza Gardiner i współautorów objęła 24 badania zdrowych dorosłych w wieku 18–65 lat. Średni łączny czas snu po kofeinie był krótszy o około 45 minut. Z modelu statystycznego uwzględniającego dawkę i porę przyjęcia autorzy wyprowadzili odstępy 8,8 godziny dla przykładowej kawy zawierającej 107 mg kofeiny w 250 ml oraz 13,2 godziny dla przykładowej porcji suplementu przedtreningowego zawierającej 217,5 mg. Nie są to progi sprawdzone osobno u każdego uczestnika.
 - Ocena dowodów: A — ilościowa synteza badań nad kofeiną i snem; średni wynik nie jest indywidualną prognozą.
 - Ocena redakcyjna: Przesunięcie pory ostatniej porcji kofeiny może być prostą zmianą, ale nie zastępuje oceny przyczyn przewlekłych problemów ze snem.
-- Ograniczenia: Źródła podają odstęp od pory snu: 6 godzin dla kawy i herbaty w zaleceniach NHS oraz 8,8 godziny dla kawy i 13,2 godziny dla suplementu przedtreningowego w metaanalizie. Autorzy metaanalizy podają jako przykłady 107 mg kofeiny w 250 mL kawy i 217,5 mg w standardowej porcji suplementu przedtreningowego. Nie podajemy dawki bezpiecznej dla ciąży, chorób lub interakcji z lekami; takie pytania omów z lekarzem lub farmaceutą.
+- Ograniczenia: Odstępy z modelu zależą od przyjętych dawek i kryterium statystycznego, nie wyznaczają indywidualnej granicy bezpieczeństwa. W samym przeglądzie opisano duże różnice tempa usuwania kofeiny z organizmu. Przykładowa kawa nie określa zawartości kofeiny w każdej filiżance. Wyniki zdrowych dorosłych nie ustalają dawki bezpiecznej w ciąży, chorobie lub przy lekach; takie pytania omów z lekarzem lub farmaceutą.
 - Źródła: Gardiner i współautorzy (2023), The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. [Artykuł i abstrakt](https://doi.org/10.1016/j.smrv.2023.101764); [NHS: Insomnia](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.4](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L48-L55)
-- Weryfikacja: 2026-10-28; abstrakt i wprowadzenie syntezy: 24 badania, średnio 45 minut, model dla 107 mg kofeiny w 250 mL kawy: 8,8 godziny; zalecenia NHS. 2026-10-29: ponowne sprawdzenie na zapisanych źródłach, abstrakt syntezy (Europe PMC) i strona NHS o bezsenności (przegląd z 19 marca 2024). Abstrakt nie opisuje, jak wyznaczono progi godzin, ani zależności wielkości efektu od dawki i pory, ani wrażliwości indywidualnej, więc tych twierdzeń nie ma w tekście; pełnego tekstu syntezy nie czytano.
-- Zmiany w adaptacji: Zachowano A. Usunięto sztywną godzinę 14:00 i przeliczenie każdej filiżanki na tę samą dawkę. Nie przeniesiono wyniku dużej dawki na każdy napój. Poprawka 2026-10-29: usunięto określenie „model”, zależność wielkości efektu od dawki i pory oraz wrażliwość indywidualną, bo cytowany abstrakt ich nie potwierdza; odstęp od snu opisano jako zalecenie autorów dla dwóch napojów. Tytuł i zdanie o odstępach oparto na tym, że źródła podają odstęp od pory snu (6; 8,8 i 13,2 godziny, każdy dla innego napoju lub suplementu); krok obserwacji własnej oznaczono jako propozycję redakcji, bo żadne źródło go nie zaleca; „lub ogranicz” oraz zdania o braku godziny na zegarze i o braku opisu wrażliwości usunięto, bo samego abstraktu nie da się z nimi zestawić.
+- Weryfikacja: 2026-10-30; tekst główny przeglądu: sekcje 2.2, 2.5, 3.3.1 i 3.3.9 oraz rysunek 3; zakres populacji, 24 badania, średnia różnica czasu snu i sposób wyznaczania odstępów modelem metaregresji. Pełna strona NHS o bezsenności. Nie oceniano wszystkich badań pierwotnych ani suplementów.
+- Zmiany w adaptacji: Zachowano A. Usunięto sztywną godzinę 14:00, przeliczenie każdej filiżanki na tę samą dawkę i przenoszenie dużej dawki na każdy napój. Po odczycie pełniejszych sekcji źródła 2026-10-30 przywrócono wyjaśnienie, że 8,8 i 13,2 godziny pochodzą z modelu; poprzednia wersja opierała się na abstrakcie. Liczby przeniesiono do opisu badania, nie instrukcji wyznaczającej osobisty termin. Dodano populację i ograniczenia modelu.
 
 <a id="porada-3-5"></a>
 
@@ -74,7 +74,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Status: verified
 - Koszt: Uzgodnienie oczekiwań z osobami, z którymi pracujesz, i zmiana sposobu korzystania ze skrzynki. To ocena redakcji.
 - W praktyce: Ustal, kiedy odpowiadasz na zwykłe e-maile, i pozostaw osobny sposób kontaktu w pilnej sprawie. Dopasuj rytm do obowiązków, zamiast bezwarunkowo narzucać trzy sprawdzenia poczty dziennie.
-- Korzyść i dowody: W badaniu Kushleva i Dunn 124 dorosłych porównywało dwa tygodnie. W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie odczuwany codzienny stres był niższy niż w tygodniu bez limitu.
+- Korzyść i dowody: Badanie Kushleva i Dunn objęło 124 dorosłych i trwało dwa tygodnie. W tygodniu z ograniczeniem sprawdzania poczty do trzech razy dziennie uczestnicy odczuwali niższy codzienny stres niż w tygodniu bez limitu.
 - Ocena dowodów: B — krótkie badanie wewnątrzosobnicze (porównanie u tych samych osób) z losowaniem kolejności warunków; wynik dotyczy stresu.
 - Ocena redakcyjna: Warto sprawdzić taki sposób obsługi zwykłej poczty. Organizację spotkań opisuje osobno [porada 04.5](04-nie-marnuj-czasu.md#porada-4-5).
 - Ograniczenia: Nie zmierzono tu wzrostu produktywności ani efektu identycznej reguły w komunikatorach. Pilne dyżury i obowiązki opiekuńcze mogą wykluczać takie ograniczenie.
@@ -85,14 +85,14 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 
 <a id="porada-3-6"></a>
 
-### 6. Ogranicz przerwania w zadaniach wykonywanych krok po kroku
+### 6. Ogranicz przerywanie pracy nad zadaniami wykonywanymi krok po kroku
 - Status: verified
 - Koszt: Organizacja miejsca pracy i ustalenie wyjątków od trybu „nie przeszkadzać”. To ocena redakcji.
 - W praktyce: Przed zadaniem, w którym łatwo stracić miejsce w sekwencji kroków, ogranicz możliwe do uniknięcia przerwania. Nie wyłączaj wymaganych alarmów ani procedur bezpieczeństwa.
 - Korzyść i dowody: Altmann i współautorzy badali zadanie wymagające utrzymania miejsca w sekwencji. Po przerwaniach trwających średnio 2,8 sekundy liczba błędów sekwencji była dwukrotnie większa, a po 4,4 sekundy trzykrotnie większa niż w warunku bazowym.
 - Ocena dowodów: B — eksperyment laboratoryjny dotyczący błędów sekwencji.
 - Ocena redakcyjna: Ochrona takiego zadania przed zbędnym przerwaniem ma sens jako próba organizacyjna, nie gwarancja bezbłędności.
-- Ograniczenia: Nie dotyczy to podwojenia wszystkich błędów w każdej pracy. W badaniu błędy niesekwencyjne nie wykazały tego efektu. Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji.
+- Ograniczenia: Wynik nie oznacza podwojenia wszystkich błędów w każdej pracy. W badaniu błędy niezwiązane z kolejnością kroków nie wykazały tego efektu. Nie wyprowadzamy uniwersalnego czasu potrzebnego na powrót do koncentracji.
 - Źródła: Altmann, Trafton i Hambrick (2014), Momentary interruptions can derail the train of thought. [Abstrakt wydawcy](https://doi.org/10.1037/a0030986).
 - Oryginał: [03.6](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L66-L73)
 - Weryfikacja: 2026-10-28; abstrakt autorów: oba czasy przerwań, błędy sekwencji i brak tego samego wyniku dla błędów niesekwencyjnych.
@@ -119,7 +119,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Status: verified
 - Koszt: Zmiana wieczornego nawyku i wybór innego zajęcia. To ocena redakcji, bez obowiązku zakupu urządzenia.
 - W praktyce: Spróbuj zakończyć korzystanie z jasnego ekranu wcześniej i wybrać spokojne zajęcie, na przykład czytanie książki papierowej. Propozycja redakcji: nie traktuj jednej godziny jako naukowo ustalonej granicy dla wszystkich urządzeń.
-- Korzyść i dowody: Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z urządzenia emitującego światło oraz książki papierowej. W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów. Warunek ekranu opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.
+- Korzyść i dowody: Chang i współautorzy porównali u 12 zdrowych młodych dorosłych czytanie z urządzenia emitującego światło oraz książki papierowej. W losowanym badaniu krzyżowym każda sesja trwała około 4 godzin przed snem przez pięć wieczorów. Wariant z urządzeniem emitującym światło opóźniał zasypianie i rytm dobowy oraz pogarszał poranną czujność.
 - Ocena dowodów: B — małe badanie krzyżowe w kontrolowanych warunkach laboratoryjnych.
 - Ocena redakcyjna: Zmiana wieczornego nawyku jest próbą dopasowania do własnych potrzeb, a nie powodem do zakupu specjalnego czytnika.
 - Ograniczenia: Nie badano każdego telefonu, trybu nocnego ani ekranu z tuszem elektronicznym. Duża ekspozycja laboratoryjna nie określa wielkości efektu krótkiego korzystania z ekranu w domu.
@@ -135,7 +135,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie przenosimy chińskich statystyk ani ilorazów szans z badań dzieci na korzyść dla każdego dorosłego. To rekord oceny, nie instrukcja postępowania.
 - Źródła: Potrzebne są pełne teksty badań różnych grup wiekowych i ocena interwencji, a nie samych korelacji. Oryginał wskazuje Carter 2016, DOI 10.1001/jamapediatrics.2016.2341.
 - Oryginał: [03.9](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L93-L100)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.9, nie pełna weryfikacja badań ani gotowej porady: badania dzieci i obserwacyjne ilorazy szans nie określają korzyści interwencji dla każdego dorosłego. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-10"></a>
 
@@ -144,7 +144,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Eksperyment po skrajnej deprywacji snu nie ustala zwykłej godziny, po której nie należy podejmować każdej decyzji. Nie zatwierdzono reguły dotyczącej wszystkich ważnych wiadomości.
 - Źródła: Potrzebna ocena pełnego badania Killgore 2006, DOI 10.1111/j.1365-2869.2006.00487.x, i dowodów dla zwykłego niedosypiania.
 - Oryginał: [03.10](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L102-L109)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.10, nie pełna weryfikacja badań ani gotowej porady: skrajne pozbawienie snu nie wyznacza zwykłej godziny podejmowania decyzji. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-11"></a>
 
@@ -153,7 +153,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie zatwierdzono jednej długości drzemki dla wszystkich. Trzeba odróżnić eksperyment po niedoborze snu od bezsenności i przewlekłej senności.
 - Źródła: Potrzebne pełne badanie Brooks i Lack 2006, DOI 10.1093/sleep/29.6.831, oraz zalecenia uwzględniające sytuację kliniczną. NHS odradza drzemki w poradach dla osób z bezsennością.
 - Oryginał: [03.11](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L111-L118)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.11, nie pełna weryfikacja badań ani gotowej porady: nie ustalono dla wszystkich długości drzemki ani jej zastosowania przy bezsenności. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-12"></a>
 
@@ -162,7 +162,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Badanie hałasu nie jest automatycznie badaniem skuteczności każdego rodzaju zatyczek lub słuchawek. Nie przeniesiono chińskich cen.
 - Źródła: Potrzebny pełny tekst Jahncke 2011, DOI 10.1016/j.jenvp.2011.07.002, i dowody dotyczące proponowanego środka ochrony oraz bezpieczeństwa komunikacji.
 - Oryginał: [03.12](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L120-L127)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.12, nie pełna weryfikacja badań ani gotowej porady: badanie hałasu nie weryfikuje skuteczności każdego środka ochrony. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-13"></a>
 
@@ -171,7 +171,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Historyczne dane fabryczne nie uzasadniają uniwersalnego progu 49 godzin dla współczesnej pracy umysłowej.
 - Źródła: Potrzebny pełny tekst Pencavel 2015, DOI 10.1111/ecoj.12166, oraz właściwe porównania dla dzisiejszych zawodów. Nie jest to porada o polskich limitach czasu pracy.
 - Oryginał: [03.13](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L129-L136)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.13, nie pełna weryfikacja badań ani gotowej porady: historyczne dane fabryczne nie ustanawiają progu godzin dla dzisiejszych zawodów. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-14"></a>
 
@@ -180,7 +180,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie zatwierdzono konkretnej samodzielnej interwencji jako leczenia ani obietnicy odzyskania energii.
 - Źródła: Potrzebny pełny przegląd Nolen-Hoeksema 2008, DOI 10.1111/j.1745-6924.2008.00088.x, i aktualne wskazania kliniczne dotyczące proponowanej metody.
 - Oryginał: [03.14](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L138-L145)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.14, nie pełna weryfikacja badań ani gotowej porady: nie zweryfikowano konkretnej samodzielnej interwencji klinicznej. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-15"></a>
 
@@ -189,7 +189,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie zamieniamy obserwacyjnego związku ze śmiertelnością w diagnozę ani dowód skuteczności zmiany sposobu myślenia.
 - Źródła: Potrzebne odrębne podstawy kliniczne oceny objawów i interwencji; źródło oryginału to Whitfield 2020, DOI 10.1038/s41598-020-69388-y.
 - Oryginał: [03.15](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L147-L154)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.15, nie pełna weryfikacja badań ani gotowej porady: związek obserwacyjny nie potwierdza skuteczności zmiany myślenia. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-16"></a>
 
@@ -198,7 +198,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Szczególna próba starszych owdowiałych kobiet i korelacja dobrostanu nie wyznaczają ogólnej reguły zrywania relacji.
 - Źródła: Potrzebny pełny tekst Rook 1984, DOI 10.1037/0022-3514.46.5.1097, i dowody dla konkretnej, bezpiecznej interwencji.
 - Oryginał: [03.16](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L156-L163)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.16, nie pełna weryfikacja badań ani gotowej porady: szczególna populacja i korelacja nie uzasadniają ogólnej reguły zrywania relacji. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-17"></a>
 
@@ -207,22 +207,22 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie zatwierdzono metafory ani opuszczania każdej sytuacji jako przetestowanej metody. Wybrana do publikacji pozycja 03.23 ma osobny, węższy zakres.
 - Źródła: Potrzebna ocena pełnych prac Webb 2012, DOI 10.1037/a0027600, oraz Carlsmith 2008, DOI 10.1037/a0012165.
 - Oryginał: [03.17](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L165-L172)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.17, nie pełna weryfikacja badań ani gotowej porady: nie zweryfikowano metafory ani odchodzenia z każdej sytuacji jako interwencji. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-18"></a>
 
 ### 18. Przy utrzymującym się obniżeniu nastroju szukaj wsparcia; ruch może być częścią pomocy
 - Status: verified
 - Koszt: Zgłoszenie się po pomoc i dobranie aktywności fizycznej do stanu zdrowia i możliwości. Koszt i dostępność leczenia zależą od sytuacji; nie podajemy cen.
-- W praktyce: Jeśli nastrój utrudnia codzienne życie, zgłoś się po profesjonalną pomoc. Propozycja redakcji: nie musisz najpierw udowodnić, że potrafisz ćwiczyć. Propozycja redakcji: ruch może uzupełniać leczenie, jeśli jest dla ciebie odpowiedni. W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123. Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112.
-- Korzyść i dowody: Metaanaliza sieciowa Noetela i współautorów objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji. Część form ruchu zmniejszała objawy względem aktywnych warunków kontrolnych. Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji.
+- W praktyce: Jeśli nastrój utrudnia codzienne życie, zgłoś się po profesjonalną pomoc. Propozycja redakcji: nie musisz najpierw udowodnić, że potrafisz ćwiczyć. Aktywność fizyczna może być częścią leczenia; jej formę dobierz z osobą prowadzącą pomoc do swojego stanu i możliwości. W kryzysie dorosła osoba w Polsce może zadzwonić pod bezpłatny, całodobowy numer 116 123. Przy bezpośrednim zagrożeniu życia lub zdrowia dzwoń pod 112.
+- Korzyść i dowody: Metaanaliza sieciowa Noetela i współautorów, łącząca bezpośrednie i pośrednie porównania interwencji, objęła 218 badań z randomizacją i 14 170 osób spełniających przyjęte w przeglądzie kryteria depresji. Część form ruchu zmniejszała objawy względem aktywnych grup kontrolnych, obejmujących na przykład zwykłą opiekę lub placebo. Autorzy ocenili pewność wyników jako niską dla marszu lub biegania i bardzo niską dla pozostałych porównań interwencji.
 - Ocena dowodów: A — ilościowa synteza prób klinicznych; litera A nie usuwa niskiej pewności tych wyników.
 - Ocena redakcyjna: Pomoc ma być dostępna także wtedy, gdy brakuje siły do działania. Aktywność fizyczna nie jest testem charakteru ani warunkiem leczenia.
 - Ograniczenia: Nie jest to diagnoza, plan terapii ani zachęta do samodzielnego zwiększania intensywności ćwiczeń. Potrzeby osób z ciężkimi objawami lub zagrożeniem samobójczym wymagają oceny klinicznej. Telefon wsparcia nie zastępuje numeru alarmowego. Podany telefon 116 123 dotyczy dorosłych.
-- Źródła: Noetel i współautorzy (2024), Effect of exercise for depression. [BMJ: abstrakt i metody](https://www.bmj.com/content/384/bmj-2023-075847); [Ministerstwo Zdrowia: gdzie uzyskać pomoc](https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna); [Ministerstwo Cyfryzacji i NASK: 116 123 dla dorosłych](https://www.gov.pl/web/cyfryzacja/infolinia-116-123--pierwsza-pomoc-psychologiczna-w-zasiegu-telefonu-i-internetu2).
+- Źródła: Noetel i współautorzy (2024), Effect of exercise for depression. [BMJ: tekst przeglądu](https://www.bmj.com/content/384/bmj-2023-075847); [Ministerstwo Zdrowia: gdzie uzyskać pomoc](https://www.gov.pl/web/zdrowie/gdzie-uzyskac-pomoc-psychologiczna-i-psychiatryczna); [operator numeru 116 123](https://116sos.pl/otrzymaj-pomoc/telefon).
 - Oryginał: [03.18](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L174-L181)
-- Weryfikacja: 2026-10-28; abstrakt i metody BMJ, ograniczenia pewności; oficjalne polskie informacje o wsparciu dla dorosłych i numerze 112. Bez oceny indywidualnego leczenia.
-- Zmiany w adaptacji: Zachowano A z jawnym ograniczeniem pewności. Usunięto chiński numer i zastąpiono go sprawdzonym polskim kontaktem. Nie utożsamiono wyjścia na słońce z kliniczną fototerapią. Nie przeniesiono instrukcji doboru intensywności ćwiczeń ani samodzielnego leczenia. 2026-10-30 (przegląd run7, decyzja właściciela): dwa zdania o ruchu oznaczono jako propozycje redakcji, bo czytelne źródła (strony Ministerstwa Zdrowia) nie mówią o ruchu, a źródło o ruchu (BMJ) jest zablokowane dla skryptu; ze zdania o numerze 112 usunięto dopisek „zamiast czekać na rozmowę wspierającą”, którego źródło nie zawiera.
+- Weryfikacja: 2026-10-30; tekst główny BMJ: abstrakt i sekcje metod dotyczące kryteriów włączenia, grup kontrolnych oraz CINeMA; potwierdzono liczebności i niską lub bardzo niską pewność. Oficjalne polskie strony o pomocy oraz strona operatora 116 123 potwierdzają zakres dla dorosłych, bezpłatność i dostępność całodobową. Bez oceny indywidualnego leczenia.
+- Zmiany w adaptacji: Zachowano A z jawnym ograniczeniem pewności. Usunięto chiński numer i zastąpiono go sprawdzonym polskim kontaktem. Nie utożsamiono wyjścia na słońce z kliniczną fototerapią. Nie przeniesiono instrukcji doboru intensywności ćwiczeń ani samodzielnego leczenia. 2026-10-30 (przegląd run7, decyzja właściciela): dwa zdania o ruchu oznaczono jako propozycje redakcji, bo czytelne źródła (strony Ministerstwa Zdrowia) nie mówią o ruchu, a źródło o ruchu (BMJ) jest zablokowane dla skryptu; ze zdania o numerze 112 usunięto dopisek „zamiast czekać na rozmowę wspierającą”, którego źródło nie zawiera. 2026-10-30 (przegląd jakości): po odczycie tekstu BMJ wyjaśniono porównania i zachowano niską pewność; zdanie o aktywności jako części leczenia oparto na wniosku przeglądu, bez samodzielnej recepty na ćwiczenia. Potwierdzono dane telefonu u operatora. Wcześniejsza blokada źródła dotyczyła skryptu z run7, nie obecnego odczytu.
 
 <a id="porada-3-19"></a>
 
@@ -231,7 +231,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Chińskie terminy postępowań i ścieżki odwoławcze nie opisują Polski. Nie zatwierdzono polskiej procedury.
 - Źródła: Potrzebne odrębne, aktualne polskie przepisy i oficjalne procedury dla każdej instytucji; bez mechanicznego zastępowania nazw i terminów.
 - Oryginał: [03.19](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L183-L190)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.19, nie pełna weryfikacja badań ani gotowej porady: nie sprawdzono polskich przepisów i procedur konkretnych instytucji. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-20"></a>
 
@@ -240,7 +240,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie zatwierdzono wszystkich liczb i warunków syntez ani przeniesienia efektu wyłączenia konkretnej platformy na dowolny dzisiejszy serwis.
 - Źródła: Potrzebne pełne teksty i rozróżnienie korelacji od interwencji, w tym Allcott 2020, DOI 10.1257/aer.20190658, oraz weryfikacja nowszej syntezy wskazanej przez upstream.
 - Oryginał: [03.20](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L192-L199)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.20, nie pełna weryfikacja badań ani gotowej porady: nie zweryfikowano wszystkich liczb ani przenoszenia efektu między platformami. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-21"></a>
 
@@ -249,7 +249,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie przyjmujemy dzielenia własnego oszacowania przez dwa jako uniwersalnego współczynnika. Sam oryginał opisuje różne wyniki w różnych eksperymentach.
 - Źródła: Potrzebne pełne teksty Gilovich 2000, DOI 10.1037/0022-3514.78.2.211, i Boothby 2018, DOI 10.1177/0956797618783714, z oceną zakresu praktycznego wniosku.
 - Oryginał: [03.21](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L201-L208)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.21, nie pełna weryfikacja badań ani gotowej porady: nie potwierdzono uniwersalnego przelicznika własnej oceny przez dwa. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-22"></a>
 
@@ -258,15 +258,15 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Związek z myślami samobójczymi nie służy do samodiagnozy ani przypisywania każdemu wysokiemu standardowi znaczenia objawu.
 - Źródła: Potrzebny pełny przegląd Smith 2018, DOI 10.1111/jopy.12333, i kliniczne podstawy proponowanego postępowania. Nie przeniesiono chińskich kontaktów pomocowych.
 - Oryginał: [03.22](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L210-L217)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.22, nie pełna weryfikacja badań ani gotowej porady: związek z myślami samobójczymi nie jest podstawą samodiagnozy. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-23"></a>
 
-### 23. Przy złości wypróbuj uspokojenie pobudzenia zamiast agresywnego wyładowania
+### 23. Gdy czujesz złość, spróbuj się uspokoić zamiast agresywnie ją wyładowywać
 - Status: verified
-- Koszt: Przerwa od sporu i próba spokojnego działania. To ocena redakcji, nie ustalony czas leczenia.
+- Koszt: Przerwa od sporu i próba spokojnego działania. To ocena redakcji, nie określenie czasu potrzebnego na leczenie.
 - W praktyce: Jeśli sytuacja jest bezpieczna, odłóż agresywną reakcję i spróbuj uspokoić ciało, na przykład przez spokojne oddychanie. Potraktuj to jako łagodną próbę, bez forsowania oddechu. Przy przemocy lub bezpośrednim zagrożeniu pierwszeństwo ma bezpieczeństwo i wezwanie pomocy, nie ćwiczenie uspokajające.
-- Korzyść i dowody: Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób. Działania zmniejszające pobudzenie obniżały złość i agresję: g = −0,63. Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero.
+- Korzyść i dowody: Metaanaliza Kjærvik i Bushmana objęła 154 badania, 184 niezależne próby i 10 189 osób. Działania zmniejszające pobudzenie organizmu obniżały złość i agresję: g = −0,63. Działania zwiększające pobudzenie nie przyniosły przeciętnie takiego efektu: g = −0,02, z przedziałem obejmującym zero. Są to standaryzowane miary efektu, nie procenty zmniejszenia złości.
 - Ocena dowodów: A — ilościowa synteza badań nad złością i agresją, nie nad liczbą odzyskanych godzin.
 - Ocena redakcyjna: Nie trzeba szukać intensywnego „wyładowania”, żeby zrobić przerwę od sporu.
 - Ograniczenia: Średni wynik nie gwarantuje efektu każdej techniki u każdej osoby. Wniosku nie należy odczytywać jako zakazu ruchu lub dowodu jego nieskuteczności w leczeniu depresji. Samopomoc nie zastępuje pomocy przy przemocy lub nawracających niebezpiecznych zachowaniach.
@@ -282,7 +282,7 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Oryginał opisuje niejednoznaczne wyniki syntez. Nie zatwierdzono obietnicy leczenia ani zastosowania do każdej osoby.
 - Źródła: Potrzebne porównanie populacji i wyników Frattaroli 2006, DOI 10.1037/0033-2909.132.6.823, Mogk 2006 oraz Zachariae 2015, DOI 10.1002/pon.3802.
 - Oryginał: [03.24](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L228-L235)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.24, nie pełna weryfikacja badań ani gotowej porady: nie porównano pełnych tekstów syntez o różnych populacjach i wynikach. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-25"></a>
 
@@ -291,34 +291,34 @@ Informacje zdrowotne dotyczą dorosłych w podanym zakresie. Nie zastępują dia
 - Ograniczenia: Nie publikujemy bezwarunkowego zalecenia przyjmowania ibuprofenu ani czekania trzy miesiące przed konsultacją. Przejrzane NICE NG73 nie zastępują polskiej informacji o leku i indywidualnej oceny.
 - Źródła: Potrzebne aktualne polskie ChPL i ulotki: przeciwwskazania, ciąża, interakcje, objawy alarmowe oraz bezpieczna ścieżka konsultacji. Do oceny skuteczności pozostaje pełny przegląd Cochrane CD001751.pub3.
 - Oryginał: [03.25](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L237-L244)
-- Weryfikacja: 2026-10-28; ocena oryginalnej pozycji i decyzja o niepublikowaniu kompletnej porady. Pozostały zakres wymaga wskazanych źródeł.
+- Weryfikacja: 2026-10-28; ocena przypiętej pozycji oryginału 03.25, nie pełna weryfikacja badań ani gotowej porady: brakuje pełnej polskiej oceny przeciwwskazań, interakcji i objawów alarmowych. Wskazane w polu Źródła materiały pozostają do sprawdzenia.
 
 <a id="porada-3-26"></a>
 
 ### 26. Przy przewlekłej bezsenności zapytaj o terapię poznawczo-behawioralną bezsenności
 - Status: verified
 - Koszt: Ocena problemu, udział w terapii i praca między spotkaniami. Dostępność, forma i koszt zależą od świadczeniodawcy; nie obiecujemy polskiej refundacji.
-- W praktyce: Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, prowadzoną osobiście lub w odpowiednim programie cyfrowym. Propozycja redakcji: nie zmieniaj samodzielnie przepisanych leków i nie zaczynaj ograniczać czasu w łóżku bez ustalenia bezpieczeństwa tej metody.
-- Korzyść i dowody: Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. AASM w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako jedynego leczenia tego zaburzenia.
+- W praktyce: Gdy problemy ze snem utrzymują się i utrudniają codzienne funkcjonowanie, zgłoś je lekarzowi. Zapytaj o CBT-I, czyli terapię poznawczo-behawioralną bezsenności, podczas spotkań z terapeutą lub w odpowiednim programie cyfrowym. Przestroga redakcji: nie zmieniaj samodzielnie przepisanych leków i nie zaczynaj ograniczać czasu w łóżku bez omówienia bezpieczeństwa z osobą prowadzącą leczenie.
+- Korzyść i dowody: Europejskie wytyczne z 2023 roku zalecają CBT-I jako leczenie pierwszego wyboru przewlekłej bezsenności u dorosłych, również z chorobami współistniejącymi. Amerykańska Akademia Medycyny Snu (AASM) w 2021 roku wydała silne zalecenie wieloskładnikowej CBT-I. Oddzielnie wydała warunkowe zalecenie, by nie stosować samej higieny snu jako leczenia tego zaburzenia.
 - Ocena dowodów: B — zalecenia kliniczne oparte na przeglądach; publikowana wersja nie obiecuje jednej wielkości efektu.
 - Ocena redakcyjna: Warto pytać o konkretną terapię bezsenności, a nie tylko o ogólne porady dotyczące sypialni.
-- Ograniczenia: Rozpoznanie wymaga oceny klinicznej i oceny przyczyn problemu, w tym innych zaburzeń snu. Nie trzeba czekać miesiącami z pilnym objawem. Farmakoterapia, czyli leczenie lekami, może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania leków. Program cyfrowy nie oznacza dowolnej aplikacji.
+- Ograniczenia: Rozpoznanie wymaga oceny klinicznej i oceny przyczyn problemu, w tym innych zaburzeń snu. Nie trzeba czekać miesiącami z pilnym objawem. AASM wskazuje możliwe przeciwwskazania do ograniczania czasu w łóżku, między innymi w niektórych zawodach wymagających szczególnej czujności oraz przy określonych chorobach; bezpieczeństwo ocenia specjalista. Farmakoterapia, czyli leczenie lekami, może być uzasadniona po ocenie korzyści i ryzyka; ta porada nie zakazuje jej ani nie jest instrukcją odstawiania leków. Program cyfrowy nie oznacza dowolnej aplikacji.
 - Źródła: Riemann i współautorzy (2023), The European Insomnia Guideline. [Abstrakt autorów](https://pubmed.ncbi.nlm.nih.gov/38016484/); Edinger i współautorzy (2021), AASM clinical practice guideline. [Pełny tekst zaleceń](https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/); [NHS: kiedy zgłosić bezsenność](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.26](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L246-L253)
-- Weryfikacja: 2026-10-28; abstrakt europejskich wytycznych oraz zalecenia 1 i 6 AASM i ich zakres dla dorosłych; informacja NHS dla pacjentów. Nie jest to pełny przegląd leków.
-- Zmiany w adaptacji: Oryginalne A zastąpiono B dla węższego wniosku klinicznego. Usunięto instrukcję samodzielnego ograniczania snu, chińskie ścieżki leczenia oraz liczby korzyści i szkód z różnych populacji. Nie stawiamy rozpoznania wyłącznie na podstawie liczby nocy. 2026-10-30 (przegląd run7, decyzja właściciela): zdanie ostrzegawcze o lekach i ograniczaniu czasu w łóżku oznaczono jako propozycję redakcji; wytyczne AASM mówią tylko, że ograniczanie snu może być przeciwwskazane u części osób.
+- Weryfikacja: 2026-10-30; pełny tekst zaleceń AASM: zalecenia 1 i 6, uwagi o prowadzeniu terapii i przeciwwskazaniach do ograniczania snu; pełna informacja NHS dla pacjentów. Wniosek z europejskich wytycznych pozostaje ograniczony do wcześniej sprawdzonego abstraktu, bez ponownego przeglądu leków.
+- Zmiany w adaptacji: Oryginalne A zastąpiono B dla węższego wniosku klinicznego. Usunięto instrukcję samodzielnego ograniczania snu, chińskie ścieżki leczenia oraz liczby korzyści i szkód z różnych populacji. Nie stawiamy rozpoznania wyłącznie na podstawie liczby nocy. 2026-10-30 (przegląd run7, decyzja właściciela): zdanie ostrzegawcze o lekach i ograniczaniu czasu w łóżku oznaczono jako propozycję redakcji; wytyczne AASM mówią tylko, że ograniczanie snu może być przeciwwskazane u części osób. 2026-10-30 (przegląd jakości): wyjaśniono AASM i formę terapii, wskazano kto ocenia bezpieczeństwo oraz zakres przeciwwskazań opisany w zaleceniu. Przestroga o lekach pozostaje redakcyjna, nie jest nowym zaleceniem farmakologicznym.
 
 <a id="porada-3-27"></a>
 
 ### 27. Głośne chrapanie z przerwami w oddychaniu lub sennością zgłoś lekarzowi
 - Status: verified
 - Koszt: Konsultacja, ewentualne badanie snu i leczenie. Organizacja i wydatki zależą od sytuacji; nie podajemy cen aparatu ani zasad refundacji.
-- W praktyce: Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność za kierownicą, nie kontynuuj jazdy; zatrzymaj się w bezpiecznym miejscu i wybierz inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP ani jego ustawień.
+- W praktyce: Zgłoś zauważone przerwy w oddychaniu, nasilone chrapanie lub nadmierną senność. Jeśli czujesz senność za kierownicą, zatrzymaj się w bezpiecznym miejscu i wybierz inny sposób podróży. Nie próbuj samodzielnie dobierać aparatu CPAP, czyli urządzenia utrzymującego dodatnie ciśnienie w drogach oddechowych, ani jego ustawień.
 - Korzyść i dowody: Wytyczne NICE NG202 zalecają ocenę objawów i badania snu przy podejrzeniu obturacyjnego bezdechu sennego. Przy rozpoznanym umiarkowanym lub ciężkim bezdechu zalecają CPAP, czyli urządzenie utrzymujące dodatnie ciśnienie w drogach oddechowych.
 - Ocena dowodów: B — wytyczne kliniczne dotyczące diagnostyki i leczenia, bez jednej prognozy korzyści dla czytelnika.
 - Ocena redakcyjna: Przy takich objawach ważniejsze jest ustalenie przyczyny niż próba maskowania senności kawą.
 - Ograniczenia: Chrapanie samo w sobie nie jest rozpoznaniem. Rodzaj badania i leczenia dobiera osoba prowadząca. Nie obiecujemy określonego spadku liczby wypadków ani ochrony przed zawałem lub zgonem. Porada nie opisuje polskiej procedury orzekania o uprawnieniach do kierowania.
 - Źródła: [NICE NG202: ocena, badania i leczenie bezdechu](https://www.nice.org.uk/guidance/ng202/chapter/1-Obstructive-sleep-apnoeahypopnoea-syndrome); [NICE: informacje dla pacjentów](https://www.nice.org.uk/guidance/ng202/chapter/4-Information-for-people-with-OSAHS-OHS-or-COPDOSAHS-overlap-syndrome); [NHS: senność i prowadzenie](https://www.nhs.uk/conditions/insomnia/).
 - Oryginał: [03.27](https://github.com/eternity4719/HowToLiveBetter/blob/e2605d3e2242bd6216c9255192b8a8957a08c55a/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md#L255-L262)
-- Weryfikacja: 2026-10-28; zalecenia NG202 dotyczące podejrzenia bezdechu, badań i CPAP oraz informacje o bezpieczeństwie; NHS: nieprowadzenie w senności. Bez przenoszenia brytyjskich procedur administracyjnych.
+- Weryfikacja: 2026-10-28; wskazane fragmenty wytycznych NG202 o podejrzeniu bezdechu, badaniach i CPAP oraz informacje dla pacjentów o bezpieczeństwie; strona NHS: nieprowadzenie w senności. Bez przenoszenia brytyjskich procedur administracyjnych.
 - Zmiany w adaptacji: Oryginalne A zastąpiono B dla publikowanego zakresu. Usunięto chińską częstość występowania, obietnicę 70% mniej wypadków i automatyczne zalecenie zakupu aparatu.

@@ -15,7 +15,7 @@ const matches = (entry, query) => fold([chapters.find(c => c.id === entry.chapte
 
 async function ready(page, suffix = '/') {
   await page.goto(suffix);
-  await expect(page.locator('#status')).toContainText(`z ${count} zweryfikowanych`);
+  await expect(page.locator('#status')).toContainText(`z ${count} opracowanych`);
 }
 
 test('renders actual chapters, all verified provenance and no external requests', async ({ page, baseURL }) => {
@@ -139,7 +139,7 @@ test('all unpublished states stay outside the collection and dynamic counts chan
       body: time.markdown.replace('- Status: verified', `- Status: ${state}`),
     }));
     await page.goto('/');
-    await expect(page.locator('#status')).toContainText(`z ${count - 1} zweryfikowanych`);
+    await expect(page.locator('#status')).toContainText(`z ${count - 1} opracowanych`);
     await expect(page.locator('article')).toHaveCount(count - 1);
     await expect(page.locator('#porada-4-1')).toHaveCount(0);
     await page.unroute(routeFor(time));
@@ -236,4 +236,31 @@ test('small screens keep controls, long evidence and navigation within the viewp
     await expect(page.getByLabel('Szukaj w polskich poradach')).toBeVisible();
     await expect(page.getByLabel('Rozdział', { exact: true })).toBeVisible();
   }
+});
+
+test('card permalinks expose stable locations and navigation tracks visible targets', async ({ page }) => {
+  await ready(page);
+  for (const e of entries) {
+    await expect(page.locator('#' + e.id).getByRole('link', { name: 'Stały link do porady ' + e.number, exact: true })).toHaveAttribute('href', '#' + e.id);
+  }
+  await page.getByRole('link', { name: 'Stały link do porady 14.5', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-14-5$/);
+  await expect(page.locator('#porada-14-5 h3')).toBeFocused();
+  const current = page.locator('#toc a[href="#porada-14-5"]');
+  await expect(current).toHaveAttribute('aria-current', 'location');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('03');
+  await expect(current).not.toHaveAttribute('aria-current', 'location');
+  await page.getByRole('button', { name: 'Wyczyść filtry' }).click();
+  await expect(current).toHaveAttribute('aria-current', 'location');
+  await page.goBack();
+  await expect(page.locator('#toc a[aria-current]')).toHaveCount(0);
+});
+
+test('reader labels do not turn editorial checks into expert approval', async ({ page }) => {
+  await ready(page);
+  await expect(page.locator('#status')).toContainText('opracowanych polskich porad');
+  await expect(page.locator('#status')).not.toContainText('zweryfikowanych');
+  await expect(page.locator('#review-notice')).toContainText('Nie zatwierdził ich lekarz ani prawnik');
+  await expect(page.getByLabel('Ocena dowodów', { exact: true })).toHaveAccessibleDescription(/Litera opisuje rodzaj źródła/);
+  await expect(page.getByRole('link', { name: 'Jak czytać oceny A, B i C', exact: true })).toBeVisible();
 });

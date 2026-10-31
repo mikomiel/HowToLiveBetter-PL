@@ -53,9 +53,10 @@ test('the output states its coverage from the data and shows every field a reade
   assert.equal(cov.published, published(entries).length);
   assert.deepEqual(cov.chapters, chapters.map(c => c.id));
   const text = formatResults(chapters, searchAdvice(chapters, 'hasło', { limit: 1 }));
-  assert.match(text, new RegExp(`^Zakres: ${cov.published} zweryfikowanych porad z rozdziałów ${cov.chapters.join(', ')}\\.`));
+  assert.match(text, new RegExp(`^Zakres: ${cov.published} opracowanych porad z rozdziałów ${cov.chapters.join(', ')}\\.`));
   for (const label of ['Ocena dowodów:', 'Koszt:', 'W praktyce:', 'Korzyść i dowody:', 'Ograniczenia:', 'Ocena redakcyjna:', 'Źródła:', 'Weryfikacja:', 'Odsyłacz: book/pl/14-bezpieczenstwo-kont-i-danych.md#porada-14-2']) assert.ok(text.includes(label), label);
   assert.match(text.split('\n')[0], /Pozostałe rozdziały książki nie są opublikowane\.$/, 'the answer must say the rest of the book is not published');
+  assert.match(text, /Stan verified oznacza sprawdzenie w opisanym zakresie, nie zatwierdzenie przez lekarza lub prawnika/);
   assert.match(formatResults(chapters, []), /Brak wyników/);
 });
 

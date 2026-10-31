@@ -38,6 +38,8 @@
     nav ul { padding-left: 1.3rem; margin: .5rem 0 0; }
     nav li { margin: .4rem 0; }
     nav a { display: block; padding: .25rem 0; }
+    nav a[aria-current] { font-weight: 750; text-decoration-thickness: .15em; }
+    .permalink { display: inline-block; min-height: 2.75rem; padding: .5rem 0; font-size: .9rem; }
     main { min-width: 0; }
     article { background: white; border: 1px solid #c5d3cc; border-radius: .7rem; padding: clamp(1rem, 3vw, 1.8rem); margin-bottom: 1.4rem; scroll-margin-top: 1rem; overflow-wrap: anywhere; }
     article:target { border-color: #175a4a; box-shadow: 0 0 0 2px #175a4a; }
@@ -57,7 +59,7 @@
 <body>
   <a class="skip" href="#porady">Przejdź do porad</a>
   <header>
-    <p class="edition">Wydanie polskie · wybrane zweryfikowane porady</p>
+    <p class="edition">Wydanie polskie · porady ze źródłami i ograniczeniami</p>
     <h1>Jak żyć lepiej</h1>
     <p class="subtitle">Praktyczny poradnik oparty na dowodach</p>
     <p class="intro">Nie musisz robić wszystkiego. Wybierz jedną zmianę, sprawdź jej koszt i zobacz, co naprawdę wynika z badań. Przy każdej poradzie znajdziesz źródła i ograniczenia.</p>
@@ -67,10 +69,10 @@
     <form class="controls" role="search" aria-label="Wyszukiwanie porad">
       <div class="search-control"><label for="search">Szukaj w polskich poradach</label><input id="search" type="search" placeholder="Np. sen, spotkanie, konto" aria-describedby="search-help" disabled></div>
       <div><label for="chapter">Rozdział</label><select id="chapter" disabled><option value="">Wszystkie rozdziały</option></select></div>
-      <div><label for="grade">Ocena dowodów</label><select id="grade" disabled><option value="">Wszystkie oceny</option><option value="A">A — synteza ilościowa</option><option value="B">B — badania i wytyczne</option><option value="C">C — normy i zalecenia</option></select></div>
+      <div><label for="grade">Ocena dowodów</label><select id="grade" aria-describedby="search-help" disabled><option value="">Wszystkie oceny</option><option value="A">A — synteza ilościowa</option><option value="B">B — badania i wytyczne</option><option value="C">C — normy i zalecenia</option></select></div>
       <button id="reset" type="button" disabled>Wyczyść filtry</button>
     </form>
-    <p id="search-help">Możesz szukać bez polskich znaków. Ocena dowodów nie jest oceną opłacalności.</p>
+    <p id="search-help">Możesz szukać bez polskich znaków. Litera opisuje rodzaj źródła, nie gwarantuje prawdziwości ani opłacalności porady. <a href="https://github.com/mikomiel/HowToLiveBetter-PL/blob/main/README.md#jak-czytac-dowody">Jak czytać oceny A, B i C</a>.</p>
     <p id="status" role="status" aria-live="polite">Nie uruchomiono czytnika. Włącz JavaScript i odśwież stronę. Użyj lokalnego serwera HTTP, jeśli otwierasz plik z dysku (instrukcja w README na GitHubie). Jeśli komunikat nie znika, odśwież stronę albo zgłoś błąd w repozytorium (odnośnik „Zgłoś poprawkę” powyżej).</p>
     <button id="retry" type="button" hidden>Spróbuj wczytać ponownie</button>
     <noscript><p>Włącz JavaScript, aby użyć wyszukiwania, lub otwórz rozdział w Markdown. Nie wczytano żadnych porad.</p></noscript>
@@ -80,7 +82,7 @@
       <nav aria-label="Rozdziały"><h2>Rozdziały</h2><ul id="chapters"></ul></nav>
       <nav aria-label="Spis polskich porad"><details id="nav-list" open><summary>Spis porad</summary><ul id="toc"></ul></details></nav>
     </aside>
-    <main id="porady" tabindex="-1" aria-label="Zweryfikowane polskie porady"></main>
+    <main id="porady" tabindex="-1" aria-label="Polskie porady ze źródłami"></main>
   </div>
   <footer>
     <p>Niezależna polska adaptacja HowToLiveBetter autorstwa <a href="https://github.com/eternity4719/HowToLiveBetter">eternity4719</a>. To wybór rozdziałów, nie tłumaczenie całej książki. Tylko treść o stanie verified jest publikowana w tym czytniku.</p>
