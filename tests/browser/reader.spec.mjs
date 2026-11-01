@@ -198,7 +198,7 @@ test('old chapter-04 deep links and cross-chapter references survive filters', a
   await expect(visibleCards(page)).toHaveCount(count);
   await expect(page.locator('#porada-4-5 h3')).toBeFocused();
   await expect(page.locator('#porada-4-5 h3')).toBeInViewport();
-  await page.getByLabel('Szukaj w polskich poradach').fill('691');
+  await page.getByLabel('Szukaj w polskich poradach').fill('steel');
   await expect(visibleCards(page)).toHaveCount(1);
   await page.locator('#porada-4-9').getByRole('link', { name: 'plan „jeśli–to” z porady 04.1' }).click();
   await expect(page.locator('#porada-4-1 h3')).toBeFocused();
