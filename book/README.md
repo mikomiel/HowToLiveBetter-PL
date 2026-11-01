@@ -12,6 +12,7 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [06. Czarna lista](pl/06-czarna-lista.md)
 - [07. Jak żyć, gdy nie ma się pieniędzy](pl/07-jak-zyc-gdy-nie-masz-pieniedzy.md)
 - [08. Nie pakuj się w tarapaty](pl/08-nie-pakuj-sie-w-tarapaty.md)
+- [09. Czerwone linie prawa](pl/09-czerwone-linie-prawa.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
