@@ -19,5 +19,6 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [13. Sytuacje nagłe: co robić najpierw](pl/13-sytuacje-nagle.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
 - [15. Wynajem i kupno mieszkania — rekordy do ponownej weryfikacji](pl/15-wynajem-i-kupno-mieszkania.md)
+- [16. Życie z chorobą przewlekłą](pl/16-zycie-z-choroba-przewlekla.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
