@@ -20,5 +20,6 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
 - [15. Wynajem i kupno mieszkania — rekordy do ponownej weryfikacji](pl/15-wynajem-i-kupno-mieszkania.md)
 - [16. Życie z chorobą przewlekłą](pl/16-zycie-z-choroba-przewlekla.md)
+- [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](pl/17-senior-w-rodzinie.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.

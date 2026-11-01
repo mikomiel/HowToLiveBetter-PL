@@ -17,6 +17,7 @@ export const CHAPTERS = [
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
   { id: '15', path: 'book/pl/15-wynajem-i-kupno-mieszkania.md' },
   { id: '16', path: 'book/pl/16-zycie-z-choroba-przewlekla.md' },
+  { id: '17', path: 'book/pl/17-senior-w-rodzinie.md' },
 ];
 export const FIELDS = [
   'Status', 'Koszt', 'W praktyce', 'Korzyść i dowody', 'Ocena dowodów',
