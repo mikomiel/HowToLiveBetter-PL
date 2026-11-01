@@ -13,6 +13,7 @@ export const CHAPTERS = [
   { id: '10', path: 'book/pl/10-zwiazek-i-malzenstwo-czy-sie-oplaca.md' },
   { id: '11', path: 'book/pl/11-czerwone-linie-it.md' },
   { id: '12', path: 'book/pl/12-przedsiebiorczosc-i-biznes.md' },
+  { id: '13', path: 'book/pl/13-sytuacje-nagle.md' },
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
 ];
 export const FIELDS = [
