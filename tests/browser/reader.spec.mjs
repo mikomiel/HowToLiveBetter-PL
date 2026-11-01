@@ -195,7 +195,25 @@ test('chapter 12 exposes business red-line advice through search, filter and per
   await expect(page.locator('#porada-12-5 .practical')).toContainText('KC art. 750');
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12']) {
+test('chapter 13 exposes emergency advice through search, filter and permalink', async ({ page }) => {
+  test.setTimeout(90_000);
+  const c = chapters.find(c => c.id === '13');
+  await ready(page, '/#porada-13-1');
+  await expect(page.locator('#porada-13-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('13');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('opaska');
+  await expect(page.locator('#porada-13-12')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 13.12', exact: true }).click();
+  await expect(page.locator('#porada-13-12 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-13-12 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('13');
+  await page.getByLabel('Szukaj w polskich poradach').fill('AED');
+  await expect(page.locator('#porada-13-1 .practical')).toContainText('AED');
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
