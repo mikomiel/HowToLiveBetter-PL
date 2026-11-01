@@ -15,6 +15,7 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [09. Czerwone linie prawa](pl/09-czerwone-linie-prawa.md)
 - [10. Związek i małżeństwo: czy to się opłaca?](pl/10-zwiazek-i-malzenstwo-czy-sie-oplaca.md)
 - [11. Czerwone linie IT](pl/11-czerwone-linie-it.md)
+- [12. Przedsiębiorczość i biznes: nie płać za cudze błędy majątkiem osobistym](pl/12-przedsiebiorczosc-i-biznes.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
