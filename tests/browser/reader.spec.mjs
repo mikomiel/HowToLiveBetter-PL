@@ -213,7 +213,25 @@ test('chapter 13 exposes emergency advice through search, filter and permalink',
   await expect(page.locator('#porada-13-1 .practical')).toContainText('AED');
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13']) {
+test('chapter 15 exposes housing advice through search, filter and permalink', async ({ page }) => {
+  test.setTimeout(90_000);
+  const c = chapters.find(c => c.id === '15');
+  await ready(page, '/#porada-15-1');
+  await expect(page.locator('#porada-15-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('15');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('kaucja');
+  await expect(page.locator('#porada-15-6')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 15.6', exact: true }).click();
+  await expect(page.locator('#porada-15-6 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-15-6 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('15');
+  await page.getByLabel('Szukaj w polskich poradach').fill('powierniczy');
+  await expect(page.locator('#porada-15-10 .practical')).toContainText('powierniczy');
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
