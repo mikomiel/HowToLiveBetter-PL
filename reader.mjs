@@ -15,6 +15,7 @@ export const CHAPTERS = [
   { id: '12', path: 'book/pl/12-przedsiebiorczosc-i-biznes.md' },
   { id: '13', path: 'book/pl/13-sytuacje-nagle.md' },
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
+  { id: '15', path: 'book/pl/15-wynajem-i-kupno-mieszkania.md' },
 ];
 export const FIELDS = [
   'Status', 'Koszt', 'W praktyce', 'Korzyść i dowody', 'Ocena dowodów',
