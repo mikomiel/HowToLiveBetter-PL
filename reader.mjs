@@ -10,6 +10,7 @@ export const CHAPTERS = [
   { id: '07', path: 'book/pl/07-jak-zyc-gdy-nie-masz-pieniedzy.md' },
   { id: '08', path: 'book/pl/08-nie-pakuj-sie-w-tarapaty.md' },
   { id: '09', path: 'book/pl/09-czerwone-linie-prawa.md' },
+  { id: '10', path: 'book/pl/10-zwiazek-i-malzenstwo-czy-sie-oplaca.md' },
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
 ];
 export const FIELDS = [
