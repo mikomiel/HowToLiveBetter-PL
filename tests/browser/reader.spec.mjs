@@ -224,7 +224,25 @@ test('withdrawn chapter 15 cannot reappear through a stale permalink, filter or 
   await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15']) {
+test('chapter 16 keeps medical limits visible through filters, search and permalinks', async ({ page }) => {
+  test.setTimeout(90_000);
+  const c = chapters.find(c => c.id === '16');
+  await ready(page, '/#porada-16-8');
+  await expect(page.locator('#porada-16-8 h3')).toBeFocused();
+  await expect(page.locator('#porada-16-8 .practical')).toContainText('ograniczenie płynów');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('16');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('EKUZ');
+  await expect(page.locator('#porada-16-2')).toBeVisible();
+  await expect(page.locator('#porada-16-2 .practical')).toContainText('Nie gwarantuje bezpłatności');
+  await page.getByRole('link', { name: 'Stały link do porady 16.2', exact: true }).click();
+  await expect(page.locator('#porada-16-2 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-16-2 h3')).toBeFocused();
+  await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15', '16']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
