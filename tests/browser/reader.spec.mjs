@@ -112,6 +112,7 @@ for (const id of ['01', '02', '05']) {
 }
 
 test('renders actual chapters, all verified provenance and no external requests', async ({ page, baseURL }) => {
+  test.setTimeout(90_000); // iterates and opens every published card; card count grows with each chapter
   const external = [], requests = [], errors = [];
   page.on('request', request => {
     requests.push(request.url());
@@ -332,6 +333,7 @@ test('small screens keep controls, long evidence and navigation within the viewp
 });
 
 test('card permalinks expose stable locations and navigation tracks visible targets', async ({ page }) => {
+  test.setTimeout(60_000); // one assertion per published card; card count grows with each chapter
   await ready(page);
   for (const e of entries) {
     await expect(page.locator('#' + e.id).getByRole('link', { name: 'Stały link do porady ' + e.number, exact: true })).toHaveAttribute('href', '#' + e.id);
