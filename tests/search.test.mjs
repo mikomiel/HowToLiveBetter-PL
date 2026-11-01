@@ -40,7 +40,7 @@ test('ranking prefers the title, then the action text, and a limit is honoured',
   assert.ok(rows[0].score >= rows[1].score && rows[1].score >= rows[2].score);
   assert.ok(rows[0].score >= 3, 'a word in the title scores 3');
   assert.equal(searchAdvice(chapters, 'sen', { limit: 1 }).length, 1);
-  assert.deepEqual(searchAdvice(chapters, 'bitcoin kryptowaluty'), []);
+  assert.equal(numbers('bitcoin kryptowaluty')[0], '05.45', 'crypto caution is searchable');
 });
 
 test('a query without a usable word is an error, not an empty answer', () => {
