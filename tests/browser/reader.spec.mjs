@@ -109,7 +109,24 @@ test('chapter 07 exposes social-security advice through search, filter and perma
   await expect(page.locator('#porada-7-23 .practical')).toContainText('75c');
 });
 
-for (const id of ['01', '02', '05', '06', '07']) {
+test('chapter 08 exposes legal-safety advice through search, filter and permalink', async ({ page }) => {
+  const c = chapters.find(c => c.id === '08');
+  await ready(page, '/#porada-8-1');
+  await expect(page.locator('#porada-8-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('08');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('wypadek drogowy');
+  await expect(page.locator('#porada-8-1')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 08.1', exact: true }).click();
+  await expect(page.locator('#porada-8-1 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-8-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('08');
+  await page.getByLabel('Szukaj w polskich poradach').fill('przedawnienie');
+  await expect(page.locator('#porada-8-19 .practical')).toContainText('po 6 latach');
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
