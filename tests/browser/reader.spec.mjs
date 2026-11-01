@@ -177,7 +177,25 @@ test('chapter 11 exposes IT red-line advice through search, filter and permalink
   await expect(page.locator('#porada-11-2 .practical')).toContainText('art. 269b');
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11']) {
+test('chapter 12 exposes business red-line advice through search, filter and permalink', async ({ page }) => {
+  test.setTimeout(90_000);
+  const c = chapters.find(c => c.id === '12');
+  await ready(page, '/#porada-12-1');
+  await expect(page.locator('#porada-12-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('12');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('zadatek');
+  await expect(page.locator('#porada-12-15')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 12.15', exact: true }).click();
+  await expect(page.locator('#porada-12-15 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-12-15 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('12');
+  await page.getByLabel('Szukaj w polskich poradach').fill('franczyz');
+  await expect(page.locator('#porada-12-5 .practical')).toContainText('KC art. 750');
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
