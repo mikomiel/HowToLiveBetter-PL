@@ -242,7 +242,25 @@ test('chapter 16 keeps medical limits visible through filters, search and permal
   await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15', '16']) {
+test('chapter 17 publishes only checked advice and keeps support limits in the reader', async ({ page }) => {
+  test.setTimeout(90_000);
+  const c = chapters.find(c => c.id === '17');
+  await ready(page, '/#porada-17-8');
+  await expect(page.locator('#porada-17-8 h3')).toBeFocused();
+  await expect(page.locator('#porada-17-8 .practical')).toContainText('stanu chorego');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('17');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('Barthel');
+  await expect(page.locator('#porada-17-7')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 17.7', exact: true }).click();
+  await expect(page.locator('#porada-17-7 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-17-7 h3')).toBeFocused();
+  await expect(page.locator('#porada-17-1')).toHaveCount(0);
+  await expect(page.locator('#porada-17-12')).toHaveCount(0);
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
