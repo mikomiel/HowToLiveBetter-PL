@@ -31,7 +31,7 @@ test('the published folder holds the reader, the chapters of CHAPTERS and the tw
   assert.deepEqual(files.map(f => f.path).sort(), [...FIXED_FILES, ...CHAPTERS.map(c => c.path)].sort());
   assert.deepEqual(siteFiles(), files.map(f => f.path));
   assert.deepEqual(FIXED_FILES.slice().sort(), ['LICENSE', 'LICENSE-CODE', 'index.html', 'reader.mjs']);
-  assert.deepEqual(CHAPTERS.map(c => c.id), ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14'], 'chapters 01, 02, 05, 06, 07, 08, 09, 10, 11, 12 and 13 are within the agreed scope; further additions still need the owner');
+  assert.deepEqual(CHAPTERS.map(c => c.id), ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15'], 'chapters 01, 02, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14 and 15 are within the agreed scope; further additions still need the owner');
   for (const { path } of files) assert.ok(readFileSync(join(tmp, 'site', path)).equals(readFileSync(resolve(root, path))), `${path} is byte for byte the repository file`);
   for (const forbidden of [/^ads\//, /^docs\//, /^audit\//, /^tools\//, /^tests\//, /^skills\//, /^\.claude\//, /^\.github\//, /selfcheck/, /og\.png/, /updates\.json/, /robots\.txt/, /sitemap/, /^README\.md$/, /^AGENTS\.md$/, /\p{Script=Han}/u, /^book\/\d\d-/, /^book\/README/]) {
     assert.ok(files.every(f => !forbidden.test(f.path)), `${forbidden} must not be published`);
@@ -214,7 +214,7 @@ test('a CHAPTERS entry that is not a Polish chapter file stops the build before 
     assert.equal(existsSync(join(tmp, 'deep')), false, `nothing is written for ${path}`);
   }
   assert.equal(readFileSync(join(tmp, 'escape.txt'), 'utf8'), 'ORIGINAL');
-  assert.deepEqual(CHAPTERS.map(c => c.id), ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14']);
+  assert.deepEqual(CHAPTERS.map(c => c.id), ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15']);
   assert.deepEqual(FIXED_FILES, ['index.html', 'reader.mjs', 'LICENSE', 'LICENSE-CODE']);
 }));
 
