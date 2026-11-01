@@ -160,7 +160,24 @@ test('chapter 10 exposes relationship and marriage advice through search, filter
   await expect(page.locator('#porada-10-23 .practical')).toContainText('art. 135');
 });
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10']) {
+test('chapter 11 exposes IT red-line advice through search, filter and permalink', async ({ page }) => {
+  const c = chapters.find(c => c.id === '11');
+  await ready(page, '/#porada-11-1');
+  await expect(page.locator('#porada-11-1 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('11');
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('DDoS');
+  await expect(page.locator('#porada-11-21')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 11.21', exact: true }).click();
+  await expect(page.locator('#porada-11-21 h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-11-21 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('11');
+  await page.getByLabel('Szukaj w polskich poradach').fill('cheatów');
+  await expect(page.locator('#porada-11-2 .practical')).toContainText('art. 269b');
+});
+
+for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11']) {
   test('chapter ' + id + ' is required: a missing or malformed chapter fails the full collection', async ({ page }) => {
     const c = chapters.find(c => c.id === id);
     for (const failure of [
