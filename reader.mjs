@@ -8,6 +8,7 @@ export const CHAPTERS = [
   { id: '05', path: 'book/pl/05-nie-marnuj-pieniedzy.md' },
   { id: '06', path: 'book/pl/06-czarna-lista.md' },
   { id: '07', path: 'book/pl/07-jak-zyc-gdy-nie-masz-pieniedzy.md' },
+  { id: '08', path: 'book/pl/08-nie-pakuj-sie-w-tarapaty.md' },
   { id: '14', path: 'book/pl/14-bezpieczenstwo-kont-i-danych.md' },
 ];
 export const FIELDS = [
