@@ -18,5 +18,6 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [12. Przedsiębiorczość i biznes: nie płać za cudze błędy majątkiem osobistym](pl/12-przedsiebiorczosc-i-biznes.md)
 - [13. Sytuacje nagłe: co robić najpierw](pl/13-sytuacje-nagle.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
+- [15. Wynajem i kupno mieszkania: kaucja, pośrednicy, kredyt i odbiór lokalu](pl/15-wynajem-i-kupno-mieszkania.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
