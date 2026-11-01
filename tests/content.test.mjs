@@ -12,7 +12,7 @@ const entries = chapters.flatMap(c => c.entries);
 const advice = published(entries);
 const time = chapters.find(c => c.id === '04');
 // Consent guard: AGENTS.md limits the edition to these chapters. Change this list only with the owner's agreement.
-const AGREED_SCOPE = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '14'];
+const AGREED_SCOPE = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '14'];
 // Upstream file of a chapter, found by its number prefix, so scope changes do not require editing paths here.
 const sourcePaths = Object.fromEntries(CHAPTERS.map(({ id }) => {
   const file = readdirSync(resolve(root, 'book')).find(name => name.startsWith(id + '-') && name.endsWith('.md'));
