@@ -356,6 +356,42 @@ test('chapter navigation and chapter deep links use actual titles and counts', a
   await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
 });
 
+test('work chapter supports search, filtering, permalinks and a reference to a hidden target', async ({ page }) => {
+  await ready(page, '/#porada-19-14');
+  await expect(page.locator('#porada-19-14 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('19');
+  await expect(visibleCards(page)).toHaveCount(23);
+  await page.getByLabel('Szukaj w polskich poradach').fill('uszczerbku');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-19-14')).toContainText('po zakończeniu leczenia i rehabilitacji');
+  await page.reload();
+  await expect(page.locator('#porada-19-14 h3')).toBeFocused();
+  await ready(page, '/#porada-19-5');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('19');
+  await page.getByLabel('Szukaj w polskich poradach').fill('trzymiesięcznego');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-19-6')).toBeHidden();
+  await page.locator('#porada-19-5 .practical').getByRole('link', { name: '19.6', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-19-6$/);
+  await expect(page.locator('#porada-19-6 h3')).toBeFocused();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
+test('pending tax advice is absent and malformed work instructions fail the whole collection closed', async ({ page }) => {
+  await ready(page, '/#porada-19-18');
+  await expect(page.locator('#porada-19-18')).toHaveCount(0);
+  await expect(page.locator('#nav-list a[href="#porada-19-18"]')).toHaveCount(0);
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('19');
+  await expect(visibleCards(page)).toHaveCount(23);
+  const c = chapters.find(c => c.id === '19');
+  await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace(/- W praktyce: [^\n]+\n/, '') }));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+  await expect(page.locator('#status')).toContainText('W praktyce');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+});
+
 test('old chapter-04 deep links and cross-chapter references survive filters', async ({ page }) => {
   await ready(page, '/#porada-4-18');
   await expect(page.locator('#porada-4-18 h3')).toBeFocused();
