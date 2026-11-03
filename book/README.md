@@ -18,7 +18,7 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [12. Przedsiębiorczość i biznes: nie płać za cudze błędy majątkiem osobistym](pl/12-przedsiebiorczosc-i-biznes.md)
 - [13. Sytuacje nagłe: co robić najpierw](pl/13-sytuacje-nagle.md)
 - [14. Bezpieczeństwo kont i danych](pl/14-bezpieczenstwo-kont-i-danych.md)
-- [15. Wynajem i kupno mieszkania — rekordy do ponownej weryfikacji](pl/15-wynajem-i-kupno-mieszkania.md)
+- [15. Wynajem i kupno mieszkania](pl/15-wynajem-i-kupno-mieszkania.md)
 - [16. Życie z chorobą przewlekłą](pl/16-zycie-z-choroba-przewlekla.md)
 - [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](pl/17-senior-w-rodzinie.md)
 - [20. Opieka nad noworodkiem i niemowlęciem](pl/20-opieka-nad-noworodkiem-i-niemowleciem.md)
