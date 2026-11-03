@@ -359,6 +359,44 @@ test('chapter navigation and chapter deep links use actual titles and counts', a
   await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
 });
 
+test('parenthood scopes support search, chapter filtering and local references without a fertility promise', async ({ page }) => {
+  await ready(page, '/#porada-18-7');
+  await expect(page.locator('#porada-18-7 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('18');
+  await expect(visibleCards(page)).toHaveCount(7);
+  await page.getByLabel('Szukaj w polskich poradach').fill('HFEA');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-18-7')).toContainText('na przeniesiony zarodek');
+  await expect(page.locator('#porada-18-7')).toContainText('są wstępne');
+  await page.reload();
+  await expect(page.locator('#porada-18-7 h3')).toBeFocused();
+  await ready(page, '/#porada-18-5');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('18');
+  await page.getByLabel('Szukaj w polskich poradach').fill('wiralowy');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-18-1')).toBeHidden();
+  await page.locator('#porada-18-5 .practical').getByRole('link', { name: '18.1', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-18-1$/);
+  await expect(page.locator('#porada-18-1 h3')).toBeFocused();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
+test('unknown status or missing instructions in chapter 18 fail the whole collection closed', async ({ page }) => {
+  const c = chapters.find(c => c.id === '18');
+  for (const [body, message] of [
+    [c.markdown.replace('- Status: verified', '- Status: ready'), 'Nieprawidłowy stan'],
+    [c.markdown.replace(/- W praktyce: [^\n]+\n/, ''), 'W praktyce'],
+  ]) {
+    await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body }));
+    await page.goto('/');
+    await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+    await expect(page.locator('#status')).toContainText(message);
+    await expect(page.locator('article')).toHaveCount(0);
+    await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+    await page.unroute(routeFor(c));
+  }
+});
+
 test('old chapter-04 deep links and cross-chapter references survive filters', async ({ page }) => {
   await ready(page, '/#porada-4-18');
   await expect(page.locator('#porada-4-18 h3')).toBeFocused();
