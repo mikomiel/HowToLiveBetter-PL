@@ -35,6 +35,8 @@ Rozdział 17 dodaje 11 zawężonych porad o wsparciu seniora bez odbierania samo
 
 Podstawa adaptacji: commit upstream [e2605d3e2242bd6216c9255192b8a8957a08c55a](https://github.com/eternity4719/HowToLiveBetter/tree/e2605d3e2242bd6216c9255192b8a8957a08c55a). Rozdziały 03 i 14 oceniono początkowo 2026-10-28, rozdziały 01, 02 i 05 — 2026-10-31, a rozdziały 06, 07, 08, 09, 10, 11, 12, 13, 15 i 16 — 2026-11-01. Rozdział 17 oceniono 2026-11-02. Daty późniejszych korekt i zakresy sprawdzenia pozostają przy poszczególnych poradach. Historyczny run7 nie obejmuje rozdziałów 01, 02, 05, 06, 07, 08, 09, 10, 11, 12, 13, 15, 16 i 17.
 
+**Korekta 2026-11-03:** [porada 11.12 o zakazie konkurencji](book/pl/11-czerwone-linie-it.md#porada-11-12) usuwa niepotwierdzony ogólny limit czasu i instrukcję rozwiązania całej umowy przy braku wpłat. Opis ogranicza się do odczytanych przepisów; źródło, zmiana oceny na C i granice weryfikacji są przy poradzie. To nie jest ponowne poświadczenie pozostałych pozycji rozdziału. Szczegóły zgłoszenia: [issue #33](https://github.com/mikomiel/HowToLiveBetter-PL/issues/33).
+
 ## Co pozostało poza czytnikiem
 
 Każda nowa pozycja ma oryginalny numer i decyzję. Nie zmieniamy numeracji, aby zapełnić luki.
