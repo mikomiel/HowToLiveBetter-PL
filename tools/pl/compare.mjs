@@ -68,22 +68,24 @@ if (isMain(import.meta.url)) {
       const rows = loadAll(root).flatMap(c => published(c.entries)).map(e => ({ item: e.number, title: e.title, ...riskOf(e) }));
       if (args[0]) { const one = rows.find(r => r.item === normaliseItem(args[0])); if (!one) throw new Error(`No published item ${args[0]}`); console.log(JSON.stringify(one, null, 1)); }
       else { console.log(JSON.stringify(rows, null, 1)); console.error(`${rows.filter(r => r.high).length} of ${rows.length} published items are high-stakes (two verifier runs).`); }
-      process.exit(0);
+      // Let queued stdout/stderr writes drain instead of forcing an exit.
+      process.exitCode = 0;
+    } else {
+      const cache = resolve(root, flag('--cache', true) ?? '.cache/sources');
+      if (args.length !== 2) throw new Error('Usage: node tools/pl/compare.mjs <verifier-report-1.json> <verifier-report-2.json> [--cache dir]\n       node tools/pl/compare.mjs --risk [N.M]');
+      const [a, b] = args.map(file => JSON.parse(readFileSync(file, 'utf8')));
+      if (a.item !== b.item) throw new Error(`The reports are for different items: ${a.item} and ${b.item}`);
+      const packet = buildPacket(root, a.item, 'verifier', cache);
+      for (const [name, report] of [[args[0], a], [args[1], b]]) {
+        const result = checkReport(report, packet, cache);
+        if (!result.ok) throw new Error(`${name} does not pass quotes.mjs (${result.failures.length} failures). Compare only reports that pass.`);
+      }
+      const result = compareReports(a, b);
+      console.log(JSON.stringify(result, null, 1));
+      process.exitCode = result.agree ? 0 : 1;
     }
-    const cache = resolve(root, flag('--cache', true) ?? '.cache/sources');
-    if (args.length !== 2) throw new Error('Usage: node tools/pl/compare.mjs <verifier-report-1.json> <verifier-report-2.json> [--cache dir]\n       node tools/pl/compare.mjs --risk [N.M]');
-    const [a, b] = args.map(file => JSON.parse(readFileSync(file, 'utf8')));
-    if (a.item !== b.item) throw new Error(`The reports are for different items: ${a.item} and ${b.item}`);
-    const packet = buildPacket(root, a.item, 'verifier', cache);
-    for (const [name, report] of [[args[0], a], [args[1], b]]) {
-      const result = checkReport(report, packet, cache);
-      if (!result.ok) throw new Error(`${name} does not pass quotes.mjs (${result.failures.length} failures). Compare only reports that pass.`);
-    }
-    const result = compareReports(a, b);
-    console.log(JSON.stringify(result, null, 1));
-    process.exit(result.agree ? 0 : 1);
   } catch (error) {
     console.error(error.message);
-    process.exit(2);
+    process.exitCode = 2;
   }
 }
