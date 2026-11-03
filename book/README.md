@@ -21,6 +21,7 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [15. Wynajem i kupno mieszkania](pl/15-wynajem-i-kupno-mieszkania.md)
 - [16. Życie z chorobą przewlekłą](pl/16-zycie-z-choroba-przewlekla.md)
 - [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](pl/17-senior-w-rodzinie.md)
+- [18. Rodzicielstwo: decyzje, koszty i wsparcie](pl/18-rodzicielstwo-decyzje-koszty-i-wsparcie.md)
 - [20. Opieka nad noworodkiem i niemowlęciem](pl/20-opieka-nad-noworodkiem-i-niemowleciem.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.

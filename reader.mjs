@@ -18,6 +18,7 @@ export const CHAPTERS = [
   { id: '15', path: 'book/pl/15-wynajem-i-kupno-mieszkania.md' },
   { id: '16', path: 'book/pl/16-zycie-z-choroba-przewlekla.md' },
   { id: '17', path: 'book/pl/17-senior-w-rodzinie.md' },
+  { id: '18', path: 'book/pl/18-rodzicielstwo-decyzje-koszty-i-wsparcie.md' },
   { id: '20', path: 'book/pl/20-opieka-nad-noworodkiem-i-niemowleciem.md' },
 ];
 export const FIELDS = [
