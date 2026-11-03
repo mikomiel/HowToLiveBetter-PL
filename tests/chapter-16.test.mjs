@@ -80,10 +80,7 @@ test('all chapter 16 advice is discoverable and all chapter links resolve to pub
   }
 });
 
-test('new chapter 16 does not restore housing records or introduce foreign emergency numbers', () => {
-  const housing = chapters.find(c => c.id === '15');
-  assert.equal(published(housing.entries).length, 0);
-  assert.ok(housing.entries.every(e => e.fields.Status === 'needs_verification'));
+test('chapter 16 retains its own coverage and does not introduce foreign emergency numbers', () => {
   assert.doesNotMatch(text, /96110|12356|12315|12333|12378|\+86/);
   assert.match(read('README.md'), /\| \[16\. .*\| 14 \| 14 \|/);
 });

@@ -213,15 +213,19 @@ test('chapter 13 exposes emergency advice through search, filter and permalink',
   await expect(page.locator('#porada-13-1 .practical')).toContainText('AED');
 });
 
-test('withdrawn chapter 15 cannot reappear through a stale permalink, filter or search', async ({ page }) => {
+test('reassessed chapter 15 exposes its narrowed advice through filters, search and permalinks', async ({ page }) => {
+  const c = chapters.find(c => c.id === '15');
   await ready(page, '/#porada-15-1');
-  await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
+  await expect(page.locator('#porada-15-1 h3')).toBeFocused();
+  await expect(page.locator('#porada-15-1 .practical')).toContainText('dwunastokrotności');
   await page.getByLabel('Rozdział', { exact: true }).selectOption('15');
-  await expect(visibleCards(page)).toHaveCount(0);
-  await page.getByLabel('Szukaj w polskich poradach').fill('kaucja');
-  await expect(visibleCards(page)).toHaveCount(0);
+  await expect(visibleCards(page)).toHaveCount(published(c.entries).length);
+  await page.getByLabel('Szukaj w polskich poradach').fill('depozyt');
+  await expect(page.locator('#porada-15-7')).toBeVisible();
+  await page.getByRole('link', { name: 'Stały link do porady 15.7', exact: true }).click();
+  await expect(page.locator('#porada-15-7 h3')).toBeFocused();
   await page.reload();
-  await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
+  await expect(page.locator('#porada-15-7 h3')).toBeFocused();
 });
 
 test('chapter 16 keeps medical limits visible through filters, search and permalinks', async ({ page }) => {
@@ -239,7 +243,6 @@ test('chapter 16 keeps medical limits visible through filters, search and permal
   await expect(page.locator('#porada-16-2 h3')).toBeFocused();
   await page.reload();
   await expect(page.locator('#porada-16-2 h3')).toBeFocused();
-  await expect(page.locator('article[id^="porada-15-"]')).toHaveCount(0);
 });
 
 test('chapter 17 publishes only checked advice and keeps support limits in the reader', async ({ page }) => {

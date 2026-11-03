@@ -62,7 +62,6 @@ test('published senior advice is searchable while both pending records remain ex
   for (const query of ['reprezentacja', 'opiekuńczego', 'rodzicem']) {
     assert.ok(searchAdvice(chapters, query, { limit: 1000 }).every(r => !['17.1', '17.12'].includes(r.entry.number)), query);
   }
-  assert.equal(published(chapters.find(c => c.id === '15').entries).length, 0);
 });
 
 test('scope and review limitations are explicit and README totals do not count pending advice', () => {
