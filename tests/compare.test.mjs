@@ -92,3 +92,15 @@ test('the risk listing covers every published item and names one by number', () 
   assert.equal(JSON.parse(run('4.4').stdout).high, false);
   assert.equal(run('99.9').status, 2);
 });
+
+test('the CLI keeps queued stdout writes before exiting', () => {
+  // Model a pipe that accepts a write now but delivers it on the next turn.
+  const deferStdout = 'const write = process.stdout.write.bind(process.stdout); process.stdout.write = (...args) => { setImmediate(() => write(...args)); return true; };';
+  const result = spawnSync(process.execPath, ['--import', `data:text/javascript,${encodeURIComponent(deferStdout)}`, join(root, 'tools/pl/compare.mjs'), '--risk', '14.7'], { cwd: root, encoding: 'utf8', timeout: 60000, maxBuffer: 8 * 1024 * 1024 });
+  assert.equal(result.error, undefined);
+  assert.equal(result.status, 0, result.stderr);
+  const one = JSON.parse(result.stdout);
+  assert.equal(one.item, '14.7');
+  assert.equal(one.high, true);
+  assert.ok(one.domains.includes('law'));
+});
