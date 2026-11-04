@@ -23,5 +23,6 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](pl/17-senior-w-rodzinie.md)
 - [18. Rodzicielstwo: decyzje, koszty i wsparcie](pl/18-rodzicielstwo-decyzje-koszty-i-wsparcie.md)
 - [19. Praca, rozwiązanie umowy i wypadki](pl/19-praca-rozwiazanie-umowy-i-wypadki.md)
+- [20. Opieka nad noworodkiem i niemowlęciem](pl/20-opieka-nad-noworodkiem-i-niemowleciem.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
