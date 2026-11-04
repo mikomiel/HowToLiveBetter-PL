@@ -20,6 +20,7 @@ export const CHAPTERS = [
   { id: '17', path: 'book/pl/17-senior-w-rodzinie.md' },
   { id: '18', path: 'book/pl/18-rodzicielstwo-decyzje-koszty-i-wsparcie.md' },
   { id: '19', path: 'book/pl/19-praca-rozwiazanie-umowy-i-wypadki.md' },
+  { id: '20', path: 'book/pl/20-opieka-nad-noworodkiem-i-niemowleciem.md' },
 ];
 export const FIELDS = [
   'Status', 'Koszt', 'W praktyce', 'Korzyść i dowody', 'Ocena dowodów',

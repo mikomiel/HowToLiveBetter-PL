@@ -38,6 +38,46 @@ test('corrected non-compete advice keeps its permalink, search and disclosed sou
   await expect(page.locator('#porada-11-12 .practical')).toContainText('25% wynagrodzenia');
 });
 
+test('infant chapter supports search, clinical source limits, permalinks and a hidden cross-reference target', async ({ page }) => {
+  await ready(page, '/#porada-20-12');
+  await expect(page.locator('#porada-20-12 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('20');
+  await expect(visibleCards(page)).toHaveCount(16);
+  await page.getByLabel('Szukaj w polskich poradach').fill('LEAP');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-20-12')).toContainText('640 niemowląt');
+  await page.locator('#porada-20-12 summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#porada-20-12 details')).toHaveAttribute('open', '');
+  await expect(page.locator('#porada-20-12')).toContainText('nie badał wszystkich niemowląt');
+  await page.reload();
+  await expect(page.locator('#porada-20-12 h3')).toBeFocused();
+  await ready(page, '/#porada-20-11');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('20');
+  await page.getByLabel('Szukaj w polskich poradach').fill('nieznanej historii');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-20-1')).toBeHidden();
+  await page.locator('#porada-20-11 .practical').getByRole('link', { name: '20.1', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-20-1$/);
+  await expect(page.locator('#porada-20-1 h3')).toBeFocused();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
+test('unverified formula is absent and malformed infant data never render a partial collection', async ({ page }) => {
+  await ready(page, '/#porada-20-5');
+  await expect(page.locator('#porada-20-5')).toHaveCount(0);
+  await expect(page.locator('#nav-list a[href="#porada-20-5"]')).toHaveCount(0);
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('20');
+  await expect(visibleCards(page)).toHaveCount(16);
+  const c = chapters.find(c => c.id === '20');
+  await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace(/^- W praktyce: .+\n/m, '') }));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+  await expect(page.locator('#status')).toContainText('W praktyce');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+});
+
 test('chapter 01 is searchable, keyboard-accessible and keeps pending records out of the reader', async ({ page }) => {
   const c = chapters.find(c => c.id === '01');
   await ready(page, '/#porada-1-18');
