@@ -36,21 +36,38 @@ test('search discovers chapter 11 advice by plain Polish terms', () => {
   }
 });
 
-test('Polish law replaces the original one; grades match the original', () => {
+test('Polish law replaces the original one; the non-compete correction discloses its changed grade', () => {
   assert.match(f(2)['Korzyść i dowody'], /art\. 269b/);
   assert.match(f(6)['Korzyść i dowody'], /art\. 268a/);
   assert.match(f(9)['Korzyść i dowody'], /art\. 269c/);
-  assert.match(f(12)['Korzyść i dowody'], /art\. 101/);
+  assert.match(f(12)['Korzyść i dowody'], /art\. 101/i);
   assert.match(f(15)['Korzyść i dowody'], /RODO/);
   assert.match(f(21)['Korzyść i dowody'], /art\. 269a/);
   const grades = chapter.entries.map(e => e.fields['Ocena dowodów'][0]);
-  assert.deepEqual(grades, ['C','A','A','A','A','A','A','A','A','A','B','A','A','B','B','A','B','A','C','A','A']);
+  assert.deepEqual(grades, ['C','A','A','A','A','A','A','A','A','A','B','C','A','B','B','A','B','A','C','A','A']);
   const plFields = JSON.stringify(chapter.entries.map(e => [e.fields['W praktyce'], e.fields['Korzyść i dowody'], e.fields.Ograniczenia].join('\n')));
   assert.doesNotMatch(plFields, /110|96110|12356|12315|12333|\+86/);
   assert.ok(citedInputs(entry(2)).some(u => u.includes('lexlege')));
   assert.ok(citedInputs(entry(9)).some(u => u.includes('lexlege')));
   assert.ok(citedInputs(entry(15)).some(u => u.includes('eur-lex')));
   assert.ok(citedInputs(entry(21)).some(u => u.includes('lexlege')));
+});
+
+test('non-compete correction states the statutory minimum and does not promise automatic contract termination', () => {
+  const practical = f(12)['W praktyce'];
+  assert.match(practical, /ustala minimum: 25% wynagrodzenia/);
+  assert.match(practical, /przez okres odpowiadający okresowi obowiązywania zakazu/);
+  assert.match(f(12)['Korzyść i dowody'], /art\. 101³/i);
+  assert.match(f(12)['Korzyść i dowody'], /nieważności/);
+  assert.match(f(12)['Korzyść i dowody'], /ustanie zakazu nie jest tym samym co rozliczenie całej umowy/);
+  assert.doesNotMatch(practical + ' ' + entry(12).title, /2 lata|dwóch lat|może rozwiązać umowę|automatycznie rozwią/);
+  assert.match(f(12)['Ocena dowodów'], /^C [—-] /);
+  assert.match(f(12)['Zmiany w adaptacji'], /Oryginalne A zastąpiono C\./);
+  assert.match(f(12).Źródła, /api\.sejm\.gov\.pl\/eli\/acts\/DU\/2026\/1245\/text\/T\/D20261245L\.pdf#page=43/);
+  assert.doesNotMatch(f(12).Źródła, /lexlege|sn\.pl/);
+  assert.match(f(12).Oryginał, /#L120-L128\)/);
+  assert.match(f(12).Weryfikacja, /2026-11-03/);
+  assert.match(f(12).Ograniczenia, /nie udało się odczytać pełnego wyroku SN/);
 });
 
 test('safety: emergency numbers only from the allowlist, no CN numbers leak', () => {
