@@ -18,6 +18,26 @@ async function ready(page, suffix = '/') {
   await expect(page.locator('#status')).toContainText(`z ${count} opracowanych`);
 }
 
+test('corrected non-compete advice keeps its permalink, search and disclosed source limits', async ({ page }) => {
+  await ready(page, '/#porada-11-12');
+  await expect(page.locator('#porada-11-12 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('11');
+  await expect(visibleCards(page)).toHaveCount(21);
+  await page.getByLabel('Szukaj w polskich poradach').fill('25%');
+  const card = page.locator('#porada-11-12');
+  await expect(card).toBeVisible();
+  await expect(card.locator('.practical')).toContainText('25% wynagrodzenia');
+  await expect(card.locator('.practical')).not.toContainText('Maksymalny czas');
+  await card.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(card.locator('details')).toHaveAttribute('open', '');
+  await expect(card).toContainText('C — opis odczytanych przepisów');
+  await expect(card).toContainText('nie udało się odczytać pełnego wyroku SN');
+  await page.reload();
+  await expect(page.locator('#porada-11-12 h3')).toBeFocused();
+  await expect(page.locator('#porada-11-12 .practical')).toContainText('25% wynagrodzenia');
+});
+
 test('chapter 01 is searchable, keyboard-accessible and keeps pending records out of the reader', async ({ page }) => {
   const c = chapters.find(c => c.id === '01');
   await ready(page, '/#porada-1-18');
