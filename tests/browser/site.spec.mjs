@@ -65,6 +65,27 @@ test('the built site loads every verified advice under the project path, with no
   for (const path of ['LICENSE', 'LICENSE-CODE']) expect((await page.request.get(origin + PREFIX + path)).status(), path).toBe(200);
 });
 
+test('publication notice is reachable and local search sends no request or browser-storage write', async ({ page }) => {
+  await page.goto(origin + PREFIX);
+  await expect(page.locator('#status')).toContainText(`z ${count} opracowanych`);
+  await page.getByRole('link', { name: 'Wydanie, kontakt i prywatność', exact: true }).click();
+  await expect(page).toHaveURL(origin + PREFIX + '#publikacja');
+  const notice = page.locator('#publikacja');
+  await expect(notice).toContainText('mikomiel');
+  await expect(notice.getByRole('link', { name: 'GitHub Issues', exact: true })).toHaveAttribute('href', 'https://github.com/mikomiel/HowToLiveBetter-PL/issues');
+  await expect(notice).toContainText('adresy IP');
+  const requests = [];
+  page.on('request', request => requests.push(request.url()));
+  await page.getByLabel('Szukaj w polskich poradach').fill('prywatnosc-tylko-lokalna');
+  await expect(page.locator('article:visible')).toHaveCount(0);
+  await page.getByLabel('Szukaj w polskich poradach').press('Enter');
+  await page.getByRole('button', { name: 'Wyczyść filtry', exact: true }).click();
+  await expect(page.locator('article:visible')).toHaveCount(count);
+  expect(requests).toEqual([]);
+  expect(await page.context().cookies()).toEqual([]);
+  expect(await page.evaluate(() => ({ local: Object.keys(localStorage), session: Object.keys(sessionStorage) }))).toEqual({ local: [], session: [] });
+});
+
 test('nothing outside the reader, the chapters and the licences is reachable on the built site', async ({ page }) => {
   for (const path of ['ads/mcyyy.webp', 'ads/wechat-reward.png', 'selfcheck.html', 'docs/README.md', 'audit/README.md', 'tools/pl/fetch.mjs', 'README.md', 'book/README.md', 'book/03-不要浪费精力.md', 'og.png', 'updates.json', 'robots.txt', '.git/config']) {
     expect((await page.request.get(origin + PREFIX + path)).status(), path).toBe(404);

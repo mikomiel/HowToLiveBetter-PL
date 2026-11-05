@@ -172,7 +172,7 @@ test('active Polish metadata has no upstream site, ads or publication address', 
   const html = read('index.html');
   assert.match(html, /<html lang="pl">/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|ads\/|og\.png|selfcheck\.html|eternity4719\.github\.io|\p{Script=Han}/u);
-  assert.match(html, /https:\/\/github\.com\/mikomiel\/HowToLiveBetter-PL\/pulls/);
+  assert.match(html, /https:\/\/github\.com\/mikomiel\/HowToLiveBetter-PL\/issues/);
   assert.match(read('robots.txt'), /Disallow: \/\n/);
   assert.doesNotMatch(read('robots.txt'), /Sitemap:|github\.io/i);
   assert.equal(existsSync(resolve(root, 'sitemap.xml')), false);
