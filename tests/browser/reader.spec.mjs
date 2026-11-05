@@ -56,6 +56,44 @@ test('malformed relaxation data fail the whole collection and pending advice rem
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
 });
 
+test('education supports search, source limits, keyboard details and hidden-target navigation', async ({ page }) => {
+  await ready(page, '/#porada-23-18');
+  await expect(page.locator('#porada-23-18 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('23');
+  await expect(visibleCards(page)).toHaveCount(24);
+  await page.getByLabel('Szukaj w polskich poradach').fill('wzrokowca');
+  await expect(visibleCards(page)).toHaveCount(1);
+  const card = page.locator('#porada-23-18');
+  await card.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(card.locator('details')).toHaveAttribute('open', '');
+  await expect(card).toContainText('B — przegląd bez jednej wspólnej wielkości efektu');
+  await expect(card).toContainText('potrzeb związanych z niepełnosprawnością');
+  await page.reload();
+  await expect(page.locator('#porada-23-18 h3')).toBeFocused();
+  await ready(page, '/#porada-23-11');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('23');
+  await page.getByLabel('Szukaj w polskich poradach').fill('tytuł reklamowy');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-23-23')).toBeHidden();
+  await page.locator('#porada-23-11 .practical').getByRole('link', { name: 'porada 23.23', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-23-23$/);
+  await expect(page.locator('#porada-23-23 h3')).toBeFocused();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
+test('pending professional-title advice is absent and status-only recertification fails the collection', async ({ page }) => {
+  await ready(page, '/#porada-23-20');
+  await expect(page.locator('#porada-23-20')).toHaveCount(0);
+  await expect(page.locator('#nav-list a[href="#porada-23-20"]')).toHaveCount(0);
+  const c = chapters.find(c => c.id === '23');
+  await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace('- Status: needs_localization', '- Status: verified') }));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+});
+
 test('corrected non-compete advice keeps its permalink, search and disclosed source limits', async ({ page }) => {
   await ready(page, '/#porada-11-12');
   await expect(page.locator('#porada-11-12 h3')).toBeFocused();
