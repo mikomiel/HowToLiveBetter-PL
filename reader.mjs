@@ -22,6 +22,7 @@ export const CHAPTERS = [
   { id: '19', path: 'book/pl/19-praca-rozwiazanie-umowy-i-wypadki.md' },
   { id: '20', path: 'book/pl/20-opieka-nad-noworodkiem-i-niemowleciem.md' },
   { id: '21', path: 'book/pl/21-podroz-za-granice-i-bezpieczenstwo.md' },
+  { id: '22', path: 'book/pl/22-odpoczynek-rozrywka-i-bezpieczenstwo.md' },
   { id: '23', path: 'book/pl/23-edukacja-kwalifikacje-i-uczenie-sie.md' },
 ];
 export const FIELDS = [
