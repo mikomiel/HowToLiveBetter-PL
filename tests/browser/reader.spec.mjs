@@ -76,6 +76,35 @@ test('corrected non-compete advice keeps its permalink, search and disclosed sou
   await expect(page.locator('#porada-11-12 .practical')).toContainText('25% wynagrodzenia');
 });
 
+test('travel chapter supports search, filters, source limits and permalinks', async ({ page }) => {
+  await ready(page, '/#porada-21-6');
+  await expect(page.locator('#porada-21-6 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('21');
+  await expect(visibleCards(page)).toHaveCount(12);
+  await page.getByLabel('Szukaj w polskich poradach').fill('10 000 euro');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-21-6 .practical')).toContainText('co najmniej 10 000 euro');
+  await page.locator('#porada-21-6 summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#porada-21-6 details')).toHaveAttribute('open', '');
+  await expect(page.locator('#porada-21-6')).toContainText('na osobę');
+  await page.reload();
+  await expect(page.locator('#porada-21-6 h3')).toBeFocused();
+});
+
+test('pending travel agency record is absent and malformed travel data fail the entire collection', async ({ page }) => {
+  await ready(page, '/#porada-21-9');
+  await expect(page.locator('#porada-21-9')).toHaveCount(0);
+  await expect(page.locator('#toc a[href="#porada-21-9"]')).toHaveCount(0);
+  const c = chapters.find(c => c.id === '21');
+  await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace(/^- W praktyce: .+\n/m, '') }));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+  await expect(page.locator('#status')).toContainText('W praktyce');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+});
+
 test('infant chapter supports search, clinical source limits, permalinks and a hidden cross-reference target', async ({ page }) => {
   await ready(page, '/#porada-20-12');
   await expect(page.locator('#porada-20-12 h3')).toBeFocused();
