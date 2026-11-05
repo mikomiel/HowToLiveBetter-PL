@@ -18,6 +18,44 @@ async function ready(page, suffix = '/') {
   await expect(page.locator('#status')).toContainText(`z ${count} opracowanych`);
 }
 
+test('relaxation supports search, source limits, keyboard details and hidden-target navigation', async ({ page }) => {
+  await ready(page, '/#porada-22-7');
+  await expect(page.locator('#porada-22-7 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('22');
+  await expect(visibleCards(page)).toHaveCount(12);
+  await page.getByLabel('Szukaj w polskich poradach').fill('MBSR');
+  await expect(visibleCards(page)).toHaveCount(1);
+  const card = page.locator('#porada-22-7');
+  await expect(card.locator('.practical')).toContainText('Nie zastępuj samodzielnie leków kursem');
+  await card.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(card.locator('details')).toHaveAttribute('open', '');
+  await expect(card).toContainText('nasilenie lęku');
+  await expect(card).toContainText('programy nie miały równego nakładu czasu', { ignoreCase: true });
+  await page.reload();
+  await expect(page.locator('#porada-22-7 h3')).toBeFocused();
+  await ready(page, '/#porada-22-12');
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('22');
+  await page.getByLabel('Szukaj w polskich poradach').fill('wypożyczeniu');
+  await expect(visibleCards(page)).toHaveCount(1);
+  await expect(page.locator('#porada-1-2')).toBeHidden();
+  await page.locator('#porada-22-12 .practical').getByRole('link', { name: 'poradzie 1.2', exact: true }).click();
+  await expect(page).toHaveURL(/#porada-1-2$/);
+  await expect(page.locator('#porada-1-2 h3')).toBeFocused();
+  await expect(visibleCards(page)).toHaveCount(count);
+});
+
+test('malformed relaxation data fail the whole collection and pending advice remains absent', async ({ page }) => {
+  await ready(page);
+  for (const id of ['porada-17-1', 'porada-17-12', 'porada-19-18', 'porada-20-5']) await expect(page.locator('#' + id)).toHaveCount(0);
+  const c = chapters.find(c => c.id === '22');
+  await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace('- Status: verified', '- Status: ready') }));
+  await page.goto('/');
+  await expect(page.locator('#status')).toContainText('Nie wczytano kompletnego zbioru');
+  await expect(page.locator('article')).toHaveCount(0);
+  await expect(page.getByLabel('Szukaj w polskich poradach')).toBeDisabled();
+});
+
 test('corrected non-compete advice keeps its permalink, search and disclosed source limits', async ({ page }) => {
   await ready(page, '/#porada-11-12');
   await expect(page.locator('#porada-11-12 h3')).toBeFocused();
@@ -395,7 +433,7 @@ test('search spans chapters and combines with chapter and evidence filters', asy
   await page.getByRole('button', { name: 'Wyczyść filtry' }).click();
   await expect(visibleCards(page)).toHaveCount(count);
   await expect(page.getByLabel('Szukaj w polskich poradach')).toBeFocused();
-  await page.getByLabel('Szukaj w polskich poradach').fill('skrotow');
+  await page.getByLabel('Szukaj w polskich poradach').fill('skrotow klawiszowych');
   await expect(visibleCards(page)).toHaveCount(1);
   await expect(visibleCards(page)).toHaveAttribute('id', 'porada-4-17');
   await page.getByLabel('Rozdział', { exact: true }).selectOption('14');
