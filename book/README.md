@@ -25,6 +25,7 @@ Polskie rozdziały i ich rekordy redakcyjne:
 - [19. Praca, rozwiązanie umowy i wypadki](pl/19-praca-rozwiazanie-umowy-i-wypadki.md)
 - [20. Opieka nad noworodkiem i niemowlęciem](pl/20-opieka-nad-noworodkiem-i-niemowleciem.md)
 - [21. Podróż za granicę i bezpieczeństwo](pl/21-podroz-za-granice-i-bezpieczenstwo.md)
+- [22. Odpoczynek, rozrywka i bezpieczeństwo](pl/22-odpoczynek-rozrywka-i-bezpieczenstwo.md)
 - [23. Edukacja, kwalifikacje i uczenie się](pl/23-edukacja-kwalifikacje-i-uczenie-sie.md)
 
 Czytnik pobiera pliki wskazane w rejestrze CHAPTERS w reader.mjs. Pokazuje tylko verified. Powody wyłączenia i wymagane źródła pozostają przy treści. [README wydania](../README.md) opisuje aktualne liczby, metodę i licencje.
