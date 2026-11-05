@@ -65,7 +65,7 @@
     <p class="intro">Nie musisz robić wszystkiego. Wybierz jedną zmianę, sprawdź jej koszt i zobacz, co naprawdę wynika z badań. Przy każdej poradzie znajdziesz źródła i ograniczenia.</p>
     <p class="intro">Informacje zdrowotne i prawne są ogólne. Nie zastępują diagnozy, leczenia ani oceny indywidualnej sprawy. Sprawdź zakres i ograniczenia przy wybranej poradzie.</p>
     <p class="intro" id="review-notice">Porady są sprawdzane ze źródłami maszynowo, a przegląd trwa. Nie zatwierdził ich lekarz ani prawnik.</p>
-    <p><a href="https://github.com/mikomiel/HowToLiveBetter-PL/blob/main/README.md">O wydaniu i metodzie</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/tree/main/book/pl">Polskie rozdziały w Markdown</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/pulls">Zgłoś poprawkę</a></p>
+    <p><a href="https://github.com/mikomiel/HowToLiveBetter-PL/blob/main/README.md">O wydaniu i metodzie</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/tree/main/book/pl">Polskie rozdziały w Markdown</a> · <a href="https://github.com/mikomiel/HowToLiveBetter-PL/issues">Zgłoś błąd</a> · <a href="#publikacja">Wydanie, kontakt i prywatność</a></p>
     <form class="controls" role="search" aria-label="Wyszukiwanie porad">
       <div class="search-control"><label for="search">Szukaj w polskich poradach</label><input id="search" type="search" placeholder="Np. sen, spotkanie, konto" aria-describedby="search-help" disabled></div>
       <div><label for="chapter">Rozdział</label><select id="chapter" disabled><option value="">Wszystkie rozdziały</option></select></div>
@@ -73,7 +73,7 @@
       <button id="reset" type="button" disabled>Wyczyść filtry</button>
     </form>
     <p id="search-help">Możesz szukać bez polskich znaków. Litera opisuje rodzaj źródła, nie gwarantuje prawdziwości ani opłacalności porady. <a href="https://github.com/mikomiel/HowToLiveBetter-PL/blob/main/README.md#jak-czytac-dowody">Jak czytać oceny A, B i C</a>.</p>
-    <p id="status" role="status" aria-live="polite">Nie uruchomiono czytnika. Włącz JavaScript i odśwież stronę. Użyj lokalnego serwera HTTP, jeśli otwierasz plik z dysku (instrukcja w README na GitHubie). Jeśli komunikat nie znika, odśwież stronę albo zgłoś błąd w repozytorium (odnośnik „Zgłoś poprawkę” powyżej).</p>
+    <p id="status" role="status" aria-live="polite">Nie uruchomiono czytnika. Włącz JavaScript i odśwież stronę. Użyj lokalnego serwera HTTP, jeśli otwierasz plik z dysku (instrukcja w README na GitHubie). Jeśli komunikat nie znika, odśwież stronę albo zgłoś błąd w repozytorium (odnośnik „Zgłoś błąd” powyżej).</p>
     <button id="retry" type="button" hidden>Spróbuj wczytać ponownie</button>
     <noscript><p>Włącz JavaScript, aby użyć wyszukiwania, lub otwórz rozdział w Markdown. Nie wczytano żadnych porad.</p></noscript>
   </header>
@@ -87,6 +87,15 @@
   <footer>
     <p>Niezależna polska adaptacja HowToLiveBetter autorstwa <a href="https://github.com/eternity4719/HowToLiveBetter">eternity4719</a>. To wybór rozdziałów, nie tłumaczenie całej książki. Tylko treść o stanie verified jest publikowana w tym czytniku.</p>
     <p>Tekst: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (<a href="LICENSE">pełna licencja</a>). Kod: <a href="LICENSE-CODE">MIT</a>, Copyright (c) 2026 eternity4719. Zmiany i weryfikację opisano przy każdej poradzie. Brak gwarancji poprawności; sprawdzaj ograniczenia i źródła.</p>
+    <section id="publikacja" aria-labelledby="publikacja-tytul">
+      <h2 id="publikacja-tytul">Wydanie, kontakt i prywatność</h2>
+      <p><strong>Opiekun niezależnej polskiej adaptacji:</strong> <a href="https://github.com/mikomiel">mikomiel</a>. To nie jest oficjalne wydanie autora.</p>
+      <p><strong>Kontakt do korekt:</strong> <a href="https://github.com/mikomiel/HowToLiveBetter-PL/issues">GitHub Issues</a>. Podaj numer porady, kwestionowane zdanie i źródło. Zgłoszenia i komentarze są publiczne. Nie przesyłaj danych zdrowotnych, haseł, danych innych osób ani dokumentów indywidualnej sprawy.</p>
+      <p>Przy redakcji treści i opracowaniu publicznych zgłoszeń używamy też generatywnej AI. Nie jest to indywidualna konsultacja medyczna ani prawna.</p>
+      <p><strong>Działanie czytnika:</strong> wyszukiwanie i filtrowanie odbywa się w przeglądarce. Kod czytnika nie wysyła wpisanej frazy do serwera i nie zapisuje jej w cookies, localStorage ani sessionStorage. Nie dodajemy własnej analityki, reklam ani kont czytelnika. Przeglądarka może przechowywać pobrane pliki w pamięci podręcznej.</p>
+      <p><strong>Hosting i zewnętrzne serwisy:</strong> stronę udostępnia GitHub Pages. Według <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection">dokumentacji hostingu</a> GitHub zapisuje adresy IP odwiedzających w celach bezpieczeństwa, również bez logowania. Brak własnej analityki nie oznacza braku przetwarzania danych przez GitHub. Po otwarciu zgłoszeń lub zewnętrznych źródeł korzystasz z tych serwisów według ich zasad; zobacz <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">informację o prywatności GitHuba</a>.</p>
+      <p>Opis dotyczy działania tego czytnika i publicznego kanału korekt. Nie jest deklaracją pełnej zgodności prawnej publikacji ani zastępstwem zasad hostingu.</p>
+    </section>
   </footer>
   <script type="module" src="reader.mjs"></script>
 </body>
