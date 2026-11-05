@@ -448,7 +448,7 @@ for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '1
 }
 
 test('renders actual chapters, all verified provenance and no external requests', async ({ page, baseURL }) => {
-  test.setTimeout(90_000); // iterates and opens every published card; card count grows with each chapter
+  test.setTimeout(120_000); // cumulative budget for opening every card; individual assertion deadlines stay unchanged
   const external = [], requests = [], errors = [];
   page.on('request', request => {
     requests.push(request.url());
