@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, posix } from 'node:path';
 import { zip } from '../lib/zip.mjs';
-import { Marked, Tokenizer } from 'marked';
+import { Marked, Renderer, Tokenizer } from 'marked';
 import { splitLongItems } from '../lib/split-items.mjs';
 import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
 
@@ -15,7 +15,21 @@ const NOW = new Date();
 const COMMIT = gitCommit();
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const plain = html => html.replace(/<[^>]+>/g, '');
+// Decode only references that survive toXhtml, once, for plain navigation labels.
+// Code spans and backslash escapes are literal; they must not be entity-decoded.
+const xmlEntities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
+const textValue = text => text.replace(/&(amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);/g, (reference, entity) => {
+  if (entity in xmlEntities) return xmlEntities[entity];
+  const n = entity.startsWith('#x') ? parseInt(entity.slice(2), 16) : Number(entity.slice(1));
+  const valid = n === 9 || n === 10 || n === 13 || (n >= 0x20 && n <= 0xd7ff) || (n >= 0xe000 && n <= 0xfffd) || (n >= 0x10000 && n <= 0x10ffff);
+  return valid ? String.fromCodePoint(n) : reference;
+});
+const plain = tokens => tokens.map(token => {
+  if (token.type === 'html' || token.type === 'image') return '';
+  if (token.tokens) return plain(token.tokens);
+  if (token.type === 'br') return ' ';
+  return token.type === 'text' ? textValue(token.text) : (token.text ?? '');
+}).join('');
 
 // ---------- 从 README 取内容与文件清单 ----------
 const book = readBook();
@@ -70,13 +84,18 @@ marked.use({
     heading({ tokens, depth }) {
       const html = this.parser.parseInline(tokens);
       const id = `h${++headingSeq}`;
-      current.headings.push({ id, depth, text: plain(html) });
+      current.headings.push({ id, depth, text: plain(tokens) });
       return `<h${depth} id="${id}">${html}</h${depth}>\n`;
     },
     link({ href, title, tokens }) {
       const text = this.parser.parseInline(tokens);
       const t = title ? ` title="${esc(title)}"` : '';
       return `<a href="${esc(rewriteHref(href))}"${t}>${text}</a>`;
+    },
+    // Dropping an HTML token does not clear Marked's raw-block lexer state.
+    // Never trust that state's `escaped` flag as permission to emit text as HTML.
+    text(token) {
+      return Renderer.prototype.text.call(this, { ...token, escaped: false });
     },
     image: () => '',
     html: () => '',
@@ -133,7 +152,7 @@ const navItems = pages.map(p => {
 const navXhtml = wrap('目录', `<nav epub:type="toc" id="toc">
 <h1>目录</h1>
 <ol>
-${navItems.map(n => `<li><a href="${n.href}">${n.text}</a>${n.subs.length ? `\n<ol>\n${n.subs.map(s => `<li><a href="${s.href}">${s.text}</a></li>`).join('\n')}\n</ol>\n` : ''}</li>`).join('\n')}
+${navItems.map(n => `<li><a href="${esc(n.href)}">${esc(n.text)}</a>${n.subs.length ? `\n<ol>\n${n.subs.map(s => `<li><a href="${esc(s.href)}">${esc(s.text)}</a></li>`).join('\n')}\n</ol>\n` : ''}</li>`).join('\n')}
 </ol>
 </nav>
 <nav epub:type="landmarks" hidden="hidden">
@@ -145,7 +164,7 @@ ${navItems.map(n => `<li><a href="${n.href}">${n.text}</a>${n.subs.length ? `\n<
 `);
 
 let play = 0;
-const navPoint = n => `<navPoint id="np${++play}" playOrder="${play}"><navLabel><text>${n.text}</text></navLabel><content src="${n.href}"/>${n.subs?.map(navPoint).join('') ?? ''}</navPoint>`;
+const navPoint = n => `<navPoint id="np${++play}" playOrder="${play}"><navLabel><text>${esc(n.text)}</text></navLabel><content src="${esc(n.href)}"/>${n.subs?.map(navPoint).join('') ?? ''}</navPoint>`;
 const ncx = `<?xml version="1.0" encoding="UTF-8"?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="zh-CN">
 <head>
