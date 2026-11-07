@@ -45,8 +45,10 @@ export function readBook() {
     if (a < 0 || b < 0) throw new Error(`README 里找不到 ${from} 到 ${to} 这一段`);
     return lines.slice(a, b).join('\n');
   };
+  // Keep Markdown and line boundaries. Exporters must encode for their output;
+  // stripping tags and joining lines can reconstruct markup across the joins.
   const description = between('# 高性价比人生指南', '[![')
-    .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join('');
+    .split('\n').slice(1).join('\n').trim();
   const frontMd = between('## 这本书想回答的问题', '## 目录');
   const contentsMd = between('## 目录', '## 正文')
     .split('\n\n').filter(p => !p.includes('index.html')).join('\n\n');
