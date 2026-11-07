@@ -1,6 +1,6 @@
 # Ustalenia i decyzje czekające na właściciela
 
-Stan na 2026-10-29. Dowody (raporty) są w [runs/](runs/). Jak wznowić przegląd: [README.md](README.md).
+Sekcje A–G zachowują ustalenia i decyzje z 2026-10-29–30; nie są aktualną listą wszystkich braków. Dalszą pracę porządkuje [plan zatwierdzony 2026-11-07](#h-plan-zatwierdzony-2026-11-07). Historyczne dowody są w [runs/](runs/); zasady przygotowania nowego przeglądu w [README.md](README.md).
 
 ## Decyzje właściciela
 
@@ -79,9 +79,9 @@ Dwa przebiegi weryfikatora różniły się przy 14 pozycjach (33 wiersze plus je
 
 Zmiany w tekście wprowadzają commity „draft: … (for owner review)” w osobnym PR, ułożonym na PR z edycjami językowymi, bo oba zmieniają te same wiersze pól. W polu „Zmiany w adaptacji” każdej zmienionej pozycji dopisano, co i dlaczego zmieniono. Status `verified` pozostaje; zdania oznaczone jako propozycje redakcji nie są twierdzeniami o źródle.
 
-## G. Quality review and implementation handoff (2026-10-30)
+## G. Historical quality review and implementation handoff (2026-10-30)
 
-The operator requested a full review and implementation, then confirmed that the previous writer had stopped. The integration branch preserves PR #9 (`564c9f8`) and PR #10 (`5283aa0`) and merges main `9ef1b87`; it does not overwrite either branch. This section owns the improvement backlog. Canonical advice and verification scope remain in `book/pl/`, not in a second evidence database.
+The operator requested a full review and implementation, then confirmed that the previous writer had stopped. The integration branch preserves PR #9 (`564c9f8`) and PR #10 (`5283aa0`) and merges main `9ef1b87`; it does not overwrite either branch. This section records the improvement backlog at that date; section H owns the current execution plan. Canonical advice and verification scope remain in `book/pl/`, not in a second evidence database.
 
 The review read all 32 published entries, the 17 pending records and the eight chapter-04 exclusions. Baseline checks: 172 Node tests and 26 Chromium desktop/mobile tests passed; content lint reported zero errors and 16 warnings. This was not a new systematic literature review. Sources without newly checked material retain their previous verification dates and limitations.
 
@@ -120,3 +120,32 @@ Prawnik completed an anonymized Polish/EU consultation on 2026-10-30. It is an A
 Primary references: [GDPR, official Polish text](https://uodo.gov.pl/data/filemanager_pl/727.pdf); [payment act, Dz.U. 2026 poz. 623](https://eli.gov.pl/api/acts/DU/2026/623/text.pdf); [UOKiK on unauthorized transactions](https://uokik.gov.pl/nieautoryzowane-transakcje-platnicze-cztery-banki-zmieniaja-praktyki-po-decyzjach-prezesa-uokik); [RF explanation of prompt refunds and later liability](https://rf.gov.pl/kradziez-pieniedzy-z-konta-bank-musi-je-niezwlocznie-zwrocic-tsue-potwierdza-stanowisko-rzecznika-finansowego/); [caffeine meta-analysis, sections 2.5 and 3.3.9](https://doi.org/10.1016/j.smrv.2023.101764); [exercise review, methods and abstract](https://www.bmj.com/content/384/bmj-2023-075847); [AASM clinical guideline](https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/); [CERT Polska](https://wiedza.cert.pl/dobre-praktyki/hasla/); [Google number-change limits](https://support.google.com/accounts/answer/3463280?hl=pl); [116 123 operator](https://116sos.pl/otrzymaj-pomoc/telefon); [GitHub Pages data collection](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection).
 
 Release, deployment, paid resources, new account permissions and merging remain outside this implementation's authority. Each source change still needs exact-head tests, independent review and the operator's merge decision.
+
+## H. Plan zatwierdzony 2026-11-07
+
+Właściciel wybrał realizację całego potwierdzonego backlogu etapami, nie tylko pięciu otwartych issues. Ta sekcja jest planem dalszej pracy; nie poświadcza ukończenia opisanych poniżej ocen. Bieżące liczby pokrycia mają jedno miejsce w [README](../README.md). Status, brakujące źródła i decyzja dla pojedynczej pozycji pozostają wyłącznie w book/pl/. Issues śledzą konkretne braki, a alerty GitHuba ustalenia skanera. Nie twórz drugiej bazy porad ani duplikatów tych rekordów.
+
+### Kolejność i bramki
+
+| Etap | Zakres | Warunek zakończenia |
+| --- | --- | --- |
+| 1. Ustawienia | Poprawienie adresu strony repozytorium i dodanie wymaganego checka Dependency review | Wykonano i odczytano 2026-11-07: homepage wskazuje polski czytnik; wymagane są Treść i czytnik oraz Dependency review z GitHub Actions. Nie zmieniono pozostałych reguł, liczby zatwierdzeń ani pustej listy bypassów. |
+| 2. Przygotowanie źródeł i śledzenia | Aktualny zakres w AGENTS.md, odnośnik do czytnika, rozdzielenie historii audytu od obecnej pracy i ocena domknięcia issue #33 | Zmiana źródłowa wymaga aktualnego CI, niezależnego przeglądu i merge przez człowieka. Nie uruchamia nowego przeglądu porad ani Pages. |
+| 3. Pozostałe ustalenia bezpieczeństwa | Alerty [#1](https://github.com/mikomiel/HowToLiveBetter-PL/security/code-scanning/1), [#4](https://github.com/mikomiel/HowToLiveBetter-PL/security/code-scanning/4) i [#5](https://github.com/mikomiel/HowToLiveBetter-PL/security/code-scanning/5) w odziedziczonych narzędziach | Osobna ocena każdego rzeczywistego konsumenta. Poprawka wymaga regresji i przeglądu; formalna decyzja o alercie wymaga własnego uzasadnienia i właściwej zgody. Bez zbiorczego odrzucenia, aktywacji eksporterów lub twierdzenia o luce w polskim czytniku bez dowodu. |
+| 4. Konkretne braki dużego ryzyka | [20.5 / #36](https://github.com/mikomiel/HowToLiveBetter-PL/issues/36), [17.1 / #30](https://github.com/mikomiel/HowToLiveBetter-PL/issues/30), [17.12 / #31](https://github.com/mikomiel/HowToLiveBetter-PL/issues/31), [19.18 / #32](https://github.com/mikomiel/HowToLiveBetter-PL/issues/32) | Odczyt właściwych źródeł w potrzebnym zakresie, rozdzielenie procedur i populacji, ujawnione ograniczenia i wymagana recenzja dziedzinowa. Brak pozostaje blokadą, nie powodem do nadania verified. |
+| 5. Pozostałe rekordy oczekujące | Pozycje wskazane w README i kanonicznych plikach, w tym 14.11, 21.9 i 23.20 | Każda pozycja ma uzasadnioną decyzję: gotowa węższa porada, dalsze wstrzymanie lub not_applicable. Zmiana samego statusu nie wystarcza. Wyłączenia rozdziału 04 można zmienić tylko na podstawie nowych odpowiednich dowodów. |
+| 6. Aktualne opublikowane porady | Najpierw zdrowie i bezpieczeństwo, niemowlęta, prawo, podatki, świadczenia i mieszkanie; następnie język oraz pozostałe uwagi redakcyjne | Nowe pakiety dla dokładnego tekstu i refu. Nie przenoś automatycznie werdyktów run7 na zmienione lub później dodane porady. Przegląd AI i testy nie są zatwierdzeniem specjalisty. Starsze propozycje z B–G trzeba najpierw porównać z aktualną treścią. |
+| 7. Rozdziały 24–34 | Kolejno: korzystanie z opieki medycznej; sprawy po śmierci; serwis lub platforma; ciąża i poród; wygląd a zdrowie; poważne kryzysy życiowe; dziecko szkolne; drogi po pełnoletności; nauka za granicą; niepełnosprawność; domowe leki | Osobny PR dla każdego rozdziału. Oceń każdą pozycję źródłową, zachowaj numer i przypięty oryginał, publikuj tylko gotowe wersje. Dodanie do CHAPTERS wymaga rzeczywistego rozdziału, źródeł, testów i aktualizacji pokrycia, nie samego planu. |
+
+### Dowody wykonanych korekt, nie nowe zadania do powtórzenia
+
+- [PR #35](https://github.com/mikomiel/HowToLiveBetter-PL/pull/35), scalony jako 700db2d6fbc14f664b7e58fbf38e0fa80fc178c7, zawęził 11.12: usunął niepotwierdzony ogólny limit dwóch lat i instrukcję rozwiązania całej umowy oraz przywrócił minimum ustawowe. [Issue #33 domknięto po porównaniu kryteriów z tym zakresem](https://github.com/mikomiel/HowToLiveBetter-PL/issues/33#issuecomment-6712668106); nie oznacza to lektury całego orzecznictwa ani oceny konkretnej klauzuli.
+- [PR #43](https://github.com/mikomiel/HowToLiveBetter-PL/pull/43), scalony jako 554a7672f9bda1ae85dee2dc9be74b7873220abe, naprawił potwierdzoną ścieżkę README/EPUB. Nowa analiza main oznaczyła alerty #2 i #3 jako fixed. Pozostałe trzy mają osobny etap powyżej; pięć dawnych alertów z sekcji G nie jest dzisiejszą liczbą otwartych ustaleń.
+- Niezależny App review działał dla dokładnego HEAD PR #43. Nie zakładaj nadal braku aplikacji na podstawie starszej sekcji G. To nie jest tożsamość do scalania ani recenzja człowieka.
+- Fakty o opiekunie, kanale korekt i prywatności z [PR #39](https://github.com/mikomiel/HowToLiveBetter-PL/pull/39) oraz decyzja z [issue #29](https://github.com/mikomiel/HowToLiveBetter-PL/issues/29) są przyjęte. Publiczny opis ma jedno miejsce w index.html#publikacja. Nie żądaj ponownie tych samych ustalonych faktów ani nie przedstawiaj ich jako pełnej certyfikacji prawnej.
+
+### Granice i utrzymanie
+
+Zgoda na ten plan nie upoważnia do merge przez konto właściciela, dispatchu Pages, nowych tożsamości i poświadczeń, zmiany indeksowania, płatnych usług lub budowy polskich eksportów EPUB/PDF/Anki. Nie zmieniaj progu recenzji ani pozostałych reguł repozytorium bez osobnej decyzji. Nie usuwaj chińskiego materiału referencyjnego, historycznych raportów, cudzej pracy ani recovery refs. Przed ewentualnym porządkowaniem worktrees sprawdź ich właściciela i stan; nie odrzucaj pracy automatycznie.
+
+Dla każdego etapu podaj dokładny ref oraz PASS, FAIL, NOT_RUN lub UNAVAILABLE. Rozdziel source_present, reviewed, merged, deployed i runtime_verified. Przy blokadzie nazwij brakujące źródło, decyzję lub specjalistę i następnego właściciela. Nie uznawaj za ukończone wszystkich issues tylko dlatego, że przygotowano ten plan. Aktualność prawa, świadczeń, numerów i odnośników oraz przegląd przychodzących aktualizacji zależności pozostają pracą utrzymaniową. Każde przyszłe wdrożenie strony wymaga osobnej zgody i sprawdzenia faktycznie podanych plików.

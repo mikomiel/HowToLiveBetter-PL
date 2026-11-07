@@ -1,31 +1,21 @@
-# Przegląd opublikowanych porad: stan prac i wznowienie
+# Przegląd opublikowanych porad: historia i dalsza praca
 
-Stan na 2026-10-30. Przegląd był wstrzymany na prośbę właściciela, który wznowił go 2026-10-30. Przebieg run7 jest przeprowadzony, ale niepełny: 112 z 115 raportów przeszło kontrolę skryptów (sprawdzają formę i cytaty, nie zastępują oceny człowieka), 3 odrzucono po trzech próbach. Wyniki i sprawy czekające na właściciela: [runs/run7/STATUS.md](runs/run7/STATUS.md). Dalsze przebiegi i wszelkie zmiany tekstu wymagają polecenia właściciela.
+Historyczny run7 z 2026-10-30 obejmował 32 ówczesne porady, nie dzisiejszy zbiór. Według [końcowego stanu run7](runs/run7/STATUS.md) kontrolę skryptów przeszło 115 z 115 raportów. Trzy wcześniej odrzucone raporty napisano ponownie po zmianach kontraktu ról. Przyjęcie raportu przez skrypt sprawdza formę i cytaty, nie prawdziwość porady ani akceptację człowieka. Późniejsze zmiany tekstu mogą unieważnić odpowiednie pakiety.
 
-Ten katalog zawiera wszystko, co potrzebne do kontynuacji w dowolnym narzędziu (Codex, Claude Code, inne): raporty z dotychczasowych przebiegów, wykaz źródeł i opis kroków. Nic tu nie zależy od konkretnego agenta. Skrypty są w Node, role to zwykłe pliki Markdown, a sprawdzanie raportów robią skrypty, nie model.
-
-Decyzje właściciela i te, które jeszcze czekają, są w [FINDINGS.md](FINDINGS.md). Zasady redakcyjne i dowodowe są w [AGENTS.md](../AGENTS.md), który jest jedynym kanonicznym dokumentem instrukcji.
+Aktualne pokrycie opisuje [README wydania](../README.md), a stan i zakres sprawdzenia każdej pozycji są w book/pl/. [Plan zatwierdzony 2026-11-07](FINDINGS.md#h-plan-zatwierdzony-2026-11-07) porządkuje dalszą pracę. Starsze ustalenia w FINDINGS.md i runs/ zachowujemy jako historię, nie automatyczną listę braków dzisiejszej wersji. [AGENTS.md](../AGENTS.md) pozostaje jedynym kanonicznym dokumentem instrukcji. Mechanizm jest przenośny między narzędziami (Codex, Claude Code, inne); role są zwykłymi plikami Markdown.
 
 ## Prompt dla nowego agenta
 
-> Przeczytaj AGENTS.md, a potem audit/README.md i audit/FINDINGS.md. Wznów przegląd według sekcji „Kroki wznowienia”. Nie zmieniaj tekstu w book/pl, nie scalaj i nie twórz PR bez zgody właściciela. Raportuj kontrole jako PASS, FAIL, NOT_RUN lub UNAVAILABLE i podaj testowany commit.
+Przeczytaj AGENTS.md, ten plik i zatwierdzony plan. Wybierz jeden ograniczony etap i jego kryteria zakończenia. Sprawdź bieżące issues i dokładny ref przed zmianami. Raportuj PASS, FAIL, NOT_RUN lub UNAVAILABLE dla badanego commita. Nie traktuj przeglądu AI ani CI jako recenzji lekarza lub prawnika. Nie scalaj ani nie uruchamiaj Pages na podstawie samej zgody na pracę źródłową.
 
-## Kroki wznowienia
+## Nowy przegląd aktualnej treści
 
-Wszystkie polecenia uruchamiaj w katalogu głównym repozytorium.
-
-1. **Środowisko.** `npm ci --ignore-scripts`, potem `npm test`. Wszystkie testy powinny przejść. Potrzebny jest Node 22.21 lub nowszy (przy proxy: opcja `--use-env-proxy`, skrypt `fetch.mjs` dodaje ją sam).
-2. **Źródła.** Katalog `.cache/` jest ignorowany przez git i znika razem ze środowiskiem. Odbuduj go jednym poleceniem: `node tools/pl/fetch.mjs --published` (około 56 pobrań, kilka minut, potrzebny dostęp HTTPS m.in. do doi.org, api.crossref.org, www.ebi.ac.uk, pmc.ncbi.nlm.nih.gov, wiedza.cert.pl, support.google.com, uodo.gov.pl). Serwisy, które blokują skrypty, są zapisywane jako zablokowane; blokad nie obchodzimy. Odbudowa z 2026-10-29 dała te same teksty co przebieg przeglądu w 55 z 56 przypadków, a jedno źródło (PMC7853203 przy 03.26) przestało być zablokowane. Skrót każdego źródła z tamtego dnia jest w [sources-manifest-2026-10-29.jsonl](sources-manifest-2026-10-29.jsonl).
-3. **Nowy przebieg.** `node tools/pl/audit.mjs prepare audit/runs/run7 --published`. Powstają pakiety dla ról, prompt dla każdego raportu i `plan.json` z odciskiem tekstu każdej porady. Pozycje zdrowotne, prawne, finansowe, dotyczące bezpieczeństwa i kont dostają dwa niezależne przebiegi weryfikatora (`verifier-a`, `verifier-b`), pozostałe jeden.
-4. **Przejęcie ważnych raportów.** Od najnowszego przebiegu do najstarszego:
-   `node tools/pl/audit.mjs adopt audit/runs/run7 audit/runs/run6-chapters03-04-partial`, potem `run5-chapter14-partial`, `run4-verifier-03.4`, `run3-verifier-03.4-14.7`, `run2-second-round`. Skrypt kopiuje tylko raporty, które przechodzą swoje skrypty sprawdzające, a tekst porady, który oceniały, jest nadal tekstem tej porady. Resztę pomija i podaje powód. Wersję tekstu danego przebiegu zapisuje [runs/runs.json](runs/runs.json).
-5. **Co zostało.** `node tools/pl/audit.mjs status audit/runs/run7` wypisuje brakujące, odrzucone i nieaktualne raporty oraz różnice między dwoma przebiegami weryfikatora. Kod wyjścia 0 oznacza, że nic nie zostało.
-6. **Uruchomienie roli.** Dla każdego brakującego raportu daj plik `audit/runs/run7/<N.M>/prompt-<rola>-<przebieg>.md` **osobnej, świeżej sesji** dowolnego agenta (rola nie może widzieć innych raportów ani wersji roboczej tekstu) i zapisz wynik jako JSON pod ścieżką, którą podaje prompt. Role są opisane w `.claude/agents/pl-source-verifier.md`, `pl-claim-adversary.md` i `pl-language-editor.md`; to zwykłe pliki Markdown, front matter można pominąć. Rola ma tylko czytać pliki i zapisać jeden raport: bez sieci, bez powłoki, bez skryptów.
-7. **Sprawdzenie i ponowienie.** Po zapisaniu raportów uruchom `status` jeszcze raz. Odrzucony raport: `node tools/pl/audit.mjs retry audit/runs/run7 <N.M> <rola>-<przebieg>` wypisuje prompt z listą błędów; daj go tej samej roli w nowej, świeżej sesji. Raportu nie poprawia się ręcznie. Po trzech nieudanych próbach zgłoś to właścicielowi.
-8. **Zebranie wyników.** Gdy `status` pokazuje „Nothing left to run”: `node tools/pl/digest.mjs audit/runs/run7 > audit/runs/run7/digest.md`. Digest wylicza statusy z werdyktów i niczego sam nie ocenia. Zacommituj `audit/runs/run7` i przedstaw właścicielowi.
-9. **Zmiany w tekście.** Dopiero po decyzji właściciela, w osobnym commicie „draft: … (for owner review)”, jeden autor zapisuje. Po zmianie uruchom `npm test`, `node tools/pl/lint.mjs` i `npm run test:browser`, a zmienione pozycje przejdź ponownie weryfikatorem (`audit.mjs prepare` na nowym katalogu tylko dla tych pozycji).
-
-Przegląd PR musi dotyczyć dokładnego opublikowanego HEAD. Nie scalaj PR, nie publikuj wydań i nie włączaj GitHub Pages bez osobnej zgody właściciela.
+1. Wskaż pozycje i dokładny commit. Zacznij od treści o dużym ryzyku; nie uruchamiaj całego starego przebiegu tylko po to, aby zmienić jego wynik.
+2. Uruchom npm ci --ignore-scripts i npm test z gałęzi zadania. Źródła wszystkich opublikowanych pozycji pobiera node tools/pl/fetch.mjs --published, opisany w [tools/README.md](../tools/README.md); liczba wejść zależy od aktualnego zakresu. Blokad dostawców nie obchodzimy. Samo pobranie lub odczyt metadanych nie jest lekturą źródła.
+3. Użyj audit.mjs prepare z nowym, nieistniejącym katalogiem i wybraną listą pozycji. Składnia jest w tools/README.md. Nie nadpisuj historycznego run7 ani jego raportów, checks.txt lub digest.md.
+4. audit.mjs adopt może przejąć raport z wcześniejszego katalogu tylko po sprawdzeniu niezmienionego tekstu i zgodności raportu. Odrzuconego raportu nie poprawiaj ręcznie jako rzekomo niezależnego. Role i ich ograniczenia są w .claude/agents/; ich użycie musi być dozwolone w bieżącej sesji.
+5. Sprawdź audit.mjs status i rozstrzygnij różnice na podstawie dostępnych źródeł. Brak źródła, niezgodność zakresu lub potrzebna recenzja dziedzinowa pozostają jawną blokadą. Dla odrzuconego raportu audit.mjs retry wypisuje prompt z listą błędów. Przekaż go świeżej sesji w granicach obowiązującego limitu prób; potem zgłoś blokadę. Nie uznawaj braku sprzeczności za potwierdzenie. Zbiorczy digest tworzy tools/pl/digest.mjs, nie dodatkowa ocena modelu.
+6. Zastosuj uzasadnione zmiany jednym autorem w osobnym PR. Zmiana twierdzenia wymaga ponownej oceny, daty i testów. Raporty dla zmienionych pozycji przygotuj od nowa; nie przerabiaj dawnych pakietów tak, jakby obejmowały nowy tekst. Walidacja i niezależny przegląd PR dotyczą aktualnego opublikowanego HEAD; merge należy do człowieka.
 
 ## Co zostało zrobione do 2026-10-29
 
@@ -46,7 +36,7 @@ Przegląd PR musi dotyczyć dokładnego opublikowanego HEAD. Nie scalaj PR, nie 
 | `runs/runs.json` | commit tekstu, który oceniał każdy przebieg |
 | `sources-manifest-2026-10-29.jsonl` | adresy, stan dostępu i skróty pobranych źródeł. Samych tekstów nie przechowujemy (to cudze utwory) |
 
-Przebiegi: run1 (pierwsze wersje poprawek), run2 (druga runda), run3 i run4 (tylko weryfikator, po kolejnych poprawkach), run5 i run6 (przerwany przegląd pozostałych pozycji: rozdział 14, rozdziały 03 i 04). Raporty z przebiegów 1–4 powstały przy pomocy narzędzia Workflow w Claude Code, a 5–6 przerwano w trakcie. Skrypt orkiestracji tego narzędzia jest w `tools/pl/workflows/audit-items.js`; jest opcjonalny, bo `audit.mjs` robi to samo bez orkiestratora. run7 (2026-10-30): wznowiony przegląd wszystkich 32 opublikowanych pozycji; 45 raportów przejęto z wcześniejszych przebiegów, 70 napisano w świeżych sesjach agentów. Kroki powyżej opisują, jak go przygotowano; kolejny przebieg nazwij run8.
+Przebiegi: run1-first-drafts (pierwsze wersje poprawek), run2-second-round (druga runda), run3-verifier-03.4-14.7 i run4-verifier-03.4 (tylko weryfikator, po kolejnych poprawkach), run5-chapter14-partial i run6-chapters03-04-partial (przerwany przegląd pozostałych pozycji: rozdział 14, rozdziały 03 i 04). Raporty z przebiegów 1–4 powstały przy pomocy narzędzia Workflow w Claude Code, a 5–6 przerwano w trakcie. Skrypt orkiestracji tego narzędzia jest w `tools/pl/workflows/audit-items.js`; jest opcjonalny, bo `audit.mjs` robi to samo bez orkiestratora. run7 (2026-10-30): wznowiony przegląd wszystkich 32 opublikowanych pozycji; 45 raportów przejęto z wcześniejszych przebiegów, 70 napisano w świeżych sesjach agentów. To zapis historyczny. Nowy przebieg umieść w osobnym, jeszcze nieistniejącym katalogu; nie uruchamiaj ponownie run7 na zmienionej treści.
 
 ## Ograniczenia, o których trzeba pamiętać
 
