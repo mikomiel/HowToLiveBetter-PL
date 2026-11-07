@@ -11,7 +11,7 @@ const chapters = CHAPTERS.map(c => ({ ...c, text: read(c.path), ...parseChapter(
 const entries = chapters.flatMap(c => c.entries);
 const advice = published(entries);
 const time = chapters.find(c => c.id === '04');
-// Consent guard: AGENTS.md limits the edition to these chapters. Change this list only with the owner's agreement.
+// Adapted registry snapshot: the approved backlog may be wider, but this preparation must not register unfinished chapters.
 const AGREED_SCOPE = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'];
 // Upstream file of a chapter, found by its number prefix, so scope changes do not require editing paths here.
 const sourcePaths = Object.fromEntries(CHAPTERS.map(({ id }) => {
@@ -22,7 +22,7 @@ const sourcePaths = Object.fromEntries(CHAPTERS.map(({ id }) => {
 const baseline = 'e2605d3e2242bd6216c9255192b8a8957a08c55a';
 const states = ['verified', 'needs_verification', 'needs_localization', 'not_applicable'];
 
-test('one file registry covers only the authorized chapters', () => {
+test('one file registry covers exactly the currently adapted chapters', () => {
   assert.deepEqual(CHAPTERS.map(c => c.id), AGREED_SCOPE);
   assert.equal(new Set(CHAPTERS.map(c => c.path)).size, CHAPTERS.length);
   for (const c of CHAPTERS) assert.deepEqual(Object.keys(c).sort(), ['id', 'path']);
@@ -255,4 +255,30 @@ test('browser projects cover Chromium desktop and mobile plus Firefox and WebKit
   assert.equal(config.projects.find(p => p.name === 'mobile').use.isMobile, true);
   assert.equal(config.projects.find(p => p.name === 'firefox').use.browserName, 'firefox');
   assert.equal(config.projects.find(p => p.name === 'webkit').use.browserName, 'webkit');
+});
+
+test('the approved backlog is documented without bypassing publication or review gates', () => {
+  const policy = read('AGENTS.md');
+  assert.match(policy, /2026-11-07/);
+  assert.match(policy, /rozdziały 24–34/);
+  assert.match(policy, /Nie rejestruj nieopracowanego rozdziału w CHAPTERS/);
+  assert.match(policy, /Osobne pozostają zgody na merge i uruchomienie Pages/);
+  assert.match(policy, /Brak źródła lub wymaganej recenzji dziedzinowej jest blokadą/);
+  assert.match(read('audit/FINDINGS.md'), /## H\. Plan zatwierdzony 2026-11-07/);
+  const overview = read('audit/README.md');
+  assert.match(overview, /115 z 115/);
+  assert.doesNotMatch(overview, /112 z 115/);
+  assert.match(overview, /Nie nadpisuj historycznego run7/);
+});
+
+test('README links the deployed reader and distinguishes the whole source from adapted coverage', () => {
+  const originalFiles = readdirSync(resolve(root, 'book')).filter(path => /^\d{2}-.+\.md$/.test(path));
+  const items = path => [...read('book/' + path).matchAll(/^### \d+\. /gm)].length;
+  const remaining = originalFiles.filter(path => !CHAPTERS.some(c => path.startsWith(c.id + '-')));
+  const readme = read('README.md');
+  assert.ok(readme.includes('[Czytaj polską wersję online](https://mikomiel.github.io/HowToLiveBetter-PL/)'));
+  assert.ok(readme.includes(`Pełny oryginał obejmuje **${originalFiles.length}**`));
+  assert.ok(readme.includes(`**${originalFiles.reduce((sum, path) => sum + items(path), 0)}** numerowanych pozycji`));
+  assert.ok(readme.includes(`**${remaining.length}** nieopracowanych rozdziałów`));
+  assert.ok(readme.includes(`**${remaining.reduce((sum, path) => sum + items(path), 0)}** pozycji źródłowych`));
 });
