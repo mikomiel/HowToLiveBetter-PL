@@ -120,7 +120,7 @@ Przeczytaj [AGENTS.md](AGENTS.md). Edytuj Markdown, nie kopię porady w kodzie. 
 
 ## Kontrole
 
-Potrzebujesz Node.js 22 lub nowszego. Playwright pozostaje jedyną nową zależnością, wyłącznie testową. Czytnik nie ma zależności uruchomieniowych. Na Linuksie przeglądarki wymagają też bibliotek systemowych; samo pobranie binarek nie wystarcza. CI instaluje je przez --with-deps w jednorazowym runnerze. Instalacja pakietów na hoście roboczym wymaga zgody jego właściciela.
+Potrzebujesz Node.js 22 lub nowszego. Playwright służy do testów przeglądarkowych. Testy regresji odziedziczonego eksportera EPUB używają Marked w tej samej przypiętej wersji co eksporter; w głównym package.json jest to zależność wyłącznie testowa. Czytnik nie ma zależności uruchomieniowych. Na Linuksie przeglądarki wymagają też bibliotek systemowych; samo pobranie binarek nie wystarcza. CI instaluje je przez --with-deps w jednorazowym runnerze. Instalacja pakietów na hoście roboczym wymaga zgody jego właściciela.
 
 ```bash
 npm ci --ignore-scripts
@@ -130,7 +130,7 @@ npx playwright install chromium firefox webkit
 npm run test:browser
 ```
 
-Testy obejmują wszystkie decyzje źródłowe, stany, pochodzenie, liczby, odsyłacze i workflow. Przeglądarki wczytują rzeczywiste pliki i sprawdzają rozdziały, wyszukiwanie, filtry, klawiaturę, mały ekran i błędy. Playwright uruchamia Chromium na komputerze i z emulacją telefonu oraz Firefox i WebKit na komputerze. WebKit na Linuksie nie jest testem rzeczywistego Safari. Nie zastępuje to fizycznych urządzeń ani audytu technologii asystujących. Zielony CI nie potwierdza sam naukowej lub prawnej poprawności. Osobny przegląd musi dotyczyć dokładnego opublikowanego HEAD.
+Testy obejmują wszystkie decyzje źródłowe, stany, pochodzenie, liczby, odsyłacze i workflow. Osobne testy budują syntetyczny EPUB w katalogu tymczasowym, bez publikowania e-booka ani uruchamiania eksportera na polskiej treści. Sprawdzają granice wierszy opisu, kodowanie tekstu i etykiet nawigacji oraz wynik parsowania HTML i XML. Przeglądarki wczytują rzeczywiste pliki i sprawdzają rozdziały, wyszukiwanie, filtry, klawiaturę, mały ekran i błędy. Playwright uruchamia Chromium na komputerze i z emulacją telefonu oraz Firefox i WebKit na komputerze. WebKit na Linuksie nie jest testem rzeczywistego Safari. Nie zastępuje to fizycznych urządzeń ani audytu technologii asystujących. Zielony CI nie potwierdza sam naukowej lub prawnej poprawności. Osobny przegląd musi dotyczyć dokładnego opublikowanego HEAD.
 
 [Dependency Review](.github/workflows/dependency-review.yml) sprawdza zmieniane zależności, także deweloperskie, i kończy się błędem po wykryciu nowych znanych podatności high lub critical. Nie ocenia prawdziwości porad. [Dependabot](.github/dependabot.yml) proponuje cotygodniowe, grupowane aktualizacje npm i GitHub Actions; sam ich nie scala. CodeQL działa w zarządzanym trybie GitHuba dla JavaScript i Actions. Jego kanoniczną konfiguracją są ustawienia repozytorium, nie drugi workflow. Alerty wymagają oceny; poprawne wykonanie analizy nie oznacza braku podatności.
 
