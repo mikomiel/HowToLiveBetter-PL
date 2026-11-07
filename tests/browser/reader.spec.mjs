@@ -47,7 +47,7 @@ test('relaxation supports search, source limits, keyboard details and hidden-tar
 
 test('malformed relaxation data fail the whole collection and pending advice remains absent', async ({ page }) => {
   await ready(page);
-  for (const id of ['porada-17-1', 'porada-17-12', 'porada-19-18', 'porada-20-5']) await expect(page.locator('#' + id)).toHaveCount(0);
+  for (const id of ['porada-17-1', 'porada-19-18', 'porada-20-5']) await expect(page.locator('#' + id)).toHaveCount(0);
   const c = chapters.find(c => c.id === '22');
   await page.route(routeFor(c), route => route.fulfill({ contentType: 'text/plain; charset=utf-8', body: c.markdown.replace('- Status: verified', '- Status: ready') }));
   await page.goto('/');
@@ -425,7 +425,27 @@ test('chapter 17 publishes only checked advice and keeps support limits in the r
   await page.reload();
   await expect(page.locator('#porada-17-7 h3')).toBeFocused();
   await expect(page.locator('#porada-17-1')).toHaveCount(0);
-  await expect(page.locator('#porada-17-12')).toHaveCount(0);
+  await ready(page, '/#porada-17-12');
+  await expect(page.locator('#porada-17-12 h3')).toBeFocused();
+  await page.getByLabel('Rozdział', { exact: true }).selectOption('17');
+  await page.getByLabel('Szukaj w polskich poradach').fill('Z-15');
+  await expect(visibleCards(page)).toHaveCount(1);
+  const leave = page.locator('#porada-17-12');
+  await expect(leave.locator('.practical')).toContainText('5 dni w roku kalendarzowym');
+  await expect(leave.locator('.practical')).toContainText('nie zachowuje ustawowego wynagrodzenia');
+  await expect(leave.locator('.practical')).toContainText('nie daje zasiłku opiekuńczego za te same dni');
+  await leave.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(leave.locator('details')).toHaveAttribute('open', '');
+  await expect(leave).toContainText('14 dni w roku kalendarzowym');
+  await expect(leave).toContainText('80% podstawy wymiaru zasiłku');
+  await expect(leave).toContainText('nie przeprowadzono recenzji prawnika');
+  await expect(leave.getByRole('link', { name: /ZUS — dokumenty/ })).toHaveAttribute('href', 'https://www.zus.pl/swiadczenia/zasilki/zasilek-opiekunczy/niezbedne-dokumenty');
+  await page.getByRole('link', { name: 'Stały link do porady 17.12', exact: true }).click();
+  await expect(leave.locator('h3')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#porada-17-12 h3')).toBeFocused();
+  await expect(page.locator('#porada-17-1')).toHaveCount(0);
 });
 
 for (const id of ['01', '02', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17']) {
