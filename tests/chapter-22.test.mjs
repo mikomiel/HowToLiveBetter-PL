@@ -71,7 +71,7 @@ test('search and publication use canonical relaxation records and preserve withd
   assert.equal(published(withdrawn).length, 11);
   assert.throws(() => parseChapter(markdown.replace('- Status: verified', '- Status: ready'), '22'), /stan|status|ready/i);
   assert.throws(() => parseChapter(markdown.replace(/^- W praktyce: .+\n/m, ''), '22'), /W praktyce/);
-  assert.equal(published(chapters.flatMap(c => c.entries)).some(e => ['17.1', '17.12', '19.18', '20.5'].includes(e.number)), false);
+  assert.equal(published(chapters.flatMap(c => c.entries)).some(e => ['17.1', '19.18', '20.5'].includes(e.number)), false);
 });
 
 test('relaxation retains professional, licensing and source-reading boundaries without imported numbers', () => {

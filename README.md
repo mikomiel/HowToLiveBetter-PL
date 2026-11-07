@@ -6,7 +6,7 @@
 
 Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](https://github.com/eternity4719/HowToLiveBetter), autorstwa eternity4719. Wybieramy praktyczne zalecenia, sprawdzamy źródła i opisujemy ich ograniczenia. To nie jest oficjalne wydanie autora ani automatyczne tłumaczenie.
 
-**Stan treści: 521 opracowanych polskich porad z dwudziestu trzech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
+**Stan treści: 522 opracowanych polskich porad z dwudziestu trzech rozdziałów.** Źródła sprawdzono w opisanym przy poradach zakresie; nie oznacza to zatwierdzenia przez lekarza lub prawnika. Nie przetłumaczono całej książki ani wszystkich pozycji tych rozdziałów.
 
 | Rozdział | Ocenione pozycje źródłowe | W czytniku (verified) | Pozostałe |
 | --- | --- | --- | --- |
@@ -26,14 +26,14 @@ Niezależna polska adaptacja [HowToLiveBetter — 高性价比人生指南](http
 | [14. Bezpieczeństwo kont i danych](book/pl/14-bezpieczenstwo-kont-i-danych.md) | 12 | 11 | 1 needs_localization |
 | [15. Wynajem i kupno mieszkania](book/pl/15-wynajem-i-kupno-mieszkania.md) | 18 | 18 | — |
 | [16. Życie z chorobą przewlekłą](book/pl/16-zycie-z-choroba-przewlekla.md) | 14 | 14 | — |
-| [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](book/pl/17-senior-w-rodzinie.md) | 13 | 11 | 1 needs_localization, 1 needs_verification |
+| [17. Senior w rodzinie: wsparcie, bezpieczeństwo i opieka](book/pl/17-senior-w-rodzinie.md) | 13 | 12 | 1 needs_localization |
 | [18. Rodzicielstwo: decyzje, koszty i wsparcie](book/pl/18-rodzicielstwo-decyzje-koszty-i-wsparcie.md) | 7 | 7 | — |
 | [19. Praca, rozwiązanie umowy i wypadki](book/pl/19-praca-rozwiazanie-umowy-i-wypadki.md) | 24 | 23 | 1 needs_verification |
 | [20. Opieka nad noworodkiem i niemowlęciem](book/pl/20-opieka-nad-noworodkiem-i-niemowleciem.md) | 17 | 16 | 1 needs_verification |
 | [21. Podróż za granicę i bezpieczeństwo](book/pl/21-podroz-za-granice-i-bezpieczenstwo.md) | 13 | 12 | 1 needs_localization |
 | [22. Odpoczynek, rozrywka i bezpieczeństwo](book/pl/22-odpoczynek-rozrywka-i-bezpieczenstwo.md) | 12 | 12 | — |
 | [23. Edukacja, kwalifikacje i uczenie się](book/pl/23-edukacja-kwalifikacje-i-uczenie-sie.md) | 25 | 24 | 1 needs_localization |
-| Razem | 599 | 521 | 70 rekordów oczekujących i 8 wcześniejszych wyłączeń |
+| Razem | 599 | 522 | 69 rekordów oczekujących i 8 wcześniejszych wyłączeń |
 
 Tabela obejmuje ocenione rozdziały 01–23. Pełny oryginał obejmuje **34** rozdziały i **767** numerowanych pozycji. Poza bieżącą adaptacją pozostaje **11** nieopracowanych rozdziałów (24–34), obejmujących **168** pozycji źródłowych. Nie są to gotowe polskie porady ani obietnica opublikowania każdej pozycji. Dalszą pracę opisuje [zatwierdzony plan, sekcja H](audit/FINDINGS.md); szczegóły braków pozostają przy rekordach w book/pl/.
 
@@ -55,7 +55,7 @@ Każda nowa pozycja ma oryginalny numer i decyzję. Nie zmieniamy numeracji, aby
 - W rozdziale 01 pozycje 26 oraz 32–34 wymagają dalszej weryfikacji: wynik edukacji nie dowodzi skuteczności całego zestawu wyposażenia, a dane o następstwach zdarzeń nie dowodzą bezpieczeństwa i skuteczności straszącego przekazu kryzysowego. Pozycje 8, 23, 24, 35, 37, 39, 40, 44, 45, 47 i 48 wymagają polskiej lokalizacji lub aktualnej kwalifikacji. Nie publikujemy zaleceń przekazywania haseł bankowych rodzinie, samodzielnego leczenia ani zagranicznych harmonogramów jako polskich zaleceń.
 - W rozdziale 03 pozycje 9–17, 20–22 i 24 wymagają dalszej weryfikacji. Powody obejmują nieuprawnione uogólnienia, przenoszenie korelacji na interwencję, różne populacje i niezweryfikowane liczby. Pozycje 19 i 25 wymagają polskiej lokalizacji procedur lub informacji o lekach.
 - W rozdziale 14 pozycja 11 nadal wymaga sprawdzenia polskich procedur i zakresu dostępnych rejestrów. Pozycja 14.5 opisuje już zawężone zasady dla konsumenta korzystającego ze zwykłego rachunku płatniczego, na podstawie polskiej ustawy i oficjalnych objaśnień. Nie gwarantuje zwrotu pieniędzy w każdym oszustwie. Nie skopiowano chińskich uprawnień ani usług.
-- W rozdziale 17 pozycja 1 wymaga potwierdzenia aktualnych polskich zasad przyszłej reprezentacji, a pozycja 12 dalszej weryfikacji wynagrodzenia i relacji różnych uprawnień opiekuńczych. Nie przeniesiono zagranicznych dokumentów ani płatnego urlopu jako polskich zasad.
+- W rozdziale 17 pozycja 1 wymaga potwierdzenia aktualnych polskich zasad przyszłej reprezentacji i pozostaje niepublikowana. [Pozycję 17.12](book/pl/17-senior-w-rodzinie.md#porada-17-12) oceniono ponownie 2026-11-07 na podstawie odczytanych przepisów i objaśnień PIP oraz ZUS: odróżnia urlop bez ustawowego wynagrodzenia od warunkowego zasiłku i innych zwolnień. Źródła oraz granice lektury pozostają przy poradzie. Nie jest to recenzja prawnika, indywidualna gwarancja świadczenia ani ponowne poświadczenie pozostałych pozycji; zakres zgłoszenia opisuje [issue #31](https://github.com/mikomiel/HowToLiveBetter-PL/issues/31).
 - W rozdziale 19 pozycja 18 o podatku od świadczeń przy zakończeniu zatrudnienia pozostaje niepublikowana. Brak pełnej kwalifikacji zwolnień i wyjątków jest śledzony w [issue #32](https://github.com/mikomiel/HowToLiveBetter-PL/issues/32); samo zgłoszenie nie oznacza, że każde świadczenie jest opodatkowane lub zwolnione.
 - W rozdziale 20 pozycja 5 o przygotowaniu mleka w proszku pozostaje needs_verification. Rozbieżne wytyczne WHO i BfR nie zostały zamienione w jeden uniwersalny przepis dla polskich warunków; dalszą pracę śledzi [issue #36](https://github.com/mikomiel/HowToLiveBetter-PL/issues/36).
 - W rozdziale 21 pozycja 9 o pośrednictwie wizowym, migracyjnym i edukacyjnym pozostaje needs_localization. Nie ustalono jednej właściwej procedury weryfikacji wszystkich tych usług; szczegółowe kryteria pozostają przy rekordzie.
